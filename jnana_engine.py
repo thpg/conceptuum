@@ -244,14 +244,14 @@ class JnanaEngine:
         return len(pairs)
 
     # ---------- define ----------
-    LBL_OUT = {"15": "сущ.признак", "21": "неотъемлемое", "23": "типично",
-               "25": "иногда", "27": "редко", "70": "порождает", "71": "препятствует",
-               "72": "предшествует", "73": "сопутствует", "74": "зависит от",
-               "80": "назначение", "81": "материал", "82": "способности",
-               "83": "направлено на", "63": "противоположность", "62": "взаимно с",
-               "61": "соподчинено с"}
-    LBL_IN = {"70": "порождается через", "72": "следует за", "82": "носитель",
-              "83": "объект для", "74": "нужен для"}
+    LBL_OUT = {"15": "essential attribute", "21": "inherent", "23": "typical",
+               "25": "sometimes", "27": "rarely", "70": "produces", "71": "hinders",
+               "72": "precedes", "73": "accompanies", "74": "depends on",
+               "80": "purpose", "81": "material", "82": "capable of",
+               "83": "directed at", "63": "opposite", "62": "mutual with",
+               "61": "coordinate with"}
+    LBL_IN = {"70": "produced by", "72": "follows", "82": "bearer",
+              "83": "object of", "74": "needed for"}
 
     def define(self):
         """Регенерация кэша дефиниций concept.defin. Возвращает список слабых."""
@@ -280,11 +280,11 @@ class JnanaEngine:
                     spec.append(f"{self.LBL_IN[k]}: {self.names[f]}")
             kids = [self.names[c] for c in sorted(children.get(d, []),
                                                   key=lambda x: self.names[x])]
-            defin = f"{n} — {self.names[rod] if rod else 'универсум (рода нет)'}"
+            defin = f"{n} — {self.names[rod] if rod else 'universe (no genus)'}"
             if spec:
                 defin += "; " + "; ".join(spec)
             if kids:
-                defin += ". Виды: " + ", ".join(kids)
+                defin += ". Species: " + ", ".join(kids)
             self.cur.execute("UPDATE concept SET defin=%s WHERE dharma=%s",
                              (defin[:1000], d))
             if not spec and not kids and rod:

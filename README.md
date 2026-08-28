@@ -35,6 +35,32 @@ long-term memory of a domain.
 | `edge` | Typed relations between concepts: `dh1 —[kod]→ dh2`, strength, status, source, rationale |
 | `concept_path` | Transitive closure of the genus relation (kod 14) |
 
+## Relation grammar (table `relevant`)
+
+Every relation type has a typed signature (allowed subject/object subtrees),
+symmetry/transitivity flags, and an inverse code. Insertions are validated
+against this grammar.
+
+| Code | Relation | Properties |
+|---|---|---|
+| 11 | universe (discourse context) | |
+| 12 | domain-related | |
+| 14 | genus (is-a) | transitive; closure table `concept_path` |
+| 15 | essential attribute | |
+| 21 / 23 / 25 / 27 | inherent / frequent / occasional / rare attribute | part-whole spectrum |
+| 30 | coextensive (equal scope) | |
+| 43 / 45 / 47 / 48 | strong / equal / slight / possible overlap | |
+| 60 | incompatible | |
+| 61 | coordinate (co-hyponyms) | symmetric |
+| 62 | mutually implying (converses) | symmetric |
+| 63 / 64 | contrary / contradictory | symmetric |
+| 70 / 71 | causal (produces) / hindrance | |
+| 72 / 73 | temporal precedence / simultaneity | 73 symmetric |
+| 74 | dependence | |
+| 80 / 81 / 82 / 83 | function (purpose) / material / agent / patient | |
+
+Deprecated codes kept for history: 10, 13, 20, 40, 41, 49.
+
 ## Engine
 
 `jnana_engine.py` — class `JnanaEngine`:
@@ -62,8 +88,12 @@ mysql -u root -p jnana3 < jnana3_dump.sql
 from jnana_engine import JnanaEngine
 eng = JnanaEngine()
 print(eng.define('Java'))
-# Java — object-oriented programming language; соподчинено с: Python
+# Java — object-oriented programming language; coordinate with: Python
 ```
+
+Definitions and the relation grammar are in English; concept terms are
+multilingual (`concept_term.lang` — currently ru for the everyday universe,
+en for IT).
 
 ## Current state
 
