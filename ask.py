@@ -108,12 +108,42 @@ def facts_block(eng, cids):
     return "\n".join(lines)
 
 
-def ask_llm(endpoint, model, question, facts):
+def related_block(eng, cids, limit=10):
+    """One-hop neighbours of the found concepts: direct relations and isa
+    parents (inheritance). Species are skipped (already in defin).
+    Ranked by number of links to the found set."""
+    s = set(cids)
+    score = defaultdict(int)
+    for a, b, kod, _strength, status, _id in eng.edges:
+        if status != "ok":
+            continue
+        if a in s and b not in s:
+            score[b] += 1                     # found -> neighbour / parent
+        elif b in s and a not in s and kod != "14":
+            score[a] += 1                     # neighbour -> found (no species)
+    if not score:
+        return ""
+    eng.cur.execute("SELECT id, nama FROM universum")
+    unames = dict(eng.cur.fetchall())
+    lines = []
+    for c in sorted(score, key=lambda c: (-score[c], c))[:limit]:
+        eng.cur.execute("SELECT defin, universum_id FROM concept WHERE dharma=%s", (c,))
+        row = eng.cur.fetchone()
+        if row and row[0]:
+            d = row[0].split(". Species:")[0]
+            lines.append(f"- [{unames.get(row[1], row[1])}] " + d)
+    return "\n".join(lines)
+
+
+def ask_llm(endpoint, model, question, facts, related=""):
     prompt = (
         "Answer using ONLY the verified facts below when they are relevant; "
         "say what follows from them, and say plainly if they are not enough.\n\n"
-        f"FACTS:\n{facts}\n\nQUESTION: {question}\nANSWER:"
+        f"FACTS:\n{facts}\n"
     )
+    if related:
+        prompt += f"\nRELATED FACTS (one step away in the graph):\n{related}\n"
+    prompt += f"\nQUESTION: {question}\nANSWER:"
     body = json.dumps({
         "model": model,
         "messages": [{"role": "user", "content": prompt}],
@@ -146,15 +176,20 @@ def main():
         print("No known concepts found in the question.")
         return
     facts = facts_block(eng, cids)
+    related = related_block(eng, cids)
     print("=== GROUNDING (from conceptuum) ===")
     print(facts)
+    if related:
+        print()
+        print("=== RELATED (1 hop) ===")
+        print(related)
     print()
 
     if args.no_llm:
         return
     try:
         print("=== ANSWER (grounded LLM) ===")
-        print(ask_llm(args.endpoint, args.model, args.question, facts))
+        print(ask_llm(args.endpoint, args.model, args.question, facts, related))
     except Exception as e:
         print(f"[LLM endpoint unreachable: {e}]")
         print("Run with --no-llm to see retrieval only, or start a local server "
