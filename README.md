@@ -129,6 +129,19 @@ old scheme merged into 20 with the degree stored in `edge.strength`).
 - **Ternary facts are virtual.** "чашка — для питья — кофе" is stored as
   two binary edges (purpose + patient) and rendered as a phrase; the verb
   stays a first-class concept with its own relations.
+- **Attach properties at the highest applicable genus.** "Фарфоровая
+  чашка" inherits material from посуда; a species-level edge repeating the
+  genus property is redundant and gets pruned. Redundancy requires the
+  **same relation code and the exact same object** on an ancestor: a
+  species edge whose object is a *subtype* of the genus's object is a
+  specialization, not a duplicate (птица—полёт stays even though
+  животное—движение exists, since полёт isa движение). Exception that
+  keeps even an exact duplicate: the species frequency deviates
+  noticeably (≈25+ points) from the genus value — e.g. пчела—полёт 95%
+  is kept against насекомое—полёт 60%.
+  `validate()` warns about inherited duplicates at insert time;
+  `tools/prune_inherited.py` cleans exact duplicates,
+  `tools/restore_prune.py` rolls back over-pruning.
 
 ## Engine
 

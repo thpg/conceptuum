@@ -313,12 +313,16 @@ class JnanaEngine:
                          for k in ("so", "so2", "so3", "so4"))
             if not ok_obj:
                 return False, f"signature: object must be in subtree #{rule['so']}"
-        # inheritance redundancy (warning, not a refusal)
+        # inheritance redundancy (warning, not a refusal):
+        # ancestor already carries the same code + same object
         warn = None
-        if kod in ("70", "21", "22", "27"):
-            for x, y, k, s, st, i in self.edges:
-                if x == a and k == kod and y != b and self.in_subtree(b, y):
-                    warn = f"redundant: inherited from '{self.disp[y]}'"
+        if kod in ("70", "20", "21", "22", "23", "24", "25", "26", "27"):
+            have = {(x, k, y) for x, y, k, s, st, i in self.edges
+                    if st == "ok"}
+            for anc in self.ancestors(a):
+                if anc != a and (anc, kod, b) in have:
+                    warn = f"redundant: inherited from '{self.disp[anc]}'"
+                    break
         return True, warn or "ok"
 
     # ---------- propose / approve ----------

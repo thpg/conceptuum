@@ -129,6 +129,14 @@ Payload: "These relations were rejected. Fix or drop each.
 
 ## 5. Rules that keep tokens down
 
+0. **Attach at genus, not species.** Before writing an attribute edge
+   (20–27), check whether the genus already carries the same property
+   (same code AND same object). A species edge is justified only when
+   (a) its object is more specific than the genus's object (specialization
+   — keep), or (b) its strength deviates noticeably (≈25+ points) from the
+   genus value (override — keep). Exact duplicates are pruned; see
+   README → Design notes.
+
 1. **Dedupe before the call.** The "already known" children list prevents
    the model from re-generating existing concepts — the single biggest
    waste source. Without it, 30–60% of expansion output is duplicates.
