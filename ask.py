@@ -37,22 +37,25 @@ def find_concepts(eng, question, limit):
     for n in (3, 2, 1):                       # longest n-grams first
         for i in range(len(words) - n + 1):
             phrase = " ".join(words[i:i + n])
-            cid = eng.resolve(phrase)
-            if cid and cid not in seen:
-                seen.add(cid)
-                found.append(cid)
+            for cid in eng.resolve_all(phrase):   # homonyms: all universes
+                if cid not in seen:
+                    seen.add(cid)
+                    found.append(cid)
         if len(found) >= limit:
             break
     return found[:limit]
 
 
 def facts_block(eng, cids):
+    eng.cur.execute("SELECT id, nama FROM universum")
+    unames = dict(eng.cur.fetchall())
     lines = []
     for cid in cids:
-        eng.cur.execute("SELECT defin FROM concept WHERE dharma=%s", (cid,))
+        eng.cur.execute("SELECT defin, universum_id FROM concept WHERE dharma=%s", (cid,))
         row = eng.cur.fetchone()
         if row and row[0]:
-            lines.append("- " + row[0])
+            u = unames.get(row[1], row[1])
+            lines.append(f"- [{u}] " + row[0])
     return "\n".join(lines)
 
 

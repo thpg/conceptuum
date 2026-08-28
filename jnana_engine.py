@@ -87,6 +87,21 @@ class JnanaEngine:
             return self.term2id.get((term.lower(), lang))
         return self.term2id.get(term.lower())
 
+    def resolve_all(self, term, lang=None):
+        """All concepts matching the term (homonyms across universes).
+        Returns a list of concept ids, possibly empty."""
+        t = term.lower()
+        seen, out = set(), []
+        self.cur.execute(
+            "SELECT DISTINCT concept_id FROM concept_term WHERE LOWER(term)=%s"
+            + (" AND lang=%s" if lang else ""),
+            (t, lang) if lang else (t,))
+        for (cid,) in self.cur.fetchall():
+            if cid not in seen:
+                seen.add(cid)
+                out.append(cid)
+        return out
+
     def ancestors(self, cid):
         return self.anc.get(cid, {})
 
