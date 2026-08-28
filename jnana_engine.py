@@ -139,6 +139,21 @@ class JnanaEngine:
             self.anc[d][a] = depth
         return self
 
+    def set_processed(self, cid, flag=True):
+        """Mark a concept as processed: genus, general properties and
+        species have been specified. Does NOT mean closed — side relations
+        and additions remain possible."""
+        self.cur.execute("UPDATE concept SET processed=%s WHERE dharma=%s",
+                         (1 if flag else 0, cid))
+
+    def unprocessed(self, universum_id=None):
+        """Concepts still awaiting a fill pass (frontier for filling)."""
+        q = "SELECT dharma, nama FROM concept WHERE processed=0"
+        if universum_id:
+            q += f" AND universum_id={int(universum_id)}"
+        self.cur.execute(q)
+        return self.cur.fetchall()
+
     def commit(self):
         self.conn.commit()
         self.reload()

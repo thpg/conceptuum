@@ -75,7 +75,7 @@ object must belong to — so the engine rejects category errors at insert time
 | Table | Purpose |
 |---|---|
 | `universum` | Domain contexts (everyday / scientific / IT / legal) |
-| `concept` | Concepts: id (`dharma`), label (`nama`), cached definition (`defin`), universum, property passport |
+| `concept` | Concepts: id (`dharma`), label (`nama`), cached definition (`defin`), universum, property passport, `processed` flag (genus + general properties + species specified; additions and side relations still possible) |
 | `concept_term` | Multilingual terms per concept (`lang` codes) — real names live here |
 | `relevant` | Grammar of relation types: signatures (up to 4 allowed subject/object subtrees), symmetry, transitivity, inverse codes |
 | `edge` | Typed relations between concepts: `dh1 —[kod]→ dh2`, strength, status, source, rationale |
