@@ -325,8 +325,11 @@ class JnanaEngine:
     def propose(self, t1, kod, t2, strength=None, rationale=None,
                 universum_id=None, source="llm", auto=False):
         """Propose an edge. auto=True -> immediately status='ok'."""
-        a = self.resolve(t1) if not isinstance(t1, int) else t1
-        b = self.resolve(t2) if not isinstance(t2, int) else t2
+        def rid(t):
+            if isinstance(t, int):
+                return t
+            return self.resolve(t) or (self.resolve_fuzzy(t) or [None])[0]
+        a, b = rid(t1), rid(t2)
         ok, msg = self.validate(a, str(kod), b, universum_id)
         if not ok:
             return None, f"REJECTED {t1}->{t2} [{kod}]: {msg}"
@@ -334,13 +337,15 @@ class JnanaEngine:
             a, b = b, a
         u = universum_id or self.concept_u.get(a, 1)
         status = "ok" if auto else "candidate"
-        self.cur.execute(
-            "INSERT INTO edge (dh1,kod,dh2,universum_id,strength,status,source,rationale)"
-            " VALUES (%s,%s,%s,%s,%s,%s,%s,%s)",
-            (a, str(kod), b, u, strength, status, source, rationale))
+        try:
+            self.cur.execute(
+                "INSERT INTO edge (dh1,kod,dh2,universum_id,strength,status,source,rationale)"
+                " VALUES (%s,%s,%s,%s,%s,%s,%s,%s)",
+                (a, str(kod), b, u, strength, status, source, rationale))
+        except pymysql.err.IntegrityError:
+            return None, f"REJECTED {t1}->{t2} [{kod}]: duplicate"
         eid = self.cur.lastrowid
-        if auto:
-            self.reload()
+        self.reload()
         return eid, f"{'ACCEPTED' if auto else 'CANDIDATE'} {t1} —[{kod}]→ {t2} (#{eid})" + (
             f" [warn: {msg}]" if msg != "ok" else "")
 
