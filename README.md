@@ -89,7 +89,11 @@ object must belong to — so the engine rejects category errors at insert time
 | 12 | domain-related | |
 | 14 | genus (is-a) | transitive; closure table `concept_path` |
 | 15 | essential attribute | |
-| 21 / 23 / 25 / 27 | inherent / frequent / occasional / rare attribute | part-whole spectrum |
+| 20 | attribute (quality / component / capability) | degree lives in `edge.strength` (0–100), not in the code; attribute kind is derived from the object's root |
+| 21 / 22 | function (purpose) / agent (capable of) | both artifact → action |
+| 23 | material | artifact → substance |
+| 24 / 25 / 26 | telic: content (чашка—кофе) / application (открывалка—бутылка) / user (будка—собака) | |
+| 27 | patient (object of action) | action → object |
 | 30 | coextensive (equal scope) | |
 | 43 / 45 / 47 / 48 | strong / equal / slight / possible overlap | |
 | 60 | incompatible | |
@@ -99,9 +103,32 @@ object must belong to — so the engine rejects category errors at insert time
 | 70 / 71 | causal (produces) / hindrance | |
 | 72 / 73 | temporal precedence / simultaneity | 73 symmetric |
 | 74 | dependence | |
-| 80 / 81 / 82 / 83 | function (purpose) / material / agent / patient | |
 
-Deprecated codes kept for history: 10, 13, 20, 40, 41, 49.
+Deprecated codes kept for history: 10, 13, 40, 41, 49, 80, 81, 82, 83
+(the 8X series moved into 2X on 2026-08-28; degree codes 21/23/25/27 of the
+old scheme merged into 20 with the degree stored in `edge.strength`).
+
+### Design notes (why the code set looks like this)
+
+- **Degree is data, not code.** Frequency ("always / usually / sometimes /
+  rarely") is a property of the individual edge, so it lives in
+  `edge.strength` (0–100). Rendering maps it back to words.
+- **Derivable distinctions are not coded.** Attribute kinds (quality vs
+  component vs capability) are read from the object's subtree root
+  (property / artifact / action), and property classes (physical,
+  measurable, evaluative, mental, state) are modeled as taxonomy nodes,
+  not relation codes.
+- **A code exists only where the same signature pair carries two different
+  semantics.** That's why material (23) and content (24) are separate:
+  "чашка — фарфор" (made of) vs "чашка — кофе" (for holding) share the
+  artifact→substance signature, and only the code tells them apart.
+  Same for application (25) and user (26) vs plain components.
+- **part-of ≠ made-of.** A part is localized and detachable (чашка с
+  ручкой); a material is the substrate of the whole (чашка фарфоровая).
+  Mixing them breaks transitive inference.
+- **Ternary facts are virtual.** "чашка — для питья — кофе" is stored as
+  two binary edges (purpose + patient) and rendered as a phrase; the verb
+  stays a first-class concept with its own relations.
 
 ## Engine
 

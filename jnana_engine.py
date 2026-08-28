@@ -315,7 +315,7 @@ class JnanaEngine:
                 return False, f"signature: object must be in subtree #{rule['so']}"
         # inheritance redundancy (warning, not a refusal)
         warn = None
-        if kod in ("70", "80", "82", "83"):
+        if kod in ("70", "21", "22", "27"):
             for x, y, k, s, st, i in self.edges:
                 if x == a and k == kod and y != b and self.in_subtree(b, y):
                     warn = f"redundant: inherited from '{self.disp[y]}'"
@@ -418,14 +418,24 @@ class JnanaEngine:
         return len(pairs)
 
     # ---------- define ----------
-    LBL_OUT = {"15": "essential attribute", "21": "inherent", "23": "typical",
-               "25": "sometimes", "27": "rarely", "70": "produces", "71": "hinders",
+    LBL_OUT = {"15": "essential attribute", "20": "attribute",
+               "70": "produces", "71": "hinders",
                "72": "precedes", "73": "accompanies", "74": "depends on",
-               "80": "purpose", "81": "material", "82": "capable of",
-               "83": "directed at", "63": "opposite", "62": "mutual with",
+               "21": "purpose", "22": "capable of", "23": "made of",
+               "24": "holds", "25": "acts upon", "26": "intended for",
+               "27": "directed at", "63": "opposite", "62": "mutual with",
                "61": "coordinate with"}
-    LBL_IN = {"70": "produced by", "72": "follows", "82": "bearer",
-              "83": "object of", "74": "needed for"}
+    LBL_IN = {"70": "produced by", "72": "follows", "22": "bearer",
+              "23": "material of", "24": "contained in", "25": "handled by",
+              "26": "used by", "27": "object of", "74": "needed for"}
+
+    @staticmethod
+    def _attr_band(s):
+        """Степень атрибуции (код 20) словами, как раньше давали коды 21-27."""
+        if not s:
+            return "attribute"
+        return ("inherent" if s >= 90 else "typical" if s >= 50
+                else "sometimes" if s >= 10 else "rarely")
 
     def define(self):
         """Regenerate the definition cache concept.defin. Returns weak concepts."""
@@ -445,7 +455,8 @@ class JnanaEngine:
             spec = []
             for k, t, s in sorted(out_e.get(d, [])):
                 if k in self.LBL_OUT:
-                    spec.append(f"{self.LBL_OUT[k]}: {self.disp[t]}"
+                    lbl = self._attr_band(s) if k == "20" else self.LBL_OUT[k]
+                    spec.append(f"{lbl}: {self.disp[t]}"
                                 + (f" ({s}%)" if s else ""))
             for k, f, s in sorted(in_e.get(d, [])):
                 if k in self.rules and self.rules[k]["sym"] and k in self.LBL_OUT:

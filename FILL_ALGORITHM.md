@@ -114,9 +114,11 @@ Format: en<TAB>ru<TAB>parent_en"
 ```
 Payload: "Concepts: <pool, comma-separated terms>.
 List typed relations among them using only kods: 15 essential attribute,
-21 inherent part, 61 coordinate, 62 converses, 63 contrary, 70 produces,
-71 hinders, 72 precedes, 74 depends on, 80 purpose, 81 material,
-82 agent, 83 patient. Format: subject<TAB>kod<TAB>object[<TAB>strength]"
+20 attribute (degree goes into strength 0-100: 95 always, 70 usually,
+30 sometimes, 5 rarely), 21 purpose, 22 agent, 23 material, 24 content,
+25 application, 26 user, 27 patient, 61 coordinate, 62 converses,
+63 contrary, 70 produces, 71 hinders, 72 precedes, 74 depends on.
+Format: subject<TAB>kod<TAB>object[<TAB>strength]"
 ```
 
 **REPAIR** (batched, once at the end):
