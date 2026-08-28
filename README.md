@@ -2,7 +2,7 @@
 
 A relational knowledge base of **logical relations between concepts** — genus–species,
 part–whole, cause–effect, opposition, purpose — across domain universes
-(everyday, scientific, IT). Designed as a **grounding layer for LLMs**:
+(everyday, scientific, IT, legal). Designed as a **grounding layer for LLMs**:
 machine-readable definitions, a validated relation grammar, and an LLM-driven
 filling engine.
 
@@ -74,10 +74,10 @@ object must belong to — so the engine rejects category errors at insert time
 
 | Table | Purpose |
 |---|---|
-| `universum` | Domain contexts (everyday / scientific / IT) |
+| `universum` | Domain contexts (everyday / scientific / IT / legal) |
 | `concept` | Concepts: id (`dharma`), label (`nama`), cached definition (`defin`), universum, property passport |
 | `concept_term` | Multilingual terms per concept (`lang` codes) — real names live here |
-| `relevant` | Grammar of relation types: signatures (allowed subject/object subtrees), symmetry, transitivity, inverse codes |
+| `relevant` | Grammar of relation types: signatures (up to 4 allowed subject/object subtrees), symmetry, transitivity, inverse codes |
 | `edge` | Typed relations between concepts: `dh1 —[kod]→ dh2`, strength, status, source, rationale |
 | `concept_path` | Transitive closure of the genus relation (kod 14) |
 
@@ -107,7 +107,11 @@ Deprecated codes kept for history: 10, 13, 20, 40, 41, 49.
 
 `jnana_engine.py` — class `JnanaEngine`:
 
-- `resolve(term, lang=None)` / `add_concept(nama, parent, …)`
+- `resolve(term, lang=None)` / `resolve_all(term, lang=None)` — term lookup,
+  all homonyms across universes
+- `resolve_fuzzy(token, lang=None)` / `resolve_phrase_fuzzy(phrase, lang=None)` —
+  morphological lookup: pymorphy3 lemma index (ru) + prefix/skeleton fallback
+- `add_concept(nama, parent, …, terms=[(term, lang), …])`
 - `verify(t1, t2)` — check a statement against the graph (incl. inheritance
   and 2-hop indirect paths)
 - `propose(t1, kod, t2, …, auto=True)` — grammar-validated relation insert
@@ -118,7 +122,9 @@ Deprecated codes kept for history: 10, 13, 20, 40, 41, 49.
 `JnanaEngine(pref_lang="en")` renders definitions in the chosen language
 whenever terms in that language exist in `concept_term`.
 
-Requires: Python 3.8+, `pymysql`, a running MariaDB/MySQL with the loaded dump.
+Requires: Python 3.8+, `pymysql`, `pymorphy3` (optional — Russian morphology;
+without it matching falls back to exact + prefix), a running MariaDB/MySQL
+with the loaded dump.
 
 ## Quick start
 
@@ -135,38 +141,89 @@ from jnana_engine import JnanaEngine
 eng = JnanaEngine(pref_lang="en")
 eng.verify("ice", "freezing")
 # ('yes', 'ice <-[causal (produces)] freezing', [])
-eng.cur.execute("SELECT defin FROM concept WHERE nama='Java'")
-# Java — object-oriented programming language; coordinate with: Python
+eng.resolve_fuzzy("камня", lang="ru")   # -> [камень] via pymorphy3 lemma
 ```
 
 Definitions and the relation grammar are in English; concept terms are
-multilingual (`concept_term.lang` — currently ru+en for the everyday universe,
-en for IT).
+multilingual (`concept_term.lang` — ru+en for the everyday and legal
+universes, en for IT).
 
 ## Demo: grounded QA (`ask.py`)
 
 ```bash
-python ask.py "Why does water turn into ice when it is cold?" --no-llm
-# - water — liquid; object of: freezing
-# - ice — solid; inherent: cold (95%); produced by: freezing
-# - cold — temperature; coordinate with: warm; opposite: hot
+python ask.py "Why does water turn into ice?" --no-llm
 ```
 
-With a local model running (Ollama / llama.cpp / LM Studio):
+With a local model running (Ollama / llama.cpp / LM Studio — any
+OpenAI-compatible endpoint):
 
 ```bash
-python ask.py "Why does water turn into ice?" --model qwen3:4b
+python ask.py "Что порождает юридическую ответственность?" \
+    --endpoint http://localhost:8090/v1 --model local
 ```
 
-The script finds concepts in the question, injects their verified definitions
-as a FACTS block, and the small model answers from them — the
-"built once by a strong model, used by small ones" workflow in action.
+### Retrieval pipeline
+
+1. **Term extraction** — 1–3-word n-grams from the question are looked up in
+   `concept_term`. The question's language (auto-detected, `--lang`
+   overrides) is searched first; other languages are a fallback.
+2. **Morphological normalization** — three levels: exact match → lemma index
+   (`pymorphy3` for Russian: *камня → камень*, *юридическую ответственность*
+   hits the term *юридическая ответственность*) → prefix/consonant-skeleton
+   match (English inflection and vowel-drop roots).
+3. **Homonym filter** — of the matched concepts, only the largest cluster
+   connected by graph edges (direct or via a shared neighbour) is kept;
+   isolated matches are dropped as noise (*"turn" → поворот* in a question
+   about ice). Homonyms across universes are all returned — the LLM picks
+   the one fitting its context.
+4. **RELATED block (1 hop)** — grounding is extended with one-step
+   neighbours: non-isa relations in both directions and the isa parent.
+   This covers transitive inference (*кража → преступление → produces:
+   наказание*) and "who/what is related to X" questions (*обвинение* pulls
+   in *прокурор — purpose: обвинение*).
+5. **Grounded generation** — the FACTS + RELATED blocks are injected into
+   the prompt; the small model is instructed to answer only from them and
+   to say plainly when facts are insufficient.
+
+Real grounded answers (Qwen3-4B, llama.cpp):
+
+> **Q: Что порождает кража?** — Кража — преступление. Преступление
+> порождает наказание и уголовную ответственность. Следовательно, кража
+> порождает наказание и уголовную ответственность.
+
+> **Q: Can I drink what ice becomes when it melts?** — Yes. Melting
+> produces water (таяние produces вода, 80%), drinking is directed at
+> water (питьё directed at вода, 90%) — so the water from melted ice can
+> be drunk.
+
+## Experiment: in-stream fact injection (`interleave.py`)
+
+An alternative to prompt-time grounding: word-by-word generation where
+every model word matching a known concept gets a base fact injected
+in square brackets, and generation continues with the extended context.
+Two modes:
+
+- `--think` (default) — facts are injected into a `<think>…</think>`
+  reasoning block; the final answer after `</think>` is written clean.
+  This avoids format mimicry (the model copying the bracket/percentage
+  style of injections into the visible answer).
+- `--no-think` — facts directly in the answer stream.
+
+```bash
+python interleave.py "Почему вода превращается в лёд?" --endpoint http://localhost:8090
+```
+
+Findings: injection works mechanically and small models do use injected
+facts, but in-stream injection pollutes the context (homonym noise,
+format mimicry); the think-block variant fixes the visible answer.
 
 ## Current state
 
-~1150 concepts, ~1400 relations, ~5000 closure paths.
-Universes: everyday (ru+en), IT (en, auto-filled from the Computer Hope
-dictionary with a subsequent LLM revision pass).
+~1980 concepts, ~2650 relations, ~8800 closure paths.
+Universes: everyday (956, ru+en), IT (882, en — auto-filled from the
+Computer Hope dictionary with an LLM revision pass), legal (139, ru+en —
+general theory of law: norms, sources, legal relations, offenses,
+liability, judiciary).
 
 ## Status
 
