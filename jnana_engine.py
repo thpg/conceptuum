@@ -59,10 +59,12 @@ class JnanaEngine:
             for cid, term in self.cur.fetchall():
                 self.disp[cid] = term
         self.cur.execute(
-            "SELECT kod, long_name, sig_subject, sig_subject2, sig_object, sig_object2, sig_object3,"
+            "SELECT kod, long_name, sig_subject, sig_subject2, sig_subject3, sig_subject4,"
+            " sig_object, sig_object2, sig_object3, sig_object4,"
             " is_symmetric, is_transitive FROM relevant")
-        self.rules = {r[0]: dict(name=r[1], ss=r[2], ss2=r[3], so=r[4], so2=r[5], so3=r[6],
-                                 sym=bool(r[7]), trans=bool(r[8]))
+        self.rules = {r[0]: dict(name=r[1], ss=r[2], ss2=r[3], ss3=r[4], ss4=r[5],
+                                 so=r[6], so2=r[7], so3=r[8], so4=r[9],
+                                 sym=bool(r[10]), trans=bool(r[11]))
                       for r in self.cur.fetchall()}
         self.cur.execute("SELECT dh1, dh2, kod, strength, status, id FROM edge")
         self.edges = self.cur.fetchall()
@@ -168,14 +170,13 @@ class JnanaEngine:
             if b in self.anc.get(a, {}) or a in self.anc.get(b, {}):
                 return False, "cycle in hierarchy"
         if rule["ss"] is not None:
-            ok_subj = self.in_subtree(a, rule["ss"]) or (
-                rule.get("ss2") and self.in_subtree(a, rule["ss2"]))
+            ok_subj = any(rule.get(k) and self.in_subtree(a, rule[k])
+                          for k in ("ss", "ss2", "ss3", "ss4"))
             if not ok_subj:
                 return False, f"signature: subject must be in subtree #{rule['ss']}"
         if rule["so"] is not None:
-            ok_obj = (self.in_subtree(b, rule["so"])
-                      or (rule.get("so2") and self.in_subtree(b, rule["so2"]))
-                      or (rule.get("so3") and self.in_subtree(b, rule["so3"])))
+            ok_obj = any(rule.get(k) and self.in_subtree(b, rule[k])
+                         for k in ("so", "so2", "so3", "so4"))
             if not ok_obj:
                 return False, f"signature: object must be in subtree #{rule['so']}"
         # inheritance redundancy (warning, not a refusal)
