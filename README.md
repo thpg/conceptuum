@@ -24,6 +24,52 @@ An LLM uses the engine to:
 This reduces hallucinations and gives the model a structured, inspectable
 long-term memory of a domain.
 
+### Built once by a strong model, used everywhere by small ones
+
+The base is designed for an asymmetric workflow:
+
+- **Preparation (offline, expensive):** a powerful LLM fills and revises the
+  base — extracting concepts and relations from dictionaries and corpora,
+  resolving synonyms, validating against the grammar, fixing misplacements.
+  This happens once per domain and costs frontier-model tokens.
+- **Usage (runtime, cheap):** a small local model (or a plain rules engine, or
+  no model at all) queries the result — `verify()`, `define()`, ancestor
+  lookups are plain SQL over `concept_path`. A 1–3B parameter model augmented
+  with canonical definitions and verified relations can answer with the
+  factual reliability that would otherwise require a much larger model.
+
+In other words: **pay the intelligence cost once, at build time** — then serve
+structured, deterministic knowledge to any number of cheap runtimes.
+
+## Relation kinds
+
+The grammar distinguishes several families of logical relations:
+
+- **Taxonomic** (14 — *genus / is-a*): the backbone hierarchy.
+  `dog is-a mammal`. Transitive; a closure table makes ancestor and
+  descendant queries O(1) lookups. Every concept has exactly one genus
+  (single inheritance keeps the tree navigable).
+- **Attributive / part-whole spectrum** (15, 21–27): from *essential
+  attribute* (without which the concept is not itself) through *inherent*
+  (inseparable part or phase — "wheel of a car", "parsing phase of
+  compilation") down to *frequent / occasional / rare* attributes.
+  The same kod family covers both physical parts and process phases.
+- **Compatibility** (30, 43–48, 60): coextensive concepts, graded overlap,
+  incompatibility.
+- **Logical opposition** (61–64): *coordinate* (co-hyponyms under one genus),
+  *converses* (mutually implying — "buy/sell"), *contrary* (hot/cold),
+  *contradictory* (true/false).
+- **Causal & temporal** (70–74): *produces*, *hinders*, *precedes*,
+  *simultaneous with*, *depends on*.
+- **Functional** (80–83): *purpose* ("hammer → hammering"), *material*
+  ("table ← wood"), *agent*, *patient* (object of action).
+- **Contextual** (11–12): universe (discourse context) and domain membership.
+
+Symmetric relations (61–64, 73) are stored once and queried both ways.
+Each relation type declares a **signature** — which subtrees its subject and
+object must belong to — so the engine rejects category errors at insert time
+(e.g. only an action can *produce* something).
+
 ## Schema (MariaDB)
 
 | Table | Purpose |
@@ -35,11 +81,7 @@ long-term memory of a domain.
 | `edge` | Typed relations between concepts: `dh1 —[kod]→ dh2`, strength, status, source, rationale |
 | `concept_path` | Transitive closure of the genus relation (kod 14) |
 
-## Relation grammar (table `relevant`)
-
-Every relation type has a typed signature (allowed subject/object subtrees),
-symmetry/transitivity flags, and an inverse code. Insertions are validated
-against this grammar.
+## Relation codes (table `relevant`)
 
 | Code | Relation | Properties |
 |---|---|---|
@@ -65,12 +107,16 @@ Deprecated codes kept for history: 10, 13, 20, 40, 41, 49.
 
 `jnana_engine.py` — class `JnanaEngine`:
 
-- `resolve(term)` / `add_concept(nama, parent, …)`
-- `verify(t1, kod, t2)` — check a statement against the graph (incl. inheritance)
+- `resolve(term, lang=None)` / `add_concept(nama, parent, …)`
+- `verify(t1, t2)` — check a statement against the graph (incl. inheritance
+  and 2-hop indirect paths)
 - `propose(t1, kod, t2, …, auto=True)` — grammar-validated relation insert
 - `rebuild()` — rebuild transitive closure
 - `define()` — regenerate canonical definitions
 - `stats()` — base statistics
+
+`JnanaEngine(pref_lang="en")` renders definitions in the chosen language
+whenever terms in that language exist in `concept_term`.
 
 Requires: Python 3.8+, `pymysql`, a running MariaDB/MySQL with the loaded dump.
 
@@ -86,20 +132,22 @@ mysql -u root -p jnana3 < jnana3_dump.sql
 
 ```python
 from jnana_engine import JnanaEngine
-eng = JnanaEngine()
-print(eng.define('Java'))
+eng = JnanaEngine(pref_lang="en")
+eng.verify("ice", "freezing")
+# ('yes', 'ice <-[causal (produces)] freezing', [])
+eng.cur.execute("SELECT defin FROM concept WHERE nama='Java'")
 # Java — object-oriented programming language; coordinate with: Python
 ```
 
 Definitions and the relation grammar are in English; concept terms are
-multilingual (`concept_term.lang` — currently ru for the everyday universe,
+multilingual (`concept_term.lang` — currently ru+en for the everyday universe,
 en for IT).
 
 ## Current state
 
 ~1150 concepts, ~1400 relations, ~5000 closure paths.
-Universes: everyday (ru), IT (en, auto-filled from the Computer Hope dictionary
-with a subsequent LLM revision pass).
+Universes: everyday (ru+en), IT (en, auto-filled from the Computer Hope
+dictionary with a subsequent LLM revision pass).
 
 ## Status
 

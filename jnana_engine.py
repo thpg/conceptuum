@@ -1,19 +1,22 @@
 # -*- coding: utf-8 -*-
 """
-jnana_engine.py — движок базы логических связей понятий (jnana3).
+jnana_engine.py — engine for the concept-relation knowledge base (jnana3).
 
-Слои:
-  хранилище  : concept / concept_term / edge / relevant / universum / concept_path
-  валидация  : правила читаются из relevant (сигнатуры, симметрия, транзитивность)
-  вывод      : concept_path (транзитивное замыкание kod 14), наследование
-  интерфейс  : verify / propose / approve / add_concept / rebuild / define
+Layers:
+  storage    : concept / concept_term / edge / relevant / universum / concept_path
+  validation : rules are read from `relevant` (signatures, symmetry, transitivity)
+  inference  : concept_path (transitive closure of kod 14), inheritance
+  interface  : verify / propose / approve / add_concept / rebuild / define
 
-Использование:
-    eng = JnanaEngine()
+Usage:
+    eng = JnanaEngine(pref_lang="en")
     eng.verify("Linux", "operating system")
     eng.propose("Docker", "74", "computer network", strength=90, rationale="needs network")
     eng.approve([id1, id2])
     eng.rebuild(); eng.define()
+
+pref_lang selects the display language for definitions (terms of that language
+from concept_term replace the concept label when available).
 """
 
 import pymysql
@@ -25,13 +28,14 @@ SYMMETRIC_DEFAULT = {"61", "62", "63", "64", "73"}
 
 
 class JnanaEngine:
-    def __init__(self, autocommit=False, **conn_kw):
+    def __init__(self, autocommit=False, pref_lang=None, **conn_kw):
+        self.pref_lang = pref_lang
         cfg = {**DB, **conn_kw}
         self.conn = pymysql.connect(**cfg, autocommit=autocommit)
         self.cur = self.conn.cursor()
         self.reload()
 
-    # ---------- загрузка в память ----------
+    # ---------- loading into memory ----------
     def reload(self):
         self.cur.execute("SELECT dharma, nama, universum_id FROM concept")
         self.names = {}
@@ -47,6 +51,13 @@ class JnanaEngine:
             self.term2id[(term.lower(), lang)] = cid
             self.term2id.setdefault(term.lower(), cid)
             self.terms_of[cid].append((term, lang))
+        # display names: pref_lang terms override the default label
+        self.disp = dict(self.names)
+        if self.pref_lang:
+            self.cur.execute("SELECT concept_id, term FROM concept_term WHERE lang=%s",
+                             (self.pref_lang,))
+            for cid, term in self.cur.fetchall():
+                self.disp[cid] = term
         self.cur.execute(
             "SELECT kod, long_name, sig_subject, sig_subject2, sig_object, sig_object2, sig_object3,"
             " is_symmetric, is_transitive FROM relevant")
@@ -70,7 +81,7 @@ class JnanaEngine:
     def close(self):
         self.conn.close()
 
-    # ---------- навигация ----------
+    # ---------- navigation ----------
     def resolve(self, term, lang=None):
         if lang:
             return self.term2id.get((term.lower(), lang))
@@ -87,23 +98,23 @@ class JnanaEngine:
 
     # ---------- verify ----------
     def verify(self, t1, t2, lang=None):
-        """Проверка утверждения «t1 связан с t2» против графа.
-        Возвращает (verdict, detail, missing_terms)."""
+        """Check the statement "t1 is related to t2" against the graph.
+        Returns (verdict, detail, missing_terms)."""
         i1 = self.resolve(t1, lang)
         i2 = self.resolve(t2, lang)
         missing = [t for t, i in ((t1, i1), (t2, i2)) if i is None]
         if missing:
-            return "unknown", f"неизвестные термины: {', '.join(missing)}", missing
+            return "unknown", f"unknown terms: {', '.join(missing)}", missing
         if i2 in self.anc.get(i1, {}):
-            return "yes", f"{t1} — вид «{t2}» (глубина {self.anc[i1][i2]})", []
+            return "yes", f"{t1} is a kind of '{t2}' (depth {self.anc[i1][i2]})", []
         if i1 in self.anc.get(i2, {}):
-            return "reverse", f"наоборот: «{t2}» — вид «{t1}»", []
+            return "reverse", f"reversed: '{t2}' is a kind of '{t1}'", []
         adj = defaultdict(list)
         for a, b, k, s, st, i in self.edges:
             if st != "ok":
                 continue
-            adj[a].append((b, k, "→"))
-            adj[b].append((a, k, "←"))
+            adj[a].append((b, k, "->"))
+            adj[b].append((a, k, "<-"))
         for b, k, d in adj[i1]:
             if b == i2:
                 return "yes", f"{t1} {d}[{self.rules[k]['name']}] {t2}", []
@@ -111,56 +122,56 @@ class JnanaEngine:
             for b, k2, d2 in adj[z]:
                 if b == i2:
                     return ("indirect",
-                            f"{t1} {d1}[{self.rules[k1]['name']}] {self.names[z]} "
+                            f"{t1} {d1}[{self.rules[k1]['name']}] {self.disp[z]} "
                             f"{d2}[{self.rules[k2]['name']}] {t2}", [])
-        return "no", f"связь между «{t1}» и «{t2}» не найдена", []
+        return "no", f"no relation found between '{t1}' and '{t2}'", []
 
-    # ---------- валидация ----------
+    # ---------- validation ----------
     def validate(self, a, kod, b, universum_id=None):
-        """(ok, сообщение). Правила читаются из relevant."""
+        """(ok, message). Rules are read from `relevant`."""
         kod = str(kod)
         rule = self.rules.get(kod)
         if rule is None:
-            return False, f"неизвестный kod {kod}"
+            return False, f"unknown kod {kod}"
         if a is None or b is None:
-            return False, "понятие не найдено"
+            return False, "concept not found"
         if rule["sym"] and a > b:
             a, b = b, a
         u = universum_id or self.concept_u.get(a, 1)
         for x, y, k, s, st, i in self.edges:
             if (x, y, k) == (a, b, kod):
-                return False, "дубликат"
+                return False, "duplicate"
         if kod == KOD_ISA:
             if b in self.anc.get(a, {}) or a in self.anc.get(b, {}):
-                return False, "цикл в иерархии"
+                return False, "cycle in hierarchy"
         if rule["ss"] is not None:
             ok_subj = self.in_subtree(a, rule["ss"]) or (
                 rule.get("ss2") and self.in_subtree(a, rule["ss2"]))
             if not ok_subj:
-                return False, f"сигнатура: субъект должен быть в поддереве #{rule['ss']}"
+                return False, f"signature: subject must be in subtree #{rule['ss']}"
         if rule["so"] is not None:
             ok_obj = (self.in_subtree(b, rule["so"])
                       or (rule.get("so2") and self.in_subtree(b, rule["so2"]))
                       or (rule.get("so3") and self.in_subtree(b, rule["so3"])))
             if not ok_obj:
-                return False, f"сигнатура: объект должен быть в поддереве #{rule['so']}"
-        # избыточность по наследованию (предупреждение, не отказ)
+                return False, f"signature: object must be in subtree #{rule['so']}"
+        # inheritance redundancy (warning, not a refusal)
         warn = None
         if kod in ("70", "80", "82", "83"):
             for x, y, k, s, st, i in self.edges:
                 if x == a and k == kod and y != b and self.in_subtree(b, y):
-                    warn = f"избыточно: наследуется от «{self.names[y]}»"
+                    warn = f"redundant: inherited from '{self.disp[y]}'"
         return True, warn or "ok"
 
     # ---------- propose / approve ----------
     def propose(self, t1, kod, t2, strength=None, rationale=None,
                 universum_id=None, source="llm", auto=False):
-        """Предложить ребро. auto=True -> сразу status='ok'."""
+        """Propose an edge. auto=True -> immediately status='ok'."""
         a = self.resolve(t1) if not isinstance(t1, int) else t1
         b = self.resolve(t2) if not isinstance(t2, int) else t2
         ok, msg = self.validate(a, str(kod), b, universum_id)
         if not ok:
-            return None, f"ОТКЛОНЕНО {t1}→{t2} [{kod}]: {msg}"
+            return None, f"REJECTED {t1}->{t2} [{kod}]: {msg}"
         if self.rules[str(kod)]["sym"] and a > b:
             a, b = b, a
         u = universum_id or self.concept_u.get(a, 1)
@@ -172,7 +183,7 @@ class JnanaEngine:
         eid = self.cur.lastrowid
         if auto:
             self.reload()
-        return eid, f"{'ПРИНЯТО' if auto else 'КАНДИДАТ'} {t1} —[{kod}]→ {t2} (#{eid})" + (
+        return eid, f"{'ACCEPTED' if auto else 'CANDIDATE'} {t1} —[{kod}]→ {t2} (#{eid})" + (
             f" [warn: {msg}]" if msg != "ok" else "")
 
     def approve(self, edge_ids, accept=True):
@@ -185,16 +196,16 @@ class JnanaEngine:
     # ---------- add_concept ----------
     def add_concept(self, nama, parent, lang="en", universum_id=None,
                     passport=None, terms=None, auto=True):
-        """Новое понятие + родовое ребро. parent — имя или id.
+        """New concept + genus edge. parent — name or id.
         passport: dict(vol_ed=.., cont_abs=.., ...); terms: [(term, lang), ...]"""
         if isinstance(parent, str):
             pid = self.resolve(parent)
         else:
             pid = parent
         if pid is None:
-            return None, f"родитель «{parent}» не найден"
+            return None, f"parent '{parent}' not found"
         if nama in self.id_of:
-            return self.id_of[nama], f"уже есть: {nama}"
+            return self.id_of[nama], f"already exists: {nama}"
         cid = max(self.names) + 1
         u = universum_id or self.concept_u.get(pid, 1)
         cols = dict(vol_zero=0, vol_ed=0, vol_countable=None, vol_sobir=0,
@@ -219,11 +230,11 @@ class JnanaEngine:
             " VALUES (%s,'14',%s,%s,%s,'llm')",
             (cid, pid, u, "ok" if auto else "candidate"))
         self.reload()
-        return cid, f"+понятие {nama} → {self.names[pid]} (u{u})"
+        return cid, f"+concept {nama} -> {self.names[pid]} (u{u})"
 
     # ---------- rebuild ----------
     def rebuild(self):
-        """Пересборка транзитивного замыкания concept_path."""
+        """Rebuild the transitive closure concept_path."""
         self.cur.execute("SELECT dh1, dh2 FROM edge WHERE kod='14' AND status='ok'")
         parent = dict(self.cur.fetchall())
         pairs = {}
@@ -254,7 +265,7 @@ class JnanaEngine:
               "83": "object of", "74": "needed for"}
 
     def define(self):
-        """Регенерация кэша дефиниций concept.defin. Возвращает список слабых."""
+        """Regenerate the definition cache concept.defin. Returns weak concepts."""
         out_e, in_e = defaultdict(list), defaultdict(list)
         children = defaultdict(list)
         for a, b, k, s, st, i in self.edges:
@@ -266,21 +277,21 @@ class JnanaEngine:
                 out_e[a].append((k, b, s))
                 in_e[b].append((k, a, s))
         weak = []
-        for d, n in self.names.items():
+        for d, n in self.disp.items():
             rod = self.parent.get(d)
             spec = []
             for k, t, s in sorted(out_e.get(d, [])):
                 if k in self.LBL_OUT:
-                    spec.append(f"{self.LBL_OUT[k]}: {self.names[t]}"
+                    spec.append(f"{self.LBL_OUT[k]}: {self.disp[t]}"
                                 + (f" ({s}%)" if s else ""))
             for k, f, s in sorted(in_e.get(d, [])):
                 if k in self.rules and self.rules[k]["sym"] and k in self.LBL_OUT:
-                    spec.append(f"{self.LBL_OUT[k]}: {self.names[f]}")
+                    spec.append(f"{self.LBL_OUT[k]}: {self.disp[f]}")
                 elif k in self.LBL_IN:
-                    spec.append(f"{self.LBL_IN[k]}: {self.names[f]}")
-            kids = [self.names[c] for c in sorted(children.get(d, []),
-                                                  key=lambda x: self.names[x])]
-            defin = f"{n} — {self.names[rod] if rod else 'universe (no genus)'}"
+                    spec.append(f"{self.LBL_IN[k]}: {self.disp[f]}")
+            kids = [self.disp[c] for c in sorted(children.get(d, []),
+                                                 key=lambda x: self.disp[x])]
+            defin = f"{n} — {self.disp[rod] if rod else 'universe (no genus)'}"
             if spec:
                 defin += "; " + "; ".join(spec)
             if kids:
@@ -292,7 +303,7 @@ class JnanaEngine:
         self.commit()
         return weak
 
-    # ---------- статистика ----------
+    # ---------- statistics ----------
     def stats(self):
         self.cur.execute("SELECT COUNT(*) FROM concept")
         c = self.cur.fetchone()[0]
@@ -310,7 +321,3 @@ class JnanaEngine:
 if __name__ == "__main__":
     eng = JnanaEngine()
     print(eng.stats())
-    for t1, t2 in [("Linux", "operating system"), ("patch", "bug"),
-                   ("вода", "лёд"), ("человек", "камень")]:
-        print(t1, "~", t2, "->", eng.verify(t1, t2)[:2])
-    eng.close()
