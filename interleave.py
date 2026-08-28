@@ -98,7 +98,7 @@ def gen_loop(eng, endpoint, prompt, max_words, inject, qlang):
         token = re.sub(r"[^\w\-]", "", piece.split()[-1].lower())
         if len(token) < 3:
             continue
-        cids = eng.resolve_all(token, lang=qlang) or eng.resolve_all(token)
+        cids = eng.resolve_fuzzy(token, lang=qlang) or eng.resolve_fuzzy(token)
         for cid in cids:
             if cid in seen:
                 continue

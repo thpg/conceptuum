@@ -31,7 +31,8 @@ from jnana_engine import JnanaEngine
 
 STOP = {"the", "a", "an", "is", "are", "of", "to", "in", "on", "and", "or",
         "why", "how", "what", "does", "do", "did", "it", "its", "into",
-        "что", "как", "почему", "это", "и", "или", "в", "на", "с", "не"}
+        "что", "как", "почему", "это", "и", "или", "в", "на", "с", "не",
+        "чем", "какие", "каких", "какой", "есть", "существуют", "существует"}
 
 
 def detect_lang(question):
@@ -46,8 +47,16 @@ def find_concepts(eng, question, limit, qlang):
     for n in (3, 2, 1):                       # longest n-grams first
         for i in range(len(words) - n + 1):
             phrase = " ".join(words[i:i + n])
-            # question language first; other languages only as fallback
-            cids = eng.resolve_all(phrase, lang=qlang) or eng.resolve_all(phrase)
+            # question language first; other languages only as fallback;
+            # exact match first, morphological (prefix) match as fallback
+            if n == 1:
+                cids = (eng.resolve_fuzzy(phrase, lang=qlang)
+                        or eng.resolve_fuzzy(phrase))
+            else:
+                cids = (eng.resolve_all(phrase, lang=qlang)
+                        or eng.resolve_phrase_fuzzy(phrase, lang=qlang)
+                        or eng.resolve_all(phrase)
+                        or eng.resolve_phrase_fuzzy(phrase))
             for cid in cids:                  # homonyms: all universes
                 if cid not in seen:
                     seen.add(cid)

@@ -27,6 +27,62 @@ KOD_ISA = "14"
 SYMMETRIC_DEFAULT = {"61", "62", "63", "64", "73"}
 
 
+def _norm(s):
+    """Normalize for matching: lowercase, ё -> е."""
+    return s.lower().replace("ё", "е")
+
+
+_MORPH = None
+_LEMMA_CACHE = {}
+
+
+def _lemma(word):
+    """Normal form of a Russian word via pymorphy3 (lazy, cached).
+    Non-Cyrillic words and missing library -> the word itself."""
+    if not any("Ѐ" <= c <= "ӿ" for c in word):
+        return word
+    if word in _LEMMA_CACHE:
+        return _LEMMA_CACHE[word]
+    global _MORPH
+    if _MORPH is None:
+        try:
+            import pymorphy3
+            _MORPH = pymorphy3.MorphAnalyzer()
+        except Exception:
+            _MORPH = False
+    lemma = _MORPH.parse(word)[0].normal_form if _MORPH else word
+    _LEMMA_CACHE[word] = lemma
+    return lemma
+
+
+def _term_key(term):
+    """Lemmatized key of a term: каждое русское слово -> начальная форма."""
+    return " ".join(_lemma(w) for w in _norm(term).split())
+
+
+def _prefix_match(a, b):
+    """Morphological near-match without a stemmer:
+    - equal after normalization, or
+    - common prefix >= 4 chars covering the shorter word up to its last
+      letter (melts~melt, договоров~договор), or
+    - same first 2 letters + equal consonant skeleton, for vowel-drop
+      roots (камня~камень, суд~суда).
+    Length difference over 3 chars is rejected (существуют !~ сущее)."""
+    if a == b:
+        return True
+    if abs(len(a) - len(b)) > 3:
+        return False
+    cp = 0
+    for x, y in zip(a, b):
+        if x != y:
+            break
+        cp += 1
+    if cp >= 4 and cp >= min(len(a), len(b)) - 1:
+        return True
+    skel = lambda s: "".join(c for c in s if c not in "аеёиоуыэюяьъaeiouy")
+    return a[:2] == b[:2] and len(skel(a)) >= 2 and skel(a) == skel(b)
+
+
 class JnanaEngine:
     def __init__(self, autocommit=False, pref_lang=None, **conn_kw):
         self.pref_lang = pref_lang
@@ -47,10 +103,17 @@ class JnanaEngine:
         self.cur.execute("SELECT concept_id, term, lang FROM concept_term")
         self.term2id = {}
         self.terms_of = defaultdict(list)
+        self.term_index = []           # (normalized term, lang, cid) for fuzzy match
+        self.lemma2ids = defaultdict(set)   # (lemmatized key, lang) -> cids
         for cid, term, lang in self.cur.fetchall():
+            t = _norm(term)
             self.term2id[(term.lower(), lang)] = cid
             self.term2id.setdefault(term.lower(), cid)
+            self.term2id.setdefault((t, lang), cid)
+            self.term2id.setdefault(t, cid)
             self.terms_of[cid].append((term, lang))
+            self.term_index.append((t, lang, cid))
+            self.lemma2ids[(_term_key(term), lang)].add(cid)
         # display names: pref_lang terms override the default label
         self.disp = dict(self.names)
         if self.pref_lang:
@@ -100,6 +163,62 @@ class JnanaEngine:
             (t, lang) if lang else (t,))
         for (cid,) in self.cur.fetchall():
             if cid not in seen:
+                seen.add(cid)
+                out.append(cid)
+        return out
+
+    def resolve_fuzzy(self, token, lang=None):
+        """Exact -> lemmatized -> prefix/skeleton match of a single word."""
+        t = _norm(token)
+        r = self.resolve_all(t, lang)
+        if r:
+            return r
+        # lemmatized lookup (pymorphy3), e.g. камня -> камень
+        key = _lemma(t)
+        if key != t or any("Ѐ" <= c <= "ӿ" for c in t):
+            cids = set()
+            for lg in ([lang] if lang else ()):
+                cids |= self.lemma2ids.get((key, lg), set())
+            if not lang:
+                for (k, _lg), ids in self.lemma2ids.items():
+                    if k == key:
+                        cids |= ids
+            if cids:
+                return sorted(cids)
+        # last resort: prefix/skeleton scan (English inflection, typos)
+        seen, out = set(), []
+        for term, lg, cid in self.term_index:
+            if " " in term or (lang and lg != lang):
+                continue
+            if _prefix_match(t, term) and cid not in seen:
+                seen.add(cid)
+                out.append(cid)
+        return out
+
+    def resolve_phrase_fuzzy(self, phrase, lang=None):
+        """Word-wise morphological match of a multiword term."""
+        words = [_norm(w) for w in phrase.split()]
+        r = self.resolve_all(_norm(phrase), lang)
+        if r:
+            return r
+        # lemmatized phrase lookup: юридическую ответственность -> ключ термина
+        key = " ".join(_lemma(w) for w in words)
+        cids = set()
+        if lang:
+            cids |= self.lemma2ids.get((key, lang), set())
+        else:
+            for (k, _lg), ids in self.lemma2ids.items():
+                if k == key:
+                    cids |= ids
+        if cids:
+            return sorted(cids)
+        # last resort: word-wise prefix match
+        seen, out = set(), []
+        for term, lg, cid in self.term_index:
+            tw = term.split()
+            if len(tw) != len(words) or (lang and lg != lang):
+                continue
+            if all(_prefix_match(w, t) for w, t in zip(words, tw)) and cid not in seen:
                 seen.add(cid)
                 out.append(cid)
         return out
