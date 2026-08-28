@@ -143,6 +143,25 @@ Definitions and the relation grammar are in English; concept terms are
 multilingual (`concept_term.lang` — currently ru+en for the everyday universe,
 en for IT).
 
+## Demo: grounded QA (`ask.py`)
+
+```bash
+python ask.py "Why does water turn into ice when it is cold?" --no-llm
+# - water — liquid; object of: freezing
+# - ice — solid; inherent: cold (95%); produced by: freezing
+# - cold — temperature; coordinate with: warm; opposite: hot
+```
+
+With a local model running (Ollama / llama.cpp / LM Studio):
+
+```bash
+python ask.py "Why does water turn into ice?" --model qwen3:4b
+```
+
+The script finds concepts in the question, injects their verified definitions
+as a FACTS block, and the small model answers from them — the
+"built once by a strong model, used by small ones" workflow in action.
+
 ## Current state
 
 ~1150 concepts, ~1400 relations, ~5000 closure paths.
