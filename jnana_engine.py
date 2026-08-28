@@ -94,7 +94,15 @@ class JnanaEngine:
         return [a for a, b in self.parent.items() if b == cid]
 
     def in_subtree(self, cid, anchor):
-        return cid == anchor or anchor in self.anc.get(cid, {})
+        # walk the live parent chain (self.parent is rebuilt on every reload,
+        # unlike concept_path which is only refreshed by rebuild())
+        x, guard = cid, 0
+        while x is not None and guard < 64:
+            if x == anchor:
+                return True
+            x = self.parent.get(x)
+            guard += 1
+        return False
 
     # ---------- verify ----------
     def verify(self, t1, t2, lang=None):
