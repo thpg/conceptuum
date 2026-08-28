@@ -367,10 +367,13 @@ class JnanaEngine:
             pid = parent
         if pid is None:
             return None, f"parent '{parent}' not found"
-        if nama in self.id_of:
-            return self.id_of[nama], f"already exists: {nama}"
-        cid = max(self.names) + 1
         u = universum_id or self.concept_u.get(pid, 1)
+        if nama in self.id_of:
+            existing = self.id_of[nama]
+            if self.concept_u.get(existing) == u:
+                return existing, f"already exists: {nama}"
+            # homonym in another universum — allowed: same term, new concept
+        cid = max(self.names) + 1
         cols = dict(vol_zero=0, vol_ed=0, vol_countable=None, vol_sobir=0,
                     vol_sootn=0, cont_konkr=None, cont_abs=None, cont_empir=1)
         if passport:
