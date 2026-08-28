@@ -3,10 +3,13 @@
 ask.py — demo: ground a small local LLM with the conceptuum knowledge base.
 
 Pipeline:
-  1. Find concept terms (1-3 word n-grams) from the question in the base.
-  2. Pull their canonical definitions + direct relations.
-  3. Inject them as a verified FACTS block into the prompt.
-  4. Send to any OpenAI-compatible local endpoint (llama.cpp, Ollama, LM Studio).
+  1. Find concept terms (1-3 word n-grams) from the question in the base —
+     the question's language first, other languages only as fallback.
+  2. Drop orphan matches (homonym noise): keep concepts that share at
+     least one edge with another found concept.
+  3. Pull their canonical definitions + direct relations.
+  4. Inject them as a verified FACTS block into the prompt.
+  5. Send to any OpenAI-compatible local endpoint (llama.cpp, Ollama, LM Studio).
 
 Usage:
     python ask.py "Why does water turn into ice?"                 # retrieve + ask LLM
@@ -22,6 +25,7 @@ import argparse
 import json
 import sys
 import urllib.request
+from collections import defaultdict
 
 from jnana_engine import JnanaEngine
 
@@ -30,20 +34,56 @@ STOP = {"the", "a", "an", "is", "are", "of", "to", "in", "on", "and", "or",
         "что", "как", "почему", "это", "и", "или", "в", "на", "с", "не"}
 
 
-def find_concepts(eng, question, limit):
+def detect_lang(question):
+    """Rough guess: Cyrillic -> ru, otherwise en."""
+    return "ru" if any("Ѐ" <= c <= "ӿ" for c in question) else "en"
+
+
+def find_concepts(eng, question, limit, qlang):
     words = [w.strip(".,?!()\"'«»").lower() for w in question.split()]
     words = [w for w in words if w and w not in STOP]
     found, seen = [], set()
     for n in (3, 2, 1):                       # longest n-grams first
         for i in range(len(words) - n + 1):
             phrase = " ".join(words[i:i + n])
-            for cid in eng.resolve_all(phrase):   # homonyms: all universes
+            # question language first; other languages only as fallback
+            cids = eng.resolve_all(phrase, lang=qlang) or eng.resolve_all(phrase)
+            for cid in cids:                  # homonyms: all universes
                 if cid not in seen:
                     seen.add(cid)
                     found.append(cid)
-        if len(found) >= limit:
-            break
-    return found[:limit]
+    return filter_connected(eng, found)[:limit]
+
+
+def filter_connected(eng, cids):
+    """Drop homonym noise: keep the largest cluster of concepts that are
+    adjacent in the graph or share a common neighbour (2 hops)."""
+    if len(cids) <= 1:
+        return cids
+    s = set(cids)
+    adj = defaultdict(set)
+    for a, b, _kod, _strength, status, _id in eng.edges:
+        if status == "ok":
+            adj[a].add(b)
+            adj[b].add(a)
+    def related(x, y):
+        return y in adj[x] or bool(adj[x] & adj[y])
+    # connected components over the found concepts
+    seen, comps = set(), []
+    for c in cids:
+        if c in seen:
+            continue
+        comp, stack = [], [c]
+        while stack:
+            x = stack.pop()
+            if x in seen:
+                continue
+            seen.add(x)
+            comp.append(x)
+            stack.extend(y for y in cids if y not in seen and related(x, y))
+        comps.append(comp)
+    big = max(comps, key=len)
+    return big if len(big) > 1 else cids
 
 
 def facts_block(eng, cids):
@@ -88,8 +128,11 @@ def main():
     ap.add_argument("--no-llm", action="store_true")
     args = ap.parse_args()
 
-    eng = JnanaEngine(pref_lang=args.lang)
-    cids = find_concepts(eng, args.question, args.max_facts)
+    qlang = args.lang
+    if qlang == "en" and detect_lang(args.question) == "ru":
+        qlang = "ru"                      # auto-switch unless --lang was explicit
+    eng = JnanaEngine(pref_lang=qlang)
+    cids = find_concepts(eng, args.question, args.max_facts, qlang)
     if not cids:
         print("No known concepts found in the question.")
         return
