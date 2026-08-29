@@ -279,6 +279,8 @@ func getConceptInfo(id int) (*ConceptInfo, error) {
 	ci.Defin = defin.String
 	ci.Processed = proc.Int64 != 0
 	ci.UniName = uniNames[ci.Uni]
+	ci.Rels = []Rel{}     // не nil — иначе JSON null ломает фронт
+	ci.Terms = []Term{}
 
 	ci.Parents = scanConcepts(mustRows(`
 		SELECT c.dharma, c.nama, c.universum_id FROM edge e

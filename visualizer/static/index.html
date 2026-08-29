@@ -131,8 +131,9 @@ function renderInfo(c) {
   const ru = c.terms.filter(t => t.lang === 'ru').map(t => t.term);
   const en = c.terms.filter(t => t.lang === 'en').map(t => t.term);
   if (ru.length || en.length) {
-    h += `<div><h3>Термины</h3><div>${ru.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>` +
-         `<div style="color:var(--dim)">${en.map(esc).join(', ')}</div></div>`;
+    const termTag = t => `<span class="tag" onclick="doSearchTerm(this.textContent)">${esc(t)}</span>`;
+    h += `<div><h3>Термины</h3><div>${ru.map(termTag).join('')}</div>` +
+         `<div>${en.map(termTag).join('')}</div></div>`;
   }
   h += '</div>';
   infoEl.innerHTML = h;
@@ -175,7 +176,11 @@ function renderTree(t) {
   while (cur && guard++ < 12) { chain.unshift(cur); cur = (cur.parents || [])[0]; }
   // раскладка: роды — вертикально по центру, виды — вниз
   const downW = measure(t.down, MAXD);
-  const upX = downW / 2;                 // центр над деревом видов
+  const sats = t.center.rels || [];
+  // слева от центра должно хватить места спутникам — иначе они наслаиваются
+  const leftNeed = sats.length ? (sats.length - 1) / 2 * 1.15 + 0.7 : 0;
+  const off = Math.max(0, leftNeed - downW / 2);
+  const upX = downW / 2 + off;           // центр над деревом видов
   chain.forEach((n, i) => {
     nodes.push({ id: n.id, nama: n.nama, x: upX, y: i, cnt: n.childCount,
                  cls: i === chain.length - 1 ? 'center' : 'up' });
@@ -183,10 +188,9 @@ function renderTree(t) {
   });
   const y0 = chain.length - 1;
   // не-таксономические связи центра — пунктиром, отдельным рядом
-  const sats = t.center.rels || [];
   const satShift = sats.length ? 1 : 0;
   sats.forEach((r, i) => {
-    const sx = Math.max(0.5, upX + (i - (sats.length - 1) / 2) * 1.15);
+    const sx = upX + (i - (sats.length - 1) / 2) * 1.15;
     const s = r.strength != null && r.strength !== 0 ? ` ${r.strength}%` : (r.strength === 0 ? ' ¬' : '');
     const lbl = (r.dir === 'out' ? `${r.kod} ${r.name} →` : `← ${r.kod} ${r.name}`) + s;
     nodes.push({ id: r.other.id, nama: r.other.nama, x: sx, y: y0 + 1, cnt: 0, cls: 'rel' });
@@ -203,7 +207,7 @@ function renderTree(t) {
     }
   }
   // рендер SVG
-  const W = Math.max(downW * (NW + GX), sats.length * (NW + GX), 300);
+  const W = Math.max((downW + 2 * off + 1) * (NW + GX), 300);
   const H = (chain.length + MAXD + 1 + satShift) * (NH + GY);
   let s = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">`;
   const path = (x1, y1, x2, y2, cls) => {
@@ -230,6 +234,7 @@ function renderTree(t) {
 }
 
 function trunc(s) { return s.length > 22 ? s.slice(0, 21) + '…' : s; }
+function doSearchTerm(t) { $('#search').value = t; doSearch(t); }
 function esc(s) { return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 
 // старт: показать список верхних понятий
