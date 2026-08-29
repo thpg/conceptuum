@@ -33,9 +33,10 @@ func dsn() string {
 }
 
 type Concept struct {
-	ID   int    `json:"id"`
-	Nama string `json:"nama"`
-	Uni  int    `json:"uni"`
+	ID        int    `json:"id"`
+	Nama      string `json:"nama"`
+	Uni       int    `json:"uni"`
+	Processed bool   `json:"processed"`
 }
 
 type Term struct {
@@ -229,7 +230,7 @@ func handleSearch(w http.ResponseWriter, r *http.Request) {
 	}
 	like := "%" + q + "%"
 	rows, err := db.Query(`
-		SELECT DISTINCT c.dharma, c.nama, c.universum_id,
+		SELECT DISTINCT c.dharma, c.nama, c.universum_id, c.processed,
 		       CASE WHEN LOWER(c.nama)=LOWER(?) THEN 0
 		            WHEN LOWER(t.term)=LOWER(?) THEN 1
 		            WHEN LOWER(c.nama) LIKE LOWER(?) THEN 2 ELSE 3 END AS prio
@@ -248,7 +249,7 @@ func handleSearch(w http.ResponseWriter, r *http.Request) {
 	for rows.Next() {
 		var c Concept
 		var prio int
-		if rows.Scan(&c.ID, &c.Nama, &c.Uni, &prio) == nil && !seen[c.ID] {
+		if rows.Scan(&c.ID, &c.Nama, &c.Uni, &c.Processed, &prio) == nil && !seen[c.ID] {
 			seen[c.ID] = true
 			out = append(out, c)
 		}
@@ -314,10 +315,10 @@ func getConceptInfo(id int) (*ConceptInfo, error) {
 		}
 		if dh1 == id {
 			r.Dir = "out"
-			r.Other = Concept{dh2, n2, u2}
+			r.Other = Concept{ID: dh2, Nama: n2, Uni: u2}
 		} else {
 			r.Dir = "in"
-			r.Other = Concept{dh1, n1, u1}
+			r.Other = Concept{ID: dh1, Nama: n1, Uni: u1}
 		}
 		ci.Rels = append(ci.Rels, r)
 	}

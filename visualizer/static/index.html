@@ -27,6 +27,10 @@
   .item:hover { background: #20293f; }
   .item.sel { background: #24375e; }
   .item .u { color: var(--dim); font-size: 11px; white-space: nowrap; }
+  .item .p { width: 14px; flex: none; font-size: 10px; }
+  .item .p.ok { color: var(--acc2); }
+  .item .p.no { color: var(--dim); }
+  .item .n { flex: 1; }
   /* правая часть */
   #main { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
   #info { padding: 10px 18px; border-bottom: 1px solid var(--line); background: var(--panel);
@@ -89,7 +93,7 @@ async function doSearch(q) {
   for (const c of rows) {
     const d = document.createElement('div');
     d.className = 'item' + (c.id === selId ? ' sel' : '');
-    d.innerHTML = `<span>${esc(c.nama)}</span><span class="u">${uniName(c.uni)}</span>`;
+    d.innerHTML = `<span class="p ${c.processed ? 'ok' : 'no'}" title="${c.processed ? 'обработано' : 'не обработано'}">${c.processed ? '●' : '○'}</span><span class="n">${esc(c.nama)}</span><span class="u">${uniName(c.uni)}</span>`;
     d.onclick = () => show(c.id);
     listEl.appendChild(d);
   }
@@ -243,7 +247,7 @@ fetch('/api/search?q=а').then(r => r.json()).then(rows => {
   for (const c of rows.slice(0, 60)) {
     const d = document.createElement('div');
     d.className = 'item';
-    d.innerHTML = `<span>${esc(c.nama)}</span><span class="u">${uniName(c.uni)}</span>`;
+    d.innerHTML = `<span class="p ${c.processed ? 'ok' : 'no'}">${c.processed ? '●' : '○'}</span><span class="n">${esc(c.nama)}</span><span class="u">${uniName(c.uni)}</span>`;
     d.onclick = () => show(c.id);
     listEl.appendChild(d);
   }
