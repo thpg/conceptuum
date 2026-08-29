@@ -277,6 +277,27 @@ Findings: injection works mechanically and small models do use injected
 facts, but in-stream injection pollutes the context (homonym noise,
 format mimicry); the think-block variant fixes the visible answer.
 
+## Visualizer (Go)
+
+`visualizer/` — a small self-contained web viewer for the base:
+
+- searchable concept list (ru/en terms, exact match first)
+- click a concept → dependency tree: genus chain upward, species tree
+  downward (tidy SVG layout, click any node to re-center)
+- concept card: canonical definition (genus + differentia + species),
+  terms by language, all typed relations with direction and strength
+
+Run:
+
+```bash
+cd visualizer
+go run .        # or: go build -o conceptuum-viz.exe . && ./conceptuum-viz.exe
+# opens http://localhost:7100/
+```
+
+DB connection defaults to `root:123@tcp(127.0.0.1:3306)/jnana3`,
+override with the `JNANA_DSN` environment variable.
+
 ## Current state
 
 ~1980 concepts, ~2650 relations, ~8800 closure paths.

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Conceptuum — визуализатор базы понятий</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --bg: #0f1420; --panel: #171e2e; --line: #2a3550; --txt: #dbe4f5;
+    --dim: #7f8db3; --acc: #5ea2ff; --acc2: #7ef0c8; --warn: #ffc857;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--txt);
+         font: 14px/1.45 "Segoe UI", system-ui, sans-serif; height: 100vh; overflow: hidden; }
+  #app { display: grid; grid-template-columns: 320px 1fr; height: 100vh; }
+  /* левая панель */
+  #side { background: var(--panel); border-right: 1px solid var(--line);
+          display: flex; flex-direction: column; min-height: 0; }
+  #side h1 { font-size: 16px; margin: 14px 16px 6px; color: var(--acc2); }
+  #side h1 small { color: var(--dim); font-weight: normal; font-size: 11px; display: block; }
+  #search { margin: 8px 12px; padding: 9px 12px; background: var(--bg); color: var(--txt);
+            border: 1px solid var(--line); border-radius: 8px; outline: none; }
+  #search:focus { border-color: var(--acc); }
+  #list { overflow-y: auto; flex: 1; padding: 4px 6px 20px; }
+  .item { padding: 6px 10px; border-radius: 7px; cursor: pointer; display: flex;
+          justify-content: space-between; gap: 8px; align-items: baseline; }
+  .item:hover { background: #20293f; }
+  .item.sel { background: #24375e; }
+  .item .u { color: var(--dim); font-size: 11px; white-space: nowrap; }
+  /* правая часть */
+  #main { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+  #info { padding: 10px 18px; border-bottom: 1px solid var(--line); background: var(--panel);
+          max-height: 42vh; overflow-y: auto; }
+  #info h2 { margin: 4px 0 2px; font-size: 20px; }
+  #info h2 .uni { color: var(--dim); font-size: 12px; font-weight: normal; margin-left: 10px; }
+  #defin { color: var(--acc2); margin: 4px 0 8px; white-space: pre-wrap; }
+  .cols { display: flex; gap: 28px; flex-wrap: wrap; }
+  .cols h3 { margin: 6px 0 3px; font-size: 12px; text-transform: uppercase; color: var(--dim); }
+  .tag { display: inline-block; background: #20293f; border-radius: 6px; padding: 1px 8px;
+         margin: 2px 3px 2px 0; cursor: pointer; }
+  .tag:hover { background: #2c3c61; color: #fff; }
+  .rel { margin: 2px 0; }
+  .rel .k { color: var(--warn); }
+  .rel .s { color: var(--dim); font-size: 11px; }
+  #treeWrap { flex: 1; overflow: auto; position: relative; }
+  svg { display: block; margin: 0 auto; }
+  .node rect { fill: #1d2740; stroke: var(--line); rx: 8; cursor: pointer; }
+  .node:hover rect { stroke: var(--acc); }
+  .node.center rect { fill: #2c4a7c; stroke: var(--acc); stroke-width: 2; }
+  .node.up rect { fill: #232d47; }
+  .node text { fill: var(--txt); font-size: 13px; }
+  .node .cnt { fill: var(--dim); font-size: 10px; }
+  .edge { stroke: #3a4a75; stroke-width: 1.4; fill: none; }
+  #hint { color: var(--dim); text-align: center; margin-top: 40vh; }
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="side">
+    <h1>Conceptuum <small>база логических связей понятий</small></h1>
+    <input id="search" placeholder="поиск понятия… (ru / en)" autofocus>
+    <div id="list"></div>
+  </div>
+  <div id="main">
+    <div id="info"><div id="hint">Начните вводить слово слева — например, «чашка», «тяжёлое», «месяц».</div></div>
+    <div id="treeWrap"></div>
+  </div>
+</div>
+<script>
+const UNI = {1:'бытовой',2:'научный',3:'IT',4:'юридический',5:'логика'};
+const uniName = id => UNI[id] || id;
+const $ = s => document.querySelector(s);
+const listEl = $('#list'), infoEl = $('#info'), treeEl = $('#treeWrap');
+let selId = null, deb = null;
+
+// --- поиск ---
+$('#search').addEventListener('input', e => {
+  clearTimeout(deb);
+  deb = setTimeout(() => doSearch(e.target.value), 200);
+});
+async function doSearch(q) {
+  if (!q.trim()) { listEl.innerHTML = ''; return; }
+  const r = await fetch('/api/search?q=' + encodeURIComponent(q));
+  const rows = await r.json();
+  listEl.innerHTML = '';
+  for (const c of rows) {
+    const d = document.createElement('div');
+    d.className = 'item' + (c.id === selId ? ' sel' : '');
+    d.innerHTML = `<span>${esc(c.nama)}</span><span class="u">${uniName(c.uni)}</span>`;
+    d.onclick = () => show(c.id);
+    listEl.appendChild(d);
+  }
+}
+
+// --- карточка + дерево ---
+async function show(id) {
+  selId = id;
+  document.querySelectorAll('.item.sel').forEach(e => e.classList.remove('sel'));
+  const r = await fetch(`/api/tree?id=${id}&depth=3`);
+  if (!r.ok) return;
+  const t = await r.json();
+  renderInfo(t.center);
+  renderTree(t);
+}
+
+function relTag(c) {
+  return `<span class="tag" onclick="show(${c.id})">${esc(c.nama)}</span>`;
+}
+
+function renderInfo(c) {
+  let h = `<h2>${esc(c.nama)}<span class="uni">${esc(c.uniName)} · id ${c.id}${c.processed ? ' · ✓' : ''}</span></h2>`;
+  if (c.defin) h += `<div id="defin">${esc(c.defin)}</div>`;
+  h += '<div class="cols">';
+  if (c.parents.length)
+    h += `<div><h3>Род</h3>${c.parents.map(relTag).join('')}</div>`;
+  if (c.children.length)
+    h += `<div><h3>Виды (${c.children.length})</h3>${c.children.slice(0, 60).map(relTag).join('')}${c.children.length > 60 ? ' …' : ''}</div>`;
+  if (c.rels.length) {
+    h += '<div><h3>Связи</h3>';
+    for (const r of c.rels) {
+      const arrow = r.dir === 'out' ? '→' : '←';
+      const s = r.strength != null && r.strength !== 0 ? ` <span class="s">${r.strength}%</span>` :
+                (r.strength === 0 ? ' <span class="s">¬</span>' : '');
+      h += `<div class="rel"><span class="k">${esc(r.kod)} ${esc(r.name)}</span> ${arrow} ${relTag(r.other)}${s}</div>`;
+    }
+    h += '</div>';
+  }
+  const ru = c.terms.filter(t => t.lang === 'ru').map(t => t.term);
+  const en = c.terms.filter(t => t.lang === 'en').map(t => t.term);
+  if (ru.length || en.length) {
+    h += `<div><h3>Термины</h3><div>${ru.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>` +
+         `<div style="color:var(--dim)">${en.map(esc).join(', ')}</div></div>`;
+  }
+  h += '</div>';
+  infoEl.innerHTML = h;
+}
+
+// --- дерево: роды вверху, виды внизу ---
+const NW = 168, NH = 40, GX = 14, GY = 46;
+
+function measure(n, depth) {           // ширина поддерева в «листьях»
+  if (!n.children || !n.children.length || depth <= 0) return 1;
+  let w = 0;
+  for (const c of n.children) w += measure(c, depth - 1);
+  return Math.max(w, 1);
+}
+
+let nodes = [], links = [];
+function placeDown(n, x0, y, depth) {
+  const w = measure(n, depth);
+  const nx = x0 + w / 2;
+  nodes.push({ id: n.id, nama: n.nama, x: nx, y, cnt: n.childCount, cls: depth === MAXD ? 'center' : '' });
+  if (n.children && depth > 0) {
+    let cx = x0;
+    for (const c of n.children) {
+      const cw = measure(c, depth - 1);
+      const cNode = placeDown(c, cx, y + 1, depth - 1);
+      links.push([nx, y, cx + cw / 2, y + 1]);
+      cx += cw;
+    }
+  }
+  return n;
+}
+
+let MAXD = 3;
+function renderTree(t) {
+  nodes = []; links = [];
+  // цепочка вверх: от корня к центру (берём первую ветвь родителей)
+  const chain = [];
+  let cur = t.up, guard = 0;
+  while (cur && guard++ < 12) { chain.unshift(cur); cur = (cur.parents || [])[0]; }
+  // раскладка: роды — вертикально по центру, виды — вниз
+  const downW = measure(t.down, MAXD);
+  const upX = downW / 2;                 // центр над деревом видов
+  chain.forEach((n, i) => {
+    nodes.push({ id: n.id, nama: n.nama, x: upX, y: i, cnt: n.childCount,
+                 cls: i === chain.length - 1 ? 'center' : 'up' });
+    if (i) links.push([upX, i - 1, upX, i]);
+  });
+  // дерево видов: центральный узел уже нарисован; рисуем детей с y=chain.length
+  const y0 = chain.length - 1;
+  if (t.down.children && t.down.children.length) {
+    let cx = 0;
+    for (const c of t.down.children) {
+      const cw = measure(c, MAXD - 1);
+      placeDown(c, cx, y0 + 1, MAXD - 1);
+      links.push([upX, y0, cx + cw / 2, y0 + 1]);
+      cx += cw;
+    }
+  }
+  // рендер SVG
+  const W = Math.max(downW * (NW + GX), 300), H = (chain.length + MAXD + 1) * (NH + GY);
+  let s = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">`;
+  for (const [x1, y1, x2, y2] of links) {
+    const X1 = x1 * (NW + GX), Y1 = y1 * (NH + GY) + NH;
+    const X2 = x2 * (NW + GX), Y2 = y2 * (NH + GY);
+    const my = (Y1 + Y2) / 2;
+    s += `<path class="edge" d="M ${X1} ${Y1} C ${X1} ${my}, ${X2} ${my}, ${X2} ${Y2}"/>`;
+  }
+  for (const n of nodes) {
+    const X = n.x * (NW + GX) - NW / 2, Y = n.y * (NH + GY);
+    s += `<g class="node ${n.cls}" onclick="show(${n.id})">
+      <rect x="${X}" y="${Y}" width="${NW}" height="${NH}"/>
+      <text x="${X + NW / 2}" y="${Y + 17}" text-anchor="middle">${esc(trunc(n.nama))}</text>
+      ${n.cnt ? `<text class="cnt" x="${X + NW / 2}" y="${Y + 32}" text-anchor="middle">${n.cnt} видов</text>` : ''}
+    </g>`;
+  }
+  treeEl.innerHTML = s + '</svg>';
+}
+
+function trunc(s) { return s.length > 22 ? s.slice(0, 21) + '…' : s; }
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+// старт: показать список верхних понятий
+fetch('/api/search?q=а').then(r => r.json()).then(rows => {
+  listEl.innerHTML = '';
+  for (const c of rows.slice(0, 60)) {
+    const d = document.createElement('div');
+    d.className = 'item';
+    d.innerHTML = `<span>${esc(c.nama)}</span><span class="u">${uniName(c.uni)}</span>`;
+    d.onclick = () => show(c.id);
+    listEl.appendChild(d);
+  }
+});
+</script>
+</body>
+</html>
