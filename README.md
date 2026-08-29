@@ -151,6 +151,17 @@ degree stored in `edge.strength`).
   Negated edges are not flagged as redundant and are skipped in the
   incoming direction (a negation says something about the subject, not
   about the object).
+- **Adjectives are not autonomous concepts.** An adjective is the
+  *result* of a bearer→property relation, not a node of its own. Wherever
+  the lexicon needs "the heavy" as a general class, the canonical concept
+  name is the **neuter form** (тяжёлое, красное, умное): "тяжёлая гиря"
+  is the inclusion of гиря in the general class тяжёлое. Masculine /
+  feminine / plural forms live as terms of that concept (`concept_term`),
+  so any inflected query resolves to the same node. The same applies to
+  verbs: aspect pairs and reflexive forms (отклонить / отклонять /
+  отклоняться) are one concept — the deverbal noun (отклонение) when it
+  exists, otherwise the non-reflexive imperfective infinitive.
+  Maintenance: `tools/merge_verbs.py`, `tools/neuter_adjectives.py`.
 
 ## Engine
 
