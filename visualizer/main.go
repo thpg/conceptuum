@@ -9,9 +9,11 @@ package main
 import (
 	"database/sql"
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
+	"sort"
 	"strconv"
 	"strings"
 
@@ -20,6 +22,7 @@ import (
 
 var db *sql.DB
 var relNames = map[string]string{} // kod -> long_name
+var relSym = map[string]bool{}     // kod -> is_symmetric
 var uniNames = map[int]string{}    // id -> nama
 
 func dsn() string {
@@ -50,13 +53,100 @@ type Rel struct {
 
 type ConceptInfo struct {
 	Concept
-	Defin     string   `json:"defin"`
-	UniName   string   `json:"uniName"`
-	Processed bool     `json:"processed"`
+	Defin     string    `json:"defin"`
+	GenDefin  string    `json:"genDefin"` // дефиниция, генерируемая по правилам движка
+	UniName   string    `json:"uniName"`
+	Processed bool      `json:"processed"`
 	Parents   []Concept `json:"parents"`
 	Children  []Concept `json:"children"`
-	Rels      []Rel    `json:"rels"`
-	Terms     []Term   `json:"terms"`
+	Rels      []Rel     `json:"rels"`
+	Terms     []Term    `json:"terms"`
+}
+
+// --- генерация дефиниции: зеркало JnanaEngine.define() ---
+var lblOut = map[string]string{
+	"15": "essential attribute", "20": "attribute",
+	"30": "coextensive with", "40": "overlaps",
+	"70": "produces", "71": "hinders",
+	"72": "precedes", "73": "accompanies", "74": "depends on",
+	"21": "purpose", "22": "capable of", "23": "made of",
+	"24": "holds", "25": "acts upon", "26": "intended for",
+	"27": "directed at", "63": "opposite", "62": "mutual with",
+	"61": "coordinate with"}
+var lblIn = map[string]string{
+	"70": "produced by", "72": "follows", "22": "bearer",
+	"23": "material of", "24": "contained in", "25": "handled by",
+	"26": "used by", "27": "object of", "74": "needed for"}
+
+func attrBand(s *int) string {
+	if s == nil {
+		return "attribute"
+	}
+	if *s == 0 {
+		return "no"
+	}
+	switch {
+	case *s >= 90:
+		return "inherent"
+	case *s >= 50:
+		return "typical"
+	case *s >= 10:
+		return "sometimes"
+	default:
+		return "rarely"
+	}
+}
+
+func genDefin(ci *ConceptInfo) string {
+	spec := []string{}
+	for _, r := range ci.Rels {
+		if r.Dir == "out" {
+			lbl, ok := lblOut[r.Kod]
+			if !ok {
+				continue
+			}
+			if r.Kod == "20" {
+				lbl = attrBand(r.Strength)
+			} else if r.Strength != nil && *r.Strength == 0 {
+				lbl = "not " + lbl
+			}
+			s := lbl + ": " + r.Other.Nama
+			if r.Strength != nil && *r.Strength > 0 {
+				s += fmt.Sprintf(" (%d%%)", *r.Strength)
+			}
+			spec = append(spec, s)
+		} else {
+			if r.Strength != nil && *r.Strength == 0 {
+				continue // отрицание — факт о субъекте
+			}
+			if relSym[r.Kod] {
+				if lbl, ok := lblOut[r.Kod]; ok {
+					spec = append(spec, lbl+": "+r.Other.Nama)
+					continue
+				}
+			}
+			if lbl, ok := lblIn[r.Kod]; ok {
+				spec = append(spec, lbl+": "+r.Other.Nama)
+			}
+		}
+	}
+	sort.Strings(spec)
+	rod := "universe (no genus)"
+	if len(ci.Parents) > 0 {
+		rod = ci.Parents[0].Nama
+	}
+	def := ci.Nama + " — " + rod
+	if len(spec) > 0 {
+		def += "; " + strings.Join(spec, "; ")
+	}
+	if len(ci.Children) > 0 {
+		kids := []string{}
+		for _, c := range ci.Children {
+			kids = append(kids, c.Nama)
+		}
+		def += ". Species: " + strings.Join(kids, ", ")
+	}
+	return def
 }
 
 type TreeNode struct {
@@ -102,13 +192,15 @@ func main() {
 }
 
 func loadDicts() {
-	rows, err := db.Query("SELECT kod, long_name FROM relevant")
+	rows, err := db.Query("SELECT kod, long_name, is_symmetric FROM relevant")
 	if err == nil {
 		defer rows.Close()
 		for rows.Next() {
 			var k, n string
-			rows.Scan(&k, &n)
+			var sym int
+			rows.Scan(&k, &n, &sym)
 			relNames[k] = n
+			relSym[k] = sym != 0
 		}
 	}
 	rows2, err := db.Query("SELECT id, nama FROM universum")
@@ -235,6 +327,7 @@ func getConceptInfo(id int) (*ConceptInfo, error) {
 		trows.Scan(&t.Term, &t.Lang)
 		ci.Terms = append(ci.Terms, t)
 	}
+	ci.GenDefin = genDefin(&ci)
 	return &ci, nil
 }
 

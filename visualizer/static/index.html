@@ -51,6 +51,9 @@
   .node text { fill: var(--txt); font-size: 13px; }
   .node .cnt { fill: var(--dim); font-size: 10px; }
   .edge { stroke: #3a4a75; stroke-width: 1.4; fill: none; }
+  .edge.rel { stroke: #8f7fd4; stroke-dasharray: 5 4; }
+  .edgeLbl { fill: #a08fe0; font-size: 10px; }
+  .node.rel rect { fill: #262040; stroke: #6a5a9e; stroke-dasharray: 4 3; }
   #hint { color: var(--dim); text-align: center; margin-top: 40vh; }
 </style>
 </head>
@@ -109,7 +112,7 @@ function relTag(c) {
 
 function renderInfo(c) {
   let h = `<h2>${esc(c.nama)}<span class="uni">${esc(c.uniName)} · id ${c.id}${c.processed ? ' · ✓' : ''}</span></h2>`;
-  if (c.defin) h += `<div id="defin">${esc(c.defin)}</div>`;
+  if (c.genDefin) h += `<div id="defin" title="генерируемая дефиниция (род + отличия + виды)">${esc(c.genDefin)}</div>`;
   h += '<div class="cols">';
   if (c.parents.length)
     h += `<div><h3>Род</h3>${c.parents.map(relTag).join('')}</div>`;
@@ -165,6 +168,7 @@ function placeDown(n, x0, y, depth) {
 let MAXD = 3;
 function renderTree(t) {
   nodes = []; links = [];
+  const relLinks = [];
   // цепочка вверх: от корня к центру (берём первую ветвь родителей)
   const chain = [];
   let cur = t.up, guard = 0;
@@ -177,25 +181,42 @@ function renderTree(t) {
                  cls: i === chain.length - 1 ? 'center' : 'up' });
     if (i) links.push([upX, i - 1, upX, i]);
   });
-  // дерево видов: центральный узел уже нарисован; рисуем детей с y=chain.length
   const y0 = chain.length - 1;
+  // не-таксономические связи центра — пунктиром, отдельным рядом
+  const sats = t.center.rels || [];
+  const satShift = sats.length ? 1 : 0;
+  sats.forEach((r, i) => {
+    const sx = Math.max(0.5, upX + (i - (sats.length - 1) / 2) * 1.15);
+    const s = r.strength != null && r.strength !== 0 ? ` ${r.strength}%` : (r.strength === 0 ? ' ¬' : '');
+    const lbl = (r.dir === 'out' ? `${r.kod} ${r.name} →` : `← ${r.kod} ${r.name}`) + s;
+    nodes.push({ id: r.other.id, nama: r.other.nama, x: sx, y: y0 + 1, cnt: 0, cls: 'rel' });
+    relLinks.push({ x1: upX, y1: y0, x2: sx, y2: y0 + 1, lbl });
+  });
+  // дерево видов: центральный узел уже нарисован; рисуем детей ниже ряда связей
   if (t.down.children && t.down.children.length) {
     let cx = 0;
     for (const c of t.down.children) {
       const cw = measure(c, MAXD - 1);
-      placeDown(c, cx, y0 + 1, MAXD - 1);
-      links.push([upX, y0, cx + cw / 2, y0 + 1]);
+      placeDown(c, cx, y0 + 1 + satShift, MAXD - 1);
+      links.push([upX, y0, cx + cw / 2, y0 + 1 + satShift]);
       cx += cw;
     }
   }
   // рендер SVG
-  const W = Math.max(downW * (NW + GX), 300), H = (chain.length + MAXD + 1) * (NH + GY);
+  const W = Math.max(downW * (NW + GX), sats.length * (NW + GX), 300);
+  const H = (chain.length + MAXD + 1 + satShift) * (NH + GY);
   let s = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">`;
-  for (const [x1, y1, x2, y2] of links) {
+  const path = (x1, y1, x2, y2, cls) => {
     const X1 = x1 * (NW + GX), Y1 = y1 * (NH + GY) + NH;
     const X2 = x2 * (NW + GX), Y2 = y2 * (NH + GY);
     const my = (Y1 + Y2) / 2;
-    s += `<path class="edge" d="M ${X1} ${Y1} C ${X1} ${my}, ${X2} ${my}, ${X2} ${Y2}"/>`;
+    return `<path class="${cls}" d="M ${X1} ${Y1} C ${X1} ${my}, ${X2} ${my}, ${X2} ${Y2}"/>`;
+  };
+  for (const [x1, y1, x2, y2] of links) s += path(x1, y1, x2, y2, 'edge');
+  for (const r of relLinks) {
+    s += path(r.x1, r.y1, r.x2, r.y2, 'edge rel');
+    const lx = (r.x1 + r.x2) / 2 * (NW + GX), ly = (r.y1 + r.y2) / 2 * (NH + GY) + NH / 2;
+    s += `<text class="edgeLbl" x="${lx}" y="${ly}" text-anchor="middle">${esc(r.lbl)}</text>`;
   }
   for (const n of nodes) {
     const X = n.x * (NW + GX) - NW / 2, Y = n.y * (NH + GY);
