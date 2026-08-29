@@ -95,7 +95,7 @@ object must belong to — so the engine rejects category errors at insert time
 | 24 / 25 / 26 | telic: content (чашка—кофе) / application (открывалка—бутылка) / user (будка—собака) | |
 | 27 | patient (object of action) | action → object |
 | 30 | coextensive (equal scope) | |
-| 43 / 45 / 47 / 48 | strong / equal / slight / possible overlap | |
+| 40 | overlap | symmetric; degree in `strength` (70 strong / 50 half / 5 slight / NULL possible) |
 | 60 | incompatible | |
 | 61 | coordinate (co-hyponyms) | symmetric |
 | 62 | mutually implying (converses) | symmetric |
@@ -104,9 +104,10 @@ object must belong to — so the engine rejects category errors at insert time
 | 72 / 73 | temporal precedence / simultaneity | 73 symmetric |
 | 74 | dependence | |
 
-Deprecated codes kept for history: 10, 13, 40, 41, 49, 80, 81, 82, 83
+Deprecated codes kept for history: 10, 13, 41, 43, 45, 47, 48, 49, 80, 81, 82, 83
 (the 8X series moved into 2X on 2026-08-28; degree codes 21/23/25/27 of the
-old scheme merged into 20 with the degree stored in `edge.strength`).
+old scheme merged into 20 and overlap baskets 43–48 merged into 40, with the
+degree stored in `edge.strength`).
 
 ### Design notes (why the code set looks like this)
 

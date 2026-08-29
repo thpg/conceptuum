@@ -428,6 +428,7 @@ class JnanaEngine:
 
     # ---------- define ----------
     LBL_OUT = {"15": "essential attribute", "20": "attribute",
+               "30": "coextensive with", "40": "overlaps",
                "70": "produces", "71": "hinders",
                "72": "precedes", "73": "accompanies", "74": "depends on",
                "21": "purpose", "22": "capable of", "23": "made of",
