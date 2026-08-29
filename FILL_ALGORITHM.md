@@ -136,6 +136,9 @@ Payload: "These relations were rejected. Fix or drop each.
    — keep), or (b) its strength deviates noticeably (≈25+ points) from the
    genus value (override — keep). Exact duplicates are pruned; see
    README → Design notes.
+   **Negation: strength = 0** marks an explicit exception to genus
+   inheritance or an essential negative property (пингвин—полёт 0,
+   змея—лапа 0). Do not use 61/63 for "this species lacks the trait".
 
 1. **Dedupe before the call.** The "already known" children list prevents
    the model from re-generating existing concepts — the single biggest

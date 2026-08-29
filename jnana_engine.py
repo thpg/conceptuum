@@ -286,7 +286,7 @@ class JnanaEngine:
         return "no", f"no relation found between '{t1}' and '{t2}'", []
 
     # ---------- validation ----------
-    def validate(self, a, kod, b, universum_id=None):
+    def validate(self, a, kod, b, universum_id=None, strength=None):
         """(ok, message). Rules are read from `relevant`."""
         kod = str(kod)
         rule = self.rules.get(kod)
@@ -314,9 +314,11 @@ class JnanaEngine:
             if not ok_obj:
                 return False, f"signature: object must be in subtree #{rule['so']}"
         # inheritance redundancy (warning, not a refusal):
-        # ancestor already carries the same code + same object
+        # ancestor already carries the same code + same object.
+        # strength == 0 is an explicit negation/exception -> not redundant.
         warn = None
-        if kod in ("70", "20", "21", "22", "23", "24", "25", "26", "27"):
+        if kod in ("70", "20", "21", "22", "23", "24", "25", "26", "27") \
+                and strength != 0:
             have = {(x, k, y) for x, y, k, s, st, i in self.edges
                     if st == "ok"}
             for anc in self.ancestors(a):
@@ -334,7 +336,7 @@ class JnanaEngine:
                 return t
             return self.resolve(t) or (self.resolve_fuzzy(t) or [None])[0]
         a, b = rid(t1), rid(t2)
-        ok, msg = self.validate(a, str(kod), b, universum_id)
+        ok, msg = self.validate(a, str(kod), b, universum_id, strength=strength)
         if not ok:
             return None, f"REJECTED {t1}->{t2} [{kod}]: {msg}"
         if self.rules[str(kod)]["sym"] and a > b:
@@ -438,9 +440,12 @@ class JnanaEngine:
 
     @staticmethod
     def _attr_band(s):
-        """Степень атрибуции (код 20) словами, как раньше давали коды 21-27."""
-        if not s:
+        """Степень атрибуции (код 20) словами, как раньше давали коды 21-27.
+        strength == 0 — явное отрицание/исключение (пингвин не летает)."""
+        if s is None:
             return "attribute"
+        if s == 0:
+            return "no"
         return ("inherent" if s >= 90 else "typical" if s >= 50
                 else "sometimes" if s >= 10 else "rarely")
 
@@ -463,9 +468,13 @@ class JnanaEngine:
             for k, t, s in sorted(out_e.get(d, [])):
                 if k in self.LBL_OUT:
                     lbl = self._attr_band(s) if k == "20" else self.LBL_OUT[k]
+                    if s == 0 and k != "20":
+                        lbl = "not " + lbl
                     spec.append(f"{lbl}: {self.disp[t]}"
                                 + (f" ({s}%)" if s else ""))
             for k, f, s in sorted(in_e.get(d, [])):
+                if s == 0:
+                    continue  # отрицание — факт о субъекте, не об объекте
                 if k in self.rules and self.rules[k]["sym"] and k in self.LBL_OUT:
                     spec.append(f"{self.LBL_OUT[k]}: {self.disp[f]}")
                 elif k in self.LBL_IN:

@@ -142,6 +142,14 @@ old scheme merged into 20 with the degree stored in `edge.strength`).
   `validate()` warns about inherited duplicates at insert time;
   `tools/prune_inherited.py` cleans exact duplicates,
   `tools/restore_prune.py` rolls back over-pruning.
+- **Negation is strength = 0.** An attribute edge with strength 0 is an
+  explicit exception/negative fact that overrides genus inheritance:
+  пингвин —[22]→ полёт (0) renders as "not capable of: полёт" and cancels
+  the inherited "птица — capable of: полёт (95%)". Works for essential
+  negative properties too: змея —[20]→ лапа (0) renders "no: лапа".
+  Negated edges are not flagged as redundant and are skipped in the
+  incoming direction (a negation says something about the subject, not
+  about the object).
 
 ## Engine
 
