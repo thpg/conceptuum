@@ -151,31 +151,65 @@ function renderInfo(c) {
   infoEl.innerHTML = h;
 }
 
-// --- дерево: роды вверху, виды внизу ---
+// --- дерево: роды вверху, виды внизу (виды — сетка, не одна линия) ---
 const NW = 168, NH = 40, GX = 14, GY = 46;
+let COLS = 8;
 
-function measure(n, depth) {           // ширина поддерева в «листьях»
+function maxCols() {
+  const avail = treeEl.clientWidth || 900;
+  return Math.max(4, Math.min(10, Math.floor((avail - 32) / (NW + GX))));
+}
+
+function wrapRows(children, depth) {
+  const rows = [];
+  let row = [], w = 0;
+  for (const c of children) {
+    const cw = measure(c, depth);
+    if (row.length && w + cw > COLS) {
+      rows.push({ items: row, w });
+      row = [];
+      w = 0;
+    }
+    row.push({ c, cw });
+    w += cw;
+  }
+  if (row.length) rows.push({ items: row, w });
+  return rows;
+}
+
+function measure(n, depth) {
   if (!n.children || !n.children.length || depth <= 0) return 1;
-  let w = 0;
-  for (const c of n.children) w += measure(c, depth - 1);
-  return Math.max(w, 1);
+  const rows = wrapRows(n.children, depth - 1);
+  return Math.max(1, ...rows.map(r => r.w));
+}
+
+function heightDown(n, depth) {
+  if (!n.children || !n.children.length || depth <= 0) return 1;
+  const rows = wrapRows(n.children, depth - 1);
+  let h = 1;
+  for (const row of rows)
+    h += Math.max(...row.items.map(({ c }) => heightDown(c, depth - 1)));
+  return h;
 }
 
 let nodes = [], links = [];
-function placeDown(n, x0, y, depth) {
-  const w = measure(n, depth);
+function placeDown(n, x0, y, depth, allocW) {
+  const w = allocW != null ? allocW : measure(n, depth);
   const nx = x0 + w / 2;
-  nodes.push({ id: n.id, nama: n.nama, x: nx, y, cnt: n.childCount, cls: depth === MAXD ? 'center' : '' });
-  if (n.children && depth > 0) {
-    let cx = x0;
-    for (const c of n.children) {
-      const cw = measure(c, depth - 1);
-      const cNode = placeDown(c, cx, y + 1, depth - 1);
-      links.push([nx, y, cx + cw / 2, y + 1]);
+  nodes.push({ id: n.id, nama: n.nama, x: nx, y, cnt: n.childCount, cls: '' });
+  if (!n.children || depth <= 0) return;
+  const rows = wrapRows(n.children, depth - 1);
+  let yb = y + 1;
+  for (const row of rows) {
+    let cx = x0 + (w - row.w) / 2;
+    const rowH = Math.max(...row.items.map(({ c }) => heightDown(c, depth - 1)));
+    for (const { c, cw } of row.items) {
+      placeDown(c, cx, yb, depth - 1, cw);
+      links.push([nx, y, cx + cw / 2, yb]);
       cx += cw;
     }
+    yb += rowH;
   }
-  return n;
 }
 
 let MAXD = 3, UPD = 8;
@@ -220,37 +254,49 @@ function renderTree(t) {
   nodes = []; links = [];
   const relLinks = [];
   genusLinks = [];
+  COLS = maxCols();
   const downW = measure(t.down, MAXD);
   const upW = measureUp(t.up, UPD);
   const sats = t.center.rels || [];
-  const leftNeed = sats.length ? (sats.length - 1) / 2 * 1.15 + 0.7 : 0;
+  const satRows = [];
+  for (let i = 0; i < sats.length; i += COLS) satRows.push(sats.slice(i, i + COLS));
+  const satShift = satRows.length;
   const forestW = Math.max(downW, upW, 1);
-  const off = Math.max(0, leftNeed - forestW / 2);
+  const off = 0;
   const x0 = off + (forestW - upW) / 2;
   const y0 = heightUp(t.up, UPD) - 1;
   const placed = placeUp(t.up, x0, y0, UPD, 'center');
   const upX = placed.nx;
-  const satShift = sats.length ? 1 : 0;
-  sats.forEach((r, i) => {
-    const sx = upX + (i - (sats.length - 1) / 2) * 1.15;
-    const s = r.strength != null && r.strength !== 0 ? ` ${r.strength}%` : (r.strength === 0 ? ' ¬' : '');
-    const lbl = (r.dir === 'out' ? `${r.kod} ${r.name} →` : `← ${r.kod} ${r.name}`) + s;
-    nodes.push({ id: r.other.id, nama: r.other.nama, x: sx, y: y0 + 1, cnt: 0, cls: 'rel' });
-    relLinks.push({ x1: upX, y1: y0, x2: sx, y2: y0 + 1, lbl });
+  satRows.forEach((row, ri) => {
+    row.forEach((r, i) => {
+      const sx = upX + (i - (row.length - 1) / 2);
+      const st = r.strength != null && r.strength !== 0 ? ` ${r.strength}%` : (r.strength === 0 ? ' ¬' : '');
+      const lbl = (r.dir === 'out' ? `${r.kod} ${r.name} →` : `← ${r.kod} ${r.name}`) + st;
+      nodes.push({ id: r.other.id, nama: r.other.nama, x: sx, y: y0 + 1 + ri, cnt: 0, cls: 'rel' });
+      relLinks.push({ x1: upX, y1: y0, x2: sx, y2: y0 + 1 + ri, lbl });
+    });
   });
+  let downH = 0;
   if (t.down.children && t.down.children.length) {
-    const downOff = off + (forestW - downW) / 2;
-    let cx = downOff;
-    for (const c of t.down.children) {
-      const cw = measure(c, MAXD - 1);
-      placeDown(c, cx, y0 + 1 + satShift, MAXD - 1);
-      links.push([upX, y0, cx + cw / 2, y0 + 1 + satShift]);
-      cx += cw;
+    const rows = wrapRows(t.down.children, MAXD - 1);
+    const gridW = Math.max(...rows.map(r => r.w));
+    const downOff = off + (forestW - gridW) / 2;
+    let yb = y0 + 1 + satShift;
+    for (const row of rows) {
+      let cx = downOff + (gridW - row.w) / 2;
+      const rowH = Math.max(...row.items.map(({ c }) => heightDown(c, MAXD - 1)));
+      for (const { c, cw } of row.items) {
+        placeDown(c, cx, yb, MAXD - 1, cw);
+        links.push([upX, y0, cx + cw / 2, yb]);
+        cx += cw;
+      }
+      yb += rowH;
     }
+    downH = yb - (y0 + 1 + satShift);
   }
-  const colW = forestW + 2 * off + 1;
-  const W = Math.max(colW * (NW + GX), 300);
-  const H = (y0 + MAXD + 1 + satShift) * (NH + GY);
+  const colW = forestW + 1;
+  const W = Math.max(colW * (NW + GX), treeEl.clientWidth || 300);
+  const H = (y0 + 1 + satShift + downH + 0.4) * (NH + GY);
   let s = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">`;
   const path = (x1, y1, x2, y2, cls) => {
     const X1 = x1 * (NW + GX), Y1 = y1 * (NH + GY) + NH;
@@ -287,6 +333,11 @@ function renderTree(t) {
 
 function trunc(s) { return s.length > 22 ? s.slice(0, 21) + '…' : s; }
 function doSearchTerm(t) { $('#search').value = t; doSearch(t); }
+let rz = null;
+window.addEventListener('resize', () => {
+  clearTimeout(rz);
+  rz = setTimeout(() => { if (selId) show(selId); }, 160);
+});
 function esc(s) { return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 
 // старт: показать список верхних понятий
