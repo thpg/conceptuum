@@ -41,6 +41,9 @@ The base is designed for an asymmetric workflow:
 In other words: **pay the intelligence cost once, at build time** — then serve
 structured, deterministic knowledge to any number of cheap runtimes.
 
+The full set of filling/maintenance rules, with the error log that motivated
+them, lives in [docs/ontology-rules.md](docs/ontology-rules.md).
+
 ## Relation kinds
 
 The grammar distinguishes several families of logical relations:
