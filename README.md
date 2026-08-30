@@ -162,6 +162,13 @@ degree stored in `edge.strength`).
   отклоняться) are one concept — the deverbal noun (отклонение) when it
   exists, otherwise the non-reflexive imperfective infinitive.
   Maintenance: `tools/merge_verbs.py`, `tools/neuter_adjectives.py`.
+- **Adjective-class genus = its bearer class when the bearer is closed.**
+  If a property is bound to one typical bearer class, the adjective-concept
+  is a *species of that bearer*, and the property becomes a separate
+  attribute edge: судоходное —[14]→ водоём plus судоходное —[20]→
+  судоходство (90%), несудоходное —[20]→ судоходство (0). If the bearer
+  class is open (anything can be heavy), the genus stays the property
+  scale: тяжёлое —[14]→ вес.
 
 ## Engine
 
