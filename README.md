@@ -50,8 +50,10 @@ The grammar distinguishes several families of logical relations:
 
 - **Taxonomic** (14 — *genus / is-a*): the backbone hierarchy.
   `dog is-a mammal`. Transitive; a closure table makes ancestor and
-  descendant queries O(1) lookups. Every concept has exactly one genus
-  (single inheritance keeps the tree navigable).
+  descendant queries O(1) lookups. One meaning is one concept; when
+  scientific and everyday classifications diverge, the same concept
+  has two genera, each tagged with a universum (физическое явление /
+  видимое). True homonyms (different meanings) stay separate nodes.
 - **Attributive / part-whole spectrum** (15, 21–27): from *essential
   attribute* (without which the concept is not itself) through *inherent*
   (inseparable part or phase — "wheel of a car", "parsing phase of
@@ -154,24 +156,17 @@ degree stored in `edge.strength`).
   Negated edges are not flagged as redundant and are skipped in the
   incoming direction (a negation says something about the subject, not
   about the object).
-- **Adjectives are not autonomous concepts.** An adjective is the
-  *result* of a bearer→property relation, not a node of its own. Wherever
-  the lexicon needs "the heavy" as a general class, the canonical concept
-  name is the **neuter form** (тяжёлое, красное, умное): "тяжёлая гиря"
-  is the inclusion of гиря in the general class тяжёлое. Masculine /
-  feminine / plural forms live as terms of that concept (`concept_term`),
-  so any inflected query resolves to the same node. The same applies to
-  verbs: aspect pairs and reflexive forms (отклонить / отклонять /
-  отклоняться) are one concept — the deverbal noun (отклонение) when it
-  exists, otherwise the non-reflexive imperfective infinitive.
-  Maintenance: `tools/merge_verbs.py`, `tools/neuter_adjectives.py`.
-- **Adjective-class genus = its bearer class when the bearer is closed.**
-  If a property is bound to one typical bearer class, the adjective-concept
-  is a *species of that bearer*, and the property becomes a separate
-  attribute edge: судоходное —[14]→ водоём plus судоходное —[20]→
-  судоходство (90%), несудоходное —[20]→ судоходство (0). If the bearer
-  class is open (anything can be heavy), the genus stays the property
-  scale: тяжёлое —[14]→ вес.
+- **Terms do not change the taxonomy.** Adjective / noun / infinitive /
+  gender are Russian surface forms of one concept, stored in
+  `concept_term`. «Судоходное» and «судоходство» are the same node; the
+  word form names a relation already coded in `relevant` (водоём —[20]→
+  судоходство), it does not make a species of водоём. Same for verbs:
+  aspect pairs, reflexives, and the deverbal noun (отклонить / отклонять /
+  отклоняться / отклонение; влиять / влияние) are one concept. Canonical
+  label: deverbal noun when it exists. Maintenance: `tools/merge_verbs.py`,
+  `tools/neuter_adjectives.py`. The closed-bearer reparenting
+  (`судоходное` → водоём) was a mistaken next step and is retracted;
+  see [docs/ontology-rules.md](docs/ontology-rules.md).
 
 ## Engine
 

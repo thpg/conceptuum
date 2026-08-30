@@ -133,8 +133,18 @@ func genDefin(ci *ConceptInfo) string {
 	}
 	sort.Strings(spec)
 	rod := "universe (no genus)"
-	if len(ci.Parents) > 0 {
+	if len(ci.Parents) == 1 {
 		rod = ci.Parents[0].Nama
+	} else if len(ci.Parents) > 1 {
+		parts := make([]string, 0, len(ci.Parents))
+		for _, p := range ci.Parents {
+			un := uniNames[p.Uni]
+			if un == "" {
+				un = strconv.Itoa(p.Uni)
+			}
+			parts = append(parts, p.Nama+" ["+un+"]")
+		}
+		rod = strings.Join(parts, "; ")
 	}
 	def := ci.Nama + " — " + rod
 	if len(spec) > 0 {

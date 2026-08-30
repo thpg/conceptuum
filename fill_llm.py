@@ -33,10 +33,13 @@ Output ONLY data lines, one item per line, fields separated by a TAB character.
 No commentary, no headers, no markdown, no numbering.
 
 Relation kods (for RELATE):
-15 essential attribute; 21 inherent part; 61 coordinate; 62 converses;
-63 contrary; 70 produces; 71 hinders; 72 precedes; 74 depends on;
-80 purpose; 81 material; 82 agent; 83 patient.
-Use only these kods. Strength (optional): 40-100, only when uncertain."""
+15 essential attribute; 20 attribute (degree in strength 0-100: 95 always,
+70 usually, 30 sometimes, 5 rarely; 0 = explicit negation);
+21 purpose; 22 agent; 23 material; 24 content; 25 application; 26 user;
+27 patient; 40 overlap (degree in strength); 61 coordinate; 62 converses;
+63 contrary; 64 contradictory; 70 produces; 71 hinders; 72 precedes;
+74 depends on.
+Use only these kods. Strength (optional): 0-100."""
 
 
 def llm_call(endpoint, model, user, max_tokens=1500):

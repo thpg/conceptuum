@@ -6,7 +6,9 @@ Layers:
   storage    : concept / concept_term / edge / relevant / universum / concept_path
   validation : rules are read from `relevant` (signatures, symmetry, transitivity)
   inference  : concept_path (transitive closure of kod 14), inheritance
-  interface  : verify / propose / approve / add_concept / rebuild / define
+  interface  : verify / propose / approve / add_concept / add_genus /
+               merge_concepts / rebuild / define
+  taxonomy   : kod 14 is a DAG — two genera on one concept, universum on the edge
 
 Usage:
     eng = JnanaEngine(pref_lang="en")
@@ -129,10 +131,27 @@ class JnanaEngine:
                                  so=r[6], so2=r[7], so3=r[8], so4=r[9],
                                  sym=bool(r[10]), trans=bool(r[11]))
                       for r in self.cur.fetchall()}
+        self.cur.execute("SELECT id, nama FROM universum")
+        self.uni_names = {i: n for i, n in self.cur.fetchall()}
         self.cur.execute("SELECT dh1, dh2, kod, strength, status, id FROM edge")
         self.edges = self.cur.fetchall()
-        self.parent = {a: b for a, b, k, s, st, i in self.edges
-                       if k == KOD_ISA and st == "ok"}
+        # ISA is a DAG: one concept may have several genera, each tagged
+        # with a universum. self.parent keeps a single "home" parent
+        # (edge universum matching concept.universum_id, else the first)
+        # so older callers (fill_llm leaf grouping) keep working.
+        self.parents = defaultdict(list)   # child -> [(parent, universum_id)]
+        self.children_map = defaultdict(list)
+        self.parent = {}
+        self.cur.execute(
+            "SELECT dh1, dh2, universum_id FROM edge WHERE kod=%s AND status='ok'",
+            (KOD_ISA,))
+        for a, b, u in self.cur.fetchall():
+            self.parents[a].append((b, u))
+            self.children_map[b].append(a)
+        for a, pairs in self.parents.items():
+            home = self.concept_u.get(a)
+            pick = next((p for p, u in pairs if u == home), pairs[0][0])
+            self.parent[a] = pick
         self.cur.execute("SELECT ancestor, descendant, depth FROM concept_path")
         self.anc = defaultdict(dict)
         for a, d, depth in self.cur.fetchall():
@@ -242,16 +261,32 @@ class JnanaEngine:
         return self.anc.get(cid, {})
 
     def children(self, cid):
-        return [a for a, b in self.parent.items() if b == cid]
+        return list(self.children_map.get(cid, []))
 
-    def in_subtree(self, cid, anchor):
-        # walk the live parent chain (self.parent is rebuilt on every reload,
-        # unlike concept_path which is only refreshed by rebuild())
-        x, guard = cid, 0
-        while x is not None and guard < 64:
+    def genera(self, cid, universum_id=None):
+        """Direct genus links: list of (parent_id, universum_id)."""
+        pairs = self.parents.get(cid, [])
+        if universum_id is None:
+            return list(pairs)
+        return [(p, u) for p, u in pairs if u == universum_id]
+
+    def in_subtree(self, cid, anchor, universum_id=None):
+        """True if anchor is cid or an ancestor of cid.
+        Walks the live ISA DAG (all genera, or only those of universum_id).
+        Unlike concept_path, this is current even before rebuild()."""
+        if cid == anchor:
+            return True
+        seen, stack, guard = set(), [cid], 0
+        while stack and guard < 256:
+            x = stack.pop()
+            if x in seen:
+                continue
+            seen.add(x)
             if x == anchor:
                 return True
-            x = self.parent.get(x)
+            for p, u in self.parents.get(x, []):
+                if universum_id is None or u == universum_id:
+                    stack.append(p)
             guard += 1
         return False
 
@@ -297,11 +332,16 @@ class JnanaEngine:
         if rule["sym"] and a > b:
             a, b = b, a
         u = universum_id or self.concept_u.get(a, 1)
-        for x, y, k, s, st, i in self.edges:
-            if (x, y, k) == (a, b, kod):
-                return False, "duplicate"
+        self.cur.execute(
+            "SELECT universum_id FROM edge WHERE dh1=%s AND dh2=%s AND kod=%s AND status<>'rejected'",
+            (a, b, kod))
+        existing_u = {row[0] for row in self.cur.fetchall()}
+        if u in existing_u:
+            return False, "duplicate"
+        if existing_u and kod != KOD_ISA:
+            return False, "duplicate"
         if kod == KOD_ISA:
-            if b in self.anc.get(a, {}) or a in self.anc.get(b, {}):
+            if self.in_subtree(a, b) or self.in_subtree(b, a):
                 return False, "cycle in hierarchy"
         if rule["ss"] is not None:
             ok_subj = any(rule.get(k) and self.in_subtree(a, rule[k])
@@ -362,11 +402,77 @@ class JnanaEngine:
         self.commit()
         return len(edge_ids)
 
+    def add_genus(self, cid, parent, universum_id=None, auto=True):
+        """Attach a (possibly additional) genus to an existing concept.
+        universum_id is stored on the kod-14 edge — two discourses, one node."""
+        pid = self.resolve(parent) if isinstance(parent, str) else parent
+        if pid is None:
+            return None, f"parent '{parent}' not found"
+        if cid not in self.names:
+            return None, f"concept {cid} not found"
+        u = universum_id if universum_id is not None else self.concept_u.get(cid, 1)
+        for p, u0 in self.parents.get(cid, []):
+            if p == pid and u0 == u:
+                return None, "already has this genus"
+        return self.propose(cid, KOD_ISA, pid, universum_id=u,
+                            source="genus", auto=auto)
+
+    def merge_concepts(self, src, dst, keep_genus=False, reload=True):
+        """Absorb src into dst. Terms of src become terms of dst; the src
+        nama is kept as a ru term. Non-isa edges are retargeted. isa of src
+        is dropped unless keep_genus (then transferred as extra genera of
+        dst). Self-loops and unique-key clashes are deleted. Does not
+        rebuild() — caller should rebuild+define after a batch."""
+        if src == dst:
+            return False, "same concept"
+        if src not in self.names or dst not in self.names:
+            return False, "concept not found"
+        self.cur.execute(
+            "INSERT IGNORE INTO concept_term (concept_id,term,lang) VALUES (%s,%s,'ru')",
+            (dst, self.names[src]))
+        self.cur.execute("SELECT term, lang FROM concept_term WHERE concept_id=%s", (src,))
+        for term, lang in self.cur.fetchall():
+            self.cur.execute(
+                "INSERT IGNORE INTO concept_term (concept_id,term,lang) VALUES (%s,%s,%s)",
+                (dst, term, lang))
+        self.cur.execute(
+            "SELECT id, dh1, dh2, kod, universum_id FROM edge WHERE dh1=%s OR dh2=%s",
+            (src, src))
+        for eid, a, b, kod, u in self.cur.fetchall():
+            new_a = dst if a == src else a
+            new_b = dst if b == src else b
+            drop = False
+            if new_a == new_b:
+                drop = True
+            elif kod == KOD_ISA and a == src and not keep_genus:
+                drop = True
+            else:
+                self.cur.execute(
+                    "SELECT id FROM edge WHERE dh1=%s AND dh2=%s AND kod=%s AND universum_id=%s AND id<>%s",
+                    (new_a, new_b, kod, u, eid))
+                if self.cur.fetchone():
+                    drop = True
+            if drop:
+                self.cur.execute("DELETE FROM edge WHERE id=%s", (eid,))
+            else:
+                self.cur.execute("UPDATE edge SET dh1=%s, dh2=%s WHERE id=%s",
+                                 (new_a, new_b, eid))
+        self.cur.execute("DELETE FROM concept_term WHERE concept_id=%s", (src,))
+        self.cur.execute("DELETE FROM concept_path WHERE ancestor=%s OR descendant=%s",
+                         (src, src))
+        self.cur.execute("DELETE FROM concept WHERE dharma=%s", (src,))
+        if reload:
+            self.reload()
+        return True, f"merged {src} -> {dst}"
+
     # ---------- add_concept ----------
     def add_concept(self, nama, parent, lang="en", universum_id=None,
                     passport=None, terms=None, auto=True):
         """New concept + genus edge. parent — name or id.
-        passport: dict(vol_ed=.., cont_abs=.., ...); terms: [(term, lang), ...]"""
+        passport: dict(vol_ed=.., cont_abs=.., ...); terms: [(term, lang), ...]
+        Same nama in the same universum: return existing and attach the
+        genus if it is a new one. Same nama in another universum: homonym
+        (different meaning) — a new node."""
         if isinstance(parent, str):
             pid = self.resolve(parent)
         else:
@@ -374,12 +480,11 @@ class JnanaEngine:
         if pid is None:
             return None, f"parent '{parent}' not found"
         u = universum_id or self.concept_u.get(pid, 1)
-        if nama in self.id_of:
-            existing = self.id_of[nama]
-            if self.concept_u.get(existing) == u:
-                return existing, f"already exists: {nama}"
-            # homonym in another universum — allowed: same term, new concept
-        cid = max(self.names) + 1
+        for did, n in self.names.items():
+            if n == nama and self.concept_u.get(did) == u:
+                self.add_genus(did, pid, universum_id=u, auto=auto)
+                return did, f"already exists: {nama}"
+        cid = max(self.names) + 1 if self.names else 1
         cols = dict(vol_zero=0, vol_ed=0, vol_countable=None, vol_sobir=0,
                     vol_sootn=0, cont_konkr=None, cont_abs=None, cont_empir=1)
         if passport:
@@ -406,23 +511,34 @@ class JnanaEngine:
 
     # ---------- rebuild ----------
     def rebuild(self):
-        """Rebuild the transitive closure concept_path."""
+        """Rebuild the transitive closure concept_path over the ISA DAG.
+        Diamond paths keep the shortest depth. Universum is not stored on
+        the path (a descendant in any discourse is still a descendant)."""
+        up = defaultdict(list)
         self.cur.execute("SELECT dh1, dh2 FROM edge WHERE kod='14' AND status='ok'")
-        parent = dict(self.cur.fetchall())
+        for a, b in self.cur.fetchall():
+            up[a].append(b)
         pairs = {}
-        for start in parent:
-            x, d = start, 1
-            while x in parent:
-                key = (parent[x], start)
-                if key not in pairs or pairs[key] > d:
-                    pairs[key] = d
-                x = parent[x]
-                d += 1
-                if d > 25:
-                    break
+        for start in list(up):
+            seen = {start: 0}
+            stack = [(start, 0)]
+            while stack:
+                x, d = stack.pop()
+                if d >= 25:
+                    continue
+                for p in up.get(x, []):
+                    nd = d + 1
+                    if p in seen and seen[p] <= nd:
+                        continue
+                    seen[p] = nd
+                    key = (p, start)
+                    if key not in pairs or pairs[key] > nd:
+                        pairs[key] = nd
+                    stack.append((p, nd))
         self.cur.execute("DELETE FROM concept_path")
-        self.cur.executemany("INSERT INTO concept_path VALUES (%s,%s,%s)",
-                             [(a, b, d) for (a, b), d in pairs.items()])
+        if pairs:
+            self.cur.executemany("INSERT INTO concept_path VALUES (%s,%s,%s)",
+                                 [(a, b, d) for (a, b), d in pairs.items()])
         self.commit()
         return len(pairs)
 
@@ -464,7 +580,7 @@ class JnanaEngine:
                 in_e[b].append((k, a, s))
         weak = []
         for d, n in self.disp.items():
-            rod = self.parent.get(d)
+            rods = self.parents.get(d, [])
             spec = []
             for k, t, s in sorted(out_e.get(d, [])):
                 if k in self.LBL_OUT:
@@ -482,14 +598,24 @@ class JnanaEngine:
                     spec.append(f"{self.LBL_IN[k]}: {self.disp[f]}")
             kids = [self.disp[c] for c in sorted(children.get(d, []),
                                                  key=lambda x: self.disp[x])]
-            defin = f"{n} — {self.disp[rod] if rod else 'universe (no genus)'}"
+            if not rods:
+                rod_s = "universe (no genus)"
+            elif len(rods) == 1:
+                rod_s = self.disp[rods[0][0]]
+            else:
+                bits = []
+                for pid, uid in rods:
+                    un = self.uni_names.get(uid, str(uid))
+                    bits.append(f"{self.disp[pid]} [{un}]")
+                rod_s = "; ".join(bits)
+            defin = f"{n} — {rod_s}"
             if spec:
                 defin += "; " + "; ".join(spec)
             if kids:
                 defin += ". Species: " + ", ".join(kids)
             self.cur.execute("UPDATE concept SET defin=%s WHERE dharma=%s",
                              (defin[:1000], d))
-            if not spec and not kids and rod:
+            if not spec and not kids and rods:
                 weak.append(n)
         self.commit()
         return weak
