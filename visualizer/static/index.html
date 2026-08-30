@@ -43,6 +43,7 @@
   .tag { display: inline-block; background: #20293f; border-radius: 6px; padding: 1px 8px;
          margin: 2px 3px 2px 0; cursor: pointer; }
   .tag:hover { background: #2c3c61; color: #fff; }
+  .tag small { color: var(--dim); font-size: 10px; margin-left: 4px; }
   .rel { margin: 2px 0; }
   .rel .k { color: var(--warn); }
   .rel .s { color: var(--dim); font-size: 11px; }
@@ -52,8 +53,10 @@
   .node:hover rect { stroke: var(--acc); }
   .node.center rect { fill: #2c4a7c; stroke: var(--acc); stroke-width: 2; }
   .node.up rect { fill: #232d47; }
+  .node.genus rect { fill: #1e3350; stroke: #4a7ab0; }
   .node text { fill: var(--txt); font-size: 13px; }
   .node .cnt { fill: var(--dim); font-size: 10px; }
+  .edge.genus { stroke: #5ea2ff; stroke-width: 1.6; }
   .edge { stroke: #3a4a75; stroke-width: 1.4; fill: none; }
   .edge.rel { stroke: #8f7fd4; stroke-dasharray: 5 4; }
   .edgeLbl { fill: #a08fe0; font-size: 10px; }
@@ -113,13 +116,18 @@ async function show(id) {
 function relTag(c) {
   return `<span class="tag" onclick="show(${c.id})">${esc(c.nama)}</span>`;
 }
+function genusTag(c) {
+  const u = uniName(c.edgeUni || c.uni);
+  return `<span class="tag" onclick="show(${c.id})">${esc(c.nama)}<small>${esc(u)}</small></span>`;
+}
 
 function renderInfo(c) {
   let h = `<h2>${esc(c.nama)}<span class="uni">${esc(c.uniName)} · id ${c.id}${c.processed ? ' · ✓' : ''}</span></h2>`;
   if (c.genDefin) h += `<div id="defin" title="генерируемая дефиниция (род + отличия + виды)">${esc(c.genDefin)}</div>`;
   h += '<div class="cols">';
-  if (c.parents.length)
-    h += `<div><h3>Род</h3>${c.parents.map(relTag).join('')}</div>`;
+  const parents = c.parents || [];
+  if (parents.length)
+    h += `<div><h3>${parents.length > 1 ? 'Роды' : 'Род'}</h3>${parents.map(genusTag).join('')}</div>`;
   if (c.children.length)
     h += `<div><h3>Виды (${c.children.length})</h3>${c.children.slice(0, 60).map(relTag).join('')}${c.children.length > 60 ? ' …' : ''}</div>`;
   if (c.rels.length) {
@@ -170,28 +178,58 @@ function placeDown(n, x0, y, depth) {
   return n;
 }
 
-let MAXD = 3;
+let MAXD = 3, UPD = 8;
+function heightUp(n, depth) {
+  if (!n || !n.parents || !n.parents.length || depth <= 0) return 1;
+  let h = 0;
+  for (const p of n.parents) h = Math.max(h, heightUp(p, depth - 1));
+  return 1 + h;
+}
+function measureUp(n, depth) {
+  if (!n || !n.parents || !n.parents.length || depth <= 0) return 1;
+  let w = 0;
+  for (const p of n.parents) w += measureUp(p, depth - 1);
+  return Math.max(w, 1);
+}
+function placeUp(n, x0, y, depth, cls) {
+  const w = measureUp(n, depth);
+  const nx = x0 + w / 2;
+  const many = (n.parents || []).length > 1;
+  nodes.push({
+    id: n.id, nama: n.nama, x: nx, y, cnt: n.childCount,
+    cls: cls || (many ? 'up genus' : 'up'),
+    uni: n.uni, edgeUni: n.edgeUni
+  });
+  if (n.parents && depth > 0) {
+    let cx = x0;
+    for (const p of n.parents) {
+      const pw = measureUp(p, depth - 1);
+      placeUp(p, cx, y - 1, depth - 1, 'up');
+      const px = cx + pw / 2;
+      const u = p.edgeUni || p.uni;
+      const lbl = (n.parents.length > 1 && u) ? uniName(u) : '';
+      genusLinks.push({ x1: px, y1: y - 1, x2: nx, y2: y, lbl });
+      cx += pw;
+    }
+  }
+  return { nx, w };
+}
+
+let genusLinks = [];
 function renderTree(t) {
   nodes = []; links = [];
   const relLinks = [];
-  // цепочка вверх: от корня к центру (берём первую ветвь родителей)
-  const chain = [];
-  let cur = t.up, guard = 0;
-  while (cur && guard++ < 12) { chain.unshift(cur); cur = (cur.parents || [])[0]; }
-  // раскладка: роды — вертикально по центру, виды — вниз
+  genusLinks = [];
   const downW = measure(t.down, MAXD);
+  const upW = measureUp(t.up, UPD);
   const sats = t.center.rels || [];
-  // слева от центра должно хватить места спутникам — иначе они наслаиваются
   const leftNeed = sats.length ? (sats.length - 1) / 2 * 1.15 + 0.7 : 0;
-  const off = Math.max(0, leftNeed - downW / 2);
-  const upX = downW / 2 + off;           // центр над деревом видов
-  chain.forEach((n, i) => {
-    nodes.push({ id: n.id, nama: n.nama, x: upX, y: i, cnt: n.childCount,
-                 cls: i === chain.length - 1 ? 'center' : 'up' });
-    if (i) links.push([upX, i - 1, upX, i]);
-  });
-  const y0 = chain.length - 1;
-  // не-таксономические связи центра — пунктиром, отдельным рядом
+  const forestW = Math.max(downW, upW, 1);
+  const off = Math.max(0, leftNeed - forestW / 2);
+  const x0 = off + (forestW - upW) / 2;
+  const y0 = heightUp(t.up, UPD) - 1;
+  const placed = placeUp(t.up, x0, y0, UPD, 'center');
+  const upX = placed.nx;
   const satShift = sats.length ? 1 : 0;
   sats.forEach((r, i) => {
     const sx = upX + (i - (sats.length - 1) / 2) * 1.15;
@@ -200,9 +238,9 @@ function renderTree(t) {
     nodes.push({ id: r.other.id, nama: r.other.nama, x: sx, y: y0 + 1, cnt: 0, cls: 'rel' });
     relLinks.push({ x1: upX, y1: y0, x2: sx, y2: y0 + 1, lbl });
   });
-  // дерево видов: центральный узел уже нарисован; рисуем детей ниже ряда связей
   if (t.down.children && t.down.children.length) {
-    let cx = 0;
+    const downOff = off + (forestW - downW) / 2;
+    let cx = downOff;
     for (const c of t.down.children) {
       const cw = measure(c, MAXD - 1);
       placeDown(c, cx, y0 + 1 + satShift, MAXD - 1);
@@ -210,9 +248,9 @@ function renderTree(t) {
       cx += cw;
     }
   }
-  // рендер SVG
-  const W = Math.max((downW + 2 * off + 1) * (NW + GX), 300);
-  const H = (chain.length + MAXD + 1 + satShift) * (NH + GY);
+  const colW = forestW + 2 * off + 1;
+  const W = Math.max(colW * (NW + GX), 300);
+  const H = (y0 + MAXD + 1 + satShift) * (NH + GY);
   let s = `<svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">`;
   const path = (x1, y1, x2, y2, cls) => {
     const X1 = x1 * (NW + GX), Y1 = y1 * (NH + GY) + NH;
@@ -221,6 +259,13 @@ function renderTree(t) {
     return `<path class="${cls}" d="M ${X1} ${Y1} C ${X1} ${my}, ${X2} ${my}, ${X2} ${Y2}"/>`;
   };
   for (const [x1, y1, x2, y2] of links) s += path(x1, y1, x2, y2, 'edge');
+  for (const g of genusLinks) {
+    s += path(g.x1, g.y1, g.x2, g.y2, g.lbl ? 'edge genus' : 'edge');
+    if (g.lbl) {
+      const lx = (g.x1 + g.x2) / 2 * (NW + GX), ly = (g.y1 + g.y2) / 2 * (NH + GY) + NH / 2;
+      s += `<text class="edgeLbl" x="${lx}" y="${ly}" text-anchor="middle">${esc(g.lbl)}</text>`;
+    }
+  }
   for (const r of relLinks) {
     s += path(r.x1, r.y1, r.x2, r.y2, 'edge rel');
     const lx = (r.x1 + r.x2) / 2 * (NW + GX), ly = (r.y1 + r.y2) / 2 * (NH + GY) + NH / 2;
@@ -228,10 +273,13 @@ function renderTree(t) {
   }
   for (const n of nodes) {
     const X = n.x * (NW + GX) - NW / 2, Y = n.y * (NH + GY);
+    const sub = n.cls && n.cls.includes('up') && n.edgeUni
+      ? uniName(n.edgeUni)
+      : (n.cnt ? `${n.cnt} видов` : '');
     s += `<g class="node ${n.cls}" onclick="show(${n.id})">
       <rect x="${X}" y="${Y}" width="${NW}" height="${NH}"/>
       <text x="${X + NW / 2}" y="${Y + 17}" text-anchor="middle">${esc(trunc(n.nama))}</text>
-      ${n.cnt ? `<text class="cnt" x="${X + NW / 2}" y="${Y + 32}" text-anchor="middle">${n.cnt} видов</text>` : ''}
+      ${sub ? `<text class="cnt" x="${X + NW / 2}" y="${Y + 32}" text-anchor="middle">${esc(sub)}</text>` : ''}
     </g>`;
   }
   treeEl.innerHTML = s + '</svg>';

@@ -37,6 +37,7 @@ type Concept struct {
 	Nama      string `json:"nama"`
 	Uni       int    `json:"uni"`
 	Processed bool   `json:"processed"`
+	EdgeUni   int    `json:"edgeUni,omitempty"` // универсум ребра рода (kod 14)
 }
 
 type Term struct {
@@ -45,11 +46,11 @@ type Term struct {
 }
 
 type Rel struct {
-	Kod      string   `json:"kod"`
-	Name     string   `json:"name"`
-	Dir      string   `json:"dir"` // "out" (это субъект) / "in" (это объект)
-	Other    Concept  `json:"other"`
-	Strength *int     `json:"strength,omitempty"`
+	Kod      string  `json:"kod"`
+	Name     string  `json:"name"`
+	Dir      string  `json:"dir"` // "out" (это субъект) / "in" (это объект)
+	Other    Concept `json:"other"`
+	Strength *int    `json:"strength,omitempty"`
 }
 
 type ConceptInfo struct {
@@ -138,9 +139,13 @@ func genDefin(ci *ConceptInfo) string {
 	} else if len(ci.Parents) > 1 {
 		parts := make([]string, 0, len(ci.Parents))
 		for _, p := range ci.Parents {
-			un := uniNames[p.Uni]
+			uid := p.EdgeUni
+			if uid == 0 {
+				uid = p.Uni
+			}
+			un := uniNames[uid]
 			if un == "" {
-				un = strconv.Itoa(p.Uni)
+				un = strconv.Itoa(uid)
 			}
 			parts = append(parts, p.Nama+" ["+un+"]")
 		}
@@ -164,6 +169,7 @@ type TreeNode struct {
 	ID         int         `json:"id"`
 	Nama       string      `json:"nama"`
 	Uni        int         `json:"uni"`
+	EdgeUni    int         `json:"edgeUni,omitempty"` // универсум isa-ребра к этому узлу
 	ChildCount int         `json:"childCount"`
 	Parents    []*TreeNode `json:"parents,omitempty"`
 	Children   []*TreeNode `json:"children,omitempty"`
@@ -278,6 +284,23 @@ func scanConcepts(rows *sql.Rows) []Concept {
 	return out
 }
 
+func scanParents(rows *sql.Rows) []Concept {
+	defer rows.Close()
+	out := []Concept{}
+	for rows.Next() {
+		var c Concept
+		var eu sql.NullInt64
+		if rows.Scan(&c.ID, &c.Nama, &c.Uni, &eu) != nil {
+			continue
+		}
+		if eu.Valid {
+			c.EdgeUni = int(eu.Int64)
+		}
+		out = append(out, c)
+	}
+	return out
+}
+
 func getConceptInfo(id int) (*ConceptInfo, error) {
 	var ci ConceptInfo
 	var defin sql.NullString
@@ -290,13 +313,14 @@ func getConceptInfo(id int) (*ConceptInfo, error) {
 	ci.Defin = defin.String
 	ci.Processed = proc.Int64 != 0
 	ci.UniName = uniNames[ci.Uni]
-	ci.Rels = []Rel{}     // не nil — иначе JSON null ломает фронт
+	ci.Rels = []Rel{} // не nil — иначе JSON null ломает фронт
 	ci.Terms = []Term{}
 
-	ci.Parents = scanConcepts(mustRows(`
-		SELECT c.dharma, c.nama, c.universum_id FROM edge e
+	ci.Parents = scanParents(mustRows(`
+		SELECT c.dharma, c.nama, c.universum_id, e.universum_id FROM edge e
 		JOIN concept c ON c.dharma=e.dh2
-		WHERE e.dh1=? AND e.kod='14' AND e.status='ok' ORDER BY c.nama`, id))
+		WHERE e.dh1=? AND e.kod='14' AND e.status='ok'
+		ORDER BY e.universum_id, c.nama`, id))
 	ci.Children = scanConcepts(mustRows(`
 		SELECT c.dharma, c.nama, c.universum_id FROM edge e
 		JOIN concept c ON c.dharma=e.dh1
@@ -371,19 +395,28 @@ func nodeOf(id int) *TreeNode {
 	return &n
 }
 
-func buildUp(id int, depth int, seen map[int]bool) *TreeNode {
+func buildUp(id int, depth int, path map[int]bool) *TreeNode {
 	n := nodeOf(id)
-	if depth <= 0 || seen[id] {
+	if depth <= 0 || path[id] {
 		return n
 	}
-	seen[id] = true
-	rows := mustRows(`SELECT dh2 FROM edge WHERE dh1=? AND kod='14' AND status='ok'`, id)
-	defer rows.Close()
+	path[id] = true
+	rows := mustRows(`SELECT dh2, universum_id FROM edge WHERE dh1=? AND kod='14' AND status='ok' ORDER BY universum_id, dh2`, id)
+	type pair struct{ id, uni int }
+	var ps []pair
 	for rows.Next() {
-		var p int
-		rows.Scan(&p)
-		n.Parents = append(n.Parents, buildUp(p, depth-1, seen))
+		var p, u int
+		if rows.Scan(&p, &u) == nil {
+			ps = append(ps, pair{p, u})
+		}
 	}
+	rows.Close()
+	for _, p := range ps {
+		pn := buildUp(p.id, depth-1, path)
+		pn.EdgeUni = p.uni
+		n.Parents = append(n.Parents, pn)
+	}
+	delete(path, id)
 	return n
 }
 
@@ -422,4 +455,3 @@ func handleTree(w http.ResponseWriter, r *http.Request) {
 	}
 	writeJSON(w, resp)
 }
-
