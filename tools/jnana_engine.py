@@ -465,6 +465,29 @@ class JnanaEngine:
             self.reload()
         return True, f"merged {src} -> {dst}"
 
+    def rename_concept(self, cid, new_nama, reload=True):
+        """Change the canonical label. Old nama stays as a ru term.
+        If another concept already has new_nama, refuse — merge instead."""
+        if cid not in self.names:
+            return False, "concept not found"
+        old = self.names[cid]
+        if old == new_nama:
+            return True, "same name"
+        other = [d for d, n in self.names.items() if n == new_nama and d != cid]
+        if other:
+            return False, f"name taken by {other[0]}"
+        self.cur.execute("UPDATE concept SET nama=%s WHERE dharma=%s", (new_nama, cid))
+        self.cur.execute(
+            "INSERT IGNORE INTO concept_term (concept_id,term,lang) VALUES (%s,%s,'ru')",
+            (cid, old))
+        self.cur.execute(
+            "INSERT IGNORE INTO concept_term (concept_id,term,lang) VALUES (%s,%s,'ru')",
+            (cid, new_nama))
+        self.names[cid] = new_nama
+        if reload:
+            self.reload()
+        return True, f"renamed {old} -> {new_nama}"
+
     # ---------- add_concept ----------
     def add_concept(self, nama, parent, lang="en", universum_id=None,
                     passport=None, terms=None, auto=True):
