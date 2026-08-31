@@ -34,8 +34,10 @@
   .item.sel { background: #24375e; }
   .item .u { color: var(--dim); font-size: 11px; white-space: nowrap; }
   .item .p { width: 14px; flex: none; font-size: 10px; }
-  .item .p.ok { color: var(--acc2); }
-  .item .p.no { color: var(--dim); }
+  .item .p.l0 { color: var(--dim); }
+  .item .p.l1 { color: var(--acc); }
+  .item .p.l2 { color: var(--warn); }
+  .item .p.l3 { color: var(--acc2); }
   .item .n { flex: 1; }
   /* правая часть */
   #main { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
@@ -97,6 +99,12 @@ const I18N = {
     hint: 'Начните вводить слово слева — например, «чашка», «тяжёлое», «месяц».',
     genus: 'Род', genera: 'Роды', species: 'Виды', rels: 'Связи', terms: 'Термины',
     processed: 'обработано', unprocessed: 'не обработано',
+    procLevel: {
+      0: '0 — нет таксономии',
+      1: '1 — род и виды',
+      2: '2 — существенные и специфические свойства',
+      3: '3 — параллельные связи'
+    },
     definTitle: 'генерируемая дефиниция (род + отличия + виды)',
     nSpecies: n => n + ' видов',
     uni: {1:'бытовой',2:'научный',3:'IT',4:'юридический',5:'логика'},
@@ -109,6 +117,12 @@ const I18N = {
     hint: 'Type a word on the left — e.g. “cup”, “heavy”, “month”.',
     genus: 'Genus', genera: 'Genera', species: 'Species', rels: 'Relations', terms: 'Terms',
     processed: 'processed', unprocessed: 'unprocessed',
+    procLevel: {
+      0: '0 — no taxonomy',
+      1: '1 — genus and species',
+      2: '2 — essential and specific properties',
+      3: '3 — parallel relations'
+    },
     definTitle: 'generated definition (genus + differentia + species)',
     nSpecies: n => n + ' species',
     uni: {1:'everyday',2:'scientific',3:'IT',4:'legal',5:'logic'},
@@ -169,7 +183,7 @@ async function doSearch(q) {
   for (const c of rows) {
     const d = document.createElement('div');
     d.className = 'item' + (c.id === selId ? ' sel' : '');
-    d.innerHTML = `<span class="p ${c.processed ? 'ok' : 'no'}" title="${c.processed ? T().processed : T().unprocessed}">${c.processed ? '●' : '○'}</span><span class="n">${esc(c.nama)}</span><span class="u">${uniName(c.uni)}</span>`;
+    d.innerHTML = `<span class="p ${procCls(c.processed)}" title="${procTitle(c.processed)}">${procMark(c.processed)}</span><span class="n">${esc(c.nama)}</span><span class="u">${uniName(c.uni)}</span>`;
     d.onclick = () => show(c.id);
     listEl.appendChild(d);
   }
@@ -186,6 +200,11 @@ async function show(id) {
   renderTree(t);
 }
 
+function procLvl(n) { n = n|0; return n < 0 ? 0 : n > 3 ? 3 : n; }
+function procCls(n) { return 'l' + procLvl(n); }
+function procMark(n) { n = procLvl(n); return n ? String(n) : '○'; }
+function procTitle(n) { return (T().procLevel || {})[procLvl(n)] || ''; }
+
 function relTag(c) {
   return `<span class="tag" onclick="show(${c.id})">${esc(c.nama)}</span>`;
 }
@@ -195,7 +214,7 @@ function genusTag(c) {
 }
 
 function renderInfo(c) {
-  let h = `<h2>${esc(c.nama)}<span class="uni">${esc(c.uniName)} · id ${c.id}${c.processed ? ' · ✓' : ''}</span></h2>`;
+  let h = `<h2>${esc(c.nama)}<span class="uni">${esc(c.uniName)} · id ${c.id} · p${c.processed|0}</span></h2>`;
   if (c.genDefin) h += `<div id="defin" title="${esc(T().definTitle)}">${esc(c.genDefin)}</div>`;
   h += '<div class="cols">';
   const parents = c.parents || [];

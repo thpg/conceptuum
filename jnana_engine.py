@@ -62,6 +62,29 @@ def _term_key(term):
     return " ".join(_lemma(w) for w in _norm(term).split())
 
 
+def _pick_disp(lang, terms):
+    """English 'to …' is an infinitive term, not the display label."""
+    if lang != "en":
+        return terms[0] if terms else None
+    stems, rest, stripped = set(), [], None
+    for t in terms:
+        low = t.strip().lower()
+        if low.startswith("to "):
+            s = t.strip()[3:].strip()
+            if s:
+                stems.add(s.lower())
+                if not stripped:
+                    stripped = s
+            continue
+        rest.append(t)
+    for t in rest:
+        if t.lower() not in stems:
+            return t
+    if rest:
+        return rest[0]
+    return stripped
+
+
 def _prefix_match(a, b):
     """Morphological near-match without a stemmer:
     - equal after normalization, or
@@ -116,13 +139,21 @@ class JnanaEngine:
             self.terms_of[cid].append((term, lang))
             self.term_index.append((t, lang, cid))
             self.lemma2ids[(_term_key(term), lang)].add(cid)
-        # display names: pref_lang terms override the default label
+        # display names: pref_lang terms override the default label.
+        # English "to …" infinitives are the same as Russian инфинитивы —
+        # a term, not the label. Prefer a noun/gerund; if none, strip "to ".
         self.disp = dict(self.names)
         if self.pref_lang:
-            self.cur.execute("SELECT concept_id, term FROM concept_term WHERE lang=%s",
-                             (self.pref_lang,))
+            self.cur.execute(
+                "SELECT concept_id, term FROM concept_term WHERE lang=%s",
+                (self.pref_lang,))
+            by = defaultdict(list)
             for cid, term in self.cur.fetchall():
-                self.disp[cid] = term
+                by[cid].append(term)
+            for cid, terms in by.items():
+                picked = _pick_disp(self.pref_lang, terms)
+                if picked:
+                    self.disp[cid] = picked
         self.cur.execute(
             "SELECT kod, long_name, sig_subject, sig_subject2, sig_subject3, sig_subject4,"
             " sig_object, sig_object2, sig_object3, sig_object4,"
@@ -158,20 +189,65 @@ class JnanaEngine:
             self.anc[d][a] = depth
         return self
 
-    def set_processed(self, cid, flag=True):
-        """Mark a concept as processed: genus, general properties and
-        species have been specified. Does NOT mean closed — side relations
-        and additions remain possible."""
-        self.cur.execute("UPDATE concept SET processed=%s WHERE dharma=%s",
-                         (1 if flag else 0, cid))
+    # processed levels (concept.processed, 0–3; never a closed door):
+    #   0  not filled
+    #   1  genus and species (taxonomy)
+    #   2  essential and specific properties (kod 15, 20–27)
+    #   3  parallel relations (30/40, 61–64, 70–74)
+    PROC_SPEC = ("15", "20", "21", "22", "23", "24", "25", "26", "27")
+    PROC_PARA = ("30", "40", "61", "62", "63", "64", "70", "71", "72", "73", "74")
 
-    def unprocessed(self, universum_id=None):
-        """Concepts still awaiting a fill pass (frontier for filling)."""
-        q = "SELECT dharma, nama FROM concept WHERE processed=0"
+    def set_processed(self, cid, level=1):
+        """Set fill level. bool True/False kept as 1/0 for old callers.
+        Does NOT mean closed — later levels and extra edges stay possible."""
+        if isinstance(level, bool):
+            level = 1 if level else 0
+        level = int(level)
+        if level < 0 or level > 3:
+            raise ValueError("processed level must be 0..3")
+        self.cur.execute("UPDATE concept SET processed=%s WHERE dharma=%s",
+                         (level, cid))
+
+    def unprocessed(self, universum_id=None, below=1):
+        """Concepts with processed < below (default: still at 0)."""
+        q = "SELECT dharma, nama FROM concept WHERE processed<%s"
+        args = [int(below)]
         if universum_id:
-            q += f" AND universum_id={int(universum_id)}"
-        self.cur.execute(q)
+            q += " AND universum_id=%s"
+            args.append(int(universum_id))
+        self.cur.execute(q, args)
         return self.cur.fetchall()
+
+    def raise_processed_from_edges(self):
+        """Raise 1→2 if the concept has essential/specific edges,
+        2→3 if it also has parallel (non-isa) relations. Never lowers,
+        never invents level 1 (taxonomy flag stays explicit)."""
+        spec, para = set(), set()
+        for a, b, k, s, st, i in self.edges:
+            if st != "ok":
+                continue
+            if k in self.PROC_SPEC:
+                spec.add(a)
+            elif k in self.PROC_PARA:
+                para.add(a)
+        n2 = n3 = 0
+        self.cur.execute("SELECT dharma, processed FROM concept")
+        for cid, p in self.cur.fetchall():
+            p = int(p or 0)
+            np = p
+            if p >= 1 and cid in spec and np < 2:
+                np = 2
+            if np >= 2 and cid in para and np < 3:
+                np = 3
+            if np != p:
+                self.cur.execute("UPDATE concept SET processed=%s WHERE dharma=%s",
+                                 (np, cid))
+                if np == 2:
+                    n2 += 1
+                else:
+                    n3 += 1
+        self.commit()
+        return n2, n3
 
     def commit(self):
         self.conn.commit()
@@ -655,7 +731,10 @@ class JnanaEngine:
         p = self.cur.fetchone()[0]
         self.cur.execute("SELECT universum_id, COUNT(*) FROM concept GROUP BY universum_id")
         by_u = dict(self.cur.fetchall())
-        return dict(concepts=c, edges=e, candidates=cand, paths=p, by_universum=by_u)
+        self.cur.execute("SELECT processed, COUNT(*) FROM concept GROUP BY processed")
+        by_p = {int(k): n for k, n in self.cur.fetchall()}
+        return dict(concepts=c, edges=e, candidates=cand, paths=p,
+                    by_universum=by_u, by_processed=by_p)
 
 
 if __name__ == "__main__":

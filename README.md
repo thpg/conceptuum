@@ -1,197 +1,64 @@
 # conceptuum
 
-A relational knowledge base of **logical relations between concepts** — genus–species,
-part–whole, cause–effect, opposition, purpose — across domain universes
-(everyday, scientific, IT, legal). Designed as a **grounding layer for LLMs**:
-machine-readable definitions, a validated relation grammar, and an LLM-driven
-filling engine.
+**A graph of logical relations between concepts** — not a word list, not a document dump, not “a database with terms in it.”
 
-## Idea
+MariaDB holds the bytes. What you *work with* is a **directed labeled graph**:
 
-Every concept is defined by the classical rule *genus + differentia*:
-its parent genus, its specific relations, and its species (children).
-Relations follow a formal grammar — typed signatures, symmetry, transitivity,
-inverse pairs — validated at insert time. A transitive-closure table
-(`concept_path`) gives instant ancestor/descendant queries.
+- a **node** is a *meaning* (лёд / ice / 氷 are one node; environment-среда and Wednesday-среда are two);
+- an **edge** is a *typed logical link* — genus, essential attribute, cause, contrary, purpose — with a grammar that rejects category mistakes.
 
-An LLM uses the engine to:
+```mermaid
+graph TD
+  ice["лёд / ice"] -->|genus 14| solid["твёрдое вещество"]
+  freeze["замерзание"] -->|produces 70| ice
+  melt["таяние"] -->|produces 70| water["вода / water"]
+  bird["птица"] -->|capable of 22| fly["полёт"]
+  penguin["пингвин"] -->|capable of 22, strength 0| fly
+```
 
-- **verify** facts against the graph (e.g. "is ice really a result of freezing water?")
-- **propose** new relations — validated automatically against the grammar
-- **define** any concept canonically: `genus; specific relations. Species: …`
-- **fill the base** from dictionaries or its own knowledge, at scale
+Walk the graph: up the genus chain, down to species, sideways to opposites and causes. Definitions are not prose someone wrote — they are **read off the edges** (*genus + differentia*).
 
-This reduces hallucinations and gives the model a structured, inspectable
-long-term memory of a domain.
+> Русскоязычным: это **граф логических связей понятий** (род–вид, признак, причина, противоположность), а не таблица слов. Слово — ярлык; узел — смысл.
 
-### Built once by a strong model, used everywhere by small ones
+**Topics / who this is for:** `knowledge-graph` · `ontology` · `concept-graph` · `semantic-network` · `neuro-symbolic` · `symbolic-ai` · `llm-grounding` · `rag` · `knowledge-representation` · `formal-logic` · `taxonomy` · `dag` · `genus-differentia`
 
-The base is designed for an asymmetric workflow:
+---
 
-- **Preparation (offline, expensive):** a powerful LLM fills and revises the
-  base — extracting concepts and relations from dictionaries and corpora,
-  resolving synonyms, validating against the grammar, fixing misplacements.
-  This happens once per domain and costs frontier-model tokens.
-- **Usage (runtime, cheap):** a small local model (or a plain rules engine, or
-  no model at all) queries the result — `verify()`, `define()`, ancestor
-  lookups are plain SQL over `concept_path`. A 1–3B parameter model augmented
-  with canonical definitions and verified relations can answer with the
-  factual reliability that would otherwise require a much larger model.
+## Thirty seconds
 
-In other words: **pay the intelligence cost once, at build time** — then serve
-structured, deterministic knowledge to any number of cheap runtimes.
-
-The full set of filling/maintenance rules, with the error log that motivated
-them, lives in [docs/ontology-rules.md](docs/ontology-rules.md).
-
-## Relation kinds
-
-The grammar distinguishes several families of logical relations:
-
-- **Taxonomic** (14 — *genus / is-a*): the backbone hierarchy.
-  `dog is-a mammal`. Transitive; a closure table makes ancestor and
-  descendant queries O(1) lookups. One meaning is one concept; when
-  scientific and everyday classifications diverge, the same concept
-  has two genera, each tagged with a universum (физическое явление /
-  видимое). True homonyms (different meanings) stay separate nodes.
-- **Attributive / part-whole spectrum** (15, 21–27): from *essential
-  attribute* (without which the concept is not itself) through *inherent*
-  (inseparable part or phase — "wheel of a car", "parsing phase of
-  compilation") down to *frequent / occasional / rare* attributes.
-  The same kod family covers both physical parts and process phases.
-- **Compatibility** (30, 43–48, 60): coextensive concepts, graded overlap,
-  incompatibility.
-- **Logical opposition** (61–64): *coordinate* (co-hyponyms under one genus),
-  *converses* (mutually implying — "buy/sell"), *contrary* (hot/cold),
-  *contradictory* (true/false).
-- **Causal & temporal** (70–74): *produces*, *hinders*, *precedes*,
-  *simultaneous with*, *depends on*.
-- **Functional** (80–83): *purpose* ("hammer → hammering"), *material*
-  ("table ← wood"), *agent*, *patient* (object of action).
-- **Contextual** (11–12): universe (discourse context) and domain membership.
-
-Symmetric relations (61–64, 73) are stored once and queried both ways.
-Each relation type declares a **signature** — which subtrees its subject and
-object must belong to — so the engine rejects category errors at insert time
-(e.g. only an action can *produce* something).
-
-## Schema (MariaDB)
-
-| Table | Purpose |
+| This is | This is not |
 |---|---|
-| `universum` | Domain contexts (everyday / scientific / IT / legal) |
-| `concept` | Concepts: id (`dharma`), label (`nama`), cached definition (`defin`), universum, property passport, `processed` flag (genus + general properties + species specified; additions and side relations still possible) |
-| `concept_term` | Multilingual terms per concept (`lang` codes) — real names live here |
-| `relevant` | Grammar of relation types: signatures (up to 4 allowed subject/object subtrees), symmetry, transitivity, inverse codes |
-| `edge` | Typed relations between concepts: `dh1 —[kod]→ dh2`, strength, status, source, rationale |
-| `concept_path` | Transitive closure of the genus relation (kod 14) |
+| A **knowledge graph** of concepts and *logical* relations | A dictionary, thesaurus, or Wikipedia dump |
+| One node per **meaning** (synonyms share a node) | One row per word form |
+| Typed edges with a **relation grammar** | Free-text “related to” links |
+| A DAG of genera (a concept may have two classifications) | A single-parent folder tree |
+| Grounding for small LLMs: verify / define from the graph | A chatbot that “knows” the domain from weights |
 
-## Relation codes (table `relevant`)
+Classical rule, encoded as data: **definiendum = nearest genus + specific properties**; species listed extra. The `defin` column is *derived* — fix edges, never the sentence.
 
-| Code | Relation | Properties |
-|---|---|---|
-| 11 | universe (discourse context) | |
-| 12 | domain-related | |
-| 14 | genus (is-a) | transitive; closure table `concept_path` |
-| 15 | essential attribute | |
-| 20 | attribute (quality / component / capability) | degree lives in `edge.strength` (0–100), not in the code; attribute kind is derived from the object's root |
-| 21 / 22 | function (purpose) / agent (capable of) | both artifact → action |
-| 23 | material | artifact → substance |
-| 24 / 25 / 26 | telic: content (чашка—кофе) / application (открывалка—бутылка) / user (будка—собака) | |
-| 27 | patient (object of action) | action → object |
-| 30 | coextensive (equal scope) | |
-| 40 | overlap | symmetric; degree in `strength` (70 strong / 50 half / 5 slight / NULL possible) |
-| 60 | incompatible | |
-| 61 | coordinate (co-hyponyms) | symmetric |
-| 62 | mutually implying (converses) | symmetric |
-| 63 / 64 | contrary / contradictory | symmetric |
-| 70 / 71 | causal (produces) / hindrance | |
-| 72 / 73 | temporal precedence / simultaneity | 73 symmetric |
-| 74 | dependence | |
+## Look at the graph
 
-Deprecated codes kept for history: 10, 13, 41, 43, 45, 47, 48, 49, 80, 81, 82, 83
-(the 8X series moved into 2X on 2026-08-28; degree codes 21/23/25/27 of the
-old scheme merged into 20 and overlap baskets 43–48 merged into 40, with the
-degree stored in `edge.strength`).
+Visualizer (`visualizer/`): search ru/en, language from the browser locale, click a concept → genera **above** (DAG), species **below**, card with generated definition and typed relations.
 
-### Design notes (why the code set looks like this)
+```bash
+cd visualizer
+go run .          # http://localhost:7100/
+# DSN: JNANA_DSN or root:123@tcp(127.0.0.1:3306)/jnana3
+```
 
-- **Degree is data, not code.** Frequency ("always / usually / sometimes /
-  rarely") is a property of the individual edge, so it lives in
-  `edge.strength` (0–100). Rendering maps it back to words.
-- **Derivable distinctions are not coded.** Attribute kinds (quality vs
-  component vs capability) are read from the object's subtree root
-  (property / artifact / action), and property classes (physical,
-  measurable, evaluative, mental, state) are modeled as taxonomy nodes,
-  not relation codes.
-- **A code exists only where the same signature pair carries two different
-  semantics.** That's why material (23) and content (24) are separate:
-  "чашка — фарфор" (made of) vs "чашка — кофе" (for holding) share the
-  artifact→substance signature, and only the code tells them apart.
-  Same for application (25) and user (26) vs plain components.
-- **part-of ≠ made-of.** A part is localized and detachable (чашка с
-  ручкой); a material is the substrate of the whole (чашка фарфоровая).
-  Mixing them breaks transitive inference.
-- **Ternary facts are virtual.** "чашка — для питья — кофе" is stored as
-  two binary edges (purpose + patient) and rendered as a phrase; the verb
-  stays a first-class concept with its own relations.
-- **Attach properties at the highest applicable genus.** "Фарфоровая
-  чашка" inherits material from посуда; a species-level edge repeating the
-  genus property is redundant and gets pruned. Redundancy requires the
-  **same relation code and the exact same object** on an ancestor: a
-  species edge whose object is a *subtype* of the genus's object is a
-  specialization, not a duplicate (птица—полёт stays even though
-  животное—движение exists, since полёт isa движение). Exception that
-  keeps even an exact duplicate: the species frequency deviates
-  noticeably (≈25+ points) from the genus value — e.g. пчела—полёт 95%
-  is kept against насекомое—полёт 60%.
-  `validate()` warns about inherited duplicates at insert time;
-  `tools/prune_inherited.py` cleans exact duplicates,
-  `tools/restore_prune.py` rolls back over-pruning.
-- **Negation is strength = 0.** An attribute edge with strength 0 is an
-  explicit exception/negative fact that overrides genus inheritance:
-  пингвин —[22]→ полёт (0) renders as "not capable of: полёт" and cancels
-  the inherited "птица — capable of: полёт (95%)". Works for essential
-  negative properties too: змея —[20]→ лапа (0) renders "no: лапа".
-  Negated edges are not flagged as redundant and are skipped in the
-  incoming direction (a negation says something about the subject, not
-  about the object).
-- **Terms do not change the taxonomy.** Adjective / noun / infinitive /
-  gender are Russian surface forms of one concept, stored in
-  `concept_term`. «Судоходное» and «судоходство» are the same node; the
-  word form names a relation already coded in `relevant` (водоём —[20]→
-  судоходство), it does not make a species of водоём. Same for verbs:
-  aspect pairs, reflexives, and the deverbal noun (отклонить / отклонять /
-  отклоняться / отклонение; влиять / влияние) are one concept. Canonical
-  label: deverbal noun when it exists. Maintenance: `tools/merge_verbs.py`,
-  `tools/neuter_adjectives.py`. The closed-bearer reparenting
-  (`судоходное` → водоём) was a mistaken next step and is retracted;
-  see [docs/ontology-rules.md](docs/ontology-rules.md).
+```python
+from jnana_engine import JnanaEngine
+eng = JnanaEngine(pref_lang="en")
+eng.verify("ice", "freezing")
+# ('yes', 'ice <-[causal (produces)] freezing', [])
+eng.define()   # rebuilds concept.defin from the graph — not from prose
+```
 
-## Engine
+```bash
+python ask.py "Why does water turn into ice?" --no-llm
+```
 
-`jnana_engine.py` — class `JnanaEngine`:
-
-- `resolve(term, lang=None)` / `resolve_all(term, lang=None)` — term lookup,
-  all homonyms across universes
-- `resolve_fuzzy(token, lang=None)` / `resolve_phrase_fuzzy(phrase, lang=None)` —
-  morphological lookup: pymorphy3 lemma index (ru) + prefix/skeleton fallback
-- `add_concept(nama, parent, …, terms=[(term, lang), …])`
-- `verify(t1, t2)` — check a statement against the graph (incl. inheritance
-  and 2-hop indirect paths)
-- `propose(t1, kod, t2, …, auto=True)` — grammar-validated relation insert
-- `rebuild()` — rebuild transitive closure
-- `define()` — regenerate canonical definitions
-- `stats()` — base statistics
-
-`JnanaEngine(pref_lang="en")` renders definitions in the chosen language
-whenever terms in that language exist in `concept_term`.
-
-Requires: Python 3.8+, `pymysql`, `pymorphy3` (optional — Russian morphology;
-without it matching falls back to exact + prefix), a running MariaDB/MySQL
-with the loaded dump.
-
-## Quick start
+## Load the dump
 
 ```sql
 CREATE DATABASE jnana3 CHARACTER SET utf8mb4;
@@ -201,120 +68,115 @@ CREATE DATABASE jnana3 CHARACTER SET utf8mb4;
 mysql -u root -p jnana3 < jnana3_dump.sql
 ```
 
-```python
-from jnana_engine import JnanaEngine
-eng = JnanaEngine(pref_lang="en")
-eng.verify("ice", "freezing")
-# ('yes', 'ice <-[causal (produces)] freezing', [])
-eng.resolve_fuzzy("камня", lang="ru")   # -> [камень] via pymorphy3 lemma
+Python 3.8+, `pymysql`, optional `pymorphy3` (Russian morphology). MariaDB/MySQL.
+
+---
+
+## The graph, not the tables
+
+Storage is relational so the grammar can be *enforced*. The mental model is still a graph:
+
+```
+concept  ──terms──►  лёд, ice, Eis
+    │
+    ├──[14 genus]────────►  твёрдое вещество
+    ├──[20 attribute 95%]─►  холодное
+    └──[70 produced by]───►  замерзание
 ```
 
-Definitions and the relation grammar are in English; concept terms are
-multilingual (`concept_term.lang` — ru+en for the everyday and legal
-universes, en for IT).
+- **Universes** (everyday, scientific, IT, legal, logic) are *discourses*, not extra copies of the node. Two classifications of one meaning → two genus edges, `universum_id` on the edge.
+- **Homonyms** (different meanings of one word) stay two nodes.
+- **Word class does not pick the genus.** Infinitive and deverbal noun, adjective and noun, aspect pairs — one concept; forms live in `concept_term`.
+- **Inheritance.** Attach a property at the highest genus that still holds; species override with strength `0` (пингвин does not fly).
 
-## Demo: grounded QA (`ask.py`)
+Relation families (codes in table `relevant`):
 
-```bash
-python ask.py "Why does water turn into ice?" --no-llm
-```
+| Family | Codes | Examples |
+|---|---|---|
+| Taxonomy | 14 | dog → mammal |
+| Essential / specific properties | 15, 20–27 | ice — cold; bird — capable of flight; cup — porcelain |
+| Compatibility | 30, 40, 60 | coextensive, overlap, incompatible |
+| Opposition | 61–64 | co-hyponyms; buy/sell; hot/cold; true/false |
+| Cause & time | 70–74 | produces, hinders, precedes, depends on |
 
-With a local model running (Ollama / llama.cpp / LM Studio — any
-OpenAI-compatible endpoint):
+Each type has a **signature** (allowed subject/object subtrees), symmetry, transitivity. `propose()` rejects illegal edges. Closure of genus is table `concept_path`.
+
+Fill level `concept.processed`: **0** none · **1** genus and species · **2** essential/specific properties · **3** parallel (non-isa) relations. Not a lock.
+
+Full rulebook: [docs/ontology-rules.md](docs/ontology-rules.md). Token-lean property filling: [docs/fill-properties.md](docs/fill-properties.md).
+
+## Engine (`jnana_engine.py`)
+
+`JnanaEngine`: `resolve` / `resolve_all` / `resolve_fuzzy`, `add_concept`, `add_genus`, `merge_concepts`, `verify`, `propose`, `rebuild`, `define`, `set_processed(cid, 0…3)`.
+
+`pref_lang="en"` picks display terms (English `to …` is a term, not the label).
+
+## LLM grounding
+
+**Pay for a strong model once, at fill time.** Runtime is SQL over the graph: a small model (or no model) gets canonical definitions and checked relations instead of inventing them.
+
+- `ask.py` — retrieve FACTS + one-hop RELATED, then optionally a local OpenAI-compatible endpoint.
+- `interleave.py` — in-stream fact injection (experimental).
 
 ```bash
 python ask.py "Что порождает юридическую ответственность?" \
     --endpoint http://localhost:8090/v1 --model local
 ```
 
-### Retrieval pipeline
+> Кража — преступление. Преступление порождает наказание…  
+> Melting produces water; drinking is directed at water — melted ice can be drunk.
 
-1. **Term extraction** — 1–3-word n-grams from the question are looked up in
-   `concept_term`. The question's language (auto-detected, `--lang`
-   overrides) is searched first; other languages are a fallback.
-2. **Morphological normalization** — three levels: exact match → lemma index
-   (`pymorphy3` for Russian: *камня → камень*, *юридическую ответственность*
-   hits the term *юридическая ответственность*) → prefix/consonant-skeleton
-   match (English inflection and vowel-drop roots).
-3. **Homonym filter** — of the matched concepts, only the largest cluster
-   connected by graph edges (direct or via a shared neighbour) is kept;
-   isolated matches are dropped as noise (*"turn" → поворот* in a question
-   about ice). Homonyms across universes are all returned — the LLM picks
-   the one fitting its context.
-4. **RELATED block (1 hop)** — grounding is extended with one-step
-   neighbours: non-isa relations in both directions and the isa parent.
-   This covers transitive inference (*кража → преступление → produces:
-   наказание*) and "who/what is related to X" questions (*обвинение* pulls
-   in *прокурор — purpose: обвинение*).
-5. **Grounded generation** — the FACTS + RELATED blocks are injected into
-   the prompt; the small model is instructed to answer only from them and
-   to say plainly when facts are insufficient.
+## Schema (MariaDB)
 
-Real grounded answers (Qwen3-4B, llama.cpp):
+| Table | Role in the graph |
+|---|---|
+| `concept` | Nodes (`dharma`, `nama`, cached `defin`, home `universum_id`, `processed` 0–3) |
+| `concept_term` | Labels on nodes (ru / en / …) |
+| `edge` | Typed arcs: `dh1 —[kod]→ dh2`, strength, status, source |
+| `relevant` | Edge-type grammar (signatures, symmetry, transitivity) |
+| `universum` | Discourses (everyday / scientific / IT / legal / logic) |
+| `concept_path` | Transitive closure of genus (14) |
 
-> **Q: Что порождает кража?** — Кража — преступление. Преступление
-> порождает наказание и уголовную ответственность. Следовательно, кража
-> порождает наказание и уголовную ответственность.
+Relation code table, deprecated 8x→2x migration, and design notes (degree in `strength`, attach at genus, negation = 0) are in the sections below for implementers.
 
-> **Q: Can I drink what ice becomes when it melts?** — Yes. Melting
-> produces water (таяние produces вода, 80%), drinking is directed at
-> water (питьё directed at вода, 90%) — so the water from melted ice can
-> be drunk.
+### Relation codes
 
-## Experiment: in-stream fact injection (`interleave.py`)
+| Code | Relation | Notes |
+|---|---|---|
+| 11 / 12 | universe / domain | discourse context |
+| 14 | genus (is-a) | transitive; `concept_path` |
+| 15 | essential attribute | differentia |
+| 20 | attribute | degree in `edge.strength` 0–100 |
+| 21 / 22 | purpose / capable of | artifact or organism → action/process |
+| 23 | material | artifact → substance |
+| 24 / 25 / 26 | content / application / user | |
+| 27 | patient | action → object |
+| 30 | coextensive | |
+| 40 | overlap | symmetric; degree in `strength` |
+| 60 | incompatible | |
+| 61 | coordinate | symmetric co-hyponyms |
+| 62 | converses | symmetric (buy/sell) |
+| 63 / 64 | contrary / contradictory | symmetric |
+| 70 / 71 | produces / hinders | |
+| 72 / 73 | precedes / simultaneous | 73 symmetric |
+| 74 | depends on | |
 
-An alternative to prompt-time grounding: word-by-word generation where
-every model word matching a known concept gets a base fact injected
-in square brackets, and generation continues with the extended context.
-Two modes:
+Deprecated: 10, 13, 41, 43, 45, 47, 48, 49, 80–83 (8x folded into 2x; old degree codes into `strength`).
 
-- `--think` (default) — facts are injected into a `<think>…</think>`
-  reasoning block; the final answer after `</think>` is written clean.
-  This avoids format mimicry (the model copying the bracket/percentage
-  style of injections into the visible answer).
-- `--no-think` — facts directly in the answer stream.
+### Design notes
 
-```bash
-python interleave.py "Почему вода превращается в лёд?" --endpoint http://localhost:8090
-```
+- **Degree is data, not code.** Always / usually / rare → `edge.strength`.
+- **part-of ≠ made-of.** Localized detachable part vs substrate of the whole.
+- **Ternary facts are two binaries.** Purpose + patient; no ternary relation nodes.
+- **Attach at the highest genus**; keep a species edge only if the object is more specific or strength differs by ~25+ points. `strength = 0` is explicit negation (пингвин —[22]→ полёт 0).
+- **Terms do not rewrite the tree.** See [ontology-rules.md](docs/ontology-rules.md).
 
-Findings: injection works mechanically and small models do use injected
-facts, but in-stream injection pollutes the context (homonym noise,
-format mimicry); the think-block variant fixes the visible answer.
+## Current snapshot
 
-## Visualizer (Go)
+About **4560 concepts**, **6800 edges**, **20k** genus-paths. Universes: everyday (ru+en), IT (en-primary, ru terms), legal, logic.
 
-`visualizer/` — a small self-contained web viewer for the base:
+Experimental. Auto-filled edges carry `source`; they are meant to be revised.
 
-- searchable concept list (ru/en terms, exact match first); language
-  toggle (RU/EN), defaulting to the browser locale
-- click a concept → dependency tree: all genera upward (DAG — two
-  discourses of the same concept show as two parent branches, labelled
-  by universum), species tree downward (tidy SVG layout, click any node
-  to re-center)
-- concept card: canonical definition (genus + differentia + species),
-  terms by language, all typed relations with direction and strength
+## License
 
-Run:
-
-```bash
-cd visualizer
-go run .        # or: go build -o conceptuum-viz.exe . && ./conceptuum-viz.exe
-# opens http://localhost:7100/
-```
-
-DB connection defaults to `root:123@tcp(127.0.0.1:3306)/jnana3`,
-override with the `JNANA_DSN` environment variable.
-
-## Current state
-
-~1980 concepts, ~2650 relations, ~8800 closure paths.
-Universes: everyday (956, ru+en), IT (882, en — auto-filled from the
-Computer Hope dictionary with an LLM revision pass), legal (139, ru+en —
-general theory of law: norms, sources, legal relations, offenses,
-liability, judiciary).
-
-## Status
-
-Experimental research project. The filling engine is LLM-driven; auto-extracted
-relations are marked by `source` and are meant to be revisable.
+MIT. Repo: [github.com/thpg/conceptuum](https://github.com/thpg/conceptuum).

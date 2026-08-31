@@ -56,25 +56,58 @@ func parseLang(s string) string {
 func loadLang(lang string) *langCtx {
 	lc := &langCtx{lang: parseLang(lang), disp: map[int]string{}}
 	rows, err := db.Query(
-		`SELECT ct.concept_id, ct.term FROM concept_term ct
-		 JOIN concept c ON c.dharma=ct.concept_id
-		 WHERE ct.lang=?
-		 ORDER BY (LOWER(ct.term)=LOWER(c.nama)) DESC, CHAR_LENGTH(ct.term), ct.term`,
-		lc.lang)
+		`SELECT concept_id, term FROM concept_term WHERE lang=?`, lc.lang)
 	if err != nil {
 		return lc
 	}
 	defer rows.Close()
+	byID := map[int][]string{}
 	for rows.Next() {
 		var id int
 		var t string
 		if rows.Scan(&id, &t) == nil && t != "" {
-			if _, ok := lc.disp[id]; !ok {
-				lc.disp[id] = t
-			}
+			byID[id] = append(byID[id], t)
 		}
 	}
+	for id, terms := range byID {
+		lc.disp[id] = pickDispTerm(lc.lang, terms)
+	}
 	return lc
+}
+
+func pickDispTerm(lang string, terms []string) string {
+	if lang != "en" {
+		if len(terms) > 0 {
+			return terms[0]
+		}
+		return ""
+	}
+	stems := map[string]bool{}
+	var rest []string
+	var stripped string
+	for _, t := range terms {
+		low := strings.ToLower(strings.TrimSpace(t))
+		if strings.HasPrefix(low, "to ") {
+			s := strings.TrimSpace(t[3:])
+			if s != "" {
+				stems[strings.ToLower(s)] = true
+				if stripped == "" {
+					stripped = s
+				}
+			}
+			continue
+		}
+		rest = append(rest, t)
+	}
+	for _, t := range rest {
+		if !stems[strings.ToLower(t)] {
+			return t // noun/gerund, not the bare infinitive
+		}
+	}
+	if len(rest) > 0 {
+		return rest[0]
+	}
+	return stripped
 }
 
 func (lc *langCtx) name(id int, fallback string) string {
@@ -131,7 +164,7 @@ type Concept struct {
 	ID        int    `json:"id"`
 	Nama      string `json:"nama"`
 	Uni       int    `json:"uni"`
-	Processed bool   `json:"processed"`
+	Processed int    `json:"processed"`         // 0 none, 1 genus/species, 2 differentia, 3 parallel
 	EdgeUni   int    `json:"edgeUni,omitempty"` // универсум ребра рода (kod 14)
 }
 
@@ -150,14 +183,13 @@ type Rel struct {
 
 type ConceptInfo struct {
 	Concept
-	Defin     string    `json:"defin"`
-	GenDefin  string    `json:"genDefin"` // дефиниция, генерируемая по правилам движка
-	UniName   string    `json:"uniName"`
-	Processed bool      `json:"processed"`
-	Parents   []Concept `json:"parents"`
-	Children  []Concept `json:"children"`
-	Rels      []Rel     `json:"rels"`
-	Terms     []Term    `json:"terms"`
+	Defin    string    `json:"defin"`
+	GenDefin string    `json:"genDefin"` // дефиниция, генерируемая по правилам движка
+	UniName  string    `json:"uniName"`
+	Parents  []Concept `json:"parents"`
+	Children []Concept `json:"children"`
+	Rels     []Rel     `json:"rels"`
+	Terms    []Term    `json:"terms"`
 }
 
 // --- генерация дефиниции: зеркало JnanaEngine.define() ---
@@ -455,7 +487,7 @@ func getConceptInfo(id int, lc *langCtx) (*ConceptInfo, error) {
 		return nil, err
 	}
 	ci.Defin = defin.String
-	ci.Processed = proc.Int64 != 0
+	ci.Processed = int(proc.Int64)
 	ci.Nama = lc.name(ci.ID, ci.Nama)
 	ci.UniName = lc.uni(ci.Uni)
 	ci.Rels = []Rel{} // не nil — иначе JSON null ломает фронт

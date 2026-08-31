@@ -84,6 +84,10 @@ it. Examples are Russian because the base content is Russian.
 
 ## 3. Property attachment
 
+- **Essential attribute (kod 15) is the differentia.** Object ⊂ «свойство»
+  (теплокровность, съедобность); subject ⊂ предмет or явление. Do not use
+  15 for parts or actions — those are 20/22. Process/state subjects are
+  allowed because действие ⊂ явление (signature `sig_subject2=2535`).
 - **Attach a property at the highest applicable genus.** Фарфор is a material
   of посуда as a whole; a чашка—фарфор edge is redundant *unless* the species
   frequency deviates noticeably (≈25+ points) from the genus value
@@ -129,6 +133,12 @@ it. Examples are Russian because the base content is Russian.
   of cloning.
 - Fill order: **from the more general to the more specific**, universum by
   universum; the everyday (бытовой) universum is the backbone.
+
+- **`processed` is a fill level, not a lock.** 0 none; 1 genus and species;
+  2 essential and specific properties (kod 15, 20–27); 3 parallel
+  relations (coordinate 61, converses 62, contrary 63, contradictory 64,
+  overlap 30/40, causal/temporal 70–74). Setting a level does not forbid
+  later edges. `set_processed(cid, 2)` / `unprocessed(below=2)`.
 
 ## 6. Workflow rules
 

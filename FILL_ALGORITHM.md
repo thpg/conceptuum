@@ -64,17 +64,18 @@ engine.rebuild(); engine.define()                  # free, deterministic
 Expansion anchors are chosen by the engine from local statistics, not by
 asking the LLM "what is missing":
 
-1. **`processed = 0` concepts** (`eng.unprocessed(universum)`) — the flag
-   means "genus, general properties and species have been specified";
-   it does not close the concept to side relations or later additions;
+1. **`processed` levels** (`eng.unprocessed(universum, below=1)`):
+   0 none; 1 genus and species; 2 essential/specific properties (kod 15, 20–27);
+   3 parallel relations (61–64, 70–74, 30/40). The flag does not close the
+   concept — later levels and extra edges stay possible;
 2. genus nodes with **few children** (thin branches of the tree);
 3. concepts with a **weak defin** (no non-isa relations) — `define()`
    already returns them;
 4. universe roots, then BFS downwards — general before specific.
 
-After a successful EXPAND+RELATE pass over a concept, the filler calls
-`eng.set_processed(cid)` — the concept leaves the frontier but stays
-open to edge additions.
+After a successful EXPAND pass, `eng.set_processed(cid, 1)`; after
+differentia, level 2; after parallel relations, level 3. Old
+`set_processed(cid)` still means level 1.
 
 A subtree is pruned when the last call's yield (new concepts / returned
 items) drops below `MIN_YIELD ≈ 0.3` — the model is repeating what we
