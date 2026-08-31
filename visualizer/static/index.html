@@ -16,8 +16,14 @@
   /* левая панель */
   #side { background: var(--panel); border-right: 1px solid var(--line);
           display: flex; flex-direction: column; min-height: 0; }
-  #side h1 { font-size: 16px; margin: 14px 16px 6px; color: var(--acc2); }
+  #sideHead { display: flex; align-items: flex-start; justify-content: space-between;
+              gap: 8px; margin: 14px 12px 6px; }
+  #side h1 { font-size: 16px; margin: 0; color: var(--acc2); flex: 1; }
   #side h1 small { color: var(--dim); font-weight: normal; font-size: 11px; display: block; }
+  #langBar { display: flex; gap: 4px; flex: none; }
+  #langBar button { background: var(--bg); color: var(--dim); border: 1px solid var(--line);
+                    border-radius: 6px; padding: 4px 8px; cursor: pointer; font-size: 11px; }
+  #langBar button.on { color: var(--acc2); border-color: var(--acc2); }
   #search { margin: 8px 12px; padding: 9px 12px; background: var(--bg); color: var(--txt);
             border: 1px solid var(--line); border-radius: 8px; outline: none; }
   #search:focus { border-color: var(--acc); }
@@ -67,21 +73,87 @@
 <body>
 <div id="app">
   <div id="side">
-    <h1>Conceptuum <small>база логических связей понятий</small></h1>
-    <input id="search" placeholder="поиск понятия… (ru / en)" autofocus>
+    <div id="sideHead">
+      <h1>Conceptuum <small id="sub"></small></h1>
+      <div id="langBar">
+        <button type="button" data-lang="ru">RU</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+    </div>
+    <input id="search" autofocus>
     <div id="list"></div>
   </div>
   <div id="main">
-    <div id="info"><div id="hint">Начните вводить слово слева — например, «чашка», «тяжёлое», «месяц».</div></div>
+    <div id="info"><div id="hint"></div></div>
     <div id="treeWrap"></div>
   </div>
 </div>
 <script>
-const UNI = {1:'бытовой',2:'научный',3:'IT',4:'юридический',5:'логика'};
-const uniName = id => UNI[id] || id;
+const I18N = {
+  ru: {
+    title: 'Conceptuum — визуализатор базы понятий',
+    sub: 'база логических связей понятий',
+    search: 'поиск понятия… (ru / en)',
+    hint: 'Начните вводить слово слева — например, «чашка», «тяжёлое», «месяц».',
+    genus: 'Род', genera: 'Роды', species: 'Виды', rels: 'Связи', terms: 'Термины',
+    processed: 'обработано', unprocessed: 'не обработано',
+    definTitle: 'генерируемая дефиниция (род + отличия + виды)',
+    nSpecies: n => n + ' видов',
+    uni: {1:'бытовой',2:'научный',3:'IT',4:'юридический',5:'логика'},
+    seed: 'а'
+  },
+  en: {
+    title: 'Conceptuum — concept base viewer',
+    sub: 'a relational knowledge base of concepts',
+    search: 'search a concept… (en / ru)',
+    hint: 'Type a word on the left — e.g. “cup”, “heavy”, “month”.',
+    genus: 'Genus', genera: 'Genera', species: 'Species', rels: 'Relations', terms: 'Terms',
+    processed: 'processed', unprocessed: 'unprocessed',
+    definTitle: 'generated definition (genus + differentia + species)',
+    nSpecies: n => n + ' species',
+    uni: {1:'everyday',2:'scientific',3:'IT',4:'legal',5:'logic'},
+    seed: 'a'
+  }
+};
+function browserLang() {
+  const l = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+  return l.startsWith('ru') ? 'ru' : 'en';
+}
+let lang = localStorage.getItem('conceptuum-lang') || browserLang();
+if (lang !== 'ru' && lang !== 'en') lang = 'en';
+const T = () => I18N[lang];
+const uniName = id => T().uni[id] || id;
 const $ = s => document.querySelector(s);
 const listEl = $('#list'), infoEl = $('#info'), treeEl = $('#treeWrap');
-let selId = null, deb = null;
+let selId = null, deb = null, lastQ = '';
+
+function applyI18n() {
+  document.documentElement.lang = lang;
+  document.title = T().title;
+  $('#sub').textContent = T().sub;
+  $('#search').placeholder = T().search;
+  const hint = $('#hint');
+  if (hint) hint.textContent = T().hint;
+  document.querySelectorAll('#langBar button').forEach(b => {
+    b.classList.toggle('on', b.dataset.lang === lang);
+  });
+}
+function setLang(l) {
+  if (l !== 'ru' && l !== 'en') return;
+  lang = l;
+  localStorage.setItem('conceptuum-lang', lang);
+  applyI18n();
+  const q = $('#search').value.trim() || lastQ;
+  if (selId) show(selId);
+  if (q) doSearch(q);
+  else bootList();
+}
+document.querySelectorAll('#langBar button').forEach(b => {
+  b.onclick = () => setLang(b.dataset.lang);
+});
+function withLang(url) {
+  return url + (url.includes('?') ? '&' : '?') + 'lang=' + encodeURIComponent(lang);
+}
 
 // --- поиск ---
 $('#search').addEventListener('input', e => {
@@ -90,13 +162,14 @@ $('#search').addEventListener('input', e => {
 });
 async function doSearch(q) {
   if (!q.trim()) { listEl.innerHTML = ''; return; }
-  const r = await fetch('/api/search?q=' + encodeURIComponent(q));
+  lastQ = q;
+  const r = await fetch(withLang('/api/search?q=' + encodeURIComponent(q)));
   const rows = await r.json();
   listEl.innerHTML = '';
   for (const c of rows) {
     const d = document.createElement('div');
     d.className = 'item' + (c.id === selId ? ' sel' : '');
-    d.innerHTML = `<span class="p ${c.processed ? 'ok' : 'no'}" title="${c.processed ? 'обработано' : 'не обработано'}">${c.processed ? '●' : '○'}</span><span class="n">${esc(c.nama)}</span><span class="u">${uniName(c.uni)}</span>`;
+    d.innerHTML = `<span class="p ${c.processed ? 'ok' : 'no'}" title="${c.processed ? T().processed : T().unprocessed}">${c.processed ? '●' : '○'}</span><span class="n">${esc(c.nama)}</span><span class="u">${uniName(c.uni)}</span>`;
     d.onclick = () => show(c.id);
     listEl.appendChild(d);
   }
@@ -106,7 +179,7 @@ async function doSearch(q) {
 async function show(id) {
   selId = id;
   document.querySelectorAll('.item.sel').forEach(e => e.classList.remove('sel'));
-  const r = await fetch(`/api/tree?id=${id}&depth=3`);
+  const r = await fetch(withLang(`/api/tree?id=${id}&depth=3`));
   if (!r.ok) return;
   const t = await r.json();
   renderInfo(t.center);
@@ -123,15 +196,15 @@ function genusTag(c) {
 
 function renderInfo(c) {
   let h = `<h2>${esc(c.nama)}<span class="uni">${esc(c.uniName)} · id ${c.id}${c.processed ? ' · ✓' : ''}</span></h2>`;
-  if (c.genDefin) h += `<div id="defin" title="генерируемая дефиниция (род + отличия + виды)">${esc(c.genDefin)}</div>`;
+  if (c.genDefin) h += `<div id="defin" title="${esc(T().definTitle)}">${esc(c.genDefin)}</div>`;
   h += '<div class="cols">';
   const parents = c.parents || [];
   if (parents.length)
-    h += `<div><h3>${parents.length > 1 ? 'Роды' : 'Род'}</h3>${parents.map(genusTag).join('')}</div>`;
+    h += `<div><h3>${parents.length > 1 ? T().genera : T().genus}</h3>${parents.map(genusTag).join('')}</div>`;
   if (c.children.length)
-    h += `<div><h3>Виды (${c.children.length})</h3>${c.children.slice(0, 60).map(relTag).join('')}${c.children.length > 60 ? ' …' : ''}</div>`;
+    h += `<div><h3>${T().species} (${c.children.length})</h3>${c.children.slice(0, 60).map(relTag).join('')}${c.children.length > 60 ? ' …' : ''}</div>`;
   if (c.rels.length) {
-    h += '<div><h3>Связи</h3>';
+    h += `<div><h3>${T().rels}</h3>`;
     for (const r of c.rels) {
       const arrow = r.dir === 'out' ? '→' : '←';
       const s = r.strength != null && r.strength !== 0 ? ` <span class="s">${r.strength}%</span>` :
@@ -144,7 +217,7 @@ function renderInfo(c) {
   const en = c.terms.filter(t => t.lang === 'en').map(t => t.term);
   if (ru.length || en.length) {
     const termTag = t => `<span class="tag" onclick="doSearchTerm(this.textContent)">${esc(t)}</span>`;
-    h += `<div><h3>Термины</h3><div>${ru.map(termTag).join('')}</div>` +
+    h += `<div><h3>${T().terms}</h3><div>${ru.map(termTag).join('')}</div>` +
          `<div>${en.map(termTag).join('')}</div></div>`;
   }
   h += '</div>';
@@ -321,7 +394,7 @@ function renderTree(t) {
     const X = n.x * (NW + GX) - NW / 2, Y = n.y * (NH + GY);
     const sub = n.cls && n.cls.includes('up') && n.edgeUni
       ? uniName(n.edgeUni)
-      : (n.cnt ? `${n.cnt} видов` : '');
+      : (n.cnt ? T().nSpecies(n.cnt) : '');
     s += `<g class="node ${n.cls}" onclick="show(${n.id})">
       <rect x="${X}" y="${Y}" width="${NW}" height="${NH}"/>
       <text x="${X + NW / 2}" y="${Y + 17}" text-anchor="middle">${esc(trunc(n.nama))}</text>
@@ -340,17 +413,11 @@ window.addEventListener('resize', () => {
 });
 function esc(s) { return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 
-// старт: показать список верхних понятий
-fetch('/api/search?q=а').then(r => r.json()).then(rows => {
-  listEl.innerHTML = '';
-  for (const c of rows.slice(0, 60)) {
-    const d = document.createElement('div');
-    d.className = 'item';
-    d.innerHTML = `<span class="p ${c.processed ? 'ok' : 'no'}">${c.processed ? '●' : '○'}</span><span class="n">${esc(c.nama)}</span><span class="u">${uniName(c.uni)}</span>`;
-    d.onclick = () => show(c.id);
-    listEl.appendChild(d);
-  }
-});
+function bootList() {
+  doSearch(T().seed);
+}
+applyI18n();
+bootList();
 </script>
 </body>
 </html>

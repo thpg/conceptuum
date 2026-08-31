@@ -21,9 +21,104 @@ import (
 )
 
 var db *sql.DB
-var relNames = map[string]string{} // kod -> long_name
+var relNames = map[string]string{} // kod -> long_name (en)
 var relSym = map[string]bool{}     // kod -> is_symmetric
-var uniNames = map[int]string{}    // id -> nama
+var uniNames = map[int]string{}    // id -> nama (ru, from DB)
+
+var uniEn = map[int]string{
+	1: "everyday", 2: "scientific", 3: "IT", 4: "legal", 5: "logic",
+}
+var relRu = map[string]string{
+	"11": "универсум", "12": "область", "14": "род",
+	"15": "существенный признак", "20": "признак",
+	"21": "назначение", "22": "способен к", "23": "сделан из",
+	"24": "содержит", "25": "действует на", "26": "предназначен для",
+	"27": "направлен на", "30": "равнообъёмно", "40": "пересекается",
+	"60": "несовместимо", "61": "соподчинено", "62": "взаимно",
+	"63": "противоположно", "64": "противоречит",
+	"70": "порождает", "71": "препятствует", "72": "предшествует",
+	"73": "сопутствует", "74": "зависит от",
+}
+
+type langCtx struct {
+	lang string
+	disp map[int]string
+}
+
+func parseLang(s string) string {
+	s = strings.ToLower(strings.TrimSpace(s))
+	if strings.HasPrefix(s, "en") {
+		return "en"
+	}
+	return "ru"
+}
+
+func loadLang(lang string) *langCtx {
+	lc := &langCtx{lang: parseLang(lang), disp: map[int]string{}}
+	rows, err := db.Query(
+		`SELECT ct.concept_id, ct.term FROM concept_term ct
+		 JOIN concept c ON c.dharma=ct.concept_id
+		 WHERE ct.lang=?
+		 ORDER BY (LOWER(ct.term)=LOWER(c.nama)) DESC, CHAR_LENGTH(ct.term), ct.term`,
+		lc.lang)
+	if err != nil {
+		return lc
+	}
+	defer rows.Close()
+	for rows.Next() {
+		var id int
+		var t string
+		if rows.Scan(&id, &t) == nil && t != "" {
+			if _, ok := lc.disp[id]; !ok {
+				lc.disp[id] = t
+			}
+		}
+	}
+	return lc
+}
+
+func (lc *langCtx) name(id int, fallback string) string {
+	if lc != nil {
+		if t, ok := lc.disp[id]; ok && t != "" {
+			return t
+		}
+	}
+	return fallback
+}
+
+func (lc *langCtx) uni(id int) string {
+	if lc != nil && lc.lang == "en" {
+		if n, ok := uniEn[id]; ok {
+			return n
+		}
+	}
+	if n, ok := uniNames[id]; ok {
+		return n
+	}
+	return strconv.Itoa(id)
+}
+
+func (lc *langCtx) rel(kod string) string {
+	if lc != nil && lc.lang == "ru" {
+		if n, ok := relRu[kod]; ok {
+			return n
+		}
+	}
+	if n, ok := relNames[kod]; ok {
+		return n
+	}
+	return kod
+}
+
+func reqLang(r *http.Request) *langCtx {
+	return loadLang(r.URL.Query().Get("lang"))
+}
+
+func (lc *langCtx) apply(c *Concept) {
+	if c != nil && lc != nil {
+		c.Nama = lc.name(c.ID, c.Nama)
+	}
+}
 
 func dsn() string {
 	if s := os.Getenv("JNANA_DSN"); s != "" {
@@ -79,38 +174,82 @@ var lblIn = map[string]string{
 	"70": "produced by", "72": "follows", "22": "bearer",
 	"23": "material of", "24": "contained in", "25": "handled by",
 	"26": "used by", "27": "object of", "74": "needed for"}
+var lblOutRu = map[string]string{
+	"15": "существенный признак", "20": "признак",
+	"30": "равнообъёмно с", "40": "пересекается с",
+	"70": "порождает", "71": "препятствует",
+	"72": "предшествует", "73": "сопутствует", "74": "зависит от",
+	"21": "назначение", "22": "способен к", "23": "сделан из",
+	"24": "содержит", "25": "действует на", "26": "предназначен для",
+	"27": "направлен на", "63": "противоположно", "62": "взаимно с",
+	"61": "соподчинено с"}
+var lblInRu = map[string]string{
+	"70": "порождается", "72": "следует за", "22": "носитель",
+	"23": "материал для", "24": "содержится в", "25": "обрабатывается",
+	"26": "используется", "27": "объект", "74": "нужен для"}
 
-func attrBand(s *int) string {
+func attrBand(s *int, lang string) string {
+	ru := lang == "ru"
 	if s == nil {
+		if ru {
+			return "признак"
+		}
 		return "attribute"
 	}
 	if *s == 0 {
+		if ru {
+			return "нет"
+		}
 		return "no"
 	}
 	switch {
 	case *s >= 90:
+		if ru {
+			return "неотъемлемый"
+		}
 		return "inherent"
 	case *s >= 50:
+		if ru {
+			return "типичный"
+		}
 		return "typical"
 	case *s >= 10:
+		if ru {
+			return "иногда"
+		}
 		return "sometimes"
 	default:
+		if ru {
+			return "редко"
+		}
 		return "rarely"
 	}
 }
 
-func genDefin(ci *ConceptInfo) string {
+func genDefin(ci *ConceptInfo, lc *langCtx) string {
+	lang := "en"
+	if lc != nil {
+		lang = lc.lang
+	}
+	out, in := lblOut, lblIn
+	if lang == "ru" {
+		out, in = lblOutRu, lblInRu
+	}
 	spec := []string{}
 	for _, r := range ci.Rels {
 		if r.Dir == "out" {
-			lbl, ok := lblOut[r.Kod]
+			lbl, ok := out[r.Kod]
 			if !ok {
 				continue
 			}
 			if r.Kod == "20" {
-				lbl = attrBand(r.Strength)
+				lbl = attrBand(r.Strength, lang)
 			} else if r.Strength != nil && *r.Strength == 0 {
-				lbl = "not " + lbl
+				if lang == "ru" {
+					lbl = "не " + lbl
+				} else {
+					lbl = "not " + lbl
+				}
 			}
 			s := lbl + ": " + r.Other.Nama
 			if r.Strength != nil && *r.Strength > 0 {
@@ -122,18 +261,21 @@ func genDefin(ci *ConceptInfo) string {
 				continue // отрицание — факт о субъекте
 			}
 			if relSym[r.Kod] {
-				if lbl, ok := lblOut[r.Kod]; ok {
+				if lbl, ok := out[r.Kod]; ok {
 					spec = append(spec, lbl+": "+r.Other.Nama)
 					continue
 				}
 			}
-			if lbl, ok := lblIn[r.Kod]; ok {
+			if lbl, ok := in[r.Kod]; ok {
 				spec = append(spec, lbl+": "+r.Other.Nama)
 			}
 		}
 	}
 	sort.Strings(spec)
 	rod := "universe (no genus)"
+	if lang == "ru" {
+		rod = "универсум (без рода)"
+	}
 	if len(ci.Parents) == 1 {
 		rod = ci.Parents[0].Nama
 	} else if len(ci.Parents) > 1 {
@@ -143,11 +285,7 @@ func genDefin(ci *ConceptInfo) string {
 			if uid == 0 {
 				uid = p.Uni
 			}
-			un := uniNames[uid]
-			if un == "" {
-				un = strconv.Itoa(uid)
-			}
-			parts = append(parts, p.Nama+" ["+un+"]")
+			parts = append(parts, p.Nama+" ["+lc.uni(uid)+"]")
 		}
 		rod = strings.Join(parts, "; ")
 	}
@@ -160,7 +298,11 @@ func genDefin(ci *ConceptInfo) string {
 		for _, c := range ci.Children {
 			kids = append(kids, c.Nama)
 		}
-		def += ". Species: " + strings.Join(kids, ", ")
+		if lang == "ru" {
+			def += ". Виды: " + strings.Join(kids, ", ")
+		} else {
+			def += ". Species: " + strings.Join(kids, ", ")
+		}
 	}
 	return def
 }
@@ -244,6 +386,7 @@ func handleSearch(w http.ResponseWriter, r *http.Request) {
 		writeJSON(w, []Concept{})
 		return
 	}
+	lc := reqLang(r)
 	like := "%" + q + "%"
 	rows, err := db.Query(`
 		SELECT DISTINCT c.dharma, c.nama, c.universum_id, c.processed,
@@ -267,6 +410,7 @@ func handleSearch(w http.ResponseWriter, r *http.Request) {
 		var prio int
 		if rows.Scan(&c.ID, &c.Nama, &c.Uni, &c.Processed, &prio) == nil && !seen[c.ID] {
 			seen[c.ID] = true
+			lc.apply(&c)
 			out = append(out, c)
 		}
 	}
@@ -301,7 +445,7 @@ func scanParents(rows *sql.Rows) []Concept {
 	return out
 }
 
-func getConceptInfo(id int) (*ConceptInfo, error) {
+func getConceptInfo(id int, lc *langCtx) (*ConceptInfo, error) {
 	var ci ConceptInfo
 	var defin sql.NullString
 	var proc sql.NullInt64
@@ -312,7 +456,8 @@ func getConceptInfo(id int) (*ConceptInfo, error) {
 	}
 	ci.Defin = defin.String
 	ci.Processed = proc.Int64 != 0
-	ci.UniName = uniNames[ci.Uni]
+	ci.Nama = lc.name(ci.ID, ci.Nama)
+	ci.UniName = lc.uni(ci.Uni)
 	ci.Rels = []Rel{} // не nil — иначе JSON null ломает фронт
 	ci.Terms = []Term{}
 
@@ -342,17 +487,17 @@ func getConceptInfo(id int) (*ConceptInfo, error) {
 		var n1, n2 string
 		var u1, u2 int
 		rows.Scan(&r.Kod, &dh1, &dh2, &s, &n1, &u1, &n2, &u2)
-		r.Name = relNames[r.Kod]
+		r.Name = lc.rel(r.Kod)
 		if s.Valid {
 			v := int(s.Int64)
 			r.Strength = &v
 		}
 		if dh1 == id {
 			r.Dir = "out"
-			r.Other = Concept{ID: dh2, Nama: n2, Uni: u2}
+			r.Other = Concept{ID: dh2, Nama: lc.name(dh2, n2), Uni: u2}
 		} else {
 			r.Dir = "in"
-			r.Other = Concept{ID: dh1, Nama: n1, Uni: u1}
+			r.Other = Concept{ID: dh1, Nama: lc.name(dh1, n1), Uni: u1}
 		}
 		ci.Rels = append(ci.Rels, r)
 	}
@@ -364,7 +509,13 @@ func getConceptInfo(id int) (*ConceptInfo, error) {
 		trows.Scan(&t.Term, &t.Lang)
 		ci.Terms = append(ci.Terms, t)
 	}
-	ci.GenDefin = genDefin(&ci)
+	for i := range ci.Parents {
+		lc.apply(&ci.Parents[i])
+	}
+	for i := range ci.Children {
+		lc.apply(&ci.Children[i])
+	}
+	ci.GenDefin = genDefin(&ci, lc)
 	return &ci, nil
 }
 
@@ -378,7 +529,7 @@ func mustRows(q string, args ...any) *sql.Rows {
 
 func handleConcept(w http.ResponseWriter, r *http.Request) {
 	id, _ := strconv.Atoi(r.URL.Query().Get("id"))
-	ci, err := getConceptInfo(id)
+	ci, err := getConceptInfo(id, reqLang(r))
 	if err != nil {
 		http.Error(w, "not found", 404)
 		return
@@ -387,16 +538,17 @@ func handleConcept(w http.ResponseWriter, r *http.Request) {
 }
 
 // --- дерево ---
-func nodeOf(id int) *TreeNode {
+func nodeOf(id int, lc *langCtx) *TreeNode {
 	var n TreeNode
 	n.ID = id
 	db.QueryRow("SELECT nama, universum_id FROM concept WHERE dharma=?", id).Scan(&n.Nama, &n.Uni)
+	n.Nama = lc.name(id, n.Nama)
 	db.QueryRow(`SELECT COUNT(*) FROM edge WHERE dh2=? AND kod='14' AND status='ok'`, id).Scan(&n.ChildCount)
 	return &n
 }
 
-func buildUp(id int, depth int, path map[int]bool) *TreeNode {
-	n := nodeOf(id)
+func buildUp(id int, depth int, path map[int]bool, lc *langCtx) *TreeNode {
+	n := nodeOf(id, lc)
 	if depth <= 0 || path[id] {
 		return n
 	}
@@ -412,7 +564,7 @@ func buildUp(id int, depth int, path map[int]bool) *TreeNode {
 	}
 	rows.Close()
 	for _, p := range ps {
-		pn := buildUp(p.id, depth-1, path)
+		pn := buildUp(p.id, depth-1, path, lc)
 		pn.EdgeUni = p.uni
 		n.Parents = append(n.Parents, pn)
 	}
@@ -420,8 +572,8 @@ func buildUp(id int, depth int, path map[int]bool) *TreeNode {
 	return n
 }
 
-func buildDown(id int, depth int, seen map[int]bool) *TreeNode {
-	n := nodeOf(id)
+func buildDown(id int, depth int, seen map[int]bool, lc *langCtx) *TreeNode {
+	n := nodeOf(id, lc)
 	if depth <= 0 || seen[id] {
 		return n
 	}
@@ -432,7 +584,7 @@ func buildDown(id int, depth int, seen map[int]bool) *TreeNode {
 	for rows.Next() {
 		var c int
 		rows.Scan(&c)
-		n.Children = append(n.Children, buildDown(c, depth-1, seen))
+		n.Children = append(n.Children, buildDown(c, depth-1, seen, lc))
 	}
 	return n
 }
@@ -443,15 +595,16 @@ func handleTree(w http.ResponseWriter, r *http.Request) {
 	if depth <= 0 || depth > 6 {
 		depth = 3
 	}
-	ci, err := getConceptInfo(id)
+	lc := reqLang(r)
+	ci, err := getConceptInfo(id, lc)
 	if err != nil {
 		http.Error(w, "not found", 404)
 		return
 	}
 	resp := TreeResp{
 		Center: *ci,
-		Up:     buildUp(id, 10, map[int]bool{}),
-		Down:   buildDown(id, depth, map[int]bool{}),
+		Up:     buildUp(id, 10, map[int]bool{}, lc),
+		Down:   buildDown(id, depth, map[int]bool{}, lc),
 	}
 	writeJSON(w, resp)
 }

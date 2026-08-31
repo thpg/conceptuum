@@ -286,7 +286,8 @@ format mimicry); the think-block variant fixes the visible answer.
 
 `visualizer/` — a small self-contained web viewer for the base:
 
-- searchable concept list (ru/en terms, exact match first)
+- searchable concept list (ru/en terms, exact match first); language
+  toggle (RU/EN), defaulting to the browser locale
 - click a concept → dependency tree: all genera upward (DAG — two
   discourses of the same concept show as two parent branches, labelled
   by universum), species tree downward (tidy SVG layout, click any node
