@@ -4,21 +4,19 @@
 
 MariaDB holds the bytes. What you *work with* is a **directed labeled graph**:
 
-- a **node** is a *meaning* (лёд / ice / 氷 are one node; environment-среда and Wednesday-среда are two);
+- a **node** is a *meaning* (synonyms share a node; *bank* the institution and *bank* the river are two);
 - an **edge** is a *typed logical link* — genus, essential attribute, cause, contrary, purpose — with a grammar that rejects category mistakes.
 
 ```mermaid
 graph TD
-  ice["лёд / ice"] -->|genus 14| solid["твёрдое вещество"]
-  freeze["замерзание"] -->|produces 70| ice
-  melt["таяние"] -->|produces 70| water["вода / water"]
-  bird["птица"] -->|capable of 22| fly["полёт"]
-  penguin["пингвин"] -->|capable of 22, strength 0| fly
+  ice["ice"] -->|genus 14| solid["solid"]
+  freeze["freezing"] -->|produces 70| ice
+  melt["melting"] -->|produces 70| water["water"]
+  bird["bird"] -->|capable of 22| fly["flight"]
+  penguin["penguin"] -->|capable of 22, strength 0| fly
 ```
 
 Walk the graph: up the genus chain, down to species, sideways to opposites and causes. Definitions are not prose someone wrote — they are **read off the edges** (*genus + differentia*).
-
-> Русскоязычным: это **граф логических связей понятий** (род–вид, признак, причина, противоположность), а не таблица слов. Слово — ярлык; узел — смысл.
 
 **Topics / who this is for:** `knowledge-graph` · `ontology` · `concept-graph` · `semantic-network` · `neuro-symbolic` · `symbolic-ai` · `llm-grounding` · `rag` · `knowledge-representation` · `formal-logic` · `taxonomy` · `dag` · `genus-differentia`
 
@@ -38,7 +36,7 @@ Classical rule, encoded as data: **definiendum = nearest genus + specific proper
 
 ## Look at the graph
 
-Visualizer (`visualizer/`): search ru/en, language from the browser locale, click a concept → genera **above** (DAG), species **below**, card with generated definition and typed relations.
+Visualizer (`visualizer/`): search English or Russian terms, UI language from the browser locale, click a concept → genera **above** (DAG), species **below**, card with generated definition and typed relations.
 
 ```bash
 cd visualizer
@@ -77,17 +75,17 @@ Python 3.8+, `pymysql`, optional `pymorphy3` (Russian morphology). MariaDB/MySQL
 Storage is relational so the grammar can be *enforced*. The mental model is still a graph:
 
 ```
-concept  ──terms──►  лёд, ice, Eis
+concept  ──terms──►  ice
     │
-    ├──[14 genus]────────►  твёрдое вещество
-    ├──[20 attribute 95%]─►  холодное
-    └──[70 produced by]───►  замерзание
+    ├──[14 genus]────────►  solid
+    ├──[20 attribute 95%]─►  cold
+    └──[70 produced by]───►  freezing
 ```
 
 - **Universes** (everyday, scientific, IT, legal, logic) are *discourses*, not extra copies of the node. Two classifications of one meaning → two genus edges, `universum_id` on the edge.
 - **Homonyms** (different meanings of one word) stay two nodes.
 - **Word class does not pick the genus.** Infinitive and deverbal noun, adjective and noun, aspect pairs — one concept; forms live in `concept_term`.
-- **Inheritance.** Attach a property at the highest genus that still holds; species override with strength `0` (пингвин does not fly).
+- **Inheritance.** Attach a property at the highest genus that still holds; species override with strength `0` (a penguin does not fly).
 
 Relation families (codes in table `relevant`):
 
@@ -119,11 +117,11 @@ Full rulebook: [docs/ontology-rules.md](docs/ontology-rules.md). Token-lean prop
 - `interleave.py` — in-stream fact injection (experimental).
 
 ```bash
-python ask.py "Что порождает юридическую ответственность?" \
+python ask.py "What produces legal liability?" \
     --endpoint http://localhost:8090/v1 --model local
 ```
 
-> Кража — преступление. Преступление порождает наказание…  
+> Theft is a crime. A crime produces punishment…  
 > Melting produces water; drinking is directed at water — melted ice can be drunk.
 
 ## Schema (MariaDB)
@@ -131,7 +129,7 @@ python ask.py "Что порождает юридическую ответств
 | Table | Role in the graph |
 |---|---|
 | `concept` | Nodes (`dharma`, `nama`, cached `defin`, home `universum_id`, `processed` 0–3) |
-| `concept_term` | Labels on nodes (ru / en / …) |
+| `concept_term` | Labels on nodes (en / ru / …) |
 | `edge` | Typed arcs: `dh1 —[kod]→ dh2`, strength, status, source |
 | `relevant` | Edge-type grammar (signatures, symmetry, transitivity) |
 | `universum` | Discourses (everyday / scientific / IT / legal / logic) |
@@ -168,12 +166,12 @@ Deprecated: 10, 13, 41, 43, 45, 47, 48, 49, 80–83 (8x folded into 2x; old degr
 - **Degree is data, not code.** Always / usually / rare → `edge.strength`.
 - **part-of ≠ made-of.** Localized detachable part vs substrate of the whole.
 - **Ternary facts are two binaries.** Purpose + patient; no ternary relation nodes.
-- **Attach at the highest genus**; keep a species edge only if the object is more specific or strength differs by ~25+ points. `strength = 0` is explicit negation (пингвин —[22]→ полёт 0).
+- **Attach at the highest genus**; keep a species edge only if the object is more specific or strength differs by ~25+ points. `strength = 0` is explicit negation (penguin —[22]→ flight 0).
 - **Terms do not rewrite the tree.** See [ontology-rules.md](docs/ontology-rules.md).
 
 ## Current snapshot
 
-About **4560 concepts**, **6800 edges**, **20k** genus-paths. Universes: everyday (ru+en), IT (en-primary, ru terms), legal, logic.
+About **4560 concepts**, **6800 edges**, **20k** genus-paths. Universes: everyday (English + Russian terms), IT (English-primary, Russian terms), legal, logic.
 
 Experimental. Auto-filled edges carry `source`; they are meant to be revised.
 
