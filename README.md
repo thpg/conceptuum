@@ -36,6 +36,8 @@ Classical rule, encoded as data: **definiendum = nearest genus + specific proper
 
 ## Look at the graph
 
+Live: **[conceptuum.su](https://conceptuum.su)**
+
 Visualizer (`visualizer/`): search English or Russian terms, UI language from the browser locale, click a concept → genera **above** (DAG), species **below**, card with generated definition and typed relations.
 
 ```bash

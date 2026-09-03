@@ -20,10 +20,12 @@
               gap: 8px; margin: 14px 12px 6px; }
   #side h1 { font-size: 16px; margin: 0; color: var(--acc2); flex: 1; }
   #side h1 small { color: var(--dim); font-weight: normal; font-size: 11px; display: block; }
-  #langBar { display: flex; gap: 4px; flex: none; }
+  #langBar { display: flex; gap: 4px; flex: none; align-items: center; }
   #langBar button { background: var(--bg); color: var(--dim); border: 1px solid var(--line);
                     border-radius: 6px; padding: 4px 8px; cursor: pointer; font-size: 11px; }
   #langBar button.on { color: var(--acc2); border-color: var(--acc2); }
+  #gh { color: var(--dim); font-size: 11px; text-decoration: none; padding: 4px 6px; }
+  #gh:hover { color: var(--acc); }
   #search { margin: 8px 12px; padding: 9px 12px; background: var(--bg); color: var(--txt);
             border: 1px solid var(--line); border-radius: 8px; outline: none; }
   #search:focus { border-color: var(--acc); }
@@ -78,6 +80,7 @@
     <div id="sideHead">
       <h1>Conceptuum <small id="sub"></small></h1>
       <div id="langBar">
+        <a id="gh" href="https://github.com/thpg/conceptuum" target="_blank" rel="noopener">GitHub</a>
         <button type="button" data-lang="ru">RU</button>
         <button type="button" data-lang="en">EN</button>
       </div>
