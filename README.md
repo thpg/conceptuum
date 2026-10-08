@@ -2,6 +2,31 @@
 
 **A graph of logical relations between concepts** — not a word list, not a document dump, not “a database with terms in it.”
 
+## Euler diagrams from the concept graph
+
+Explore how concepts overlap, exclude one another, coincide, or fit inside a
+shared genus. Add or remove concepts, let sibling concepts bring in their common
+genus automatically, and highlight intersections, unions, differences, and complements.
+
+[![Euler circles showing affirmative, negative, universal, and particular judgments inside their shared genus, with region counts and a highlighted intersection](docs/visualizer/euler-circles.png)](https://conceptuum.su/?demo=judgment-grid&lang=en)
+
+*Affirmative/negative and universal/particular judgments form overlapping
+classifications. The highlighted intersection contains the universal affirmative
+judgment. The outer circle is their automatically added genus.*
+
+Try the seven live demos: [cross-classification](https://conceptuum.su/?demo=judgment-grid&lang=en),
+[three-way intersection](https://conceptuum.su/?demo=shared-intersection&lang=en),
+[union and difference](https://conceptuum.su/?demo=judgment-union&lang=en),
+[complement](https://conceptuum.su/?demo=judgment-complement&lang=en),
+[empty intersection](https://conceptuum.su/?demo=empty-intersection&lang=en),
+[equality](https://conceptuum.su/?demo=language-equality&lang=en), and
+[inherited exclusion](https://conceptuum.su/?demo=inherited-exclusion&lang=en).
+
+Catalog mode compares sets of stored concept records, with exact region counts
+and inspectable member samples. Share a selection by URL or export the diagram as SVG.
+
+## The graph behind the diagrams
+
 MariaDB holds the bytes. What you *work with* is a **directed labeled graph**:
 
 - a **node** is a *meaning* (synonyms share a node; *bank* the institution and *bank* the river are two);
@@ -18,7 +43,7 @@ graph TD
 
 Walk the graph: up the genus chain, down to species, sideways to opposites and causes. Definitions are not prose someone wrote — they are **read off the edges** (*genus + differentia*).
 
-**Topics / who this is for:** `knowledge-graph` · `ontology` · `concept-graph` · `semantic-network` · `neuro-symbolic` · `symbolic-ai` · `llm-grounding` · `rag` · `knowledge-representation` · `formal-logic` · `taxonomy` · `dag` · `genus-differentia`
+**Topics / who this is for:** `knowledge-graph` · `ontology` · `concept-graph` · `euler-diagrams` · `set-visualization` · `semantic-network` · `neuro-symbolic` · `symbolic-ai` · `llm-grounding` · `rag` · `knowledge-representation` · `formal-logic` · `taxonomy` · `dag` · `genus-differentia`
 
 ---
 
