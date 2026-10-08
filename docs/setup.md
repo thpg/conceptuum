@@ -1,7 +1,7 @@
 # Local setup and troubleshooting
 
 This guide supplements the [README](../README.md). Code version:
-[0.1.0-dev](../VERSION). Data revision: **2026-10-08 / Q7**.
+[0.1.0-dev](../VERSION). Data revision: **2026-10-09 / Q8**.
 
 ## Prerequisites
 
@@ -12,8 +12,8 @@ The latter supports Russian morphological matching; the engine can also run
 with PyMySQL alone, with reduced matching when morphology is unavailable.
 
 The local setup was checked with Python 3.9.13, Go 1.26.1, and MariaDB 5.5.42.
-The live Q7 import and visualizer were also checked on MariaDB 11.8.6 during
-the [visualizer deployment](quality/2026-10-08-visualizer.md). Other database
+The live Q8 import and visualizer were also checked on MariaDB 11.8.6 during
+the [Q8 deployment](quality/2026-10-09-q8.md). Other database
 versions and MySQL remain unverified. For upstream requirements, see [PyMySQL](https://pypi.org/project/PyMySQL/),
 [pymorphy3](https://pypi.org/project/pymorphy3/), and
 [Go toolchain selection](https://go.dev/doc/toolchain).

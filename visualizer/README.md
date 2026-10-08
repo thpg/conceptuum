@@ -118,7 +118,7 @@ An absent catalog path is **not** a semantic exclusion. These counts concern
 stored concept records, not people, objects, probabilities, or real-world
 cardinalities. Catalog overlaps do not create code-40 edges in the database.
 
-| Demo | What the current Q7 data demonstrates |
+| Demo | What the current Q8 data demonstrates |
 |---|---|
 | [Cross-cutting classifications](https://conceptuum.su/?demo=judgment-grid&lang=en) | Judgment quality and quantity form four occupied cross-classification regions |
 | [Three-way intersection](https://conceptuum.su/?demo=shared-intersection&lang=en) | 35 judgment records lie within both thought content and logical form |
@@ -140,7 +140,7 @@ Research and verification: [Euler demos report](../docs/quality/2026-10-08-euler
 
 ## Browser checks
 
-Run the server against the Q7 dataset first. In a separate Python environment:
+Run the server against the bundled dataset first. In a separate Python environment:
 
 ```sh
 python -m pip install -r requirements-test.txt
@@ -151,7 +151,7 @@ python test_browser.py
 Set `CONCEPTUUM_TEST_URL` to test a different address. Set
 `CONCEPTUUM_BROWSER_CHANNEL=chrome` to use installed Chrome instead of downloading
 Chromium. The twenty-one tests only read the database; overlap fixtures, failure,
-stale-response, and escaping cases use intercepted browser responses. Q7 has no
+stale-response, and escaping cases use intercepted browser responses. Q8 has no
 accepted code-40 records. The catalog demos calculate overlaps from real
 classification paths; the earlier semantic overlap tests use isolated fixtures.
 

@@ -1,0 +1,1338 @@
+{
+  "source": "quality-20261009-q8",
+  "review": {
+    "date": "2026-10-09",
+    "scope": "Foundation pilot, first increment: model/language, structure/type/value, measurement, and three misplaced relational properties.",
+    "sources": {
+      "ml": "https://developers.google.com/machine-learning/glossary",
+      "lm": "https://developers.google.com/machine-learning/crash-course/llm",
+      "array": "https://xlinux.nist.gov/dads/HTML/array.html",
+      "index": "https://xlinux.nist.gov/dads/HTML/arrayindex.html",
+      "list": "https://xlinux.nist.gov/dads/HTML/list.html",
+      "linked_list": "https://xlinux.nist.gov/dads/HTML/linkedList.html",
+      "structure": "https://xlinux.nist.gov/dads/HTML/dataStructure.html",
+      "numbers": "https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials",
+      "int_type": "https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex",
+      "measurement": "https://jcgm.bipm.org/vim/en/2.1.html",
+      "weighing": "https://www.oiml.org/en/files/pdf_r/r076-1-e06.pdf#page=5",
+      "measure_ru": "https://gramota.ru/meta/izmerit",
+      "weigh_ru": "https://gramota.ru/poisk?mode=slovari&query=взвешивать",
+      "all_russian": "https://gramota.ru/poisk?mode=all&query=всероссийский",
+      "nobel": "https://gramota.ru/poisk?mode=spravka&query=Нобелевской&simple=0",
+      "rubber": "https://gramota.ru/storage/public/normdicts/slovar_inostr_slov.pdf"
+    },
+    "context_policy": "Keep existing home contexts. Basic mathematical values use the existing U1 mathematical-object branch; explicit U3 genera make the same values available in programming discourse. U2 is not populated by this batch.",
+    "existing_cohort": [
+      363,
+      364,
+      462,
+      468,
+      473,
+      563,
+      578,
+      880,
+      1198,
+      1908,
+      1909,
+      3867,
+      7072,
+      14535,
+      14871,
+      14885
+    ],
+    "unfinished": [
+      2636,
+      859,
+      1084,
+      1124,
+      24474
+    ],
+    "limits": "The collection/set split, other mixed data-structure/type children, model children, relational-property specificity, vector senses and generated measurement forms require further review. New genera are foundations, not a claim of complete branch filling."
+  },
+  "concepts": [
+    {
+      "key": "ml_model",
+      "name": "модель машинного обучения",
+      "parent": 1124,
+      "universum_id": 3,
+      "terms": [
+        [
+          "модель машинного обучения",
+          "ru"
+        ],
+        [
+          "machine learning model",
+          "en"
+        ],
+        [
+          "ML model",
+          "en"
+        ]
+      ],
+      "reason": "A computational model whose behavior is learned from data; this is the model sense, not the learning activity. Source: https://developers.google.com/machine-learning/glossary"
+    },
+    {
+      "key": "neural_network",
+      "name": "искусственная нейронная сеть",
+      "parent": "ml_model",
+      "universum_id": 3,
+      "terms": [
+        [
+          "искусственная нейронная сеть",
+          "ru"
+        ],
+        [
+          "artificial neural network",
+          "en"
+        ],
+        [
+          "neural network",
+          "en"
+        ],
+        [
+          "нейронная сеть",
+          "ru"
+        ]
+      ],
+      "reason": "The computational network/model sense, distinguished from a biological neural network. Source: https://developers.google.com/machine-learning/glossary"
+    },
+    {
+      "key": "language_model",
+      "name": "языковая модель",
+      "parent": "ml_model",
+      "universum_id": 3,
+      "terms": [
+        [
+          "языковая модель",
+          "ru"
+        ],
+        [
+          "language model",
+          "en"
+        ]
+      ],
+      "reason": "A model of token-sequence probabilities; both statistical and neural language models fit this broader genus. Source: https://developers.google.com/machine-learning/crash-course/llm"
+    },
+    {
+      "key": "integer_number",
+      "name": "целое число",
+      "parent": 2699,
+      "universum_id": 1,
+      "terms": [
+        [
+          "целое число",
+          "ru"
+        ],
+        [
+          "integer",
+          "en"
+        ],
+        [
+          "integer number",
+          "en"
+        ]
+      ],
+      "reason": "A mathematical integer, including zero and positive and negative whole units; not an integer data type. Source: https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials"
+    },
+    {
+      "key": "array_index",
+      "name": "индекс массива",
+      "parent": "integer_number",
+      "universum_id": 3,
+      "terms": [
+        [
+          "индекс массива",
+          "ru"
+        ],
+        [
+          "array index",
+          "en"
+        ],
+        [
+          "index",
+          "en"
+        ]
+      ],
+      "reason": "An integer identifying an array element position in the NIST DADS array sense; not the array or a database index. Source: https://xlinux.nist.gov/dads/HTML/array.html"
+    },
+    {
+      "key": "list_structure",
+      "name": "список (структура данных)",
+      "parent": 364,
+      "universum_id": 3,
+      "terms": [
+        [
+          "список (структура данных)",
+          "ru"
+        ],
+        [
+          "list",
+          "en"
+        ],
+        [
+          "list data structure",
+          "en"
+        ],
+        [
+          "список",
+          "ru"
+        ]
+      ],
+      "reason": "A data structure with items accessible in sequence; distinct from the everyday written-list concept 3512. Source: https://xlinux.nist.gov/dads/HTML/list.html"
+    }
+  ],
+  "renames": [
+    {
+      "id": 1198,
+      "before": "Whole number",
+      "name": "неотрицательное целое число",
+      "reason": "Resolve Whole number to the explicit school-arithmetic convention 0,1,2,...; its old Russian term denoted the broader integer class. Source: https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials",
+      "terms": []
+    },
+    {
+      "id": 462,
+      "before": "integer",
+      "name": "целочисленный тип данных",
+      "reason": "Make the programming type sense explicit without merging it with its mathematical values. Source: https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex",
+      "terms": []
+    },
+    {
+      "id": 3867,
+      "before": "измерить",
+      "name": "измерение",
+      "reason": "Use the established action noun for the literal quantity-measurement sense. Source: https://gramota.ru/meta/izmerit",
+      "terms": []
+    }
+  ],
+  "terms": [
+    {
+      "id": 880,
+      "name": "Large language model",
+      "terms": [
+        [
+          "LLM",
+          "en"
+        ]
+      ],
+      "reason": "Add the standard abbreviation and retain the existing Russian translation. Source: https://developers.google.com/machine-learning/glossary"
+    },
+    {
+      "id": 578,
+      "name": "Backpropagation neural network",
+      "terms": [
+        [
+          "нейронная сеть с обратным распространением ошибки",
+          "ru"
+        ],
+        [
+          "нейронная сеть, обучаемая обратным распространением ошибки",
+          "ru"
+        ]
+      ],
+      "reason": "The network is trained using error backpropagation; it is not the training algorithm itself. Source: https://developers.google.com/machine-learning/glossary"
+    },
+    {
+      "id": 363,
+      "name": "data type",
+      "terms": [
+        [
+          "data types",
+          "en"
+        ]
+      ],
+      "reason": "The plural belongs to data type, not to data structure. Source: https://xlinux.nist.gov/dads/HTML/dataStructure.html"
+    },
+    {
+      "id": 462,
+      "name": "целочисленный тип данных",
+      "terms": [
+        [
+          "integer data type",
+          "en"
+        ],
+        [
+          "integer type",
+          "en"
+        ],
+        [
+          "целочисленный тип",
+          "ru"
+        ]
+      ],
+      "reason": "Explicit type labels disambiguate the surviving integer/int aliases. Source: https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex"
+    },
+    {
+      "id": 1198,
+      "name": "неотрицательное целое число",
+      "terms": [
+        [
+          "Whole number",
+          "en"
+        ],
+        [
+          "nonnegative integer",
+          "en"
+        ],
+        [
+          "non-negative integer",
+          "en"
+        ],
+        [
+          "неотрицательное целое число",
+          "ru"
+        ]
+      ],
+      "reason": "Whole number is scoped to the nonnegative convention; zero is included. Source: https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials"
+    },
+    {
+      "id": 3867,
+      "name": "измерение",
+      "terms": [
+        [
+          "measurement",
+          "en"
+        ],
+        [
+          "измерение",
+          "ru"
+        ],
+        [
+          "измерять",
+          "ru"
+        ]
+      ],
+      "reason": "Reuse the existing measurement concept and verified action forms. Source: https://gramota.ru/meta/izmerit"
+    },
+    {
+      "id": 1909,
+      "name": "взвешивание",
+      "terms": [
+        [
+          "взвешивать",
+          "ru"
+        ],
+        [
+          "взвесить",
+          "ru"
+        ],
+        [
+          "to weigh",
+          "en"
+        ]
+      ],
+      "reason": "These forms denote the literal weighing activity selected by its scales-purpose edge. Source: https://gramota.ru/poisk?mode=slovari&query=взвешивать"
+    },
+    {
+      "id": 1908,
+      "name": "весы",
+      "terms": [
+        [
+          "weighing instrument",
+          "en"
+        ],
+        [
+          "weighing scales",
+          "en"
+        ]
+      ],
+      "reason": "Scales are instruments intended for determining mass by weighing. Source: https://www.oiml.org/en/files/pdf_r/r076-1-e06.pdf#page=5"
+    },
+    {
+      "id": 14535,
+      "name": "всероссийское",
+      "terms": [
+        [
+          "all-Russian",
+          "en"
+        ],
+        [
+          "Russia-wide",
+          "en"
+        ],
+        [
+          "всероссийский",
+          "ru"
+        ]
+      ],
+      "reason": "Scope covering all Russia; a relational property rather than a color. Source: https://gramota.ru/poisk?mode=all&query=всероссийский"
+    },
+    {
+      "id": 14885,
+      "name": "нобелевское",
+      "terms": [
+        [
+          "Nobel-related",
+          "en"
+        ],
+        [
+          "нобелевский",
+          "ru"
+        ]
+      ],
+      "reason": "A relation to Nobel or the Nobel-prize context; do not identify this adjective with the prize or its recipient. Source: https://gramota.ru/poisk?mode=spravka&query=Нобелевской&simple=0"
+    },
+    {
+      "id": 7072,
+      "name": "резиновое",
+      "terms": [
+        [
+          "made of rubber",
+          "en"
+        ],
+        [
+          "rubber (adjective)",
+          "en"
+        ],
+        [
+          "резиновый",
+          "ru"
+        ]
+      ],
+      "reason": "Select the literal material-related property; rubber as a substance remains 1232. Source: https://gramota.ru/storage/public/normdicts/slovar_inostr_slov.pdf"
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 1198,
+      "term": "Whole number",
+      "lang": "ru",
+      "reason": "The rename helper retains the old label as Russian; this old label is English."
+    },
+    {
+      "id": 462,
+      "term": "integer",
+      "lang": "ru",
+      "reason": "The rename helper retains the old label as Russian; this old label is English."
+    },
+    {
+      "id": 468,
+      "term": "index",
+      "lang": "en",
+      "reason": "Not an unrestricted synonym of array. Index and list receive explicit technical senses; vector needs its own scope review."
+    },
+    {
+      "id": 468,
+      "term": "list",
+      "lang": "en",
+      "reason": "Not an unrestricted synonym of array. Index and list receive explicit technical senses; vector needs its own scope review."
+    },
+    {
+      "id": 468,
+      "term": "vector",
+      "lang": "en",
+      "reason": "Not an unrestricted synonym of array. Index and list receive explicit technical senses; vector needs its own scope review."
+    },
+    {
+      "id": 364,
+      "term": "data types",
+      "lang": "en",
+      "reason": "A data structure organizes data; a data type classifies values and operations."
+    },
+    {
+      "id": 1198,
+      "term": "целое число",
+      "lang": "ru",
+      "reason": "This broader mathematical meaning belongs to the new integer concept; 1198 is specifically nonnegative."
+    },
+    {
+      "id": 1909,
+      "term": "взвешиваание",
+      "lang": "ru",
+      "reason": "Malformed doubled-vowel form; the dictionary supports взвешивание."
+    },
+    {
+      "id": 1909,
+      "term": "ВЗВЕШИВАТЬ",
+      "lang": "en",
+      "reason": "Russian infinitive incorrectly tagged as English; retain взвешивать with ru."
+    },
+    {
+      "id": 14535,
+      "term": "всероссийскее",
+      "lang": "ru",
+      "reason": "Malformed ending; keep verified masculine and neuter adjective forms."
+    },
+    {
+      "id": 14535,
+      "term": "всероссийскее",
+      "lang": "en",
+      "reason": "Russian malformed adjective incorrectly tagged as English."
+    },
+    {
+      "id": 14885,
+      "term": "нобелевскее",
+      "lang": "ru",
+      "reason": "Malformed ending; keep verified masculine and neuter adjective forms."
+    },
+    {
+      "id": 14885,
+      "term": "нобелевскее",
+      "lang": "en",
+      "reason": "Russian malformed adjective incorrectly tagged as English."
+    },
+    {
+      "id": 7072,
+      "term": "резиновое",
+      "lang": "en",
+      "reason": "Russian adjective incorrectly tagged as English; retain its ru form."
+    }
+  ],
+  "leaf_merges": [
+    {
+      "source_id": 14871,
+      "target_id": 3867,
+      "target_name": "измерить",
+      "reason": "The isolated physical measuring leaf duplicates 3867. Archive generated noun forms without asserting that every unattested form is impossible; retain the verified verb in Russian. Source: https://gramota.ru/meta/izmerit",
+      "retained_terms": [
+        [
+          "измерять",
+          "ru"
+        ]
+      ],
+      "archive": {
+        "concept": {
+          "dharma": 14871,
+          "nama": "измеряние",
+          "defin": "измеряние — физическое действие",
+          "vol_zero": null,
+          "vol_ed": null,
+          "vol_countable": null,
+          "vol_sobir": null,
+          "vol_sootn": null,
+          "cont_konkr": null,
+          "cont_abs": null,
+          "cont_opred": null,
+          "cont_empir": null,
+          "universum_id": 1,
+          "processed": 1
+        },
+        "terms": [
+          {
+            "concept_id": 14871,
+            "term": "измеряние",
+            "lang": "ru"
+          },
+          {
+            "concept_id": 14871,
+            "term": "ИЗМЕРЯТЬ",
+            "lang": "en"
+          },
+          {
+            "concept_id": 14871,
+            "term": "измеряяние",
+            "lang": "ru"
+          }
+        ],
+        "edges": [
+          {
+            "id": 18955,
+            "dh1": 14871,
+            "kod": "14",
+            "dh2": 5017,
+            "universum_id": 1,
+            "strength": 100,
+            "status": "ok",
+            "source": "fill",
+            "rationale": "rank_all",
+            "created_at": "2026-09-01 21:07:47"
+          }
+        ]
+      }
+    }
+  ],
+  "initial_edges": [
+    {
+      "subject": "integer_number",
+      "kod": "14",
+      "object": 2699,
+      "universum_id": 3,
+      "reason": "The mathematical-value classification also applies in the IT discourse. Source: https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials"
+    },
+    {
+      "subject": 2699,
+      "kod": "14",
+      "object": 2698,
+      "universum_id": 3,
+      "reason": "A number remains a mathematical object when used in programming discourse. Source: https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials"
+    }
+  ],
+  "repairs": [
+    {
+      "id": 1462,
+      "before": [
+        880,
+        "14",
+        354,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "An LLM is a language model, not a programming language. Source: https://developers.google.com/machine-learning/crash-course/llm",
+      "replacements": [
+        [
+          880,
+          "14",
+          "language_model",
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1135,
+      "before": [
+        578,
+        "14",
+        265,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "Replace the overly broad information-object parent with the missing artificial-neural-network genus. Source: https://developers.google.com/machine-learning/glossary",
+      "replacements": [
+        [
+          578,
+          "14",
+          "neural_network",
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1793,
+      "before": [
+        1198,
+        "14",
+        363,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "Whole numbers are mathematical values; integer data types remain under 363. Source: https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials",
+      "replacements": [
+        [
+          1198,
+          "14",
+          "integer_number",
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 883,
+      "before": [
+        473,
+        "14",
+        364,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "A linked list is a specialization of list; preserve its existing pointer attribute. Source: https://xlinux.nist.gov/dads/HTML/list.html",
+      "replacements": [
+        [
+          473,
+          "14",
+          "list_structure",
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1852,
+      "before": [
+        563,
+        "14",
+        364,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "An array of pointers is an array, rather than an unrelated direct child of data structure. Source: https://xlinux.nist.gov/dads/HTML/array.html",
+      "replacements": [
+        [
+          563,
+          "14",
+          468,
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 18033,
+      "before": [
+        1909,
+        "14",
+        64,
+        1
+      ],
+      "reviewed_strength": 100,
+      "reason": "Literal weighing determines a quantity; the figurative deliberation sense also does not establish communication. Source: https://gramota.ru/poisk?mode=slovari&query=взвешивать",
+      "replacements": []
+    },
+    {
+      "id": 2887,
+      "before": [
+        1909,
+        "14",
+        54,
+        1
+      ],
+      "reviewed_strength": null,
+      "reason": "Use the already existing measurement concept as the nearest genus of literal weighing. Source: https://www.oiml.org/en/files/pdf_r/r076-1-e06.pdf#page=5",
+      "replacements": [
+        [
+          1909,
+          "14",
+          3867,
+          null,
+          1
+        ]
+      ]
+    },
+    {
+      "id": 3647,
+      "before": [
+        1909,
+        "70",
+        1815,
+        1
+      ],
+      "reviewed_strength": null,
+      "reason": "Comparison may be involved in measurement, but weighing does not causally produce the generic mental operation of comparison. Source: https://jcgm.bipm.org/vim/en/2.1.html",
+      "replacements": []
+    },
+    {
+      "id": 28634,
+      "before": [
+        14535,
+        "14",
+        2,
+        1
+      ],
+      "reviewed_strength": 100,
+      "reason": "Russia-wide scope is a relational property, not a color. This is an ontology interpretation of the dictionary meaning. Source: https://gramota.ru/poisk?mode=all&query=всероссийский",
+      "replacements": [
+        [
+          14535,
+          "14",
+          24474,
+          null,
+          1
+        ]
+      ]
+    },
+    {
+      "id": 28640,
+      "before": [
+        14885,
+        "14",
+        2,
+        1
+      ],
+      "reviewed_strength": 100,
+      "reason": "Nobel-related is a relational property, not a color, prize, or prize recipient. Source: https://gramota.ru/poisk?mode=spravka&query=Нобелевской&simple=0",
+      "replacements": [
+        [
+          14885,
+          "14",
+          24474,
+          null,
+          1
+        ]
+      ]
+    },
+    {
+      "id": 28503,
+      "before": [
+        7072,
+        "14",
+        2810,
+        1
+      ],
+      "reviewed_strength": 100,
+      "reason": "Being made of rubber is material-related, not an age or a species of rubber substance. Source: https://gramota.ru/storage/public/normdicts/slovar_inostr_slov.pdf",
+      "replacements": [
+        [
+          7072,
+          "14",
+          24474,
+          null,
+          1
+        ]
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "subject": 880,
+      "kod": "14",
+      "object": "neural_network",
+      "universum_id": 3,
+      "reason": "The contemporary computational LLM sense is also an artificial neural network; the two classifications meet at this model. Source: https://developers.google.com/machine-learning/glossary"
+    },
+    {
+      "subject": 1198,
+      "kod": "14",
+      "object": "integer_number",
+      "universum_id": 1,
+      "reason": "Expose the same nonnegative integer meaning in the existing U1 mathematics view. Source: https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials"
+    },
+    {
+      "subject": 468,
+      "kod": "20",
+      "object": "array_index",
+      "universum_id": 3,
+      "reason": "Array indexing identifies an element position; it is an attribute of the array, not a synonym for it. Source: https://xlinux.nist.gov/dads/HTML/array.html"
+    },
+    {
+      "subject": 3867,
+      "kod": "27",
+      "object": 2709,
+      "universum_id": 1,
+      "reason": "Literal physical measurement targets a physical quantity; this is not a relation to the measuring agent. Source: https://jcgm.bipm.org/vim/en/2.1.html"
+    },
+    {
+      "subject": 1909,
+      "kod": "27",
+      "object": 3081,
+      "universum_id": 1,
+      "reason": "For weighing with scales, the measured quantity is mass. Source: https://www.oiml.org/en/files/pdf_r/r076-1-e06.pdf#page=5"
+    }
+  ],
+  "checks": [
+    {
+      "subject": "integer_number",
+      "kod": "14",
+      "object": 2699,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2699,
+      "kod": "14",
+      "object": 2698,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 880,
+      "kod": "14",
+      "object": 354,
+      "present": false
+    },
+    {
+      "subject": 880,
+      "kod": "14",
+      "object": "language_model",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 578,
+      "kod": "14",
+      "object": 265,
+      "present": false
+    },
+    {
+      "subject": 578,
+      "kod": "14",
+      "object": "neural_network",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1198,
+      "kod": "14",
+      "object": 363,
+      "present": false
+    },
+    {
+      "subject": 1198,
+      "kod": "14",
+      "object": "integer_number",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 473,
+      "kod": "14",
+      "object": 364,
+      "present": false
+    },
+    {
+      "subject": 473,
+      "kod": "14",
+      "object": "list_structure",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 563,
+      "kod": "14",
+      "object": 364,
+      "present": false
+    },
+    {
+      "subject": 563,
+      "kod": "14",
+      "object": 468,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1909,
+      "kod": "14",
+      "object": 64,
+      "present": false
+    },
+    {
+      "subject": 1909,
+      "kod": "14",
+      "object": 54,
+      "present": false
+    },
+    {
+      "subject": 1909,
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1909,
+      "kod": "70",
+      "object": 1815,
+      "present": false
+    },
+    {
+      "subject": 14535,
+      "kod": "14",
+      "object": 2,
+      "present": false
+    },
+    {
+      "subject": 14535,
+      "kod": "14",
+      "object": 24474,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 14885,
+      "kod": "14",
+      "object": 2,
+      "present": false
+    },
+    {
+      "subject": 14885,
+      "kod": "14",
+      "object": 24474,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 7072,
+      "kod": "14",
+      "object": 2810,
+      "present": false
+    },
+    {
+      "subject": 7072,
+      "kod": "14",
+      "object": 24474,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 880,
+      "kod": "14",
+      "object": "neural_network",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1198,
+      "kod": "14",
+      "object": "integer_number",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 468,
+      "kod": "20",
+      "object": "array_index",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3867,
+      "kod": "27",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1909,
+      "kod": "27",
+      "object": 3081,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1908,
+      "kod": "21",
+      "object": 1909,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 468,
+      "kod": "20",
+      "object": 717,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 473,
+      "kod": "20",
+      "object": 457,
+      "present": true,
+      "strength": null
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": 880,
+      "ancestor": 354,
+      "present": false
+    },
+    {
+      "subject": 880,
+      "ancestor": 1124,
+      "present": true
+    },
+    {
+      "subject": 578,
+      "ancestor": 1124,
+      "present": true
+    },
+    {
+      "subject": 1198,
+      "ancestor": 363,
+      "present": false
+    },
+    {
+      "subject": 1198,
+      "ancestor": 2699,
+      "present": true
+    },
+    {
+      "subject": 462,
+      "ancestor": 363,
+      "present": true
+    },
+    {
+      "subject": 462,
+      "ancestor": 2699,
+      "present": false
+    },
+    {
+      "subject": 1909,
+      "ancestor": 64,
+      "present": false
+    },
+    {
+      "subject": 1909,
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": 14535,
+      "ancestor": 2,
+      "present": false
+    },
+    {
+      "subject": 14885,
+      "ancestor": 2,
+      "present": false
+    },
+    {
+      "subject": 7072,
+      "ancestor": 2810,
+      "present": false
+    },
+    {
+      "subject": 7072,
+      "ancestor": 1232,
+      "present": false
+    },
+    {
+      "subject": 563,
+      "ancestor": 468,
+      "present": true
+    },
+    {
+      "subject": "array_index",
+      "ancestor": 468,
+      "present": false
+    },
+    {
+      "subject": "array_index",
+      "ancestor": "integer_number",
+      "present": true
+    },
+    {
+      "subject": "list_structure",
+      "ancestor": 364,
+      "present": true
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": 1198,
+      "term": "Whole number",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 462,
+      "term": "integer",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 880,
+      "term": "LLM",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 578,
+      "term": "нейронная сеть с обратным распространением ошибки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 578,
+      "term": "нейронная сеть, обучаемая обратным распространением ошибки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 363,
+      "term": "data types",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 462,
+      "term": "integer data type",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 462,
+      "term": "integer type",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 462,
+      "term": "целочисленный тип",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1198,
+      "term": "Whole number",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1198,
+      "term": "nonnegative integer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1198,
+      "term": "non-negative integer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1198,
+      "term": "неотрицательное целое число",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 3867,
+      "term": "measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3867,
+      "term": "измерение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 3867,
+      "term": "измерять",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1909,
+      "term": "взвешивать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1909,
+      "term": "взвесить",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1909,
+      "term": "to weigh",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1908,
+      "term": "weighing instrument",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1908,
+      "term": "weighing scales",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 14535,
+      "term": "all-Russian",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 14535,
+      "term": "Russia-wide",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 14535,
+      "term": "всероссийский",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 14885,
+      "term": "Nobel-related",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 14885,
+      "term": "нобелевский",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 7072,
+      "term": "made of rubber",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 7072,
+      "term": "rubber (adjective)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 7072,
+      "term": "резиновый",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 468,
+      "term": "index",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 468,
+      "term": "list",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 468,
+      "term": "vector",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 364,
+      "term": "data types",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 1198,
+      "term": "целое число",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 1909,
+      "term": "взвешиваание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 1909,
+      "term": "ВЗВЕШИВАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 14535,
+      "term": "всероссийскее",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 14535,
+      "term": "всероссийскее",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 14885,
+      "term": "нобелевскее",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 14885,
+      "term": "нобелевскее",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 7072,
+      "term": "резиновое",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

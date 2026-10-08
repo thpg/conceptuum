@@ -4,7 +4,7 @@ A concept graph with typed relations, multilingual terms, and definitions genera
 
 conceptuum represents meanings as nodes and connects them through relations such as genus, purpose, material, opposition, and cause. It combines a MariaDB snapshot, a Python engine for querying and reviewing the graph, and a Go web visualizer. An optional retrieval demo supplies graph context to a local language model.
 
-**Development version:** [0.1.0-dev](VERSION) · **Data snapshot:** [Q7, 2026-10-08](docs/quality/2026-10-08-q7.md) · **[Changelog](CHANGELOG.md)** · **[Live demo](https://conceptuum.su)**
+**Development version:** [0.1.0-dev](VERSION) · **Data snapshot:** [Q8, 2026-10-09](docs/quality/2026-10-09-q8.md) · **[Changelog](CHANGELOG.md)** · **[Live demo](https://conceptuum.su)**
 
 ## Euler diagrams from the concept graph
 
@@ -69,12 +69,12 @@ An operation and its numerical result are different meanings. The `defin` field 
 | Component | Version / requirement |
 |---|---|
 | Project | **0.1.0-dev**, an unreleased development version |
-| Bundled data | **2026-10-08 / Q7**; versioned separately from the code |
+| Bundled data | **2026-10-09 / Q8**; versioned separately from the code |
 | Python | **3.9+**; checked with **3.9.13** |
 | PyMySQL | **1.2.0**, pinned in [requirements.txt](requirements.txt) |
 | pymorphy3 | **2.0.6**, pinned for Russian morphological matching |
 | Go | **1.26.1+**, required by [visualizer/go.mod](visualizer/go.mod); only needed for the visualizer |
-| MariaDB | Local setup checked on **5.5.42**; live Q7 import and visualizer checked on **11.8.6** |
+| MariaDB | Local setup checked on **5.5.42**; live Q8 import and visualizer checked on **11.8.6** |
 
 The MariaDB version records the existing test environment. Compatibility with other server versions, including MySQL, needs separate verification. Python direct dependencies are pinned; Go dependencies are recorded in `go.mod` and `go.sum`.
 
@@ -219,18 +219,18 @@ From the repository root:
 ```bash
 python -m unittest discover -s tools -p "test_*.py"
 python tools/audit_quality.py --output quality.json
-python tools/audit_upper_graph.py --scope-from docs/quality/2026-10-08-q7-upper-after.json --output upper.json
+python tools/audit_upper_graph.py --output upper.json
 ```
 
-The unit tests need no database or model. The audits read the configured database and write JSON reports. Keeping `--scope-from` prevents reparented nodes from disappearing from a before/after comparison.
+The unit tests need no database or model. The audits read the configured database and write JSON reports. For a before/after comparison, save the first upper-graph report and pass its path with `--scope-from` on the second run; this keeps reparented nodes in scope.
 
 ## Data snapshot and limits
 
-The bundled **Q7** snapshot contains **12,468 concepts**, **15,665 accepted edges**, **787 rejected edges**, **57,970 genus paths**, and **34,950 terms** across everyday, IT, legal, and logic universes.
+The bundled **Q8** snapshot contains **12,473 concepts**, **15,675 accepted edges**, **798 rejected edges**, **58,000 genus paths**, and **34,981 terms** across everyday, IT, legal, and logic universes.
 
-Q7 has zero detected signature violations, hierarchy cycles, and self-loops; all 23 explicit negations survived the review. These checks establish structural consistency, not complete or verified knowledge. **7,306 concepts still lack an English-tagged term containing Latin letters**, and even Latin-script terms need translation review. Long queries can retrieve extra senses through individual words.
+Q8 separates models from programming languages, arrays from indices and lists, mathematical numbers from data types, and weighing from communication. It has zero detected signature violations, hierarchy cycles, and self-loops; all 23 explicit negations survived the review. These checks establish structural consistency, not complete or verified knowledge. **7,302 concepts still lack an English-tagged term containing Latin letters**, and even Latin-script terms need translation review. Long queries can retrieve extra senses through individual words.
 
-The [changelog](CHANGELOG.md) separates code versions from data revisions. Detailed evidence and remaining gaps are recorded in the [Q7 review](docs/quality/2026-10-08-q7.md) and [maintainer state](STATE.md); these historical reports include Russian text.
+The [coverage review and filling plan](PLAN.md) prioritizes the remaining work. Sources and exact changes are recorded in the [Q8 review](docs/quality/2026-10-09-q8.md) and its [batch manifest](tools/quality_20261009_q8.json). The [changelog](CHANGELOG.md) separates code versions from data revisions; older entries in the [maintainer state](STATE.md) include Russian text.
 
 ## Documentation
 

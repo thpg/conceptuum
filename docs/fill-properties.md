@@ -43,7 +43,7 @@ counterexamples, and preservation checks for other rules.
 
 ## Prepare a reviewed batch
 
-Use [the Q7 manifest](../tools/quality_20261008_q7.json) as a concrete example
+Use [the Q8 manifest](../tools/quality_20261009_q8.json) as a concrete example
 of the format, not a list of changes to repeat on an unrelated database.
 
 | Field | Purpose |
@@ -69,7 +69,7 @@ Configure a maintenance database account first. A rollback preview executes
 writes inside a transaction and therefore needs write privileges.
 
 ```bash
-python tools/apply_quality_batch.py tools/quality_20261008_q7.json --report preview.json
+python tools/apply_quality_batch.py tools/quality_20261009_q8.json --report preview.json
 ```
 
 Without `--apply`, the runner rolls back. It validates new edges through
@@ -81,7 +81,7 @@ snapshot; prepare a new reviewed batch instead of bypassing the checks.
 To save a reviewed batch:
 
 ```bash
-python tools/apply_quality_batch.py tools/quality_20261008_q7.json --apply --report applied.json
+python tools/apply_quality_batch.py tools/quality_20261009_q8.json --apply --report applied.json
 ```
 
 `--apply` requires `mariadb-dump` or `mysqldump`, and creates a full backup in
@@ -94,8 +94,11 @@ After saving, use a fresh connection for the read-only audits:
 
 ```bash
 python tools/audit_quality.py --output after.json
-python tools/audit_upper_graph.py --scope-from docs/quality/2026-10-08-q7-upper-after.json --output upper.json
+python tools/audit_upper_graph.py --output upper.json
 ```
+
+For a fixed before/after scope, keep the first upper-graph report and pass it
+with `--scope-from` when auditing the later snapshot.
 
 Also check changed definitions, search results, previous semantic conditions,
 discourse context, and inherited assertions. Test a repeat preview for

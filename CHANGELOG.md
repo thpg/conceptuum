@@ -1,11 +1,23 @@
 # Changelog
 
 The project version is stored in [VERSION](VERSION). Code versions and data
-revisions are tracked separately: **Q1–Q7 are content reviews, not software
+revisions are tracked separately: **Q1–Q8 are content reviews, not software
 release numbers**. The first explicitly versioned working tree is
 **0.1.0-dev**. No release tag or GitHub Release was created by this update.
 
 ## 0.1.0-dev — Unreleased
+
+### Data — 2026-10-09, Q8
+
+- Start the foundation pilot from the coverage review: correct model/language,
+  array/list/index, number/type, measurement, and selected adjective meanings.
+- Add six concepts, merge one archived duplicate, rename three records,
+  reject 11 relations, and add 22 reviewed relations. Preserve all 23 explicit
+  negations and the existing relation grammar.
+- Bundle 12,473 concepts, 15,675 accepted edges, and 34,981 terms; update the
+  live dataset while keeping interface revision `2026-10-08.4`.
+- Record the fixed cohort, sources, context policy, and unfinished set review
+  in the [Q8 report](docs/quality/2026-10-09-q8.md) and [active plan](PLAN.md).
 
 ### Euler demos and catalog sets — 2026-10-08, interface revision 2026-10-08.4
 
@@ -89,6 +101,7 @@ snapshots; they are not separate published software releases.
 
 | Revision | Date | Main changes | Concepts | All edges |
 |---|---|---|---:|---:|
+| [Q8](docs/quality/2026-10-09-q8.md) | 2026-10-09 | Foundation pilot: models, structures, values, measurement, terminology | 12,473 | 16,473 |
 | [Q7](docs/quality/2026-10-08-q7.md) | 2026-10-08 | Causality, arithmetic, process roles, dependent merges | 12,468 | 16,452 |
 | [Q6](docs/quality/2026-10-08-q6.md) | 2026-10-08 | Mixed abstract branch, vertebrate genera, biological properties | 12,468 | 16,439 |
 | [Q5](docs/quality/2026-10-08-q5.md) | 2026-10-08 | Upper graph; material objects, information, mental processes | 12,474 | 16,399 |
