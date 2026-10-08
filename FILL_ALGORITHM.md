@@ -1,207 +1,122 @@
-# LLM base-filling algorithm — maximum yield per token
+# Filling and reviewing the concept graph
 
-Goal: fill a universe (concepts + validated relations) with an LLM at the
-lowest possible token cost, without sacrificing graph quality.
+Applies to development version [0.1.0-dev](VERSION) and data revision Q7.
+For running the project, start with the [README](README.md). For changing
+data, use the [reviewed batch workflow](docs/fill-properties.md).
 
-Core principle: **the engine does everything deterministic; the LLM only
-produces what the engine cannot** — candidate concepts and candidate
-relations. The cheapest token is the one never sent.
+## Responsibilities
 
-## 1. Division of labour
-
-| Task | Who | Cost |
+| Step | What can be checked mechanically | What still needs semantic review |
 |---|---|---|
-| Term dedup, homonym detection | engine (`resolve_fuzzy`, lemma index) | 0 tokens |
-| Relation validation (signatures, cycles, symmetry) | engine (`propose/validate`) | 0 tokens |
-| Canonical definitions | engine (`define()` — genus + differentia) | 0 tokens |
-| Transitive closure, inheritance | engine (`rebuild()`, `concept_path`) | 0 tokens |
-| Verification of existing facts | engine (`verify()`) | 0 tokens |
-| New concepts, terms, synonyms | LLM | tokens |
-| New relations between concepts | LLM | tokens |
-| Repair of rejected items | LLM (one batched pass) | tokens |
+| Term lookup | Exact, normalized, and morphological matches | Whether the matches have the same meaning |
+| Genus selection | Missing endpoints, cycles, redundant ancestors | The nearest appropriate genus and discourse |
+| Relation validation | Signature, duplicate, and direction constraints encoded in `relevant` | Whether the statement is true and uses the right relation |
+| Definitions | Generate a summary from accepted edges | Whether the underlying edges are sufficient and correct |
+| Verification | Find stored paths or links with `verify()` | Confirm the claim independently of the graph |
+| Inheritance | Traverse accepted genus edges | Scope, exceptions, and whether a property applies to descendants |
 
-Never ask the LLM to: write definitions, check what is already in the base,
-reformat output — all of that is local code.
+`resolve_fuzzy()` proposes matches; it does not decide identity. `verify()`
+does not fact-check a claim against external evidence. Stronger models can
+help draft candidates, but model choice is not an acceptance criterion.
 
-## 2. The loop
+## Recommended review loop
 
-```
-frontier = priority_queue(seed_roots(universe))   # ordered by expected yield
-known    = all_terms(universe)                     # local lemma index
+1. **Inventory an anchor and its surroundings.** Read its genera, children,
+   incoming and outgoing links, terms, and explicit negations. Keep the
+   original review cohort when comparing before and after.
+2. **Generate candidate corrections or additions.** Start from known gaps,
+   not a target number of concepts. Prefer existing meanings where they fit.
+3. **Resolve meaning before identity.** Check homonyms and discourse-specific
+   classifications. Verify doubtful words and senses in dictionaries; a
+   plausible suffix or shared stem is insufficient.
+4. **Review each assertion.** Check its nearest genus, relation code,
+   direction, scope, and source. Leave strength unspecified without evidence
+   for a degree. A structural pass does not replace this step.
+5. **Prepare an explicit batch.** Record IDs, old values, reasons, term
+   changes, and postconditions. Merges require full archives and explicit
+   treatment of incoming links, children, context, and negations.
+6. **Preview with rollback.** Validate all new relations, rebuild paths and
+   definitions inside the transaction, then check semantics and preservation.
+7. **Apply and verify.** Create a complete backup, save the same reviewed
+   batch, verify through a new connection, check repeatability, and export
+   the snapshot. Record results in the review report and changelog.
 
-while frontier and budget_left:
-    anchor = frontier.pop()
-    ctx    = children_terms(anchor)                # compact "already known" list
+Batch related concepts where context can be shared. Batch size, acceptance
+rate, and token cost are measurements to collect; the repository does not
+establish a universal token-saving percentage or a fixed optimal batch size.
 
-    # ---- call 1: EXPAND (breadth) --------------------------------------
-    resp  = llm(expand_prompt(anchor, known_children=ctx, n=30))
-    items = parse_lines(resp)                      # line format, see §3
-    new, dup = partition(items, known, by=resolve_fuzzy)
-    for c in new: engine.add_concept(c, parent=anchor, auto=True)
+## Choosing the next area
 
-    # ---- call 2: RELATE (depth) — only if enough new material ----------
-    if len(new) >= 8:
-        pool  = new + ctx                          # concept terms only
-        edges = parse_lines(llm(relate_prompt(pool, kod_menu)))
-        for e in edges: engine.propose(e, auto=True)
+Use the read-only auditors and the [roadmap](PLAN.md). Sparse hubs, weak leaf
+definitions, missing translations, and suspicious genus assignments are
+review candidates. A low count of properties does not by itself justify a
+new assertion, and a high count does not show completeness.
 
-    # ---- bookkeeping ----------------------------------------------------
-    rejected -> repair_queue                       # with validation messages
-    frontier.push(children_of(anchor), priority=expected_yield)
-    known.update(new)
-    if yield(anchor) < MIN_YIELD: prune_subtree(anchor)
+`processed` is a historical fill level: 0 none, 1 taxonomy, 2 specific
+properties, 3 parallel relations. It is neither an acceptance certificate
+nor a lock against later review. `unprocessed(universum_id, below=...)`
+filters this flag. `define()` returns leaves with genera but no listed
+specific relations or species, and also writes the definition cache;
+use an auditor for read-only inventory.
 
-# ---- final: one batched repair pass --------------------------------------
-if repair_queue:
-    resp = llm(repair_prompt(repair_queue))        # errors fed back verbatim
-    for e in parse_lines(resp): engine.propose(e, auto=True)
+## Relation choices
 
-engine.rebuild(); engine.define()                  # free, deterministic
-```
+Read the current `relevant` rows and [ontology rules](docs/ontology-rules.md).
+The following distinctions prevent common filling errors:
 
-### Frontier selection (where the savings come from)
+| Code | Meaning | Direction / qualification |
+|---|---|---|
+| 14 | Genus | Species to nearest genus; keep the edge's universe |
+| 15 | Essential attribute | Differentia, with an appropriate property object |
+| 20 | Attribute or component | Whole/bearer to property or component |
+| 21 | Purpose | Object to the activity it is for |
+| 22 | Capability / bearer | Bearer to action or process |
+| 23 | Material | Product/object to material |
+| 24 | Intended content | Container/object to content |
+| 25 | Application | Tool/object to what it acts upon |
+| 26 | Intended user | Object to its user |
+| 27 | Object of an action | Action/process to target object, property, or phenomenon |
+| 30 / 40 / 60 | Equal scope / overlap / incompatibility | Check the rule's declared properties |
+| 61 / 62 | Co-hyponyms / converse roles | Different relations; neither means causal cooperation |
+| 63 / 64 | Contrary / contradictory | An intermediate value may exist only for contraries |
+| 70 / 71 | Produces / hinders | Cause/preventer to effect; not a generic output-value link |
+| 72 / 73 / 74 | Precedes / simultaneous / depends on | Preserve the intended relation and direction |
 
-Expansion anchors are chosen by the engine from local statistics, not by
-asking the LLM "what is missing":
+Only genus closure is materialized in `concept_path`. Do not assume other
+codes are transitively inferred. `strength=0` is explicit negation, not a
+low-confidence proposal. Adjectives, infinitives, and nouns are word forms;
+their grammatical category does not determine whether a separate node is needed.
 
-1. **`processed` levels** (`eng.unprocessed(universum, below=1)`):
-   0 none; 1 genus and species; 2 essential/specific properties (kod 15, 20–27);
-   3 parallel relations (61–64, 70–74, 30/40). The flag does not close the
-   concept — later levels and extra edges stay possible;
-2. genus nodes with **few children** (thin branches of the tree);
-3. concepts with a **weak defin** (no non-isa relations) — `define()`
-   already returns them;
-4. universe roots, then BFS downwards — general before specific.
+## Legacy LLM filler
 
-After a successful EXPAND pass, `eng.set_processed(cid, 1)`; after
-differentia, level 2; after parallel relations, level 3. Old
-`set_processed(cid)` still means level 1.
+[`fill_llm.py`](fill_llm.py) is a prototype rather than the reviewed-batch
+pipeline above. Inspect prompts without a model call or database writes:
 
-A subtree is pruned when the last call's yield (new concepts / returned
-items) drops below `MIN_YIELD ≈ 0.3` — the model is repeating what we
-already have, so deeper expansion there is a token sink.
-
-## 3. Wire format (token-lean)
-
-No pretty JSON. One line per item, tab-separated, kods numeric:
-
-```
-# EXPAND response:  en_term <TAB> ru_term <TAB> parent_en [ <TAB> note ]
-contract	law of obligations	legal act
-# RELATE response:  subject_en <TAB> kod <TAB> object_en [ <TAB> strength ]
-crime	70	criminal liability	95
-plaintiff	62	defendant
-```
-
-Savings vs JSON: ~35–45% fewer output tokens (no keys, braces, quoting).
-Parse errors are cheaper than the JSON overhead at this scale.
-
-## 4. Prompt design
-
-Three prompt types, all with an **invariant system prefix** (relation grammar,
-kod menu, format rules, universe description) — this prefix is identical
-across calls, so prompt caching (OpenAI/Anthropic automatic, llama.cpp
-`cache_prompt`) makes its marginal cost near zero. Only the payload varies.
-
-**EXPAND** (breadth-first skeleton):
-```
-System: [cached grammar + format rules]
-Payload: "List up to 30 direct species of '<anchor>' in the <universe>
-universe. Already known — do NOT repeat: <children terms, comma-separated>.
-Format: en<TAB>ru<TAB>parent_en"
+```bash
+python fill_llm.py --universe 1 --max-anchors 3 --dry-run
 ```
 
-**RELATE** (non-isa edges among a pool):
-```
-Payload: "Concepts: <pool, comma-separated terms>.
-List typed relations among them using only kods: 15 essential attribute,
-20 attribute (degree goes into strength 0-100: 95 always, 70 usually,
-30 sometimes, 5 rarely), 21 purpose, 22 agent, 23 material, 24 content,
-25 application, 26 user, 27 patient, 40 overlap (degree in strength),
-61 coordinate, 62 converses,
-63 contrary, 70 produces, 71 hinders, 72 precedes, 74 depends on.
-Format: subject<TAB>kod<TAB>object[<TAB>strength]"
-```
+This still needs a readable database connection. If no anchors have a
+`processed` value below 1, there may be no prompts to print.
 
-**REPAIR** (batched, once at the end):
-```
-Payload: "These relations were rejected. Fix or drop each.
-<item> — <validation error verbatim from engine.validate()>"
-```
+For experiments on a separate database, `--candidate` makes newly inserted
+genus links and other relation edges candidates. It **still creates concepts
+and terms, updates progress, and commits**; it is not a rollback mode.
+Without `--candidate`, the prototype can accept generated data immediately.
+The documented flags do not provide a semantic review or a complete backup.
 
-## 5. Rules that keep tokens down
+The prototype does not implement every step described here. Its fuzzy
+deduplication can conflate homonyms; it commits incrementally and uses
+historical prompts. It should not be replayed over the reviewed snapshot as
+routine maintenance. The separate batch runner provides explicit archives,
+preconditions, rollback preview, and preservation checks.
 
-0. **Attach at genus, not species.** Before writing an attribute edge
-   (20–27), check whether the genus already carries the same property
-   (same code AND same object). A species edge is justified only when
-   (a) its object is more specific than the genus's object (specialization
-   — keep), or (b) its strength deviates noticeably (≈25+ points) from the
-   genus value (override — keep). Exact duplicates are pruned; see
-   README → Design notes.
-   **Negation: strength = 0** marks an explicit exception to genus
-   inheritance or an essential negative property (пингвин—полёт 0,
-   змея—лапа 0). Do not use 61/63 for "this species lacks the trait".
+## Completion evidence
 
-1. **Dedupe before the call.** The "already known" children list prevents
-   the model from re-generating existing concepts — the single biggest
-   waste source. Without it, 30–60% of expansion output is duplicates.
-2. **Never send the full base.** Context per call = one anchor + its
-   children + (for RELATE) one pool of ≤ 40 terms.
-3. **Batch, but not infinitely.** Sweet spot is 25–40 items per call:
-   below that, prompt overhead dominates; above that, model quality and
-   yield degrade and repair costs grow.
-4. **Group sibling leaves.** Unprocessed leaf concepts sharing one parent
-   are covered by a single RELATE call over the sibling pool — one call
-   per parent instead of one per leaf.
-5. **RELATE only when there is material.** Skip the call if fewer than
-   ~8 new concepts appeared.
-6. **One repair pass, batched.** Feeding `validate()` messages back fixes
-   most rejections; doing it per-item would multiply calls.
-7. **Model strength matters.** Filling with a weak local model yields
-   mostly noise edges — run it with `--candidate` so everything lands in
-   the review queue; auto-approve (`auto=True`) is for strong models only.
-6. **Definitions are never generated by the LLM.** `define()` builds them
-   canonically from the graph — genus + specific relations + species.
-7. **Status discipline.** Auto-filled edges carry `source="llm:fill"`;
-   anything the repair pass could not fix stays `candidate` for human or
-   later strong-model review — do not burn tokens on it now.
-8. **Source texts in one pass.** When filling from a dictionary article,
-   extract everything in a single call: genus, both-language terms,
-   synonyms, all relations. No per-aspect re-reads.
-
-## 6. Token budget estimate
-
-Assumptions: batch 30, line format, cached system prefix (~600 tokens,
-counted once per session at providers with prompt caching; ~10% surcharge
-at llama.cpp with `cache_prompt`).
-
-Per call (EXPAND):
-- in: payload ≈ 150–250 tok (anchor + ≤ 40 known children)
-- out: 30 lines × ~12 tok ≈ 400 tok
-
-Per universe of ~150 concepts (legal universe measured):
-- EXPAND: ~6 calls ≈ 1.5k in + 2.4k out
-- RELATE: ~4 calls ≈ 2k in + 2k out
-- REPAIR: 1 call ≈ 1k in + 0.5k out
-- **Total ≈ 9–10k tokens ≈ 60–70 tokens per stored concept**
-
-For comparison: naive one-concept-per-call filling costs
-~500–800 tokens per concept (definition + relations + repeats), and
-produces worse definitions than the free `define()`.
-
-## 7. Quality gates (engine-side, free)
-
-- `propose()` rejects signature violations, duplicates, hierarchy cycles;
-- after `rebuild()`: zero multi-parent, zero isa cycles (checked in the
-  stage-9 revision);
-- `define()` returns weak concepts → they become the next frontier;
-- acceptance rate per call is logged; if it falls below ~70%, the prompt
-  or batch size is adjusted before more tokens are spent.
-
-## 8. What is deliberately NOT done
-
-- No LLM-written definitions (engine does it deterministically).
-- No LLM self-verification passes (engine `verify()` is exact and free).
-- No chatty multi-turn dialogue — every call is one-shot stateless.
-- No re-asking "what do you know about X" — the base itself is the
-  record of what is known.
+- No new cycles, self-loops, missing endpoints, or signature violations.
+- Correct and forbidden ancestry/relations checked for the changed meanings.
+- Terms checked after a full reload, including language and database collation.
+- Original explicit negations and required discourse contexts preserved.
+- Backup, applied batch, before/after reports, and export checksum recorded.
+- Remaining uncertainty recorded as follow-up work rather than filled with
+  invented names, degrees, or relations.

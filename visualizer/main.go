@@ -174,11 +174,12 @@ type Term struct {
 }
 
 type Rel struct {
-	Kod      string  `json:"kod"`
-	Name     string  `json:"name"`
-	Dir      string  `json:"dir"` // "out" (это субъект) / "in" (это объект)
-	Other    Concept `json:"other"`
-	Strength *int    `json:"strength,omitempty"`
+	Symmetric bool    `json:"symmetric"`
+	Kod       string  `json:"kod"`
+	Name      string  `json:"name"`
+	Dir       string  `json:"dir"` // "out" (это субъект) / "in" (это объект)
+	Other     Concept `json:"other"`
+	Strength  *int    `json:"strength,omitempty"`
 }
 
 type ConceptInfo struct {
@@ -374,11 +375,16 @@ func main() {
 		http.ServeFile(w, r, "static/index.html")
 	})
 	http.HandleFunc("/api/search", handleSearch)
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	http.HandleFunc("/api/concept", handleConcept)
 	http.HandleFunc("/api/tree", handleTree)
+	http.HandleFunc("/api/euler", handleEuler)
 
-	addr := ":7100"
-	log.Printf("Conceptuum visualizer: http://localhost%s/", addr)
+	addr := os.Getenv("LISTEN")
+	if addr == "" {
+		addr = "127.0.0.1:7100"
+	}
+	log.Printf("Conceptuum visualizer: http://%s/", addr)
 	log.Fatal(http.ListenAndServe(addr, nil))
 }
 
@@ -520,6 +526,7 @@ func getConceptInfo(id int, lc *langCtx) (*ConceptInfo, error) {
 		var u1, u2 int
 		rows.Scan(&r.Kod, &dh1, &dh2, &s, &n1, &u1, &n2, &u2)
 		r.Name = lc.rel(r.Kod)
+		r.Symmetric = relSym[r.Kod]
 		if s.Valid {
 			v := int(s.Int64)
 			r.Strength = &v

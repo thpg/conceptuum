@@ -174,9 +174,10 @@ def main():
         sibs = [eng.disp[c] for c in eng.children(pid)] if pid else []
         pool = (([eng.disp[pid]] if pid else []) + sibs)[:40]
         if not pool:
-            for c in leaves:
-                eng.set_processed(c)
-            eng.commit()
+            if not args.dry_run:
+                for c in leaves:
+                    eng.set_processed(c)
+                eng.commit()
             continue
         print(f"\n### RELATE-group {eng.disp.get(pid, '?')}: "
               f"{len(leaves)} leaves, pool {len(pool)}")
@@ -184,9 +185,10 @@ def main():
             print(relate_prompt(pool))
         else:
             relate(pool, hint=", ".join(names))
-        for c in leaves:
-            eng.set_processed(c)
-        eng.commit()
+        if not args.dry_run:
+            for c in leaves:
+                eng.set_processed(c)
+            eng.commit()
 
     # ---- expanders: EXPAND (+ RELATE if enough new) ----------------------
     for cid in expanders:
@@ -214,7 +216,7 @@ def main():
                 terms.append((secondary, "ru"))
             cid2, msg = eng.add_concept(nama, anchor, lang=langs[0],
                                         universum_id=args.universe,
-                                        terms=terms)
+                                        terms=terms, auto=not args.candidate)
             if cid2 and "already" not in msg:
                 new_terms.append(primary)
                 total_new += 1

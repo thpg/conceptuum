@@ -29,6 +29,69 @@ from collections import defaultdict
 
 from jnana_engine import JnanaEngine
 
+# How the model must read FACTS (typed concept graph, not Wikipedia).
+HOW_TO_USE_KNOWLEDGE = """You answer from a concept graph. The FACTS block is the only knowledge you may use. Do not use school biology, chemistry, law codes, geography, evolution, or everyday encyclopedias.
+
+Each FACTS line is one concept:
+  [discourse] name — nearest genus; relation: object (degree%)
+
+Read the labels:
+- After the dash is the nearest genus (is-a). `Species:` are children, not the definition.
+- `capable of` / `not capable of` — ability. `not capable of` and `no:` are explicit negation.
+- `inherent` / `typical` / `sometimes` — how usual the attribute is. `(N%)` is typicality, not a hint to ignore the line.
+- A high % on the genus is overridden by negation or a different degree on the species (bird capable of flight 95%; penguin not capable of flight).
+- `produces` / `produced by` — cause, NOT identity (grapes produce wine ≠ grapes are wine).
+- `hinders` — prevents; the opposite of produces.
+- `purpose` — what it is for, not what it is (a bed's purpose is sleep ≠ a bed is sleep).
+- `opposite` — contrary properties; they do not hold of the same thing in the same respect.
+- `mutual with` — converse roles in one relation (buyer / seller), two sides, not one thing.
+- `coordinate with` — sibling under the same genus (penguin coordinate with ostrich = both birds). NEVER read it as "acts in coordination with".
+- `bearer` / `object of` / `directed at` — who undergoes the process / what it acts on.
+- `[бытовой]` `[IT]` `[юридический]` `[логика]` — discourses. Prefer the discourse that matches the question; do not mix a rodent "мышь" into a computer question if both appear.
+
+How to infer:
+1. Inherit genus → species unless the species line negates or changes the degree.
+2. If A is-a B and B produces C, A produces C, unless blocked on A.
+3. A shared property (both swim) does not make two concepts the same kind.
+4. RELATED FACTS are one hop away: usable, weaker than FACTS.
+5. If the needed link is not in FACTS/RELATED, say the facts are not enough. Do not fill the gap.
+6. First sentence: the answer. Then cite 1–3 relations. No lecture.
+
+If asked to write connected prose, still use only these relations; shorter is better than invention."""
+
+
+def grounded_user(question, facts, related="", closing="ANSWER:"):
+    """User message: FACTS + optional RELATED + question."""
+    parts = ["FACTS:\n" + (facts or "(none)")]
+    if related:
+        parts.append("RELATED FACTS (one step away in the graph):\n" + related)
+    parts.append("QUESTION: " + question)
+    parts.append(closing)
+    return "\n\n".join(parts)
+
+
+def llm_chat(endpoint, model, messages, max_tokens=512, temperature=0.2):
+    """OpenAI-compatible chat; no proxy; Qwen3.5 thinking off."""
+    opener = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+    body = json.dumps({
+        "model": model,
+        "messages": messages,
+        "temperature": temperature,
+        "max_tokens": max_tokens,
+        "chat_template_kwargs": {"enable_thinking": False},
+    }).encode("utf-8")
+    req = urllib.request.Request(
+        endpoint.rstrip("/") + "/chat/completions",
+        data=body,
+        headers={"Content-Type": "application/json"},
+    )
+    with opener.open(req, timeout=180) as r:
+        msg = json.loads(r.read().decode("utf-8"))["choices"][0]["message"]
+    text = (msg.get("content") or "").strip()
+    if not text:
+        text = (msg.get("reasoning_content") or "").strip()
+    return text
+
 STOP = {"the", "a", "an", "is", "are", "of", "to", "in", "on", "and", "or",
         "why", "how", "what", "does", "do", "did", "it", "its", "into",
         "что", "как", "почему", "это", "и", "или", "в", "на", "с", "не",
@@ -136,25 +199,11 @@ def related_block(eng, cids, limit=10):
 
 
 def ask_llm(endpoint, model, question, facts, related=""):
-    prompt = (
-        "Answer using ONLY the verified facts below when they are relevant; "
-        "say what follows from them, and say plainly if they are not enough.\n\n"
-        f"FACTS:\n{facts}\n"
-    )
-    if related:
-        prompt += f"\nRELATED FACTS (one step away in the graph):\n{related}\n"
-    prompt += f"\nQUESTION: {question}\nANSWER:"
-    body = json.dumps({
-        "model": model,
-        "messages": [{"role": "user", "content": prompt}],
-        "temperature": 0.2,
-        "max_tokens": 512,
-    }).encode("utf-8")
-    req = urllib.request.Request(endpoint.rstrip("/") + "/chat/completions",
-                                 data=body,
-                                 headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=120) as r:
-        return json.loads(r.read().decode("utf-8"))["choices"][0]["message"]["content"]
+    messages = [
+        {"role": "system", "content": HOW_TO_USE_KNOWLEDGE},
+        {"role": "user", "content": grounded_user(question, facts, related)},
+    ]
+    return llm_chat(endpoint, model, messages)
 
 
 def main():

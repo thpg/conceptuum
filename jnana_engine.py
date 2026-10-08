@@ -21,10 +21,36 @@ pref_lang selects the display language for definitions (terms of that language
 from concept_term replace the concept label when available).
 """
 
+import os
 import pymysql
 from collections import defaultdict
 
 DB = dict(host="127.0.0.1", user="root", password="123", database="jnana3", charset="utf8")
+def database_config(defaults, environ=None):
+    """Environment overrides for CLI tools; explicit constructor kwargs win.
+
+    Preserve existing local defaults for scripts that predate configuration.
+    JNANA_DSN belongs to the Go visualizer and is not a Python connection URL.
+    """
+    env = os.environ if environ is None else environ
+    cfg = dict(defaults)
+    for key, variable in (("host", "JNANA_HOST"), ("port", "JNANA_PORT"),
+                          ("user", "JNANA_USER"), ("password", "JNANA_PASSWORD"),
+                          ("database", "JNANA_DATABASE")):
+        if variable in env:
+            value = env[variable]
+            if key == "port":
+                try:
+                    value = int(value)
+                except ValueError:
+                    raise ValueError("JNANA_PORT must be an integer from 1 to 65535") from None
+                if not 1 <= value <= 65535:
+                    raise ValueError("JNANA_PORT must be an integer from 1 to 65535")
+            cfg[key] = value
+    return cfg
+
+
+DB = database_config(DB)
 KOD_ISA = "14"
 SYMMETRIC_DEFAULT = {"61", "62", "63", "64", "73"}
 
@@ -179,6 +205,8 @@ class JnanaEngine:
         for a, b, u in self.cur.fetchall():
             self.parents[a].append((b, u))
             self.children_map[b].append(a)
+        self.children_map = defaultdict(list, {
+            b: list(dict.fromkeys(kids)) for b, kids in self.children_map.items()})
         for a, pairs in self.parents.items():
             home = self.concept_u.get(a)
             pick = next((p for p, u in pairs if u == home), pairs[0][0])
@@ -417,8 +445,12 @@ class JnanaEngine:
         if existing_u and kod != KOD_ISA:
             return False, "duplicate"
         if kod == KOD_ISA:
-            if self.in_subtree(a, b) or self.in_subtree(b, a):
+            if self.in_subtree(b, a):
                 return False, "cycle in hierarchy"
+            # The same direct genus may be asserted in another discourse.
+            # Only an indirect ancestor would introduce a redundant shortcut.
+            if self.in_subtree(a, b) and not existing_u:
+                return False, "redundant ancestor in hierarchy"
         if rule["ss"] is not None:
             ok_subj = any(rule.get(k) and self.in_subtree(a, rule[k])
                           for k in ("ss", "ss2", "ss3", "ss4"))
@@ -668,12 +700,12 @@ class JnanaEngine:
     def define(self):
         """Regenerate the definition cache concept.defin. Returns weak concepts."""
         out_e, in_e = defaultdict(list), defaultdict(list)
-        children = defaultdict(list)
+        children = defaultdict(set)
         for a, b, k, s, st, i in self.edges:
             if st != "ok":
                 continue
             if k == KOD_ISA:
-                children[b].append(a)
+                children[b].add(a)
             else:
                 out_e[a].append((k, b, s))
                 in_e[b].append((k, a, s))

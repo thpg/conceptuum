@@ -1,141 +1,58 @@
-# План заполнения бытового универсума (universum_id=1)
+# Roadmap
 
-Стратегия: **сверху вниз, от общего к частному**. Сначала достраиваем верхние
-уровни таксономии (чтобы ни у одного нового понятия не было проблемы «куда
-вешать»), затем двигаемся по поддеревьям вширь. Каждый этап завершается
-фиксацией в `STATE.md` — работу можно прервать и продолжить с любого этапа.
+Current baseline: [code 0.1.0-dev](VERSION), [data Q7](docs/quality/2026-10-08-q7.md).
+This is the active work plan. Earlier expansion totals and relation-code
+instructions remain available in Git history; they do not describe the
+current graph or a sequence of scripts to rerun.
 
-Свойства (kod 15/20–27): вешать на высший род, вид — только отличие.
-План и прогон: [docs/fill-properties.md](docs/fill-properties.md),
-`python tools/fill_props1.py`. Без локальной модели.
+## Content priorities
 
-## Принципы и правила
+| Area | Review needed |
+|---|---|
+| Upper genera | Misplaced children of natural object (34), physical/mental properties, and time |
+| Physiological processes (202) | Suspect generated word forms, incorrect genera, and roles |
+| Biological classification | Protozoa and animal groups with overly broad or questionable parents |
+| Mathematics | Mathematical integers versus integer data types (1198), the meaning of Map (903), and distinguishing properties of operations |
+| Relative properties | Explicit reference objects and contexts beyond a generic parent |
+| Family roles | Correctly scoped facts to replace the reversed causal claims removed in Q7 |
+| English terminology | Missing translations, Cyrillic terms tagged as English, and ambiguous translations |
 
-1. **Один смысл — один узел.** Два рода (kod 14) разрешены, когда
-   расходятся дискурсы (научный / бытовой); универсум на ребре.
-   Омонимы — разные узлы. Два родителя в *одном* смысле по-прежнему
-   ошибка (избыточный родитель выводится транзитивно).
-2. **Сигнатуры `relevant` не нарушаем** — движок валидирует; если связь
-   легитимна, но не проходит, расширяем грамматику (как с sig_object3),
-   а не обходим валидатор.
-3. Каждое новое понятие: `add_concept(nama, parent, terms=[(en,'en')])` —
-   сразу с английским термином.
-4. После каждого этапа: `rebuild()` → `define()` → `stats()` → запись в STATE.md.
-5. Сила связи (strength) — только там, где есть интуитивная частотность
-   (например «собака capable of barking 95%»).
-6. Приоритет полноты: сначала все виды уровня (isa-скелет), потом
-   не-isa связи (части, функции, материалы, причины).
+Review specific meanings before generating new nodes. Dictionary evidence
+is needed for doubtful word forms. A high-level genus or a translated label
+alone is not a complete definition.
 
-## Текущий остов (уже есть, 263 понятия)
+## Engine and retrieval work
 
-```
-сущее(16)
-├── предмет(17) ── вещество(21→твёрдое/жидкость/газ), организм(растение/
-│    животное/человек), артефакт(инструмент/одежда/сооружение/транспорт/
-│    посуда/мебель/документ), природный объект(водоём/рельеф/небесное тело)
-├── свойство(18) ── сенсорное(цвет/вкус/запах/звук/тактильное),
-│    физическое(размер/вес/форма/температура), ментальное, оценочное
-├── действие(19) ── физический процесс, физиологический, ментальный,
-│    социальное действие
-└── отношение(20) ── пространственное, временное, причинное,
-     структурное(часть-целое), социальное
-```
+- Improve sense selection for long queries without discarding valid homonyms.
+- Separate the language of stored definition caches from display preferences.
+- Add checked distinctions for operation inputs/results without misusing causality.
+- Keep the root engine and the compatibility copy in `tools/` consistent until
+  imports are consolidated.
+- Extend verification beyond the current Python/MariaDB/Go test environment.
+- Replace remaining direct-write historical workflows with reviewed changes.
 
-## Этапы
+## Review rules
 
-### Этап 0 — Аудит остова ✓ при старте каждой сессии
-- [x] Проверить: все ли дети якорей 17–20 имеют детей; найти «висячие»
-      понятия без видов и без связей (список weak из `define()`).
-- [x] Выверить верхние 3 уровня: нет ли пропусков (напр. «явление»,
-      «событие», «состояние» как сестринские к «действию»?).
+Use the [property workflow](docs/fill-properties.md) and
+[ontology rules](docs/ontology-rules.md). Preserve the nearest genus, justified
+multiple classifications, discourse context, and explicit negations.
+Signatures check structure; semantic review establishes whether a proposed
+claim belongs in the graph. Do not assign invented percentages or broaden
+a rule only to make an edge pass.
 
-### Этап 1 — Вещества и материалы ✓ (+88, 2026-08-28)
-- [ ] Твёрдые: пластик, резина, керамика, бумага, кожа(материал), мех,
-      уголь, известняк, гранит, глина, воск, лёд✓, снег, резина…
-- [ ] Жидкости: бензин, керосин, спирт, уксус, сок, сливки…
-- [ ] Газы: пар, дым, метан, углекислый газ…
-- [ ] Пищевые вещества: сахар, соль, крупа, тесто, каши…
-- [ ] Связи: материал(81) к артефактам («стол ← дерево/древесина»),
-      причинные («замерзание → лёд» уже есть — образец).
+Current role codes include **20** for attributes/components, **21** for
+purpose, **22** for capability/bearer, **23** for material, and **27** for
+the target of an action. Earlier references to purpose 80, material 81,
+agent 82, patient 83, or part-whole 21 are obsolete.
 
-### Этап 2 — Организмы ✓ (+182, 2026-08-28)
-- [ ] Животные: пресмыкающееся, земноводное, грызун, хищник, парнокопытное;
-      виды: волк, лиса, медведь, заяц, свинья, овца, коза, курица, гусь,
-      голубь, ворона, сова, лосось, карп, лягушка, змея, ящерица, черепаха,
-      паук, муха, комар, жук, червь, гусеница, улитка…
-- [ ] Растения: овощ, фрукт, ягода, злак; виды: картофель, капуста, морковь,
-      лук, яблоко, груша, вишня, клубника, пшеница, рожь, овёс, огурец…
-- [ ] Человек: мужчина, женщина, ребёнок, старик; роли: врач, учитель,
-      строитель, продавец…
-- [ ] Части тела (часть-целое kod 21): голова, рука, нога, глаз, сердце…
-      (сюда же кожа✓, кровь✓ — проверить подвеску)
+## Completion criteria for a review
 
-### Этап 3 — Артефакты ✓ (+129, 2026-08-28)
-- [ ] Мебель: диван, кресло, полка, табурет, зеркало…
-- [ ] Инструменты: топор, лопата, отвёртка, гвоздь, винт, клещи, линейка…
-- [ ] Одежда: шапка, шарф, перчатки, юбка, платье, костюм, носки…
-- [ ] Посуда/кухня: вилка, ложка, сковорода, чайник, бутылка, банка…
-- [ ] Сооружения: гараж, сарай, забор, стена, крыша, лестница, лифт…
-- [ ] Транспорт: мотоцикл, автобус, трамвай, метро, лодка, вертолёт…
-- [ ] Электроника/бытовая техника: телефон, телевизор, холодильник,
-      стиральная машина, лампа, компьютер…
-- [ ] Письменные принадлежности: ручка, карандаш, бумага, книга, тетрадь…
-- [ ] Для каждого артефакта: функция(80), типичный материал(81),
-      неотъемлемые части(21) где очевидны («колесо» для машины уже есть).
+Record reviewed IDs and evidence; preview with rollback; preserve prior
+conditions and negations; apply with a backup; verify through a new
+connection; rebuild and export; update the review report, maintainer state,
+and [changelog](CHANGELOG.md). Structural counts and `processed` values are
+progress indicators rather than proof of semantic completeness.
 
-### Этап 4 — Природные объекты и явления ✓ (+74, 2026-08-28)
-- [ ] Водоёмы: ручей, пруд, болото, водопад…
-- [ ] Рельеф: скала, пещера, берег, остров, поле, лес, пустыня…
-- [ ] Небесные/атмосферные: облако, туман, дождь, снег, гроза, молния,
-      ветер, радуга…
-- [ ] Времена и циклы: день, ночь, утро, вечер, сезон, зима, лето…
-- [ ] Причинные цепочки: «гроза → молния», «облако → дождь», «дождь → лужа».
-
-### Этап 5 — Свойства: шкалы закрыты ✓ (+80, 2026-08-28)
-- [ ] Цвета: оранжевый, фиолетовый, розовый, серый, коричневый, бежевый…
-- [ ] Вкусы/запахи: пряный, пресный, горьковатый; затхлый, свежий…
-- [ ] Тактильные: колючий, скользкий, липкий, пушистый, острый, тупой…
-- [ ] Размер/вес/форма: огромный, крошечный, узкий, широкий, прямой,
-      кривой, глубокий, мелкий…
-- [ ] Ментальные/оценочные: щедрый, жадный, ленивый, трудолюбивый,
-      терпеливый, внимательный, опасный, безопасный, приятный…
-- [ ] Противоположности (63) для всех пар шкал: горячий/холодный✓,
-      большой/маленький, добрый/злой… — обязательный проход по всем
-      свойствам: у каждого шкального свойства есть антоним.
-
-### Этап 6 — Действия и процессы ✓ (+84, 2026-08-28)
-- [ ] Бытовые действия: мытьё, уборка, глажка, ремонт, покраска, стирка…
-- [ ] Кухня: варка, жарка, резка✓, замешивание, мытьё посуды…
-- [ ] Движение: поворот, прыжок, подъём, спуск, перенос, бросание…
-- [ ] Восприятие: осязание, обоняние, вкушение…
-- [ ] Эмоции-виды: восторг, тоска, тревога, обида, удивление…
-- [ ] Социальные: приветствие, просьба, приказ, обещание, встреча,
-      помощь, конфликт, примирение…
-- [ ] Каusalные/временные связи между процессами (70/72/73).
-
-### Этап 7 — Отношения, часть-целое ✓ (+45, 2026-08-28)
-- [ ] Пространственные: слева/справа/над/под/внутри/снаружи…
-- [ ] Социальные: дружба✓/вражда, начальник/подчинённый, гость/хозяин…
-- [ ] Часть-целое для ключевых артефактов: дом(стена, крыша, окно✓, дверь),
-      автомобиль(колесо✓, двигатель✓, руль, дверь), компьютер, человек…
-
-### Этап 8 — Связывание ✓ (+80 рёбер, 2026-08-28)
-- [ ] Функции (80): каждый инструмент/артефакт → действие.
-- [ ] Агент/пациенс (82/83) для всех действий: «резание направлено на…».
-- [ ] Свойства (21/23) к предметам: «снег — белый, холодный»…
-- [ ] Причины (70): процессы → их типичные результаты.
-
-### Этап 9 — Финальная ревизия ✓ (2026-08-28)
-- [ ] `define()`: разбор списка weak (без связей и видов) — либо дозаполнить,
-      либо отметить терминальными.
-- [ ] Проверка циклов, мульти-родителей, сирот.
-- [ ] Выборочная верификация LLM'ом: 50 случайных verify().
-- [ ] Экспорт дампа, локальный коммит.
-
-## Целевые метрики
-
-| | сейчас | цель |
-|---|---|---|
-| Понятия (бытовой) | 263 | ~700 |
-| Не-isa связи (бытовой) | ~50 | ~600 |
-| Понятия без связей (weak) | ~180 | < 50 |
+For public releases, keep the code version in [VERSION](VERSION), document
+the data revision separately, and publish a tested commit with all referenced
+dependencies, snapshot files, and reports.

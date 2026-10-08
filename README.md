@@ -1,6 +1,10 @@
 # conceptuum
 
-**A graph of logical relations between concepts** — not a word list, not a document dump, not “a database with terms in it.”
+A concept graph with typed relations, multilingual terms, and definitions generated from the graph.
+
+conceptuum represents meanings as nodes and connects them through relations such as genus, purpose, material, opposition, and cause. It combines a MariaDB snapshot, a Python engine for querying and reviewing the graph, and a Go web visualizer. An optional retrieval demo supplies graph context to a local language model.
+
+**Development version:** [0.1.0-dev](VERSION) · **Data snapshot:** [Q7, 2026-10-08](docs/quality/2026-10-08-q7.md) · **[Changelog](CHANGELOG.md)** · **[Live demo](https://conceptuum.su)**
 
 ## Euler diagrams from the concept graph
 
@@ -25,183 +29,223 @@ Try the seven live demos: [cross-classification](https://conceptuum.su/?demo=jud
 Catalog mode compares sets of stored concept records, with exact region counts
 and inspectable member samples. Share a selection by URL or export the diagram as SVG.
 
-## The graph behind the diagrams
+**Topics:** `knowledge-graph` · `ontology` · `euler-diagrams` · `set-visualization`
 
-MariaDB holds the bytes. What you *work with* is a **directed labeled graph**:
+## What you can do
 
-- a **node** is a *meaning* (synonyms share a node; *bank* the institution and *bank* the river are two);
-- an **edge** is a *typed logical link* — genus, essential attribute, cause, contrary, purpose — with a grammar that rejects category mistakes.
+- Search English and Russian terms and inspect different meanings of a word.
+- Explore separate hierarchy and relation views with zoom, filters, full ancestry,
+  shareable links, and SVG export. The graph adapts to desktop and mobile screens.
+- Compare concepts with [Euler diagrams](#euler-diagrams-from-the-concept-graph),
+  using stored relations or catalog membership. Unknown semantic relationships
+  remain explicitly marked.
+- Retrieve stored facts from Python or the command line without an LLM.
+- Review proposed changes against relation signatures, hierarchy checks, and explicit regression conditions.
+
+The graph is experimental and still being reviewed. Structural validation catches some category errors; it does not establish whether a statement or translation is true.
+
+## How the graph works
+
+Open the [live concept explorer](https://conceptuum.su/?concept=2698&lang=en),
+or read the [visualizer controls and browser checks](visualizer/README.md).
+
+Synonyms share a concept. Homonyms have separate concepts. A concept can have multiple genus links, each carrying its discourse context, or **universe**.
 
 ```mermaid
-graph TD
-  ice["ice"] -->|genus 14| solid["solid"]
-  freeze["freezing"] -->|produces 70| ice
-  melt["melting"] -->|produces 70| water["water"]
-  bird["bird"] -->|capable of 22| fly["flight"]
-  penguin["penguin"] -->|capable of 22, strength 0| fly
+graph BT
+  subtraction["subtraction"] -->|"14: genus"| arithmetic["arithmetic operation"]
+  modulo["remainder operation"] -->|"14: genus"| arithmetic
+  arithmetic -->|"14: genus"| operation["mathematical operation"]
+  operation -->|"14: genus"| fn["mathematical function"]
+  fn -->|"14: genus"| object["mathematical object"]
+  remainder["division remainder"] -->|"14: genus"| number["number"]
+  number -->|"14: genus"| object
 ```
 
-Walk the graph: up the genus chain, down to species, sideways to opposites and causes. Definitions are not prose someone wrote — they are **read off the edges** (*genus + differentia*).
+An operation and its numerical result are different meanings. The `defin` field is a generated cache: change the reviewed relations, then rebuild the definition. An edge's `strength=0` records explicit negation; an unspecified strength means no degree has been asserted.
 
-**Topics / who this is for:** `knowledge-graph` · `ontology` · `concept-graph` · `euler-diagrams` · `set-visualization` · `semantic-network` · `neuro-symbolic` · `symbolic-ai` · `llm-grounding` · `rag` · `knowledge-representation` · `formal-logic` · `taxonomy` · `dag` · `genus-differentia`
+## Versions and requirements
 
----
-
-## Thirty seconds
-
-| This is | This is not |
+| Component | Version / requirement |
 |---|---|
-| A **knowledge graph** of concepts and *logical* relations | A dictionary, thesaurus, or Wikipedia dump |
-| One node per **meaning** (synonyms share a node) | One row per word form |
-| Typed edges with a **relation grammar** | Free-text “related to” links |
-| A DAG of genera (a concept may have two classifications) | A single-parent folder tree |
-| Grounding for small LLMs: verify / define from the graph | A chatbot that “knows” the domain from weights |
+| Project | **0.1.0-dev**, an unreleased development version |
+| Bundled data | **2026-10-08 / Q7**; versioned separately from the code |
+| Python | **3.9+**; checked with **3.9.13** |
+| PyMySQL | **1.2.0**, pinned in [requirements.txt](requirements.txt) |
+| pymorphy3 | **2.0.6**, pinned for Russian morphological matching |
+| Go | **1.26.1+**, required by [visualizer/go.mod](visualizer/go.mod); only needed for the visualizer |
+| MariaDB | Local setup checked on **5.5.42**; live Q7 import and visualizer checked on **11.8.6** |
 
-Classical rule, encoded as data: **definiendum = nearest genus + specific properties**; species listed extra. The `defin` column is *derived* — fix edges, never the sentence.
+The MariaDB version records the existing test environment. Compatibility with other server versions, including MySQL, needs separate verification. Python direct dependencies are pinned; Go dependencies are recorded in `go.mod` and `go.sum`.
 
-## Look at the graph
+## Run locally
 
-Live: **[conceptuum.su](https://conceptuum.su)**
+### 1. Get the project and install Python dependencies
 
-Visualizer (`visualizer/`): search English or Russian terms, UI language from the browser locale, click a concept → genera **above** (DAG), species **below**, card with generated definition and typed relations.
+```bash
+git clone https://github.com/thpg/conceptuum.git
+cd conceptuum
+python -m venv .venv
+```
+
+Activate the environment for your shell, then install the dependencies:
+
+| Shell | Activation command |
+|---|---|
+| Bash / Zsh | `source .venv/bin/activate` |
+| PowerShell | `.\.venv\Scripts\Activate.ps1` |
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+Use `python3` to create the environment if that is your Python command. If PowerShell blocks activation, use `.\.venv\Scripts\python.exe` in place of `python`; changing the machine's execution policy is unnecessary.
+
+### 2. Import the database snapshot
+
+Start MariaDB and open its client from the repository root:
+
+```bash
+mariadb --user=root --password --default-character-set=utf8mb4
+```
+
+At the database prompt:
+
+```sql
+SOURCE jnana3_dump.sql;
+QUIT;
+```
+
+Use `mysql` if that is the installed client's name. This also works from PowerShell because `SOURCE` runs inside the database client.
+
+**The dump creates/uses `jnana3` and replaces its six tables. Import into a fresh instance, or back up an existing `jnana3` first.** Selecting another database on the client command line does not redirect the dump's `USE jnana3` statement.
+
+### 3. Configure Python and retrieve facts
+
+Set these variables in the same shell where you run Python, using an account that can read the imported database.
+
+<details>
+<summary>Bash / Zsh</summary>
+
+```bash
+export JNANA_HOST=127.0.0.1
+export JNANA_PORT=3306
+export JNANA_DATABASE=jnana3
+export JNANA_USER=your_database_user
+export JNANA_PASSWORD='your_database_password'
+```
+
+</details>
+
+<details>
+<summary>PowerShell</summary>
+
+```powershell
+$env:JNANA_HOST = '127.0.0.1'
+$env:JNANA_PORT = '3306'
+$env:JNANA_DATABASE = 'jnana3'
+$env:JNANA_USER = 'your_database_user'
+$env:JNANA_PASSWORD = 'your_database_password'
+$env:PYTHONIOENCODING = 'utf-8'
+```
+
+</details>
+
+```bash
+python ask.py "How are ice and water related?" --no-llm
+```
+
+This prints retrieved `FACTS` and one-hop `RELATED` context without contacting a model. Cached definitions are mostly Russian; `--lang en` selects lookup/display preferences and does not translate the stored definition cache.
+
+See [setup details and troubleshooting](docs/setup.md) for database access, configuration precedence, and connection errors.
+
+### 4. Start the visualizer (optional)
+
+The Go application uses **`JNANA_DSN`**, independently of the Python settings. Set it with your own database account:
+
+```bash
+# Bash / Zsh
+export JNANA_DSN='your_database_user:your_database_password@tcp(127.0.0.1:3306)/jnana3?charset=utf8mb4'
+```
+
+```powershell
+# PowerShell
+$env:JNANA_DSN = 'your_database_user:your_database_password@tcp(127.0.0.1:3306)/jnana3?charset=utf8mb4'
+```
+
+Then run:
 
 ```bash
 cd visualizer
-go run .          # http://localhost:7100/
-# DSN: JNANA_DSN or root:123@tcp(127.0.0.1:3306)/jnana3
+go run .
 ```
+
+Open **http://127.0.0.1:7100/**. Run from `visualizer/` so the server can find `static/index.html`. `LISTEN` overrides the bind address. The interface chooses English or Russian from the browser locale; the hosted demo and bundled snapshot are updated independently.
+
+## Use the Python engine
+
+Run from the repository root with the Python database variables configured:
 
 ```python
 from jnana_engine import JnanaEngine
+
 eng = JnanaEngine(pref_lang="en")
-eng.verify("ice", "freezing")
-# ('yes', 'ice <-[causal (produces)] freezing', [])
-eng.define()   # rebuilds concept.defin from the graph — not from prose
+try:
+    print(eng.resolve_all("ice", lang="en"))
+    print(eng.verify("ice", "freezing"))
+    print(eng.stats())
+finally:
+    eng.close()
 ```
+
+`resolve_all()` returns possible senses. `verify()` reports a stored path or relation; a positive result is not an independent fact check. Use concept IDs after selecting a meaning for edits.
+
+`rebuild()` and `define()` **write to the database**. They are maintenance operations, not prerequisites for reading an imported snapshot. Reviewed changes use the [transactional batch workflow](docs/fill-properties.md).
+
+## Optional LLM retrieval demo
+
+Start a compatible local chat server, load a model, and pass its actual model identifier:
 
 ```bash
-python ask.py "Why does water turn into ice?" --no-llm
+python ask.py "How are ice and water related?" --endpoint http://localhost:11434/v1 --model YOUR_LOADED_MODEL
 ```
 
-## Load the dump
+The server must accept `/chat/completions`; `ask.py` does not start a server or download a model. The model receives retrieved graph context, which may contain incomplete or incorrect claims. `interleave.py` is a separate experiment that uses llama.cpp's native `/completion` endpoint.
 
-```sql
-CREATE DATABASE jnana3 CHARACTER SET utf8mb4;
-```
+## Check the graph and code
+
+From the repository root:
 
 ```bash
-mysql -u root -p jnana3 < jnana3_dump.sql
+python -m unittest discover -s tools -p "test_*.py"
+python tools/audit_quality.py --output quality.json
+python tools/audit_upper_graph.py --scope-from docs/quality/2026-10-08-q7-upper-after.json --output upper.json
 ```
 
-Python 3.8+, `pymysql`, optional `pymorphy3` (Russian morphology). MariaDB/MySQL.
+The unit tests need no database or model. The audits read the configured database and write JSON reports. Keeping `--scope-from` prevents reparented nodes from disappearing from a before/after comparison.
 
----
+## Data snapshot and limits
 
-## The graph, not the tables
+The bundled **Q7** snapshot contains **12,468 concepts**, **15,665 accepted edges**, **787 rejected edges**, **57,970 genus paths**, and **34,950 terms** across everyday, IT, legal, and logic universes.
 
-Storage is relational so the grammar can be *enforced*. The mental model is still a graph:
+Q7 has zero detected signature violations, hierarchy cycles, and self-loops; all 23 explicit negations survived the review. These checks establish structural consistency, not complete or verified knowledge. **7,306 concepts still lack an English-tagged term containing Latin letters**, and even Latin-script terms need translation review. Long queries can retrieve extra senses through individual words.
 
-```
-concept  ──terms──►  ice
-    │
-    ├──[14 genus]────────►  solid
-    ├──[20 attribute 95%]─►  cold
-    └──[70 produced by]───►  freezing
-```
+The [changelog](CHANGELOG.md) separates code versions from data revisions. Detailed evidence and remaining gaps are recorded in the [Q7 review](docs/quality/2026-10-08-q7.md) and [maintainer state](STATE.md); these historical reports include Russian text.
 
-- **Universes** (everyday, scientific, IT, legal, logic) are *discourses*, not extra copies of the node. Two classifications of one meaning → two genus edges, `universum_id` on the edge.
-- **Homonyms** (different meanings of one word) stay two nodes.
-- **Word class does not pick the genus.** Infinitive and deverbal noun, adjective and noun, aspect pairs — one concept; forms live in `concept_term`.
-- **Inheritance.** Attach a property at the highest genus that still holds; species override with strength `0` (a penguin does not fly).
+## Documentation
 
-Relation families (codes in table `relevant`):
-
-| Family | Codes | Examples |
-|---|---|---|
-| Taxonomy | 14 | dog → mammal |
-| Essential / specific properties | 15, 20–27 | ice — cold; bird — capable of flight; cup — porcelain |
-| Compatibility | 30, 40, 60 | coextensive, overlap, incompatible |
-| Opposition | 61–64 | co-hyponyms; buy/sell; hot/cold; true/false |
-| Cause & time | 70–74 | produces, hinders, precedes, depends on |
-
-Each type has a **signature** (allowed subject/object subtrees), symmetry, transitivity. `propose()` rejects illegal edges. Closure of genus is table `concept_path`.
-
-Fill level `concept.processed`: **0** none · **1** genus and species · **2** essential/specific properties · **3** parallel (non-isa) relations. Not a lock.
-
-Full rulebook: [docs/ontology-rules.md](docs/ontology-rules.md). Token-lean property filling: [docs/fill-properties.md](docs/fill-properties.md).
-
-## Engine (`jnana_engine.py`)
-
-`JnanaEngine`: `resolve` / `resolve_all` / `resolve_fuzzy`, `add_concept`, `add_genus`, `merge_concepts`, `verify`, `propose`, `rebuild`, `define`, `set_processed(cid, 0…3)`.
-
-`pref_lang="en"` picks display terms (English `to …` is a term, not the label).
-
-## LLM grounding
-
-**Pay for a strong model once, at fill time.** Runtime is SQL over the graph: a small model (or no model) gets canonical definitions and checked relations instead of inventing them.
-
-- `ask.py` — retrieve FACTS + one-hop RELATED, then optionally a local OpenAI-compatible endpoint.
-- `interleave.py` — in-stream fact injection (experimental).
-
-```bash
-python ask.py "What produces legal liability?" \
-    --endpoint http://localhost:8090/v1 --model local
-```
-
-> Theft is a crime. A crime produces punishment…  
-> Melting produces water; drinking is directed at water — melted ice can be drunk.
-
-## Schema (MariaDB)
-
-| Table | Role in the graph |
+| Document | Purpose |
 |---|---|
-| `concept` | Nodes (`dharma`, `nama`, cached `defin`, home `universum_id`, `processed` 0–3) |
-| `concept_term` | Labels on nodes (en / ru / …) |
-| `edge` | Typed arcs: `dh1 —[kod]→ dh2`, strength, status, source |
-| `relevant` | Edge-type grammar (signatures, symmetry, transitivity) |
-| `universum` | Discourses (everyday / scientific / IT / legal / logic) |
-| `concept_path` | Transitive closure of genus (14) |
+| [Setup](docs/setup.md) | Connection settings, import behavior, and troubleshooting |
+| [Ontology rules](docs/ontology-rules.md) | Concept identity, genera, relation meanings, and review constraints |
+| [Property review](docs/fill-properties.md) | Preparing, previewing, and applying a reviewed batch |
+| [Filling algorithm](FILL_ALGORITHM.md) | Candidate generation, semantic review, and implementation limits |
+| [Roadmap](PLAN.md) | Remaining content and engine work |
+| [Versions](CHANGELOG.md) | Development version and content revision history |
+| [Instruction audit](docs/quality/2026-10-08-docs-review.md) | Published-document findings and setup verification |
 
-Relation code table, deprecated 8x→2x migration, and design notes (degree in `strength`, attach at genus, negation = 0) are in the sections below for implementers.
-
-### Relation codes
-
-| Code | Relation | Notes |
-|---|---|---|
-| 11 / 12 | universe / domain | discourse context |
-| 14 | genus (is-a) | transitive; `concept_path` |
-| 15 | essential attribute | differentia |
-| 20 | attribute | degree in `edge.strength` 0–100 |
-| 21 / 22 | purpose / capable of | artifact or organism → action/process |
-| 23 | material | artifact → substance |
-| 24 / 25 / 26 | content / application / user | |
-| 27 | patient | action → object |
-| 30 | coextensive | |
-| 40 | overlap | symmetric; degree in `strength` |
-| 60 | incompatible | |
-| 61 | coordinate | symmetric co-hyponyms |
-| 62 | converses | symmetric (buy/sell) |
-| 63 / 64 | contrary / contradictory | symmetric |
-| 70 / 71 | produces / hinders | |
-| 72 / 73 | precedes / simultaneous | 73 symmetric |
-| 74 | depends on | |
-
-Deprecated: 10, 13, 41, 43, 45, 47, 48, 49, 80–83 (8x folded into 2x; old degree codes into `strength`).
-
-### Design notes
-
-- **Degree is data, not code.** Always / usually / rare → `edge.strength`.
-- **part-of ≠ made-of.** Localized detachable part vs substrate of the whole.
-- **Ternary facts are two binaries.** Purpose + patient; no ternary relation nodes.
-- **Attach at the highest genus**; keep a species edge only if the object is more specific or strength differs by ~25+ points. `strength = 0` is explicit negation (penguin —[22]→ flight 0).
-- **Terms do not rewrite the tree.** See [ontology-rules.md](docs/ontology-rules.md).
-
-## Current snapshot
-
-About **4560 concepts**, **6800 edges**, **20k** genus-paths. Universes: everyday (English + Russian terms), IT (English-primary, Russian terms), legal, logic.
-
-Experimental. Auto-filled edges carry `source`; they are meant to be revised.
+The six storage tables are `concept`, `concept_term`, `edge`, `relevant`, `universum`, and `concept_path`. The relation grammar is data in `relevant`; the root [jnana_engine.py](jnana_engine.py) is the Python implementation. Older scripts in `tools/` preserve development history and are not an installation sequence.
 
 ## License
 
-MIT. Repo: [github.com/thpg/conceptuum](https://github.com/thpg/conceptuum).
+[MIT](LICENSE).

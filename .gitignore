@@ -1,4 +1,8 @@
 __pycache__/
+.venv/
+.env
+.env.local
+server-credentials.txt
 *.pyc
 visualizer/conceptuum-viz.exe
 books/
