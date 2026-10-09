@@ -7,9 +7,10 @@
   <meta name="description" content="Run concept algebra against a knowledge graph. Explore intersections, inherited properties and evidence, and export structured examples for LLM training data and evaluation.">
   <title>Concept algebra — Conceptuum</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23146656'/%3E%3Ctext x='20' y='29' text-anchor='middle' fill='white' font-size='30'%3E∩%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="/static/explorer.css?v=20261009-1">
-  <link rel="stylesheet" href="/static/algebra.css?v=20261009-1">
-  <script defer src="/static/algebra.js?v=20261009-1"></script>
+  <link rel="stylesheet" href="/static/explorer.css?v=20261009-2">
+  <link rel="stylesheet" href="/static/algebra.css?v=20261009-2">
+  <script defer src="/static/algebra-collection.js?v=20261009-2"></script>
+  <script defer src="/static/algebra.js?v=20261009-2"></script>
 </head>
 <body class="algebra-page">
   <a class="skip-link" href="#expression">Skip to expression</a>
@@ -40,9 +41,25 @@
         <section id="algebra-results" class="algebra-card results-card" aria-labelledby="result-heading" aria-busy="false">
           <div class="card-heading"><h2 id="result-heading">Result</h2><button id="algebra-download" class="text-button" disabled>Download JSON ↓</button></div>
           <p id="algebra-status" class="algebra-status" role="status">Preparing the first example…</p>
-          <div id="result-content" hidden><div id="result-summary" class="result-summary"></div><div id="resolved-expression" class="resolved-expression"></div><div id="result-members" class="result-members"></div><div id="algebra-pagination" class="algebra-pagination" hidden><button id="algebra-prev" class="outline-button">← Previous</button><span id="algebra-page-label"></span><button id="algebra-next" class="outline-button">Next →</button></div><details class="structured-result"><summary>Structured result for LLM datasets</summary><p>JSON includes the request, resolved expression, AST, complete member IDs and available evidence. Displayed labels may be paginated.</p><pre id="algebra-json" tabindex="0"></pre></details></div>
+          <div id="result-content" hidden>
+            <div id="result-summary" class="result-summary"></div><div id="resolved-expression" class="resolved-expression"></div>
+            <div id="algebra-diagnostics" class="algebra-diagnostics" hidden></div>
+            <div id="result-members" class="result-members"></div>
+            <div id="algebra-pagination" class="algebra-pagination" hidden><button id="algebra-prev" class="outline-button">← Previous</button><span id="algebra-page-label"></span><button id="algebra-next" class="outline-button">Next →</button></div>
+            <form id="inspect-form" class="inspect-form"><label for="inspect-id">Inspect any record <span>including records outside the result</span></label><div><input id="inspect-id" type="text" inputmode="numeric" pattern="#?[1-9][0-9]*" maxlength="11" placeholder="#1354" aria-label="Concept ID to inspect" required><button type="submit" class="outline-button">Inspect</button></div><p id="inspect-status" role="status"></p></form>
+            <details class="structured-result"><summary>Structured result for LLM datasets</summary><p>JSON includes the request, resolved expression, AST, complete member IDs and available evidence. Diagnostic samples and displayed labels may be partial; counts are exact.</p><pre id="algebra-json" tabindex="0"></pre></details>
+          </div>
         </section>
         <section id="algebra-explanation" class="algebra-card explanation-card" aria-labelledby="explanation-title" hidden><div class="card-heading"><h2 id="explanation-title">Why this result?</h2><button class="text-button" id="close-explanation">Close</button></div><div id="explanation-content"></div></section>
+        <section id="example-collection" class="algebra-card collection-card" aria-labelledby="collection-heading">
+          <div class="card-heading"><h2 id="collection-heading">LLM example collection <span id="collection-count">0</span></h2><button id="collection-download" class="text-button" disabled>Download JSONL ↓</button></div>
+          <p class="collection-intro">Pair a question with a computed answer and its evidence. Saved examples keep their original data version.</p>
+          <label for="example-question">Question <span>(optional, kept in this browser)</span></label>
+          <textarea id="example-question" rows="2" maxlength="2000" placeholder="Which stored concepts are both glass jars and food storage jars?"></textarea>
+          <div class="collection-actions"><button id="collection-add" class="outline-button" disabled>Add current example</button><span id="collection-status" role="status"></span></div>
+          <p id="collection-storage" class="collection-storage">Saved in this browser. Export JSONL to keep a portable copy.</p>
+          <div id="collection-items" class="collection-items"></div>
+        </section>
       </div>
       <aside class="algebra-sidebar" aria-label="Find concepts and language help">
         <section class="algebra-card lookup-card"><span class="eyebrow">BUILD WITH THE GRAPH</span><h2>Find a concept</h2><p>Select a term in your expression, then insert its exact ID.</p><label class="sr-only" for="algebra-search">Search concepts to insert</label><input id="algebra-search" type="search" placeholder="Search glass, flight, jar…" autocomplete="off"><p id="algebra-search-status" class="lookup-status" role="status"></p><div id="algebra-search-results" class="lookup-results"></div></section>

@@ -25,6 +25,7 @@ class Evaluation:
     graph: ConceptGraph
     language: object = None
     explanation: object = None
+    diagnostics: object = None
 
     @property
     def kind(self):
@@ -56,6 +57,8 @@ class Evaluation:
             result["value"] = self.value
         if self.explanation is not None:
             result["explanation"] = self.explanation
+        if self.diagnostics is not None:
+            result["diagnostics"] = self.diagnostics
         if include_ast:
             result["ast"] = self.ast.to_dict()
         return result
@@ -115,13 +118,80 @@ class ConceptAlgebra:
         explanation = None
         if explain is not None:
             self.graph.concept(explain)
-            _set(value, "Membership explanation")
-            explanation = self._explain(ast, explain, universe, values)
+            explanation = self._explain_value(ast, explain, universe, values)
             explanation["concept"] = self.graph.concept(explain, self.language)
             explanation["in_universe"] = explain in universe
             explanation["basis"] = "catalog"
         return Evaluation(expression, ast, self.graph.context, universe, domain_text,
-                          value, self.graph, self.language, explanation)
+                          value, self.graph, self.language, explanation,
+                          self._diagnostics(ast, universe, values))
+
+    def _sample(self, ids):
+        """Counts cover the complete set; labels are a bounded, stable sample."""
+        selected = sorted(ids)[:5]
+        return {"count": len(ids), "items": [self.graph.concept(cid, self.language) for cid in selected],
+                "truncated": len(selected) < len(ids)}
+
+    def _operand(self, node, universe, values):
+        value = self._evaluate(node, universe, values)
+        result = {"expression": format_expression(node)}
+        if isinstance(value, frozenset):
+            result.update(kind="set", **self._sample(value))
+        else:
+            result.update(kind="boolean" if type(value) is bool else "integer", value=value)
+            if node.kind == "call" and node.value == "count":
+                result["counted_set"] = self._sample(self._evaluate(node.args[0], universe, values))
+                result["counted_expression"] = format_expression(node.args[0])
+        return result
+
+    def _diagnostics(self, node, universe, values):
+        if node.kind != "compare" and not (node.kind == "call" and node.value in {"count", "empty", "disjoint"}):
+            return None
+        operands = [self._evaluate(arg, universe, values) for arg in node.args]
+        value = self._evaluate(node, universe, values)
+        result = {"operation": node.value, "basis": "catalog", "sample_limit": 5,
+                  "operands": [self._operand(arg, universe, values) for arg in node.args], "regions": []}
+        if len(operands) == 2 and all(isinstance(operand, frozenset) for operand in operands):
+            a, b = operands
+            rules = {
+                "<=": "Every record in A must also occur in B.",
+                "<": "Every record in A must occur in B, and B must contain at least one additional record.",
+                ">=": "Every record in B must also occur in A.",
+                ">": "Every record in B must occur in A, and A must contain at least one additional record.",
+                "==": "Both sets must contain exactly the same records.",
+                "!=": "At least one record must occur in only one of the sets.",
+                "disjoint": "The two catalog sets must share no records.",
+            }
+            counterexamples = {"<=": {"left_only"}, "<": {"left_only"},
+                               ">=": {"right_only"}, ">": {"right_only"},
+                               "==": {"left_only", "right_only"}, "disjoint": {"intersection"}}
+            result["rule"] = rules[node.value]
+            for key, label, ids in [("left_only", "Only in A", a - b),
+                                    ("intersection", "In both", a & b),
+                                    ("right_only", "Only in B", b - a)]:
+                result["regions"].append(dict(key=key, label=label, **self._sample(ids),
+                    counterexamples=not value and bool(ids) and key in counterexamples.get(node.value, set())))
+            if a == b:
+                result["note"] = "A and B are equal in this catalog domain; neither is a proper subset of the other."
+        elif node.value in {"count", "empty"}:
+            result["rule"] = ("Count each stored record once in the selected domain." if node.value == "count"
+                              else "The set must contain no stored records in the selected domain.")
+            result["regions"].append(dict(key="members", label="Counted records" if node.value == "count" else "Set members",
+                **self._sample(operands[0]), counterexamples=node.value == "empty" and not value))
+        else:
+            result["rule"] = "Compare the evaluated operand values; counts refer to stored records in the selected domain."
+        return result
+
+    def _explain_value(self, node, cid, universe, values):
+        value = self._evaluate(node, universe, values)
+        if isinstance(value, frozenset):
+            return self._explain(node, cid, universe, values)
+        trace = {"expression": format_expression(node), "value": value,
+                 "kind": "boolean" if type(value) is bool else "integer"}
+        if node.args:
+            trace["operands"] = [self._explain_value(arg, cid, universe, values) for arg in node.args]
+        trace["meaning"] = "Operand membership describes the inspected record; the result is computed over the complete catalog domain."
+        return trace
 
     def _evaluate(self, node, universe, values):
         if id(node) in values:

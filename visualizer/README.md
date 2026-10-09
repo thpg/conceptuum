@@ -1,6 +1,6 @@
 # Conceptuum visualizer
 
-Bundled and published site data: **Q39**. Interface revision: **2026-10-09.1**,
+Bundled and published site data: **Q39**. Interface revision: **2026-10-09.2**,
 including the [concept algebra workspace](https://conceptuum.su/algebra?lang=en).
 
 A Go HTTP server with a dependency-free HTML, CSS, and JavaScript explorer.
@@ -33,10 +33,18 @@ Pass an absolute `--version-file` path; update the data revision and dump hash
 whenever graph data changes so cached contexts refresh. An optional
 `--snapshot path.json` loads a frozen JSON graph instead of MariaDB.
 
-The workspace includes seven demos, search-to-insert IDs, context and domain
+The workspace includes nine demos, search-to-insert IDs, context and domain
 controls, paginated results, source-edge explanations and shareable query links.
 JSON exports include every result ID and the data revision for LLM training-data
 preparation and evaluation. See the [language/API guide](../docs/concept-algebra.md).
+
+Comparisons show exact operand and region counts with clickable witnesses or
+counterexamples. **Inspect any record** explains nonmembers and operands of
+counts/comparisons as well as set members. **LLM example collection** saves
+question–answer examples locally in the browser and exports JSONL with complete
+set IDs, comparison diagnostics, selected evidence and original source versions.
+Questions are never included in API requests. Collections hold up to 50 examples
+or 4 MiB; the interface reports when only session storage is available.
 
 ## Exploring the graph
 
@@ -185,28 +193,25 @@ Run the server against the bundled dataset first. In a separate Python environme
 ```sh
 python -m pip install -r requirements-test.txt
 python -m playwright install chromium
-python test_browser.py
 python test_algebra_browser.py
 ```
 
 Set `CONCEPTUUM_TEST_URL` to test a different address. Set
 `CONCEPTUUM_BROWSER_CHANNEL=chrome` to use installed Chrome instead of downloading
-Chromium. The twenty-one tests only read the database; overlap fixtures, failure,
-stale-response, and escaping cases use intercepted browser responses. Q9 has no
-accepted code-40 records. The catalog demos calculate overlaps from real
-classification paths; the earlier semantic overlap tests use isolated fixtures.
+Chromium. The browser checks only read the database; example collections use an
+isolated browser context and disappear when that test context closes.
 
-The six algebra scenarios require the Python worker and Q39 data. They check all
-seven demos, source evidence, downloads, ambiguity in both inputs, complete IDs
-across result pages, shared-link reloads, mobile search and stale-response handling.
+The eleven algebra scenarios require the Python worker and Q39 data. They check
+all nine demos, source evidence, downloads, ambiguity in both inputs, complete
+IDs across result pages, shared-link reloads, mobile search, stale responses,
+comparison counterexamples, arbitrary record inspection and collection export,
+restore and replay. `node test_algebra_collection.js` runs nine database-free
+checks for JSONL, deduplication, storage failures, size limits and multiple tabs.
 
-Also run `go test ./...`, `node test_euler_layout.js`, `node test_euler_catalog.js`,
-and syntax checks for all three JavaScript files in `static/`. Go tests
-cover relation inference, shared genera, cycles, selection limits, and API
-validation. The 22 geometry checks cover partial overlaps, multiple inclusion,
-unknown siblings, inconsistent constraints, mobile layout, and safe labels.
-Catalog checks cover Boolean operations, witnesses, empty regions, equality,
-cycles, missing records, sample limits, and all sixteen possible displayed sets.
+Run `go test ./...` for the API proxy's transport, validation and error handling,
+and syntax checks for the JavaScript files in `static/`. From the repository root,
+`python -m unittest discover -s tools -p "test_concept_algebra*.py"` checks the
+parser, graph semantics, explanations and HTTP worker without a real database.
 There is no frontend package build step.
 
 ## Deployment files

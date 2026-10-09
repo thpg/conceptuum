@@ -80,7 +80,7 @@ An operation and its numerical result are different meanings. The `defin` field 
 |---|---|
 | Project | **0.1.0-dev**, an unreleased development version |
 | Bundled and live data | **2026-10-09 / Q39** |
-| Web interface | **2026-10-09.1**, including the concept algebra workspace |
+| Web interface | **2026-10-09.2**, including comparison evidence and JSONL example collections |
 | Algebra language / example schema | **1** / `conceptuum.algebra.example.v1` |
 | Python | **3.9+**; checked with **3.9.13** |
 | PyMySQL | **1.2.0**, pinned in [requirements.txt](requirements.txt) |
@@ -225,11 +225,12 @@ finally:
 
 Open the **[concept algebra workspace](https://conceptuum.su/algebra?lang=en)**
 to edit expressions, search and insert concept IDs, choose a relation context,
-restrict the domain, and inspect results and their source edges. Seven database
+restrict the domain, and inspect results and their source edges. Nine database
 examples demonstrate intersections, inherited materials, explicit exceptions,
-multiple genera, subset comparisons, complements and counts.
+multiple genera, subset comparisons, counterexamples, unknown properties,
+complements and counts.
 
-[![Concept algebra editor and computed intersection](docs/visualizer/concept-algebra.png)](https://conceptuum.su/algebra?lang=en)
+[![A comparison counterexample and an LLM example collection](docs/visualizer/concept-algebra.png)](https://conceptuum.su/algebra?demo=counterexample&lang=en)
 
 The same parser and evaluator are available from Python and the command line.
 For example, intersect glass jars with food-storage jars:
@@ -253,6 +254,14 @@ Use **Copy query link** to share an expression and **Download JSON** to save a
 structured example. Exports contain all matching IDs; displayed concept labels
 are paginated. Select **Explain** before exporting to include a member's evidence.
 
+Comparisons now show **why** they return true or false: operand sizes, exact
+counts for records only in A, in both, and only in B, plus inspectable samples.
+Try [finding a counterexample](https://conceptuum.su/algebra?demo=counterexample&lang=en)
+to `#25439 <= #25446`. The general glass-jar record is outside the food-storage-jar
+catalog set, while the glass food storage jar belongs to both. **Inspect any
+record** also explains records outside a result, and works with counts and
+comparisons. Shared links retain the inspected ID.
+
 ## LLM training data and evaluation
 
 Conceptuum is a tool for **preparing structured training examples and checking
@@ -264,10 +273,20 @@ concept expressions, finding shared genera, and explaining inherited properties.
    or generate queries with the [Python API](docs/concept-algebra.md#python-api-and-json).
 2. Evaluate it in an explicit context and domain. Review the returned concepts;
    use **Explain** to inspect the supporting relations and inherited exceptions.
-3. Export JSON containing the request, resolved AST, complete result IDs, data
-   revision and SQL snapshot hash, plus evidence for the selected member.
-4. Pair a reviewed question or expression with this output for supervised
-   examples, or compare a model's predicted IDs and expression results with it.
+3. Enter an optional question and choose **Add current example**. Collect
+   different queries, inspect saved examples again, or remove individual entries.
+4. **Download JSONL** exports one self-contained example per line: question,
+   request, resolved AST, answer, complete IDs for set results, comparison
+   diagnostics, data revision and SQL snapshot hash, plus selected evidence.
+5. Use reviewed question/expression–answer pairs for supervised examples, or
+   compare model predictions with their computed answers.
+
+Collections stay in browser storage, up to 50 examples or 4 MiB. Questions are
+not sent to the server. Export a portable copy before clearing browser data;
+when storage is unavailable, the collection lasts only for the page session.
+Reopening a saved example evaluates its query against the current graph while
+preserving the saved answer and its original revision. Diagnostic samples are
+limited to five records per group; their counts cover the full catalog domain.
 
 The graph distinguishes **positive, negative, unknown and conflicting** property
 assertions. Preserve those distinctions in dataset labels. Answers describe the

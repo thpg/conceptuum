@@ -43,6 +43,84 @@ class AlgebraWebTests(unittest.TestCase):
         self.assertNotIn('ids', count)
         self.assertTrue(self.service.evaluate({'expression': 'bird <= animal'})['value'])
 
+    def test_false_subset_has_exact_regions_and_counterexample(self):
+        result = self.service.evaluate({'expression': 'bird <= penguin', 'explain': 5})
+        self.assertIs(result['value'], False)
+        regions = {region['key']: region for region in result['diagnostics']['regions']}
+        self.assertEqual(regions['left_only']['count'], 5)
+        self.assertEqual(regions['intersection']['count'], 1)
+        self.assertEqual(regions['right_only']['count'], 0)
+        self.assertTrue(regions['left_only']['counterexamples'])
+        explanation = result['explanation']
+        self.assertIs(explanation['value'], False)
+        self.assertEqual([operand['member'] for operand in explanation['operands']], [True, False])
+        self.assertTrue(explanation['operands'][0]['path'])
+        self.assertIsNone(explanation['operands'][1]['path'])
+
+    def test_equal_sets_are_not_a_proper_subset_without_invented_counterexamples(self):
+        result = self.service.evaluate({'expression': 'bird < avian'})
+        self.assertFalse(result['value'])
+        self.assertIn('equal', result['diagnostics']['note'])
+        self.assertFalse(any(region['counterexamples'] for region in result['diagnostics']['regions']))
+        self.assertEqual(result['diagnostics']['regions'][1]['count'], 6)
+
+    def test_set_comparisons_and_disjointness_have_correct_witness_regions(self):
+        cases = [('bird <= penguin', ['left_only']), ('bird < penguin', ['left_only']),
+                 ('penguin >= bird', ['right_only']), ('penguin > bird', ['right_only']),
+                 ('bird == mammal', ['left_only', 'right_only']),
+                 ('disjoint(bird, penguin)', ['intersection']), ('bird != avian', []),
+                 ('penguin <= bird', []), ('penguin < bird', []), ('bird > penguin', []),
+                 ('bird >= penguin', []), ('bird == avian', []), ('bird != penguin', [])]
+        for expression, expected in cases:
+            with self.subTest(expression=expression):
+                result = self.service.evaluate({'expression': expression})
+                regions = result['diagnostics']['regions']
+                self.assertEqual([r['key'] for r in regions if r['counterexamples']], expected)
+
+    def test_diagnostics_follow_the_finite_domain_and_keep_counts_when_sampled(self):
+        full = self.service.evaluate({'expression': 'U <= EMPTY', 'limit': 1})
+        region = full['diagnostics']['regions'][0]
+        self.assertEqual(region['count'], 20)
+        self.assertEqual(len(region['items']), 5)
+        self.assertTrue(region['truncated'])
+        scoped = self.service.evaluate({'expression': 'bird <= penguin', 'within': 'penguin'})
+        self.assertTrue(scoped['value'])
+        self.assertEqual([r['count'] for r in scoped['diagnostics']['regions']], [0, 1, 0])
+
+    def test_count_and_empty_explanations_inspect_the_underlying_set(self):
+        count = self.service.evaluate({'expression': 'count(bird)', 'explain': 4})
+        self.assertEqual(count['value'], 6)
+        self.assertTrue(count['explanation']['operands'][0]['member'])
+        self.assertEqual(count['diagnostics']['regions'][0]['count'], 6)
+        empty = self.service.evaluate({'expression': 'empty(bird)', 'explain': 4})
+        self.assertFalse(empty['value'])
+        self.assertTrue(empty['diagnostics']['regions'][0]['counterexamples'])
+        zero = self.service.evaluate({'expression': 'count(EMPTY)'})
+        self.assertEqual(zero['diagnostics']['regions'][0]['items'], [])
+        self.assertEqual(zero['value'], 0)
+
+    def test_count_comparison_and_nested_boolean_explanations_remain_typed(self):
+        result = self.service.evaluate({'expression': 'count(bird) > count(mammal)', 'explain': 4})
+        self.assertTrue(result['value'])
+        a, b = result['diagnostics']['operands']
+        self.assertEqual((a['value'], b['value']), (6, 2))
+        self.assertEqual(a['counted_set']['count'], 6)
+        self.assertEqual(result['explanation']['operands'][0]['kind'], 'integer')
+        nested = self.service.evaluate({'expression': '(penguin <= bird) == empty(EMPTY)', 'explain': 4})
+        self.assertTrue(nested['value'])
+        self.assertEqual(nested['explanation']['operands'][0]['kind'], 'boolean')
+
+    def test_nonmember_inspection_preserves_negative_and_unknown_property_states(self):
+        negative = self.service.evaluate({'expression': 'penguin <= has(action, flight)', 'explain': 4})
+        self.assertFalse(negative['value'])
+        self.assertEqual(negative['explanation']['operands'][1]['fact']['state'], 'negative')
+        unknown = self.service.evaluate({'expression': 'has(action, flight)', 'explain': 10})
+        self.assertFalse(unknown['explanation']['member'])
+        self.assertEqual(unknown['explanation']['fact']['state'], 'unknown')
+        outside = self.service.evaluate({'expression': 'bird <= penguin', 'within': 'penguin', 'explain': 5})
+        self.assertFalse(outside['explanation']['in_universe'])
+        self.assertEqual([branch['member'] for branch in outside['explanation']['operands']], [False, False])
+
     def test_four_states_and_negative_evidence_survive_transport(self):
         result = self.service.evaluate({'expression': 'lacks(action, #9)', 'explain': 4})
         fact = result['explanation']['fact']

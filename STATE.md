@@ -12,9 +12,11 @@ publication is requested. Experiments remain local.
 - **Published concept algebra (2026-10-09):** Python package, CLI and
   [web workspace](https://conceptuum.su/algebra?lang=en), with typed set expressions,
   context-scoped graph operations, four property states and edge-level explanations.
-  Seven demos, search, pagination and JSON exports support LLM training-data
-  preparation and evaluation. Interface revision `2026-10-09.1`; data remains Q39.
-  Validation: 44 Python checks, Go checks and six desktop/mobile browser checks.
+  Nine demos, comparison counterexamples, arbitrary record inspection and
+  browser-local question–answer collections with JSONL export support LLM
+  training-data preparation and evaluation. Interface revision `2026-10-09.2`;
+  data remains Q39. Validation: 51 Python checks, nine JavaScript collection
+  checks and eleven desktop/mobile browser checks.
   See the [language guide](docs/concept-algebra.md). Experiments remain local.
 
 - **Published data — Q39 (2026-10-09):** 13,456 concepts, 17,350 accepted edges,

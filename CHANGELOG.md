@@ -7,6 +7,19 @@ release numbers**. The first explicitly versioned working tree is
 
 ## 0.1.0-dev — Unreleased
 
+### Comparison evidence and LLM example collections — 2026-10-09
+
+- Explain set comparisons with exact region counts, inspectable samples and
+  counterexamples. Trace any record through comparison and count operands,
+  including records outside a result; shared URLs retain the inspected ID.
+- Add browser-local example collections with optional questions, replay,
+  individual removal and JSONL export. Preserve complete set IDs and original
+  source revisions; handle unavailable storage and exclude questions from API requests.
+- Add counterexample and unknown-property demos, bringing the total to nine.
+  Interface revision `2026-10-09.2`; data remains Q39.
+- Verify 51 Python tests, nine JavaScript collection checks and eleven
+  desktop/mobile browser scenarios. Update the README screenshot and guides.
+
 ### Concept algebra on the web — 2026-10-09
 
 - Add a bounded expression parser, a read-only catalog evaluator, a Python

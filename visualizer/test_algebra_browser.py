@@ -72,6 +72,7 @@ class AlgebraBrowserTests(unittest.TestCase):
     def test_every_demo_and_negative_exception(self):
         self.open()
         for name, kind in [('material', 'set'), ('exception', 'set'), ('parents', 'set'),
+                           ('counterexample', 'boolean'), ('unknown', 'set'),
                            ('subset', 'boolean'), ('complement', 'set'), ('count', 'integer')]:
             self.page.locator('#algebra-demo').select_option(name)
             self.ready()
@@ -90,6 +91,10 @@ class AlgebraBrowserTests(unittest.TestCase):
                 self.assertEqual(data['ids'], [25439, 25446])
             if name == 'subset':
                 self.assertIs(data['value'], True)
+            if name == 'counterexample':
+                self.assertIs(data['value'], False)
+            if name == 'unknown':
+                self.assertEqual(data['ids'], [1354])
             if name == 'count':
                 self.assertEqual(data['value'], 1)
 
@@ -158,7 +163,109 @@ class AlgebraBrowserTests(unittest.TestCase):
         self.page.wait_for_timeout(1100)
         expect(self.page.locator('#result-content')).to_be_hidden()
         expect(self.page.locator('#algebra-download')).to_be_disabled()
+        expect(self.page.locator('#collection-add')).to_be_disabled()
         expect(self.page.locator('#algebra-status')).to_contain_text('Expression changed')
+
+    def test_counterexample_inspection_and_shared_evidence(self):
+        self.open('#25439 <= #25446')
+        expect(self.page.locator('.counterexample-label')).to_have_text('Counterexamples')
+        self.page.locator('.counterexamples .diagnostic-sample').click()
+        self.ready()
+        data = self.result()['result']
+        self.assertIs(data['value'], False)
+        self.assertEqual(data['explanation']['concept']['id'], 25439)
+        self.assertEqual([branch['member'] for branch in data['explanation']['operands']], [True, False])
+        self.assertIn('explain=25439', self.page.url)
+        self.page.reload()
+        self.ready()
+        expect(self.page.locator('#algebra-explanation')).to_be_visible()
+        expect(self.page.locator('#algebra-explanation')).to_contain_text('Expression result: false')
+        self.submit('#25439 < #25439')
+        expect(self.page.locator('.diagnostic-note')).to_contain_text('equal')
+        expect(self.page.locator('.counterexample-label')).to_have_count(0)
+
+    def test_arbitrary_nonmember_and_count_inspection(self):
+        self.open('has(action, #209)')
+        self.page.locator('#inspect-id').fill('#1354')
+        self.page.get_by_role('button', name='Inspect', exact=True).click()
+        self.ready()
+        expect(self.page.locator('#algebra-explanation')).to_contain_text('Not included in this result.')
+        self.assertEqual(self.result()['result']['explanation']['fact']['state'], 'negative')
+        self.submit('count(#24488 & #24489)')
+        self.page.locator('.diagnostic-sample').click()
+        self.ready()
+        proof = self.result()['result']['explanation']
+        self.assertEqual(proof['value'], 1)
+        self.assertTrue(proof['operands'][0]['member'])
+        self.assertEqual(proof['concept']['id'], 24492)
+
+    def test_collection_jsonl_restore_replay_and_remove(self):
+        self.open()
+        question = 'Which records belong to both?\n"Quoted" <script>window.bad = true</script>'
+        self.page.locator('#example-question').fill(question)
+        self.page.locator('#collection-add').click()
+        expect(self.page.locator('#collection-count')).to_have_text('1')
+        self.page.locator('#collection-add').click()
+        expect(self.page.locator('#collection-count')).to_have_text('1')
+        expect(self.page.locator('#collection-status')).to_contain_text('already')
+        self.submit('#25439 <= #25446')
+        self.page.locator('#example-question').fill('Are all stored glass jars food storage jars?')
+        self.page.locator('#collection-add').click()
+        expect(self.page.locator('#collection-count')).to_have_text('2')
+        self.page.reload()
+        self.ready()
+        expect(self.page.locator('#collection-count')).to_have_text('2')
+        with self.page.expect_download() as download_info:
+            self.page.locator('#collection-download').click()
+        with open(download_info.value.path(), encoding='utf-8') as stream:
+            lines = stream.readlines()
+        self.assertEqual(len(lines), 2)
+        saved = [json.loads(line) for line in lines]
+        self.assertEqual(saved[0]['question'], question)
+        self.assertEqual(saved[0]['result']['ids'], [25447])
+        self.assertIs(saved[1]['result']['value'], False)
+        self.assertEqual(saved[1]['result']['diagnostics']['regions'][0]['count'], 1)
+        self.assertEqual(saved[0]['result']['source']['data_revision'], 'Q39')
+        self.assertIsNone(self.page.evaluate('window.bad'))
+        self.page.locator('.collection-replay').first.click()
+        self.ready()
+        expect(self.page.locator('#expression')).to_have_value('#25439 & #25446')
+        expect(self.page.locator('#example-question')).to_have_value(question)
+        expect(self.page.locator('#collection-count')).to_have_text('2')
+        self.page.get_by_role('button', name='Remove example 1', exact=True).click()
+        expect(self.page.locator('#collection-count')).to_have_text('1')
+        self.page.reload()
+        self.ready()
+        expect(self.page.locator('#collection-count')).to_have_text('1')
+
+    def test_collection_without_storage_and_mobile_diagnostics(self):
+        self.page.add_init_script("Storage.prototype.getItem = function() { throw new Error('blocked'); };")
+        self.page.set_viewport_size({'width': 390, 'height': 844})
+        self.open('#25439 <= #25446')
+        self.page.locator('#collection-add').click()
+        expect(self.page.locator('#collection-count')).to_have_text('1')
+        expect(self.page.locator('#collection-storage')).to_contain_text('page session')
+        with self.page.expect_download():
+            self.page.locator('#collection-download').click()
+        self.assertTrue(self.page.evaluate('document.documentElement.scrollWidth <= innerWidth'))
+        self.page.reload()
+        self.ready()
+        expect(self.page.locator('#collection-count')).to_have_text('0')
+
+    def test_question_stays_local_and_stale_result_cannot_be_saved(self):
+        requests = []
+        self.page.on('request', lambda request: requests.append(request.post_data) if request.url.endswith('/api/algebra') else None)
+        self.open()
+        question = 'A private draft question with a unique marker 735829'
+        self.page.locator('#example-question').fill(question)
+        self.page.locator('#expression').fill('count(#24488 & #24489)')
+        expect(self.page.locator('#collection-add')).to_be_disabled()
+        self.page.locator('#algebra-run').click()
+        self.ready()
+        self.page.locator('#collection-add').click()
+        expect(self.page.locator('#collection-count')).to_have_text('1')
+        self.assertTrue(requests)
+        self.assertTrue(all(question not in request for request in requests))
 
 
 if __name__ == '__main__':

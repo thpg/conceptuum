@@ -13,6 +13,8 @@
     {id: 'exception', name: 'An explicit exception', expression: 'exact(#1354) & lacks(action, #209)', description: 'The penguin has an explicit negative flight assertion that overrides the inherited bird property.'},
     {id: 'parents', name: 'More than one genus', expression: 'parents(exact(#25447))', description: 'The glass food storage jar has two direct genera: glass jar and food storage jar.'},
     {id: 'subset', name: 'A subset comparison', expression: '#25447 <= #25439', description: 'Is every stored member of the glass food storage jar class also in the glass jar class?'},
+    {id: 'counterexample', name: 'Find a counterexample', expression: '#25439 <= #25446', description: 'The glass jar catalog is not a subset of food storage jars. Inspect the record in Only in A to see why the comparison is false.'},
+    {id: 'unknown', name: 'Unknown is not negative', expression: 'exact(#1354) & unknown(material, #90)', description: 'No applicable glass-material assertion is recorded for the penguin. Unknown does not mean an explicit negative assertion.'},
     {id: 'complement', name: 'A bounded complement', expression: '~#25439', within: '#1531', description: 'Within the jar catalog, return records outside the glass jar set. This is catalog difference, not a negative material assertion.'},
     {id: 'count', name: 'Count an intersection', expression: 'count(#24488 & #24489)', description: 'Finite sets ∩ nonempty sets: count the stored records shared by these two classes.'}
   ];
@@ -22,6 +24,9 @@
   let searchNumber = 0, searchController, searchTimer, toastTimer;
   let selection = [0, 0];
   const editor = $('expression');
+  let storage;
+  try { storage = window.localStorage; } catch (_) { /* Session-only collection remains available. */ }
+  const collection = new window.ConceptuumAlgebraCollection.Collection(storage);
   for (const demo of demos) {
     const option = el('option', '', demo.name);
     option.value = demo.id;
@@ -46,12 +51,14 @@
     url.searchParams.set('context', data.context);
     url.searchParams.set('lang', data.lang);
     if (data.within) url.searchParams.set('within', data.within);
+    if (exportData && lastRequest && lastRequest.explain) url.searchParams.set('explain', lastRequest.explain);
     return url;
   }
   function busy(value) {
     $('algebra-results').setAttribute('aria-busy', String(value));
     $('algebra-run').disabled = value;
     $('algebra-download').disabled = value || !exportData;
+    $('collection-add').disabled = value || !exportData;
   }
   function invalidate() {
     ++requestNumber;
@@ -61,6 +68,7 @@
     $('result-content').hidden = true;
     $('algebra-error').hidden = true;
     $('algebra-explanation').hidden = true;
+    $('inspect-status').textContent = '';
     $('algebra-status').textContent = 'Expression changed. Evaluate to see the current result.';
   }
   function matchDemo() {
@@ -97,7 +105,10 @@
   }
   function traceNode(trace) {
     const li = el('li', 'evidence-node');
-    li.append(el('code', '', trace.expression), el('span', `evidence-state${trace.member ? '' : ' unknown'}`, trace.member ? 'included' : 'not included'));
+    const scalar = trace.kind === 'boolean' || trace.kind === 'integer';
+    const label = scalar ? String(trace.value) : trace.member ? 'included' : 'not included';
+    const state = scalar ? (trace.value === false ? ' negative' : '') : trace.member ? '' : ' unknown';
+    li.append(el('code', '', trace.expression), el('span', `evidence-state${state}`, label));
     if (trace.meaning) li.append(el('p', 'evidence-meaning', trace.meaning));
     if (Array.isArray(trace.path)) {
       if (!trace.path.length) li.append(el('p', 'evidence-line', 'The concept itself is the root of this set.'));
@@ -129,18 +140,75 @@
     return li;
   }
   function renderExplanation(trace) {
-    $('explanation-title').textContent = `Why ${trace.concept.name}?`;
-    const intro = el('p', 'explanation-intro', `#${trace.concept.id} · ${trace.member ? 'Included in this result.' : 'Not included in this result.'}${trace.in_universe ? '' : ' Outside the selected domain.'}`);
+    const scalar = trace.kind === 'boolean' || trace.kind === 'integer';
+    $('explanation-title').textContent = `Inspect ${trace.concept.name}`;
+    const meaning = scalar ? `Expression result: ${trace.value}. Follow this record through the operands below.` : trace.member ? 'Included in this result.' : 'Not included in this result.';
+    const intro = el('p', 'explanation-intro', `#${trace.concept.id} · ${meaning}${trace.in_universe ? '' : ' Outside the selected domain.'}`);
     const tree = el('ul', 'evidence-tree');
     tree.append(traceNode(trace));
     $('explanation-content').replaceChildren(intro, tree);
     $('algebra-explanation').hidden = false;
+    $('inspect-id').value = `#${trace.concept.id}`;
+  }
+  function inspectButton(item) {
+    const button = el('button', 'diagnostic-sample', `#${item.id} ${item.name}`);
+    button.type = 'button';
+    button.setAttribute('aria-label', `Inspect ${item.name}`);
+    button.addEventListener('click', () => evaluate(lastResult.offset || 0, item.id));
+    return button;
+  }
+  function renderDiagnostics(data) {
+    const container = $('algebra-diagnostics');
+    container.replaceChildren();
+    container.hidden = !data;
+    if (!data) return;
+    container.append(el('h3', '', 'Why this answer?'), el('p', 'diagnostic-rule', data.rule));
+    const operands = el('div', 'diagnostic-operands');
+    data.operands.forEach((operand, index) => {
+      const line = el('div', 'diagnostic-operand');
+      line.append(el('span', '', String.fromCharCode(65 + index)), el('code', '', operand.expression),
+        el('strong', '', operand.kind === 'set' ? `${operand.count.toLocaleString()} records` : String(operand.value)));
+      operands.append(line);
+      if (operand.counted_set) {
+        const samples = el('div', 'diagnostic-samples');
+        operand.counted_set.items.forEach(item => samples.append(inspectButton(item)));
+        if (operand.counted_set.truncated) samples.append(el('span', 'sample-note', `Sample of ${operand.counted_set.count} counted records`));
+        operands.append(samples);
+      }
+    });
+    container.append(operands);
+    const regions = el('div', 'diagnostic-regions');
+    data.regions.forEach(region => {
+      const box = el('div', `diagnostic-region${region.counterexamples ? ' counterexamples' : ''}`);
+      const heading = el('div', 'diagnostic-region-heading');
+      heading.append(el('span', '', region.label), el('strong', '', region.count.toLocaleString()));
+      box.append(heading);
+      if (region.counterexamples) box.append(el('p', 'counterexample-label', 'Counterexamples'));
+      const samples = el('div', 'diagnostic-samples');
+      region.items.forEach(item => samples.append(inspectButton(item)));
+      box.append(samples);
+      if (region.truncated) box.append(el('p', 'sample-note', `Showing ${region.items.length} of ${region.count} records`));
+      else if (!region.count) box.append(el('p', 'sample-note', 'No stored records'));
+      regions.append(box);
+    });
+    container.append(regions);
+    if (data.note) container.append(el('p', 'diagnostic-note', data.note));
+  }
+  function currentExample() {
+    if (!exportData) return null;
+    const data = {...exportData};
+    const question = $('example-question').value.trim();
+    if (question) data.question = question;
+    return data;
+  }
+  function refreshJSON() {
+    $('algebra-json').textContent = exportData ? JSON.stringify(currentExample(), null, 2) : '';
   }
   function renderResult(data, submitted) {
     lastResult = data;
     lastRequest = submitted;
     exportData = {schema: 'conceptuum.algebra.example.v1', request: submitted, result: data};
-    $('algebra-json').textContent = JSON.stringify(exportData, null, 2);
+    refreshJSON();
     const summary = $('result-summary');
     const members = $('result-members');
     summary.replaceChildren();
@@ -148,6 +216,7 @@
     summary.append(el('strong', '', data.kind === 'set' ? data.count.toLocaleString() : String(data.value)),
       el('span', '', data.kind === 'set' ? `stored concept${data.count === 1 ? '' : 's'}` : data.kind === 'boolean' ? 'catalog comparison' : 'catalog count'));
     $('resolved-expression').textContent = `${data.resolved_expression}${data.within === 'U' ? '' : ` · within ${data.within}`}`;
+    renderDiagnostics(data.diagnostics);
     $('algebra-status').textContent = `${contexts[data.context]} relations · ${data.universe_count.toLocaleString()} records in domain${data.source.data_revision ? ` · ${data.source.data_revision}` : ''}`;
     for (const item of data.items || []) {
       const row = el('div', 'result-member');
@@ -198,6 +267,7 @@
     const serial = ++requestNumber;
     const submitted = query(offset, explain);
     exportData = null;
+    $('collection-status').textContent = '';
     $('algebra-error').hidden = true;
     $('result-content').hidden = true;
     $('algebra-explanation').hidden = true;
@@ -224,6 +294,57 @@
     } finally {
       if (serial === requestNumber) busy(false);
     }
+  }
+  function renderCollection() {
+    $('collection-count').textContent = String(collection.entries.length);
+    $('collection-download').disabled = !collection.entries.length;
+    $('collection-storage').textContent = collection.notice || (collection.persistent ?
+      'Saved in this browser · up to 50 examples / 4 MiB. Export JSONL to keep a portable copy.' :
+      'This collection lasts for this page session. Export JSONL to keep it.');
+    const list = $('collection-items');
+    list.replaceChildren();
+    if (!collection.entries.length) list.append(el('p', 'collection-empty', 'Evaluate a query, optionally inspect a record, then add the example here.'));
+    for (const entry of collection.entries) {
+      const {example} = entry;
+      const row = el('div', 'collection-item');
+      const body = el('div', 'collection-item-body');
+      const replay = el('button', 'collection-replay', example.question || example.request.expression);
+      replay.type = 'button';
+      replay.title = 'Load this example and evaluate it against the current graph';
+      replay.addEventListener('click', () => {
+        const request = example.request;
+        invalidate();
+        editor.value = request.expression;
+        $('algebra-within').value = request.within || '';
+        $('algebra-context').value = String(request.context);
+        $('algebra-language').value = request.lang === 'ru' ? 'ru' : 'en';
+        $('example-question').value = example.question || '';
+        selection = [editor.value.length, editor.value.length];
+        matchDemo();
+        evaluate(0, request.explain);
+        editor.scrollIntoView({block: 'center'});
+        toast('Loaded query. Evaluating against the current graph; the saved example stays unchanged.');
+      });
+      const answer = example.result.kind === 'set' ? `${example.result.count} records` : String(example.result.value);
+      body.append(replay, el('p', '', `${example.result.source.data_revision || 'Unversioned'} · ${contexts[example.request.context]} · ${answer}${example.request.explain ? ` · inspecting #${example.request.explain}` : ''}`));
+      const remove = el('button', 'collection-remove', 'Remove');
+      remove.type = 'button';
+      remove.setAttribute('aria-label', `Remove example ${entry.id}`);
+      remove.addEventListener('click', () => { collection.remove(entry.id); renderCollection(); $('collection-status').textContent = 'Example removed.'; });
+      row.append(body, remove);
+      list.append(row);
+    }
+  }
+  function download(text, filename, type) {
+    const url = URL.createObjectURL(new Blob([text], {type}));
+    const a = el('a');
+    a.href = url; a.download = filename;
+    document.body.append(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+  function urlInspection() {
+    const value = new URL(location.href).searchParams.get('explain');
+    return /^[1-9][0-9]{0,9}$/.test(value) && Number(value) <= 2147483647 ? Number(value) : null;
   }
   function insert(text) {
     editor.focus();
@@ -284,6 +405,31 @@
   $('algebra-prev').addEventListener('click', () => { if (lastResult && lastRequest) evaluate(Math.max(0, lastResult.offset - lastRequest.limit)); });
   $('algebra-next').addEventListener('click', () => { if (lastResult && lastRequest) evaluate(lastResult.offset + lastRequest.limit); });
   $('close-explanation').addEventListener('click', () => { $('algebra-explanation').hidden = true; });
+  $('inspect-form').addEventListener('submit', event => {
+    event.preventDefault();
+    const raw = $('inspect-id').value.trim().replace(/^#/, '');
+    if (!/^[1-9][0-9]*$/.test(raw) || Number(raw) > 2147483647) {
+      $('inspect-status').textContent = 'Enter a valid concept ID, such as #1354.';
+      return;
+    }
+    $('inspect-status').textContent = '';
+    evaluate(lastResult.offset || 0, Number(raw));
+  });
+  $('example-question').addEventListener('input', refreshJSON);
+  $('collection-add').addEventListener('click', () => {
+    if (!exportData) return;
+    try {
+      const added = collection.add(currentExample());
+      renderCollection();
+      $('collection-status').textContent = added ? 'Example added.' : 'This example is already in the collection.';
+    } catch (error) { $('collection-status').textContent = error.message; }
+  });
+  $('collection-download').addEventListener('click', () => {
+    if (collection.entries.length) download(collection.jsonl(), 'conceptuum-algebra-examples.jsonl', 'application/x-ndjson');
+  });
+  window.addEventListener('storage', event => {
+    if (event.key === window.ConceptuumAlgebraCollection.KEY || event.key === null) { collection.reload(); renderCollection(); }
+  });
   $('algebra-search').addEventListener('input', () => { clearTimeout(searchTimer); ++searchNumber; if (searchController) searchController.abort(); searchTimer = setTimeout(search, 200); });
   $('algebra-share').addEventListener('click', async () => {
     const url = queryURL().href;
@@ -300,19 +446,16 @@
   });
   $('algebra-download').addEventListener('click', () => {
     if (!exportData) return;
-    const url = URL.createObjectURL(new Blob([JSON.stringify(exportData, null, 2) + '\n'], {type: 'application/json'}));
-    const a = el('a');
-    a.href = url; a.download = 'conceptuum-algebra-example.json';
-    document.body.append(a); a.click(); a.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    download(JSON.stringify(currentExample(), null, 2) + '\n', 'conceptuum-algebra-example.json', 'application/json');
     toast('JSON includes all matching concept IDs.');
   });
-  window.addEventListener('popstate', () => { invalidate(); loadURL(); evaluate(); });
+  window.addEventListener('popstate', () => { invalidate(); loadURL(); evaluate(0, urlInspection()); });
   fetch('/static/version.json', {cache: 'no-cache'}).then(response => response.ok ? response.json() : null).then(version => {
     if (!version) return;
     $('algebra-snapshot').textContent = `${version.data_revision} · ${Number(version.concepts).toLocaleString()} concepts`;
     $('algebra-version').textContent = `v${version.code_version} · UI ${version.interface_revision} · ${version.data_revision}`;
   }).catch(() => {});
   loadURL();
-  evaluate();
+  renderCollection();
+  evaluate(0, urlInspection());
 })();

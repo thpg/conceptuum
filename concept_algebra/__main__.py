@@ -26,7 +26,7 @@ def main(argv=None):
     parser.add_argument("--limit", type=nonnegative, default=20, help="display at most this many members; 0 displays all")
     parser.add_argument("--json", action="store_true", help="emit a structured result, including the resolved ID expression")
     parser.add_argument("--ast", action="store_true", help="parse only and print the AST; no database connection")
-    parser.add_argument("--explain", type=int, metavar="ID", help="explain whether a specific record belongs to a set result")
+    parser.add_argument("--explain", type=int, metavar="ID", help="inspect a record in the result or the operands of a comparison/count")
     args = parser.parse_args(argv)
     expression = sys.stdin.read(8193) if args.expression == "-" else args.expression
     try:
@@ -61,7 +61,7 @@ def main(argv=None):
         return 0
     except AlgebraError as exc:
         error = {"type": type(exc).__name__, "message": str(exc)}
-        for field in ("position", "line", "column", "candidates"):
+        for field in ("position", "end", "line", "column", "candidates", "field"):
             if hasattr(exc, field):
                 error[field] = getattr(exc, field)
         if args.json:

@@ -98,7 +98,50 @@
 .algebra-footer{width:min(1280px,100%);margin:auto auto 0;border-top:1px solid var(--line);padding:20px 36px;display:flex;justify-content:space-between;gap:15px;font-size:10px;color:var(--muted)}
 .algebra-footer a{text-decoration:none}
 .algebra-page .toast{z-index:20}
+.algebra-diagnostics{border-top:1px solid var(--line);padding-top:17px;margin-bottom:18px}
+.algebra-diagnostics h3{font-size:12px;font-weight:650;margin-bottom:7px}
+.diagnostic-rule,.diagnostic-note{font-size:11px;line-height:1.75;color:var(--muted)}
+.diagnostic-note{margin-top:12px;padding-left:10px;border-left:2px solid #c9dcca}
+.diagnostic-operands{margin:14px 0}
+.diagnostic-operand{display:flex;gap:10px;align-items:baseline;margin:7px 0;font-size:11px;min-width:0}
+.diagnostic-operand>span{background:var(--green-soft);border-radius:4px;padding:2px 6px;font-size:10px;color:var(--green)}
+.diagnostic-operand code{overflow-wrap:anywhere;min-width:0;flex:1;color:#547060;font-size:11px}
+.diagnostic-operand>strong{flex:none;font-size:10px;font-weight:550;color:var(--muted)}
+.diagnostic-regions{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:9px}
+.diagnostic-region{background:#f7faf6;border:1px solid #e0e8dc;border-radius:8px;padding:13px;min-width:0}
+.diagnostic-region.counterexamples{background:#fff9f1;border-color:#ead9bd}
+.diagnostic-region-heading{display:flex;align-items:center;gap:12px;justify-content:space-between;font-size:10px;color:#607661}
+.diagnostic-region-heading strong{font-size:22px;font-weight:550;color:var(--green)}
+.counterexamples .diagnostic-region-heading strong{color:#947048}
+.counterexample-label{font-size:9px;text-transform:uppercase;letter-spacing:.7px;color:#97734c;margin:3px 0 7px}
+.diagnostic-samples{display:flex;gap:5px;flex-wrap:wrap;margin-top:5px;align-items:flex-start}
+.diagnostic-sample{font-size:10px;line-height:1.65;text-align:left;padding:5px 7px;border:1px solid #dbe6d8;border-radius:5px;background:white;color:#476c57;overflow-wrap:anywhere;max-width:100%}
+.sample-note{font-size:9px;color:#85917e;margin-top:7px;line-height:1.6}
+.inspect-form{border-top:1px solid var(--line);padding-top:15px;margin-top:12px}
+.inspect-form label{font-size:11px;font-weight:550;display:block;margin-bottom:7px}
+.inspect-form label span{font-weight:400;color:var(--muted);margin-left:6px;font-size:10px}
+.inspect-form>div{display:flex;gap:8px;align-items:center}
+.inspect-form input{width:135px;border:1px solid var(--line);border-radius:5px;padding:7px 9px;font-size:11px;background:#fafcf8}
+#inspect-status{font-size:11px;color:#91634a;margin-top:6px}
+#inspect-status:empty{display:none}
+.collection-card .card-heading{margin-bottom:12px}
+#collection-count{font-size:10px;color:#5b795f;border-radius:5px;background:#edf4e8;padding:3px 7px;margin-left:5px}
+.collection-intro,.collection-storage,.collection-empty{color:var(--muted);font-size:11px;line-height:1.7}
+.collection-card>label{display:block;font-size:11px;font-weight:550;margin:17px 0 7px}
+.collection-card>label span{font-weight:400;color:var(--muted)}
+#example-question{display:block;width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:7px;resize:vertical;background:#fafcf8;font-size:12px;line-height:1.7;min-height:70px}
+.collection-actions{display:flex;align-items:center;gap:12px;margin:12px 0}
+#collection-status{font-size:11px;line-height:1.7;color:#59745f}
+.collection-actions button{flex:none}
+.collection-storage{font-size:10px}
+.collection-items{margin-top:17px;max-height:370px;overflow:auto}
+.collection-item{display:flex;align-items:center;gap:16px;padding:13px 0;border-top:1px solid var(--line)}
+.collection-item-body{flex:1;min-width:0}
+.collection-replay{display:block;text-align:left;padding:0;max-width:100%;overflow-wrap:anywhere;color:var(--green);font-size:12px;line-height:1.7}
+.collection-item-body p{font-size:10px;color:var(--muted);margin-top:4px}
+.collection-remove{font-size:10px;flex:none;color:#8b7770;padding:7px;border-radius:5px}
 @media(max-width:1100px){.algebra-main{padding:30px 24px 40px}.algebra-layout{grid-template-columns:minmax(0,1fr) 268px;gap:20px}.algebra-card{padding:19px}.algebra-page .app-header{gap:18px}.algebra-intro h1{font-size:34px}.shortcut-hint{display:none}.algebra-nav a{padding:8px 10px}}
 @media(max-width:820px){.algebra-layout{grid-template-columns:1fr}.algebra-sidebar{display:grid;grid-template-columns:1fr 1fr;gap:18px}.algebra-intro{align-items:flex-start;flex-direction:column;gap:16px}.snapshot-badge{padding:6px 11px}.algebra-nav{gap:0}.algebra-nav a{font-size:11px;padding:7px 9px}.algebra-page .app-header{gap:12px;padding:0 18px}.algebra-page .header-actions{gap:8px}.algebra-page .github-link{display:none}.algebra-page .brand{font-size:23px}.algebra-page .brand-mark{width:29px;height:29px}}
 @media(max-width:540px){.algebra-page .app-header{height:auto;min-height:66px;flex-wrap:wrap;padding:14px 16px 8px;gap:10px 12px}.algebra-nav{order:3;width:100%;justify-content:space-between;border-top:1px solid #edf0eb;padding-top:7px}.algebra-nav a{padding:6px 14px}.algebra-main{padding:25px 16px 32px}.algebra-intro{margin-bottom:22px}.algebra-intro h1{font-size:32px}.algebra-intro p{font-size:12px;max-width:280px;line-height:1.7}.algebra-card{padding:17px;border-radius:10px}.algebra-sidebar{grid-template-columns:1fr}.card-heading{gap:8px}.card-heading select{max-width:62%;font-size:10px}.card-heading>label,.card-heading h2{font-size:13px}#expression{padding:13px;min-height:110px}.algebra-options{grid-template-columns:1fr;gap:12px}.algebra-options input{font-size:16px}.algebra-options select{font-size:13px}.evaluate-row{gap:7px}.primary-button{padding:10px 16px}.evaluate-row .text-button{font-size:10px}.operator-bar button{min-width:31px}.operator-bar .clear-expression{padding-right:1px}.expression-help{font-size:10px}.demo-description{font-size:11px}.member-body a{font-size:12px}.member-symbol{display:none}.explain-button{font-size:10px;padding:7px 9px}.algebra-footer{padding:18px 16px;font-size:9px}.evidence-node{padding-left:9px}#algebra-search{font-size:16px}.algebra-note{padding:4px 8px}.result-summary strong{font-size:25px}}
 @media(prefers-reduced-motion:reduce){.results-card[aria-busy=true] .algebra-status::before{animation:none}}
+@media(max-width:540px){.diagnostic-regions{grid-template-columns:1fr}.diagnostic-region{padding:11px}.diagnostic-sample{font-size:11px}.inspect-form label span{display:block;margin:3px 0 0}.inspect-form input,#example-question{font-size:16px}.collection-card .card-heading{align-items:flex-start}.collection-card .card-heading .text-button{font-size:10px;white-space:nowrap}.collection-card .card-heading h2{line-height:1.6}.collection-actions{align-items:flex-start;flex-direction:column;gap:6px}.diagnostic-operand{flex-wrap:wrap}.diagnostic-operand code{flex-basis:70%}}

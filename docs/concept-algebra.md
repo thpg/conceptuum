@@ -12,19 +12,64 @@ terms can be English or Russian. Language version: **1**.
 
 ## Web workspace
 
-Open **Algebra** in the explorer header. Choose one of seven database demos or
+Open **Algebra** in the explorer header. Choose one of nine database demos or
 enter an expression, select its relation context and optionally specify a
 **Within** domain. Search for a term to insert its exact ID at the editor cursor.
 Ambiguous terms offer explicit sense choices without guessing. Press **Evaluate**
 or Ctrl/Cmd+Enter, then **Explain** beside a result to inspect source edges.
 
-**Copy query link** preserves the expression, domain, context and language.
+**Copy query link** preserves the expression, domain, context, language and
+inspected record. **Inspect any record** checks a concept ID even when the
+record is outside the result; it also traces operands of counts and comparisons.
 **Download JSON** exports schema `conceptuum.algebra.example.v1`: the original
 request and result, resolved AST, all matching IDs, selected member evidence,
 data revision and snapshot SHA-256. Labels are paginated, but the `ids` array is
 complete. Boolean and integer results have a `value` instead of member IDs.
 See [LLM training data and evaluation](../README.md#llm-training-data-and-evaluation)
 for a suggested dataset workflow.
+
+### Comparison evidence
+
+Set comparisons and `disjoint(A, B)` return a `diagnostics` object with operand
+sizes and three exact regions: `left_only`, `intersection`, and `right_only`.
+Each region includes up to five labeled `items`, a `truncated` flag, and a
+`counterexamples` flag when its records falsify the comparison. Equal sets
+explain a failed proper-subset comparison through equality, without inventing
+a counterexample. `count(A)` and `empty(A)` show the counted set; comparisons
+such as `count(A) > count(B)` retain the evaluated integer operands.
+
+Click a diagnostic sample to inspect its membership paths in both operands.
+For example:
+
+```console
+python -m concept_algebra '#25439 <= #25446' --json --explain 25439
+python -m concept_algebra 'count(#24488 & #24489)' --json --explain 24492
+```
+
+Set explanations retain `member`. Scalar explanation nodes use `kind` and
+`value`, with recursively typed `operands`. A record's operand membership
+illustrates the computation; it does not replace the complete-set comparison.
+All diagnostics use the selected finite domain and remain statements about
+catalog records, including when a missing path supplies a counterexample.
+
+### Collecting examples
+
+Enter an optional **Question** and use **Add current example** to save the
+evaluated query, answer, version metadata, and currently selected explanation.
+The **LLM example collection** supports individual removal, replay and JSONL
+download. Every JSONL line is a `conceptuum.algebra.example.v1` object, with an
+optional top-level `question` string. Newlines inside questions are JSON-escaped.
+Repeated saves of the same question, query, inspected record, answer and source
+revision do not duplicate an example just because its displayed page changed.
+
+The collection uses browser storage, with a 50-example / 4 MiB limit; it is
+not uploaded. Questions are also omitted from evaluation requests and shared
+URLs. If browser storage is unavailable or full, the interface identifies the
+session-only collection and still allows JSONL export. Replaying an example
+reevaluates the query against current data without overwriting its saved answer.
+Separate graph revisions and reviewed/unreviewed examples in your own pipeline.
+
+### HTTP API
 
 The read-only HTTP endpoint is `POST /api/algebra` with `Content-Type: application/json`:
 
@@ -33,8 +78,8 @@ The read-only HTTP endpoint is `POST /api/algebra` with `Content-Type: applicati
 ```
 
 `context` defaults to 1; `lang` is `en`, `ru`, or null. `limit` is 1–100 and
-`offset` is 0–1,000,000. Omit `explain` or use a concept ID for a set membership
-explanation. Errors contain a message, with source positions and candidate IDs
+`offset` is 0–1,000,000. Omit `explain` or use a concept ID to inspect result
+membership or operands of a scalar expression. Errors contain a message, with source positions and candidate IDs
 when applicable; `field` identifies `expression` or `within`. Offsets count
 Unicode code points. The web API limits combined expression/domain size to 256
 AST nodes and 12 property selectors, with a 96 KiB request-body limit.
@@ -314,12 +359,13 @@ valid.
 python -m unittest discover -s tools -p "test_concept_algebra*.py" -v
 ```
 
-The 44 focused checks cover partial overlap, operator precedence, De Morgan
+The 51 focused checks cover partial overlap, operator precedence, De Morgan
 identities, finite complements, typed comparisons, context isolation, homonyms,
 negative exceptions, conflicting multiple inheritance, owner specificity,
 cycles, evidence paths, read-only loading and CLI errors. They use a synthetic
 graph and do not need a database or model. Q39 examples above were additionally
 checked against the real database without modifying it. HTTP tests also cover
-pagination with complete ID exports, error spans, cache invalidation and request
-limits. See the [browser checks](../visualizer/README.md#browser-checks) for the
-six Q39 desktop/mobile scenarios.
+pagination with complete ID exports, error spans, cache invalidation, request
+limits, comparison counterexamples and typed scalar explanations. See the
+[browser checks](../visualizer/README.md#browser-checks) for eleven Q39 desktop/mobile
+scenarios and nine JavaScript collection checks.
