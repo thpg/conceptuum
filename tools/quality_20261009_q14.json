@@ -1,0 +1,4261 @@
+{
+  "source": "quality-20261009-q14",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Physical area, volume, density, power and force; derived units; measurement purposes and laboratory liquid instruments.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "si": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf",
+      "instrument": "https://jcgm.bipm.org/vim/en/3.1.html",
+      "density": "https://wiki.anton-paar.com/au-en/density-and-density-measurement/",
+      "electricity": "https://www.eia.gov/energyexplained/electricity/measuring-electricity.php",
+      "energy_units": "https://www.eia.gov/tools/glossary/index.php?id=Electric",
+      "wattmeter": "https://www.hioki.com/global/products/power-meters",
+      "energy_meter": "https://www.se.com/uk/en/product-subcategory/4125-cost-energy-management-meters/",
+      "force_gauge": "https://mark-10.com/products/force-gauges/",
+      "volumetric": "https://shop.brand.de/en/volumetric-instruments.html",
+      "cylinders": "https://shop.brand.de/en/volumetric-instruments/graduated-cylinders.html",
+      "pipettes": "https://shop.brand.de/en/general-lab-products/pipettes.html"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet. CC BY 4.0 and the underlying Princeton notice are retained in docs/quality/2026-10-09-q11.md#sources-and-reuse. BIPM quantity/unit information is adapted with attribution there. Manufacturer sources support instrument functions; names, scope restrictions and graph mappings are reviewed adaptations.",
+    "existing_cohort": [
+      22,
+      30,
+      43,
+      44,
+      2142,
+      2432,
+      2667,
+      2709,
+      2710,
+      3081,
+      3399,
+      3462,
+      3759,
+      3867,
+      24515,
+      24516,
+      24517,
+      24518,
+      24519,
+      24520,
+      24521,
+      24522,
+      24523,
+      24564,
+      24587
+    ],
+    "context_policy": "Every new concept and relation uses U1 and unspecified strength. Existing home contexts and all grammar rows are preserved; U2 remains empty.",
+    "sense_decisions": [
+      {
+        "concept": "area_quantity",
+        "synset": "oewn-05135784-n",
+        "decision": "add",
+        "alignment": "selected quantity sense",
+        "scope": "The two-dimensional extent quantity, distinct from a public square or geographical region. It has length-squared dimension."
+      },
+      {
+        "concept": "volume_quantity",
+        "synset": "oewn-13801244-n",
+        "decision": "add",
+        "alignment": "selected quantity sense",
+        "scope": "The three-dimensional extent quantity, distinct from a book volume, sound loudness, or concept extension."
+      },
+      {
+        "concept": "mass_density",
+        "synset": "oewn-04948630-n",
+        "decision": "add",
+        "alignment": "restricted mass/volume sense",
+        "scope": "Mass per volume. This is narrower than generic amount-per-unit-size and distinct from optical density, population density, crowdedness and relative density."
+      },
+      {
+        "concept": "liquid_density",
+        "synset": null,
+        "decision": "add",
+        "alignment": "subject-source extension",
+        "scope": "Mass density of a liquid sample, with measurement conditions such as temperature specified in actual use."
+      },
+      {
+        "concept": "relative_density",
+        "synset": "oewn-05096989-n",
+        "decision": "add",
+        "alignment": "corrected quantity hierarchy",
+        "scope": "The ratio of sample mass density to a stated reference mass density under specified conditions. It is dimensionless, unlike mass per volume. Do not automatically fix every reference to water."
+      },
+      {
+        "concept": "physical_power",
+        "synset": "oewn-11473433-n",
+        "decision": "add",
+        "alignment": "corrected quantity hierarchy",
+        "scope": "Rate of energy transfer or work, distinct from energy itself and from political power. Classify it as a physical quantity rather than copying the physical-phenomenon genus."
+      },
+      {
+        "concept": "physical_force",
+        "synset": "oewn-11479041-n",
+        "decision": "add",
+        "alignment": "selected physical quantity",
+        "scope": "The physical force quantity, distinct from coercion, military force, muscular strength and power. Do not copy the broad physical-phenomenon dictionary genus."
+      },
+      {
+        "concept": "electrical_power",
+        "synset": "oewn-11469756-n",
+        "decision": "add",
+        "alignment": "condition-aware electrical sense",
+        "scope": "The rate of electrical energy transfer. Do not apply voltage-times-current without specifying instantaneous/DC/AC conditions; apparent and reactive power are not imported as synonyms."
+      },
+      {
+        "concept": "electrical_energy",
+        "synset": "oewn-11470903-n",
+        "decision": "add",
+        "alignment": "restricted energy quantity",
+        "scope": "Energy transferred or supplied electrically, distinct from its rate of transfer. Exclude the dictionary power and electricity synonyms from this selected quantity."
+      },
+      {
+        "concept": "density_unit",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed unit family",
+        "scope": "A unit for mass per volume, not a unit of the dimensionless relative-density ratio."
+      },
+      {
+        "concept": "speed_unit",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed unit family",
+        "scope": "A length-per-time unit applicable to speed and velocity values. The scalar speed quantity and a vector velocity remain different meanings."
+      },
+      {
+        "concept": "acceleration_unit",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed unit family",
+        "scope": "A length-per-time-squared unit. It is not a subtype of a speed unit."
+      },
+      {
+        "concept": "kg_m3",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed unit or standard prefix composition",
+        "scope": "The coherent SI mass-density unit."
+      },
+      {
+        "concept": "g_cm3",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed unit or standard prefix composition",
+        "scope": "A mass-density unit distinct in scale from kilogram per cubic metre."
+      },
+      {
+        "concept": "m_s",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed unit or standard prefix composition",
+        "scope": "The coherent SI speed/velocity unit."
+      },
+      {
+        "concept": "km_h",
+        "synset": "oewn-15304947-n",
+        "decision": "add",
+        "alignment": "reviewed unit or standard prefix composition",
+        "scope": "A speed unit, not the general rate quantity implied by the dictionary hierarchy."
+      },
+      {
+        "concept": "m_s2",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed unit or standard prefix composition",
+        "scope": "The coherent SI acceleration unit; a squared time denominator, not a squared speed."
+      },
+      {
+        "concept": "watt_hour",
+        "synset": "oewn-13749443-n",
+        "decision": "add",
+        "alignment": "reviewed unit or standard prefix composition",
+        "scope": "An energy unit, distinct from the watt power unit."
+      },
+      {
+        "concept": "kilowatt_hour",
+        "synset": "oewn-13749588-n",
+        "decision": "add",
+        "alignment": "reviewed unit or standard prefix composition",
+        "scope": "An energy unit. Omit ambiguous B.T.U./Board of Trade aliases; do not confuse it with a British thermal unit or a kilowatt."
+      },
+      {
+        "concept": "kilonewton",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed unit or standard prefix composition",
+        "scope": "A force unit with the SI kilo prefix."
+      },
+      {
+        "concept": "kilopascal",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed unit or standard prefix composition",
+        "scope": "A pressure unit with the SI kilo prefix."
+      },
+      {
+        "concept": "megapascal",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed unit or standard prefix composition",
+        "scope": "A pressure unit with the SI mega prefix. Case is significant in the symbol; do not equate it to millipascal."
+      },
+      {
+        "concept": "kilojoule",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed unit or standard prefix composition",
+        "scope": "An energy unit with the SI kilo prefix."
+      },
+      {
+        "concept": "megajoule",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed unit or standard prefix composition",
+        "scope": "An energy unit with the SI mega prefix."
+      },
+      {
+        "concept": "megawatt",
+        "synset": "oewn-13666373-n",
+        "decision": "add",
+        "alignment": "reviewed unit or standard prefix composition",
+        "scope": "A power unit with the SI mega prefix, not an energy unit."
+      },
+      {
+        "concept": "milliampere",
+        "synset": "oewn-13659092-n",
+        "decision": "add",
+        "alignment": "reviewed unit or standard prefix composition",
+        "scope": "An electric-current unit with the SI milli prefix."
+      },
+      {
+        "concept": "kilovolt",
+        "synset": "oewn-13665249-n",
+        "decision": "add",
+        "alignment": "reviewed unit or standard prefix composition",
+        "scope": "A voltage unit with the SI kilo prefix."
+      },
+      {
+        "concept": "kiloohm",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed unit or standard prefix composition",
+        "scope": "An electrical-resistance unit with the SI kilo prefix."
+      },
+      {
+        "concept": "area_measurement",
+        "synset": "oewn-03582481-n",
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of area, not selection of a geographical location."
+      },
+      {
+        "concept": "volume_measurement",
+        "synset": "oewn-03456417-n",
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of occupied or contained spatial volume."
+      },
+      {
+        "concept": "density_measurement",
+        "synset": "oewn-03179967-n",
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Determination of mass per volume, using an instrument alone or with other equipment."
+      },
+      {
+        "concept": "liquid_density_measurement",
+        "synset": "oewn-03558666-n",
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Determination of a liquid sample mass density."
+      },
+      {
+        "concept": "relative_density_measurement",
+        "synset": "oewn-05096989-n",
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Determine the dimensionless ratio to a stated reference under specified conditions."
+      },
+      {
+        "concept": "power_measurement",
+        "synset": "oewn-04571564-n",
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Determine a rate of energy transfer, distinct from accumulated energy."
+      },
+      {
+        "concept": "electric_power_measurement",
+        "synset": "oewn-04571564-n",
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of electrical power; no universal AC power-factor formula is asserted."
+      },
+      {
+        "concept": "energy_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Determine an amount of energy rather than its transfer rate."
+      },
+      {
+        "concept": "electric_energy_measurement",
+        "synset": "oewn-03277721-n",
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of electrical energy, such as accumulated kilowatt-hours."
+      },
+      {
+        "concept": "force_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of mechanical force, distinct from power measurement."
+      },
+      {
+        "concept": "planimeter",
+        "synset": "oewn-03582481-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Instrument for determining the area of a plane figure. Omit the generic integrator synonym, which also has other mathematical/device senses."
+      },
+      {
+        "concept": "wattmeter",
+        "synset": "oewn-04571564-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An electrical-power measuring instrument; do not make accumulated energy its defining target."
+      },
+      {
+        "concept": "electricity_meter",
+        "synset": "oewn-03277721-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An instrument for accumulated electrical energy. The dictionary amount-of-power wording and ambiguous power meter synonym are not copied."
+      },
+      {
+        "concept": "force_gauge",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Select the force-measuring instrument supported by the manufacturer. OEWN dynamometer/ergometer describes a power-measuring sense and is not an equivalent synset."
+      },
+      {
+        "concept": "density_instrument",
+        "synset": "oewn-03179967-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The instrument family for mass density, distinct from optical densitometry. The device can operate in conjunction with other equipment."
+      },
+      {
+        "concept": "hydrometer",
+        "synset": "oewn-03558666-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The floating instrument used in liquid-density determination. Scale choice and reference conditions belong to a specific measurement; the gravity-measuring gravimeter synonym and unrestricted solids claim are excluded."
+      },
+      {
+        "concept": "liquid_pycnometer",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A calibrated vessel used with weighing to determine liquid density. Gas pycnometers for solids are a different subtype; no stand-alone direct-reading claim is made."
+      },
+      {
+        "concept": "volumetric_ware",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Laboratory volumetric apparatus used to contain or deliver known liquid volumes. Do not restrict the entire family to glass or to a single calibration convention."
+      },
+      {
+        "concept": "graduated_cylinder",
+        "synset": "oewn-03456655-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A graduated cylindrical volume-measuring vessel. Glass and plastic examples are supported; no universal material is asserted."
+      },
+      {
+        "concept": "volumetric_flask",
+        "synset": null,
+        "decision": "add",
+        "alignment": "manufacturer-supported subtype",
+        "scope": "A flask calibrated to contain a stated volume at a specified temperature, normally identified by a calibration mark; not necessarily a multi-division scale."
+      },
+      {
+        "concept": "burette",
+        "synset": "oewn-02924976-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A calibrated device for measuring delivered liquid volume, commonly used in titration. No universal glass material or one exclusive titration purpose is asserted."
+      },
+      {
+        "concept": "liquid_transfer",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed practical process",
+        "scope": "A physical process of moving liquid between locations or containers. It does not inherently require a calibrated volume measurement."
+      },
+      {
+        "concept": "pipette",
+        "synset": "oewn-03953387-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A laboratory liquid-transfer tool. The dictionary graduated-glass-only description is too narrow; a generic pipette need not be a calibrated volumetric instrument."
+      },
+      {
+        "concept": "volumetric_pipette",
+        "synset": null,
+        "decision": "add",
+        "alignment": "manufacturer-supported subtype",
+        "scope": "A pipette calibrated to deliver a stated volume. Distinct from the graduated multi-volume subtype."
+      },
+      {
+        "concept": "graduated_pipette",
+        "synset": "oewn-03953387-n",
+        "decision": "add",
+        "alignment": "restricted dictionary sense",
+        "scope": "A measuring pipette with a graduated scale for selectable volumes. This is the narrower type represented by the dictionary glass-tube description."
+      },
+      {
+        "concept": "pasteur_pipette",
+        "synset": null,
+        "decision": "add",
+        "alignment": "manufacturer-supported subtype",
+        "scope": "A liquid-transfer/dropper pipette. No universal calibrated-volume capability or glass-only material is asserted."
+      },
+      {
+        "concept": 30,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse tool for the generic transfer pipette."
+      },
+      {
+        "concept": 2709,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse physical quantity for reviewed scalar/vector quantities."
+      },
+      {
+        "concept": 2710,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse energy; exclude the free-energy synonym for the general quantity."
+      },
+      {
+        "concept": 3081,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse mass for density reasoning without calling force weight mass."
+      },
+      {
+        "concept": 3462,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse speed; the new speed unit is not a subtype of this quantity."
+      },
+      {
+        "concept": 3867,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse measurement as the process genus."
+      },
+      {
+        "concept": 24564,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse measuring instrument with VIM alone-or-in-conjunction scope."
+      },
+      {
+        "concept": 24587,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse physical acceleration and its distinction from speeding up."
+      },
+      {
+        "concept": 24515,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing unit family; prefixed units are siblings under it, not genus children of the unprefixed unit."
+      },
+      {
+        "concept": 24516,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing unit family; prefixed units are siblings under it, not genus children of the unprefixed unit."
+      },
+      {
+        "concept": 24517,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing unit family; prefixed units are siblings under it, not genus children of the unprefixed unit."
+      },
+      {
+        "concept": 24518,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing unit family; prefixed units are siblings under it, not genus children of the unprefixed unit."
+      },
+      {
+        "concept": 24519,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing unit family; prefixed units are siblings under it, not genus children of the unprefixed unit."
+      },
+      {
+        "concept": 24520,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing unit family; prefixed units are siblings under it, not genus children of the unprefixed unit."
+      },
+      {
+        "concept": 24521,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing unit family; prefixed units are siblings under it, not genus children of the unprefixed unit."
+      },
+      {
+        "concept": 24522,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing unit family; prefixed units are siblings under it, not genus children of the unprefixed unit."
+      },
+      {
+        "concept": 24523,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing unit family; prefixed units are siblings under it, not genus children of the unprefixed unit."
+      },
+      {
+        "concept": 3399,
+        "synset": null,
+        "decision": "refine",
+        "alignment": "reviewed sense",
+        "scope": "Qualify resultant force and replace only its direct physical-quantity genus with force."
+      },
+      {
+        "concept": 2142,
+        "synset": null,
+        "decision": "defer",
+        "alignment": "reviewed sense",
+        "scope": "City square is distinct from area as quantity."
+      },
+      {
+        "concept": 2432,
+        "synset": null,
+        "decision": "defer",
+        "alignment": "reviewed sense",
+        "scope": "Concept extension is a set meaning, distinct from spatial volume."
+      },
+      {
+        "concept": 2667,
+        "synset": null,
+        "decision": "defer",
+        "alignment": "reviewed sense",
+        "scope": "Political power remains distinct from the rate-of-energy-transfer quantity."
+      },
+      {
+        "concept": 3759,
+        "synset": null,
+        "decision": "defer",
+        "alignment": "reviewed sense",
+        "scope": "The coercion verb remains distinct from physical force."
+      },
+      {
+        "concept": 44,
+        "synset": null,
+        "decision": "defer",
+        "alignment": "reviewed sense",
+        "scope": "Weight has colloquial and physical interpretations; its existing broad physical-quantity genus and descendants are not changed."
+      },
+      {
+        "concept": 43,
+        "synset": null,
+        "decision": "defer",
+        "alignment": "reviewed sense",
+        "scope": "Mixed size descendants and width need a separate geometry review."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-03265436-n",
+        "decision": "defer",
+        "alignment": "reviewed sense",
+        "scope": "The dictionary dynamometer/ergometer sense measures power. Do not attach that sense ID or ergometer alias to the new force gauge. A power/torque dynamometer cohort remains separate."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-03180123-n",
+        "decision": "defer",
+        "alignment": "reviewed sense",
+        "scope": "Optical densitometer measures optical density, not mass per volume."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-04948864-n",
+        "decision": "defer",
+        "alignment": "reviewed sense",
+        "scope": "Water-referenced specific gravity is narrower than generic relative density. Do not equate all possible references to water."
+      }
+    ],
+    "limits": "The graph records instrument purposes and process targets, not formulas or executable unit conversions. Relative density is not mass density; no kg/m3 unit is assigned to it. A device may need other equipment to perform its intended measurement. Calibration conditions, precision, universal materials, fluid-handling procedures and electrical safety instructions are not inferred. Weight 44, general energy/heat descendants, width/geometry, and the power-measuring dynamometer sense remain pending. No application test suites.",
+    "new_term_collisions": [
+      {
+        "key": "area_quantity",
+        "term": "площадь",
+        "lang": "ru",
+        "existing": [
+          [
+            2142,
+            "площадь"
+          ]
+        ]
+      },
+      {
+        "key": "physical_power",
+        "term": "power",
+        "lang": "en",
+        "existing": [
+          [
+            2667,
+            "власть"
+          ]
+        ]
+      },
+      {
+        "key": "physical_force",
+        "term": "force",
+        "lang": "en",
+        "existing": [
+          [
+            3759,
+            "вынудить"
+          ]
+        ]
+      }
+    ],
+    "collision_decisions": {
+      "area_quantity": "Preserve the separate public-square concept 2142; bare Russian area/square spelling is a homonym.",
+      "physical_power": "Preserve political power 2667; the new quantity has a qualified canonical label.",
+      "physical_force": "Preserve the coercion verb 3759; force as a quantity has its own qualified identity."
+    },
+    "refreshed_comparison": {
+      "baseline": "Q13",
+      "existing_concepts": 12636,
+      "existing_terms": 35543,
+      "synsets_with_exact_en_candidate": 15415,
+      "synsets_without_exact_en_candidate": 92104,
+      "existing_concepts_with_dictionary_candidate": 4017,
+      "caveat": "Exact normalized English spellings are candidates, not semantic identities or a missing-concept count."
+    }
+  },
+  "concepts": [
+    {
+      "key": "area_quantity",
+      "name": "площадь (величина)",
+      "parent": 2709,
+      "universum_id": 1,
+      "terms": [
+        [
+          "площадь (величина)",
+          "ru"
+        ],
+        [
+          "area (quantity)",
+          "en"
+        ],
+        [
+          "area",
+          "en"
+        ],
+        [
+          "площадь",
+          "ru"
+        ]
+      ],
+      "reason": "The two-dimensional extent quantity, distinct from a public square or geographical region. It has length-squared dimension. OEWN 2025: oewn-05135784-n. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "volume_quantity",
+      "name": "объём (физическая величина)",
+      "parent": 2709,
+      "universum_id": 1,
+      "terms": [
+        [
+          "объём (физическая величина)",
+          "ru"
+        ],
+        [
+          "volume (physical quantity)",
+          "en"
+        ],
+        [
+          "volume",
+          "en"
+        ],
+        [
+          "объём",
+          "ru"
+        ]
+      ],
+      "reason": "The three-dimensional extent quantity, distinct from a book volume, sound loudness, or concept extension. OEWN 2025: oewn-13801244-n. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "mass_density",
+      "name": "плотность (масса на объём)",
+      "parent": 2709,
+      "universum_id": 1,
+      "terms": [
+        [
+          "плотность (масса на объём)",
+          "ru"
+        ],
+        [
+          "mass density",
+          "en"
+        ],
+        [
+          "density",
+          "en"
+        ],
+        [
+          "плотность",
+          "ru"
+        ],
+        [
+          "массовая плотность",
+          "ru"
+        ]
+      ],
+      "reason": "Mass per volume. This is narrower than generic amount-per-unit-size and distinct from optical density, population density, crowdedness and relative density. OEWN 2025: oewn-04948630-n. Source: https://wiki.anton-paar.com/au-en/density-and-density-measurement/"
+    },
+    {
+      "key": "liquid_density",
+      "name": "плотность жидкости",
+      "parent": "mass_density",
+      "universum_id": 1,
+      "terms": [
+        [
+          "плотность жидкости",
+          "ru"
+        ],
+        [
+          "liquid density",
+          "en"
+        ]
+      ],
+      "reason": "Mass density of a liquid sample, with measurement conditions such as temperature specified in actual use. Source: https://wiki.anton-paar.com/au-en/density-and-density-measurement/"
+    },
+    {
+      "key": "relative_density",
+      "name": "относительная плотность",
+      "parent": 2709,
+      "universum_id": 1,
+      "terms": [
+        [
+          "относительная плотность",
+          "ru"
+        ],
+        [
+          "relative density",
+          "en"
+        ]
+      ],
+      "reason": "The ratio of sample mass density to a stated reference mass density under specified conditions. It is dimensionless, unlike mass per volume. Do not automatically fix every reference to water. OEWN 2025: oewn-05096989-n. Source: https://wiki.anton-paar.com/au-en/density-and-density-measurement/"
+    },
+    {
+      "key": "physical_power",
+      "name": "мощность (физическая величина)",
+      "parent": 2709,
+      "universum_id": 1,
+      "terms": [
+        [
+          "мощность (физическая величина)",
+          "ru"
+        ],
+        [
+          "power (physical quantity)",
+          "en"
+        ],
+        [
+          "power",
+          "en"
+        ],
+        [
+          "мощность",
+          "ru"
+        ]
+      ],
+      "reason": "Rate of energy transfer or work, distinct from energy itself and from political power. Classify it as a physical quantity rather than copying the physical-phenomenon genus. OEWN 2025: oewn-11473433-n. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "physical_force",
+      "name": "сила (физическая величина)",
+      "parent": 2709,
+      "universum_id": 1,
+      "terms": [
+        [
+          "сила (физическая величина)",
+          "ru"
+        ],
+        [
+          "force (physical quantity)",
+          "en"
+        ],
+        [
+          "force",
+          "en"
+        ],
+        [
+          "сила",
+          "ru"
+        ]
+      ],
+      "reason": "The physical force quantity, distinct from coercion, military force, muscular strength and power. Do not copy the broad physical-phenomenon dictionary genus. OEWN 2025: oewn-11479041-n. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "electrical_power",
+      "name": "электрическая мощность",
+      "parent": "physical_power",
+      "universum_id": 1,
+      "terms": [
+        [
+          "электрическая мощность",
+          "ru"
+        ],
+        [
+          "electrical power",
+          "en"
+        ],
+        [
+          "electric power",
+          "en"
+        ]
+      ],
+      "reason": "The rate of electrical energy transfer. Do not apply voltage-times-current without specifying instantaneous/DC/AC conditions; apparent and reactive power are not imported as synonyms. OEWN 2025: oewn-11469756-n. Source: https://www.hioki.com/global/products/power-meters"
+    },
+    {
+      "key": "electrical_energy",
+      "name": "электрическая энергия",
+      "parent": 2710,
+      "universum_id": 1,
+      "terms": [
+        [
+          "электрическая энергия",
+          "ru"
+        ],
+        [
+          "electrical energy",
+          "en"
+        ],
+        [
+          "electric energy",
+          "en"
+        ]
+      ],
+      "reason": "Energy transferred or supplied electrically, distinct from its rate of transfer. Exclude the dictionary power and electricity synonyms from this selected quantity. OEWN 2025: oewn-11470903-n. Source: https://www.eia.gov/energyexplained/electricity/measuring-electricity.php"
+    },
+    {
+      "key": "density_unit",
+      "name": "единица массовой плотности",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица массовой плотности",
+          "ru"
+        ],
+        [
+          "mass density unit",
+          "en"
+        ]
+      ],
+      "reason": "A unit for mass per volume, not a unit of the dimensionless relative-density ratio. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "speed_unit",
+      "name": "единица скорости",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица скорости",
+          "ru"
+        ],
+        [
+          "speed unit",
+          "en"
+        ]
+      ],
+      "reason": "A length-per-time unit applicable to speed and velocity values. The scalar speed quantity and a vector velocity remain different meanings. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "acceleration_unit",
+      "name": "единица ускорения",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица ускорения",
+          "ru"
+        ],
+        [
+          "acceleration unit",
+          "en"
+        ]
+      ],
+      "reason": "A length-per-time-squared unit. It is not a subtype of a speed unit. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "kg_m3",
+      "name": "килограмм на кубический метр",
+      "parent": "density_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "килограмм на кубический метр",
+          "ru"
+        ],
+        [
+          "kilogram per cubic metre",
+          "en"
+        ],
+        [
+          "kilogram per cubic meter",
+          "en"
+        ],
+        [
+          "kg/m3",
+          "en"
+        ],
+        [
+          "kg/m³",
+          "en"
+        ],
+        [
+          "кг/м³",
+          "ru"
+        ]
+      ],
+      "reason": "The coherent SI mass-density unit. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "g_cm3",
+      "name": "грамм на кубический сантиметр",
+      "parent": "density_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "грамм на кубический сантиметр",
+          "ru"
+        ],
+        [
+          "gram per cubic centimetre",
+          "en"
+        ],
+        [
+          "gram per cubic centimeter",
+          "en"
+        ],
+        [
+          "g/cm3",
+          "en"
+        ],
+        [
+          "g/cm³",
+          "en"
+        ],
+        [
+          "г/см³",
+          "ru"
+        ]
+      ],
+      "reason": "A mass-density unit distinct in scale from kilogram per cubic metre. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "m_s",
+      "name": "метр в секунду",
+      "parent": "speed_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "метр в секунду",
+          "ru"
+        ],
+        [
+          "metre per second",
+          "en"
+        ],
+        [
+          "meter per second",
+          "en"
+        ],
+        [
+          "m/s",
+          "en"
+        ],
+        [
+          "м/с",
+          "ru"
+        ]
+      ],
+      "reason": "The coherent SI speed/velocity unit. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "km_h",
+      "name": "километр в час",
+      "parent": "speed_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "километр в час",
+          "ru"
+        ],
+        [
+          "kilometre per hour",
+          "en"
+        ],
+        [
+          "kilometer per hour",
+          "en"
+        ],
+        [
+          "kilometres per hour",
+          "en"
+        ],
+        [
+          "kilometers per hour",
+          "en"
+        ],
+        [
+          "km/h",
+          "en"
+        ],
+        [
+          "kph",
+          "en"
+        ],
+        [
+          "км/ч",
+          "ru"
+        ]
+      ],
+      "reason": "A speed unit, not the general rate quantity implied by the dictionary hierarchy. OEWN 2025: oewn-15304947-n. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "m_s2",
+      "name": "метр на секунду в квадрате",
+      "parent": "acceleration_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "метр на секунду в квадрате",
+          "ru"
+        ],
+        [
+          "metre per second squared",
+          "en"
+        ],
+        [
+          "meter per second squared",
+          "en"
+        ],
+        [
+          "m/s2",
+          "en"
+        ],
+        [
+          "m/s²",
+          "en"
+        ],
+        [
+          "м/с²",
+          "ru"
+        ]
+      ],
+      "reason": "The coherent SI acceleration unit; a squared time denominator, not a squared speed. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "watt_hour",
+      "name": "ватт-час",
+      "parent": 24519,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ватт-час",
+          "ru"
+        ],
+        [
+          "watt-hour",
+          "en"
+        ],
+        [
+          "watt hour",
+          "en"
+        ],
+        [
+          "Wh",
+          "en"
+        ],
+        [
+          "Вт·ч",
+          "ru"
+        ]
+      ],
+      "reason": "An energy unit, distinct from the watt power unit. OEWN 2025: oewn-13749443-n. Source: https://www.eia.gov/tools/glossary/index.php?id=Electric"
+    },
+    {
+      "key": "kilowatt_hour",
+      "name": "киловатт-час",
+      "parent": 24519,
+      "universum_id": 1,
+      "terms": [
+        [
+          "киловатт-час",
+          "ru"
+        ],
+        [
+          "kilowatt-hour",
+          "en"
+        ],
+        [
+          "kilowatt hour",
+          "en"
+        ],
+        [
+          "kWh",
+          "en"
+        ],
+        [
+          "кВт·ч",
+          "ru"
+        ]
+      ],
+      "reason": "An energy unit. Omit ambiguous B.T.U./Board of Trade aliases; do not confuse it with a British thermal unit or a kilowatt. OEWN 2025: oewn-13749588-n. Source: https://www.eia.gov/tools/glossary/index.php?id=Electric"
+    },
+    {
+      "key": "kilonewton",
+      "name": "килоньютон",
+      "parent": 24517,
+      "universum_id": 1,
+      "terms": [
+        [
+          "килоньютон",
+          "ru"
+        ],
+        [
+          "kilonewton",
+          "en"
+        ],
+        [
+          "kN",
+          "en"
+        ],
+        [
+          "кН",
+          "ru"
+        ]
+      ],
+      "reason": "A force unit with the SI kilo prefix. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "kilopascal",
+      "name": "килопаскаль",
+      "parent": 24518,
+      "universum_id": 1,
+      "terms": [
+        [
+          "килопаскаль",
+          "ru"
+        ],
+        [
+          "kilopascal",
+          "en"
+        ],
+        [
+          "kPa",
+          "en"
+        ],
+        [
+          "кПа",
+          "ru"
+        ]
+      ],
+      "reason": "A pressure unit with the SI kilo prefix. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "megapascal",
+      "name": "мегапаскаль",
+      "parent": 24518,
+      "universum_id": 1,
+      "terms": [
+        [
+          "мегапаскаль",
+          "ru"
+        ],
+        [
+          "megapascal",
+          "en"
+        ],
+        [
+          "MPa",
+          "en"
+        ],
+        [
+          "МПа",
+          "ru"
+        ]
+      ],
+      "reason": "A pressure unit with the SI mega prefix. Case is significant in the symbol; do not equate it to millipascal. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "kilojoule",
+      "name": "килоджоуль",
+      "parent": 24519,
+      "universum_id": 1,
+      "terms": [
+        [
+          "килоджоуль",
+          "ru"
+        ],
+        [
+          "kilojoule",
+          "en"
+        ],
+        [
+          "kJ",
+          "en"
+        ],
+        [
+          "кДж",
+          "ru"
+        ]
+      ],
+      "reason": "An energy unit with the SI kilo prefix. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "megajoule",
+      "name": "мегаджоуль",
+      "parent": 24519,
+      "universum_id": 1,
+      "terms": [
+        [
+          "мегаджоуль",
+          "ru"
+        ],
+        [
+          "megajoule",
+          "en"
+        ],
+        [
+          "MJ",
+          "en"
+        ],
+        [
+          "МДж",
+          "ru"
+        ]
+      ],
+      "reason": "An energy unit with the SI mega prefix. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "megawatt",
+      "name": "мегаватт",
+      "parent": 24520,
+      "universum_id": 1,
+      "terms": [
+        [
+          "мегаватт",
+          "ru"
+        ],
+        [
+          "megawatt",
+          "en"
+        ],
+        [
+          "MW",
+          "en"
+        ],
+        [
+          "МВт",
+          "ru"
+        ]
+      ],
+      "reason": "A power unit with the SI mega prefix, not an energy unit. OEWN 2025: oewn-13666373-n. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "milliampere",
+      "name": "миллиампер",
+      "parent": 24521,
+      "universum_id": 1,
+      "terms": [
+        [
+          "миллиампер",
+          "ru"
+        ],
+        [
+          "milliampere",
+          "en"
+        ],
+        [
+          "mA",
+          "en"
+        ],
+        [
+          "мА",
+          "ru"
+        ]
+      ],
+      "reason": "An electric-current unit with the SI milli prefix. OEWN 2025: oewn-13659092-n. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "kilovolt",
+      "name": "киловольт",
+      "parent": 24522,
+      "universum_id": 1,
+      "terms": [
+        [
+          "киловольт",
+          "ru"
+        ],
+        [
+          "kilovolt",
+          "en"
+        ],
+        [
+          "kV",
+          "en"
+        ],
+        [
+          "кВ",
+          "ru"
+        ]
+      ],
+      "reason": "A voltage unit with the SI kilo prefix. OEWN 2025: oewn-13665249-n. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "kiloohm",
+      "name": "килоом",
+      "parent": 24523,
+      "universum_id": 1,
+      "terms": [
+        [
+          "килоом",
+          "ru"
+        ],
+        [
+          "kiloohm",
+          "en"
+        ],
+        [
+          "kilohm",
+          "en"
+        ],
+        [
+          "kΩ",
+          "en"
+        ],
+        [
+          "кОм",
+          "ru"
+        ]
+      ],
+      "reason": "An electrical-resistance unit with the SI kilo prefix. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "area_measurement",
+      "name": "измерение площади",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение площади",
+          "ru"
+        ],
+        [
+          "area measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of area, not selection of a geographical location. OEWN 2025: oewn-03582481-n. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "volume_measurement",
+      "name": "измерение объёма",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение объёма",
+          "ru"
+        ],
+        [
+          "volume measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of occupied or contained spatial volume. OEWN 2025: oewn-03456417-n. Source: https://shop.brand.de/en/volumetric-instruments.html"
+    },
+    {
+      "key": "density_measurement",
+      "name": "измерение массовой плотности",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение массовой плотности",
+          "ru"
+        ],
+        [
+          "mass density measurement",
+          "en"
+        ]
+      ],
+      "reason": "Determination of mass per volume, using an instrument alone or with other equipment. OEWN 2025: oewn-03179967-n. Source: https://wiki.anton-paar.com/au-en/density-and-density-measurement/"
+    },
+    {
+      "key": "liquid_density_measurement",
+      "name": "измерение плотности жидкости",
+      "parent": "density_measurement",
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение плотности жидкости",
+          "ru"
+        ],
+        [
+          "liquid density measurement",
+          "en"
+        ]
+      ],
+      "reason": "Determination of a liquid sample mass density. OEWN 2025: oewn-03558666-n. Source: https://wiki.anton-paar.com/au-en/density-and-density-measurement/"
+    },
+    {
+      "key": "relative_density_measurement",
+      "name": "измерение относительной плотности",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение относительной плотности",
+          "ru"
+        ],
+        [
+          "relative density measurement",
+          "en"
+        ]
+      ],
+      "reason": "Determine the dimensionless ratio to a stated reference under specified conditions. OEWN 2025: oewn-05096989-n. Source: https://wiki.anton-paar.com/au-en/density-and-density-measurement/"
+    },
+    {
+      "key": "power_measurement",
+      "name": "измерение мощности",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение мощности",
+          "ru"
+        ],
+        [
+          "power measurement",
+          "en"
+        ]
+      ],
+      "reason": "Determine a rate of energy transfer, distinct from accumulated energy. OEWN 2025: oewn-04571564-n. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "electric_power_measurement",
+      "name": "измерение электрической мощности",
+      "parent": "power_measurement",
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение электрической мощности",
+          "ru"
+        ],
+        [
+          "electrical power measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of electrical power; no universal AC power-factor formula is asserted. OEWN 2025: oewn-04571564-n. Source: https://www.hioki.com/global/products/power-meters"
+    },
+    {
+      "key": "energy_measurement",
+      "name": "измерение энергии",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение энергии",
+          "ru"
+        ],
+        [
+          "energy measurement",
+          "en"
+        ]
+      ],
+      "reason": "Determine an amount of energy rather than its transfer rate. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "electric_energy_measurement",
+      "name": "измерение электрической энергии",
+      "parent": "energy_measurement",
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение электрической энергии",
+          "ru"
+        ],
+        [
+          "electrical energy measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of electrical energy, such as accumulated kilowatt-hours. OEWN 2025: oewn-03277721-n. Source: https://www.se.com/uk/en/product-subcategory/4125-cost-energy-management-meters/"
+    },
+    {
+      "key": "force_measurement",
+      "name": "измерение силы",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение силы",
+          "ru"
+        ],
+        [
+          "force measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of mechanical force, distinct from power measurement. Source: https://mark-10.com/products/force-gauges/"
+    },
+    {
+      "key": "planimeter",
+      "name": "планиметр",
+      "parent": 24564,
+      "universum_id": 1,
+      "terms": [
+        [
+          "планиметр",
+          "ru"
+        ],
+        [
+          "planimeter",
+          "en"
+        ]
+      ],
+      "reason": "Instrument for determining the area of a plane figure. Omit the generic integrator synonym, which also has other mathematical/device senses. OEWN 2025: oewn-03582481-n."
+    },
+    {
+      "key": "wattmeter",
+      "name": "ваттметр",
+      "parent": 24564,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ваттметр",
+          "ru"
+        ],
+        [
+          "wattmeter",
+          "en"
+        ]
+      ],
+      "reason": "An electrical-power measuring instrument; do not make accumulated energy its defining target. OEWN 2025: oewn-04571564-n. Source: https://www.hioki.com/global/products/power-meters"
+    },
+    {
+      "key": "electricity_meter",
+      "name": "счётчик электрической энергии",
+      "parent": 24564,
+      "universum_id": 1,
+      "terms": [
+        [
+          "счётчик электрической энергии",
+          "ru"
+        ],
+        [
+          "electricity meter",
+          "en"
+        ],
+        [
+          "electrical energy meter",
+          "en"
+        ],
+        [
+          "electric meter",
+          "en"
+        ],
+        [
+          "электросчётчик",
+          "ru"
+        ]
+      ],
+      "reason": "An instrument for accumulated electrical energy. The dictionary amount-of-power wording and ambiguous power meter synonym are not copied. OEWN 2025: oewn-03277721-n. Source: https://www.se.com/uk/en/product-subcategory/4125-cost-energy-management-meters/"
+    },
+    {
+      "key": "force_gauge",
+      "name": "динамометр (измеритель силы)",
+      "parent": 24564,
+      "universum_id": 1,
+      "terms": [
+        [
+          "динамометр (измеритель силы)",
+          "ru"
+        ],
+        [
+          "force gauge",
+          "en"
+        ],
+        [
+          "force meter",
+          "en"
+        ],
+        [
+          "dynamometer (force gauge)",
+          "en"
+        ],
+        [
+          "динамометр",
+          "ru"
+        ],
+        [
+          "силомер",
+          "ru"
+        ]
+      ],
+      "reason": "Select the force-measuring instrument supported by the manufacturer. OEWN dynamometer/ergometer describes a power-measuring sense and is not an equivalent synset. Source: https://mark-10.com/products/force-gauges/"
+    },
+    {
+      "key": "density_instrument",
+      "name": "прибор для измерения массовой плотности",
+      "parent": 24564,
+      "universum_id": 1,
+      "terms": [
+        [
+          "прибор для измерения массовой плотности",
+          "ru"
+        ],
+        [
+          "mass density measuring instrument",
+          "en"
+        ],
+        [
+          "density meter",
+          "en"
+        ],
+        [
+          "densimeter",
+          "en"
+        ],
+        [
+          "плотномер",
+          "ru"
+        ]
+      ],
+      "reason": "The instrument family for mass density, distinct from optical densitometry. The device can operate in conjunction with other equipment. OEWN 2025: oewn-03179967-n. Source: https://wiki.anton-paar.com/au-en/density-and-density-measurement/"
+    },
+    {
+      "key": "hydrometer",
+      "name": "ареометр",
+      "parent": "density_instrument",
+      "universum_id": 1,
+      "terms": [
+        [
+          "ареометр",
+          "ru"
+        ],
+        [
+          "hydrometer",
+          "en"
+        ]
+      ],
+      "reason": "The floating instrument used in liquid-density determination. Scale choice and reference conditions belong to a specific measurement; the gravity-measuring gravimeter synonym and unrestricted solids claim are excluded. OEWN 2025: oewn-03558666-n. Source: https://wiki.anton-paar.com/au-en/density-and-density-measurement/"
+    },
+    {
+      "key": "liquid_pycnometer",
+      "name": "жидкостный пикнометр",
+      "parent": "density_instrument",
+      "universum_id": 1,
+      "terms": [
+        [
+          "жидкостный пикнометр",
+          "ru"
+        ],
+        [
+          "liquid pycnometer",
+          "en"
+        ],
+        [
+          "pycnometer (liquid vessel)",
+          "en"
+        ],
+        [
+          "пикнометр для жидкостей",
+          "ru"
+        ]
+      ],
+      "reason": "A calibrated vessel used with weighing to determine liquid density. Gas pycnometers for solids are a different subtype; no stand-alone direct-reading claim is made. Source: https://wiki.anton-paar.com/au-en/density-and-density-measurement/"
+    },
+    {
+      "key": "volumetric_ware",
+      "name": "мерная лабораторная посуда",
+      "parent": 24564,
+      "universum_id": 1,
+      "terms": [
+        [
+          "мерная лабораторная посуда",
+          "ru"
+        ],
+        [
+          "volumetric laboratory ware",
+          "en"
+        ],
+        [
+          "лабораторная мерная посуда",
+          "ru"
+        ]
+      ],
+      "reason": "Laboratory volumetric apparatus used to contain or deliver known liquid volumes. Do not restrict the entire family to glass or to a single calibration convention. Source: https://shop.brand.de/en/volumetric-instruments.html"
+    },
+    {
+      "key": "graduated_cylinder",
+      "name": "мерный цилиндр",
+      "parent": "volumetric_ware",
+      "universum_id": 1,
+      "terms": [
+        [
+          "мерный цилиндр",
+          "ru"
+        ],
+        [
+          "graduated cylinder",
+          "en"
+        ],
+        [
+          "measuring cylinder",
+          "en"
+        ]
+      ],
+      "reason": "A graduated cylindrical volume-measuring vessel. Glass and plastic examples are supported; no universal material is asserted. OEWN 2025: oewn-03456655-n. Source: https://shop.brand.de/en/volumetric-instruments/graduated-cylinders.html"
+    },
+    {
+      "key": "volumetric_flask",
+      "name": "мерная колба",
+      "parent": "volumetric_ware",
+      "universum_id": 1,
+      "terms": [
+        [
+          "мерная колба",
+          "ru"
+        ],
+        [
+          "volumetric flask",
+          "en"
+        ]
+      ],
+      "reason": "A flask calibrated to contain a stated volume at a specified temperature, normally identified by a calibration mark; not necessarily a multi-division scale. Source: https://shop.brand.de/en/volumetric-instruments.html"
+    },
+    {
+      "key": "burette",
+      "name": "бюретка",
+      "parent": "volumetric_ware",
+      "universum_id": 1,
+      "terms": [
+        [
+          "бюретка",
+          "ru"
+        ],
+        [
+          "burette",
+          "en"
+        ],
+        [
+          "buret",
+          "en"
+        ]
+      ],
+      "reason": "A calibrated device for measuring delivered liquid volume, commonly used in titration. No universal glass material or one exclusive titration purpose is asserted. OEWN 2025: oewn-02924976-n. Source: https://shop.brand.de/en/volumetric-instruments.html"
+    },
+    {
+      "key": "liquid_transfer",
+      "name": "перенос жидкости",
+      "parent": 5017,
+      "universum_id": 1,
+      "terms": [
+        [
+          "перенос жидкости",
+          "ru"
+        ],
+        [
+          "liquid transfer",
+          "en"
+        ]
+      ],
+      "reason": "A physical process of moving liquid between locations or containers. It does not inherently require a calibrated volume measurement. Source: https://shop.brand.de/en/general-lab-products/pipettes.html"
+    },
+    {
+      "key": "pipette",
+      "name": "пипетка (лабораторный инструмент)",
+      "parent": 30,
+      "universum_id": 1,
+      "terms": [
+        [
+          "пипетка (лабораторный инструмент)",
+          "ru"
+        ],
+        [
+          "pipette",
+          "en"
+        ],
+        [
+          "pipet",
+          "en"
+        ],
+        [
+          "пипетка",
+          "ru"
+        ]
+      ],
+      "reason": "A laboratory liquid-transfer tool. The dictionary graduated-glass-only description is too narrow; a generic pipette need not be a calibrated volumetric instrument. OEWN 2025: oewn-03953387-n. Source: https://shop.brand.de/en/general-lab-products/pipettes.html"
+    },
+    {
+      "key": "volumetric_pipette",
+      "name": "мерная пипетка",
+      "parent": "pipette",
+      "universum_id": 1,
+      "terms": [
+        [
+          "мерная пипетка",
+          "ru"
+        ],
+        [
+          "volumetric pipette",
+          "en"
+        ],
+        [
+          "bulb pipette",
+          "en"
+        ]
+      ],
+      "reason": "A pipette calibrated to deliver a stated volume. Distinct from the graduated multi-volume subtype. Source: https://shop.brand.de/en/volumetric-instruments.html"
+    },
+    {
+      "key": "graduated_pipette",
+      "name": "градуированная пипетка",
+      "parent": "pipette",
+      "universum_id": 1,
+      "terms": [
+        [
+          "градуированная пипетка",
+          "ru"
+        ],
+        [
+          "graduated pipette",
+          "en"
+        ]
+      ],
+      "reason": "A measuring pipette with a graduated scale for selectable volumes. This is the narrower type represented by the dictionary glass-tube description. OEWN 2025: oewn-03953387-n. Source: https://shop.brand.de/en/volumetric-instruments.html"
+    },
+    {
+      "key": "pasteur_pipette",
+      "name": "пипетка Пастера",
+      "parent": "pipette",
+      "universum_id": 1,
+      "terms": [
+        [
+          "пипетка Пастера",
+          "ru"
+        ],
+        [
+          "Pasteur pipette",
+          "en"
+        ]
+      ],
+      "reason": "A liquid-transfer/dropper pipette. No universal calibrated-volume capability or glass-only material is asserted. Source: https://shop.brand.de/en/general-lab-products/pipettes.html"
+    }
+  ],
+  "renames": [
+    {
+      "id": 3399,
+      "before": "равнодействующая",
+      "name": "равнодействующая сила",
+      "terms": [],
+      "reason": "Make the existing resultant-force meaning explicit before refining its physical-quantity parent."
+    }
+  ],
+  "terms": [
+    {
+      "id": 3399,
+      "name": "равнодействующая сила",
+      "terms": [
+        [
+          "net force",
+          "en"
+        ]
+      ],
+      "reason": "The existing resultant force is the vector sum of the forces in the selected system; no literal sum formula is added."
+    }
+  ],
+  "remove_terms": [],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 5669,
+      "before": [
+        3399,
+        "14",
+        2709,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          3399,
+          "14",
+          "physical_force",
+          null,
+          1
+        ]
+      ],
+      "reason": "A resultant force is a force; the broader physical-quantity ancestor remains available. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    }
+  ],
+  "edges": [
+    {
+      "subject": "area_measurement",
+      "kod": "27",
+      "object": "area_quantity",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. OEWN 2025: oewn-03582481-n. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "subject": "volume_measurement",
+      "kod": "27",
+      "object": "volume_quantity",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. OEWN 2025: oewn-03456417-n. Source: https://shop.brand.de/en/volumetric-instruments.html"
+    },
+    {
+      "subject": "density_measurement",
+      "kod": "27",
+      "object": "mass_density",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. OEWN 2025: oewn-03179967-n. Source: https://wiki.anton-paar.com/au-en/density-and-density-measurement/"
+    },
+    {
+      "subject": "liquid_density_measurement",
+      "kod": "27",
+      "object": "liquid_density",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. OEWN 2025: oewn-03558666-n. Source: https://wiki.anton-paar.com/au-en/density-and-density-measurement/"
+    },
+    {
+      "subject": "relative_density_measurement",
+      "kod": "27",
+      "object": "relative_density",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. OEWN 2025: oewn-05096989-n. Source: https://wiki.anton-paar.com/au-en/density-and-density-measurement/"
+    },
+    {
+      "subject": "power_measurement",
+      "kod": "27",
+      "object": "physical_power",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. OEWN 2025: oewn-04571564-n. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "subject": "electric_power_measurement",
+      "kod": "27",
+      "object": "electrical_power",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. OEWN 2025: oewn-04571564-n. Source: https://www.hioki.com/global/products/power-meters"
+    },
+    {
+      "subject": "energy_measurement",
+      "kod": "27",
+      "object": 2710,
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "subject": "electric_energy_measurement",
+      "kod": "27",
+      "object": "electrical_energy",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. OEWN 2025: oewn-03277721-n. Source: https://www.se.com/uk/en/product-subcategory/4125-cost-energy-management-meters/"
+    },
+    {
+      "subject": "force_measurement",
+      "kod": "27",
+      "object": "physical_force",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://mark-10.com/products/force-gauges/"
+    },
+    {
+      "subject": "planimeter",
+      "kod": "21",
+      "object": "area_measurement",
+      "universum_id": 1,
+      "reason": "This is an intended process served by the selected instrument or tool. OEWN 2025: oewn-03582481-n."
+    },
+    {
+      "subject": "wattmeter",
+      "kod": "21",
+      "object": "electric_power_measurement",
+      "universum_id": 1,
+      "reason": "This is an intended process served by the selected instrument or tool. OEWN 2025: oewn-04571564-n. Source: https://www.hioki.com/global/products/power-meters"
+    },
+    {
+      "subject": "electricity_meter",
+      "kod": "21",
+      "object": "electric_energy_measurement",
+      "universum_id": 1,
+      "reason": "This is an intended process served by the selected instrument or tool. OEWN 2025: oewn-03277721-n. Source: https://www.se.com/uk/en/product-subcategory/4125-cost-energy-management-meters/"
+    },
+    {
+      "subject": "force_gauge",
+      "kod": "21",
+      "object": "force_measurement",
+      "universum_id": 1,
+      "reason": "This is an intended process served by the selected instrument or tool. Source: https://mark-10.com/products/force-gauges/"
+    },
+    {
+      "subject": "density_instrument",
+      "kod": "21",
+      "object": "density_measurement",
+      "universum_id": 1,
+      "reason": "This is an intended process served by the selected instrument or tool. OEWN 2025: oewn-03179967-n. Source: https://wiki.anton-paar.com/au-en/density-and-density-measurement/"
+    },
+    {
+      "subject": "hydrometer",
+      "kod": "21",
+      "object": "liquid_density_measurement",
+      "universum_id": 1,
+      "reason": "This is an intended process served by the selected instrument or tool. OEWN 2025: oewn-03558666-n. Source: https://wiki.anton-paar.com/au-en/density-and-density-measurement/"
+    },
+    {
+      "subject": "liquid_pycnometer",
+      "kod": "21",
+      "object": "liquid_density_measurement",
+      "universum_id": 1,
+      "reason": "This is an intended process served by the selected instrument or tool. Source: https://wiki.anton-paar.com/au-en/density-and-density-measurement/"
+    },
+    {
+      "subject": "volumetric_ware",
+      "kod": "21",
+      "object": "volume_measurement",
+      "universum_id": 1,
+      "reason": "This is an intended process served by the selected instrument or tool. Source: https://shop.brand.de/en/volumetric-instruments.html"
+    },
+    {
+      "subject": "liquid_transfer",
+      "kod": "27",
+      "object": 22,
+      "universum_id": 1,
+      "reason": "Liquid is the material transferred by this process; it is not the instrument or operator. Source: https://shop.brand.de/en/general-lab-products/pipettes.html"
+    },
+    {
+      "subject": "pipette",
+      "kod": "21",
+      "object": "liquid_transfer",
+      "universum_id": 1,
+      "reason": "This is an intended process served by the selected instrument or tool. OEWN 2025: oewn-03953387-n. Source: https://shop.brand.de/en/general-lab-products/pipettes.html"
+    },
+    {
+      "subject": "volumetric_pipette",
+      "kod": "14",
+      "object": "volumetric_ware",
+      "universum_id": 1,
+      "reason": "The calibrated pipette subtype is also volumetric laboratory apparatus. Source: https://shop.brand.de/en/volumetric-instruments.html"
+    },
+    {
+      "subject": "volumetric_pipette",
+      "kod": "21",
+      "object": "volume_measurement",
+      "universum_id": 1,
+      "reason": "The calibrated subtype supports liquid-volume measurement as well as transfer. Source: https://shop.brand.de/en/volumetric-instruments.html"
+    },
+    {
+      "subject": "graduated_pipette",
+      "kod": "14",
+      "object": "volumetric_ware",
+      "universum_id": 1,
+      "reason": "The calibrated pipette subtype is also volumetric laboratory apparatus. Source: https://shop.brand.de/en/volumetric-instruments.html"
+    },
+    {
+      "subject": "graduated_pipette",
+      "kod": "21",
+      "object": "volume_measurement",
+      "universum_id": 1,
+      "reason": "The calibrated subtype supports liquid-volume measurement as well as transfer. Source: https://shop.brand.de/en/volumetric-instruments.html"
+    }
+  ],
+  "checks": [
+    {
+      "subject": "area_quantity",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "volume_quantity",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mass_density",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "liquid_density",
+      "kod": "14",
+      "object": "mass_density",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "relative_density",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "physical_power",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "physical_force",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "electrical_power",
+      "kod": "14",
+      "object": "physical_power",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "electrical_energy",
+      "kod": "14",
+      "object": 2710,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3399,
+      "kod": "14",
+      "object": 2709,
+      "present": false
+    },
+    {
+      "subject": 3399,
+      "kod": "14",
+      "object": "physical_force",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "density_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "speed_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "acceleration_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kg_m3",
+      "kod": "14",
+      "object": "density_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "g_cm3",
+      "kod": "14",
+      "object": "density_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "m_s",
+      "kod": "14",
+      "object": "speed_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "km_h",
+      "kod": "14",
+      "object": "speed_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "m_s2",
+      "kod": "14",
+      "object": "acceleration_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "watt_hour",
+      "kod": "14",
+      "object": 24519,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kilowatt_hour",
+      "kod": "14",
+      "object": 24519,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kilonewton",
+      "kod": "14",
+      "object": 24517,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kilopascal",
+      "kod": "14",
+      "object": 24518,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "megapascal",
+      "kod": "14",
+      "object": 24518,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kilojoule",
+      "kod": "14",
+      "object": 24519,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "megajoule",
+      "kod": "14",
+      "object": 24519,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "megawatt",
+      "kod": "14",
+      "object": 24520,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "milliampere",
+      "kod": "14",
+      "object": 24521,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kilovolt",
+      "kod": "14",
+      "object": 24522,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kiloohm",
+      "kod": "14",
+      "object": 24523,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "area_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "area_measurement",
+      "kod": "27",
+      "object": "area_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "volume_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "volume_measurement",
+      "kod": "27",
+      "object": "volume_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "density_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "density_measurement",
+      "kod": "27",
+      "object": "mass_density",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "liquid_density_measurement",
+      "kod": "14",
+      "object": "density_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "liquid_density_measurement",
+      "kod": "27",
+      "object": "liquid_density",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "relative_density_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "relative_density_measurement",
+      "kod": "27",
+      "object": "relative_density",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "power_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "power_measurement",
+      "kod": "27",
+      "object": "physical_power",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "electric_power_measurement",
+      "kod": "14",
+      "object": "power_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "electric_power_measurement",
+      "kod": "27",
+      "object": "electrical_power",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "energy_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "energy_measurement",
+      "kod": "27",
+      "object": 2710,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "electric_energy_measurement",
+      "kod": "14",
+      "object": "energy_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "electric_energy_measurement",
+      "kod": "27",
+      "object": "electrical_energy",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "force_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "force_measurement",
+      "kod": "27",
+      "object": "physical_force",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "planimeter",
+      "kod": "14",
+      "object": 24564,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "planimeter",
+      "kod": "21",
+      "object": "area_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "wattmeter",
+      "kod": "14",
+      "object": 24564,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "wattmeter",
+      "kod": "21",
+      "object": "electric_power_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "electricity_meter",
+      "kod": "14",
+      "object": 24564,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "electricity_meter",
+      "kod": "21",
+      "object": "electric_energy_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "force_gauge",
+      "kod": "14",
+      "object": 24564,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "force_gauge",
+      "kod": "21",
+      "object": "force_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "density_instrument",
+      "kod": "14",
+      "object": 24564,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "density_instrument",
+      "kod": "21",
+      "object": "density_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hydrometer",
+      "kod": "14",
+      "object": "density_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hydrometer",
+      "kod": "21",
+      "object": "liquid_density_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "liquid_pycnometer",
+      "kod": "14",
+      "object": "density_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "liquid_pycnometer",
+      "kod": "21",
+      "object": "liquid_density_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "volumetric_ware",
+      "kod": "14",
+      "object": 24564,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "volumetric_ware",
+      "kod": "21",
+      "object": "volume_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "graduated_cylinder",
+      "kod": "14",
+      "object": "volumetric_ware",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "volumetric_flask",
+      "kod": "14",
+      "object": "volumetric_ware",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "burette",
+      "kod": "14",
+      "object": "volumetric_ware",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "liquid_transfer",
+      "kod": "14",
+      "object": 5017,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "liquid_transfer",
+      "kod": "27",
+      "object": 22,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pipette",
+      "kod": "14",
+      "object": 30,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pipette",
+      "kod": "21",
+      "object": "liquid_transfer",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "volumetric_pipette",
+      "kod": "14",
+      "object": "pipette",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "graduated_pipette",
+      "kod": "14",
+      "object": "pipette",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pasteur_pipette",
+      "kod": "14",
+      "object": "pipette",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "volumetric_pipette",
+      "kod": "14",
+      "object": "volumetric_ware",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "volumetric_pipette",
+      "kod": "21",
+      "object": "volume_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "graduated_pipette",
+      "kod": "14",
+      "object": "volumetric_ware",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "graduated_pipette",
+      "kod": "21",
+      "object": "volume_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "electricity_meter",
+      "kod": "21",
+      "object": "electric_power_measurement",
+      "present": false
+    },
+    {
+      "subject": "wattmeter",
+      "kod": "21",
+      "object": "electric_energy_measurement",
+      "present": false
+    },
+    {
+      "subject": "pipette",
+      "kod": "21",
+      "object": "volume_measurement",
+      "present": false
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "area_quantity",
+      "ancestor": 2142,
+      "present": false
+    },
+    {
+      "subject": "volume_quantity",
+      "ancestor": 2432,
+      "present": false
+    },
+    {
+      "subject": "physical_power",
+      "ancestor": 2667,
+      "present": false
+    },
+    {
+      "subject": "physical_force",
+      "ancestor": 3759,
+      "present": false
+    },
+    {
+      "subject": "physical_power",
+      "ancestor": 2710,
+      "present": false
+    },
+    {
+      "subject": "electrical_energy",
+      "ancestor": "physical_power",
+      "present": false
+    },
+    {
+      "subject": "relative_density",
+      "ancestor": "mass_density",
+      "present": false
+    },
+    {
+      "subject": "watt_hour",
+      "ancestor": 24520,
+      "present": false
+    },
+    {
+      "subject": "kilowatt_hour",
+      "ancestor": 24520,
+      "present": false
+    },
+    {
+      "subject": "megawatt",
+      "ancestor": 24519,
+      "present": false
+    },
+    {
+      "subject": "acceleration_unit",
+      "ancestor": "speed_unit",
+      "present": false
+    },
+    {
+      "subject": "kg_m3",
+      "ancestor": "relative_density",
+      "present": false
+    },
+    {
+      "subject": "electricity_meter",
+      "ancestor": "wattmeter",
+      "present": false
+    },
+    {
+      "subject": "force_gauge",
+      "ancestor": "physical_power",
+      "present": false
+    },
+    {
+      "subject": "pipette",
+      "ancestor": "volumetric_ware",
+      "present": false
+    },
+    {
+      "subject": "pasteur_pipette",
+      "ancestor": "volumetric_ware",
+      "present": false
+    },
+    {
+      "subject": "hydrometer",
+      "ancestor": "relative_density",
+      "present": false
+    },
+    {
+      "subject": "area_quantity",
+      "ancestor": 2709,
+      "present": true
+    },
+    {
+      "subject": "volume_quantity",
+      "ancestor": 2709,
+      "present": true
+    },
+    {
+      "subject": "mass_density",
+      "ancestor": 2709,
+      "present": true
+    },
+    {
+      "subject": "liquid_density",
+      "ancestor": "mass_density",
+      "present": true
+    },
+    {
+      "subject": "relative_density",
+      "ancestor": 2709,
+      "present": true
+    },
+    {
+      "subject": "physical_power",
+      "ancestor": 2709,
+      "present": true
+    },
+    {
+      "subject": "physical_force",
+      "ancestor": 2709,
+      "present": true
+    },
+    {
+      "subject": "electrical_power",
+      "ancestor": "physical_power",
+      "present": true
+    },
+    {
+      "subject": "electrical_energy",
+      "ancestor": 2710,
+      "present": true
+    },
+    {
+      "subject": "density_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "speed_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "acceleration_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "kg_m3",
+      "ancestor": "density_unit",
+      "present": true
+    },
+    {
+      "subject": "g_cm3",
+      "ancestor": "density_unit",
+      "present": true
+    },
+    {
+      "subject": "m_s",
+      "ancestor": "speed_unit",
+      "present": true
+    },
+    {
+      "subject": "km_h",
+      "ancestor": "speed_unit",
+      "present": true
+    },
+    {
+      "subject": "m_s2",
+      "ancestor": "acceleration_unit",
+      "present": true
+    },
+    {
+      "subject": "watt_hour",
+      "ancestor": 24519,
+      "present": true
+    },
+    {
+      "subject": "kilowatt_hour",
+      "ancestor": 24519,
+      "present": true
+    },
+    {
+      "subject": "kilonewton",
+      "ancestor": 24517,
+      "present": true
+    },
+    {
+      "subject": "kilopascal",
+      "ancestor": 24518,
+      "present": true
+    },
+    {
+      "subject": "megapascal",
+      "ancestor": 24518,
+      "present": true
+    },
+    {
+      "subject": "kilojoule",
+      "ancestor": 24519,
+      "present": true
+    },
+    {
+      "subject": "megajoule",
+      "ancestor": 24519,
+      "present": true
+    },
+    {
+      "subject": "megawatt",
+      "ancestor": 24520,
+      "present": true
+    },
+    {
+      "subject": "milliampere",
+      "ancestor": 24521,
+      "present": true
+    },
+    {
+      "subject": "kilovolt",
+      "ancestor": 24522,
+      "present": true
+    },
+    {
+      "subject": "kiloohm",
+      "ancestor": 24523,
+      "present": true
+    },
+    {
+      "subject": "area_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "volume_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "density_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "liquid_density_measurement",
+      "ancestor": "density_measurement",
+      "present": true
+    },
+    {
+      "subject": "relative_density_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "power_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "electric_power_measurement",
+      "ancestor": "power_measurement",
+      "present": true
+    },
+    {
+      "subject": "energy_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "electric_energy_measurement",
+      "ancestor": "energy_measurement",
+      "present": true
+    },
+    {
+      "subject": "force_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "planimeter",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": "wattmeter",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": "electricity_meter",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": "force_gauge",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": "density_instrument",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": "hydrometer",
+      "ancestor": "density_instrument",
+      "present": true
+    },
+    {
+      "subject": "liquid_pycnometer",
+      "ancestor": "density_instrument",
+      "present": true
+    },
+    {
+      "subject": "volumetric_ware",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": "graduated_cylinder",
+      "ancestor": "volumetric_ware",
+      "present": true
+    },
+    {
+      "subject": "volumetric_flask",
+      "ancestor": "volumetric_ware",
+      "present": true
+    },
+    {
+      "subject": "burette",
+      "ancestor": "volumetric_ware",
+      "present": true
+    },
+    {
+      "subject": "liquid_transfer",
+      "ancestor": 5017,
+      "present": true
+    },
+    {
+      "subject": "pipette",
+      "ancestor": 30,
+      "present": true
+    },
+    {
+      "subject": "volumetric_pipette",
+      "ancestor": "pipette",
+      "present": true
+    },
+    {
+      "subject": "graduated_pipette",
+      "ancestor": "pipette",
+      "present": true
+    },
+    {
+      "subject": "pasteur_pipette",
+      "ancestor": "pipette",
+      "present": true
+    },
+    {
+      "subject": 3399,
+      "ancestor": 2709,
+      "present": true
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": "area_quantity",
+      "term": "площадь (величина)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "area_quantity",
+      "term": "area (quantity)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "area_quantity",
+      "term": "area",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "area_quantity",
+      "term": "площадь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "volume_quantity",
+      "term": "объём (физическая величина)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "volume_quantity",
+      "term": "volume (physical quantity)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "volume_quantity",
+      "term": "volume",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "volume_quantity",
+      "term": "объём",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "mass_density",
+      "term": "плотность (масса на объём)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "mass_density",
+      "term": "mass density",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "mass_density",
+      "term": "density",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "mass_density",
+      "term": "плотность",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "mass_density",
+      "term": "массовая плотность",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "liquid_density",
+      "term": "плотность жидкости",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "liquid_density",
+      "term": "liquid density",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "relative_density",
+      "term": "относительная плотность",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "relative_density",
+      "term": "relative density",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "physical_power",
+      "term": "мощность (физическая величина)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "physical_power",
+      "term": "power (physical quantity)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "physical_power",
+      "term": "power",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "physical_power",
+      "term": "мощность",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "physical_force",
+      "term": "сила (физическая величина)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "physical_force",
+      "term": "force (physical quantity)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "physical_force",
+      "term": "force",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "physical_force",
+      "term": "сила",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "electrical_power",
+      "term": "электрическая мощность",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "electrical_power",
+      "term": "electrical power",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "electrical_power",
+      "term": "electric power",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "electrical_energy",
+      "term": "электрическая энергия",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "electrical_energy",
+      "term": "electrical energy",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "electrical_energy",
+      "term": "electric energy",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3399,
+      "term": "равнодействующая сила",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 3399,
+      "term": "net force",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "density_unit",
+      "term": "единица массовой плотности",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "density_unit",
+      "term": "mass density unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "speed_unit",
+      "term": "единица скорости",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "speed_unit",
+      "term": "speed unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "acceleration_unit",
+      "term": "единица ускорения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "acceleration_unit",
+      "term": "acceleration unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kg_m3",
+      "term": "килограмм на кубический метр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kg_m3",
+      "term": "kilogram per cubic metre",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kg_m3",
+      "term": "kilogram per cubic meter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kg_m3",
+      "term": "kg/m3",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kg_m3",
+      "term": "kg/m³",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kg_m3",
+      "term": "кг/м³",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "g_cm3",
+      "term": "грамм на кубический сантиметр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "g_cm3",
+      "term": "gram per cubic centimetre",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "g_cm3",
+      "term": "gram per cubic centimeter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "g_cm3",
+      "term": "g/cm3",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "g_cm3",
+      "term": "g/cm³",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "g_cm3",
+      "term": "г/см³",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "m_s",
+      "term": "метр в секунду",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "m_s",
+      "term": "metre per second",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "m_s",
+      "term": "meter per second",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "m_s",
+      "term": "m/s",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "m_s",
+      "term": "м/с",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "km_h",
+      "term": "километр в час",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "km_h",
+      "term": "kilometre per hour",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "km_h",
+      "term": "kilometer per hour",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "km_h",
+      "term": "kilometres per hour",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "km_h",
+      "term": "kilometers per hour",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "km_h",
+      "term": "km/h",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "km_h",
+      "term": "kph",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "km_h",
+      "term": "км/ч",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "m_s2",
+      "term": "метр на секунду в квадрате",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "m_s2",
+      "term": "metre per second squared",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "m_s2",
+      "term": "meter per second squared",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "m_s2",
+      "term": "m/s2",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "m_s2",
+      "term": "m/s²",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "m_s2",
+      "term": "м/с²",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "watt_hour",
+      "term": "ватт-час",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "watt_hour",
+      "term": "watt-hour",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "watt_hour",
+      "term": "watt hour",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "watt_hour",
+      "term": "Wh",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "watt_hour",
+      "term": "Вт·ч",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kilowatt_hour",
+      "term": "киловатт-час",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kilowatt_hour",
+      "term": "kilowatt-hour",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kilowatt_hour",
+      "term": "kilowatt hour",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kilowatt_hour",
+      "term": "kWh",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kilowatt_hour",
+      "term": "кВт·ч",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kilonewton",
+      "term": "килоньютон",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kilonewton",
+      "term": "kilonewton",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kilonewton",
+      "term": "kN",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kilonewton",
+      "term": "кН",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kilopascal",
+      "term": "килопаскаль",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kilopascal",
+      "term": "kilopascal",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kilopascal",
+      "term": "kPa",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kilopascal",
+      "term": "кПа",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "megapascal",
+      "term": "мегапаскаль",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "megapascal",
+      "term": "megapascal",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "megapascal",
+      "term": "MPa",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "megapascal",
+      "term": "МПа",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kilojoule",
+      "term": "килоджоуль",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kilojoule",
+      "term": "kilojoule",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kilojoule",
+      "term": "kJ",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kilojoule",
+      "term": "кДж",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "megajoule",
+      "term": "мегаджоуль",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "megajoule",
+      "term": "megajoule",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "megajoule",
+      "term": "MJ",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "megajoule",
+      "term": "МДж",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "megawatt",
+      "term": "мегаватт",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "megawatt",
+      "term": "megawatt",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "megawatt",
+      "term": "MW",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "megawatt",
+      "term": "МВт",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "milliampere",
+      "term": "миллиампер",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "milliampere",
+      "term": "milliampere",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "milliampere",
+      "term": "mA",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "milliampere",
+      "term": "мА",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kilovolt",
+      "term": "киловольт",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kilovolt",
+      "term": "kilovolt",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kilovolt",
+      "term": "kV",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kilovolt",
+      "term": "кВ",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kiloohm",
+      "term": "килоом",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kiloohm",
+      "term": "kiloohm",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kiloohm",
+      "term": "kilohm",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kiloohm",
+      "term": "kΩ",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kiloohm",
+      "term": "кОм",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "area_measurement",
+      "term": "измерение площади",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "area_measurement",
+      "term": "area measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "volume_measurement",
+      "term": "измерение объёма",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "volume_measurement",
+      "term": "volume measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "density_measurement",
+      "term": "измерение массовой плотности",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "density_measurement",
+      "term": "mass density measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "liquid_density_measurement",
+      "term": "измерение плотности жидкости",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "liquid_density_measurement",
+      "term": "liquid density measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "relative_density_measurement",
+      "term": "измерение относительной плотности",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "relative_density_measurement",
+      "term": "relative density measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "power_measurement",
+      "term": "измерение мощности",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "power_measurement",
+      "term": "power measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "electric_power_measurement",
+      "term": "измерение электрической мощности",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "electric_power_measurement",
+      "term": "electrical power measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "energy_measurement",
+      "term": "измерение энергии",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "energy_measurement",
+      "term": "energy measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "electric_energy_measurement",
+      "term": "измерение электрической энергии",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "electric_energy_measurement",
+      "term": "electrical energy measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "force_measurement",
+      "term": "измерение силы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "force_measurement",
+      "term": "force measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "planimeter",
+      "term": "планиметр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "planimeter",
+      "term": "planimeter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "wattmeter",
+      "term": "ваттметр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "wattmeter",
+      "term": "wattmeter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "electricity_meter",
+      "term": "счётчик электрической энергии",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "electricity_meter",
+      "term": "electricity meter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "electricity_meter",
+      "term": "electrical energy meter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "electricity_meter",
+      "term": "electric meter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "electricity_meter",
+      "term": "электросчётчик",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "force_gauge",
+      "term": "динамометр (измеритель силы)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "force_gauge",
+      "term": "force gauge",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "force_gauge",
+      "term": "force meter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "force_gauge",
+      "term": "dynamometer (force gauge)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "force_gauge",
+      "term": "динамометр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "force_gauge",
+      "term": "силомер",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "density_instrument",
+      "term": "прибор для измерения массовой плотности",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "density_instrument",
+      "term": "mass density measuring instrument",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "density_instrument",
+      "term": "density meter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "density_instrument",
+      "term": "densimeter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "density_instrument",
+      "term": "плотномер",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "hydrometer",
+      "term": "ареометр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "hydrometer",
+      "term": "hydrometer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "liquid_pycnometer",
+      "term": "жидкостный пикнометр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "liquid_pycnometer",
+      "term": "liquid pycnometer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "liquid_pycnometer",
+      "term": "pycnometer (liquid vessel)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "liquid_pycnometer",
+      "term": "пикнометр для жидкостей",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "volumetric_ware",
+      "term": "мерная лабораторная посуда",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "volumetric_ware",
+      "term": "volumetric laboratory ware",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "volumetric_ware",
+      "term": "лабораторная мерная посуда",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "graduated_cylinder",
+      "term": "мерный цилиндр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "graduated_cylinder",
+      "term": "graduated cylinder",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "graduated_cylinder",
+      "term": "measuring cylinder",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "volumetric_flask",
+      "term": "мерная колба",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "volumetric_flask",
+      "term": "volumetric flask",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "burette",
+      "term": "бюретка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "burette",
+      "term": "burette",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "burette",
+      "term": "buret",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "liquid_transfer",
+      "term": "перенос жидкости",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "liquid_transfer",
+      "term": "liquid transfer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pipette",
+      "term": "пипетка (лабораторный инструмент)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pipette",
+      "term": "pipette",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pipette",
+      "term": "pipet",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pipette",
+      "term": "пипетка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "volumetric_pipette",
+      "term": "мерная пипетка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "volumetric_pipette",
+      "term": "volumetric pipette",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "volumetric_pipette",
+      "term": "bulb pipette",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "graduated_pipette",
+      "term": "градуированная пипетка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "graduated_pipette",
+      "term": "graduated pipette",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pasteur_pipette",
+      "term": "пипетка Пастера",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pasteur_pipette",
+      "term": "Pasteur pipette",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kilowatt_hour",
+      "term": "B.T.U.",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "kilowatt_hour",
+      "term": "BTU",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "physical_power",
+      "term": "energy",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "electrical_energy",
+      "term": "power",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "force_gauge",
+      "term": "ergometer",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "hydrometer",
+      "term": "gravimeter",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "density_instrument",
+      "term": "optical densitometer",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "electrical_power",
+      "term": "reactive power",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "electrical_power",
+      "term": "apparent power",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

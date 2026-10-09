@@ -1,0 +1,3539 @@
+{
+  "source": "quality-20261009-q24",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Clothing by use, material and construction; footwear and garment components; remove universal fastener/material claims and false clothing/subtype exclusions.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "cardigan": "https://www.collinsdictionary.com/us/dictionary/english/cardigan",
+      "rainwear": "https://www.collinsdictionary.com/dictionary/english/rainwear",
+      "cuff": "https://dictionary.cambridge.org/dictionary/english/cuff"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet; CC BY 4.0 and Princeton notices remain in docs/quality/2026-10-09-q11.md#sources-and-reuse. Collins and Cambridge independently check garment terminology. Full definitions are not copied; scope decisions and graph mappings are editorial adaptations.",
+    "existing_cohort": [
+      31,
+      89,
+      134,
+      135,
+      136,
+      137,
+      138,
+      230,
+      1232,
+      1246,
+      1513,
+      1517,
+      1518,
+      1519,
+      1520,
+      1525,
+      1778,
+      2298,
+      2299,
+      2304,
+      2305,
+      2307,
+      2308,
+      2309,
+      2311,
+      5136,
+      5260,
+      5466,
+      5558,
+      5559,
+      5560,
+      5562,
+      5959,
+      5960,
+      24408,
+      24409,
+      24410
+    ],
+    "context_policy": "All new concepts and assertions use U1 with unspecified strength. Clothing purpose, body coverage, material and components are independent classifications. Component presence is not genus membership. Intended protection does not assert certified performance or effectiveness against every hazard.",
+    "sense_decisions": [
+      {
+        "concept": "outerwear",
+        "synset": "oewn-03865015-n",
+        "decision": "add",
+        "alignment": "ordinary outer-layer scope",
+        "scope": "Clothing designed as an outer layer for outdoor wear. Do not identify it with every garment that happens to be worn outside."
+      },
+      {
+        "concept": "underwear",
+        "synset": "oewn-04516244-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Clothing designed to be worn beneath outer garments, close to the body. No gender, fabric or specific garment construction is required."
+      },
+      {
+        "concept": "sports_clothing",
+        "synset": "oewn-04292941-n",
+        "decision": "add",
+        "alignment": "purpose restriction",
+        "scope": "Clothing intended for sports activity. Restrict the dictionary sportswear entry so purely casual fashion is not automatically included."
+      },
+      {
+        "concept": "workwear",
+        "synset": "oewn-04611230-n",
+        "decision": "add",
+        "alignment": "manual-work sense",
+        "scope": "Clothing intended for manual or physical work. Workwear is not necessarily protective equipment or a uniform."
+      },
+      {
+        "concept": "protective_clothing",
+        "synset": "oewn-04021598-n",
+        "decision": "add",
+        "alignment": "intended-protection family",
+        "scope": "Clothing intended to protect the wearer or underlying clothing. Broaden the injury-only gloss to include dirt and ordinary weather; no certified protection or hazard coverage is implied."
+      },
+      {
+        "concept": "rainwear",
+        "synset": null,
+        "decision": "add",
+        "alignment": "weather-purpose restriction",
+        "scope": "Clothing designed to resist rain reaching the wearer or underlying clothes. Do not require complete impermeability or a fixed performance rating."
+      },
+      {
+        "concept": "nightwear",
+        "synset": "oewn-03830620-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Clothing designed to be worn while sleeping. This is not identical to underwear or to all casual home clothing."
+      },
+      {
+        "concept": "knitwear",
+        "synset": "oewn-03631234-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Clothing made by knitting. Do not require wool, a pullover construction, buttons or a particular wearer."
+      },
+      {
+        "concept": "fabric_clothing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "material restriction",
+        "scope": "Clothing made using fabric; retain a restricted subject instead of attributing fabric to every clothing article and every footwear design."
+      },
+      {
+        "concept": "nylon_clothing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "material restriction",
+        "scope": "Clothing incorporating nylon material. This does not claim pure nylon composition or identify nylon polymer, fiber and woven fabric as one concept."
+      },
+      {
+        "concept": "buttoned_clothing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "component-defined restriction",
+        "scope": "Clothing having buttons. It may also have other fastening components; do not impose a universal exclusive fastening method."
+      },
+      {
+        "concept": "zipped_clothing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "component-defined restriction",
+        "scope": "Clothing having a zipper; the zipper is a component, not a genus of the garment."
+      },
+      {
+        "concept": "hooded_clothing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "component-defined restriction",
+        "scope": "Clothing including a garment hood; not every jacket or rain garment has one."
+      },
+      {
+        "concept": "sleeved_clothing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "component-defined restriction",
+        "scope": "Clothing including sleeves. Do not infer sleeves for every clothing article."
+      },
+      {
+        "concept": "heeled_footwear",
+        "synset": null,
+        "decision": "add",
+        "alignment": "component-defined restriction",
+        "scope": "Footwear with a constructed heel component. This is distinct from the anatomical heel and does not require a high heel."
+      },
+      {
+        "concept": "lace_up_footwear",
+        "synset": null,
+        "decision": "add",
+        "alignment": "fastening restriction",
+        "scope": "Footwear fitted with laces for fastening; the lace need not be the only fastening mechanism."
+      },
+      {
+        "concept": "garment_hood",
+        "synset": "oewn-03536461-n",
+        "decision": "add",
+        "alignment": "garment-component restriction",
+        "scope": "An attached or attachable head covering of a garment. Restrict the broader hood meaning; exclude engine cover, exhaust hood, camera accessory and criminal slang."
+      },
+      {
+        "concept": "garment_collar",
+        "synset": "oewn-03072185-n",
+        "decision": "add",
+        "alignment": "garment-component restriction",
+        "scope": "The neck-area component of a garment; exclude animal collars, shaft collars and necklaces."
+      },
+      {
+        "concept": "sleeve_cuff",
+        "synset": "oewn-03150509-n",
+        "decision": "add",
+        "alignment": "sleeve-component restriction",
+        "scope": "The cuff at the wrist end of a sleeve. Broaden folded-back wording to include a sewn or knitted cuff; exclude trouser turn-ups, jewelry, restraints and medical cuffs."
+      },
+      {
+        "concept": "garment_lining",
+        "synset": "oewn-03678596-n",
+        "decision": "add",
+        "alignment": "garment-component sense",
+        "scope": "The inner lining component of a garment, distinct from attaching the lining or every generic protective inner surface."
+      },
+      {
+        "concept": "clothing_hook",
+        "synset": null,
+        "decision": "add",
+        "alignment": "hook and fastener intersection",
+        "scope": "A hook used as a garment fastener. Distinguish it from fishing, hanging and tool hooks."
+      },
+      {
+        "concept": "hooked_clothing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "component-defined restriction",
+        "scope": "Clothing including a hook fastener; restrict the old generic hook assertion to this family."
+      },
+      {
+        "concept": "cardigan",
+        "synset": "oewn-02966595-n",
+        "decision": "add",
+        "alignment": "remove mandatory-fastener restriction",
+        "scope": "A knitted upper-body garment opening down the front. Do not require buttons, a zipper, wool or a particular collar. Do not place it beneath the narrower Russian sviter record."
+      },
+      {
+        "concept": "buttoned_cardigan",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "A cardigan with buttons, without claiming that every cardigan has them."
+      },
+      {
+        "concept": "zipped_cardigan",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "A cardigan with a zipper at the front."
+      },
+      {
+        "concept": "hooded_jacket",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "A jacket including a hood; this does not by itself imply waterproof construction."
+      },
+      {
+        "concept": "rain_jacket",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "A jacket intended for rain protection. Hood, fastener, material and protection rating are unspecified."
+      },
+      {
+        "concept": "hooded_rain_jacket",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "A rain jacket that also has a hood."
+      },
+      {
+        "concept": "zipped_jacket",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "A jacket with a zipper; not every jacket is zip-fastened."
+      },
+      {
+        "concept": "buttoned_shirt",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "A shirt with buttons. Button presence is not imported as universal for the entire shirt family."
+      },
+      {
+        "concept": "collared_shirt",
+        "synset": null,
+        "decision": "add",
+        "alignment": "component-defined restriction",
+        "scope": "A shirt including a collar, with no required collar form or material."
+      },
+      {
+        "concept": "cuffed_shirt",
+        "synset": null,
+        "decision": "add",
+        "alignment": "component-defined restriction",
+        "scope": "A shirt with cuffs at the ends of its sleeves; not every sleeve must have a cuff."
+      },
+      {
+        "concept": "lined_jacket",
+        "synset": null,
+        "decision": "add",
+        "alignment": "component-defined restriction",
+        "scope": "A jacket with an inner garment lining. No particular fiber, insulation value or waterproof membrane is asserted."
+      },
+      {
+        "concept": "sports_footwear",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "Footwear intended for sporting activity. Do not force every fashion sneaker into this purpose-defined family."
+      },
+      {
+        "concept": "protective_gloves",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "Gloves intended for protection. No specific chemical, impact, thermal or electrical protection is guaranteed."
+      },
+      {
+        "concept": "protective_helmet",
+        "synset": "oewn-03518281-n",
+        "decision": "add",
+        "alignment": "headwear and protective-clothing intersection",
+        "scope": "Headgear intended to resist impact. No safety certification, material or use-specific performance is claimed."
+      },
+      {
+        "concept": "rain_boots",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "Boots designed for wet-weather use. Rubber is not required of every design."
+      },
+      {
+        "concept": "rubber_rain_boots",
+        "synset": null,
+        "decision": "add",
+        "alignment": "material restriction",
+        "scope": "The rain-boot subset made using rubber. Do not equate every boot, rain boot or waterproof polymer boot with rubber."
+      },
+      {
+        "concept": "denim_fabric",
+        "synset": "oewn-03179855-n",
+        "decision": "add",
+        "alignment": "material rather than clothing sense",
+        "scope": "The denim textile material, distinct from jeans as clothing. Allow blended fibers; do not assert pure cotton, a fixed weight or every historical manufacturing detail."
+      },
+      {
+        "concept": "denim_clothing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "material restriction",
+        "scope": "Clothing using denim fabric, without requiring every component to have the same material."
+      },
+      {
+        "concept": "denim_jacket",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "A jacket made using denim fabric; material and garment form are distinct classifications."
+      },
+      {
+        "concept": 134,
+        "synset": "oewn-04204434-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The English shirt family and Russian rubashka may differ in scope. Defer the T-shirt exclusion rather than blindly importing the dictionary shirt hierarchy."
+      },
+      {
+        "concept": 135,
+        "synset": "oewn-04496264-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The dictionary knee-length trouser scope and Russian full-length bruki need review before moving shorts. Only the unambiguous jeans subtype is refined now."
+      },
+      {
+        "concept": 1517,
+        "synset": "oewn-03545447-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Socks remain distinct from the selected shoe-family footwear record. Do not import the broader dictionary hosiery/footwear hierarchy."
+      },
+      {
+        "concept": 1525,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Fashion sneakers and athletic-purpose footwear overlap, but every sneaker is not asserted to be designed for sport."
+      },
+      {
+        "concept": 1246,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Wool material, fiber and fabric require a separate textile review. Reject universal wool claims without reclassifying that record here."
+      },
+      {
+        "concept": 5560,
+        "synset": "oewn-04207680-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The existing shoelace lookup is reused for lace-up footwear. Generic cord, lace and fastening subtypes require separate sense review."
+      },
+      {
+        "concept": 2308,
+        "synset": "oewn-04378650-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The existing swimsuit is reused later; do not create a duplicate from swimwear or import every broad bathing-clothes synonym."
+      },
+      {
+        "concept": 5260,
+        "synset": "oewn-04539168-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Vest and waistcoat have regional scope differences. Do not create a duplicate or assume that every vest is underwear."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-03896748-n",
+        "decision": "exclude or defer",
+        "alignment": "reviewed sense",
+        "scope": "Anorak, parka and windbreaker should not be imported as a single heavy-jacket sense."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-02115838-n",
+        "decision": "exclude or defer",
+        "alignment": "reviewed sense",
+        "scope": "Cardigan the corgi is not the garment."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-03536090-n",
+        "decision": "exclude or defer",
+        "alignment": "reviewed sense",
+        "scope": "A vehicle hood is not a garment hood."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-03072490-n",
+        "decision": "exclude or defer",
+        "alignment": "reviewed sense",
+        "scope": "An animal collar is not a garment collar."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-03489659-n",
+        "decision": "exclude or defer",
+        "alignment": "reviewed sense",
+        "scope": "Handcuffs are not sleeve cuffs."
+      }
+    ],
+    "limits": "No body/gender restriction, fabric percentage, waterproof rating, protective-equipment certification or care procedure. Keep sports clothing distinct from purely casual fashion, cardigan distinct from the narrower existing Russian sweater record, and denim material distinct from jeans. Shirt/T-shirt, coat/jacket, trouser/shorts, generic cord/shoelace, textile/fiber and remaining footwear distinctions need separate review. No application test suites.",
+    "exclusion_review": {
+      "context": "U1 positive genus witnesses",
+      "before_conflicting_edges": 13,
+      "resolved_edges": [
+        3774
+      ],
+      "decision": "Reject the false clothing/footwear exclusion while preserving its accepted genus. Reject jeans/trousers exclusion before refining jeans. No other exclusions are changed.",
+      "remaining_candidates_expected": 12
+    },
+    "new_term_collisions": [],
+    "collision_decision": "No exact normalized cross-language collision is accepted. Existing garments, footwear, fasteners, sleeves, pockets, material records and laundry actions are reused.",
+    "refreshed_comparison": {
+      "baseline": "Q23",
+      "existing_concepts": 12952,
+      "existing_terms": 36535,
+      "synsets_with_exact_en_candidate": 15563,
+      "synsets_without_exact_en_candidate": 91956,
+      "existing_concepts_with_dictionary_candidate": 4138,
+      "caveat": "Normalized spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "outerwear",
+      "name": "верхняя одежда",
+      "parent": 31,
+      "universum_id": 1,
+      "terms": [
+        [
+          "верхняя одежда",
+          "ru"
+        ],
+        [
+          "outerwear",
+          "en"
+        ]
+      ],
+      "reason": "Clothing designed as an outer layer for outdoor wear. Do not identify it with every garment that happens to be worn outside. OEWN 2025: oewn-03865015-n."
+    },
+    {
+      "key": "underwear",
+      "name": "нижнее бельё",
+      "parent": 31,
+      "universum_id": 1,
+      "terms": [
+        [
+          "нижнее бельё",
+          "ru"
+        ],
+        [
+          "underwear",
+          "en"
+        ],
+        [
+          "underclothing",
+          "en"
+        ]
+      ],
+      "reason": "Clothing designed to be worn beneath outer garments, close to the body. No gender, fabric or specific garment construction is required. OEWN 2025: oewn-04516244-n."
+    },
+    {
+      "key": "sports_clothing",
+      "name": "спортивная одежда",
+      "parent": 31,
+      "universum_id": 1,
+      "terms": [
+        [
+          "спортивная одежда",
+          "ru"
+        ],
+        [
+          "sports clothing",
+          "en"
+        ],
+        [
+          "athletic wear (sports clothing)",
+          "en"
+        ]
+      ],
+      "reason": "Clothing intended for sports activity. Restrict the dictionary sportswear entry so purely casual fashion is not automatically included. OEWN 2025: oewn-04292941-n."
+    },
+    {
+      "key": "workwear",
+      "name": "рабочая одежда для физической работы",
+      "parent": 31,
+      "universum_id": 1,
+      "terms": [
+        [
+          "рабочая одежда для физической работы",
+          "ru"
+        ],
+        [
+          "workwear (manual work)",
+          "en"
+        ],
+        [
+          "workwear",
+          "en"
+        ]
+      ],
+      "reason": "Clothing intended for manual or physical work. Workwear is not necessarily protective equipment or a uniform. OEWN 2025: oewn-04611230-n."
+    },
+    {
+      "key": "protective_clothing",
+      "name": "защитная одежда",
+      "parent": 31,
+      "universum_id": 1,
+      "terms": [
+        [
+          "защитная одежда",
+          "ru"
+        ],
+        [
+          "protective clothing",
+          "en"
+        ]
+      ],
+      "reason": "Clothing intended to protect the wearer or underlying clothing. Broaden the injury-only gloss to include dirt and ordinary weather; no certified protection or hazard coverage is implied. OEWN 2025: oewn-04021598-n."
+    },
+    {
+      "key": "rainwear",
+      "name": "одежда для защиты от дождя",
+      "parent": "protective_clothing",
+      "universum_id": 1,
+      "terms": [
+        [
+          "одежда для защиты от дождя",
+          "ru"
+        ],
+        [
+          "rainwear",
+          "en"
+        ]
+      ],
+      "reason": "Clothing designed to resist rain reaching the wearer or underlying clothes. Do not require complete impermeability or a fixed performance rating. Source: https://www.collinsdictionary.com/dictionary/english/rainwear"
+    },
+    {
+      "key": "nightwear",
+      "name": "одежда для сна",
+      "parent": 31,
+      "universum_id": 1,
+      "terms": [
+        [
+          "одежда для сна",
+          "ru"
+        ],
+        [
+          "nightwear",
+          "en"
+        ],
+        [
+          "sleepwear",
+          "en"
+        ]
+      ],
+      "reason": "Clothing designed to be worn while sleeping. This is not identical to underwear or to all casual home clothing. OEWN 2025: oewn-03830620-n."
+    },
+    {
+      "key": "knitwear",
+      "name": "вязаная одежда",
+      "parent": 31,
+      "universum_id": 1,
+      "terms": [
+        [
+          "вязаная одежда",
+          "ru"
+        ],
+        [
+          "knitwear",
+          "en"
+        ]
+      ],
+      "reason": "Clothing made by knitting. Do not require wool, a pullover construction, buttons or a particular wearer. OEWN 2025: oewn-03631234-n."
+    },
+    {
+      "key": "fabric_clothing",
+      "name": "одежда из ткани",
+      "parent": 31,
+      "universum_id": 1,
+      "terms": [
+        [
+          "одежда из ткани",
+          "ru"
+        ],
+        [
+          "fabric clothing",
+          "en"
+        ]
+      ],
+      "reason": "Clothing made using fabric; retain a restricted subject instead of attributing fabric to every clothing article and every footwear design."
+    },
+    {
+      "key": "nylon_clothing",
+      "name": "одежда с нейлоновым материалом",
+      "parent": 31,
+      "universum_id": 1,
+      "terms": [
+        [
+          "одежда с нейлоновым материалом",
+          "ru"
+        ],
+        [
+          "clothing made with nylon",
+          "en"
+        ]
+      ],
+      "reason": "Clothing incorporating nylon material. This does not claim pure nylon composition or identify nylon polymer, fiber and woven fabric as one concept."
+    },
+    {
+      "key": "buttoned_clothing",
+      "name": "одежда с пуговицами",
+      "parent": 31,
+      "universum_id": 1,
+      "terms": [
+        [
+          "одежда с пуговицами",
+          "ru"
+        ],
+        [
+          "clothing with buttons",
+          "en"
+        ]
+      ],
+      "reason": "Clothing having buttons. It may also have other fastening components; do not impose a universal exclusive fastening method."
+    },
+    {
+      "key": "zipped_clothing",
+      "name": "одежда с застёжкой-молнией",
+      "parent": 31,
+      "universum_id": 1,
+      "terms": [
+        [
+          "одежда с застёжкой-молнией",
+          "ru"
+        ],
+        [
+          "clothing with a zipper",
+          "en"
+        ]
+      ],
+      "reason": "Clothing having a zipper; the zipper is a component, not a genus of the garment."
+    },
+    {
+      "key": "hooded_clothing",
+      "name": "одежда с капюшоном",
+      "parent": 31,
+      "universum_id": 1,
+      "terms": [
+        [
+          "одежда с капюшоном",
+          "ru"
+        ],
+        [
+          "hooded clothing",
+          "en"
+        ]
+      ],
+      "reason": "Clothing including a garment hood; not every jacket or rain garment has one."
+    },
+    {
+      "key": "sleeved_clothing",
+      "name": "одежда с рукавами",
+      "parent": 31,
+      "universum_id": 1,
+      "terms": [
+        [
+          "одежда с рукавами",
+          "ru"
+        ],
+        [
+          "clothing with sleeves",
+          "en"
+        ]
+      ],
+      "reason": "Clothing including sleeves. Do not infer sleeves for every clothing article."
+    },
+    {
+      "key": "heeled_footwear",
+      "name": "обувь с каблуком",
+      "parent": 137,
+      "universum_id": 1,
+      "terms": [
+        [
+          "обувь с каблуком",
+          "ru"
+        ],
+        [
+          "footwear with a heel",
+          "en"
+        ]
+      ],
+      "reason": "Footwear with a constructed heel component. This is distinct from the anatomical heel and does not require a high heel."
+    },
+    {
+      "key": "lace_up_footwear",
+      "name": "обувь со шнуровкой",
+      "parent": 137,
+      "universum_id": 1,
+      "terms": [
+        [
+          "обувь со шнуровкой",
+          "ru"
+        ],
+        [
+          "lace-up footwear",
+          "en"
+        ]
+      ],
+      "reason": "Footwear fitted with laces for fastening; the lace need not be the only fastening mechanism."
+    },
+    {
+      "key": "garment_hood",
+      "name": "капюшон (часть одежды)",
+      "parent": 5959,
+      "universum_id": 1,
+      "terms": [
+        [
+          "капюшон (часть одежды)",
+          "ru"
+        ],
+        [
+          "garment hood",
+          "en"
+        ],
+        [
+          "капюшон",
+          "ru"
+        ]
+      ],
+      "reason": "An attached or attachable head covering of a garment. Restrict the broader hood meaning; exclude engine cover, exhaust hood, camera accessory and criminal slang. OEWN 2025: oewn-03536461-n."
+    },
+    {
+      "key": "garment_collar",
+      "name": "воротник (часть одежды)",
+      "parent": 5959,
+      "universum_id": 1,
+      "terms": [
+        [
+          "воротник (часть одежды)",
+          "ru"
+        ],
+        [
+          "garment collar",
+          "en"
+        ],
+        [
+          "воротник",
+          "ru"
+        ]
+      ],
+      "reason": "The neck-area component of a garment; exclude animal collars, shaft collars and necklaces. OEWN 2025: oewn-03072185-n."
+    },
+    {
+      "key": "sleeve_cuff",
+      "name": "манжета рукава",
+      "parent": 5959,
+      "universum_id": 1,
+      "terms": [
+        [
+          "манжета рукава",
+          "ru"
+        ],
+        [
+          "sleeve cuff",
+          "en"
+        ]
+      ],
+      "reason": "The cuff at the wrist end of a sleeve. Broaden folded-back wording to include a sewn or knitted cuff; exclude trouser turn-ups, jewelry, restraints and medical cuffs. OEWN 2025: oewn-03150509-n. Source: https://dictionary.cambridge.org/dictionary/english/cuff"
+    },
+    {
+      "key": "garment_lining",
+      "name": "подкладка одежды",
+      "parent": 5959,
+      "universum_id": 1,
+      "terms": [
+        [
+          "подкладка одежды",
+          "ru"
+        ],
+        [
+          "garment lining",
+          "en"
+        ]
+      ],
+      "reason": "The inner lining component of a garment, distinct from attaching the lining or every generic protective inner surface. OEWN 2025: oewn-03678596-n."
+    },
+    {
+      "key": "clothing_hook",
+      "name": "крючок для застёгивания одежды",
+      "parent": 5559,
+      "universum_id": 1,
+      "terms": [
+        [
+          "крючок для застёгивания одежды",
+          "ru"
+        ],
+        [
+          "clothing fastening hook",
+          "en"
+        ]
+      ],
+      "reason": "A hook used as a garment fastener. Distinguish it from fishing, hanging and tool hooks."
+    },
+    {
+      "key": "hooked_clothing",
+      "name": "одежда с застёжкой-крючком",
+      "parent": 31,
+      "universum_id": 1,
+      "terms": [
+        [
+          "одежда с застёжкой-крючком",
+          "ru"
+        ],
+        [
+          "clothing with a hook fastener",
+          "en"
+        ]
+      ],
+      "reason": "Clothing including a hook fastener; restrict the old generic hook assertion to this family."
+    },
+    {
+      "key": "cardigan",
+      "name": "кардиган",
+      "parent": "knitwear",
+      "universum_id": 1,
+      "terms": [
+        [
+          "кардиган",
+          "ru"
+        ],
+        [
+          "cardigan",
+          "en"
+        ]
+      ],
+      "reason": "A knitted upper-body garment opening down the front. Do not require buttons, a zipper, wool or a particular collar. Do not place it beneath the narrower Russian sviter record. OEWN 2025: oewn-02966595-n. Source: https://www.collinsdictionary.com/us/dictionary/english/cardigan"
+    },
+    {
+      "key": "buttoned_cardigan",
+      "name": "кардиган с пуговицами",
+      "parent": "cardigan",
+      "universum_id": 1,
+      "terms": [
+        [
+          "кардиган с пуговицами",
+          "ru"
+        ],
+        [
+          "cardigan with buttons",
+          "en"
+        ]
+      ],
+      "reason": "A cardigan with buttons, without claiming that every cardigan has them. Source: https://www.collinsdictionary.com/us/dictionary/english/cardigan"
+    },
+    {
+      "key": "zipped_cardigan",
+      "name": "кардиган на молнии",
+      "parent": "cardigan",
+      "universum_id": 1,
+      "terms": [
+        [
+          "кардиган на молнии",
+          "ru"
+        ],
+        [
+          "zip-front cardigan",
+          "en"
+        ]
+      ],
+      "reason": "A cardigan with a zipper at the front. Source: https://www.collinsdictionary.com/us/dictionary/english/cardigan"
+    },
+    {
+      "key": "hooded_jacket",
+      "name": "куртка с капюшоном",
+      "parent": 1519,
+      "universum_id": 1,
+      "terms": [
+        [
+          "куртка с капюшоном",
+          "ru"
+        ],
+        [
+          "hooded jacket",
+          "en"
+        ]
+      ],
+      "reason": "A jacket including a hood; this does not by itself imply waterproof construction."
+    },
+    {
+      "key": "rain_jacket",
+      "name": "куртка для защиты от дождя",
+      "parent": 1519,
+      "universum_id": 1,
+      "terms": [
+        [
+          "куртка для защиты от дождя",
+          "ru"
+        ],
+        [
+          "rain jacket",
+          "en"
+        ]
+      ],
+      "reason": "A jacket intended for rain protection. Hood, fastener, material and protection rating are unspecified. Source: https://www.collinsdictionary.com/dictionary/english/rainwear"
+    },
+    {
+      "key": "hooded_rain_jacket",
+      "name": "куртка от дождя с капюшоном",
+      "parent": "rain_jacket",
+      "universum_id": 1,
+      "terms": [
+        [
+          "куртка от дождя с капюшоном",
+          "ru"
+        ],
+        [
+          "hooded rain jacket",
+          "en"
+        ]
+      ],
+      "reason": "A rain jacket that also has a hood. Source: https://www.collinsdictionary.com/dictionary/english/rainwear"
+    },
+    {
+      "key": "zipped_jacket",
+      "name": "куртка на молнии",
+      "parent": 1519,
+      "universum_id": 1,
+      "terms": [
+        [
+          "куртка на молнии",
+          "ru"
+        ],
+        [
+          "zip-front jacket",
+          "en"
+        ]
+      ],
+      "reason": "A jacket with a zipper; not every jacket is zip-fastened."
+    },
+    {
+      "key": "buttoned_shirt",
+      "name": "рубашка с пуговицами",
+      "parent": 134,
+      "universum_id": 1,
+      "terms": [
+        [
+          "рубашка с пуговицами",
+          "ru"
+        ],
+        [
+          "shirt with buttons",
+          "en"
+        ]
+      ],
+      "reason": "A shirt with buttons. Button presence is not imported as universal for the entire shirt family."
+    },
+    {
+      "key": "collared_shirt",
+      "name": "рубашка с воротником",
+      "parent": 134,
+      "universum_id": 1,
+      "terms": [
+        [
+          "рубашка с воротником",
+          "ru"
+        ],
+        [
+          "collared shirt",
+          "en"
+        ]
+      ],
+      "reason": "A shirt including a collar, with no required collar form or material."
+    },
+    {
+      "key": "cuffed_shirt",
+      "name": "рубашка с манжетами рукавов",
+      "parent": 134,
+      "universum_id": 1,
+      "terms": [
+        [
+          "рубашка с манжетами рукавов",
+          "ru"
+        ],
+        [
+          "shirt with sleeve cuffs",
+          "en"
+        ]
+      ],
+      "reason": "A shirt with cuffs at the ends of its sleeves; not every sleeve must have a cuff."
+    },
+    {
+      "key": "lined_jacket",
+      "name": "куртка с подкладкой",
+      "parent": 1519,
+      "universum_id": 1,
+      "terms": [
+        [
+          "куртка с подкладкой",
+          "ru"
+        ],
+        [
+          "lined jacket",
+          "en"
+        ]
+      ],
+      "reason": "A jacket with an inner garment lining. No particular fiber, insulation value or waterproof membrane is asserted."
+    },
+    {
+      "key": "sports_footwear",
+      "name": "спортивная обувь",
+      "parent": 137,
+      "universum_id": 1,
+      "terms": [
+        [
+          "спортивная обувь",
+          "ru"
+        ],
+        [
+          "sports footwear",
+          "en"
+        ]
+      ],
+      "reason": "Footwear intended for sporting activity. Do not force every fashion sneaker into this purpose-defined family."
+    },
+    {
+      "key": "protective_gloves",
+      "name": "защитные перчатки",
+      "parent": 1513,
+      "universum_id": 1,
+      "terms": [
+        [
+          "защитные перчатки",
+          "ru"
+        ],
+        [
+          "protective gloves",
+          "en"
+        ]
+      ],
+      "reason": "Gloves intended for protection. No specific chemical, impact, thermal or electrical protection is guaranteed."
+    },
+    {
+      "key": "protective_helmet",
+      "name": "защитный шлем",
+      "parent": 2298,
+      "universum_id": 1,
+      "terms": [
+        [
+          "защитный шлем",
+          "ru"
+        ],
+        [
+          "protective helmet",
+          "en"
+        ]
+      ],
+      "reason": "Headgear intended to resist impact. No safety certification, material or use-specific performance is claimed. OEWN 2025: oewn-03518281-n."
+    },
+    {
+      "key": "rain_boots",
+      "name": "сапоги для дождливой погоды",
+      "parent": 138,
+      "universum_id": 1,
+      "terms": [
+        [
+          "сапоги для дождливой погоды",
+          "ru"
+        ],
+        [
+          "rain boots",
+          "en"
+        ]
+      ],
+      "reason": "Boots designed for wet-weather use. Rubber is not required of every design. Source: https://www.collinsdictionary.com/dictionary/english/rainwear"
+    },
+    {
+      "key": "rubber_rain_boots",
+      "name": "дождевые сапоги из резины",
+      "parent": "rain_boots",
+      "universum_id": 1,
+      "terms": [
+        [
+          "дождевые сапоги из резины",
+          "ru"
+        ],
+        [
+          "rubber rain boots",
+          "en"
+        ]
+      ],
+      "reason": "The rain-boot subset made using rubber. Do not equate every boot, rain boot or waterproof polymer boot with rubber."
+    },
+    {
+      "key": "denim_fabric",
+      "name": "деним (ткань)",
+      "parent": 89,
+      "universum_id": 1,
+      "terms": [
+        [
+          "деним (ткань)",
+          "ru"
+        ],
+        [
+          "denim fabric",
+          "en"
+        ],
+        [
+          "деним",
+          "ru"
+        ]
+      ],
+      "reason": "The denim textile material, distinct from jeans as clothing. Allow blended fibers; do not assert pure cotton, a fixed weight or every historical manufacturing detail. OEWN 2025: oewn-03179855-n."
+    },
+    {
+      "key": "denim_clothing",
+      "name": "одежда из денима",
+      "parent": "fabric_clothing",
+      "universum_id": 1,
+      "terms": [
+        [
+          "одежда из денима",
+          "ru"
+        ],
+        [
+          "denim clothing",
+          "en"
+        ]
+      ],
+      "reason": "Clothing using denim fabric, without requiring every component to have the same material."
+    },
+    {
+      "key": "denim_jacket",
+      "name": "джинсовая куртка",
+      "parent": 1519,
+      "universum_id": 1,
+      "terms": [
+        [
+          "джинсовая куртка",
+          "ru"
+        ],
+        [
+          "denim jacket",
+          "en"
+        ]
+      ],
+      "reason": "A jacket made using denim fabric; material and garment form are distinct classifications."
+    }
+  ],
+  "renames": [
+    {
+      "id": 2299,
+      "before": "плащ",
+      "name": "плащ от дождя",
+      "terms": [],
+      "reason": "Qualify the existing English raincoat sense. A generic cloak is a wider/different garment family. OEWN 2025: oewn-04056517-n."
+    }
+  ],
+  "terms": [
+    {
+      "id": 5136,
+      "name": "карман",
+      "terms": [
+        [
+          "garment pocket",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the selected garment component; other pocket homonyms are not imported."
+    },
+    {
+      "id": 1518,
+      "name": "свитер",
+      "terms": [
+        [
+          "sweater (knitted pullover)",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the narrower existing Russian garment sense; broader English sweater usages are not automatically its subtypes."
+    },
+    {
+      "id": 136,
+      "name": "пальто",
+      "terms": [
+        [
+          "overcoat (garment)",
+          "en"
+        ]
+      ],
+      "reason": "Add a qualified garment lookup rather than the paint-coating homonym. OEWN 2025: oewn-03461607-n."
+    },
+    {
+      "id": 1778,
+      "name": "стирка",
+      "terms": [
+        [
+          "laundering",
+          "en"
+        ],
+        [
+          "washing clothes",
+          "en"
+        ],
+        [
+          "стирать",
+          "ru"
+        ]
+      ],
+      "reason": "Use actual washing vocabulary for the existing laundry action; the wider erasure sense needs separate review."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 1778,
+      "term": "стираание",
+      "lang": "ru",
+      "reason": "Remove the generated doubled-vowel artifact; the normal laundry noun remains."
+    },
+    {
+      "id": 1778,
+      "term": "СТИРАТЬ",
+      "lang": "en",
+      "reason": "Retag the Russian infinitive through its correctly tagged Russian form and retain proper English labels."
+    }
+  ],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 3774,
+      "before": [
+        31,
+        "61",
+        137,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "Footwear is already within the selected broad clothing family. It cannot be excluded from its own genus. Preserve the accepted genus 193. OEWN 2025: oewn-03385972-n."
+    },
+    {
+      "id": 3773,
+      "before": [
+        31,
+        "23",
+        89,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The material or component is not universal for every clothing article, every footwear item, every sweater or every sock. Use restricted families where reviewed, without inventing a prevalence percentage."
+    },
+    {
+      "id": 29432,
+      "before": [
+        31,
+        "23",
+        5466,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The material or component is not universal for every clothing article, every footwear item, every sweater or every sock. Use restricted families where reviewed, without inventing a prevalence percentage."
+    },
+    {
+      "id": 29425,
+      "before": [
+        31,
+        "20",
+        5558,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The material or component is not universal for every clothing article, every footwear item, every sweater or every sock. Use restricted families where reviewed, without inventing a prevalence percentage."
+    },
+    {
+      "id": 29426,
+      "before": [
+        31,
+        "20",
+        24409,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The material or component is not universal for every clothing article, every footwear item, every sweater or every sock. Use restricted families where reviewed, without inventing a prevalence percentage."
+    },
+    {
+      "id": 29427,
+      "before": [
+        31,
+        "20",
+        5559,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The material or component is not universal for every clothing article, every footwear item, every sweater or every sock. Use restricted families where reviewed, without inventing a prevalence percentage."
+    },
+    {
+      "id": 29428,
+      "before": [
+        137,
+        "20",
+        5562,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The material or component is not universal for every clothing article, every footwear item, every sweater or every sock. Use restricted families where reviewed, without inventing a prevalence percentage."
+    },
+    {
+      "id": 2406,
+      "before": [
+        1518,
+        "23",
+        1246,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The material or component is not universal for every clothing article, every footwear item, every sweater or every sock. Use restricted families where reviewed, without inventing a prevalence percentage."
+    },
+    {
+      "id": 2407,
+      "before": [
+        1517,
+        "23",
+        1246,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The material or component is not universal for every clothing article, every footwear item, every sweater or every sock. Use restricted families where reviewed, without inventing a prevalence percentage."
+    },
+    {
+      "id": 192,
+      "before": [
+        136,
+        "14",
+        31,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          136,
+          "14",
+          "outerwear",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the selected coat, jacket or raincoat through outerwear while preserving clothing ancestry."
+    },
+    {
+      "id": 2278,
+      "before": [
+        1519,
+        "14",
+        31,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1519,
+          "14",
+          "outerwear",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the selected coat, jacket or raincoat through outerwear while preserving clothing ancestry."
+    },
+    {
+      "id": 4160,
+      "before": [
+        2299,
+        "14",
+        31,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2299,
+          "14",
+          "outerwear",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the selected coat, jacket or raincoat through outerwear while preserving clothing ancestry."
+    },
+    {
+      "id": 2277,
+      "before": [
+        1518,
+        "14",
+        31,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1518,
+          "14",
+          "knitwear",
+          null,
+          1
+        ]
+      ],
+      "reason": "The existing Russian sweater record is knitted clothing; its material need not be wool. Do not use it as the genus of every open-front cardigan. OEWN 2025: oewn-04377135-n."
+    },
+    {
+      "id": 4170,
+      "before": [
+        2309,
+        "14",
+        31,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2309,
+          "14",
+          "nightwear",
+          null,
+          1
+        ]
+      ],
+      "reason": "The existing pajama garment is sleepwear in the selected ordinary sense. OEWN 2025: oewn-03830620-n."
+    },
+    {
+      "id": 4172,
+      "before": [
+        2311,
+        "14",
+        31,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2311,
+          "14",
+          "protective_clothing",
+          null,
+          1
+        ]
+      ],
+      "reason": "The selected apron garment protects the wearer or underlying clothes; do not import airport or stage homonyms. OEWN 2025: oewn-02733935-n."
+    },
+    {
+      "id": 4166,
+      "before": [
+        2305,
+        "14",
+        31,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2305,
+          "14",
+          135,
+          null,
+          1
+        ]
+      ],
+      "reason": "Jeans in the selected trousers sense belong to trousers, not to a disjoint peer class. Do not import the bare denim material synonym. OEWN 2025: oewn-03599921-n."
+    },
+    {
+      "id": 4255,
+      "before": [
+        135,
+        "61",
+        2305,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The selected jeans are a kind of trousers and cannot be disjoint from that genus. OEWN 2025: oewn-03599921-n."
+    },
+    {
+      "id": 7923,
+      "before": [
+        5136,
+        "14",
+        242,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          5136,
+          "14",
+          5959,
+          null,
+          1
+        ]
+      ],
+      "reason": "Select the physical garment pocket, not a geographical pocket, pool-table pocket, money or the pocketing action."
+    }
+  ],
+  "edges": [
+    {
+      "subject": "clothing_hook",
+      "kod": "14",
+      "object": 24408,
+      "universum_id": 1,
+      "reason": "The selected hook is also a clothing fastener; generic hooks need not be clothing fasteners."
+    },
+    {
+      "subject": "buttoned_cardigan",
+      "kod": "14",
+      "object": "buttoned_clothing",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications instead of identifying purpose, material, component and garment shape."
+    },
+    {
+      "subject": "zipped_cardigan",
+      "kod": "14",
+      "object": "zipped_clothing",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications instead of identifying purpose, material, component and garment shape."
+    },
+    {
+      "subject": "hooded_jacket",
+      "kod": "14",
+      "object": "hooded_clothing",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications instead of identifying purpose, material, component and garment shape."
+    },
+    {
+      "subject": "rain_jacket",
+      "kod": "14",
+      "object": "rainwear",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications instead of identifying purpose, material, component and garment shape."
+    },
+    {
+      "subject": "hooded_rain_jacket",
+      "kod": "14",
+      "object": "hooded_jacket",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications instead of identifying purpose, material, component and garment shape."
+    },
+    {
+      "subject": "zipped_jacket",
+      "kod": "14",
+      "object": "zipped_clothing",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications instead of identifying purpose, material, component and garment shape."
+    },
+    {
+      "subject": "buttoned_shirt",
+      "kod": "14",
+      "object": "buttoned_clothing",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications instead of identifying purpose, material, component and garment shape."
+    },
+    {
+      "subject": "cuffed_shirt",
+      "kod": "14",
+      "object": "sleeved_clothing",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications instead of identifying purpose, material, component and garment shape."
+    },
+    {
+      "subject": "sports_footwear",
+      "kod": "14",
+      "object": "sports_clothing",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications instead of identifying purpose, material, component and garment shape."
+    },
+    {
+      "subject": "protective_gloves",
+      "kod": "14",
+      "object": "protective_clothing",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications instead of identifying purpose, material, component and garment shape."
+    },
+    {
+      "subject": "protective_helmet",
+      "kod": "14",
+      "object": "protective_clothing",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications instead of identifying purpose, material, component and garment shape."
+    },
+    {
+      "subject": "rain_boots",
+      "kod": "14",
+      "object": "rainwear",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications instead of identifying purpose, material, component and garment shape."
+    },
+    {
+      "subject": "denim_jacket",
+      "kod": "14",
+      "object": "denim_clothing",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications instead of identifying purpose, material, component and garment shape."
+    },
+    {
+      "subject": 2299,
+      "kod": "14",
+      "object": "rainwear",
+      "universum_id": 1,
+      "reason": "The explicitly selected raincoat belongs to rainwear as well as outerwear. OEWN 2025: oewn-04056517-n. Source: https://www.collinsdictionary.com/dictionary/english/rainwear"
+    },
+    {
+      "subject": 2305,
+      "kod": "14",
+      "object": "denim_clothing",
+      "universum_id": 1,
+      "reason": "The existing jeans record also belongs to clothing made with denim; do not require a work-only purpose. OEWN 2025: oewn-03599921-n."
+    },
+    {
+      "subject": "buttoned_clothing",
+      "kod": "20",
+      "object": 5558,
+      "universum_id": 1,
+      "reason": "The restricted garment or footwear has this component. No part is asserted to be the whole garment."
+    },
+    {
+      "subject": "zipped_clothing",
+      "kod": "20",
+      "object": 24409,
+      "universum_id": 1,
+      "reason": "The restricted garment or footwear has this component. No part is asserted to be the whole garment."
+    },
+    {
+      "subject": "hooded_clothing",
+      "kod": "20",
+      "object": "garment_hood",
+      "universum_id": 1,
+      "reason": "The restricted garment or footwear has this component. No part is asserted to be the whole garment."
+    },
+    {
+      "subject": "sleeved_clothing",
+      "kod": "20",
+      "object": 5960,
+      "universum_id": 1,
+      "reason": "The restricted garment or footwear has this component. No part is asserted to be the whole garment."
+    },
+    {
+      "subject": "heeled_footwear",
+      "kod": "20",
+      "object": 5562,
+      "universum_id": 1,
+      "reason": "The restricted garment or footwear has this component. No part is asserted to be the whole garment."
+    },
+    {
+      "subject": "lace_up_footwear",
+      "kod": "20",
+      "object": 5560,
+      "universum_id": 1,
+      "reason": "The restricted garment or footwear has this component. No part is asserted to be the whole garment."
+    },
+    {
+      "subject": "hooked_clothing",
+      "kod": "20",
+      "object": "clothing_hook",
+      "universum_id": 1,
+      "reason": "The restricted garment or footwear has this component. No part is asserted to be the whole garment."
+    },
+    {
+      "subject": "collared_shirt",
+      "kod": "20",
+      "object": "garment_collar",
+      "universum_id": 1,
+      "reason": "The restricted garment or footwear has this component. No part is asserted to be the whole garment."
+    },
+    {
+      "subject": "cuffed_shirt",
+      "kod": "20",
+      "object": "sleeve_cuff",
+      "universum_id": 1,
+      "reason": "The restricted garment or footwear has this component. No part is asserted to be the whole garment."
+    },
+    {
+      "subject": "lined_jacket",
+      "kod": "20",
+      "object": "garment_lining",
+      "universum_id": 1,
+      "reason": "The restricted garment or footwear has this component. No part is asserted to be the whole garment."
+    },
+    {
+      "subject": "fabric_clothing",
+      "kod": "23",
+      "object": 89,
+      "universum_id": 1,
+      "reason": "The restricted family uses this material, without asserting a mass fraction, purity or exclusivity."
+    },
+    {
+      "subject": "nylon_clothing",
+      "kod": "23",
+      "object": 5466,
+      "universum_id": 1,
+      "reason": "The restricted family uses this material, without asserting a mass fraction, purity or exclusivity."
+    },
+    {
+      "subject": "rubber_rain_boots",
+      "kod": "23",
+      "object": 1232,
+      "universum_id": 1,
+      "reason": "The restricted family uses this material, without asserting a mass fraction, purity or exclusivity."
+    },
+    {
+      "subject": "denim_clothing",
+      "kod": "23",
+      "object": "denim_fabric",
+      "universum_id": 1,
+      "reason": "The restricted family uses this material, without asserting a mass fraction, purity or exclusivity."
+    },
+    {
+      "subject": "sports_clothing",
+      "kod": "21",
+      "object": 2161,
+      "universum_id": 1,
+      "reason": "The selected garment family is intended for this use; intention is not a guarantee of protection or a claim about every occasion it is worn."
+    },
+    {
+      "subject": "workwear",
+      "kod": "21",
+      "object": 65,
+      "universum_id": 1,
+      "reason": "The selected garment family is intended for this use; intention is not a guarantee of protection or a claim about every occasion it is worn."
+    },
+    {
+      "subject": "protective_clothing",
+      "kod": "21",
+      "object": 255,
+      "universum_id": 1,
+      "reason": "The selected garment family is intended for this use; intention is not a guarantee of protection or a claim about every occasion it is worn."
+    },
+    {
+      "subject": "nightwear",
+      "kod": "21",
+      "object": 205,
+      "universum_id": 1,
+      "reason": "The selected garment family is intended for this use; intention is not a guarantee of protection or a claim about every occasion it is worn."
+    }
+  ],
+  "checks": [
+    {
+      "subject": "outerwear",
+      "kod": "14",
+      "object": 31,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "underwear",
+      "kod": "14",
+      "object": 31,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sports_clothing",
+      "kod": "14",
+      "object": 31,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "workwear",
+      "kod": "14",
+      "object": 31,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "protective_clothing",
+      "kod": "14",
+      "object": 31,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rainwear",
+      "kod": "14",
+      "object": "protective_clothing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "nightwear",
+      "kod": "14",
+      "object": 31,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "knitwear",
+      "kod": "14",
+      "object": 31,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fabric_clothing",
+      "kod": "14",
+      "object": 31,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "nylon_clothing",
+      "kod": "14",
+      "object": 31,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "buttoned_clothing",
+      "kod": "14",
+      "object": 31,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "zipped_clothing",
+      "kod": "14",
+      "object": 31,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hooded_clothing",
+      "kod": "14",
+      "object": 31,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sleeved_clothing",
+      "kod": "14",
+      "object": 31,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "heeled_footwear",
+      "kod": "14",
+      "object": 137,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "lace_up_footwear",
+      "kod": "14",
+      "object": 137,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "garment_hood",
+      "kod": "14",
+      "object": 5959,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "garment_collar",
+      "kod": "14",
+      "object": 5959,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sleeve_cuff",
+      "kod": "14",
+      "object": 5959,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "garment_lining",
+      "kod": "14",
+      "object": 5959,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "clothing_hook",
+      "kod": "14",
+      "object": 5559,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "clothing_hook",
+      "kod": "14",
+      "object": 24408,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hooked_clothing",
+      "kod": "14",
+      "object": 31,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cardigan",
+      "kod": "14",
+      "object": "knitwear",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "buttoned_cardigan",
+      "kod": "14",
+      "object": "cardigan",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "zipped_cardigan",
+      "kod": "14",
+      "object": "cardigan",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hooded_jacket",
+      "kod": "14",
+      "object": 1519,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rain_jacket",
+      "kod": "14",
+      "object": 1519,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hooded_rain_jacket",
+      "kod": "14",
+      "object": "rain_jacket",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "zipped_jacket",
+      "kod": "14",
+      "object": 1519,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "buttoned_shirt",
+      "kod": "14",
+      "object": 134,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "collared_shirt",
+      "kod": "14",
+      "object": 134,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cuffed_shirt",
+      "kod": "14",
+      "object": 134,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "lined_jacket",
+      "kod": "14",
+      "object": 1519,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sports_footwear",
+      "kod": "14",
+      "object": 137,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "protective_gloves",
+      "kod": "14",
+      "object": 1513,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "protective_helmet",
+      "kod": "14",
+      "object": 2298,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rain_boots",
+      "kod": "14",
+      "object": 138,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rubber_rain_boots",
+      "kod": "14",
+      "object": "rain_boots",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "denim_fabric",
+      "kod": "14",
+      "object": 89,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "denim_clothing",
+      "kod": "14",
+      "object": "fabric_clothing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "denim_jacket",
+      "kod": "14",
+      "object": 1519,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "buttoned_cardigan",
+      "kod": "14",
+      "object": "buttoned_clothing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "zipped_cardigan",
+      "kod": "14",
+      "object": "zipped_clothing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hooded_jacket",
+      "kod": "14",
+      "object": "hooded_clothing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rain_jacket",
+      "kod": "14",
+      "object": "rainwear",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hooded_rain_jacket",
+      "kod": "14",
+      "object": "hooded_jacket",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "zipped_jacket",
+      "kod": "14",
+      "object": "zipped_clothing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "buttoned_shirt",
+      "kod": "14",
+      "object": "buttoned_clothing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cuffed_shirt",
+      "kod": "14",
+      "object": "sleeved_clothing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sports_footwear",
+      "kod": "14",
+      "object": "sports_clothing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "protective_gloves",
+      "kod": "14",
+      "object": "protective_clothing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "protective_helmet",
+      "kod": "14",
+      "object": "protective_clothing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rain_boots",
+      "kod": "14",
+      "object": "rainwear",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "denim_jacket",
+      "kod": "14",
+      "object": "denim_clothing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 31,
+      "kod": "61",
+      "object": 137,
+      "present": false
+    },
+    {
+      "subject": 31,
+      "kod": "23",
+      "object": 89,
+      "present": false
+    },
+    {
+      "subject": 31,
+      "kod": "23",
+      "object": 5466,
+      "present": false
+    },
+    {
+      "subject": 31,
+      "kod": "20",
+      "object": 5558,
+      "present": false
+    },
+    {
+      "subject": 31,
+      "kod": "20",
+      "object": 24409,
+      "present": false
+    },
+    {
+      "subject": 31,
+      "kod": "20",
+      "object": 5559,
+      "present": false
+    },
+    {
+      "subject": 137,
+      "kod": "20",
+      "object": 5562,
+      "present": false
+    },
+    {
+      "subject": 1518,
+      "kod": "23",
+      "object": 1246,
+      "present": false
+    },
+    {
+      "subject": 1517,
+      "kod": "23",
+      "object": 1246,
+      "present": false
+    },
+    {
+      "subject": 136,
+      "kod": "14",
+      "object": 31,
+      "present": false
+    },
+    {
+      "subject": 136,
+      "kod": "14",
+      "object": "outerwear",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1519,
+      "kod": "14",
+      "object": 31,
+      "present": false
+    },
+    {
+      "subject": 1519,
+      "kod": "14",
+      "object": "outerwear",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2299,
+      "kod": "14",
+      "object": 31,
+      "present": false
+    },
+    {
+      "subject": 2299,
+      "kod": "14",
+      "object": "outerwear",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1518,
+      "kod": "14",
+      "object": 31,
+      "present": false
+    },
+    {
+      "subject": 1518,
+      "kod": "14",
+      "object": "knitwear",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2309,
+      "kod": "14",
+      "object": 31,
+      "present": false
+    },
+    {
+      "subject": 2309,
+      "kod": "14",
+      "object": "nightwear",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2311,
+      "kod": "14",
+      "object": 31,
+      "present": false
+    },
+    {
+      "subject": 2311,
+      "kod": "14",
+      "object": "protective_clothing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2299,
+      "kod": "14",
+      "object": "rainwear",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2305,
+      "kod": "14",
+      "object": 31,
+      "present": false
+    },
+    {
+      "subject": 2305,
+      "kod": "14",
+      "object": 135,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 135,
+      "kod": "61",
+      "object": 2305,
+      "present": false
+    },
+    {
+      "subject": 2305,
+      "kod": "14",
+      "object": "denim_clothing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5136,
+      "kod": "14",
+      "object": 242,
+      "present": false
+    },
+    {
+      "subject": 5136,
+      "kod": "14",
+      "object": 5959,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "buttoned_clothing",
+      "kod": "20",
+      "object": 5558,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "zipped_clothing",
+      "kod": "20",
+      "object": 24409,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hooded_clothing",
+      "kod": "20",
+      "object": "garment_hood",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sleeved_clothing",
+      "kod": "20",
+      "object": 5960,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "heeled_footwear",
+      "kod": "20",
+      "object": 5562,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "lace_up_footwear",
+      "kod": "20",
+      "object": 5560,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hooked_clothing",
+      "kod": "20",
+      "object": "clothing_hook",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "collared_shirt",
+      "kod": "20",
+      "object": "garment_collar",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cuffed_shirt",
+      "kod": "20",
+      "object": "sleeve_cuff",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "lined_jacket",
+      "kod": "20",
+      "object": "garment_lining",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fabric_clothing",
+      "kod": "23",
+      "object": 89,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "nylon_clothing",
+      "kod": "23",
+      "object": 5466,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rubber_rain_boots",
+      "kod": "23",
+      "object": 1232,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "denim_clothing",
+      "kod": "23",
+      "object": "denim_fabric",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sports_clothing",
+      "kod": "21",
+      "object": 2161,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "workwear",
+      "kod": "21",
+      "object": 65,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "protective_clothing",
+      "kod": "21",
+      "object": 255,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "nightwear",
+      "kod": "21",
+      "object": 205,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 31,
+      "kod": "23",
+      "object": 89,
+      "present": false
+    },
+    {
+      "subject": 31,
+      "kod": "23",
+      "object": 5466,
+      "present": false
+    },
+    {
+      "subject": 31,
+      "kod": "20",
+      "object": 5558,
+      "present": false
+    },
+    {
+      "subject": 31,
+      "kod": "20",
+      "object": 24409,
+      "present": false
+    },
+    {
+      "subject": 31,
+      "kod": "20",
+      "object": 5559,
+      "present": false
+    },
+    {
+      "subject": 137,
+      "kod": "20",
+      "object": 5562,
+      "present": false
+    },
+    {
+      "subject": 1518,
+      "kod": "23",
+      "object": 1246,
+      "present": false
+    },
+    {
+      "subject": 1517,
+      "kod": "23",
+      "object": 1246,
+      "present": false
+    },
+    {
+      "subject": "cardigan",
+      "kod": "20",
+      "object": 5558,
+      "present": false
+    },
+    {
+      "subject": "cardigan",
+      "kod": "20",
+      "object": 24409,
+      "present": false
+    },
+    {
+      "subject": "rain_boots",
+      "kod": "23",
+      "object": 1232,
+      "present": false
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "outerwear",
+      "ancestor": 31,
+      "present": true
+    },
+    {
+      "subject": "underwear",
+      "ancestor": 31,
+      "present": true
+    },
+    {
+      "subject": "sports_clothing",
+      "ancestor": 31,
+      "present": true
+    },
+    {
+      "subject": "workwear",
+      "ancestor": 31,
+      "present": true
+    },
+    {
+      "subject": "protective_clothing",
+      "ancestor": 31,
+      "present": true
+    },
+    {
+      "subject": "rainwear",
+      "ancestor": "protective_clothing",
+      "present": true
+    },
+    {
+      "subject": "nightwear",
+      "ancestor": 31,
+      "present": true
+    },
+    {
+      "subject": "knitwear",
+      "ancestor": 31,
+      "present": true
+    },
+    {
+      "subject": "fabric_clothing",
+      "ancestor": 31,
+      "present": true
+    },
+    {
+      "subject": "nylon_clothing",
+      "ancestor": 31,
+      "present": true
+    },
+    {
+      "subject": "buttoned_clothing",
+      "ancestor": 31,
+      "present": true
+    },
+    {
+      "subject": "zipped_clothing",
+      "ancestor": 31,
+      "present": true
+    },
+    {
+      "subject": "hooded_clothing",
+      "ancestor": 31,
+      "present": true
+    },
+    {
+      "subject": "sleeved_clothing",
+      "ancestor": 31,
+      "present": true
+    },
+    {
+      "subject": "heeled_footwear",
+      "ancestor": 137,
+      "present": true
+    },
+    {
+      "subject": "lace_up_footwear",
+      "ancestor": 137,
+      "present": true
+    },
+    {
+      "subject": "garment_hood",
+      "ancestor": 5959,
+      "present": true
+    },
+    {
+      "subject": "garment_collar",
+      "ancestor": 5959,
+      "present": true
+    },
+    {
+      "subject": "sleeve_cuff",
+      "ancestor": 5959,
+      "present": true
+    },
+    {
+      "subject": "garment_lining",
+      "ancestor": 5959,
+      "present": true
+    },
+    {
+      "subject": "clothing_hook",
+      "ancestor": 5559,
+      "present": true
+    },
+    {
+      "subject": "hooked_clothing",
+      "ancestor": 31,
+      "present": true
+    },
+    {
+      "subject": "cardigan",
+      "ancestor": "knitwear",
+      "present": true
+    },
+    {
+      "subject": "buttoned_cardigan",
+      "ancestor": "cardigan",
+      "present": true
+    },
+    {
+      "subject": "zipped_cardigan",
+      "ancestor": "cardigan",
+      "present": true
+    },
+    {
+      "subject": "hooded_jacket",
+      "ancestor": 1519,
+      "present": true
+    },
+    {
+      "subject": "rain_jacket",
+      "ancestor": 1519,
+      "present": true
+    },
+    {
+      "subject": "hooded_rain_jacket",
+      "ancestor": "rain_jacket",
+      "present": true
+    },
+    {
+      "subject": "zipped_jacket",
+      "ancestor": 1519,
+      "present": true
+    },
+    {
+      "subject": "buttoned_shirt",
+      "ancestor": 134,
+      "present": true
+    },
+    {
+      "subject": "collared_shirt",
+      "ancestor": 134,
+      "present": true
+    },
+    {
+      "subject": "cuffed_shirt",
+      "ancestor": 134,
+      "present": true
+    },
+    {
+      "subject": "lined_jacket",
+      "ancestor": 1519,
+      "present": true
+    },
+    {
+      "subject": "sports_footwear",
+      "ancestor": 137,
+      "present": true
+    },
+    {
+      "subject": "protective_gloves",
+      "ancestor": 1513,
+      "present": true
+    },
+    {
+      "subject": "protective_helmet",
+      "ancestor": 2298,
+      "present": true
+    },
+    {
+      "subject": "rain_boots",
+      "ancestor": 138,
+      "present": true
+    },
+    {
+      "subject": "rubber_rain_boots",
+      "ancestor": "rain_boots",
+      "present": true
+    },
+    {
+      "subject": "denim_fabric",
+      "ancestor": 89,
+      "present": true
+    },
+    {
+      "subject": "denim_clothing",
+      "ancestor": "fabric_clothing",
+      "present": true
+    },
+    {
+      "subject": "denim_jacket",
+      "ancestor": 1519,
+      "present": true
+    },
+    {
+      "subject": 137,
+      "ancestor": 31,
+      "present": true
+    },
+    {
+      "subject": 136,
+      "ancestor": 31,
+      "present": true
+    },
+    {
+      "subject": 1519,
+      "ancestor": 31,
+      "present": true
+    },
+    {
+      "subject": 2299,
+      "ancestor": "outerwear",
+      "present": true
+    },
+    {
+      "subject": 2299,
+      "ancestor": "rainwear",
+      "present": true
+    },
+    {
+      "subject": 1518,
+      "ancestor": "knitwear",
+      "present": true
+    },
+    {
+      "subject": 2309,
+      "ancestor": "nightwear",
+      "present": true
+    },
+    {
+      "subject": 2311,
+      "ancestor": "protective_clothing",
+      "present": true
+    },
+    {
+      "subject": 2305,
+      "ancestor": 135,
+      "present": true
+    },
+    {
+      "subject": 2305,
+      "ancestor": "denim_clothing",
+      "present": true
+    },
+    {
+      "subject": "hooded_rain_jacket",
+      "ancestor": "hooded_clothing",
+      "present": true
+    },
+    {
+      "subject": "hooded_rain_jacket",
+      "ancestor": "rainwear",
+      "present": true
+    },
+    {
+      "subject": "denim_jacket",
+      "ancestor": "fabric_clothing",
+      "present": true
+    },
+    {
+      "subject": "sports_footwear",
+      "ancestor": 137,
+      "present": true
+    },
+    {
+      "subject": "sports_footwear",
+      "ancestor": "sports_clothing",
+      "present": true
+    },
+    {
+      "subject": 5136,
+      "ancestor": 5959,
+      "present": true
+    },
+    {
+      "subject": "cardigan",
+      "ancestor": 1518,
+      "present": false
+    },
+    {
+      "subject": "cardigan",
+      "ancestor": "buttoned_clothing",
+      "present": false
+    },
+    {
+      "subject": "cardigan",
+      "ancestor": "zipped_clothing",
+      "present": false
+    },
+    {
+      "subject": "garment_hood",
+      "ancestor": 31,
+      "present": false
+    },
+    {
+      "subject": "garment_collar",
+      "ancestor": 31,
+      "present": false
+    },
+    {
+      "subject": "sleeve_cuff",
+      "ancestor": 31,
+      "present": false
+    },
+    {
+      "subject": "garment_lining",
+      "ancestor": 31,
+      "present": false
+    },
+    {
+      "subject": "denim_fabric",
+      "ancestor": 31,
+      "present": false
+    },
+    {
+      "subject": "denim_clothing",
+      "ancestor": "denim_fabric",
+      "present": false
+    },
+    {
+      "subject": "rain_boots",
+      "ancestor": 1232,
+      "present": false
+    },
+    {
+      "subject": "sports_footwear",
+      "ancestor": 1517,
+      "present": false
+    },
+    {
+      "subject": 1517,
+      "ancestor": 137,
+      "present": false
+    },
+    {
+      "subject": 2305,
+      "ancestor": "workwear",
+      "present": false
+    },
+    {
+      "subject": "knitwear",
+      "ancestor": "fabric_clothing",
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": "outerwear",
+      "term": "верхняя одежда",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "outerwear",
+      "term": "outerwear",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "underwear",
+      "term": "нижнее бельё",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "underwear",
+      "term": "underwear",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "underwear",
+      "term": "underclothing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "sports_clothing",
+      "term": "спортивная одежда",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "sports_clothing",
+      "term": "sports clothing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "sports_clothing",
+      "term": "athletic wear (sports clothing)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "workwear",
+      "term": "рабочая одежда для физической работы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "workwear",
+      "term": "workwear (manual work)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "workwear",
+      "term": "workwear",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "protective_clothing",
+      "term": "защитная одежда",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "protective_clothing",
+      "term": "protective clothing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rainwear",
+      "term": "одежда для защиты от дождя",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rainwear",
+      "term": "rainwear",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "nightwear",
+      "term": "одежда для сна",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "nightwear",
+      "term": "nightwear",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "nightwear",
+      "term": "sleepwear",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "knitwear",
+      "term": "вязаная одежда",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "knitwear",
+      "term": "knitwear",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fabric_clothing",
+      "term": "одежда из ткани",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fabric_clothing",
+      "term": "fabric clothing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "nylon_clothing",
+      "term": "одежда с нейлоновым материалом",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "nylon_clothing",
+      "term": "clothing made with nylon",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "buttoned_clothing",
+      "term": "одежда с пуговицами",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "buttoned_clothing",
+      "term": "clothing with buttons",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "zipped_clothing",
+      "term": "одежда с застёжкой-молнией",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "zipped_clothing",
+      "term": "clothing with a zipper",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hooded_clothing",
+      "term": "одежда с капюшоном",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "hooded_clothing",
+      "term": "hooded clothing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "sleeved_clothing",
+      "term": "одежда с рукавами",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "sleeved_clothing",
+      "term": "clothing with sleeves",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "heeled_footwear",
+      "term": "обувь с каблуком",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "heeled_footwear",
+      "term": "footwear with a heel",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "lace_up_footwear",
+      "term": "обувь со шнуровкой",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "lace_up_footwear",
+      "term": "lace-up footwear",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "garment_hood",
+      "term": "капюшон (часть одежды)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "garment_hood",
+      "term": "garment hood",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "garment_hood",
+      "term": "капюшон",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "garment_collar",
+      "term": "воротник (часть одежды)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "garment_collar",
+      "term": "garment collar",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "garment_collar",
+      "term": "воротник",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "sleeve_cuff",
+      "term": "манжета рукава",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "sleeve_cuff",
+      "term": "sleeve cuff",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "garment_lining",
+      "term": "подкладка одежды",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "garment_lining",
+      "term": "garment lining",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "clothing_hook",
+      "term": "крючок для застёгивания одежды",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "clothing_hook",
+      "term": "clothing fastening hook",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hooked_clothing",
+      "term": "одежда с застёжкой-крючком",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "hooked_clothing",
+      "term": "clothing with a hook fastener",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cardigan",
+      "term": "кардиган",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "cardigan",
+      "term": "cardigan",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "buttoned_cardigan",
+      "term": "кардиган с пуговицами",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "buttoned_cardigan",
+      "term": "cardigan with buttons",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "zipped_cardigan",
+      "term": "кардиган на молнии",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "zipped_cardigan",
+      "term": "zip-front cardigan",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hooded_jacket",
+      "term": "куртка с капюшоном",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "hooded_jacket",
+      "term": "hooded jacket",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rain_jacket",
+      "term": "куртка для защиты от дождя",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rain_jacket",
+      "term": "rain jacket",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hooded_rain_jacket",
+      "term": "куртка от дождя с капюшоном",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "hooded_rain_jacket",
+      "term": "hooded rain jacket",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "zipped_jacket",
+      "term": "куртка на молнии",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "zipped_jacket",
+      "term": "zip-front jacket",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "buttoned_shirt",
+      "term": "рубашка с пуговицами",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "buttoned_shirt",
+      "term": "shirt with buttons",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "collared_shirt",
+      "term": "рубашка с воротником",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "collared_shirt",
+      "term": "collared shirt",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cuffed_shirt",
+      "term": "рубашка с манжетами рукавов",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "cuffed_shirt",
+      "term": "shirt with sleeve cuffs",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "lined_jacket",
+      "term": "куртка с подкладкой",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "lined_jacket",
+      "term": "lined jacket",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "sports_footwear",
+      "term": "спортивная обувь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "sports_footwear",
+      "term": "sports footwear",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "protective_gloves",
+      "term": "защитные перчатки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "protective_gloves",
+      "term": "protective gloves",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "protective_helmet",
+      "term": "защитный шлем",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "protective_helmet",
+      "term": "protective helmet",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rain_boots",
+      "term": "сапоги для дождливой погоды",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rain_boots",
+      "term": "rain boots",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rubber_rain_boots",
+      "term": "дождевые сапоги из резины",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rubber_rain_boots",
+      "term": "rubber rain boots",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "denim_fabric",
+      "term": "деним (ткань)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "denim_fabric",
+      "term": "denim fabric",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "denim_fabric",
+      "term": "деним",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "denim_clothing",
+      "term": "одежда из денима",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "denim_clothing",
+      "term": "denim clothing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "denim_jacket",
+      "term": "джинсовая куртка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "denim_jacket",
+      "term": "denim jacket",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2299,
+      "term": "плащ от дождя",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 5136,
+      "term": "garment pocket",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1518,
+      "term": "sweater (knitted pullover)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 136,
+      "term": "overcoat (garment)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1778,
+      "term": "laundering",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1778,
+      "term": "washing clothes",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1778,
+      "term": "стирать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1778,
+      "term": "стираание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 1778,
+      "term": "СТИРАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "cardigan",
+      "term": "Cardigan Welsh corgi",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "garment_hood",
+      "term": "engine hood",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "sleeve_cuff",
+      "term": "handcuff",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "denim_fabric",
+      "term": "jeans",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

@@ -1,0 +1,2921 @@
+{
+  "source": "quality-20261009-q37",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Classical motion and geometric paths; physical scalar/vector quantities; inertia, momentum, force impulse, angular momentum, torque and moment of inertia; kinetic energy and work; transitive moving and rolling actions.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "vectors": "https://openstax.org/books/university-physics-volume-1/pages/2-1-scalars-and-vectors",
+      "distance": "https://openstax.org/books/university-physics-volume-1/pages/3-1-position-displacement-and-average-velocity",
+      "trajectory": "https://openstax.org/books/university-physics-volume-1/pages/4-1-displacement-and-velocity-vectors",
+      "inertia": "https://openstax.org/books/university-physics-volume-1/pages/5-2-newtons-first-law",
+      "momentum": "https://openstax.org/books/university-physics-volume-1/pages/9-1-linear-momentum",
+      "impulse": "https://openstax.org/books/university-physics-volume-1/pages/9-2-impulse-and-collisions",
+      "angular_momentum": "https://openstax.org/books/university-physics-volume-1/pages/11-2-angular-momentum",
+      "moment_inertia": "https://openstax.org/books/university-physics-volume-1/pages/10-4-moment-of-inertia-and-rotational-kinetic-energy",
+      "torque": "https://openstax.org/books/university-physics-volume-1/pages/10-6-torque",
+      "work": "https://openstax.org/books/university-physics-volume-1/pages/7-1-work",
+      "kinetic": "https://openstax.org/books/university-physics-volume-1/pages/7-2-kinetic-energy",
+      "rolling": "https://openstax.org/books/university-physics-volume-1/pages/11-1-rolling-motion",
+      "translation": "https://archive.nptel.ac.in/content/storage2/courses/112103109/mod_9/lec1/slides/slide1.htm",
+      "ru_rolling": "https://ruslang.ru/sites/default/files/2024-12/ASRYa-4-2.pdf",
+      "ru_relocation": "https://gramota.ru/poisk?mode=all&query=%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet; CC BY 4.0 and Princeton notices remain in docs/quality/2026-10-09-q11.md#sources-and-reuse. OpenStax University Physics Volume 1, NPTEL and Russian dictionary sources support technical and lexical corrections. Source prose and exercises are not copied. Qualified labels, intersections and graph mappings are editorial adaptations.",
+    "existing_cohort": [
+      55,
+      2819,
+      3254,
+      25105,
+      25106,
+      25107,
+      25108,
+      25117,
+      25118,
+      25119,
+      25121,
+      25122,
+      24587,
+      24657,
+      3081,
+      3462,
+      2710,
+      2895,
+      2701,
+      24706,
+      24707,
+      18237,
+      6018,
+      2999,
+      2072,
+      1071,
+      3110,
+      1842
+    ],
+    "context_policy": "All additions use U1 with unspecified strength; old home contexts and reviewed genera remain. Physical quantities, motion processes, geometric paths and actions causing movement are separate categories.",
+    "sense_decisions": [
+      {
+        "concept": "scalar_quantity",
+        "synset": "oewn-05872935-n",
+        "decision": "add",
+        "alignment": "restricted physical sense",
+        "scope": "A physical quantity specified by a signed numerical value and a unit, without a spatial direction; the physical restriction is distinct from the U3 Scalar record."
+      },
+      {
+        "concept": "vector_quantity",
+        "synset": "oewn-05873161-n",
+        "decision": "add",
+        "alignment": "restricted physical sense",
+        "scope": "A physical quantity represented by a spatial vector in the selected mechanics model, not a disease carrier or a programming container."
+      },
+      {
+        "concept": "mechanical_inertia",
+        "synset": "oewn-11489163-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Resistance to changes of velocity, applicable to resting and moving bodies. The inertial-frame law concerns net external force, not the absence of every individual force."
+      },
+      {
+        "concept": "linear_momentum",
+        "synset": "oewn-05036303-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The classical mass-times-velocity quantity relative to a frame; distinct from force impulse and metaphorical impetus."
+      },
+      {
+        "concept": "force_impulse",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The time integral of a force over an interval, not the force itself and not momentum at a single instant."
+      },
+      {
+        "concept": "net_force_impulse",
+        "synset": null,
+        "decision": "add",
+        "alignment": "force restriction",
+        "scope": "The impulse of the net external force over the chosen interval; the change in linear momentum is a theorem relating quantities, not a synonym for momentum."
+      },
+      {
+        "concept": "angular_momentum",
+        "synset": "oewn-05036493-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Angular momentum with respect to a chosen origin; a distinct quantity from linear momentum, including for a particle on a straight path."
+      },
+      {
+        "concept": "torque",
+        "synset": "oewn-11540135-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The moment of a force about a chosen origin; an axial vector quantity in classical mechanics, not simply a kind of force."
+      },
+      {
+        "concept": "axis_moment_inertia",
+        "synset": "oewn-11489373-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The scalar mass-distribution quantity for a specified axis; distinguish it from inertia as a general property, area moments and the full inertia tensor."
+      },
+      {
+        "concept": "trajectory",
+        "synset": "oewn-11501734-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The geometric path traced by a moving point in a selected frame; distinguish the path from its length, the motion process and a displacement vector."
+      },
+      {
+        "concept": "plane_trajectory",
+        "synset": null,
+        "decision": "add",
+        "alignment": "geometric restriction",
+        "scope": "A trajectory contained in a plane."
+      },
+      {
+        "concept": "closed_trajectory",
+        "synset": null,
+        "decision": "add",
+        "alignment": "geometric restriction",
+        "scope": "A trajectory forming a closed path; no periodic timing or constant speed is implied."
+      },
+      {
+        "concept": "closed_plane_trajectory",
+        "synset": null,
+        "decision": "add",
+        "alignment": "geometric intersection",
+        "scope": "The intersection of planar and closed trajectories."
+      },
+      {
+        "concept": "distance_travelled",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The accumulated path length over a motion interval, including retraced portions; it is not generally the magnitude of the net displacement."
+      },
+      {
+        "concept": "pure_translation",
+        "synset": "oewn-07461004-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Motion of a rigid body with unchanged orientation in the chosen frame; all body points have the same instantaneous velocity, but it need not be constant over time."
+      },
+      {
+        "concept": "curvilinear_motion",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Motion along a curved path, without requiring a rigid body to change orientation."
+      },
+      {
+        "concept": "rectilinear_translation",
+        "synset": null,
+        "decision": "add",
+        "alignment": "path/orientation intersection",
+        "scope": "Pure translation along straight paths."
+      },
+      {
+        "concept": "curvilinear_translation",
+        "synset": null,
+        "decision": "add",
+        "alignment": "path/orientation intersection",
+        "scope": "Pure translation along congruent curved paths; the rigid-body orientation stays unchanged."
+      },
+      {
+        "concept": "uniform_rectilinear_translation",
+        "synset": null,
+        "decision": "add",
+        "alignment": "path/orientation/speed intersection",
+        "scope": "The intersection of straight pure translation and constant speed."
+      },
+      {
+        "concept": "fixed_axis_rotation",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Rigid-body rotation about an axis fixed in the selected frame; no constant angular speed is required."
+      },
+      {
+        "concept": "rolling_motion",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Motion combining rotation of the body and progression over a surface; distinguish it from pushing an object so that it rolls."
+      },
+      {
+        "concept": "rolling_without_slip",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Rolling with no relative sliding velocity at the instantaneous contact with the surface."
+      },
+      {
+        "concept": "rolling_with_slip",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Rolling accompanied by sliding at the contact surface."
+      },
+      {
+        "concept": "kinetic_energy",
+        "synset": "oewn-11490892-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Energy associated with motion relative to the chosen frame; no universal nonzero value is assigned."
+      },
+      {
+        "concept": "translational_kinetic_energy",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The kinetic energy associated with translation of the body center of mass in the selected classical frame."
+      },
+      {
+        "concept": "rotational_kinetic_energy",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The kinetic-energy contribution of rotation about the specified axis in the rigid-body model."
+      },
+      {
+        "concept": "mechanical_work",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The signed scalar quantity for energy transfer by a force along a displacement; distinguish it from employment and from torque."
+      },
+      {
+        "concept": "momentum_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Determining the classical linear momentum vector in a specified frame."
+      },
+      {
+        "concept": "impulse_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Determining force impulse over a specified interval."
+      },
+      {
+        "concept": "angular_momentum_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Determining angular momentum about the selected origin."
+      },
+      {
+        "concept": "torque_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Determining torque relative to a specified origin or axis."
+      },
+      {
+        "concept": "moment_inertia_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Determining a mass moment of inertia for the specified axis."
+      },
+      {
+        "concept": "path_length_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Determining accumulated travel distance rather than net displacement."
+      },
+      {
+        "concept": "kinetic_energy_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "The kinetic-energy restriction of the existing energy-measurement action."
+      },
+      {
+        "concept": "work_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Determining the work quantity for a specified physical process."
+      },
+      {
+        "concept": 1071,
+        "synset": null,
+        "decision": "reuse or distinguish",
+        "alignment": "reviewed sense",
+        "scope": "The U3 Scalar record remains unchanged; it is not silently equated with a physical scalar quantity."
+      },
+      {
+        "concept": 3393,
+        "synset": null,
+        "decision": "reuse or distinguish",
+        "alignment": "reviewed sense",
+        "scope": "The broad path record remains untouched; the new trajectory is specifically the geometric motion path."
+      },
+      {
+        "concept": 3110,
+        "synset": null,
+        "decision": "reuse or distinguish",
+        "alignment": "reviewed sense",
+        "scope": "The time-point moment is not a moment of force, moment of inertia or angular momentum."
+      },
+      {
+        "concept": 1842,
+        "synset": null,
+        "decision": "reuse or distinguish",
+        "alignment": "reviewed sense",
+        "scope": "Employment work remains separate from the physical work quantity."
+      },
+      {
+        "concept": 2999,
+        "synset": null,
+        "decision": "reuse or distinguish",
+        "alignment": "reviewed sense",
+        "scope": "Riding and recreational skating remain separate from mechanical rolling and transitive rolling actions."
+      },
+      {
+        "concept": 55,
+        "synset": null,
+        "decision": "reuse or distinguish",
+        "alignment": "reviewed sense",
+        "scope": "The inherited 80-percent motion-to-sound assertion is outside this batch and remains queued, not newly endorsed."
+      },
+      {
+        "concept": "angular_momentum",
+        "synset": "oewn-05036493-n",
+        "decision": "reuse or distinguish",
+        "alignment": "reviewed sense",
+        "scope": "Do not import the dictionary angular-momentum-under-linear-momentum genus."
+      },
+      {
+        "concept": "torque",
+        "synset": "oewn-11540135-n",
+        "decision": "reuse or distinguish",
+        "alignment": "reviewed sense",
+        "scope": "Do not import torque as a force subtype or identify it with mechanical work."
+      },
+      {
+        "concept": "axis_moment_inertia",
+        "synset": "oewn-11489373-n",
+        "decision": "reuse or distinguish",
+        "alignment": "reviewed sense",
+        "scope": "Use the quantitative mass-distribution meaning, not a synonym for qualitative inertia."
+      }
+    ],
+    "transient_term_removals": [],
+    "limits": "The quantitative meanings use classical mechanics with specified frames, origins or axes. No universal constant-speed translation, scalar/vector identification, angular-under-linear momentum, torque-under-force, inertia-as-rest, full inertia tensor or new numerical law is encoded. Component motions of rolling are not treated as pure-translation genera. General reference-frame models, collisions, units for new quantities, potential energy, motion-to-sound probabilities and wider generated motion aliases remain queued.",
+    "exclusion_review": {
+      "contexts": [
+        "U1",
+        "U3"
+      ],
+      "before_u1_conflicting_edges": 0,
+      "before_u3_conflicting_edges": 0,
+      "decision": "Preserve clear scans and all upper exclusions and explicit negations. No new disjointness assertion is needed for the reviewed distinctions."
+    },
+    "new_term_collisions": [],
+    "collision_decision": "No new normalized-term collisions accepted. Reuse existing movement, rotation, quantity and transitive-action records; qualify the new meanings away from computer Scalar, work and time-point moment.",
+    "refreshed_comparison": {
+      "baseline": "Q36",
+      "existing_concepts": 13344,
+      "existing_terms": 37565,
+      "synsets_with_exact_en_candidate": 15669,
+      "synsets_without_exact_en_candidate": 91850,
+      "existing_concepts_with_dictionary_candidate": 4239,
+      "caveat": "Spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "scalar_quantity",
+      "name": "скалярная физическая величина",
+      "parent": 2709,
+      "universum_id": 1,
+      "terms": [
+        [
+          "скалярная физическая величина",
+          "ru"
+        ],
+        [
+          "scalar physical quantity",
+          "en"
+        ]
+      ],
+      "reason": "A physical quantity specified by a signed numerical value and a unit, without a spatial direction; the physical restriction is distinct from the U3 Scalar record. OEWN 2025: oewn-05872935-n. Source: https://openstax.org/books/university-physics-volume-1/pages/2-1-scalars-and-vectors"
+    },
+    {
+      "key": "vector_quantity",
+      "name": "векторная физическая величина",
+      "parent": 2709,
+      "universum_id": 1,
+      "terms": [
+        [
+          "векторная физическая величина",
+          "ru"
+        ],
+        [
+          "vector physical quantity",
+          "en"
+        ]
+      ],
+      "reason": "A physical quantity represented by a spatial vector in the selected mechanics model, not a disease carrier or a programming container. OEWN 2025: oewn-05873161-n. Source: https://openstax.org/books/university-physics-volume-1/pages/2-1-scalars-and-vectors"
+    },
+    {
+      "key": "mechanical_inertia",
+      "name": "инертность физического тела",
+      "parent": 42,
+      "universum_id": 1,
+      "terms": [
+        [
+          "инертность физического тела",
+          "ru"
+        ],
+        [
+          "inertia (mechanical property)",
+          "en"
+        ],
+        [
+          "mechanical inertia",
+          "en"
+        ]
+      ],
+      "reason": "Resistance to changes of velocity, applicable to resting and moving bodies. The inertial-frame law concerns net external force, not the absence of every individual force. OEWN 2025: oewn-11489163-n. Source: https://openstax.org/books/university-physics-volume-1/pages/5-2-newtons-first-law"
+    },
+    {
+      "key": "linear_momentum",
+      "name": "импульс тела (количество движения)",
+      "parent": "vector_quantity",
+      "universum_id": 1,
+      "terms": [
+        [
+          "импульс тела (количество движения)",
+          "ru"
+        ],
+        [
+          "linear momentum",
+          "en"
+        ],
+        [
+          "momentum (classical linear quantity)",
+          "en"
+        ]
+      ],
+      "reason": "The classical mass-times-velocity quantity relative to a frame; distinct from force impulse and metaphorical impetus. OEWN 2025: oewn-05036303-n. Source: https://openstax.org/books/university-physics-volume-1/pages/9-1-linear-momentum"
+    },
+    {
+      "key": "force_impulse",
+      "name": "импульс силы",
+      "parent": "vector_quantity",
+      "universum_id": 1,
+      "terms": [
+        [
+          "импульс силы",
+          "ru"
+        ],
+        [
+          "impulse of a force",
+          "en"
+        ],
+        [
+          "force impulse",
+          "en"
+        ]
+      ],
+      "reason": "The time integral of a force over an interval, not the force itself and not momentum at a single instant. Source: https://openstax.org/books/university-physics-volume-1/pages/9-2-impulse-and-collisions"
+    },
+    {
+      "key": "net_force_impulse",
+      "name": "импульс равнодействующей силы",
+      "parent": "force_impulse",
+      "universum_id": 1,
+      "terms": [
+        [
+          "импульс равнодействующей силы",
+          "ru"
+        ],
+        [
+          "net force impulse",
+          "en"
+        ]
+      ],
+      "reason": "The impulse of the net external force over the chosen interval; the change in linear momentum is a theorem relating quantities, not a synonym for momentum. Source: https://openstax.org/books/university-physics-volume-1/pages/9-2-impulse-and-collisions"
+    },
+    {
+      "key": "angular_momentum",
+      "name": "момент импульса",
+      "parent": "vector_quantity",
+      "universum_id": 1,
+      "terms": [
+        [
+          "момент импульса",
+          "ru"
+        ],
+        [
+          "angular momentum",
+          "en"
+        ]
+      ],
+      "reason": "Angular momentum with respect to a chosen origin; a distinct quantity from linear momentum, including for a particle on a straight path. OEWN 2025: oewn-05036493-n. Source: https://openstax.org/books/university-physics-volume-1/pages/11-2-angular-momentum"
+    },
+    {
+      "key": "torque",
+      "name": "момент силы",
+      "parent": "vector_quantity",
+      "universum_id": 1,
+      "terms": [
+        [
+          "момент силы",
+          "ru"
+        ],
+        [
+          "torque",
+          "en"
+        ],
+        [
+          "moment of force",
+          "en"
+        ]
+      ],
+      "reason": "The moment of a force about a chosen origin; an axial vector quantity in classical mechanics, not simply a kind of force. OEWN 2025: oewn-11540135-n. Source: https://openstax.org/books/university-physics-volume-1/pages/10-6-torque"
+    },
+    {
+      "key": "axis_moment_inertia",
+      "name": "момент инерции относительно оси",
+      "parent": "scalar_quantity",
+      "universum_id": 1,
+      "terms": [
+        [
+          "момент инерции относительно оси",
+          "ru"
+        ],
+        [
+          "mass moment of inertia about an axis",
+          "en"
+        ],
+        [
+          "mass moment of inertia",
+          "en"
+        ]
+      ],
+      "reason": "The scalar mass-distribution quantity for a specified axis; distinguish it from inertia as a general property, area moments and the full inertia tensor. OEWN 2025: oewn-11489373-n. Source: https://openstax.org/books/university-physics-volume-1/pages/10-4-moment-of-inertia-and-rotational-kinetic-energy"
+    },
+    {
+      "key": "trajectory",
+      "name": "траектория движения точки",
+      "parent": 2701,
+      "universum_id": 1,
+      "terms": [
+        [
+          "траектория движения точки",
+          "ru"
+        ],
+        [
+          "motion trajectory",
+          "en"
+        ],
+        [
+          "trajectory (geometric path)",
+          "en"
+        ]
+      ],
+      "reason": "The geometric path traced by a moving point in a selected frame; distinguish the path from its length, the motion process and a displacement vector. OEWN 2025: oewn-11501734-n. Source: https://openstax.org/books/university-physics-volume-1/pages/4-1-displacement-and-velocity-vectors"
+    },
+    {
+      "key": "plane_trajectory",
+      "name": "плоская траектория движения",
+      "parent": "trajectory",
+      "universum_id": 1,
+      "terms": [
+        [
+          "плоская траектория движения",
+          "ru"
+        ],
+        [
+          "planar motion trajectory",
+          "en"
+        ]
+      ],
+      "reason": "A trajectory contained in a plane. Source: https://openstax.org/books/university-physics-volume-1/pages/4-1-displacement-and-velocity-vectors"
+    },
+    {
+      "key": "closed_trajectory",
+      "name": "замкнутая траектория движения",
+      "parent": "trajectory",
+      "universum_id": 1,
+      "terms": [
+        [
+          "замкнутая траектория движения",
+          "ru"
+        ],
+        [
+          "closed motion trajectory",
+          "en"
+        ]
+      ],
+      "reason": "A trajectory forming a closed path; no periodic timing or constant speed is implied."
+    },
+    {
+      "key": "closed_plane_trajectory",
+      "name": "замкнутая плоская траектория",
+      "parent": "plane_trajectory",
+      "universum_id": 1,
+      "terms": [
+        [
+          "замкнутая плоская траектория",
+          "ru"
+        ],
+        [
+          "closed planar motion trajectory",
+          "en"
+        ]
+      ],
+      "reason": "The intersection of planar and closed trajectories."
+    },
+    {
+      "key": "distance_travelled",
+      "name": "длина пройденного пути",
+      "parent": 2895,
+      "universum_id": 1,
+      "terms": [
+        [
+          "длина пройденного пути",
+          "ru"
+        ],
+        [
+          "distance travelled",
+          "en"
+        ],
+        [
+          "distance traveled",
+          "en"
+        ]
+      ],
+      "reason": "The accumulated path length over a motion interval, including retraced portions; it is not generally the magnitude of the net displacement. Source: https://openstax.org/books/university-physics-volume-1/pages/3-1-position-displacement-and-average-velocity"
+    },
+    {
+      "key": "pure_translation",
+      "name": "поступательное движение тела",
+      "parent": 3254,
+      "universum_id": 1,
+      "terms": [
+        [
+          "поступательное движение тела",
+          "ru"
+        ],
+        [
+          "pure translational motion",
+          "en"
+        ],
+        [
+          "rigid-body translation",
+          "en"
+        ]
+      ],
+      "reason": "Motion of a rigid body with unchanged orientation in the chosen frame; all body points have the same instantaneous velocity, but it need not be constant over time. OEWN 2025: oewn-07461004-n. Source: https://archive.nptel.ac.in/content/storage2/courses/112103109/mod_9/lec1/slides/slide1.htm"
+    },
+    {
+      "key": "curvilinear_motion",
+      "name": "криволинейное движение",
+      "parent": 55,
+      "universum_id": 1,
+      "terms": [
+        [
+          "криволинейное движение",
+          "ru"
+        ],
+        [
+          "curvilinear motion",
+          "en"
+        ]
+      ],
+      "reason": "Motion along a curved path, without requiring a rigid body to change orientation. Source: https://archive.nptel.ac.in/content/storage2/courses/112103109/mod_9/lec1/slides/slide1.htm"
+    },
+    {
+      "key": "rectilinear_translation",
+      "name": "прямолинейное поступательное движение",
+      "parent": "pure_translation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "прямолинейное поступательное движение",
+          "ru"
+        ],
+        [
+          "rectilinear translation",
+          "en"
+        ]
+      ],
+      "reason": "Pure translation along straight paths. Source: https://archive.nptel.ac.in/content/storage2/courses/112103109/mod_9/lec1/slides/slide1.htm"
+    },
+    {
+      "key": "curvilinear_translation",
+      "name": "криволинейное поступательное движение",
+      "parent": "pure_translation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "криволинейное поступательное движение",
+          "ru"
+        ],
+        [
+          "curvilinear translation",
+          "en"
+        ]
+      ],
+      "reason": "Pure translation along congruent curved paths; the rigid-body orientation stays unchanged. Source: https://archive.nptel.ac.in/content/storage2/courses/112103109/mod_9/lec1/slides/slide1.htm"
+    },
+    {
+      "key": "uniform_rectilinear_translation",
+      "name": "равномерное прямолинейное поступательное движение",
+      "parent": "rectilinear_translation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "равномерное прямолинейное поступательное движение",
+          "ru"
+        ],
+        [
+          "uniform rectilinear translation",
+          "en"
+        ]
+      ],
+      "reason": "The intersection of straight pure translation and constant speed. Source: https://archive.nptel.ac.in/content/storage2/courses/112103109/mod_9/lec1/slides/slide1.htm"
+    },
+    {
+      "key": "fixed_axis_rotation",
+      "name": "вращение вокруг неподвижной оси",
+      "parent": 2819,
+      "universum_id": 1,
+      "terms": [
+        [
+          "вращение вокруг неподвижной оси",
+          "ru"
+        ],
+        [
+          "rotation about a fixed axis",
+          "en"
+        ]
+      ],
+      "reason": "Rigid-body rotation about an axis fixed in the selected frame; no constant angular speed is required. Source: https://openstax.org/books/university-physics-volume-1/pages/10-4-moment-of-inertia-and-rotational-kinetic-energy"
+    },
+    {
+      "key": "rolling_motion",
+      "name": "качение тела по поверхности",
+      "parent": 55,
+      "universum_id": 1,
+      "terms": [
+        [
+          "качение тела по поверхности",
+          "ru"
+        ],
+        [
+          "rolling motion",
+          "en"
+        ],
+        [
+          "качение",
+          "ru"
+        ]
+      ],
+      "reason": "Motion combining rotation of the body and progression over a surface; distinguish it from pushing an object so that it rolls. Source: https://openstax.org/books/university-physics-volume-1/pages/11-1-rolling-motion"
+    },
+    {
+      "key": "rolling_without_slip",
+      "name": "качение без проскальзывания",
+      "parent": "rolling_motion",
+      "universum_id": 1,
+      "terms": [
+        [
+          "качение без проскальзывания",
+          "ru"
+        ],
+        [
+          "rolling without slipping",
+          "en"
+        ],
+        [
+          "pure rolling",
+          "en"
+        ]
+      ],
+      "reason": "Rolling with no relative sliding velocity at the instantaneous contact with the surface. Source: https://openstax.org/books/university-physics-volume-1/pages/11-1-rolling-motion"
+    },
+    {
+      "key": "rolling_with_slip",
+      "name": "качение с проскальзыванием",
+      "parent": "rolling_motion",
+      "universum_id": 1,
+      "terms": [
+        [
+          "качение с проскальзыванием",
+          "ru"
+        ],
+        [
+          "rolling with slipping",
+          "en"
+        ]
+      ],
+      "reason": "Rolling accompanied by sliding at the contact surface. Source: https://openstax.org/books/university-physics-volume-1/pages/11-1-rolling-motion"
+    },
+    {
+      "key": "kinetic_energy",
+      "name": "кинетическая энергия",
+      "parent": 2710,
+      "universum_id": 1,
+      "terms": [
+        [
+          "кинетическая энергия",
+          "ru"
+        ],
+        [
+          "kinetic energy",
+          "en"
+        ]
+      ],
+      "reason": "Energy associated with motion relative to the chosen frame; no universal nonzero value is assigned. OEWN 2025: oewn-11490892-n. Source: https://openstax.org/books/university-physics-volume-1/pages/7-2-kinetic-energy"
+    },
+    {
+      "key": "translational_kinetic_energy",
+      "name": "кинетическая энергия поступательного движения",
+      "parent": "kinetic_energy",
+      "universum_id": 1,
+      "terms": [
+        [
+          "кинетическая энергия поступательного движения",
+          "ru"
+        ],
+        [
+          "translational kinetic energy",
+          "en"
+        ]
+      ],
+      "reason": "The kinetic energy associated with translation of the body center of mass in the selected classical frame. Source: https://openstax.org/books/university-physics-volume-1/pages/11-1-rolling-motion"
+    },
+    {
+      "key": "rotational_kinetic_energy",
+      "name": "кинетическая энергия вращения",
+      "parent": "kinetic_energy",
+      "universum_id": 1,
+      "terms": [
+        [
+          "кинетическая энергия вращения",
+          "ru"
+        ],
+        [
+          "rotational kinetic energy",
+          "en"
+        ]
+      ],
+      "reason": "The kinetic-energy contribution of rotation about the specified axis in the rigid-body model. Source: https://openstax.org/books/university-physics-volume-1/pages/10-4-moment-of-inertia-and-rotational-kinetic-energy"
+    },
+    {
+      "key": "mechanical_work",
+      "name": "механическая работа (физическая величина)",
+      "parent": "scalar_quantity",
+      "universum_id": 1,
+      "terms": [
+        [
+          "механическая работа (физическая величина)",
+          "ru"
+        ],
+        [
+          "mechanical work (physical quantity)",
+          "en"
+        ]
+      ],
+      "reason": "The signed scalar quantity for energy transfer by a force along a displacement; distinguish it from employment and from torque. Source: https://openstax.org/books/university-physics-volume-1/pages/7-1-work"
+    },
+    {
+      "key": "momentum_measurement",
+      "name": "измерение импульса тела",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение импульса тела",
+          "ru"
+        ],
+        [
+          "linear momentum measurement",
+          "en"
+        ]
+      ],
+      "reason": "Determining the classical linear momentum vector in a specified frame. Source: https://openstax.org/books/university-physics-volume-1/pages/9-1-linear-momentum"
+    },
+    {
+      "key": "impulse_measurement",
+      "name": "измерение импульса силы",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение импульса силы",
+          "ru"
+        ],
+        [
+          "force impulse measurement",
+          "en"
+        ]
+      ],
+      "reason": "Determining force impulse over a specified interval. Source: https://openstax.org/books/university-physics-volume-1/pages/9-2-impulse-and-collisions"
+    },
+    {
+      "key": "angular_momentum_measurement",
+      "name": "измерение момента импульса",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение момента импульса",
+          "ru"
+        ],
+        [
+          "angular momentum measurement",
+          "en"
+        ]
+      ],
+      "reason": "Determining angular momentum about the selected origin. Source: https://openstax.org/books/university-physics-volume-1/pages/11-2-angular-momentum"
+    },
+    {
+      "key": "torque_measurement",
+      "name": "измерение момента силы",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение момента силы",
+          "ru"
+        ],
+        [
+          "torque measurement",
+          "en"
+        ]
+      ],
+      "reason": "Determining torque relative to a specified origin or axis. Source: https://openstax.org/books/university-physics-volume-1/pages/10-6-torque"
+    },
+    {
+      "key": "moment_inertia_measurement",
+      "name": "измерение момента инерции относительно оси",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение момента инерции относительно оси",
+          "ru"
+        ],
+        [
+          "mass moment of inertia measurement",
+          "en"
+        ]
+      ],
+      "reason": "Determining a mass moment of inertia for the specified axis. Source: https://openstax.org/books/university-physics-volume-1/pages/10-4-moment-of-inertia-and-rotational-kinetic-energy"
+    },
+    {
+      "key": "path_length_measurement",
+      "name": "измерение длины пройденного пути",
+      "parent": 24556,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение длины пройденного пути",
+          "ru"
+        ],
+        [
+          "travelled distance measurement",
+          "en"
+        ]
+      ],
+      "reason": "Determining accumulated travel distance rather than net displacement. Source: https://openstax.org/books/university-physics-volume-1/pages/3-1-position-displacement-and-average-velocity"
+    },
+    {
+      "key": "kinetic_energy_measurement",
+      "name": "измерение кинетической энергии",
+      "parent": 24686,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение кинетической энергии",
+          "ru"
+        ],
+        [
+          "kinetic energy measurement",
+          "en"
+        ]
+      ],
+      "reason": "The kinetic-energy restriction of the existing energy-measurement action. Source: https://openstax.org/books/university-physics-volume-1/pages/7-2-kinetic-energy"
+    },
+    {
+      "key": "work_measurement",
+      "name": "измерение механической работы",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение механической работы",
+          "ru"
+        ],
+        [
+          "mechanical work measurement",
+          "en"
+        ]
+      ],
+      "reason": "Determining the work quantity for a specified physical process. Source: https://openstax.org/books/university-physics-volume-1/pages/7-1-work"
+    }
+  ],
+  "renames": [
+    {
+      "id": 18237,
+      "before": "перемещание",
+      "name": "перемещение предмета (действие)",
+      "terms": [],
+      "reason": "Select causing a material object to change place, distinct from its relocation process and the displacement vector. Source: https://gramota.ru/poisk?mode=all&query=%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F"
+    },
+    {
+      "id": 6018,
+      "before": "катение",
+      "name": "катить предмет (вращая по поверхности)",
+      "terms": [],
+      "reason": "Select the transitive physical action of making an object roll, excluding figurative motion, riding and wheeled transport of a nonrotating load. Source: https://ruslang.ru/sites/default/files/2024-12/ASRYa-4-2.pdf"
+    }
+  ],
+  "terms": [
+    {
+      "id": 18237,
+      "name": "перемещение предмета (действие)",
+      "terms": [
+        [
+          "moving an object (action)",
+          "en"
+        ],
+        [
+          "перемещать предмет",
+          "ru"
+        ]
+      ],
+      "reason": "Use the transitive moving meaning while preserving its existing physical-action genus."
+    },
+    {
+      "id": 6018,
+      "name": "катить предмет (вращая по поверхности)",
+      "terms": [
+        [
+          "making an object roll",
+          "en"
+        ],
+        [
+          "катить предмет",
+          "ru"
+        ]
+      ],
+      "reason": "Supply a qualified physical action rather than copy the general rolling-motion sense."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 18237,
+      "term": "перемещаание",
+      "lang": "ru",
+      "reason": "Remove the duplicated-vowel generated form; the old canonical alias remains pending separate lexical review."
+    },
+    {
+      "id": 18237,
+      "term": "ПЕРЕМЕЩАТЬ",
+      "lang": "en",
+      "reason": "Replace a Russian string tagged as English with a real English meaning and a qualified Russian verb phrase."
+    },
+    {
+      "id": 6018,
+      "term": "катиение",
+      "lang": "ru",
+      "reason": "Remove the malformed generated suffix; the old canonical lookup alias remains pending separate review."
+    },
+    {
+      "id": 6018,
+      "term": "КАТИТЬ",
+      "lang": "en",
+      "reason": "Replace the Russian infinitive tagged as English; retain the selected Russian phrase."
+    }
+  ],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 10102,
+      "before": [
+        6018,
+        "14",
+        55,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          6018,
+          "14",
+          5017,
+          null,
+          1
+        ]
+      ],
+      "reason": "The selected transitive action causes rolling motion of its target; it is not identical with that motion. Source: https://ruslang.ru/sites/default/files/2024-12/ASRYa-4-2.pdf"
+    }
+  ],
+  "edges": [
+    {
+      "subject": 3081,
+      "kod": "14",
+      "object": "scalar_quantity",
+      "universum_id": 1,
+      "reason": "The existing mass, scalar speed or energy meaning is scalar; retain its reviewed physical-quantity genus. Source: https://openstax.org/books/university-physics-volume-1/pages/2-1-scalars-and-vectors"
+    },
+    {
+      "subject": 3462,
+      "kod": "14",
+      "object": "scalar_quantity",
+      "universum_id": 1,
+      "reason": "The existing mass, scalar speed or energy meaning is scalar; retain its reviewed physical-quantity genus. Source: https://openstax.org/books/university-physics-volume-1/pages/2-1-scalars-and-vectors"
+    },
+    {
+      "subject": 2710,
+      "kod": "14",
+      "object": "scalar_quantity",
+      "universum_id": 1,
+      "reason": "The existing mass, scalar speed or energy meaning is scalar; retain its reviewed physical-quantity genus. Source: https://openstax.org/books/university-physics-volume-1/pages/2-1-scalars-and-vectors"
+    },
+    {
+      "subject": 25105,
+      "kod": "14",
+      "object": "vector_quantity",
+      "universum_id": 1,
+      "reason": "The existing velocity, displacement, acceleration or force meaning is a physical vector; retain its reviewed genus. Source: https://openstax.org/books/university-physics-volume-1/pages/2-1-scalars-and-vectors"
+    },
+    {
+      "subject": 25106,
+      "kod": "14",
+      "object": "vector_quantity",
+      "universum_id": 1,
+      "reason": "The existing velocity, displacement, acceleration or force meaning is a physical vector; retain its reviewed genus. Source: https://openstax.org/books/university-physics-volume-1/pages/2-1-scalars-and-vectors"
+    },
+    {
+      "subject": 24587,
+      "kod": "14",
+      "object": "vector_quantity",
+      "universum_id": 1,
+      "reason": "The existing velocity, displacement, acceleration or force meaning is a physical vector; retain its reviewed genus. Source: https://openstax.org/books/university-physics-volume-1/pages/2-1-scalars-and-vectors"
+    },
+    {
+      "subject": 24657,
+      "kod": "14",
+      "object": "vector_quantity",
+      "universum_id": 1,
+      "reason": "The existing velocity, displacement, acceleration or force meaning is a physical vector; retain its reviewed genus. Source: https://openstax.org/books/university-physics-volume-1/pages/2-1-scalars-and-vectors"
+    },
+    {
+      "subject": 2072,
+      "kod": "20",
+      "object": "mechanical_inertia",
+      "universum_id": 1,
+      "reason": "Inertia is a property of a physical body in the selected classical model; not a kind of rest."
+    },
+    {
+      "subject": "plane_trajectory",
+      "kod": "14",
+      "object": 24706,
+      "universum_id": 1,
+      "reason": "A planar trajectory is also a plane curve; a straight path is permitted."
+    },
+    {
+      "subject": "closed_plane_trajectory",
+      "kod": "14",
+      "object": "closed_trajectory",
+      "universum_id": 1,
+      "reason": "The path is also closed."
+    },
+    {
+      "subject": "closed_plane_trajectory",
+      "kod": "14",
+      "object": 24707,
+      "universum_id": 1,
+      "reason": "The path is a closed plane curve; not necessarily a circle."
+    },
+    {
+      "subject": "distance_travelled",
+      "kod": "14",
+      "object": "scalar_quantity",
+      "universum_id": 1,
+      "reason": "Accumulated travelled distance is a nonnegative scalar quantity."
+    },
+    {
+      "subject": 3254,
+      "kod": "20",
+      "object": "trajectory",
+      "universum_id": 1,
+      "reason": "A point model of relocation has a geometric trajectory in the selected frame."
+    },
+    {
+      "subject": 3254,
+      "kod": "20",
+      "object": "distance_travelled",
+      "universum_id": 1,
+      "reason": "An interval of relocation has a travelled path length, independently of net displacement."
+    },
+    {
+      "subject": "rectilinear_translation",
+      "kod": "14",
+      "object": 25117,
+      "universum_id": 1,
+      "reason": "The translation also has the straight-line path restriction."
+    },
+    {
+      "subject": "curvilinear_translation",
+      "kod": "14",
+      "object": "curvilinear_motion",
+      "universum_id": 1,
+      "reason": "The paths are curved, while the body does not rotate."
+    },
+    {
+      "subject": "uniform_rectilinear_translation",
+      "kod": "14",
+      "object": 25121,
+      "universum_id": 1,
+      "reason": "The existing uniform rectilinear motion restriction also applies."
+    },
+    {
+      "subject": 25118,
+      "kod": "14",
+      "object": "curvilinear_motion",
+      "universum_id": 1,
+      "reason": "Circular motion is a special curved-path motion; retain the reviewed direct motion genus."
+    },
+    {
+      "subject": "rolling_motion",
+      "kod": "20",
+      "object": 2819,
+      "universum_id": 1,
+      "reason": "Rotation is a component of the rolling motion; this is not a pure-rotation genus assertion."
+    },
+    {
+      "subject": "rolling_motion",
+      "kod": "20",
+      "object": 3254,
+      "universum_id": 1,
+      "reason": "Relocation is a component of the rolling motion; the body need not keep a fixed orientation."
+    },
+    {
+      "subject": 18237,
+      "kod": "27",
+      "object": 24469,
+      "universum_id": 1,
+      "reason": "The moved material object is the action target, not the motion process."
+    },
+    {
+      "subject": 18237,
+      "kod": "70",
+      "object": 3254,
+      "universum_id": 1,
+      "reason": "The selected successful transitive moving action produces relocation."
+    },
+    {
+      "subject": 6018,
+      "kod": "14",
+      "object": 18237,
+      "universum_id": 1,
+      "reason": "Making an object roll is a physical way of moving it."
+    },
+    {
+      "subject": 6018,
+      "kod": "70",
+      "object": "rolling_motion",
+      "universum_id": 1,
+      "reason": "The selected action produces rolling of its target."
+    },
+    {
+      "subject": "momentum_measurement",
+      "kod": "27",
+      "object": "linear_momentum",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://openstax.org/books/university-physics-volume-1/pages/9-1-linear-momentum"
+    },
+    {
+      "subject": "impulse_measurement",
+      "kod": "27",
+      "object": "force_impulse",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://openstax.org/books/university-physics-volume-1/pages/9-2-impulse-and-collisions"
+    },
+    {
+      "subject": "angular_momentum_measurement",
+      "kod": "27",
+      "object": "angular_momentum",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://openstax.org/books/university-physics-volume-1/pages/11-2-angular-momentum"
+    },
+    {
+      "subject": "torque_measurement",
+      "kod": "27",
+      "object": "torque",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://openstax.org/books/university-physics-volume-1/pages/10-6-torque"
+    },
+    {
+      "subject": "moment_inertia_measurement",
+      "kod": "27",
+      "object": "axis_moment_inertia",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://openstax.org/books/university-physics-volume-1/pages/10-4-moment-of-inertia-and-rotational-kinetic-energy"
+    },
+    {
+      "subject": "path_length_measurement",
+      "kod": "27",
+      "object": "distance_travelled",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://openstax.org/books/university-physics-volume-1/pages/3-1-position-displacement-and-average-velocity"
+    },
+    {
+      "subject": "kinetic_energy_measurement",
+      "kod": "27",
+      "object": "kinetic_energy",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://openstax.org/books/university-physics-volume-1/pages/7-2-kinetic-energy"
+    },
+    {
+      "subject": "work_measurement",
+      "kod": "27",
+      "object": "mechanical_work",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://openstax.org/books/university-physics-volume-1/pages/7-1-work"
+    }
+  ],
+  "checks": [
+    {
+      "subject": "scalar_quantity",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "vector_quantity",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3081,
+      "kod": "14",
+      "object": "scalar_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3462,
+      "kod": "14",
+      "object": "scalar_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2710,
+      "kod": "14",
+      "object": "scalar_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25105,
+      "kod": "14",
+      "object": "vector_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25106,
+      "kod": "14",
+      "object": "vector_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 24587,
+      "kod": "14",
+      "object": "vector_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 24657,
+      "kod": "14",
+      "object": "vector_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mechanical_inertia",
+      "kod": "14",
+      "object": 42,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2072,
+      "kod": "20",
+      "object": "mechanical_inertia",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "linear_momentum",
+      "kod": "14",
+      "object": "vector_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "force_impulse",
+      "kod": "14",
+      "object": "vector_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "net_force_impulse",
+      "kod": "14",
+      "object": "force_impulse",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "angular_momentum",
+      "kod": "14",
+      "object": "vector_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "torque",
+      "kod": "14",
+      "object": "vector_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "axis_moment_inertia",
+      "kod": "14",
+      "object": "scalar_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "trajectory",
+      "kod": "14",
+      "object": 2701,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "plane_trajectory",
+      "kod": "14",
+      "object": "trajectory",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "plane_trajectory",
+      "kod": "14",
+      "object": 24706,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "closed_trajectory",
+      "kod": "14",
+      "object": "trajectory",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "closed_plane_trajectory",
+      "kod": "14",
+      "object": "plane_trajectory",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "closed_plane_trajectory",
+      "kod": "14",
+      "object": "closed_trajectory",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "closed_plane_trajectory",
+      "kod": "14",
+      "object": 24707,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "distance_travelled",
+      "kod": "14",
+      "object": 2895,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "distance_travelled",
+      "kod": "14",
+      "object": "scalar_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3254,
+      "kod": "20",
+      "object": "trajectory",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3254,
+      "kod": "20",
+      "object": "distance_travelled",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pure_translation",
+      "kod": "14",
+      "object": 3254,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "curvilinear_motion",
+      "kod": "14",
+      "object": 55,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rectilinear_translation",
+      "kod": "14",
+      "object": "pure_translation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rectilinear_translation",
+      "kod": "14",
+      "object": 25117,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "curvilinear_translation",
+      "kod": "14",
+      "object": "pure_translation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "curvilinear_translation",
+      "kod": "14",
+      "object": "curvilinear_motion",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "uniform_rectilinear_translation",
+      "kod": "14",
+      "object": "rectilinear_translation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "uniform_rectilinear_translation",
+      "kod": "14",
+      "object": 25121,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25118,
+      "kod": "14",
+      "object": "curvilinear_motion",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fixed_axis_rotation",
+      "kod": "14",
+      "object": 2819,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rolling_motion",
+      "kod": "14",
+      "object": 55,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rolling_motion",
+      "kod": "20",
+      "object": 2819,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rolling_motion",
+      "kod": "20",
+      "object": 3254,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rolling_without_slip",
+      "kod": "14",
+      "object": "rolling_motion",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rolling_with_slip",
+      "kod": "14",
+      "object": "rolling_motion",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 18237,
+      "kod": "27",
+      "object": 24469,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 18237,
+      "kod": "70",
+      "object": 3254,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 6018,
+      "kod": "14",
+      "object": 55,
+      "present": false
+    },
+    {
+      "subject": 6018,
+      "kod": "14",
+      "object": 5017,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 6018,
+      "kod": "14",
+      "object": 18237,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 6018,
+      "kod": "70",
+      "object": "rolling_motion",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kinetic_energy",
+      "kod": "14",
+      "object": 2710,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "translational_kinetic_energy",
+      "kod": "14",
+      "object": "kinetic_energy",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rotational_kinetic_energy",
+      "kod": "14",
+      "object": "kinetic_energy",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mechanical_work",
+      "kod": "14",
+      "object": "scalar_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "momentum_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "momentum_measurement",
+      "kod": "27",
+      "object": "linear_momentum",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "impulse_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "impulse_measurement",
+      "kod": "27",
+      "object": "force_impulse",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "angular_momentum_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "angular_momentum_measurement",
+      "kod": "27",
+      "object": "angular_momentum",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "torque_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "torque_measurement",
+      "kod": "27",
+      "object": "torque",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "moment_inertia_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "moment_inertia_measurement",
+      "kod": "27",
+      "object": "axis_moment_inertia",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "path_length_measurement",
+      "kod": "14",
+      "object": 24556,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "path_length_measurement",
+      "kod": "27",
+      "object": "distance_travelled",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kinetic_energy_measurement",
+      "kod": "14",
+      "object": 24686,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kinetic_energy_measurement",
+      "kod": "27",
+      "object": "kinetic_energy",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "work_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "work_measurement",
+      "kod": "27",
+      "object": "mechanical_work",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3254,
+      "kod": "14",
+      "object": 55,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2819,
+      "kod": "14",
+      "object": 55,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25118,
+      "kod": "14",
+      "object": 55,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 18237,
+      "kod": "14",
+      "object": 5017,
+      "present": true,
+      "strength": 100
+    },
+    {
+      "subject": 2999,
+      "kod": "14",
+      "object": 55,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25106,
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25105,
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 24657,
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2710,
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 24706,
+      "kod": "14",
+      "object": 2701,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 24706,
+      "kod": "14",
+      "object": 24705,
+      "present": true,
+      "strength": null
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "scalar_quantity",
+      "ancestor": 2709,
+      "present": true
+    },
+    {
+      "subject": "vector_quantity",
+      "ancestor": 2709,
+      "present": true
+    },
+    {
+      "subject": "mechanical_inertia",
+      "ancestor": 42,
+      "present": true
+    },
+    {
+      "subject": "linear_momentum",
+      "ancestor": "vector_quantity",
+      "present": true
+    },
+    {
+      "subject": "force_impulse",
+      "ancestor": "vector_quantity",
+      "present": true
+    },
+    {
+      "subject": "net_force_impulse",
+      "ancestor": "force_impulse",
+      "present": true
+    },
+    {
+      "subject": "angular_momentum",
+      "ancestor": "vector_quantity",
+      "present": true
+    },
+    {
+      "subject": "torque",
+      "ancestor": "vector_quantity",
+      "present": true
+    },
+    {
+      "subject": "axis_moment_inertia",
+      "ancestor": "scalar_quantity",
+      "present": true
+    },
+    {
+      "subject": "trajectory",
+      "ancestor": 2701,
+      "present": true
+    },
+    {
+      "subject": "plane_trajectory",
+      "ancestor": "trajectory",
+      "present": true
+    },
+    {
+      "subject": "closed_trajectory",
+      "ancestor": "trajectory",
+      "present": true
+    },
+    {
+      "subject": "closed_plane_trajectory",
+      "ancestor": "plane_trajectory",
+      "present": true
+    },
+    {
+      "subject": "distance_travelled",
+      "ancestor": 2895,
+      "present": true
+    },
+    {
+      "subject": "pure_translation",
+      "ancestor": 3254,
+      "present": true
+    },
+    {
+      "subject": "curvilinear_motion",
+      "ancestor": 55,
+      "present": true
+    },
+    {
+      "subject": "rectilinear_translation",
+      "ancestor": "pure_translation",
+      "present": true
+    },
+    {
+      "subject": "curvilinear_translation",
+      "ancestor": "pure_translation",
+      "present": true
+    },
+    {
+      "subject": "uniform_rectilinear_translation",
+      "ancestor": "rectilinear_translation",
+      "present": true
+    },
+    {
+      "subject": "fixed_axis_rotation",
+      "ancestor": 2819,
+      "present": true
+    },
+    {
+      "subject": "rolling_motion",
+      "ancestor": 55,
+      "present": true
+    },
+    {
+      "subject": "rolling_without_slip",
+      "ancestor": "rolling_motion",
+      "present": true
+    },
+    {
+      "subject": "rolling_with_slip",
+      "ancestor": "rolling_motion",
+      "present": true
+    },
+    {
+      "subject": "kinetic_energy",
+      "ancestor": 2710,
+      "present": true
+    },
+    {
+      "subject": "translational_kinetic_energy",
+      "ancestor": "kinetic_energy",
+      "present": true
+    },
+    {
+      "subject": "rotational_kinetic_energy",
+      "ancestor": "kinetic_energy",
+      "present": true
+    },
+    {
+      "subject": "mechanical_work",
+      "ancestor": "scalar_quantity",
+      "present": true
+    },
+    {
+      "subject": "momentum_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "impulse_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "angular_momentum_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "torque_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "moment_inertia_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "path_length_measurement",
+      "ancestor": 24556,
+      "present": true
+    },
+    {
+      "subject": "kinetic_energy_measurement",
+      "ancestor": 24686,
+      "present": true
+    },
+    {
+      "subject": "work_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": 25105,
+      "ancestor": "vector_quantity",
+      "present": true
+    },
+    {
+      "subject": 25106,
+      "ancestor": "vector_quantity",
+      "present": true
+    },
+    {
+      "subject": 24587,
+      "ancestor": "vector_quantity",
+      "present": true
+    },
+    {
+      "subject": 24657,
+      "ancestor": "vector_quantity",
+      "present": true
+    },
+    {
+      "subject": 3081,
+      "ancestor": "scalar_quantity",
+      "present": true
+    },
+    {
+      "subject": 3462,
+      "ancestor": "scalar_quantity",
+      "present": true
+    },
+    {
+      "subject": 2710,
+      "ancestor": "scalar_quantity",
+      "present": true
+    },
+    {
+      "subject": "plane_trajectory",
+      "ancestor": 24706,
+      "present": true
+    },
+    {
+      "subject": "closed_plane_trajectory",
+      "ancestor": 24707,
+      "present": true
+    },
+    {
+      "subject": "closed_plane_trajectory",
+      "ancestor": "closed_trajectory",
+      "present": true
+    },
+    {
+      "subject": "distance_travelled",
+      "ancestor": "scalar_quantity",
+      "present": true
+    },
+    {
+      "subject": "rectilinear_translation",
+      "ancestor": 25117,
+      "present": true
+    },
+    {
+      "subject": "curvilinear_translation",
+      "ancestor": "curvilinear_motion",
+      "present": true
+    },
+    {
+      "subject": "uniform_rectilinear_translation",
+      "ancestor": 25121,
+      "present": true
+    },
+    {
+      "subject": 25118,
+      "ancestor": "curvilinear_motion",
+      "present": true
+    },
+    {
+      "subject": 6018,
+      "ancestor": 18237,
+      "present": true
+    },
+    {
+      "subject": "kinetic_energy",
+      "ancestor": "scalar_quantity",
+      "present": true
+    },
+    {
+      "subject": "mechanical_inertia",
+      "ancestor": 3292,
+      "present": false
+    },
+    {
+      "subject": "mechanical_inertia",
+      "ancestor": 55,
+      "present": false
+    },
+    {
+      "subject": "linear_momentum",
+      "ancestor": 24657,
+      "present": false
+    },
+    {
+      "subject": "force_impulse",
+      "ancestor": "linear_momentum",
+      "present": false
+    },
+    {
+      "subject": "force_impulse",
+      "ancestor": 24657,
+      "present": false
+    },
+    {
+      "subject": "angular_momentum",
+      "ancestor": "linear_momentum",
+      "present": false
+    },
+    {
+      "subject": "torque",
+      "ancestor": 24657,
+      "present": false
+    },
+    {
+      "subject": "torque",
+      "ancestor": "mechanical_work",
+      "present": false
+    },
+    {
+      "subject": "axis_moment_inertia",
+      "ancestor": "mechanical_inertia",
+      "present": false
+    },
+    {
+      "subject": "axis_moment_inertia",
+      "ancestor": 3110,
+      "present": false
+    },
+    {
+      "subject": "trajectory",
+      "ancestor": 55,
+      "present": false
+    },
+    {
+      "subject": "trajectory",
+      "ancestor": 25106,
+      "present": false
+    },
+    {
+      "subject": "trajectory",
+      "ancestor": 2895,
+      "present": false
+    },
+    {
+      "subject": "distance_travelled",
+      "ancestor": 25106,
+      "present": false
+    },
+    {
+      "subject": "distance_travelled",
+      "ancestor": "trajectory",
+      "present": false
+    },
+    {
+      "subject": "pure_translation",
+      "ancestor": 25117,
+      "present": false
+    },
+    {
+      "subject": "pure_translation",
+      "ancestor": 25119,
+      "present": false
+    },
+    {
+      "subject": "curvilinear_translation",
+      "ancestor": 2819,
+      "present": false
+    },
+    {
+      "subject": "curvilinear_translation",
+      "ancestor": 25117,
+      "present": false
+    },
+    {
+      "subject": "rolling_motion",
+      "ancestor": "pure_translation",
+      "present": false
+    },
+    {
+      "subject": "rolling_motion",
+      "ancestor": 2999,
+      "present": false
+    },
+    {
+      "subject": 6018,
+      "ancestor": 55,
+      "present": false
+    },
+    {
+      "subject": "mechanical_work",
+      "ancestor": 1842,
+      "present": false
+    },
+    {
+      "subject": "scalar_quantity",
+      "ancestor": 1071,
+      "present": false
+    },
+    {
+      "subject": "scalar_quantity",
+      "ancestor": "vector_quantity",
+      "present": false
+    },
+    {
+      "subject": "vector_quantity",
+      "ancestor": "scalar_quantity",
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": "scalar_quantity",
+      "term": "скалярная физическая величина",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "scalar_quantity",
+      "term": "scalar physical quantity",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "vector_quantity",
+      "term": "векторная физическая величина",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "vector_quantity",
+      "term": "vector physical quantity",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "mechanical_inertia",
+      "term": "инертность физического тела",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "mechanical_inertia",
+      "term": "inertia (mechanical property)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "mechanical_inertia",
+      "term": "mechanical inertia",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "linear_momentum",
+      "term": "импульс тела (количество движения)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "linear_momentum",
+      "term": "linear momentum",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "linear_momentum",
+      "term": "momentum (classical linear quantity)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "force_impulse",
+      "term": "импульс силы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "force_impulse",
+      "term": "impulse of a force",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "force_impulse",
+      "term": "force impulse",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "net_force_impulse",
+      "term": "импульс равнодействующей силы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "net_force_impulse",
+      "term": "net force impulse",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "angular_momentum",
+      "term": "момент импульса",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "angular_momentum",
+      "term": "angular momentum",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "torque",
+      "term": "момент силы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "torque",
+      "term": "torque",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "torque",
+      "term": "moment of force",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "axis_moment_inertia",
+      "term": "момент инерции относительно оси",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "axis_moment_inertia",
+      "term": "mass moment of inertia about an axis",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "axis_moment_inertia",
+      "term": "mass moment of inertia",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "trajectory",
+      "term": "траектория движения точки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "trajectory",
+      "term": "motion trajectory",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "trajectory",
+      "term": "trajectory (geometric path)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "plane_trajectory",
+      "term": "плоская траектория движения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "plane_trajectory",
+      "term": "planar motion trajectory",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "closed_trajectory",
+      "term": "замкнутая траектория движения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "closed_trajectory",
+      "term": "closed motion trajectory",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "closed_plane_trajectory",
+      "term": "замкнутая плоская траектория",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "closed_plane_trajectory",
+      "term": "closed planar motion trajectory",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "distance_travelled",
+      "term": "длина пройденного пути",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "distance_travelled",
+      "term": "distance travelled",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "distance_travelled",
+      "term": "distance traveled",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pure_translation",
+      "term": "поступательное движение тела",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pure_translation",
+      "term": "pure translational motion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pure_translation",
+      "term": "rigid-body translation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "curvilinear_motion",
+      "term": "криволинейное движение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "curvilinear_motion",
+      "term": "curvilinear motion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rectilinear_translation",
+      "term": "прямолинейное поступательное движение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rectilinear_translation",
+      "term": "rectilinear translation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "curvilinear_translation",
+      "term": "криволинейное поступательное движение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "curvilinear_translation",
+      "term": "curvilinear translation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "uniform_rectilinear_translation",
+      "term": "равномерное прямолинейное поступательное движение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "uniform_rectilinear_translation",
+      "term": "uniform rectilinear translation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fixed_axis_rotation",
+      "term": "вращение вокруг неподвижной оси",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fixed_axis_rotation",
+      "term": "rotation about a fixed axis",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rolling_motion",
+      "term": "качение тела по поверхности",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rolling_motion",
+      "term": "rolling motion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rolling_motion",
+      "term": "качение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rolling_without_slip",
+      "term": "качение без проскальзывания",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rolling_without_slip",
+      "term": "rolling without slipping",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rolling_without_slip",
+      "term": "pure rolling",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rolling_with_slip",
+      "term": "качение с проскальзыванием",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rolling_with_slip",
+      "term": "rolling with slipping",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 18237,
+      "term": "перемещение предмета (действие)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 18237,
+      "term": "moving an object (action)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 18237,
+      "term": "перемещать предмет",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 18237,
+      "term": "перемещаание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 18237,
+      "term": "ПЕРЕМЕЩАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 6018,
+      "term": "катить предмет (вращая по поверхности)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 6018,
+      "term": "making an object roll",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 6018,
+      "term": "катить предмет",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 6018,
+      "term": "катиение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 6018,
+      "term": "КАТИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "kinetic_energy",
+      "term": "кинетическая энергия",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kinetic_energy",
+      "term": "kinetic energy",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "translational_kinetic_energy",
+      "term": "кинетическая энергия поступательного движения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "translational_kinetic_energy",
+      "term": "translational kinetic energy",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rotational_kinetic_energy",
+      "term": "кинетическая энергия вращения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rotational_kinetic_energy",
+      "term": "rotational kinetic energy",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "mechanical_work",
+      "term": "механическая работа (физическая величина)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "mechanical_work",
+      "term": "mechanical work (physical quantity)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "momentum_measurement",
+      "term": "измерение импульса тела",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "momentum_measurement",
+      "term": "linear momentum measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "impulse_measurement",
+      "term": "измерение импульса силы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "impulse_measurement",
+      "term": "force impulse measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "angular_momentum_measurement",
+      "term": "измерение момента импульса",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "angular_momentum_measurement",
+      "term": "angular momentum measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "torque_measurement",
+      "term": "измерение момента силы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "torque_measurement",
+      "term": "torque measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "moment_inertia_measurement",
+      "term": "измерение момента инерции относительно оси",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "moment_inertia_measurement",
+      "term": "mass moment of inertia measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "path_length_measurement",
+      "term": "измерение длины пройденного пути",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "path_length_measurement",
+      "term": "travelled distance measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kinetic_energy_measurement",
+      "term": "измерение кинетической энергии",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kinetic_energy_measurement",
+      "term": "kinetic energy measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "work_measurement",
+      "term": "измерение механической работы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "work_measurement",
+      "term": "mechanical work measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "force_impulse",
+      "term": "momentum",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "angular_momentum",
+      "term": "linear momentum",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "torque",
+      "term": "force",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "mechanical_inertia",
+      "term": "rest",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "axis_moment_inertia",
+      "term": "moment",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "pure_translation",
+      "term": "translation",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "scalar_quantity",
+      "term": "Scalar",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "mechanical_work",
+      "term": "work",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

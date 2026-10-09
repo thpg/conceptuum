@@ -1,0 +1,2719 @@
+{
+  "source": "quality-20261009-q27",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Visible light, lighting states, perceived brightness and colour lightness; photometric quantities, units, measurements and meters; pale colours misplaced under the lighting process.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "flux": "https://cie.co.at/eilvterm/17-21-039",
+      "intensity": "https://cie.co.at/eilvterm/17-21-045",
+      "illuminance": "https://cie.co.at/eilvterm/17-21-060",
+      "luminance": "https://www.cie.co.at/eilvterm/17-21-050",
+      "brightness": "https://cie.co.at/eilvterm/17-22-059",
+      "lightness": "https://cie.co.at/eilvterm/17-22-063",
+      "si": "https://www.bipm.org/documents/20126/41489685/SI-App2-candela.pdf",
+      "meters": "https://www.cie.co.at/publications/characterization-performance-illuminance-meters-and-luminance-meters",
+      "russian_bright": "https://gramota.ru/meta/yarkiy"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet; CC BY 4.0 and Princeton notices remain in docs/quality/2026-10-09-q11.md#sources-and-reuse. CIE, BIPM and Gramota support selected corrections. Source definitions are paraphrased, not copied; Russian labels and graph mappings are editorial adaptations.",
+    "existing_cohort": [
+      5,
+      2,
+      11,
+      12,
+      1694,
+      1696,
+      1697,
+      1719,
+      1720,
+      1721,
+      1722,
+      1901,
+      3449,
+      3549,
+      3550,
+      4810,
+      4953,
+      4983,
+      5164,
+      10803,
+      13097,
+      14456,
+      15526,
+      15718,
+      16393,
+      20032,
+      24526,
+      24550,
+      24564,
+      3867,
+      2709
+    ],
+    "context_policy": "All additions use U1 and unspecified strength. Illumination state, lighting activity, radiation, visual perception and physical quantity are distinct meanings. A photometric value depends on the specified geometry and spectral weighting. No observer-independent identity between brightness and luminance is asserted.",
+    "sense_decisions": [
+      {
+        "concept": "illumination_state",
+        "synset": "oewn-14006632-n",
+        "decision": "add",
+        "alignment": "restricted environmental state",
+        "scope": "The ambient lighting condition of an environment. Distinct from the action of illuminating it, a photometric illuminance value and the meteorological visibility distance. Correct the vague degree-of-visibility wording."
+      },
+      {
+        "concept": "illuminated_state",
+        "synset": "oewn-14006789-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The state in which an environment is lit, contrasted with darkness in that environment. Not visible radiation as a physical phenomenon."
+      },
+      {
+        "concept": "photometric_quantity",
+        "synset": null,
+        "decision": "add",
+        "alignment": "standards-supported quantity family",
+        "scope": "A physical light quantity evaluated with a specified visual-response weighting. Distinguish it from the corresponding unweighted radiometric quantity and from an individual visual sensation."
+      },
+      {
+        "concept": "luminous_flux",
+        "synset": "oewn-15312722-n",
+        "decision": "add",
+        "alignment": "corrected physical quantity scope",
+        "scope": "The photometrically weighted flow rate of radiant energy. It is measured in lumens; do not import a raw radiant-power genus or a per-area definition."
+      },
+      {
+        "concept": "luminous_intensity",
+        "synset": null,
+        "decision": "add",
+        "alignment": "standards-supported quantity",
+        "scope": "Directional luminous flux per solid angle, measured in candelas. Not generic perceived brightness or electric current."
+      },
+      {
+        "concept": "illuminance",
+        "synset": "oewn-05025708-n",
+        "decision": "add",
+        "alignment": "corrected dictionary genus",
+        "scope": "Incident luminous flux per surface area, measured in lux. It is not a kind of luminance, and the process word illumination is not imported as its unqualified synonym."
+      },
+      {
+        "concept": "luminance",
+        "synset": "oewn-05025269-n",
+        "decision": "add",
+        "alignment": "split mixed dictionary sense",
+        "scope": "The directional light quantity using luminous intensity and projected surface area. Measured in candelas per square metre; exclude the source synset's mixed perceptual brightness and generic light synonyms."
+      },
+      {
+        "concept": "flux_unit",
+        "synset": "oewn-13661406-n",
+        "decision": "add",
+        "alignment": "quantity-specific unit family",
+        "scope": "A unit for luminous flux, not luminous flux per area. Correct the dictionary gloss."
+      },
+      {
+        "concept": "illuminance_unit",
+        "synset": "oewn-13661126-n",
+        "decision": "add",
+        "alignment": "quantity-specific unit family",
+        "scope": "A unit for the illuminance quantity, distinct from lighting activity."
+      },
+      {
+        "concept": "luminance_unit",
+        "synset": "oewn-13661287-n",
+        "decision": "add",
+        "alignment": "quantity-specific unit family",
+        "scope": "A unit for physical luminance, not an individual brightness sensation."
+      },
+      {
+        "concept": "lumen",
+        "synset": "oewn-13662778-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The SI luminous-flux unit. Exclude the anatomical cavity sense."
+      },
+      {
+        "concept": "lux",
+        "synset": "oewn-13662195-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The SI illuminance unit. Exclude luxury-related trade labels and the general lighting state."
+      },
+      {
+        "concept": "candela_per_area",
+        "synset": "oewn-13662502-n",
+        "decision": "add",
+        "alignment": "explicit name for the nit unit sense",
+        "scope": "The SI luminance unit. Use the explicit unit name rather than the ambiguous bare nit synonym."
+      },
+      {
+        "concept": 24526,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "The existing luminous-intensity unit family already has the correct unit genus."
+      },
+      {
+        "concept": 24550,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Candela is already present under luminous-intensity unit; retain its direct genus and all prior conditions."
+      },
+      {
+        "concept": "photometry",
+        "synset": "oewn-01005214-n",
+        "decision": "add",
+        "alignment": "measurement activity sense",
+        "scope": "Measuring photometric quantities. Select the measurement activity, not the discipline or a single instrument reading."
+      },
+      {
+        "concept": "flux_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of the selected photometric quantity, with suitable geometry and response weighting."
+      },
+      {
+        "concept": "intensity_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of the selected photometric quantity, with suitable geometry and response weighting."
+      },
+      {
+        "concept": "illuminance_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of the selected photometric quantity, with suitable geometry and response weighting."
+      },
+      {
+        "concept": "luminance_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of the selected photometric quantity, with suitable geometry and response weighting."
+      },
+      {
+        "concept": "photometer",
+        "synset": "oewn-03933114-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An instrument for photometric measurement. Do not require every photometer to compare only source intensity or to be a photographic exposure meter."
+      },
+      {
+        "concept": "illuminance_meter",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A photometer intended to measure illuminance."
+      },
+      {
+        "concept": "luminance_meter",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A photometer intended to measure luminance."
+      },
+      {
+        "concept": "perceived_brightness",
+        "synset": null,
+        "decision": "add",
+        "alignment": "standards-supported perceptual sense",
+        "scope": "The visual attribute by which an area seems more or less bright. Keep the perceptual meaning separate from a luminance measurement and from intelligence."
+      },
+      {
+        "concept": "colour_lightness",
+        "synset": null,
+        "decision": "add",
+        "alignment": "standards-supported perceptual attribute",
+        "scope": "Relative visual brightness judged against a similarly lit white or highly transmitting reference. Not the amount of incident light and not low weight."
+      },
+      {
+        "concept": "daylight",
+        "synset": "oewn-11464134-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Natural visible light available during the day. Distinct from the daytime interval already represented in the database."
+      },
+      {
+        "concept": "sunlight",
+        "synset": "oewn-11505767-n",
+        "decision": "add",
+        "alignment": "visible-light restriction",
+        "scope": "The visible-light sense of light from the Sun. Do not import the Sun object or identify this with all solar radiation."
+      },
+      {
+        "concept": "moonlight",
+        "synset": "oewn-11505375-n",
+        "decision": "add",
+        "alignment": "reflected visible-light sense",
+        "scope": "Visible light reaching the environment from the illuminated Moon, by reflection. Not a Moon object or a claim that the Moon generates its own visible radiation."
+      },
+      {
+        "concept": 14456,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "This pale-grey record duplicates existing light-grey 4953; defer to a reviewed leaf merge, not a false subtype link."
+      },
+      {
+        "concept": 14340,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The radiation verb-derived record needs a separate duplicate/sense review against existing emission process 258."
+      },
+      {
+        "concept": 1901,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Lighting remains a physical process; its hair, skin, enlightened and pale-grey descendants need further sense review."
+      },
+      {
+        "concept": 3550,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Retain shadow phenomenon and its existing dependency on light. Removing its unqualified contrary relation does not make it a kind of darkness."
+      }
+    ],
+    "limits": "No numerical light levels, exposure or health guidance, efficacy rankings, spectral-response algorithms, exact colour coordinates or mandatory lamp components. Unit conversions remain explanatory scope, not graph arithmetic. Lamp and luminaire types, mixed hair/skin/enlightened lighting descendants, the pale-grey duplicate and radiation-process duplicates remain queued. No application test suites.",
+    "exclusion_review": {
+      "context": "U1 positive genus witnesses",
+      "before_conflicting_edges": 9,
+      "resolved_edges": [
+        9676
+      ],
+      "decision": "Darkness is reparented to lighting state; its state/radiation opposition is replaced by a state/state contrary. The unqualified light/shadow opposition is removed. No new conflicting pair or witness is accepted.",
+      "remaining_candidates_expected": 8
+    },
+    "new_term_collisions": [],
+    "collision_decision": "No exact normalized cross-language collision is accepted. Existing light, darkness, colours, units and instrument/measurement anchors are reused. A substring hit for lux in luxurious is not an exact collision.",
+    "refreshed_comparison": {
+      "baseline": "Q26",
+      "existing_concepts": 13061,
+      "existing_terms": 36807,
+      "synsets_with_exact_en_candidate": 15602,
+      "synsets_without_exact_en_candidate": 91917,
+      "existing_concepts_with_dictionary_candidate": 4179,
+      "caveat": "Normalized spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "illumination_state",
+      "name": "состояние освещения",
+      "parent": 2633,
+      "universum_id": 1,
+      "terms": [
+        [
+          "состояние освещения",
+          "ru"
+        ],
+        [
+          "illumination state",
+          "en"
+        ]
+      ],
+      "reason": "The ambient lighting condition of an environment. Distinct from the action of illuminating it, a photometric illuminance value and the meteorological visibility distance. Correct the vague degree-of-visibility wording. OEWN 2025: oewn-14006632-n."
+    },
+    {
+      "key": "illuminated_state",
+      "name": "свет (состояние освещения)",
+      "parent": "illumination_state",
+      "universum_id": 1,
+      "terms": [
+        [
+          "свет (состояние освещения)",
+          "ru"
+        ],
+        [
+          "light (illuminated state)",
+          "en"
+        ],
+        [
+          "illuminated state",
+          "en"
+        ]
+      ],
+      "reason": "The state in which an environment is lit, contrasted with darkness in that environment. Not visible radiation as a physical phenomenon. OEWN 2025: oewn-14006789-n."
+    },
+    {
+      "key": "photometric_quantity",
+      "name": "фотометрическая величина",
+      "parent": 2709,
+      "universum_id": 1,
+      "terms": [
+        [
+          "фотометрическая величина",
+          "ru"
+        ],
+        [
+          "photometric quantity",
+          "en"
+        ]
+      ],
+      "reason": "A physical light quantity evaluated with a specified visual-response weighting. Distinguish it from the corresponding unweighted radiometric quantity and from an individual visual sensation. Source: https://www.bipm.org/documents/20126/41489685/SI-App2-candela.pdf"
+    },
+    {
+      "key": "luminous_flux",
+      "name": "световой поток",
+      "parent": "photometric_quantity",
+      "universum_id": 1,
+      "terms": [
+        [
+          "световой поток",
+          "ru"
+        ],
+        [
+          "luminous flux",
+          "en"
+        ]
+      ],
+      "reason": "The photometrically weighted flow rate of radiant energy. It is measured in lumens; do not import a raw radiant-power genus or a per-area definition. OEWN 2025: oewn-15312722-n. Source: https://cie.co.at/eilvterm/17-21-039"
+    },
+    {
+      "key": "luminous_intensity",
+      "name": "сила света",
+      "parent": "photometric_quantity",
+      "universum_id": 1,
+      "terms": [
+        [
+          "сила света",
+          "ru"
+        ],
+        [
+          "luminous intensity",
+          "en"
+        ]
+      ],
+      "reason": "Directional luminous flux per solid angle, measured in candelas. Not generic perceived brightness or electric current. Source: https://cie.co.at/eilvterm/17-21-045"
+    },
+    {
+      "key": "illuminance",
+      "name": "освещённость (фотометрическая величина)",
+      "parent": "photometric_quantity",
+      "universum_id": 1,
+      "terms": [
+        [
+          "освещённость (фотометрическая величина)",
+          "ru"
+        ],
+        [
+          "illuminance",
+          "en"
+        ],
+        [
+          "освещённость",
+          "ru"
+        ]
+      ],
+      "reason": "Incident luminous flux per surface area, measured in lux. It is not a kind of luminance, and the process word illumination is not imported as its unqualified synonym. OEWN 2025: oewn-05025708-n. Source: https://cie.co.at/eilvterm/17-21-060"
+    },
+    {
+      "key": "luminance",
+      "name": "яркость (фотометрическая величина)",
+      "parent": "photometric_quantity",
+      "universum_id": 1,
+      "terms": [
+        [
+          "яркость (фотометрическая величина)",
+          "ru"
+        ],
+        [
+          "luminance",
+          "en"
+        ]
+      ],
+      "reason": "The directional light quantity using luminous intensity and projected surface area. Measured in candelas per square metre; exclude the source synset's mixed perceptual brightness and generic light synonyms. OEWN 2025: oewn-05025269-n. Source: https://www.cie.co.at/eilvterm/17-21-050"
+    },
+    {
+      "key": "flux_unit",
+      "name": "единица светового потока",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица светового потока",
+          "ru"
+        ],
+        [
+          "luminous flux unit",
+          "en"
+        ]
+      ],
+      "reason": "A unit for luminous flux, not luminous flux per area. Correct the dictionary gloss. OEWN 2025: oewn-13661406-n. Source: https://www.bipm.org/documents/20126/41489685/SI-App2-candela.pdf"
+    },
+    {
+      "key": "illuminance_unit",
+      "name": "единица освещённости",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица освещённости",
+          "ru"
+        ],
+        [
+          "illuminance unit",
+          "en"
+        ]
+      ],
+      "reason": "A unit for the illuminance quantity, distinct from lighting activity. OEWN 2025: oewn-13661126-n. Source: https://www.bipm.org/documents/20126/41489685/SI-App2-candela.pdf"
+    },
+    {
+      "key": "luminance_unit",
+      "name": "единица фотометрической яркости",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица фотометрической яркости",
+          "ru"
+        ],
+        [
+          "luminance unit",
+          "en"
+        ]
+      ],
+      "reason": "A unit for physical luminance, not an individual brightness sensation. OEWN 2025: oewn-13661287-n. Source: https://www.bipm.org/documents/20126/41489685/SI-App2-candela.pdf"
+    },
+    {
+      "key": "lumen",
+      "name": "люмен",
+      "parent": "flux_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "люмен",
+          "ru"
+        ],
+        [
+          "lumen",
+          "en"
+        ],
+        [
+          "lm",
+          "en"
+        ]
+      ],
+      "reason": "The SI luminous-flux unit. Exclude the anatomical cavity sense. OEWN 2025: oewn-13662778-n. Source: https://www.bipm.org/documents/20126/41489685/SI-App2-candela.pdf"
+    },
+    {
+      "key": "lux",
+      "name": "люкс (единица освещённости)",
+      "parent": "illuminance_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "люкс (единица освещённости)",
+          "ru"
+        ],
+        [
+          "lux",
+          "en"
+        ],
+        [
+          "lx",
+          "en"
+        ],
+        [
+          "люкс",
+          "ru"
+        ]
+      ],
+      "reason": "The SI illuminance unit. Exclude luxury-related trade labels and the general lighting state. OEWN 2025: oewn-13662195-n. Source: https://www.bipm.org/documents/20126/41489685/SI-App2-candela.pdf"
+    },
+    {
+      "key": "candela_per_area",
+      "name": "кандела на квадратный метр",
+      "parent": "luminance_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "кандела на квадратный метр",
+          "ru"
+        ],
+        [
+          "candela per square metre",
+          "en"
+        ],
+        [
+          "candela per square meter",
+          "en"
+        ],
+        [
+          "cd/m2",
+          "en"
+        ]
+      ],
+      "reason": "The SI luminance unit. Use the explicit unit name rather than the ambiguous bare nit synonym. OEWN 2025: oewn-13662502-n. Source: https://www.bipm.org/documents/20126/41489685/SI-App2-candela.pdf"
+    },
+    {
+      "key": "photometry",
+      "name": "фотометрическое измерение",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "фотометрическое измерение",
+          "ru"
+        ],
+        [
+          "photometric measurement",
+          "en"
+        ],
+        [
+          "photometry (measurement)",
+          "en"
+        ]
+      ],
+      "reason": "Measuring photometric quantities. Select the measurement activity, not the discipline or a single instrument reading. OEWN 2025: oewn-01005214-n. Source: https://www.bipm.org/documents/20126/41489685/SI-App2-candela.pdf"
+    },
+    {
+      "key": "flux_measurement",
+      "name": "измерение светового потока",
+      "parent": "photometry",
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение светового потока",
+          "ru"
+        ],
+        [
+          "luminous flux measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of the selected photometric quantity, with suitable geometry and response weighting. Source: https://cie.co.at/eilvterm/17-21-039"
+    },
+    {
+      "key": "intensity_measurement",
+      "name": "измерение силы света",
+      "parent": "photometry",
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение силы света",
+          "ru"
+        ],
+        [
+          "luminous intensity measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of the selected photometric quantity, with suitable geometry and response weighting. Source: https://cie.co.at/eilvterm/17-21-045"
+    },
+    {
+      "key": "illuminance_measurement",
+      "name": "измерение освещённости",
+      "parent": "photometry",
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение освещённости",
+          "ru"
+        ],
+        [
+          "illuminance measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of the selected photometric quantity, with suitable geometry and response weighting. Source: https://cie.co.at/eilvterm/17-21-060"
+    },
+    {
+      "key": "luminance_measurement",
+      "name": "измерение фотометрической яркости",
+      "parent": "photometry",
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение фотометрической яркости",
+          "ru"
+        ],
+        [
+          "luminance measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of the selected photometric quantity, with suitable geometry and response weighting. Source: https://www.cie.co.at/eilvterm/17-21-050"
+    },
+    {
+      "key": "photometer",
+      "name": "фотометр",
+      "parent": 24564,
+      "universum_id": 1,
+      "terms": [
+        [
+          "фотометр",
+          "ru"
+        ],
+        [
+          "photometer",
+          "en"
+        ]
+      ],
+      "reason": "An instrument for photometric measurement. Do not require every photometer to compare only source intensity or to be a photographic exposure meter. OEWN 2025: oewn-03933114-n. Source: https://www.cie.co.at/publications/characterization-performance-illuminance-meters-and-luminance-meters"
+    },
+    {
+      "key": "illuminance_meter",
+      "name": "люксметр",
+      "parent": "photometer",
+      "universum_id": 1,
+      "terms": [
+        [
+          "люксметр",
+          "ru"
+        ],
+        [
+          "illuminance meter",
+          "en"
+        ],
+        [
+          "lux meter",
+          "en"
+        ]
+      ],
+      "reason": "A photometer intended to measure illuminance. Source: https://www.cie.co.at/publications/characterization-performance-illuminance-meters-and-luminance-meters"
+    },
+    {
+      "key": "luminance_meter",
+      "name": "яркомер",
+      "parent": "photometer",
+      "universum_id": 1,
+      "terms": [
+        [
+          "яркомер",
+          "ru"
+        ],
+        [
+          "luminance meter",
+          "en"
+        ]
+      ],
+      "reason": "A photometer intended to measure luminance. Source: https://www.cie.co.at/publications/characterization-performance-illuminance-meters-and-luminance-meters"
+    },
+    {
+      "key": "perceived_brightness",
+      "name": "яркость (зрительное ощущение)",
+      "parent": 5,
+      "universum_id": 1,
+      "terms": [
+        [
+          "яркость (зрительное ощущение)",
+          "ru"
+        ],
+        [
+          "perceived brightness",
+          "en"
+        ],
+        [
+          "brightness (visual perception)",
+          "en"
+        ]
+      ],
+      "reason": "The visual attribute by which an area seems more or less bright. Keep the perceptual meaning separate from a luminance measurement and from intelligence. Source: https://cie.co.at/eilvterm/17-22-059"
+    },
+    {
+      "key": "colour_lightness",
+      "name": "светлота цвета",
+      "parent": 5,
+      "universum_id": 1,
+      "terms": [
+        [
+          "светлота цвета",
+          "ru"
+        ],
+        [
+          "colour lightness",
+          "en"
+        ],
+        [
+          "color lightness",
+          "en"
+        ],
+        [
+          "lightness (colour)",
+          "en"
+        ]
+      ],
+      "reason": "Relative visual brightness judged against a similarly lit white or highly transmitting reference. Not the amount of incident light and not low weight. Source: https://cie.co.at/eilvterm/17-22-063"
+    },
+    {
+      "key": "daylight",
+      "name": "дневной свет",
+      "parent": 3449,
+      "universum_id": 1,
+      "terms": [
+        [
+          "дневной свет",
+          "ru"
+        ],
+        [
+          "daylight",
+          "en"
+        ],
+        [
+          "daylight (light)",
+          "en"
+        ]
+      ],
+      "reason": "Natural visible light available during the day. Distinct from the daytime interval already represented in the database. OEWN 2025: oewn-11464134-n."
+    },
+    {
+      "key": "sunlight",
+      "name": "солнечный свет",
+      "parent": 3449,
+      "universum_id": 1,
+      "terms": [
+        [
+          "солнечный свет",
+          "ru"
+        ],
+        [
+          "sunlight",
+          "en"
+        ],
+        [
+          "sunlight (visible light)",
+          "en"
+        ]
+      ],
+      "reason": "The visible-light sense of light from the Sun. Do not import the Sun object or identify this with all solar radiation. OEWN 2025: oewn-11505767-n."
+    },
+    {
+      "key": "moonlight",
+      "name": "лунный свет",
+      "parent": 3449,
+      "universum_id": 1,
+      "terms": [
+        [
+          "лунный свет",
+          "ru"
+        ],
+        [
+          "moonlight",
+          "en"
+        ],
+        [
+          "moonlight (visible light)",
+          "en"
+        ]
+      ],
+      "reason": "Visible light reaching the environment from the illuminated Moon, by reflection. Not a Moon object or a claim that the Moon generates its own visible radiation. OEWN 2025: oewn-11505375-n."
+    }
+  ],
+  "renames": [
+    {
+      "id": 3449,
+      "before": "свет",
+      "name": "свет (видимое излучение)",
+      "terms": [],
+      "reason": "Qualify the existing light phenomenon, distinct from environmental light/dark state. Preserve its existing natural-phenomenon genus. OEWN 2025: oewn-11494354-n."
+    }
+  ],
+  "terms": [
+    {
+      "id": 3449,
+      "name": "свет (видимое излучение)",
+      "terms": [
+        [
+          "visible light",
+          "en"
+        ]
+      ],
+      "reason": "Select the visible-radiation meaning; do not import the dictionary actinic-radiation genus. OEWN 2025: oewn-11494354-n."
+    },
+    {
+      "id": 3549,
+      "name": "темнота",
+      "terms": [
+        [
+          "тьма",
+          "ru"
+        ],
+        [
+          "darkness (lighting state)",
+          "en"
+        ]
+      ],
+      "reason": "The darkness noun belongs to the lighting-state concept, not a dark-colour adjective. OEWN 2025: oewn-14007000-n."
+    },
+    {
+      "id": 1719,
+      "name": "яркое",
+      "terms": [
+        [
+          "bright (visual appearance)",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the visual adjective; preserve the bright/dim contrary pair."
+    },
+    {
+      "id": 1721,
+      "name": "тёмное",
+      "terms": [
+        [
+          "dark-coloured",
+          "en"
+        ],
+        [
+          "dark-colored",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the colour-property sense; retain the dark/light-coloured contrary pair."
+    },
+    {
+      "id": 1722,
+      "name": "светлое",
+      "terms": [
+        [
+          "light-coloured",
+          "en"
+        ]
+      ],
+      "reason": "Add the alternate English spelling for the existing colour-lightness value."
+    },
+    {
+      "id": 4810,
+      "name": "голубое",
+      "terms": [
+        [
+          "light blue",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the Russian basic blue colour while retaining the historical broad English blue alias."
+    },
+    {
+      "id": 10803,
+      "name": "светло-коричневое",
+      "terms": [
+        [
+          "light brown",
+          "en"
+        ]
+      ],
+      "reason": "Add a real English colour label; the pale-blue label denotes the lighter variant of the Russian basic голубой colour."
+    },
+    {
+      "id": 13097,
+      "name": "светло-зеленое",
+      "terms": [
+        [
+          "light green",
+          "en"
+        ]
+      ],
+      "reason": "Add a real English colour label; the pale-blue label denotes the lighter variant of the Russian basic голубой colour."
+    },
+    {
+      "id": 15526,
+      "name": "светло-голубое",
+      "terms": [
+        [
+          "pale blue",
+          "en"
+        ]
+      ],
+      "reason": "Add a real English colour label; the pale-blue label denotes the lighter variant of the Russian basic голубой colour."
+    },
+    {
+      "id": 15718,
+      "name": "светло-розовое",
+      "terms": [
+        [
+          "light pink",
+          "en"
+        ]
+      ],
+      "reason": "Add a real English colour label; the pale-blue label denotes the lighter variant of the Russian basic голубой colour."
+    },
+    {
+      "id": 16393,
+      "name": "светло-бежевое",
+      "terms": [
+        [
+          "light beige",
+          "en"
+        ]
+      ],
+      "reason": "Add a real English colour label; the pale-blue label denotes the lighter variant of the Russian basic голубой colour."
+    },
+    {
+      "id": 20032,
+      "name": "светло-желтое",
+      "terms": [
+        [
+          "light yellow",
+          "en"
+        ]
+      ],
+      "reason": "Add a real English colour label; the pale-blue label denotes the lighter variant of the Russian basic голубой colour."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 1721,
+      "term": "тьма",
+      "lang": "ru",
+      "reason": "Move the environmental-darkness noun to 3549; the adjective remains here."
+    },
+    {
+      "id": 1721,
+      "term": "темное",
+      "lang": "en",
+      "reason": "Russian adjective tagged as English; valid Russian and English labels remain."
+    },
+    {
+      "id": 1719,
+      "term": "яркее",
+      "lang": "en",
+      "reason": "Malformed generated comparative. Gramota gives ярче; retain the established base adjective яркий. Source: https://gramota.ru/meta/yarkiy"
+    },
+    {
+      "id": 1719,
+      "term": "яркее",
+      "lang": "ru",
+      "reason": "Malformed generated comparative. Gramota gives ярче; retain the established base adjective яркий. Source: https://gramota.ru/meta/yarkiy"
+    },
+    {
+      "id": 10803,
+      "term": "светло-коричневое",
+      "lang": "en",
+      "reason": "Russian colour wording was mislabeled as English; retain its Russian term."
+    },
+    {
+      "id": 13097,
+      "term": "светло-зеленое",
+      "lang": "en",
+      "reason": "Russian colour wording was mislabeled as English; retain its Russian term."
+    },
+    {
+      "id": 15526,
+      "term": "светло-голубое",
+      "lang": "en",
+      "reason": "Russian colour wording was mislabeled as English; retain its Russian term."
+    },
+    {
+      "id": 15718,
+      "term": "светло-розовое",
+      "lang": "en",
+      "reason": "Russian colour wording was mislabeled as English; retain its Russian term."
+    },
+    {
+      "id": 16393,
+      "term": "светло-бежевое",
+      "lang": "en",
+      "reason": "Russian colour wording was mislabeled as English; retain its Russian term."
+    },
+    {
+      "id": 20032,
+      "term": "светло-желтое",
+      "lang": "en",
+      "reason": "Russian colour wording was mislabeled as English; retain its Russian term."
+    }
+  ],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 5819,
+      "before": [
+        3549,
+        "14",
+        3449,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          3549,
+          "14",
+          "illumination_state",
+          null,
+          1
+        ]
+      ],
+      "reason": "Darkness is a state of absent or very low illumination, not a subtype of visible light. OEWN 2025: oewn-14007000-n."
+    },
+    {
+      "id": 9676,
+      "before": [
+        3549,
+        "63",
+        3449,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          3549,
+          "63",
+          "illuminated_state",
+          null,
+          1
+        ]
+      ],
+      "reason": "Compare dark and lit conditions in the same environment. Replace the mixed state/radiation opposition without importing the inherited numerical strength. OEWN 2025: oewn-14007000-n."
+    },
+    {
+      "id": 8157,
+      "before": [
+        3449,
+        "63",
+        3550,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "A shadow can contain ambient light, and radiation is not a state opposite to a shadow. Remove this unqualified contrary link; retain shadow as a phenomenon and its reviewed-existing light dependency."
+    },
+    {
+      "id": 2584,
+      "before": [
+        1719,
+        "14",
+        5,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1719,
+          "14",
+          "perceived_brightness",
+          null,
+          1
+        ]
+      ],
+      "reason": "Bright and dim are values of visual brightness, not synonyms for a measured luminance value. Source: https://cie.co.at/eilvterm/17-22-059"
+    },
+    {
+      "id": 2585,
+      "before": [
+        1720,
+        "14",
+        5,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1720,
+          "14",
+          "perceived_brightness",
+          null,
+          1
+        ]
+      ],
+      "reason": "Bright and dim are values of visual brightness, not synonyms for a measured luminance value. Source: https://cie.co.at/eilvterm/17-22-059"
+    },
+    {
+      "id": 2586,
+      "before": [
+        1721,
+        "14",
+        5,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1721,
+          "14",
+          "colour_lightness",
+          null,
+          1
+        ]
+      ],
+      "reason": "Dark-coloured and light-coloured belong to colour lightness, distinct from a dark or lit environment. Source: https://cie.co.at/eilvterm/17-22-063"
+    },
+    {
+      "id": 2587,
+      "before": [
+        1722,
+        "14",
+        5,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1722,
+          "14",
+          "colour_lightness",
+          null,
+          1
+        ]
+      ],
+      "reason": "Dark-coloured and light-coloured belong to colour lightness, distinct from a dark or lit environment. Source: https://cie.co.at/eilvterm/17-22-063"
+    },
+    {
+      "id": 28563,
+      "before": [
+        10803,
+        "14",
+        1901,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          10803,
+          "14",
+          1696,
+          null,
+          1
+        ]
+      ],
+      "reason": "This record denotes a pale colour variant, not the process of illuminating an environment. Reuse the existing hue family."
+    },
+    {
+      "id": 28602,
+      "before": [
+        13097,
+        "14",
+        1901,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          13097,
+          "14",
+          11,
+          null,
+          1
+        ]
+      ],
+      "reason": "This record denotes a pale colour variant, not the process of illuminating an environment. Reuse the existing hue family."
+    },
+    {
+      "id": 28655,
+      "before": [
+        15526,
+        "14",
+        1901,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          15526,
+          "14",
+          4810,
+          null,
+          1
+        ]
+      ],
+      "reason": "This record denotes a pale colour variant, not the process of illuminating an environment. Reuse the existing hue family."
+    },
+    {
+      "id": 28661,
+      "before": [
+        15718,
+        "14",
+        1901,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          15718,
+          "14",
+          1694,
+          null,
+          1
+        ]
+      ],
+      "reason": "This record denotes a pale colour variant, not the process of illuminating an environment. Reuse the existing hue family."
+    },
+    {
+      "id": 28676,
+      "before": [
+        16393,
+        "14",
+        1901,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          16393,
+          "14",
+          1697,
+          null,
+          1
+        ]
+      ],
+      "reason": "This record denotes a pale colour variant, not the process of illuminating an environment. Reuse the existing hue family."
+    },
+    {
+      "id": 28774,
+      "before": [
+        20032,
+        "14",
+        1901,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          20032,
+          "14",
+          12,
+          null,
+          1
+        ]
+      ],
+      "reason": "This record denotes a pale colour variant, not the process of illuminating an environment. Reuse the existing hue family."
+    }
+  ],
+  "edges": [
+    {
+      "subject": "flux_measurement",
+      "kod": "27",
+      "object": "luminous_flux",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://cie.co.at/eilvterm/17-21-039"
+    },
+    {
+      "subject": "intensity_measurement",
+      "kod": "27",
+      "object": "luminous_intensity",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://cie.co.at/eilvterm/17-21-045"
+    },
+    {
+      "subject": "illuminance_measurement",
+      "kod": "27",
+      "object": "illuminance",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://cie.co.at/eilvterm/17-21-060"
+    },
+    {
+      "subject": "luminance_measurement",
+      "kod": "27",
+      "object": "luminance",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://www.cie.co.at/eilvterm/17-21-050"
+    },
+    {
+      "subject": "photometer",
+      "kod": "21",
+      "object": "photometry",
+      "universum_id": 1,
+      "reason": "The instrument is intended for the selected measurement. OEWN 2025: oewn-03933114-n. Source: https://www.cie.co.at/publications/characterization-performance-illuminance-meters-and-luminance-meters"
+    },
+    {
+      "subject": "illuminance_meter",
+      "kod": "21",
+      "object": "illuminance_measurement",
+      "universum_id": 1,
+      "reason": "The instrument is intended for the selected measurement. Source: https://www.cie.co.at/publications/characterization-performance-illuminance-meters-and-luminance-meters"
+    },
+    {
+      "subject": "luminance_meter",
+      "kod": "21",
+      "object": "luminance_measurement",
+      "universum_id": 1,
+      "reason": "The instrument is intended for the selected measurement. Source: https://www.cie.co.at/publications/characterization-performance-illuminance-meters-and-luminance-meters"
+    },
+    {
+      "subject": 10803,
+      "kod": "14",
+      "object": 1722,
+      "universum_id": 1,
+      "reason": "The same colour is also a light-coloured value. No RGB boundary or numerical lightness threshold is asserted."
+    },
+    {
+      "subject": 13097,
+      "kod": "14",
+      "object": 1722,
+      "universum_id": 1,
+      "reason": "The same colour is also a light-coloured value. No RGB boundary or numerical lightness threshold is asserted."
+    },
+    {
+      "subject": 15526,
+      "kod": "14",
+      "object": 1722,
+      "universum_id": 1,
+      "reason": "The same colour is also a light-coloured value. No RGB boundary or numerical lightness threshold is asserted."
+    },
+    {
+      "subject": 15718,
+      "kod": "14",
+      "object": 1722,
+      "universum_id": 1,
+      "reason": "The same colour is also a light-coloured value. No RGB boundary or numerical lightness threshold is asserted."
+    },
+    {
+      "subject": 16393,
+      "kod": "14",
+      "object": 1722,
+      "universum_id": 1,
+      "reason": "The same colour is also a light-coloured value. No RGB boundary or numerical lightness threshold is asserted."
+    },
+    {
+      "subject": 20032,
+      "kod": "14",
+      "object": 1722,
+      "universum_id": 1,
+      "reason": "The same colour is also a light-coloured value. No RGB boundary or numerical lightness threshold is asserted."
+    }
+  ],
+  "checks": [
+    {
+      "subject": "illumination_state",
+      "kod": "14",
+      "object": 2633,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "illuminated_state",
+      "kod": "14",
+      "object": "illumination_state",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "photometric_quantity",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "luminous_flux",
+      "kod": "14",
+      "object": "photometric_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "luminous_intensity",
+      "kod": "14",
+      "object": "photometric_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "illuminance",
+      "kod": "14",
+      "object": "photometric_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "luminance",
+      "kod": "14",
+      "object": "photometric_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "flux_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "illuminance_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "luminance_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "lumen",
+      "kod": "14",
+      "object": "flux_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "lux",
+      "kod": "14",
+      "object": "illuminance_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "candela_per_area",
+      "kod": "14",
+      "object": "luminance_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "photometry",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "flux_measurement",
+      "kod": "14",
+      "object": "photometry",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "flux_measurement",
+      "kod": "27",
+      "object": "luminous_flux",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "intensity_measurement",
+      "kod": "14",
+      "object": "photometry",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "intensity_measurement",
+      "kod": "27",
+      "object": "luminous_intensity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "illuminance_measurement",
+      "kod": "14",
+      "object": "photometry",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "illuminance_measurement",
+      "kod": "27",
+      "object": "illuminance",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "luminance_measurement",
+      "kod": "14",
+      "object": "photometry",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "luminance_measurement",
+      "kod": "27",
+      "object": "luminance",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "photometer",
+      "kod": "14",
+      "object": 24564,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "photometer",
+      "kod": "21",
+      "object": "photometry",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "illuminance_meter",
+      "kod": "14",
+      "object": "photometer",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "illuminance_meter",
+      "kod": "21",
+      "object": "illuminance_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "luminance_meter",
+      "kod": "14",
+      "object": "photometer",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "luminance_meter",
+      "kod": "21",
+      "object": "luminance_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "perceived_brightness",
+      "kod": "14",
+      "object": 5,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "colour_lightness",
+      "kod": "14",
+      "object": 5,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "daylight",
+      "kod": "14",
+      "object": 3449,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sunlight",
+      "kod": "14",
+      "object": 3449,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "moonlight",
+      "kod": "14",
+      "object": 3449,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3549,
+      "kod": "14",
+      "object": 3449,
+      "present": false
+    },
+    {
+      "subject": 3549,
+      "kod": "14",
+      "object": "illumination_state",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3549,
+      "kod": "63",
+      "object": 3449,
+      "present": false
+    },
+    {
+      "subject": 3549,
+      "kod": "63",
+      "object": "illuminated_state",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3449,
+      "kod": "63",
+      "object": 3550,
+      "present": false
+    },
+    {
+      "subject": 1719,
+      "kod": "14",
+      "object": 5,
+      "present": false
+    },
+    {
+      "subject": 1719,
+      "kod": "14",
+      "object": "perceived_brightness",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1720,
+      "kod": "14",
+      "object": 5,
+      "present": false
+    },
+    {
+      "subject": 1720,
+      "kod": "14",
+      "object": "perceived_brightness",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1721,
+      "kod": "14",
+      "object": 5,
+      "present": false
+    },
+    {
+      "subject": 1721,
+      "kod": "14",
+      "object": "colour_lightness",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1722,
+      "kod": "14",
+      "object": 5,
+      "present": false
+    },
+    {
+      "subject": 1722,
+      "kod": "14",
+      "object": "colour_lightness",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 10803,
+      "kod": "14",
+      "object": 1901,
+      "present": false
+    },
+    {
+      "subject": 10803,
+      "kod": "14",
+      "object": 1696,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 10803,
+      "kod": "14",
+      "object": 1722,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 13097,
+      "kod": "14",
+      "object": 1901,
+      "present": false
+    },
+    {
+      "subject": 13097,
+      "kod": "14",
+      "object": 11,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 13097,
+      "kod": "14",
+      "object": 1722,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 15526,
+      "kod": "14",
+      "object": 1901,
+      "present": false
+    },
+    {
+      "subject": 15526,
+      "kod": "14",
+      "object": 4810,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 15526,
+      "kod": "14",
+      "object": 1722,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 15718,
+      "kod": "14",
+      "object": 1901,
+      "present": false
+    },
+    {
+      "subject": 15718,
+      "kod": "14",
+      "object": 1694,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 15718,
+      "kod": "14",
+      "object": 1722,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 16393,
+      "kod": "14",
+      "object": 1901,
+      "present": false
+    },
+    {
+      "subject": 16393,
+      "kod": "14",
+      "object": 1697,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 16393,
+      "kod": "14",
+      "object": 1722,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 20032,
+      "kod": "14",
+      "object": 1901,
+      "present": false
+    },
+    {
+      "subject": 20032,
+      "kod": "14",
+      "object": 12,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 20032,
+      "kod": "14",
+      "object": 1722,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1719,
+      "kod": "63",
+      "object": 1720,
+      "present": true
+    },
+    {
+      "subject": 1721,
+      "kod": "63",
+      "object": 1722,
+      "present": true
+    },
+    {
+      "subject": 24550,
+      "kod": "14",
+      "object": 24526,
+      "present": true
+    },
+    {
+      "subject": 24526,
+      "kod": "14",
+      "object": 2651,
+      "present": true
+    },
+    {
+      "subject": 4983,
+      "kod": "14",
+      "object": 2,
+      "present": true
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "illumination_state",
+      "ancestor": 2633,
+      "present": true
+    },
+    {
+      "subject": "illuminated_state",
+      "ancestor": "illumination_state",
+      "present": true
+    },
+    {
+      "subject": "photometric_quantity",
+      "ancestor": 2709,
+      "present": true
+    },
+    {
+      "subject": "luminous_flux",
+      "ancestor": "photometric_quantity",
+      "present": true
+    },
+    {
+      "subject": "luminous_intensity",
+      "ancestor": "photometric_quantity",
+      "present": true
+    },
+    {
+      "subject": "illuminance",
+      "ancestor": "photometric_quantity",
+      "present": true
+    },
+    {
+      "subject": "luminance",
+      "ancestor": "photometric_quantity",
+      "present": true
+    },
+    {
+      "subject": "flux_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "illuminance_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "luminance_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "lumen",
+      "ancestor": "flux_unit",
+      "present": true
+    },
+    {
+      "subject": "lux",
+      "ancestor": "illuminance_unit",
+      "present": true
+    },
+    {
+      "subject": "candela_per_area",
+      "ancestor": "luminance_unit",
+      "present": true
+    },
+    {
+      "subject": "photometry",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "flux_measurement",
+      "ancestor": "photometry",
+      "present": true
+    },
+    {
+      "subject": "intensity_measurement",
+      "ancestor": "photometry",
+      "present": true
+    },
+    {
+      "subject": "illuminance_measurement",
+      "ancestor": "photometry",
+      "present": true
+    },
+    {
+      "subject": "luminance_measurement",
+      "ancestor": "photometry",
+      "present": true
+    },
+    {
+      "subject": "photometer",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": "illuminance_meter",
+      "ancestor": "photometer",
+      "present": true
+    },
+    {
+      "subject": "luminance_meter",
+      "ancestor": "photometer",
+      "present": true
+    },
+    {
+      "subject": "perceived_brightness",
+      "ancestor": 5,
+      "present": true
+    },
+    {
+      "subject": "colour_lightness",
+      "ancestor": 5,
+      "present": true
+    },
+    {
+      "subject": "daylight",
+      "ancestor": 3449,
+      "present": true
+    },
+    {
+      "subject": "sunlight",
+      "ancestor": 3449,
+      "present": true
+    },
+    {
+      "subject": "moonlight",
+      "ancestor": 3449,
+      "present": true
+    },
+    {
+      "subject": 3549,
+      "ancestor": "illumination_state",
+      "present": true
+    },
+    {
+      "subject": 1719,
+      "ancestor": "perceived_brightness",
+      "present": true
+    },
+    {
+      "subject": 1720,
+      "ancestor": "perceived_brightness",
+      "present": true
+    },
+    {
+      "subject": 1721,
+      "ancestor": "colour_lightness",
+      "present": true
+    },
+    {
+      "subject": 1722,
+      "ancestor": "colour_lightness",
+      "present": true
+    },
+    {
+      "subject": "lux",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "lumen",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "luminance_meter",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": 24550,
+      "ancestor": 24526,
+      "present": true
+    },
+    {
+      "subject": 3549,
+      "ancestor": 3449,
+      "present": false
+    },
+    {
+      "subject": "illumination_state",
+      "ancestor": 1901,
+      "present": false
+    },
+    {
+      "subject": "illuminance",
+      "ancestor": "luminance",
+      "present": false
+    },
+    {
+      "subject": "luminance",
+      "ancestor": "illuminance",
+      "present": false
+    },
+    {
+      "subject": "luminance",
+      "ancestor": "perceived_brightness",
+      "present": false
+    },
+    {
+      "subject": "perceived_brightness",
+      "ancestor": 2709,
+      "present": false
+    },
+    {
+      "subject": "colour_lightness",
+      "ancestor": 2709,
+      "present": false
+    },
+    {
+      "subject": "daylight",
+      "ancestor": 1677,
+      "present": false
+    },
+    {
+      "subject": "lumen",
+      "ancestor": 2709,
+      "present": false
+    },
+    {
+      "subject": "lux",
+      "ancestor": "illuminance",
+      "present": false
+    },
+    {
+      "subject": "photometer",
+      "ancestor": "photometry",
+      "present": false
+    },
+    {
+      "subject": "photometry",
+      "ancestor": "photometric_quantity",
+      "present": false
+    },
+    {
+      "subject": 10803,
+      "ancestor": 1901,
+      "present": false
+    },
+    {
+      "subject": 13097,
+      "ancestor": 1901,
+      "present": false
+    },
+    {
+      "subject": 15526,
+      "ancestor": 1901,
+      "present": false
+    },
+    {
+      "subject": 15718,
+      "ancestor": 1901,
+      "present": false
+    },
+    {
+      "subject": 16393,
+      "ancestor": 1901,
+      "present": false
+    },
+    {
+      "subject": 20032,
+      "ancestor": 1901,
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": "illumination_state",
+      "term": "состояние освещения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "illumination_state",
+      "term": "illumination state",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "illuminated_state",
+      "term": "свет (состояние освещения)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "illuminated_state",
+      "term": "light (illuminated state)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "illuminated_state",
+      "term": "illuminated state",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "photometric_quantity",
+      "term": "фотометрическая величина",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "photometric_quantity",
+      "term": "photometric quantity",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "luminous_flux",
+      "term": "световой поток",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "luminous_flux",
+      "term": "luminous flux",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "luminous_intensity",
+      "term": "сила света",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "luminous_intensity",
+      "term": "luminous intensity",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "illuminance",
+      "term": "освещённость (фотометрическая величина)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "illuminance",
+      "term": "illuminance",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "illuminance",
+      "term": "освещённость",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "luminance",
+      "term": "яркость (фотометрическая величина)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "luminance",
+      "term": "luminance",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "flux_unit",
+      "term": "единица светового потока",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "flux_unit",
+      "term": "luminous flux unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "illuminance_unit",
+      "term": "единица освещённости",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "illuminance_unit",
+      "term": "illuminance unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "luminance_unit",
+      "term": "единица фотометрической яркости",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "luminance_unit",
+      "term": "luminance unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "lumen",
+      "term": "люмен",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "lumen",
+      "term": "lumen",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "lumen",
+      "term": "lm",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "lux",
+      "term": "люкс (единица освещённости)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "lux",
+      "term": "lux",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "lux",
+      "term": "lx",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "lux",
+      "term": "люкс",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "candela_per_area",
+      "term": "кандела на квадратный метр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "candela_per_area",
+      "term": "candela per square metre",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "candela_per_area",
+      "term": "candela per square meter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "candela_per_area",
+      "term": "cd/m2",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "photometry",
+      "term": "фотометрическое измерение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "photometry",
+      "term": "photometric measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "photometry",
+      "term": "photometry (measurement)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "flux_measurement",
+      "term": "измерение светового потока",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "flux_measurement",
+      "term": "luminous flux measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "intensity_measurement",
+      "term": "измерение силы света",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "intensity_measurement",
+      "term": "luminous intensity measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "illuminance_measurement",
+      "term": "измерение освещённости",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "illuminance_measurement",
+      "term": "illuminance measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "luminance_measurement",
+      "term": "измерение фотометрической яркости",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "luminance_measurement",
+      "term": "luminance measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "photometer",
+      "term": "фотометр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "photometer",
+      "term": "photometer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "illuminance_meter",
+      "term": "люксметр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "illuminance_meter",
+      "term": "illuminance meter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "illuminance_meter",
+      "term": "lux meter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "luminance_meter",
+      "term": "яркомер",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "luminance_meter",
+      "term": "luminance meter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "perceived_brightness",
+      "term": "яркость (зрительное ощущение)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "perceived_brightness",
+      "term": "perceived brightness",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "perceived_brightness",
+      "term": "brightness (visual perception)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "colour_lightness",
+      "term": "светлота цвета",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "colour_lightness",
+      "term": "colour lightness",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "colour_lightness",
+      "term": "color lightness",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "colour_lightness",
+      "term": "lightness (colour)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "daylight",
+      "term": "дневной свет",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "daylight",
+      "term": "daylight",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "daylight",
+      "term": "daylight (light)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "sunlight",
+      "term": "солнечный свет",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "sunlight",
+      "term": "sunlight",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "sunlight",
+      "term": "sunlight (visible light)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "moonlight",
+      "term": "лунный свет",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "moonlight",
+      "term": "moonlight",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "moonlight",
+      "term": "moonlight (visible light)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3449,
+      "term": "свет (видимое излучение)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 3449,
+      "term": "visible light",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3549,
+      "term": "тьма",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 3549,
+      "term": "darkness (lighting state)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1719,
+      "term": "bright (visual appearance)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1721,
+      "term": "dark-coloured",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1721,
+      "term": "dark-colored",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1722,
+      "term": "light-coloured",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1721,
+      "term": "тьма",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 1721,
+      "term": "темное",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 1719,
+      "term": "яркее",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 1719,
+      "term": "яркее",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 4810,
+      "term": "light blue",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 10803,
+      "term": "light brown",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 10803,
+      "term": "светло-коричневое",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 13097,
+      "term": "light green",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 13097,
+      "term": "светло-зеленое",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 15526,
+      "term": "pale blue",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 15526,
+      "term": "светло-голубое",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 15718,
+      "term": "light pink",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 15718,
+      "term": "светло-розовое",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 16393,
+      "term": "light beige",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 16393,
+      "term": "светло-бежевое",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 20032,
+      "term": "light yellow",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 20032,
+      "term": "светло-желтое",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "luminance",
+      "term": "brightness",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "illuminance",
+      "term": "illumination",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "sunlight",
+      "term": "Sun",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "moonlight",
+      "term": "Moon",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "candela_per_area",
+      "term": "nit",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "photometer",
+      "term": "exposure meter",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

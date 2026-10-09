@@ -1,0 +1,3035 @@
+{
+  "source": "quality-20261009-q19",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Calendar systems, representations, civil periods and scheduling; split Wednesday from environment and correct Sunday and schedule senses.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "calendars": "https://aa.usno.navy.mil/faq/calendars",
+      "leap": "https://aa.usno.navy.mil/faq/leap_years",
+      "civil": "https://www.nist.gov/pml/time-and-frequency-division/local-time-faqs",
+      "dates": "https://www.rfc-editor.org/rfc/rfc3339",
+      "entries": "https://www.rfc-editor.org/rfc/rfc5545",
+      "sunday": "https://gramota.ru/poisk?mode=spravka&query=%D0%B2%D0%BE%D1%81%D0%BA%D1%80%D0%B5%D1%81%D0%B5%D0%BD%D0%B8%D0%B5",
+      "sreda": "https://gramota.ru/poisk?mode=slovari&page=5&query=%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B0+%D0%BE%D0%BA%D1%80%D1%83%D0%B6%D0%B0%D1%8E%D1%89%D0%B5%D0%B9+%D1%81%D1%80%D0%B5%D0%B4%D1%8B"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet. CC BY 4.0 and Princeton notices remain in docs/quality/2026-10-09-q11.md#sources-and-reuse. Russian labels and graph mappings are adaptations. USNO supports calendar distinctions; NIST and RFC date/calendar documentation support separating local civil dates, duration and representations. No implementation of a calendar standard is claimed.",
+    "existing_cohort": [
+      265,
+      1675,
+      1676,
+      1677,
+      1681,
+      1682,
+      1683,
+      1684,
+      1685,
+      1686,
+      1814,
+      1835,
+      2075,
+      2193,
+      2196,
+      2639,
+      2648,
+      2736,
+      2816,
+      2824,
+      2874,
+      2988,
+      3110,
+      3201,
+      3267,
+      3307,
+      3395,
+      3512,
+      3515,
+      3535,
+      3544,
+      3654,
+      3677,
+      5005,
+      5008,
+      5009,
+      5010,
+      5011,
+      5012,
+      5013,
+      5014,
+      5166,
+      5223,
+      5511,
+      5866,
+      8190,
+      10574
+    ],
+    "context_policy": "All new concepts and assertions use U1 with unspecified strength. Existing home contexts and relation grammar remain unchanged. Calendar formats are general information objects, not software implementations.",
+    "sense_decisions": [
+      {
+        "concept": "wednesday",
+        "synset": "oewn-15189280-n",
+        "decision": "add",
+        "alignment": "split homonym",
+        "scope": "The weekday between Tuesday and Thursday. Do not import an ordinal position or claim that it is always a working day."
+      },
+      {
+        "concept": "calendar_system",
+        "synset": "oewn-15198526-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Rules organizing named calendar periods and dates. Separate the abstract system from a printed or electronic calendar representation."
+      },
+      {
+        "concept": "solar_calendar",
+        "synset": "oewn-15203741-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A calendar whose annual structure follows the seasonal solar cycle. Do not conflate its month names with lunar phases."
+      },
+      {
+        "concept": "lunar_calendar",
+        "synset": "oewn-15203464-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A calendar organized around lunar cycles; selected here as the lunar calendar family distinguished from lunisolar calendars."
+      },
+      {
+        "concept": "lunisolar_calendar",
+        "synset": "oewn-15203593-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A calendar coordinating lunar months with the solar year. Do not automatically place it under the separately scoped purely lunar family."
+      },
+      {
+        "concept": "gregorian_calendar",
+        "synset": "oewn-15199265-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The Gregorian solar-calendar system. Its leap-year rule is supported by USNO; numerical rules are documented in the source, not encoded as guessed graph attributes."
+      },
+      {
+        "concept": "julian_calendar",
+        "synset": "oewn-15199932-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The Julian solar-calendar system, distinct from a Julian date (continuous astronomical day count)."
+      },
+      {
+        "concept": "calendar_table",
+        "synset": "oewn-08283770-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A tabular representation of calendar dates. Select the informational table, not its paper, screen, a system of rules or a list of appointments."
+      },
+      {
+        "concept": "perpetual_calendar_table",
+        "synset": "oewn-08283929-n",
+        "decision": "add",
+        "alignment": "representation restriction",
+        "scope": "A reusable chart relating dates and weekdays across years. Restrict the dictionary chart-or-device meaning to the chart; a watch mechanism is not a table."
+      },
+      {
+        "concept": "calendar_date",
+        "synset": "oewn-15185626-n",
+        "decision": "add",
+        "alignment": "representation adaptation",
+        "scope": "An informational designation of a day in a specified calendar, distinct from the elapsed day, a date fruit, a romantic meeting or a single instant with a time zone."
+      },
+      {
+        "concept": "calendar_day",
+        "synset": "oewn-15182001-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A local civil day reckoned from midnight to the next midnight. Do not force it under the fixed 24-hour unit: clock changes can alter elapsed duration."
+      },
+      {
+        "concept": "calendar_year",
+        "synset": "oewn-15227430-n",
+        "decision": "add",
+        "alignment": "calendar-neutral adaptation",
+        "scope": "A complete annual cycle as defined by a calendar. Broaden the dictionary Gregorian-only gloss; January 1 and 365/366 days apply only after a calendar is specified."
+      },
+      {
+        "concept": "gregorian_year",
+        "synset": null,
+        "decision": "add",
+        "alignment": "calendar-specific period",
+        "scope": "A January-to-December year in the Gregorian calendar; distinguish it from a tropical year and other calendar years."
+      },
+      {
+        "concept": "gregorian_leap_year",
+        "synset": "oewn-15227065-n",
+        "decision": "add",
+        "alignment": "calendar restriction",
+        "scope": "A Gregorian year including February 29. Do not infer that every calendar leap year has 366 days or uses February."
+      },
+      {
+        "concept": "gregorian_common_year",
+        "synset": "oewn-15226966-n",
+        "decision": "add",
+        "alignment": "calendar restriction",
+        "scope": "A Gregorian year without the intercalated February day. It is not the generic duration of every year."
+      },
+      {
+        "concept": "gregorian_leap_day",
+        "synset": "oewn-15184386-n",
+        "decision": "add",
+        "alignment": "calendar restriction",
+        "scope": "The additional civil day in a Gregorian leap year. This is a day type, not the whole leap year or the act of intercalation."
+      },
+      {
+        "concept": "calendar_month",
+        "synset": "oewn-15234209-n",
+        "decision": "add",
+        "alignment": "calendar-neutral adaptation",
+        "scope": "A named month in a calendar. Do not fix its elapsed length to 30 days or require all calendar systems to have exactly twelve months."
+      },
+      {
+        "concept": "fortnight",
+        "synset": "oewn-15195378-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A period of two consecutive weeks. Do not confuse it with half of a calendar month."
+      },
+      {
+        "concept": "working_day",
+        "synset": "oewn-15161875-n",
+        "decision": "add",
+        "alignment": "remove culture-specific genus",
+        "scope": "A civil day on which work is done for the relevant worker or activity. Do not import weekday as a universal genus: weekend work also exists."
+      },
+      {
+        "concept": "day_off",
+        "synset": "oewn-15162508-n",
+        "decision": "add",
+        "alignment": "schedule-relative meaning",
+        "scope": "A day on which the relevant person is not required to work. No universal Saturday/Sunday pattern or legal rule is asserted."
+      },
+      {
+        "concept": "deadline",
+        "synset": "oewn-15204935-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A specified latest time for completing something. Separate the time point from term 5166, which denotes an interval, and do not assert legal consequences."
+      },
+      {
+        "concept": "scheduling",
+        "synset": "oewn-01146868-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Planning the order and time of activities. The result is a schedule, not the actual occurrence of the activities; software-programming synonyms are excluded."
+      },
+      {
+        "concept": "transport_timetable",
+        "synset": "oewn-06508388-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A schedule of intended transport arrivals and departures. The plan does not guarantee actual punctuality."
+      },
+      {
+        "concept": "school_timetable",
+        "synset": "oewn-06508490-n",
+        "decision": "add",
+        "alignment": "educational restriction",
+        "scope": "A schedule of instructional sessions; not a school year, an attendance register or a legal attendance obligation."
+      },
+      {
+        "concept": "appointment_calendar",
+        "synset": "oewn-06499232-n",
+        "decision": "add",
+        "alignment": "appointment restriction",
+        "scope": "A schedule recording planned appointments. Restrict the dictionary event-register sense; distinguish it from a calendar system and a date table."
+      },
+      {
+        "concept": "dated_calendar_entry",
+        "synset": null,
+        "decision": "add",
+        "alignment": "information-content distinction",
+        "scope": "An informational calendar entry that records a date for an event or activity. The entry is not the event itself."
+      },
+      {
+        "concept": "appointment",
+        "synset": "oewn-08401740-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A social meeting arranged in advance. Exclude appointment to a job, the appointee, equipment and the separate legal-disposition sense."
+      },
+      {
+        "concept": "academic_year",
+        "synset": "oewn-15228361-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The annual period of an educational program. Do not identify it with January through December or a fixed 365-day duration."
+      },
+      {
+        "concept": 3515,
+        "synset": "oewn-08584764-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Keep the spatial-surroundings record; its fifteen environment adjectives need their own sense review, but none may remain a weekday descendant."
+      },
+      {
+        "concept": 2816,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Correct Sunday spelling without declaring the separate valid word for resurrection nonexistent. Generated resurrection record 10574 remains deferred."
+      },
+      {
+        "concept": 8190,
+        "synset": "oewn-05919534-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reuse and reparent schedule rather than duplicate its normal Russian spelling."
+      },
+      {
+        "concept": 5166,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Keep term as a period; add deadline as a distinct time point."
+      },
+      {
+        "concept": 1682,
+        "synset": "oewn-15234209-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Retain the broader month record and refine named calendar months through a nearer family."
+      },
+      {
+        "concept": 2193,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Birthday can also be an anniversary; do not import the dictionary anniversary synonym onto the existing jubilee record without reviewing the conflicting exclusion."
+      },
+      {
+        "concept": 2196,
+        "synset": "oewn-15274610-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Existing jubilee is narrower than every anniversary; broader anniversary-date and celebration senses remain deferred."
+      },
+      {
+        "concept": 5866,
+        "synset": "oewn-08401740-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Keep the existing romantic-date record separate from the newly arranged-meeting and calendar-date senses."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-15188204-n",
+        "decision": "exclude or defer",
+        "alignment": "reviewed sense",
+        "scope": "Weekday has varying Saturday conventions; do not use it as the universal genus of working day."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-15195551-n",
+        "decision": "exclude or defer",
+        "alignment": "reviewed sense",
+        "scope": "The dictionary weekend assumes a Sunday-containing period. Weekend patterns remain deferred rather than imported globally."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-08709014-n",
+        "decision": "exclude or defer",
+        "alignment": "reviewed sense",
+        "scope": "The dictionary time-zone gloss assumes 24 regions. Time-zone rules and offsets require a separate qualified review."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-15193232-n",
+        "decision": "exclude or defer",
+        "alignment": "reviewed sense",
+        "scope": "Clock midnight and a unique global instant require date and zone distinctions; no unqualified time-point import."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-07781049-n",
+        "decision": "exclude or defer",
+        "alignment": "reviewed sense",
+        "scope": "A date fruit is not a calendar date."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-15248139-n",
+        "decision": "exclude or defer",
+        "alignment": "reviewed sense",
+        "scope": "The equinox gloss equates day and night lengths; astronomical and observational distinctions need a separate source review."
+      }
+    ],
+    "limits": "No universal first weekday, weekend pattern, fixed UTC offset, calendar-day length, legal deadline or school-year duration is asserted. Calendar conventions and scheduling do not imply that an event actually occurred. Temporal part-whole links (month contains days; year contains months or leap day) are not encoded because the current relation-20 object signature excludes time periods; no incorrect genus or causal replacement is used. Environment adjective descendants, resurrection senses, birthday/anniversary overlap, decade/count mix-ups and remaining upper-graph conflicts require separate review. No application test suites.",
+    "exclusion_review": {
+      "context": "U1 positive genus witnesses",
+      "before_conflicting_edges": 20,
+      "resolved_edges": [
+        8003
+      ],
+      "decision": "Keep the time/space exclusion and resolve its Wednesday/environment homonym witness through a sense split. No new conflict or witness may appear.",
+      "remaining_candidates_expected": 19
+    },
+    "new_term_collisions": [
+      {
+        "key": "wednesday",
+        "term": "Wednesday",
+        "lang": "en",
+        "existing": [
+          [
+            3515,
+            "среда"
+          ]
+        ]
+      },
+      {
+        "key": "wednesday",
+        "term": "среда",
+        "lang": "ru",
+        "existing": [
+          [
+            3515,
+            "среда"
+          ]
+        ]
+      }
+    ],
+    "collision_decision": "Wednesday moves off 3515; the ambiguous Russian lookup sreda remains on both explicitly qualified senses. No other existing term collision is allowed.",
+    "refreshed_comparison": {
+      "baseline": "Q18",
+      "existing_concepts": 12815,
+      "existing_terms": 36155,
+      "synsets_with_exact_en_candidate": 15510,
+      "synsets_without_exact_en_candidate": 92009,
+      "existing_concepts_with_dictionary_candidate": 4093,
+      "caveat": "Normalized English spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "wednesday",
+      "name": "среда (день недели)",
+      "parent": 5005,
+      "universum_id": 1,
+      "terms": [
+        [
+          "среда (день недели)",
+          "ru"
+        ],
+        [
+          "Wednesday",
+          "en"
+        ],
+        [
+          "среда",
+          "ru"
+        ],
+        [
+          "Wednesday (day of the week)",
+          "en"
+        ]
+      ],
+      "reason": "The weekday between Tuesday and Thursday. Do not import an ordinal position or claim that it is always a working day. OEWN 2025: oewn-15189280-n. Source: https://gramota.ru/poisk?mode=slovari&page=5&query=%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B0+%D0%BE%D0%BA%D1%80%D1%83%D0%B6%D0%B0%D1%8E%D1%89%D0%B5%D0%B9+%D1%81%D1%80%D0%B5%D0%B4%D1%8B"
+    },
+    {
+      "key": "calendar_system",
+      "name": "календарь (система счисления времени)",
+      "parent": 265,
+      "universum_id": 1,
+      "terms": [
+        [
+          "календарь (система счисления времени)",
+          "ru"
+        ],
+        [
+          "calendar system",
+          "en"
+        ],
+        [
+          "calendar (time-reckoning system)",
+          "en"
+        ]
+      ],
+      "reason": "Rules organizing named calendar periods and dates. Separate the abstract system from a printed or electronic calendar representation. OEWN 2025: oewn-15198526-n. Source: https://aa.usno.navy.mil/faq/calendars"
+    },
+    {
+      "key": "solar_calendar",
+      "name": "солнечный календарь",
+      "parent": "calendar_system",
+      "universum_id": 1,
+      "terms": [
+        [
+          "солнечный календарь",
+          "ru"
+        ],
+        [
+          "solar calendar",
+          "en"
+        ]
+      ],
+      "reason": "A calendar whose annual structure follows the seasonal solar cycle. Do not conflate its month names with lunar phases. OEWN 2025: oewn-15203741-n. Source: https://aa.usno.navy.mil/faq/calendars"
+    },
+    {
+      "key": "lunar_calendar",
+      "name": "лунный календарь",
+      "parent": "calendar_system",
+      "universum_id": 1,
+      "terms": [
+        [
+          "лунный календарь",
+          "ru"
+        ],
+        [
+          "lunar calendar",
+          "en"
+        ]
+      ],
+      "reason": "A calendar organized around lunar cycles; selected here as the lunar calendar family distinguished from lunisolar calendars. OEWN 2025: oewn-15203464-n. Source: https://aa.usno.navy.mil/faq/calendars"
+    },
+    {
+      "key": "lunisolar_calendar",
+      "name": "лунно-солнечный календарь",
+      "parent": "calendar_system",
+      "universum_id": 1,
+      "terms": [
+        [
+          "лунно-солнечный календарь",
+          "ru"
+        ],
+        [
+          "lunisolar calendar",
+          "en"
+        ]
+      ],
+      "reason": "A calendar coordinating lunar months with the solar year. Do not automatically place it under the separately scoped purely lunar family. OEWN 2025: oewn-15203593-n. Source: https://aa.usno.navy.mil/faq/calendars"
+    },
+    {
+      "key": "gregorian_calendar",
+      "name": "григорианский календарь",
+      "parent": "solar_calendar",
+      "universum_id": 1,
+      "terms": [
+        [
+          "григорианский календарь",
+          "ru"
+        ],
+        [
+          "Gregorian calendar",
+          "en"
+        ]
+      ],
+      "reason": "The Gregorian solar-calendar system. Its leap-year rule is supported by USNO; numerical rules are documented in the source, not encoded as guessed graph attributes. OEWN 2025: oewn-15199265-n. Source: https://aa.usno.navy.mil/faq/calendars"
+    },
+    {
+      "key": "julian_calendar",
+      "name": "юлианский календарь",
+      "parent": "solar_calendar",
+      "universum_id": 1,
+      "terms": [
+        [
+          "юлианский календарь",
+          "ru"
+        ],
+        [
+          "Julian calendar",
+          "en"
+        ]
+      ],
+      "reason": "The Julian solar-calendar system, distinct from a Julian date (continuous astronomical day count). OEWN 2025: oewn-15199932-n. Source: https://aa.usno.navy.mil/faq/calendars"
+    },
+    {
+      "key": "calendar_table",
+      "name": "календарь (таблица дат)",
+      "parent": 3544,
+      "universum_id": 1,
+      "terms": [
+        [
+          "календарь (таблица дат)",
+          "ru"
+        ],
+        [
+          "calendar (date table)",
+          "en"
+        ]
+      ],
+      "reason": "A tabular representation of calendar dates. Select the informational table, not its paper, screen, a system of rules or a list of appointments. OEWN 2025: oewn-08283770-n."
+    },
+    {
+      "key": "perpetual_calendar_table",
+      "name": "вечный календарь (таблица)",
+      "parent": "calendar_table",
+      "universum_id": 1,
+      "terms": [
+        [
+          "вечный календарь (таблица)",
+          "ru"
+        ],
+        [
+          "perpetual calendar (chart)",
+          "en"
+        ]
+      ],
+      "reason": "A reusable chart relating dates and weekdays across years. Restrict the dictionary chart-or-device meaning to the chart; a watch mechanism is not a table. OEWN 2025: oewn-08283929-n."
+    },
+    {
+      "key": "calendar_date",
+      "name": "календарная дата (обозначение дня)",
+      "parent": 265,
+      "universum_id": 1,
+      "terms": [
+        [
+          "календарная дата (обозначение дня)",
+          "ru"
+        ],
+        [
+          "calendar date",
+          "en"
+        ],
+        [
+          "календарная дата",
+          "ru"
+        ],
+        [
+          "date (calendar label)",
+          "en"
+        ]
+      ],
+      "reason": "An informational designation of a day in a specified calendar, distinct from the elapsed day, a date fruit, a romantic meeting or a single instant with a time zone. OEWN 2025: oewn-15185626-n. Source: https://www.rfc-editor.org/rfc/rfc3339"
+    },
+    {
+      "key": "calendar_day",
+      "name": "календарный день",
+      "parent": 1676,
+      "universum_id": 1,
+      "terms": [
+        [
+          "календарный день",
+          "ru"
+        ],
+        [
+          "calendar day",
+          "en"
+        ],
+        [
+          "civil day",
+          "en"
+        ]
+      ],
+      "reason": "A local civil day reckoned from midnight to the next midnight. Do not force it under the fixed 24-hour unit: clock changes can alter elapsed duration. OEWN 2025: oewn-15182001-n. Source: https://www.nist.gov/pml/time-and-frequency-division/local-time-faqs"
+    },
+    {
+      "key": "calendar_year",
+      "name": "календарный год",
+      "parent": 1683,
+      "universum_id": 1,
+      "terms": [
+        [
+          "календарный год",
+          "ru"
+        ],
+        [
+          "calendar year",
+          "en"
+        ]
+      ],
+      "reason": "A complete annual cycle as defined by a calendar. Broaden the dictionary Gregorian-only gloss; January 1 and 365/366 days apply only after a calendar is specified. OEWN 2025: oewn-15227430-n. Source: https://aa.usno.navy.mil/faq/calendars"
+    },
+    {
+      "key": "gregorian_year",
+      "name": "год григорианского календаря",
+      "parent": "calendar_year",
+      "universum_id": 1,
+      "terms": [
+        [
+          "год григорианского календаря",
+          "ru"
+        ],
+        [
+          "Gregorian calendar year",
+          "en"
+        ]
+      ],
+      "reason": "A January-to-December year in the Gregorian calendar; distinguish it from a tropical year and other calendar years. Source: https://aa.usno.navy.mil/faq/leap_years"
+    },
+    {
+      "key": "gregorian_leap_year",
+      "name": "високосный год григорианского календаря",
+      "parent": "gregorian_year",
+      "universum_id": 1,
+      "terms": [
+        [
+          "високосный год григорианского календаря",
+          "ru"
+        ],
+        [
+          "Gregorian leap year",
+          "en"
+        ],
+        [
+          "leap year (Gregorian)",
+          "en"
+        ]
+      ],
+      "reason": "A Gregorian year including February 29. Do not infer that every calendar leap year has 366 days or uses February. OEWN 2025: oewn-15227065-n. Source: https://aa.usno.navy.mil/faq/leap_years"
+    },
+    {
+      "key": "gregorian_common_year",
+      "name": "невисокосный год григорианского календаря",
+      "parent": "gregorian_year",
+      "universum_id": 1,
+      "terms": [
+        [
+          "невисокосный год григорианского календаря",
+          "ru"
+        ],
+        [
+          "Gregorian common year",
+          "en"
+        ],
+        [
+          "common year (Gregorian)",
+          "en"
+        ]
+      ],
+      "reason": "A Gregorian year without the intercalated February day. It is not the generic duration of every year. OEWN 2025: oewn-15226966-n. Source: https://aa.usno.navy.mil/faq/leap_years"
+    },
+    {
+      "key": "gregorian_leap_day",
+      "name": "29 февраля (григорианский календарь)",
+      "parent": "calendar_day",
+      "universum_id": 1,
+      "terms": [
+        [
+          "29 февраля (григорианский календарь)",
+          "ru"
+        ],
+        [
+          "February 29 (Gregorian calendar)",
+          "en"
+        ],
+        [
+          "leap day (Gregorian)",
+          "en"
+        ]
+      ],
+      "reason": "The additional civil day in a Gregorian leap year. This is a day type, not the whole leap year or the act of intercalation. OEWN 2025: oewn-15184386-n. Source: https://aa.usno.navy.mil/faq/leap_years"
+    },
+    {
+      "key": "calendar_month",
+      "name": "календарный месяц",
+      "parent": 1682,
+      "universum_id": 1,
+      "terms": [
+        [
+          "календарный месяц",
+          "ru"
+        ],
+        [
+          "calendar month",
+          "en"
+        ]
+      ],
+      "reason": "A named month in a calendar. Do not fix its elapsed length to 30 days or require all calendar systems to have exactly twelve months. OEWN 2025: oewn-15234209-n. Source: https://aa.usno.navy.mil/faq/calendars"
+    },
+    {
+      "key": "fortnight",
+      "name": "двухнедельный период",
+      "parent": 1676,
+      "universum_id": 1,
+      "terms": [
+        [
+          "двухнедельный период",
+          "ru"
+        ],
+        [
+          "fortnight",
+          "en"
+        ],
+        [
+          "two-week period",
+          "en"
+        ]
+      ],
+      "reason": "A period of two consecutive weeks. Do not confuse it with half of a calendar month. OEWN 2025: oewn-15195378-n."
+    },
+    {
+      "key": "working_day",
+      "name": "рабочий день (день работы)",
+      "parent": "calendar_day",
+      "universum_id": 1,
+      "terms": [
+        [
+          "рабочий день (день работы)",
+          "ru"
+        ],
+        [
+          "working day (day with work)",
+          "en"
+        ],
+        [
+          "workday (calendar day)",
+          "en"
+        ]
+      ],
+      "reason": "A civil day on which work is done for the relevant worker or activity. Do not import weekday as a universal genus: weekend work also exists. OEWN 2025: oewn-15161875-n."
+    },
+    {
+      "key": "day_off",
+      "name": "выходной день (по графику)",
+      "parent": "calendar_day",
+      "universum_id": 1,
+      "terms": [
+        [
+          "выходной день (по графику)",
+          "ru"
+        ],
+        [
+          "day off",
+          "en"
+        ]
+      ],
+      "reason": "A day on which the relevant person is not required to work. No universal Saturday/Sunday pattern or legal rule is asserted. OEWN 2025: oewn-15162508-n."
+    },
+    {
+      "key": "deadline",
+      "name": "крайний срок (момент времени)",
+      "parent": 3110,
+      "universum_id": 1,
+      "terms": [
+        [
+          "крайний срок (момент времени)",
+          "ru"
+        ],
+        [
+          "deadline",
+          "en"
+        ],
+        [
+          "deadline (time point)",
+          "en"
+        ]
+      ],
+      "reason": "A specified latest time for completing something. Separate the time point from term 5166, which denotes an interval, and do not assert legal consequences. OEWN 2025: oewn-15204935-n."
+    },
+    {
+      "key": "scheduling",
+      "name": "составление расписания",
+      "parent": 1814,
+      "universum_id": 1,
+      "terms": [
+        [
+          "составление расписания",
+          "ru"
+        ],
+        [
+          "scheduling",
+          "en"
+        ]
+      ],
+      "reason": "Planning the order and time of activities. The result is a schedule, not the actual occurrence of the activities; software-programming synonyms are excluded. OEWN 2025: oewn-01146868-n."
+    },
+    {
+      "key": "transport_timetable",
+      "name": "транспортное расписание",
+      "parent": 8190,
+      "universum_id": 1,
+      "terms": [
+        [
+          "транспортное расписание",
+          "ru"
+        ],
+        [
+          "transport timetable",
+          "en"
+        ],
+        [
+          "timetable (transport)",
+          "en"
+        ]
+      ],
+      "reason": "A schedule of intended transport arrivals and departures. The plan does not guarantee actual punctuality. OEWN 2025: oewn-06508388-n."
+    },
+    {
+      "key": "school_timetable",
+      "name": "расписание занятий",
+      "parent": 8190,
+      "universum_id": 1,
+      "terms": [
+        [
+          "расписание занятий",
+          "ru"
+        ],
+        [
+          "class timetable",
+          "en"
+        ],
+        [
+          "school timetable",
+          "en"
+        ]
+      ],
+      "reason": "A schedule of instructional sessions; not a school year, an attendance register or a legal attendance obligation. OEWN 2025: oewn-06508490-n."
+    },
+    {
+      "key": "appointment_calendar",
+      "name": "календарь назначенных встреч",
+      "parent": 8190,
+      "universum_id": 1,
+      "terms": [
+        [
+          "календарь назначенных встреч",
+          "ru"
+        ],
+        [
+          "appointment calendar",
+          "en"
+        ],
+        [
+          "calendar (appointment schedule)",
+          "en"
+        ]
+      ],
+      "reason": "A schedule recording planned appointments. Restrict the dictionary event-register sense; distinguish it from a calendar system and a date table. OEWN 2025: oewn-06499232-n."
+    },
+    {
+      "key": "dated_calendar_entry",
+      "name": "датированная запись календаря",
+      "parent": 265,
+      "universum_id": 1,
+      "terms": [
+        [
+          "датированная запись календаря",
+          "ru"
+        ],
+        [
+          "dated calendar entry",
+          "en"
+        ]
+      ],
+      "reason": "An informational calendar entry that records a date for an event or activity. The entry is not the event itself. Source: https://www.rfc-editor.org/rfc/rfc5545"
+    },
+    {
+      "key": "appointment",
+      "name": "заранее назначенная встреча",
+      "parent": 1835,
+      "universum_id": 1,
+      "terms": [
+        [
+          "заранее назначенная встреча",
+          "ru"
+        ],
+        [
+          "appointment (arranged meeting)",
+          "en"
+        ],
+        [
+          "scheduled meeting",
+          "en"
+        ]
+      ],
+      "reason": "A social meeting arranged in advance. Exclude appointment to a job, the appointee, equipment and the separate legal-disposition sense. OEWN 2025: oewn-08401740-n."
+    },
+    {
+      "key": "academic_year",
+      "name": "учебный год",
+      "parent": 1676,
+      "universum_id": 1,
+      "terms": [
+        [
+          "учебный год",
+          "ru"
+        ],
+        [
+          "academic year",
+          "en"
+        ],
+        [
+          "school year",
+          "en"
+        ]
+      ],
+      "reason": "The annual period of an educational program. Do not identify it with January through December or a fixed 365-day duration. OEWN 2025: oewn-15228361-n."
+    }
+  ],
+  "renames": [
+    {
+      "id": 3515,
+      "before": "среда",
+      "name": "среда (окружающее пространство)",
+      "terms": [],
+      "reason": "Keep the existing spatial-surroundings sense and its children; remove the weekday sense from this record. The broader social or total-conditions senses are not imported. OEWN 2025: oewn-08584764-n. Source: https://gramota.ru/poisk?mode=slovari&page=5&query=%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B0+%D0%BE%D0%BA%D1%80%D1%83%D0%B6%D0%B0%D1%8E%D1%89%D0%B5%D0%B9+%D1%81%D1%80%D0%B5%D0%B4%D1%8B"
+    },
+    {
+      "id": 2816,
+      "before": "воскресение",
+      "name": "воскресенье",
+      "terms": [],
+      "reason": "Use the normal Russian weekday spelling. Voskresenie is a valid different word meaning resurrection, not a nonword. Keep the existing weekday genus rather than importing a universal day-of-rest or first-day claim. OEWN 2025: oewn-15188844-n. Source: https://gramota.ru/poisk?mode=spravka&query=%D0%B2%D0%BE%D1%81%D0%BA%D1%80%D0%B5%D1%81%D0%B5%D0%BD%D0%B8%D0%B5"
+    },
+    {
+      "id": 8190,
+      "before": "расписание",
+      "name": "расписание (план по времени)",
+      "terms": [],
+      "reason": "Select the normal noun for an ordered temporal plan; it is not a physiological process or every sense of the Russian verb to describe/paint in detail. OEWN 2025: oewn-05919534-n."
+    }
+  ],
+  "terms": [
+    {
+      "id": 3515,
+      "name": "среда (окружающее пространство)",
+      "terms": [
+        [
+          "environment (surrounding space)",
+          "en"
+        ],
+        [
+          "surroundings (spatial)",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the existing spatial meaning; this is not Wednesday. OEWN 2025: oewn-08584764-n."
+    },
+    {
+      "id": 8190,
+      "name": "расписание (план по времени)",
+      "terms": [
+        [
+          "schedule (temporal plan)",
+          "en"
+        ],
+        [
+          "schedule",
+          "en"
+        ],
+        [
+          "timetable (event schedule)",
+          "en"
+        ]
+      ],
+      "reason": "Reuse the existing normal Russian noun instead of creating a duplicate schedule concept. OEWN 2025: oewn-06508490-n."
+    },
+    {
+      "id": 1835,
+      "name": "встреча",
+      "terms": [
+        [
+          "meeting (social encounter)",
+          "en"
+        ]
+      ],
+      "reason": "Keep social meeting distinct from the general occurrence of an event."
+    },
+    {
+      "id": 3110,
+      "name": "момент",
+      "terms": [
+        [
+          "point in time",
+          "en"
+        ],
+        [
+          "instant (time point)",
+          "en"
+        ]
+      ],
+      "reason": "Clarify a time point rather than a period, torque or momentum. OEWN 2025: oewn-15205381-n."
+    },
+    {
+      "id": 1677,
+      "name": "день",
+      "terms": [
+        [
+          "daytime",
+          "en"
+        ],
+        [
+          "day (daylight period)",
+          "en"
+        ]
+      ],
+      "reason": "The existing part-of-day record is not the midnight-to-midnight civil day."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 3515,
+      "term": "Wednesday",
+      "lang": "en",
+      "reason": "Move the weekday lookup to its own concept; retain the valid spatial environment meaning and original ambiguous Russian lookup."
+    },
+    {
+      "id": 2816,
+      "term": "воскресение",
+      "lang": "ru",
+      "reason": "Remove a different sense, a doubled-suffix artifact, or a Russian verb tagged as English from the Sunday record. This is not a claim that resurrection vocabulary is invalid."
+    },
+    {
+      "id": 2816,
+      "term": "воскресиение",
+      "lang": "ru",
+      "reason": "Remove a different sense, a doubled-suffix artifact, or a Russian verb tagged as English from the Sunday record. This is not a claim that resurrection vocabulary is invalid."
+    },
+    {
+      "id": 2816,
+      "term": "ВОСКРЕСИТЬ",
+      "lang": "en",
+      "reason": "Remove a different sense, a doubled-suffix artifact, or a Russian verb tagged as English from the Sunday record. This is not a claim that resurrection vocabulary is invalid."
+    },
+    {
+      "id": 8190,
+      "term": "расписаание",
+      "lang": "ru",
+      "reason": "Remove the doubled-suffix artifact and the Russian verb incorrectly tagged as English."
+    },
+    {
+      "id": 8190,
+      "term": "РАСПИСАТЬ",
+      "lang": "en",
+      "reason": "Remove the doubled-suffix artifact and the Russian verb incorrectly tagged as English."
+    },
+    {
+      "id": 1835,
+      "term": "occur",
+      "lang": "en",
+      "reason": "General occurrence is a different sense of the Russian polysemous verb; it is not synonymous with a social meeting."
+    },
+    {
+      "id": 1835,
+      "term": "to occur",
+      "lang": "en",
+      "reason": "General occurrence is a different sense of the Russian polysemous verb; it is not synonymous with a social meeting."
+    }
+  ],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 7482,
+      "before": [
+        3515,
+        "14",
+        5005,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The environment record is not a weekday. Its spatial genus and all environment children remain on record 3515. OEWN 2025: oewn-08584764-n."
+    },
+    {
+      "id": 8468,
+      "before": [
+        2824,
+        "61",
+        3515,
+        1
+      ],
+      "reviewed_strength": 95,
+      "replacements": [
+        [
+          2824,
+          "61",
+          "wednesday",
+          null,
+          1
+        ]
+      ],
+      "reason": "Move the Tuesday/Wednesday co-hyponym relation from the environment homonym, dropping the unsupported prevalence percentage. OEWN 2025: oewn-15189280-n."
+    },
+    {
+      "id": 8769,
+      "before": [
+        2824,
+        "72",
+        3515,
+        1
+      ],
+      "reviewed_strength": 95,
+      "replacements": [
+        [
+          2824,
+          "72",
+          "wednesday",
+          null,
+          1
+        ]
+      ],
+      "reason": "Move the recurring Tuesday-to-Wednesday succession to the weekday sense; this is a weekly sequence, not a global ordering of every occurrence. OEWN 2025: oewn-15189280-n."
+    },
+    {
+      "id": 8770,
+      "before": [
+        3515,
+        "72",
+        3654,
+        1
+      ],
+      "reviewed_strength": 95,
+      "replacements": [
+        [
+          "wednesday",
+          "72",
+          3654,
+          null,
+          1
+        ]
+      ],
+      "reason": "Move the recurring Wednesday-to-Thursday succession to the weekday sense. OEWN 2025: oewn-15189280-n."
+    },
+    {
+      "id": 12274,
+      "before": [
+        8190,
+        "14",
+        202,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          8190,
+          "14",
+          3267,
+          null,
+          1
+        ]
+      ],
+      "reason": "A schedule is a plan organizing intended activities in time, not a physiological process. OEWN 2025: oewn-05919534-n."
+    },
+    {
+      "id": 5006,
+      "before": [
+        2736,
+        "14",
+        1682,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2736,
+          "14",
+          "calendar_month",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the named calendar month through calendar month. The existing name is shared by more than one calendar, so it is not narrowed to Gregorian only."
+    },
+    {
+      "id": 5144,
+      "before": [
+        2874,
+        "14",
+        1682,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2874,
+          "14",
+          "calendar_month",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the named calendar month through calendar month. The existing name is shared by more than one calendar, so it is not narrowed to Gregorian only."
+    },
+    {
+      "id": 5258,
+      "before": [
+        2988,
+        "14",
+        1682,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2988,
+          "14",
+          "calendar_month",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the named calendar month through calendar month. The existing name is shared by more than one calendar, so it is not narrowed to Gregorian only."
+    },
+    {
+      "id": 5471,
+      "before": [
+        3201,
+        "14",
+        1682,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          3201,
+          "14",
+          "calendar_month",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the named calendar month through calendar month. The existing name is shared by more than one calendar, so it is not narrowed to Gregorian only."
+    },
+    {
+      "id": 5947,
+      "before": [
+        3677,
+        "14",
+        1682,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          3677,
+          "14",
+          "calendar_month",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the named calendar month through calendar month. The existing name is shared by more than one calendar, so it is not narrowed to Gregorian only."
+    },
+    {
+      "id": 7474,
+      "before": [
+        5008,
+        "14",
+        1682,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          5008,
+          "14",
+          "calendar_month",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the named calendar month through calendar month. The existing name is shared by more than one calendar, so it is not narrowed to Gregorian only."
+    },
+    {
+      "id": 7475,
+      "before": [
+        5009,
+        "14",
+        1682,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          5009,
+          "14",
+          "calendar_month",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the named calendar month through calendar month. The existing name is shared by more than one calendar, so it is not narrowed to Gregorian only."
+    },
+    {
+      "id": 7476,
+      "before": [
+        5010,
+        "14",
+        1682,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          5010,
+          "14",
+          "calendar_month",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the named calendar month through calendar month. The existing name is shared by more than one calendar, so it is not narrowed to Gregorian only."
+    },
+    {
+      "id": 7477,
+      "before": [
+        5011,
+        "14",
+        1682,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          5011,
+          "14",
+          "calendar_month",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the named calendar month through calendar month. The existing name is shared by more than one calendar, so it is not narrowed to Gregorian only."
+    },
+    {
+      "id": 7478,
+      "before": [
+        5012,
+        "14",
+        1682,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          5012,
+          "14",
+          "calendar_month",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the named calendar month through calendar month. The existing name is shared by more than one calendar, so it is not narrowed to Gregorian only."
+    },
+    {
+      "id": 7479,
+      "before": [
+        5013,
+        "14",
+        1682,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          5013,
+          "14",
+          "calendar_month",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the named calendar month through calendar month. The existing name is shared by more than one calendar, so it is not narrowed to Gregorian only."
+    },
+    {
+      "id": 7480,
+      "before": [
+        5014,
+        "14",
+        1682,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          5014,
+          "14",
+          "calendar_month",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the named calendar month through calendar month. The existing name is shared by more than one calendar, so it is not narrowed to Gregorian only."
+    }
+  ],
+  "edges": [
+    {
+      "subject": "calendar_system",
+      "kod": "14",
+      "object": 2639,
+      "universum_id": 1,
+      "reason": "A calendar system is also a structured system of conventions; its informational genus distinguishes it from a physical carrier. Source: https://aa.usno.navy.mil/faq/calendars"
+    },
+    {
+      "subject": "calendar_table",
+      "kod": "20",
+      "object": "calendar_date",
+      "universum_id": 1,
+      "reason": "The selected table contains calendar-date designations, not physical days."
+    },
+    {
+      "subject": "dated_calendar_entry",
+      "kod": "20",
+      "object": "calendar_date",
+      "universum_id": 1,
+      "reason": "A date designation is content of the explicitly dated entry. Source: https://www.rfc-editor.org/rfc/rfc5545"
+    },
+    {
+      "subject": "calendar_day",
+      "kod": "20",
+      "object": "calendar_date",
+      "universum_id": 1,
+      "reason": "A civil day is identified by a date in its calendar; the label is not its elapsed duration. Source: https://www.rfc-editor.org/rfc/rfc3339"
+    },
+    {
+      "subject": "gregorian_leap_year",
+      "kod": "61",
+      "object": "gregorian_common_year",
+      "universum_id": 1,
+      "reason": "Within the Gregorian-year family, a year is either a leap year or a common year; do not extend this exclusion across calendar systems. Source: https://aa.usno.navy.mil/faq/leap_years"
+    },
+    {
+      "subject": "scheduling",
+      "kod": "70",
+      "object": 8190,
+      "universum_id": 1,
+      "reason": "The planning activity produces the temporal plan. It does not cause the planned meetings to take place. OEWN 2025: oewn-01146868-n."
+    }
+  ],
+  "checks": [
+    {
+      "subject": "wednesday",
+      "kod": "14",
+      "object": 5005,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3515,
+      "kod": "14",
+      "object": 5005,
+      "present": false
+    },
+    {
+      "subject": 2824,
+      "kod": "61",
+      "object": 3515,
+      "present": false
+    },
+    {
+      "subject": 2824,
+      "kod": "61",
+      "object": "wednesday",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2824,
+      "kod": "72",
+      "object": 3515,
+      "present": false
+    },
+    {
+      "subject": 2824,
+      "kod": "72",
+      "object": "wednesday",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3515,
+      "kod": "72",
+      "object": 3654,
+      "present": false
+    },
+    {
+      "subject": "wednesday",
+      "kod": "72",
+      "object": 3654,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 8190,
+      "kod": "14",
+      "object": 202,
+      "present": false
+    },
+    {
+      "subject": 8190,
+      "kod": "14",
+      "object": 3267,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "calendar_system",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "solar_calendar",
+      "kod": "14",
+      "object": "calendar_system",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "lunar_calendar",
+      "kod": "14",
+      "object": "calendar_system",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "lunisolar_calendar",
+      "kod": "14",
+      "object": "calendar_system",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "gregorian_calendar",
+      "kod": "14",
+      "object": "solar_calendar",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "julian_calendar",
+      "kod": "14",
+      "object": "solar_calendar",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "calendar_table",
+      "kod": "14",
+      "object": 3544,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "perpetual_calendar_table",
+      "kod": "14",
+      "object": "calendar_table",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "calendar_date",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "calendar_day",
+      "kod": "14",
+      "object": 1676,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "calendar_year",
+      "kod": "14",
+      "object": 1683,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "gregorian_year",
+      "kod": "14",
+      "object": "calendar_year",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "gregorian_leap_year",
+      "kod": "14",
+      "object": "gregorian_year",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "gregorian_common_year",
+      "kod": "14",
+      "object": "gregorian_year",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "gregorian_leap_day",
+      "kod": "14",
+      "object": "calendar_day",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "calendar_month",
+      "kod": "14",
+      "object": 1682,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fortnight",
+      "kod": "14",
+      "object": 1676,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "working_day",
+      "kod": "14",
+      "object": "calendar_day",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "day_off",
+      "kod": "14",
+      "object": "calendar_day",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "deadline",
+      "kod": "14",
+      "object": 3110,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "scheduling",
+      "kod": "14",
+      "object": 1814,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "transport_timetable",
+      "kod": "14",
+      "object": 8190,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "school_timetable",
+      "kod": "14",
+      "object": 8190,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "appointment_calendar",
+      "kod": "14",
+      "object": 8190,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "dated_calendar_entry",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "appointment",
+      "kod": "14",
+      "object": 1835,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "academic_year",
+      "kod": "14",
+      "object": 1676,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2736,
+      "kod": "14",
+      "object": 1682,
+      "present": false
+    },
+    {
+      "subject": 2736,
+      "kod": "14",
+      "object": "calendar_month",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2874,
+      "kod": "14",
+      "object": 1682,
+      "present": false
+    },
+    {
+      "subject": 2874,
+      "kod": "14",
+      "object": "calendar_month",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2988,
+      "kod": "14",
+      "object": 1682,
+      "present": false
+    },
+    {
+      "subject": 2988,
+      "kod": "14",
+      "object": "calendar_month",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3201,
+      "kod": "14",
+      "object": 1682,
+      "present": false
+    },
+    {
+      "subject": 3201,
+      "kod": "14",
+      "object": "calendar_month",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3677,
+      "kod": "14",
+      "object": 1682,
+      "present": false
+    },
+    {
+      "subject": 3677,
+      "kod": "14",
+      "object": "calendar_month",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5008,
+      "kod": "14",
+      "object": 1682,
+      "present": false
+    },
+    {
+      "subject": 5008,
+      "kod": "14",
+      "object": "calendar_month",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5009,
+      "kod": "14",
+      "object": 1682,
+      "present": false
+    },
+    {
+      "subject": 5009,
+      "kod": "14",
+      "object": "calendar_month",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5010,
+      "kod": "14",
+      "object": 1682,
+      "present": false
+    },
+    {
+      "subject": 5010,
+      "kod": "14",
+      "object": "calendar_month",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5011,
+      "kod": "14",
+      "object": 1682,
+      "present": false
+    },
+    {
+      "subject": 5011,
+      "kod": "14",
+      "object": "calendar_month",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5012,
+      "kod": "14",
+      "object": 1682,
+      "present": false
+    },
+    {
+      "subject": 5012,
+      "kod": "14",
+      "object": "calendar_month",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5013,
+      "kod": "14",
+      "object": 1682,
+      "present": false
+    },
+    {
+      "subject": 5013,
+      "kod": "14",
+      "object": "calendar_month",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5014,
+      "kod": "14",
+      "object": 1682,
+      "present": false
+    },
+    {
+      "subject": 5014,
+      "kod": "14",
+      "object": "calendar_month",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "calendar_system",
+      "kod": "14",
+      "object": 2639,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "calendar_table",
+      "kod": "20",
+      "object": "calendar_date",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "dated_calendar_entry",
+      "kod": "20",
+      "object": "calendar_date",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "calendar_day",
+      "kod": "20",
+      "object": "calendar_date",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "gregorian_leap_year",
+      "kod": "61",
+      "object": "gregorian_common_year",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "scheduling",
+      "kod": "70",
+      "object": 8190,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "gregorian_common_year",
+      "kod": "20",
+      "object": "gregorian_leap_day",
+      "present": false
+    },
+    {
+      "subject": "gregorian_leap_year",
+      "kod": "14",
+      "object": "gregorian_leap_day",
+      "present": false
+    },
+    {
+      "subject": "calendar_month",
+      "kod": "14",
+      "object": "calendar_day",
+      "present": false
+    },
+    {
+      "subject": "scheduling",
+      "kod": "70",
+      "object": "appointment",
+      "present": false
+    },
+    {
+      "subject": 3515,
+      "kod": "72",
+      "object": 3654,
+      "present": false
+    },
+    {
+      "subject": 2824,
+      "kod": "72",
+      "object": 3515,
+      "present": false
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "wednesday",
+      "ancestor": 5005,
+      "present": true
+    },
+    {
+      "subject": "calendar_system",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": "solar_calendar",
+      "ancestor": "calendar_system",
+      "present": true
+    },
+    {
+      "subject": "lunar_calendar",
+      "ancestor": "calendar_system",
+      "present": true
+    },
+    {
+      "subject": "lunisolar_calendar",
+      "ancestor": "calendar_system",
+      "present": true
+    },
+    {
+      "subject": "gregorian_calendar",
+      "ancestor": "solar_calendar",
+      "present": true
+    },
+    {
+      "subject": "julian_calendar",
+      "ancestor": "solar_calendar",
+      "present": true
+    },
+    {
+      "subject": "calendar_table",
+      "ancestor": 3544,
+      "present": true
+    },
+    {
+      "subject": "perpetual_calendar_table",
+      "ancestor": "calendar_table",
+      "present": true
+    },
+    {
+      "subject": "calendar_date",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": "calendar_day",
+      "ancestor": 1676,
+      "present": true
+    },
+    {
+      "subject": "calendar_year",
+      "ancestor": 1683,
+      "present": true
+    },
+    {
+      "subject": "gregorian_year",
+      "ancestor": "calendar_year",
+      "present": true
+    },
+    {
+      "subject": "gregorian_leap_year",
+      "ancestor": "gregorian_year",
+      "present": true
+    },
+    {
+      "subject": "gregorian_common_year",
+      "ancestor": "gregorian_year",
+      "present": true
+    },
+    {
+      "subject": "gregorian_leap_day",
+      "ancestor": "calendar_day",
+      "present": true
+    },
+    {
+      "subject": "calendar_month",
+      "ancestor": 1682,
+      "present": true
+    },
+    {
+      "subject": "fortnight",
+      "ancestor": 1676,
+      "present": true
+    },
+    {
+      "subject": "working_day",
+      "ancestor": "calendar_day",
+      "present": true
+    },
+    {
+      "subject": "day_off",
+      "ancestor": "calendar_day",
+      "present": true
+    },
+    {
+      "subject": "deadline",
+      "ancestor": 3110,
+      "present": true
+    },
+    {
+      "subject": "scheduling",
+      "ancestor": 1814,
+      "present": true
+    },
+    {
+      "subject": "transport_timetable",
+      "ancestor": 8190,
+      "present": true
+    },
+    {
+      "subject": "school_timetable",
+      "ancestor": 8190,
+      "present": true
+    },
+    {
+      "subject": "appointment_calendar",
+      "ancestor": 8190,
+      "present": true
+    },
+    {
+      "subject": "dated_calendar_entry",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": "appointment",
+      "ancestor": 1835,
+      "present": true
+    },
+    {
+      "subject": "academic_year",
+      "ancestor": 1676,
+      "present": true
+    },
+    {
+      "subject": 3515,
+      "ancestor": 2648,
+      "present": true
+    },
+    {
+      "subject": 3515,
+      "ancestor": 5005,
+      "present": false
+    },
+    {
+      "subject": 4527,
+      "ancestor": 2648,
+      "present": true
+    },
+    {
+      "subject": 4527,
+      "ancestor": 5005,
+      "present": false
+    },
+    {
+      "subject": 4566,
+      "ancestor": 2648,
+      "present": true
+    },
+    {
+      "subject": 4566,
+      "ancestor": 5005,
+      "present": false
+    },
+    {
+      "subject": 4572,
+      "ancestor": 2648,
+      "present": true
+    },
+    {
+      "subject": 4572,
+      "ancestor": 5005,
+      "present": false
+    },
+    {
+      "subject": 4583,
+      "ancestor": 2648,
+      "present": true
+    },
+    {
+      "subject": 4583,
+      "ancestor": 5005,
+      "present": false
+    },
+    {
+      "subject": 4618,
+      "ancestor": 2648,
+      "present": true
+    },
+    {
+      "subject": 4618,
+      "ancestor": 5005,
+      "present": false
+    },
+    {
+      "subject": 4636,
+      "ancestor": 2648,
+      "present": true
+    },
+    {
+      "subject": 4636,
+      "ancestor": 5005,
+      "present": false
+    },
+    {
+      "subject": 4676,
+      "ancestor": 2648,
+      "present": true
+    },
+    {
+      "subject": 4676,
+      "ancestor": 5005,
+      "present": false
+    },
+    {
+      "subject": 4690,
+      "ancestor": 2648,
+      "present": true
+    },
+    {
+      "subject": 4690,
+      "ancestor": 5005,
+      "present": false
+    },
+    {
+      "subject": 4714,
+      "ancestor": 2648,
+      "present": true
+    },
+    {
+      "subject": 4714,
+      "ancestor": 5005,
+      "present": false
+    },
+    {
+      "subject": 4774,
+      "ancestor": 2648,
+      "present": true
+    },
+    {
+      "subject": 4774,
+      "ancestor": 5005,
+      "present": false
+    },
+    {
+      "subject": 4796,
+      "ancestor": 2648,
+      "present": true
+    },
+    {
+      "subject": 4796,
+      "ancestor": 5005,
+      "present": false
+    },
+    {
+      "subject": 4812,
+      "ancestor": 2648,
+      "present": true
+    },
+    {
+      "subject": 4812,
+      "ancestor": 5005,
+      "present": false
+    },
+    {
+      "subject": 4853,
+      "ancestor": 2648,
+      "present": true
+    },
+    {
+      "subject": 4853,
+      "ancestor": 5005,
+      "present": false
+    },
+    {
+      "subject": 4858,
+      "ancestor": 2648,
+      "present": true
+    },
+    {
+      "subject": 4858,
+      "ancestor": 5005,
+      "present": false
+    },
+    {
+      "subject": 4975,
+      "ancestor": 2648,
+      "present": true
+    },
+    {
+      "subject": 4975,
+      "ancestor": 5005,
+      "present": false
+    },
+    {
+      "subject": 2736,
+      "ancestor": 1682,
+      "present": true
+    },
+    {
+      "subject": 2874,
+      "ancestor": 1682,
+      "present": true
+    },
+    {
+      "subject": 2988,
+      "ancestor": 1682,
+      "present": true
+    },
+    {
+      "subject": 3201,
+      "ancestor": 1682,
+      "present": true
+    },
+    {
+      "subject": 3677,
+      "ancestor": 1682,
+      "present": true
+    },
+    {
+      "subject": 5008,
+      "ancestor": 1682,
+      "present": true
+    },
+    {
+      "subject": 5009,
+      "ancestor": 1682,
+      "present": true
+    },
+    {
+      "subject": 5010,
+      "ancestor": 1682,
+      "present": true
+    },
+    {
+      "subject": 5011,
+      "ancestor": 1682,
+      "present": true
+    },
+    {
+      "subject": 5012,
+      "ancestor": 1682,
+      "present": true
+    },
+    {
+      "subject": 5013,
+      "ancestor": 1682,
+      "present": true
+    },
+    {
+      "subject": 5014,
+      "ancestor": 1682,
+      "present": true
+    },
+    {
+      "subject": "wednesday",
+      "ancestor": 2648,
+      "present": false
+    },
+    {
+      "subject": "calendar_day",
+      "ancestor": 2075,
+      "present": false
+    },
+    {
+      "subject": "calendar_day",
+      "ancestor": 1677,
+      "present": false
+    },
+    {
+      "subject": "calendar_date",
+      "ancestor": 1675,
+      "present": false
+    },
+    {
+      "subject": "calendar_date",
+      "ancestor": 5223,
+      "present": false
+    },
+    {
+      "subject": "calendar_date",
+      "ancestor": 5866,
+      "present": false
+    },
+    {
+      "subject": "calendar_system",
+      "ancestor": 1675,
+      "present": false
+    },
+    {
+      "subject": "calendar_table",
+      "ancestor": "calendar_system",
+      "present": false
+    },
+    {
+      "subject": "deadline",
+      "ancestor": 1676,
+      "present": false
+    },
+    {
+      "subject": "academic_year",
+      "ancestor": 1683,
+      "present": false
+    },
+    {
+      "subject": "working_day",
+      "ancestor": 5005,
+      "present": false
+    },
+    {
+      "subject": "day_off",
+      "ancestor": 5005,
+      "present": false
+    },
+    {
+      "subject": 8190,
+      "ancestor": 202,
+      "present": false
+    },
+    {
+      "subject": "scheduling",
+      "ancestor": 8190,
+      "present": false
+    },
+    {
+      "subject": "appointment",
+      "ancestor": "dated_calendar_entry",
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": 3515,
+      "term": "среда (окружающее пространство)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 3515,
+      "term": "environment (surrounding space)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3515,
+      "term": "surroundings (spatial)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3515,
+      "term": "Wednesday",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "wednesday",
+      "term": "среда (день недели)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "wednesday",
+      "term": "Wednesday",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "wednesday",
+      "term": "среда",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "wednesday",
+      "term": "Wednesday (day of the week)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2816,
+      "term": "воскресенье",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 2816,
+      "term": "воскресение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 2816,
+      "term": "воскресиение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 2816,
+      "term": "ВОСКРЕСИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 8190,
+      "term": "расписание (план по времени)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 8190,
+      "term": "schedule (temporal plan)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 8190,
+      "term": "schedule",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 8190,
+      "term": "timetable (event schedule)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 8190,
+      "term": "расписаание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 8190,
+      "term": "РАСПИСАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 1835,
+      "term": "meeting (social encounter)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1835,
+      "term": "occur",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 1835,
+      "term": "to occur",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 3110,
+      "term": "point in time",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3110,
+      "term": "instant (time point)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1677,
+      "term": "daytime",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1677,
+      "term": "day (daylight period)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "calendar_system",
+      "term": "календарь (система счисления времени)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "calendar_system",
+      "term": "calendar system",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "calendar_system",
+      "term": "calendar (time-reckoning system)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "solar_calendar",
+      "term": "солнечный календарь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "solar_calendar",
+      "term": "solar calendar",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "lunar_calendar",
+      "term": "лунный календарь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "lunar_calendar",
+      "term": "lunar calendar",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "lunisolar_calendar",
+      "term": "лунно-солнечный календарь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "lunisolar_calendar",
+      "term": "lunisolar calendar",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "gregorian_calendar",
+      "term": "григорианский календарь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "gregorian_calendar",
+      "term": "Gregorian calendar",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "julian_calendar",
+      "term": "юлианский календарь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "julian_calendar",
+      "term": "Julian calendar",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "calendar_table",
+      "term": "календарь (таблица дат)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "calendar_table",
+      "term": "calendar (date table)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "perpetual_calendar_table",
+      "term": "вечный календарь (таблица)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "perpetual_calendar_table",
+      "term": "perpetual calendar (chart)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "calendar_date",
+      "term": "календарная дата (обозначение дня)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "calendar_date",
+      "term": "calendar date",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "calendar_date",
+      "term": "календарная дата",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "calendar_date",
+      "term": "date (calendar label)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "calendar_day",
+      "term": "календарный день",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "calendar_day",
+      "term": "calendar day",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "calendar_day",
+      "term": "civil day",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "calendar_year",
+      "term": "календарный год",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "calendar_year",
+      "term": "calendar year",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "gregorian_year",
+      "term": "год григорианского календаря",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "gregorian_year",
+      "term": "Gregorian calendar year",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "gregorian_leap_year",
+      "term": "високосный год григорианского календаря",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "gregorian_leap_year",
+      "term": "Gregorian leap year",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "gregorian_leap_year",
+      "term": "leap year (Gregorian)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "gregorian_common_year",
+      "term": "невисокосный год григорианского календаря",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "gregorian_common_year",
+      "term": "Gregorian common year",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "gregorian_common_year",
+      "term": "common year (Gregorian)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "gregorian_leap_day",
+      "term": "29 февраля (григорианский календарь)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "gregorian_leap_day",
+      "term": "February 29 (Gregorian calendar)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "gregorian_leap_day",
+      "term": "leap day (Gregorian)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "calendar_month",
+      "term": "календарный месяц",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "calendar_month",
+      "term": "calendar month",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fortnight",
+      "term": "двухнедельный период",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fortnight",
+      "term": "fortnight",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fortnight",
+      "term": "two-week period",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "working_day",
+      "term": "рабочий день (день работы)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "working_day",
+      "term": "working day (day with work)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "working_day",
+      "term": "workday (calendar day)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "day_off",
+      "term": "выходной день (по графику)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "day_off",
+      "term": "day off",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "deadline",
+      "term": "крайний срок (момент времени)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "deadline",
+      "term": "deadline",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "deadline",
+      "term": "deadline (time point)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "scheduling",
+      "term": "составление расписания",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "scheduling",
+      "term": "scheduling",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "transport_timetable",
+      "term": "транспортное расписание",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "transport_timetable",
+      "term": "transport timetable",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "transport_timetable",
+      "term": "timetable (transport)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "school_timetable",
+      "term": "расписание занятий",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "school_timetable",
+      "term": "class timetable",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "school_timetable",
+      "term": "school timetable",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "appointment_calendar",
+      "term": "календарь назначенных встреч",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "appointment_calendar",
+      "term": "appointment calendar",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "appointment_calendar",
+      "term": "calendar (appointment schedule)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "dated_calendar_entry",
+      "term": "датированная запись календаря",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "dated_calendar_entry",
+      "term": "dated calendar entry",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "appointment",
+      "term": "заранее назначенная встреча",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "appointment",
+      "term": "appointment (arranged meeting)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "appointment",
+      "term": "scheduled meeting",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "academic_year",
+      "term": "учебный год",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "academic_year",
+      "term": "academic year",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "academic_year",
+      "term": "school year",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "wednesday",
+      "term": "environment",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "scheduling",
+      "term": "programming",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "julian_calendar",
+      "term": "Julian date",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "calendar_date",
+      "term": "date",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 2816,
+      "term": "ВОСКРЕСИТЬ",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

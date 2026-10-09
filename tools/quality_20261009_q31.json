@@ -1,0 +1,2285 @@
+{
+  "source": "quality-20261009-q31",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "REST/API homonym repair; HTTP protocol, messages and method semantics; URI/URL distinctions; network API intersections and software client/server roles in U3.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "rest": "https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm",
+      "http": "https://www.rfc-editor.org/rfc/rfc9110.html",
+      "http3": "https://www.rfc-editor.org/rfc/rfc9114.html",
+      "uri": "https://www.rfc-editor.org/rfc/rfc3986.html",
+      "methods": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods",
+      "identifier": "https://developer.mozilla.org/en-US/docs/Glossary/Identifier"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet; CC BY 4.0 and Princeton notices remain in docs/quality/2026-10-09-q11.md#sources-and-reuse. IETF specifications, Fielding and MDN support technical corrections and extensions. No source definitions, algorithms or code are copied. Labels, scope restrictions and graph mappings are editorial adaptations.",
+    "existing_cohort": [
+      253,
+      3292,
+      299,
+      1101,
+      275,
+      276,
+      303,
+      311,
+      442,
+      671,
+      24428,
+      24429,
+      265,
+      277
+    ],
+    "context_policy": "All new concepts and new assertions use the IT universe U3, with unspecified strength. The one rejected rest/API assertion remains as U1 history. Existing home contexts and prior U1/U3 assertions remain unchanged. No automatic projection of the new technical taxonomy into U1.",
+    "sense_decisions": [
+      {
+        "concept": "software_style",
+        "synset": null,
+        "decision": "add",
+        "alignment": "technical style, not building style",
+        "scope": "A set of architectural design constraints for software systems."
+      },
+      {
+        "concept": "rest_style",
+        "synset": null,
+        "decision": "add",
+        "alignment": "disambiguated acronym",
+        "scope": "Representational State Transfer as a complete architectural style."
+      },
+      {
+        "concept": "network_api",
+        "synset": null,
+        "decision": "add",
+        "alignment": "access restriction",
+        "scope": "An API accessible over a network, without requiring HTTP."
+      },
+      {
+        "concept": "http_api",
+        "synset": null,
+        "decision": "add",
+        "alignment": "protocol restriction",
+        "scope": "A network API using HTTP, without implying REST conformance."
+      },
+      {
+        "concept": "rest_api",
+        "synset": null,
+        "decision": "add",
+        "alignment": "architectural restriction",
+        "scope": "An API whose interaction design follows the REST constraints."
+      },
+      {
+        "concept": "rest_http_api",
+        "synset": null,
+        "decision": "add",
+        "alignment": "protocol/style intersection",
+        "scope": "The intersection of HTTP use and REST-conforming design."
+      },
+      {
+        "concept": "http",
+        "synset": "oewn-06678592-n",
+        "decision": "add",
+        "alignment": "corrected dictionary protocol scope",
+        "scope": "The HTTP protocol family, without a TCP-only or browser-only restriction."
+      },
+      {
+        "concept": "http_message",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The information carried as an HTTP request or response."
+      },
+      {
+        "concept": "http_request",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An HTTP request message."
+      },
+      {
+        "concept": "http_response",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An HTTP response message."
+      },
+      {
+        "concept": "http_method",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The named request semantics, distinct from an execution event."
+      },
+      {
+        "concept": "idempotent_method",
+        "synset": null,
+        "decision": "add",
+        "alignment": "specified semantic restriction",
+        "scope": "Repetition has the same intended effect; responses may differ."
+      },
+      {
+        "concept": "safe_method",
+        "synset": null,
+        "decision": "add",
+        "alignment": "specified semantic restriction",
+        "scope": "Read-only requested semantics; this is not a security guarantee."
+      },
+      {
+        "concept": "get",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The standard GET method for retrieving a representation."
+      },
+      {
+        "concept": "head",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The standard HEAD method with no response content."
+      },
+      {
+        "concept": "post",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The standard POST method for resource-specific processing."
+      },
+      {
+        "concept": "put",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The standard PUT method with replacement semantics."
+      },
+      {
+        "concept": "delete",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The standard DELETE method; no guarantee of physical data erasure."
+      },
+      {
+        "concept": "resource_identifier",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An information object identifying a resource. A programming-language name is a separate selected sense."
+      },
+      {
+        "concept": "uri",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A resource identifier using URI syntax; identification need not supply a location."
+      },
+      {
+        "concept": "url",
+        "synset": "oewn-06370154-n",
+        "decision": "add",
+        "alignment": "corrected dictionary locator scope",
+        "scope": "The locator subset of URIs under RFC 3986. Correct the dictionary restriction to web pages."
+      },
+      {
+        "concept": "http_url",
+        "synset": null,
+        "decision": "add",
+        "alignment": "URI-scheme restriction",
+        "scope": "A URL whose scheme is http."
+      },
+      {
+        "concept": "https_url",
+        "synset": null,
+        "decision": "add",
+        "alignment": "URI-scheme restriction",
+        "scope": "A URL whose scheme is https."
+      },
+      {
+        "concept": "status_code",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A code describing the result represented by an HTTP response."
+      },
+      {
+        "concept": "http_processing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "protocol-specific operation",
+        "scope": "Processing an HTTP request."
+      },
+      {
+        "concept": "http_sending",
+        "synset": null,
+        "decision": "add",
+        "alignment": "protocol-specific operation",
+        "scope": "Sending an HTTP request."
+      },
+      {
+        "concept": "http_server_software",
+        "synset": null,
+        "decision": "add",
+        "alignment": "software role, not hardware host",
+        "scope": "Software acting in the HTTP server role."
+      },
+      {
+        "concept": "http_client_software",
+        "synset": null,
+        "decision": "add",
+        "alignment": "software role, not hardware host",
+        "scope": "Software acting in the HTTP client role."
+      },
+      {
+        "concept": "get_request",
+        "synset": null,
+        "decision": "add",
+        "alignment": "method-specific message",
+        "scope": "An HTTP request whose method is GET."
+      },
+      {
+        "concept": "head_request",
+        "synset": null,
+        "decision": "add",
+        "alignment": "method-specific message",
+        "scope": "An HTTP request whose method is HEAD."
+      },
+      {
+        "concept": 442,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Do not place resource identifiers beneath the existing programming-language construct merely because both use the word identifier."
+      },
+      {
+        "concept": 671,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "An architecture and a style constraining architectures are not automatically the same kind of information object; retain the existing architecture branch."
+      },
+      {
+        "concept": 303,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The existing server has a hardware genus and a Jenkins child; its broader hardware/software ambiguity needs a separate reviewed split."
+      },
+      {
+        "concept": 311,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The existing client is hardware. New HTTP client software is explicitly qualified rather than silently changing the old genus."
+      },
+      {
+        "concept": 1101,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Protocol links to social communication and generic standard remain queued; not every proprietary communication protocol is a public standard."
+      },
+      {
+        "concept": 253,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Preserve rest, its physiological genus, its child and all unrelated facts. Only the mistaken API attribute is rejected."
+      },
+      {
+        "concept": "software_style",
+        "synset": "oewn-05849878-n",
+        "decision": "do not import building-style sense",
+        "alignment": "reviewed sense",
+        "scope": "The dictionary architectural-style synset concerns an art form, not software constraints."
+      }
+    ],
+    "limits": "REST means the full architectural style, not any JSON or HTTP interface. Safe methods concern requested semantics, not security or absence of logging. Idempotence does not require identical responses. URI and URL use RFC 3986 scope; not every URL addresses a web page. No protocol implementation, networking request, performance guarantee, caching rule, transport-only restriction or automatic retry instruction is added. Existing hardware server/client, programming-identifier, architecture and protocol/standard distinctions remain queued for wider review. No application test suites.",
+    "exclusion_review": {
+      "contexts": [
+        "U1",
+        "U3"
+      ],
+      "before_u1_conflicting_edges": 6,
+      "decision": "Preserve all exclusions and explicit negations. Check the IT context separately because the new taxonomy is U3-only. No new pair or witness is accepted."
+    },
+    "new_term_collisions": [],
+    "collision_decision": "No exact normalized cross-language collision is accepted. Qualified REST and software-role terms avoid the existing rest and hardware senses. The ambiguous bare REST acronym is not added as a new alias. Existing API, protocol, request, response and processing/sending actions are reused.",
+    "refreshed_comparison": {
+      "baseline": "Q30",
+      "existing_concepts": 13171,
+      "existing_terms": 37118,
+      "synsets_with_exact_en_candidate": 15641,
+      "synsets_without_exact_en_candidate": 91878,
+      "existing_concepts_with_dictionary_candidate": 4215,
+      "caveat": "Normalized spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "software_style",
+      "name": "архитектурный стиль программной системы",
+      "parent": 265,
+      "universum_id": 3,
+      "terms": [
+        [
+          "архитектурный стиль программной системы",
+          "ru"
+        ],
+        [
+          "software architectural style",
+          "en"
+        ]
+      ],
+      "reason": "A set of architectural design constraints for software systems. Source: https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm"
+    },
+    {
+      "key": "rest_style",
+      "name": "архитектурный стиль REST",
+      "parent": "software_style",
+      "universum_id": 3,
+      "terms": [
+        [
+          "архитектурный стиль REST",
+          "ru"
+        ],
+        [
+          "REST (architectural style)",
+          "en"
+        ],
+        [
+          "Representational State Transfer",
+          "en"
+        ]
+      ],
+      "reason": "Representational State Transfer as a complete architectural style. Source: https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm"
+    },
+    {
+      "key": "network_api",
+      "name": "программный интерфейс для доступа по сети",
+      "parent": 299,
+      "universum_id": 3,
+      "terms": [
+        [
+          "программный интерфейс для доступа по сети",
+          "ru"
+        ],
+        [
+          "network API",
+          "en"
+        ],
+        [
+          "network-accessible API",
+          "en"
+        ]
+      ],
+      "reason": "An API accessible over a network, without requiring HTTP. Source: https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm"
+    },
+    {
+      "key": "http_api",
+      "name": "программный интерфейс на основе HTTP",
+      "parent": "network_api",
+      "universum_id": 3,
+      "terms": [
+        [
+          "программный интерфейс на основе HTTP",
+          "ru"
+        ],
+        [
+          "HTTP API",
+          "en"
+        ]
+      ],
+      "reason": "A network API using HTTP, without implying REST conformance. Source: https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "key": "rest_api",
+      "name": "программный интерфейс с архитектурой REST",
+      "parent": "network_api",
+      "universum_id": 3,
+      "terms": [
+        [
+          "программный интерфейс с архитектурой REST",
+          "ru"
+        ],
+        [
+          "RESTful API",
+          "en"
+        ]
+      ],
+      "reason": "An API whose interaction design follows the REST constraints. Source: https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm"
+    },
+    {
+      "key": "rest_http_api",
+      "name": "программный интерфейс REST на основе HTTP",
+      "parent": "http_api",
+      "universum_id": 3,
+      "terms": [
+        [
+          "программный интерфейс REST на основе HTTP",
+          "ru"
+        ],
+        [
+          "RESTful HTTP API",
+          "en"
+        ]
+      ],
+      "reason": "The intersection of HTTP use and REST-conforming design. Source: https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm"
+    },
+    {
+      "key": "http",
+      "name": "протокол HTTP",
+      "parent": 1101,
+      "universum_id": 3,
+      "terms": [
+        [
+          "протокол HTTP",
+          "ru"
+        ],
+        [
+          "HTTP",
+          "en"
+        ],
+        [
+          "Hypertext Transfer Protocol",
+          "en"
+        ]
+      ],
+      "reason": "The HTTP protocol family, without a TCP-only or browser-only restriction. OEWN 2025: oewn-06678592-n. Source: https://www.rfc-editor.org/rfc/rfc9114.html"
+    },
+    {
+      "key": "http_message",
+      "name": "сообщение протокола HTTP",
+      "parent": 265,
+      "universum_id": 3,
+      "terms": [
+        [
+          "сообщение протокола HTTP",
+          "ru"
+        ],
+        [
+          "HTTP message",
+          "en"
+        ]
+      ],
+      "reason": "The information carried as an HTTP request or response. Source: https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "key": "http_request",
+      "name": "запрос HTTP",
+      "parent": 275,
+      "universum_id": 3,
+      "terms": [
+        [
+          "запрос HTTP",
+          "ru"
+        ],
+        [
+          "HTTP request",
+          "en"
+        ]
+      ],
+      "reason": "An HTTP request message. Source: https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "key": "http_response",
+      "name": "ответ HTTP",
+      "parent": 276,
+      "universum_id": 3,
+      "terms": [
+        [
+          "ответ HTTP",
+          "ru"
+        ],
+        [
+          "HTTP response",
+          "en"
+        ]
+      ],
+      "reason": "An HTTP response message. Source: https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "key": "http_method",
+      "name": "метод запроса HTTP",
+      "parent": 265,
+      "universum_id": 3,
+      "terms": [
+        [
+          "метод запроса HTTP",
+          "ru"
+        ],
+        [
+          "HTTP request method",
+          "en"
+        ],
+        [
+          "HTTP method",
+          "en"
+        ]
+      ],
+      "reason": "The named request semantics, distinct from an execution event. Source: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods"
+    },
+    {
+      "key": "idempotent_method",
+      "name": "метод HTTP с идемпотентной семантикой",
+      "parent": "http_method",
+      "universum_id": 3,
+      "terms": [
+        [
+          "метод HTTP с идемпотентной семантикой",
+          "ru"
+        ],
+        [
+          "idempotent HTTP method",
+          "en"
+        ]
+      ],
+      "reason": "Repetition has the same intended effect; responses may differ. Source: https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "key": "safe_method",
+      "name": "метод HTTP с безопасной семантикой",
+      "parent": "idempotent_method",
+      "universum_id": 3,
+      "terms": [
+        [
+          "метод HTTP с безопасной семантикой",
+          "ru"
+        ],
+        [
+          "safe HTTP method",
+          "en"
+        ]
+      ],
+      "reason": "Read-only requested semantics; this is not a security guarantee. Source: https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "key": "get",
+      "name": "метод GET протокола HTTP",
+      "parent": "safe_method",
+      "universum_id": 3,
+      "terms": [
+        [
+          "метод GET протокола HTTP",
+          "ru"
+        ],
+        [
+          "HTTP GET method",
+          "en"
+        ]
+      ],
+      "reason": "The standard GET method for retrieving a representation. Source: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods"
+    },
+    {
+      "key": "head",
+      "name": "метод HEAD протокола HTTP",
+      "parent": "safe_method",
+      "universum_id": 3,
+      "terms": [
+        [
+          "метод HEAD протокола HTTP",
+          "ru"
+        ],
+        [
+          "HTTP HEAD method",
+          "en"
+        ]
+      ],
+      "reason": "The standard HEAD method with no response content. Source: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods"
+    },
+    {
+      "key": "post",
+      "name": "метод POST протокола HTTP",
+      "parent": "http_method",
+      "universum_id": 3,
+      "terms": [
+        [
+          "метод POST протокола HTTP",
+          "ru"
+        ],
+        [
+          "HTTP POST method",
+          "en"
+        ]
+      ],
+      "reason": "The standard POST method for resource-specific processing. Source: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods"
+    },
+    {
+      "key": "put",
+      "name": "метод PUT протокола HTTP",
+      "parent": "idempotent_method",
+      "universum_id": 3,
+      "terms": [
+        [
+          "метод PUT протокола HTTP",
+          "ru"
+        ],
+        [
+          "HTTP PUT method",
+          "en"
+        ]
+      ],
+      "reason": "The standard PUT method with replacement semantics. Source: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods"
+    },
+    {
+      "key": "delete",
+      "name": "метод DELETE протокола HTTP",
+      "parent": "idempotent_method",
+      "universum_id": 3,
+      "terms": [
+        [
+          "метод DELETE протокола HTTP",
+          "ru"
+        ],
+        [
+          "HTTP DELETE method",
+          "en"
+        ]
+      ],
+      "reason": "The standard DELETE method; no guarantee of physical data erasure. Source: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods"
+    },
+    {
+      "key": "resource_identifier",
+      "name": "идентификатор ресурса",
+      "parent": 265,
+      "universum_id": 3,
+      "terms": [
+        [
+          "идентификатор ресурса",
+          "ru"
+        ],
+        [
+          "resource identifier",
+          "en"
+        ]
+      ],
+      "reason": "An information object identifying a resource. A programming-language name is a separate selected sense. Source: https://www.rfc-editor.org/rfc/rfc3986.html"
+    },
+    {
+      "key": "uri",
+      "name": "унифицированный идентификатор ресурса",
+      "parent": "resource_identifier",
+      "universum_id": 3,
+      "terms": [
+        [
+          "унифицированный идентификатор ресурса",
+          "ru"
+        ],
+        [
+          "URI",
+          "en"
+        ],
+        [
+          "Uniform Resource Identifier",
+          "en"
+        ]
+      ],
+      "reason": "A resource identifier using URI syntax; identification need not supply a location. Source: https://www.rfc-editor.org/rfc/rfc3986.html"
+    },
+    {
+      "key": "url",
+      "name": "унифицированный указатель ресурса",
+      "parent": "uri",
+      "universum_id": 3,
+      "terms": [
+        [
+          "унифицированный указатель ресурса",
+          "ru"
+        ],
+        [
+          "URL",
+          "en"
+        ],
+        [
+          "Uniform Resource Locator",
+          "en"
+        ]
+      ],
+      "reason": "The locator subset of URIs under RFC 3986. Correct the dictionary restriction to web pages. OEWN 2025: oewn-06370154-n. Source: https://www.rfc-editor.org/rfc/rfc3986.html"
+    },
+    {
+      "key": "http_url",
+      "name": "указатель ресурса со схемой http",
+      "parent": "url",
+      "universum_id": 3,
+      "terms": [
+        [
+          "указатель ресурса со схемой http",
+          "ru"
+        ],
+        [
+          "HTTP URL",
+          "en"
+        ]
+      ],
+      "reason": "A URL whose scheme is http. Source: https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "key": "https_url",
+      "name": "указатель ресурса со схемой https",
+      "parent": "url",
+      "universum_id": 3,
+      "terms": [
+        [
+          "указатель ресурса со схемой https",
+          "ru"
+        ],
+        [
+          "HTTPS URL",
+          "en"
+        ]
+      ],
+      "reason": "A URL whose scheme is https. Source: https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "key": "status_code",
+      "name": "код состояния ответа HTTP",
+      "parent": 265,
+      "universum_id": 3,
+      "terms": [
+        [
+          "код состояния ответа HTTP",
+          "ru"
+        ],
+        [
+          "HTTP status code",
+          "en"
+        ]
+      ],
+      "reason": "A code describing the result represented by an HTTP response. Source: https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "key": "http_processing",
+      "name": "обработка запроса HTTP",
+      "parent": 24428,
+      "universum_id": 3,
+      "terms": [
+        [
+          "обработка запроса HTTP",
+          "ru"
+        ],
+        [
+          "HTTP request processing",
+          "en"
+        ]
+      ],
+      "reason": "Processing an HTTP request. Source: https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "key": "http_sending",
+      "name": "отправка запроса HTTP",
+      "parent": 24429,
+      "universum_id": 3,
+      "terms": [
+        [
+          "отправка запроса HTTP",
+          "ru"
+        ],
+        [
+          "HTTP request sending",
+          "en"
+        ]
+      ],
+      "reason": "Sending an HTTP request. Source: https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "key": "http_server_software",
+      "name": "серверное программное обеспечение HTTP",
+      "parent": 277,
+      "universum_id": 3,
+      "terms": [
+        [
+          "серверное программное обеспечение HTTP",
+          "ru"
+        ],
+        [
+          "HTTP server software",
+          "en"
+        ]
+      ],
+      "reason": "Software acting in the HTTP server role. Source: https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "key": "http_client_software",
+      "name": "клиентское программное обеспечение HTTP",
+      "parent": 277,
+      "universum_id": 3,
+      "terms": [
+        [
+          "клиентское программное обеспечение HTTP",
+          "ru"
+        ],
+        [
+          "HTTP client software",
+          "en"
+        ]
+      ],
+      "reason": "Software acting in the HTTP client role. Source: https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "key": "get_request",
+      "name": "запрос HTTP с методом GET",
+      "parent": "http_request",
+      "universum_id": 3,
+      "terms": [
+        [
+          "запрос HTTP с методом GET",
+          "ru"
+        ],
+        [
+          "HTTP GET request",
+          "en"
+        ]
+      ],
+      "reason": "An HTTP request whose method is GET. Source: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods"
+    },
+    {
+      "key": "head_request",
+      "name": "запрос HTTP с методом HEAD",
+      "parent": "http_request",
+      "universum_id": 3,
+      "terms": [
+        [
+          "запрос HTTP с методом HEAD",
+          "ru"
+        ],
+        [
+          "HTTP HEAD request",
+          "en"
+        ]
+      ],
+      "reason": "An HTTP request whose method is HEAD. Source: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods"
+    }
+  ],
+  "renames": [],
+  "terms": [
+    {
+      "id": 253,
+      "name": "отдых",
+      "terms": [
+        [
+          "rest (relaxation)",
+          "en"
+        ]
+      ],
+      "reason": "Disambiguate the existing physiological rest sense without deleting its correct rest alias."
+    },
+    {
+      "id": 1101,
+      "name": "protocol",
+      "terms": [
+        [
+          "communications protocol",
+          "en"
+        ],
+        [
+          "communication protocol (computing)",
+          "en"
+        ],
+        [
+          "коммуникационный протокол",
+          "ru"
+        ]
+      ],
+      "reason": "Reuse the existing IT protocol family rather than importing diplomatic etiquette. OEWN 2025: oewn-06677853-n."
+    },
+    {
+      "id": 275,
+      "name": "request",
+      "terms": [
+        [
+          "network request",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the existing IT data/request sense without equating it with a social request."
+    },
+    {
+      "id": 276,
+      "name": "response",
+      "terms": [
+        [
+          "network response",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the existing IT data/response sense without equating it with a spoken reply."
+    },
+    {
+      "id": 442,
+      "name": "identifier",
+      "terms": [
+        [
+          "programming language identifier",
+          "en"
+        ]
+      ],
+      "reason": "The existing language-construct genus selects the programming identifier sense; URI receives its own resource-identifier family."
+    },
+    {
+      "id": 299,
+      "name": "API",
+      "terms": [
+        [
+          "интерфейс программирования приложений",
+          "ru"
+        ]
+      ],
+      "reason": "Retain the API concept and its IT home context."
+    }
+  ],
+  "remove_terms": [],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 8945,
+      "before": [
+        253,
+        "20",
+        299,
+        1
+      ],
+      "reviewed_strength": 95,
+      "replacements": [],
+      "reason": "The physiological rest concept has no inherent API. The shared spelling rest/REST led to a cross-sense assertion. Keep rest and mechanical rest intact, and add a separately qualified architectural-style concept. Source: https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm"
+    }
+  ],
+  "edges": [
+    {
+      "subject": "rest_http_api",
+      "kod": "14",
+      "object": "rest_api",
+      "universum_id": 3,
+      "reason": "This restricted HTTP interface also follows the REST style."
+    },
+    {
+      "subject": "rest_api",
+      "kod": "20",
+      "object": "rest_style",
+      "universum_id": 3,
+      "reason": "REST is the architectural style of this restricted API family."
+    },
+    {
+      "subject": "http_request",
+      "kod": "14",
+      "object": "http_message",
+      "universum_id": 3,
+      "reason": "Classify the same request by its HTTP message format."
+    },
+    {
+      "subject": "http_response",
+      "kod": "14",
+      "object": "http_message",
+      "universum_id": 3,
+      "reason": "Classify the same response by its HTTP message format."
+    },
+    {
+      "subject": "http_request",
+      "kod": "20",
+      "object": "http_method",
+      "universum_id": 3,
+      "reason": "This is an element of the selected message meaning; no message body is required."
+    },
+    {
+      "subject": "http_response",
+      "kod": "20",
+      "object": "status_code",
+      "universum_id": 3,
+      "reason": "This is an element of the selected message meaning; no message body is required."
+    },
+    {
+      "subject": "get_request",
+      "kod": "20",
+      "object": "get",
+      "universum_id": 3,
+      "reason": "This is an element of the selected message meaning; no message body is required."
+    },
+    {
+      "subject": "head_request",
+      "kod": "20",
+      "object": "head",
+      "universum_id": 3,
+      "reason": "This is an element of the selected message meaning; no message body is required."
+    },
+    {
+      "subject": "http_api",
+      "kod": "74",
+      "object": "http",
+      "universum_id": 3,
+      "reason": "HTTP is required by this explicitly HTTP-based interface."
+    },
+    {
+      "subject": "http_processing",
+      "kod": "27",
+      "object": "http_request",
+      "universum_id": 3,
+      "reason": "The request message is the target of processing."
+    },
+    {
+      "subject": "http_sending",
+      "kod": "27",
+      "object": "http_request",
+      "universum_id": 3,
+      "reason": "The request message is the target of sending."
+    },
+    {
+      "subject": "http_server_software",
+      "kod": "22",
+      "object": "http_processing",
+      "universum_id": 3,
+      "reason": "The selected software role supports this HTTP operation."
+    },
+    {
+      "subject": "http_client_software",
+      "kod": "22",
+      "object": "http_sending",
+      "universum_id": 3,
+      "reason": "The selected software role supports this HTTP operation."
+    },
+    {
+      "subject": "http_server_software",
+      "kod": "21",
+      "object": "http_processing",
+      "universum_id": 3,
+      "reason": "The selected software role supports this HTTP operation."
+    },
+    {
+      "subject": "http_client_software",
+      "kod": "21",
+      "object": "http_sending",
+      "universum_id": 3,
+      "reason": "The selected software role supports this HTTP operation."
+    },
+    {
+      "subject": "http_server_software",
+      "kod": "74",
+      "object": "http",
+      "universum_id": 3,
+      "reason": "This explicitly HTTP software role depends on the protocol."
+    },
+    {
+      "subject": "http_client_software",
+      "kod": "74",
+      "object": "http",
+      "universum_id": 3,
+      "reason": "This explicitly HTTP software role depends on the protocol."
+    }
+  ],
+  "checks": [
+    {
+      "subject": "software_style",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rest_style",
+      "kod": "14",
+      "object": "software_style",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "network_api",
+      "kod": "14",
+      "object": 299,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_api",
+      "kod": "14",
+      "object": "network_api",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rest_api",
+      "kod": "14",
+      "object": "network_api",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rest_http_api",
+      "kod": "14",
+      "object": "http_api",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rest_http_api",
+      "kod": "14",
+      "object": "rest_api",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rest_api",
+      "kod": "20",
+      "object": "rest_style",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http",
+      "kod": "14",
+      "object": 1101,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_message",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_request",
+      "kod": "14",
+      "object": 275,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_request",
+      "kod": "14",
+      "object": "http_message",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_response",
+      "kod": "14",
+      "object": 276,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_response",
+      "kod": "14",
+      "object": "http_message",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_method",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "idempotent_method",
+      "kod": "14",
+      "object": "http_method",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "safe_method",
+      "kod": "14",
+      "object": "idempotent_method",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "get",
+      "kod": "14",
+      "object": "safe_method",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "head",
+      "kod": "14",
+      "object": "safe_method",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "post",
+      "kod": "14",
+      "object": "http_method",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "put",
+      "kod": "14",
+      "object": "idempotent_method",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "delete",
+      "kod": "14",
+      "object": "idempotent_method",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "resource_identifier",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "uri",
+      "kod": "14",
+      "object": "resource_identifier",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "url",
+      "kod": "14",
+      "object": "uri",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_url",
+      "kod": "14",
+      "object": "url",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "https_url",
+      "kod": "14",
+      "object": "url",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "status_code",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_processing",
+      "kod": "14",
+      "object": 24428,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_sending",
+      "kod": "14",
+      "object": 24429,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_server_software",
+      "kod": "14",
+      "object": 277,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_client_software",
+      "kod": "14",
+      "object": 277,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "get_request",
+      "kod": "14",
+      "object": "http_request",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "head_request",
+      "kod": "14",
+      "object": "http_request",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 253,
+      "kod": "20",
+      "object": 299,
+      "present": false
+    },
+    {
+      "subject": "http_request",
+      "kod": "20",
+      "object": "http_method",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_response",
+      "kod": "20",
+      "object": "status_code",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "get_request",
+      "kod": "20",
+      "object": "get",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "head_request",
+      "kod": "20",
+      "object": "head",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_api",
+      "kod": "74",
+      "object": "http",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_processing",
+      "kod": "27",
+      "object": "http_request",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_sending",
+      "kod": "27",
+      "object": "http_request",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_server_software",
+      "kod": "22",
+      "object": "http_processing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_client_software",
+      "kod": "22",
+      "object": "http_sending",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_server_software",
+      "kod": "21",
+      "object": "http_processing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_client_software",
+      "kod": "21",
+      "object": "http_sending",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_server_software",
+      "kod": "74",
+      "object": "http",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_client_software",
+      "kod": "74",
+      "object": "http",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 253,
+      "kod": "14",
+      "object": 202,
+      "present": true
+    },
+    {
+      "subject": 3292,
+      "kod": "14",
+      "object": 2633,
+      "present": true
+    },
+    {
+      "subject": 299,
+      "kod": "14",
+      "object": 265,
+      "present": true
+    },
+    {
+      "subject": 1101,
+      "kod": "14",
+      "object": 265,
+      "present": true
+    },
+    {
+      "subject": 275,
+      "kod": "14",
+      "object": 266,
+      "present": true
+    },
+    {
+      "subject": 276,
+      "kod": "14",
+      "object": 266,
+      "present": true
+    },
+    {
+      "subject": 442,
+      "kod": "14",
+      "object": 362,
+      "present": true
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "software_style",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": "rest_style",
+      "ancestor": "software_style",
+      "present": true
+    },
+    {
+      "subject": "network_api",
+      "ancestor": 299,
+      "present": true
+    },
+    {
+      "subject": "http_api",
+      "ancestor": "network_api",
+      "present": true
+    },
+    {
+      "subject": "rest_api",
+      "ancestor": "network_api",
+      "present": true
+    },
+    {
+      "subject": "rest_http_api",
+      "ancestor": "http_api",
+      "present": true
+    },
+    {
+      "subject": "http",
+      "ancestor": 1101,
+      "present": true
+    },
+    {
+      "subject": "http_message",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": "http_request",
+      "ancestor": 275,
+      "present": true
+    },
+    {
+      "subject": "http_response",
+      "ancestor": 276,
+      "present": true
+    },
+    {
+      "subject": "http_method",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": "idempotent_method",
+      "ancestor": "http_method",
+      "present": true
+    },
+    {
+      "subject": "safe_method",
+      "ancestor": "idempotent_method",
+      "present": true
+    },
+    {
+      "subject": "get",
+      "ancestor": "safe_method",
+      "present": true
+    },
+    {
+      "subject": "head",
+      "ancestor": "safe_method",
+      "present": true
+    },
+    {
+      "subject": "post",
+      "ancestor": "http_method",
+      "present": true
+    },
+    {
+      "subject": "put",
+      "ancestor": "idempotent_method",
+      "present": true
+    },
+    {
+      "subject": "delete",
+      "ancestor": "idempotent_method",
+      "present": true
+    },
+    {
+      "subject": "resource_identifier",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": "uri",
+      "ancestor": "resource_identifier",
+      "present": true
+    },
+    {
+      "subject": "url",
+      "ancestor": "uri",
+      "present": true
+    },
+    {
+      "subject": "http_url",
+      "ancestor": "url",
+      "present": true
+    },
+    {
+      "subject": "https_url",
+      "ancestor": "url",
+      "present": true
+    },
+    {
+      "subject": "status_code",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": "http_processing",
+      "ancestor": 24428,
+      "present": true
+    },
+    {
+      "subject": "http_sending",
+      "ancestor": 24429,
+      "present": true
+    },
+    {
+      "subject": "http_server_software",
+      "ancestor": 277,
+      "present": true
+    },
+    {
+      "subject": "http_client_software",
+      "ancestor": 277,
+      "present": true
+    },
+    {
+      "subject": "get_request",
+      "ancestor": "http_request",
+      "present": true
+    },
+    {
+      "subject": "head_request",
+      "ancestor": "http_request",
+      "present": true
+    },
+    {
+      "subject": "rest_http_api",
+      "ancestor": "rest_api",
+      "present": true
+    },
+    {
+      "subject": "rest_http_api",
+      "ancestor": 299,
+      "present": true
+    },
+    {
+      "subject": "http_request",
+      "ancestor": "http_message",
+      "present": true
+    },
+    {
+      "subject": "http_response",
+      "ancestor": "http_message",
+      "present": true
+    },
+    {
+      "subject": "get",
+      "ancestor": "idempotent_method",
+      "present": true
+    },
+    {
+      "subject": "head",
+      "ancestor": "idempotent_method",
+      "present": true
+    },
+    {
+      "subject": "http_server_software",
+      "ancestor": 277,
+      "present": true
+    },
+    {
+      "subject": "http_client_software",
+      "ancestor": 277,
+      "present": true
+    },
+    {
+      "subject": "http_url",
+      "ancestor": "uri",
+      "present": true
+    },
+    {
+      "subject": "https_url",
+      "ancestor": "uri",
+      "present": true
+    },
+    {
+      "subject": "get_request",
+      "ancestor": 275,
+      "present": true
+    },
+    {
+      "subject": "head_request",
+      "ancestor": 275,
+      "present": true
+    },
+    {
+      "subject": "rest_style",
+      "ancestor": 253,
+      "present": false
+    },
+    {
+      "subject": "rest_style",
+      "ancestor": 3292,
+      "present": false
+    },
+    {
+      "subject": "rest_style",
+      "ancestor": 1101,
+      "present": false
+    },
+    {
+      "subject": "http_api",
+      "ancestor": "rest_api",
+      "present": false
+    },
+    {
+      "subject": "rest_api",
+      "ancestor": "http_api",
+      "present": false
+    },
+    {
+      "subject": "http",
+      "ancestor": "rest_style",
+      "present": false
+    },
+    {
+      "subject": "uri",
+      "ancestor": 442,
+      "present": false
+    },
+    {
+      "subject": "resource_identifier",
+      "ancestor": 442,
+      "present": false
+    },
+    {
+      "subject": "uri",
+      "ancestor": "url",
+      "present": false
+    },
+    {
+      "subject": "http_request",
+      "ancestor": "http_response",
+      "present": false
+    },
+    {
+      "subject": "get",
+      "ancestor": "http_request",
+      "present": false
+    },
+    {
+      "subject": "get_request",
+      "ancestor": "http_method",
+      "present": false
+    },
+    {
+      "subject": "http_server_software",
+      "ancestor": 303,
+      "present": false
+    },
+    {
+      "subject": "http_client_software",
+      "ancestor": 311,
+      "present": false
+    },
+    {
+      "subject": "http_server_software",
+      "ancestor": 302,
+      "present": false
+    },
+    {
+      "subject": "http_client_software",
+      "ancestor": 302,
+      "present": false
+    },
+    {
+      "subject": "put",
+      "ancestor": "safe_method",
+      "present": false
+    },
+    {
+      "subject": "delete",
+      "ancestor": "safe_method",
+      "present": false
+    },
+    {
+      "subject": "post",
+      "ancestor": "safe_method",
+      "present": false
+    },
+    {
+      "subject": "post",
+      "ancestor": "idempotent_method",
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": "software_style",
+      "term": "архитектурный стиль программной системы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "software_style",
+      "term": "software architectural style",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rest_style",
+      "term": "архитектурный стиль REST",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rest_style",
+      "term": "REST (architectural style)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rest_style",
+      "term": "Representational State Transfer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "network_api",
+      "term": "программный интерфейс для доступа по сети",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "network_api",
+      "term": "network API",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "network_api",
+      "term": "network-accessible API",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "http_api",
+      "term": "программный интерфейс на основе HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "http_api",
+      "term": "HTTP API",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rest_api",
+      "term": "программный интерфейс с архитектурой REST",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rest_api",
+      "term": "RESTful API",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rest_http_api",
+      "term": "программный интерфейс REST на основе HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rest_http_api",
+      "term": "RESTful HTTP API",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "http",
+      "term": "протокол HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "http",
+      "term": "HTTP",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "http",
+      "term": "Hypertext Transfer Protocol",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "http_message",
+      "term": "сообщение протокола HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "http_message",
+      "term": "HTTP message",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "http_request",
+      "term": "запрос HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "http_request",
+      "term": "HTTP request",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "http_response",
+      "term": "ответ HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "http_response",
+      "term": "HTTP response",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "http_method",
+      "term": "метод запроса HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "http_method",
+      "term": "HTTP request method",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "http_method",
+      "term": "HTTP method",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "idempotent_method",
+      "term": "метод HTTP с идемпотентной семантикой",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "idempotent_method",
+      "term": "idempotent HTTP method",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "safe_method",
+      "term": "метод HTTP с безопасной семантикой",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "safe_method",
+      "term": "safe HTTP method",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "get",
+      "term": "метод GET протокола HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "get",
+      "term": "HTTP GET method",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "head",
+      "term": "метод HEAD протокола HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "head",
+      "term": "HTTP HEAD method",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "post",
+      "term": "метод POST протокола HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "post",
+      "term": "HTTP POST method",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "put",
+      "term": "метод PUT протокола HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "put",
+      "term": "HTTP PUT method",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "delete",
+      "term": "метод DELETE протокола HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "delete",
+      "term": "HTTP DELETE method",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "resource_identifier",
+      "term": "идентификатор ресурса",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "resource_identifier",
+      "term": "resource identifier",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "uri",
+      "term": "унифицированный идентификатор ресурса",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "uri",
+      "term": "URI",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "uri",
+      "term": "Uniform Resource Identifier",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "url",
+      "term": "унифицированный указатель ресурса",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "url",
+      "term": "URL",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "url",
+      "term": "Uniform Resource Locator",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "http_url",
+      "term": "указатель ресурса со схемой http",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "http_url",
+      "term": "HTTP URL",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "https_url",
+      "term": "указатель ресурса со схемой https",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "https_url",
+      "term": "HTTPS URL",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "status_code",
+      "term": "код состояния ответа HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "status_code",
+      "term": "HTTP status code",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "http_processing",
+      "term": "обработка запроса HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "http_processing",
+      "term": "HTTP request processing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "http_sending",
+      "term": "отправка запроса HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "http_sending",
+      "term": "HTTP request sending",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "http_server_software",
+      "term": "серверное программное обеспечение HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "http_server_software",
+      "term": "HTTP server software",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "http_client_software",
+      "term": "клиентское программное обеспечение HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "http_client_software",
+      "term": "HTTP client software",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "get_request",
+      "term": "запрос HTTP с методом GET",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "get_request",
+      "term": "HTTP GET request",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "head_request",
+      "term": "запрос HTTP с методом HEAD",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "head_request",
+      "term": "HTTP HEAD request",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 253,
+      "term": "rest (relaxation)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1101,
+      "term": "communications protocol",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1101,
+      "term": "communication protocol (computing)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1101,
+      "term": "коммуникационный протокол",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 275,
+      "term": "network request",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 276,
+      "term": "network response",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 442,
+      "term": "programming language identifier",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 299,
+      "term": "интерфейс программирования приложений",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rest_style",
+      "term": "rest",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "rest_style",
+      "term": "REST",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "get",
+      "term": "get",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "post",
+      "term": "post",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "head",
+      "term": "head",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "delete",
+      "term": "delete",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "software_style",
+      "term": "architectural style",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "http_client_software",
+      "term": "client",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "http_server_software",
+      "term": "server",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

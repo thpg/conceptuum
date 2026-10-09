@@ -1,0 +1,2360 @@
+{
+  "source": "quality-20261009-q21",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Forest types, tree foliage classes and vegetation; separate broadleaf from deciduous and remove false forest/subtype exclusions.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "trees": "https://www.nps.gov/noca/learn/nature/treesandshrubs.htm",
+      "conifers": "https://home.nps.gov/articles/000/conifers.htm",
+      "rainforest": "https://www.nps.gov/olym/learn/nature/temperate-rain-forests.htm",
+      "deciduous": "https://www.nps.gov/im/ncrn/eastern-deciduous-forest.htm",
+      "boreal": "https://research.fs.usda.gov/treesearch/64446",
+      "grove": "https://gramota.ru/poisk?mode=slovari&query=%D1%80%D0%BE%D1%89%D0%B0"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet; CC BY 4.0 and Princeton notices remain in docs/quality/2026-10-09-q11.md#sources-and-reuse. NPS, US Forest Service and Gramota entries independently check botanical and lexical distinctions. Definitions are not copied verbatim; Russian wording, scope restrictions and graph mappings are editorial adaptations.",
+    "existing_cohort": [
+      26,
+      120,
+      124,
+      125,
+      126,
+      248,
+      249,
+      1423,
+      1424,
+      1639,
+      1642,
+      1646,
+      1883,
+      2636,
+      5529,
+      5530,
+      5577,
+      5578
+    ],
+    "context_policy": "All new concepts and assertions use U1 with unspecified strength. Existing home contexts and relation grammar remain unchanged. Forest families describe dominant vegetation, not purity, fixed stand percentages or legal land-use thresholds.",
+    "sense_decisions": [
+      {
+        "concept": "deciduous_tree",
+        "synset": "oewn-00917218-a",
+        "decision": "add",
+        "alignment": "tree class from seasonal trait",
+        "scope": "A tree that seasonally sheds its foliage. This includes some conifers and is not identical to broadleaf tree."
+      },
+      {
+        "concept": "evergreen_tree",
+        "synset": "oewn-13120592-n",
+        "decision": "add",
+        "alignment": "tree restriction",
+        "scope": "A tree that retains green foliage throughout the year. Restrict evergreen plant to trees; this does not mean individual leaves never fall."
+      },
+      {
+        "concept": "deciduous_conifer",
+        "synset": "oewn-11639312-n",
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "The intersection of coniferous tree and seasonally deciduous tree. Larch demonstrates that the intersection is nonempty."
+      },
+      {
+        "concept": "evergreen_conifer",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "The intersection of coniferous tree and evergreen tree, without claiming that all conifers are evergreen."
+      },
+      {
+        "concept": "deciduous_broadleaf",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "The intersection of broadleaf tree and seasonally deciduous tree."
+      },
+      {
+        "concept": "evergreen_broadleaf",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "The intersection of broadleaf tree and evergreen tree. Leaf form does not require seasonal leaf loss."
+      },
+      {
+        "concept": "conifer_forest",
+        "synset": null,
+        "decision": "add",
+        "alignment": "vegetation-dominance restriction",
+        "scope": "A forest whose characteristic dominant trees are conifers. It need not be evergreen or consist exclusively of conifers."
+      },
+      {
+        "concept": "broadleaf_forest",
+        "synset": null,
+        "decision": "add",
+        "alignment": "vegetation-dominance restriction",
+        "scope": "A forest characterized by broadleaf trees, with seasonal leaf retention left open."
+      },
+      {
+        "concept": "deciduous_forest",
+        "synset": "oewn-92418615-n",
+        "decision": "add",
+        "alignment": "remove broadleaf-only restriction",
+        "scope": "A forest characterized by seasonally deciduous trees. Broaden the dictionary broadleaf-only wording to admit deciduous conifer forest."
+      },
+      {
+        "concept": "evergreen_forest",
+        "synset": null,
+        "decision": "add",
+        "alignment": "foliage-retention restriction",
+        "scope": "A forest characterized by trees retaining green foliage through the year; not every plant or leaf must be evergreen."
+      },
+      {
+        "concept": "mixed_forest",
+        "synset": null,
+        "decision": "add",
+        "alignment": "specified mixed-stand sense",
+        "scope": "Select the mixture of coniferous and broadleaf trees. Do not assert both dominance-class genera merely from the presence of both components."
+      },
+      {
+        "concept": "rainforest",
+        "synset": "oewn-08456118-n",
+        "decision": "add",
+        "alignment": "wooded-area adaptation",
+        "scope": "A forest associated with abundant rainfall. Do not restrict the term to tropical forests or import a universal numerical rainfall threshold."
+      },
+      {
+        "concept": "tropical_forest",
+        "synset": null,
+        "decision": "add",
+        "alignment": "climatic-region restriction",
+        "scope": "A forest of the tropical climatic region. Some tropical forests are seasonally dry, so this is not a synonym of rainforest."
+      },
+      {
+        "concept": "temperate_forest",
+        "synset": null,
+        "decision": "add",
+        "alignment": "climatic-region restriction",
+        "scope": "A forest of the temperate climatic region, without requiring broadleaf or deciduous dominance."
+      },
+      {
+        "concept": "tropical_rainforest",
+        "synset": "oewn-08456118-n",
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "A rainforest in the tropical climatic region."
+      },
+      {
+        "concept": "temperate_rainforest",
+        "synset": "oewn-08456118-n",
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "A rainforest in the temperate climatic region; Pacific Northwest forests provide a counterexample to rainforest being necessarily tropical."
+      },
+      {
+        "concept": "evergreen_conifer_forest",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "A coniferous forest characterized by evergreen trees."
+      },
+      {
+        "concept": "deciduous_conifer_forest",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "A coniferous forest characterized by seasonally deciduous trees such as larches."
+      },
+      {
+        "concept": "deciduous_broadleaf_forest",
+        "synset": "oewn-92418615-n",
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "A broadleaf forest characterized by seasonally deciduous trees."
+      },
+      {
+        "concept": "evergreen_broadleaf_forest",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "A broadleaf forest characterized by evergreen trees."
+      },
+      {
+        "concept": "pine_forest",
+        "synset": "oewn-11628701-n",
+        "decision": "add",
+        "alignment": "dominant-tree restriction",
+        "scope": "A forest characterized by pine trees. The family does not require a pure single-species stand."
+      },
+      {
+        "concept": "spruce_forest",
+        "synset": "oewn-11644982-n",
+        "decision": "add",
+        "alignment": "dominant-tree restriction",
+        "scope": "A forest characterized by spruce trees; retain the tree sense rather than spruce wood."
+      },
+      {
+        "concept": "fir_forest",
+        "synset": "oewn-11641124-n",
+        "decision": "add",
+        "alignment": "dominant-tree restriction",
+        "scope": "A forest characterized by true fir trees, genus Abies."
+      },
+      {
+        "concept": "larch_forest",
+        "synset": "oewn-11639312-n",
+        "decision": "add",
+        "alignment": "dominant-tree restriction",
+        "scope": "A forest characterized by larch trees; this provides an explicit deciduous/coniferous forest intersection."
+      },
+      {
+        "concept": "birch_grove",
+        "synset": "oewn-12301758-n",
+        "decision": "add",
+        "alignment": "tree-defined grove restriction",
+        "scope": "A small wooded area characterized by birch trees. This is neither an individual birch nor a timber substance."
+      },
+      {
+        "concept": "vegetation",
+        "synset": "oewn-08453769-n",
+        "decision": "add",
+        "alignment": "collective plant-life sense",
+        "scope": "The plants collectively present in a region. Exclude botanical science, plant-growth processes, inactivity and medical homonyms; do not classify a collection as one plant."
+      },
+      {
+        "concept": "forest_vegetation",
+        "synset": "oewn-08455525-n",
+        "decision": "add",
+        "alignment": "separate vegetation and landscape senses",
+        "scope": "The collective plant life of a forest, distinct from forest as a wooded area."
+      },
+      {
+        "concept": "shrub_understorey",
+        "synset": "oewn-08456468-n",
+        "decision": "add",
+        "alignment": "narrower Russian shrub-layer sense",
+        "scope": "Select the shrub layer below the forest canopy. Restrict broad English undergrowth to the woody shrub layer denoted by the Russian forestry term; do not import every fern, herb or young canopy tree."
+      },
+      {
+        "concept": 124,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Oak includes both evergreen and deciduous species. Preserve its broadleaf genus without adding a universal deciduous parent."
+      },
+      {
+        "concept": 5529,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Taiga is not made coextensive with every boreal-biome use, nor forced beneath evergreen coniferous forest. Preserve its existing broad forest genus."
+      },
+      {
+        "concept": 1646,
+        "synset": "oewn-08456014-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reject universal forest/jungle disjointness, but defer the full Russian jungle/thicket and region scope."
+      },
+      {
+        "concept": 5530,
+        "synset": "oewn-03468764-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Do not import the orchard/garden sense or treat a grove as necessarily cultivated."
+      },
+      {
+        "concept": 120,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The existing wooden/tree terminology and reversed root/branch/leaf assertions require a separate material/part-whole review; this batch does not certify them."
+      }
+    ],
+    "limits": "No fixed canopy, area, rainfall, latitude or dominance thresholds. Broadleaf, foliage retention and climatic region are distinct classifications. Existing forest material percentages, broad plant/root/leaf assertions, wood-versus-tree terms and the full jungle/biome/ecosystem scope remain separate review tasks. No universal exclusion is asserted between forest dominance classes. No application test suites.",
+    "exclusion_review": {
+      "context": "U1 positive genus witnesses",
+      "before_conflicting_edges": 17,
+      "resolved_edges": [
+        9482,
+        9483
+      ],
+      "decision": "Reject the two false forest/subtype exclusions while preserving their genus rows. Also reject forest/jungle universal exclusion based on the reviewed forest sense of jungle. Other exclusions remain unchanged.",
+      "remaining_candidates_expected": 15
+    },
+    "new_term_collisions": [
+      {
+        "key": "deciduous_tree",
+        "term": "deciduous tree",
+        "lang": "en",
+        "existing": [
+          [
+            249,
+            "лиственное дерево"
+          ]
+        ]
+      }
+    ],
+    "collision_decision": "Move the sole colliding English label deciduous tree off the broadleaf-tree record 249 to the new seasonal-foliage record. No other collision is accepted.",
+    "refreshed_comparison": {
+      "baseline": "Q20",
+      "existing_concepts": 12864,
+      "existing_terms": 36300,
+      "synsets_with_exact_en_candidate": 15535,
+      "synsets_without_exact_en_candidate": 91984,
+      "existing_concepts_with_dictionary_candidate": 4116,
+      "caveat": "Normalized spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "deciduous_tree",
+      "name": "листопадное дерево",
+      "parent": 120,
+      "universum_id": 1,
+      "terms": [
+        [
+          "листопадное дерево",
+          "ru"
+        ],
+        [
+          "deciduous tree",
+          "en"
+        ]
+      ],
+      "reason": "A tree that seasonally sheds its foliage. This includes some conifers and is not identical to broadleaf tree. OEWN 2025: oewn-00917218-a. Source: https://www.nps.gov/noca/learn/nature/treesandshrubs.htm"
+    },
+    {
+      "key": "evergreen_tree",
+      "name": "вечнозелёное дерево",
+      "parent": 120,
+      "universum_id": 1,
+      "terms": [
+        [
+          "вечнозелёное дерево",
+          "ru"
+        ],
+        [
+          "evergreen tree",
+          "en"
+        ]
+      ],
+      "reason": "A tree that retains green foliage throughout the year. Restrict evergreen plant to trees; this does not mean individual leaves never fall. OEWN 2025: oewn-13120592-n. Source: https://www.nps.gov/noca/learn/nature/treesandshrubs.htm"
+    },
+    {
+      "key": "deciduous_conifer",
+      "name": "листопадное хвойное дерево",
+      "parent": 248,
+      "universum_id": 1,
+      "terms": [
+        [
+          "листопадное хвойное дерево",
+          "ru"
+        ],
+        [
+          "deciduous coniferous tree",
+          "en"
+        ],
+        [
+          "deciduous conifer",
+          "en"
+        ]
+      ],
+      "reason": "The intersection of coniferous tree and seasonally deciduous tree. Larch demonstrates that the intersection is nonempty. OEWN 2025: oewn-11639312-n. Source: https://www.nps.gov/noca/learn/nature/treesandshrubs.htm"
+    },
+    {
+      "key": "evergreen_conifer",
+      "name": "вечнозелёное хвойное дерево",
+      "parent": 248,
+      "universum_id": 1,
+      "terms": [
+        [
+          "вечнозелёное хвойное дерево",
+          "ru"
+        ],
+        [
+          "evergreen coniferous tree",
+          "en"
+        ],
+        [
+          "evergreen conifer",
+          "en"
+        ]
+      ],
+      "reason": "The intersection of coniferous tree and evergreen tree, without claiming that all conifers are evergreen. Source: https://home.nps.gov/articles/000/conifers.htm"
+    },
+    {
+      "key": "deciduous_broadleaf",
+      "name": "листопадное лиственное дерево",
+      "parent": 249,
+      "universum_id": 1,
+      "terms": [
+        [
+          "листопадное лиственное дерево",
+          "ru"
+        ],
+        [
+          "deciduous broadleaf tree",
+          "en"
+        ]
+      ],
+      "reason": "The intersection of broadleaf tree and seasonally deciduous tree. Source: https://www.nps.gov/im/ncrn/eastern-deciduous-forest.htm"
+    },
+    {
+      "key": "evergreen_broadleaf",
+      "name": "вечнозелёное лиственное дерево",
+      "parent": 249,
+      "universum_id": 1,
+      "terms": [
+        [
+          "вечнозелёное лиственное дерево",
+          "ru"
+        ],
+        [
+          "evergreen broadleaf tree",
+          "en"
+        ]
+      ],
+      "reason": "The intersection of broadleaf tree and evergreen tree. Leaf form does not require seasonal leaf loss. Source: https://www.nps.gov/im/ncrn/eastern-deciduous-forest.htm"
+    },
+    {
+      "key": "conifer_forest",
+      "name": "хвойный лес",
+      "parent": 1642,
+      "universum_id": 1,
+      "terms": [
+        [
+          "хвойный лес",
+          "ru"
+        ],
+        [
+          "coniferous forest",
+          "en"
+        ]
+      ],
+      "reason": "A forest whose characteristic dominant trees are conifers. It need not be evergreen or consist exclusively of conifers. Source: https://www.nps.gov/noca/learn/nature/treesandshrubs.htm"
+    },
+    {
+      "key": "broadleaf_forest",
+      "name": "лиственный лес",
+      "parent": 1642,
+      "universum_id": 1,
+      "terms": [
+        [
+          "лиственный лес",
+          "ru"
+        ],
+        [
+          "broadleaf forest",
+          "en"
+        ],
+        [
+          "broad-leaved forest",
+          "en"
+        ]
+      ],
+      "reason": "A forest characterized by broadleaf trees, with seasonal leaf retention left open. Source: https://www.nps.gov/im/ncrn/eastern-deciduous-forest.htm"
+    },
+    {
+      "key": "deciduous_forest",
+      "name": "листопадный лес",
+      "parent": 1642,
+      "universum_id": 1,
+      "terms": [
+        [
+          "листопадный лес",
+          "ru"
+        ],
+        [
+          "deciduous forest",
+          "en"
+        ]
+      ],
+      "reason": "A forest characterized by seasonally deciduous trees. Broaden the dictionary broadleaf-only wording to admit deciduous conifer forest. OEWN 2025: oewn-92418615-n. Source: https://www.nps.gov/noca/learn/nature/treesandshrubs.htm"
+    },
+    {
+      "key": "evergreen_forest",
+      "name": "вечнозелёный лес",
+      "parent": 1642,
+      "universum_id": 1,
+      "terms": [
+        [
+          "вечнозелёный лес",
+          "ru"
+        ],
+        [
+          "evergreen forest",
+          "en"
+        ]
+      ],
+      "reason": "A forest characterized by trees retaining green foliage through the year; not every plant or leaf must be evergreen. Source: https://www.nps.gov/noca/learn/nature/treesandshrubs.htm"
+    },
+    {
+      "key": "mixed_forest",
+      "name": "смешанный хвойно-лиственный лес",
+      "parent": 1642,
+      "universum_id": 1,
+      "terms": [
+        [
+          "смешанный хвойно-лиственный лес",
+          "ru"
+        ],
+        [
+          "mixed coniferous and broadleaf forest",
+          "en"
+        ],
+        [
+          "смешанный лес",
+          "ru"
+        ],
+        [
+          "mixed forest (coniferous and broadleaf)",
+          "en"
+        ]
+      ],
+      "reason": "Select the mixture of coniferous and broadleaf trees. Do not assert both dominance-class genera merely from the presence of both components. Source: https://www.nps.gov/im/ncrn/eastern-deciduous-forest.htm"
+    },
+    {
+      "key": "rainforest",
+      "name": "дождевой лес",
+      "parent": 1642,
+      "universum_id": 1,
+      "terms": [
+        [
+          "дождевой лес",
+          "ru"
+        ],
+        [
+          "rainforest",
+          "en"
+        ],
+        [
+          "rain forest",
+          "en"
+        ]
+      ],
+      "reason": "A forest associated with abundant rainfall. Do not restrict the term to tropical forests or import a universal numerical rainfall threshold. OEWN 2025: oewn-08456118-n. Source: https://www.nps.gov/olym/learn/nature/temperate-rain-forests.htm"
+    },
+    {
+      "key": "tropical_forest",
+      "name": "тропический лес",
+      "parent": 1642,
+      "universum_id": 1,
+      "terms": [
+        [
+          "тропический лес",
+          "ru"
+        ],
+        [
+          "tropical forest",
+          "en"
+        ]
+      ],
+      "reason": "A forest of the tropical climatic region. Some tropical forests are seasonally dry, so this is not a synonym of rainforest. Source: https://www.nps.gov/olym/learn/nature/temperate-rain-forests.htm"
+    },
+    {
+      "key": "temperate_forest",
+      "name": "лес умеренного пояса",
+      "parent": 1642,
+      "universum_id": 1,
+      "terms": [
+        [
+          "лес умеренного пояса",
+          "ru"
+        ],
+        [
+          "temperate forest",
+          "en"
+        ]
+      ],
+      "reason": "A forest of the temperate climatic region, without requiring broadleaf or deciduous dominance. Source: https://www.nps.gov/olym/learn/nature/temperate-rain-forests.htm"
+    },
+    {
+      "key": "tropical_rainforest",
+      "name": "тропический дождевой лес",
+      "parent": "rainforest",
+      "universum_id": 1,
+      "terms": [
+        [
+          "тропический дождевой лес",
+          "ru"
+        ],
+        [
+          "tropical rainforest",
+          "en"
+        ],
+        [
+          "tropical rain forest",
+          "en"
+        ]
+      ],
+      "reason": "A rainforest in the tropical climatic region. OEWN 2025: oewn-08456118-n. Source: https://www.nps.gov/olym/learn/nature/temperate-rain-forests.htm"
+    },
+    {
+      "key": "temperate_rainforest",
+      "name": "дождевой лес умеренного пояса",
+      "parent": "rainforest",
+      "universum_id": 1,
+      "terms": [
+        [
+          "дождевой лес умеренного пояса",
+          "ru"
+        ],
+        [
+          "temperate rainforest",
+          "en"
+        ],
+        [
+          "temperate rain forest",
+          "en"
+        ]
+      ],
+      "reason": "A rainforest in the temperate climatic region; Pacific Northwest forests provide a counterexample to rainforest being necessarily tropical. OEWN 2025: oewn-08456118-n. Source: https://www.nps.gov/olym/learn/nature/temperate-rain-forests.htm"
+    },
+    {
+      "key": "evergreen_conifer_forest",
+      "name": "вечнозелёный хвойный лес",
+      "parent": "conifer_forest",
+      "universum_id": 1,
+      "terms": [
+        [
+          "вечнозелёный хвойный лес",
+          "ru"
+        ],
+        [
+          "evergreen coniferous forest",
+          "en"
+        ]
+      ],
+      "reason": "A coniferous forest characterized by evergreen trees. Source: https://www.nps.gov/noca/learn/nature/treesandshrubs.htm"
+    },
+    {
+      "key": "deciduous_conifer_forest",
+      "name": "листопадный хвойный лес",
+      "parent": "conifer_forest",
+      "universum_id": 1,
+      "terms": [
+        [
+          "листопадный хвойный лес",
+          "ru"
+        ],
+        [
+          "deciduous coniferous forest",
+          "en"
+        ]
+      ],
+      "reason": "A coniferous forest characterized by seasonally deciduous trees such as larches. Source: https://www.nps.gov/noca/learn/nature/treesandshrubs.htm"
+    },
+    {
+      "key": "deciduous_broadleaf_forest",
+      "name": "листопадный лиственный лес",
+      "parent": "broadleaf_forest",
+      "universum_id": 1,
+      "terms": [
+        [
+          "листопадный лиственный лес",
+          "ru"
+        ],
+        [
+          "deciduous broadleaf forest",
+          "en"
+        ]
+      ],
+      "reason": "A broadleaf forest characterized by seasonally deciduous trees. OEWN 2025: oewn-92418615-n. Source: https://www.nps.gov/im/ncrn/eastern-deciduous-forest.htm"
+    },
+    {
+      "key": "evergreen_broadleaf_forest",
+      "name": "вечнозелёный лиственный лес",
+      "parent": "broadleaf_forest",
+      "universum_id": 1,
+      "terms": [
+        [
+          "вечнозелёный лиственный лес",
+          "ru"
+        ],
+        [
+          "evergreen broadleaf forest",
+          "en"
+        ]
+      ],
+      "reason": "A broadleaf forest characterized by evergreen trees. Source: https://www.nps.gov/im/ncrn/eastern-deciduous-forest.htm"
+    },
+    {
+      "key": "pine_forest",
+      "name": "сосновый лес",
+      "parent": "conifer_forest",
+      "universum_id": 1,
+      "terms": [
+        [
+          "сосновый лес",
+          "ru"
+        ],
+        [
+          "pine forest",
+          "en"
+        ]
+      ],
+      "reason": "A forest characterized by pine trees. The family does not require a pure single-species stand. OEWN 2025: oewn-11628701-n. Source: https://www.nps.gov/noca/learn/nature/treesandshrubs.htm"
+    },
+    {
+      "key": "spruce_forest",
+      "name": "еловый лес",
+      "parent": "conifer_forest",
+      "universum_id": 1,
+      "terms": [
+        [
+          "еловый лес",
+          "ru"
+        ],
+        [
+          "spruce forest",
+          "en"
+        ]
+      ],
+      "reason": "A forest characterized by spruce trees; retain the tree sense rather than spruce wood. OEWN 2025: oewn-11644982-n. Source: https://www.nps.gov/noca/learn/nature/treesandshrubs.htm"
+    },
+    {
+      "key": "fir_forest",
+      "name": "пихтовый лес",
+      "parent": "evergreen_conifer_forest",
+      "universum_id": 1,
+      "terms": [
+        [
+          "пихтовый лес",
+          "ru"
+        ],
+        [
+          "fir forest",
+          "en"
+        ]
+      ],
+      "reason": "A forest characterized by true fir trees, genus Abies. OEWN 2025: oewn-11641124-n. Source: https://www.nps.gov/noca/learn/nature/treesandshrubs.htm"
+    },
+    {
+      "key": "larch_forest",
+      "name": "лиственничный лес",
+      "parent": "deciduous_conifer_forest",
+      "universum_id": 1,
+      "terms": [
+        [
+          "лиственничный лес",
+          "ru"
+        ],
+        [
+          "larch forest",
+          "en"
+        ]
+      ],
+      "reason": "A forest characterized by larch trees; this provides an explicit deciduous/coniferous forest intersection. OEWN 2025: oewn-11639312-n. Source: https://www.nps.gov/noca/learn/nature/treesandshrubs.htm"
+    },
+    {
+      "key": "birch_grove",
+      "name": "берёзовая роща",
+      "parent": 5530,
+      "universum_id": 1,
+      "terms": [
+        [
+          "берёзовая роща",
+          "ru"
+        ],
+        [
+          "birch grove",
+          "en"
+        ]
+      ],
+      "reason": "A small wooded area characterized by birch trees. This is neither an individual birch nor a timber substance. OEWN 2025: oewn-12301758-n. Source: https://gramota.ru/poisk?mode=slovari&query=%D1%80%D0%BE%D1%89%D0%B0"
+    },
+    {
+      "key": "vegetation",
+      "name": "растительность",
+      "parent": 2636,
+      "universum_id": 1,
+      "terms": [
+        [
+          "растительность",
+          "ru"
+        ],
+        [
+          "vegetation",
+          "en"
+        ]
+      ],
+      "reason": "The plants collectively present in a region. Exclude botanical science, plant-growth processes, inactivity and medical homonyms; do not classify a collection as one plant. OEWN 2025: oewn-08453769-n."
+    },
+    {
+      "key": "forest_vegetation",
+      "name": "лесная растительность",
+      "parent": "vegetation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "лесная растительность",
+          "ru"
+        ],
+        [
+          "forest vegetation",
+          "en"
+        ]
+      ],
+      "reason": "The collective plant life of a forest, distinct from forest as a wooded area. OEWN 2025: oewn-08455525-n."
+    },
+    {
+      "key": "shrub_understorey",
+      "name": "подлесок",
+      "parent": "forest_vegetation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "подлесок",
+          "ru"
+        ],
+        [
+          "shrub understorey",
+          "en"
+        ],
+        [
+          "shrub understory",
+          "en"
+        ]
+      ],
+      "reason": "Select the shrub layer below the forest canopy. Restrict broad English undergrowth to the woody shrub layer denoted by the Russian forestry term; do not import every fern, herb or young canopy tree. OEWN 2025: oewn-08456468-n. Source: https://www.nps.gov/noca/learn/nature/treesandshrubs.htm"
+    }
+  ],
+  "renames": [],
+  "terms": [
+    {
+      "id": 249,
+      "name": "лиственное дерево",
+      "terms": [
+        [
+          "broadleaf tree",
+          "en"
+        ],
+        [
+          "broad-leaved tree",
+          "en"
+        ]
+      ],
+      "reason": "The existing Russian tree family and its children select broadleaf trees, not every tree with seasonally shed foliage. OEWN 2025: oewn-00917383-s."
+    },
+    {
+      "id": 248,
+      "name": "хвойное дерево",
+      "terms": [
+        [
+          "coniferous tree",
+          "en"
+        ]
+      ],
+      "reason": "Keep the existing tree-restricted conifer meaning. Do not import shrubs or use evergreen as an exact synonym. OEWN 2025: oewn-13129600-n."
+    },
+    {
+      "id": 5578,
+      "name": "лиственница",
+      "terms": [
+        [
+          "larch tree",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the existing tree sense rather than timber. OEWN 2025: oewn-11639312-n."
+    },
+    {
+      "id": 5577,
+      "name": "пихта",
+      "terms": [
+        [
+          "fir tree",
+          "en"
+        ],
+        [
+          "true fir",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the existing Abies tree sense. OEWN 2025: oewn-11641124-n."
+    },
+    {
+      "id": 1642,
+      "name": "лес",
+      "terms": [
+        [
+          "forest (wooded area)",
+          "en"
+        ],
+        [
+          "woodland",
+          "en"
+        ]
+      ],
+      "reason": "Retain the ordinary wooded-area sense. No legal forest-size threshold or timber-material sense is imported. OEWN 2025: oewn-09306921-n."
+    },
+    {
+      "id": 5529,
+      "name": "тайга",
+      "terms": [
+        [
+          "taiga forest",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the selected forest sense without equating every boreal biome or all taiga stands with evergreen coniferous forest."
+    },
+    {
+      "id": 5530,
+      "name": "роща",
+      "terms": [
+        [
+          "grove (small wood)",
+          "en"
+        ]
+      ],
+      "reason": "Select the small-wood meaning; do not import the cultivated orchard homonym or a universal absence of undergrowth. OEWN 2025: oewn-08455920-n."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 249,
+      "term": "deciduous tree",
+      "lang": "en",
+      "reason": "Move the seasonal foliage meaning to its own record. Deciduous conifers such as larches are not broadleaf trees."
+    }
+  ],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 9566,
+      "before": [
+        5578,
+        "14",
+        120,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          5578,
+          "14",
+          "deciduous_conifer",
+          null,
+          1
+        ]
+      ],
+      "reason": "The tree sense of larch belongs to the deciduous conifers. Its original tree genus remains an ancestor. OEWN 2025: oewn-11639312-n. Source: https://www.nps.gov/noca/learn/nature/treesandshrubs.htm"
+    },
+    {
+      "id": 9565,
+      "before": [
+        5577,
+        "14",
+        120,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          5577,
+          "14",
+          "evergreen_conifer",
+          null,
+          1
+        ]
+      ],
+      "reason": "The selected true-fir tree of genus Abies is an evergreen conifer; exclude fir timber and Douglas-fir homonyms. OEWN 2025: oewn-11641124-n."
+    },
+    {
+      "id": 9482,
+      "before": [
+        5529,
+        "61",
+        1642,
+        1
+      ],
+      "reviewed_strength": 85,
+      "replacements": [],
+      "reason": "Taiga in the selected forest sense is within forest, so it cannot be disjoint from its genus. Preserve the original accepted genus.  Source: https://research.fs.usda.gov/treesearch/64446"
+    },
+    {
+      "id": 9483,
+      "before": [
+        5530,
+        "61",
+        1642,
+        1
+      ],
+      "reviewed_strength": 90,
+      "replacements": [],
+      "reason": "A grove is a small wooded area within the existing broad forest sense, not an excluded peer of forest. Preserve its genus. OEWN 2025: oewn-08455920-n. Source: https://gramota.ru/poisk?mode=slovari&query=%D1%80%D0%BE%D1%89%D0%B0"
+    },
+    {
+      "id": 3723,
+      "before": [
+        1642,
+        "61",
+        1646,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "Jungle and forest are not universally disjoint: the dictionary forest sense of jungle is a counterexample. Do not force all broader jungle/thicket usages beneath forest. OEWN 2025: oewn-08456014-n."
+    }
+  ],
+  "edges": [
+    {
+      "subject": "deciduous_conifer",
+      "kod": "14",
+      "object": "deciduous_tree",
+      "universum_id": 1,
+      "reason": "Retain both independently reviewed tree classifications. Source: https://www.nps.gov/noca/learn/nature/treesandshrubs.htm"
+    },
+    {
+      "subject": "evergreen_conifer",
+      "kod": "14",
+      "object": "evergreen_tree",
+      "universum_id": 1,
+      "reason": "Retain both independently reviewed tree classifications. Source: https://www.nps.gov/noca/learn/nature/treesandshrubs.htm"
+    },
+    {
+      "subject": "deciduous_broadleaf",
+      "kod": "14",
+      "object": "deciduous_tree",
+      "universum_id": 1,
+      "reason": "Retain both independently reviewed tree classifications. Source: https://www.nps.gov/noca/learn/nature/treesandshrubs.htm"
+    },
+    {
+      "subject": "evergreen_broadleaf",
+      "kod": "14",
+      "object": "evergreen_tree",
+      "universum_id": 1,
+      "reason": "Retain both independently reviewed tree classifications. Source: https://www.nps.gov/noca/learn/nature/treesandshrubs.htm"
+    },
+    {
+      "subject": "tropical_rainforest",
+      "kod": "14",
+      "object": "tropical_forest",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications of the restricted forest family."
+    },
+    {
+      "subject": "temperate_rainforest",
+      "kod": "14",
+      "object": "temperate_forest",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications of the restricted forest family."
+    },
+    {
+      "subject": "evergreen_conifer_forest",
+      "kod": "14",
+      "object": "evergreen_forest",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications of the restricted forest family."
+    },
+    {
+      "subject": "deciduous_conifer_forest",
+      "kod": "14",
+      "object": "deciduous_forest",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications of the restricted forest family."
+    },
+    {
+      "subject": "deciduous_broadleaf_forest",
+      "kod": "14",
+      "object": "deciduous_forest",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications of the restricted forest family."
+    },
+    {
+      "subject": "evergreen_broadleaf_forest",
+      "kod": "14",
+      "object": "evergreen_forest",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications of the restricted forest family."
+    },
+    {
+      "subject": "birch_grove",
+      "kod": "14",
+      "object": "broadleaf_forest",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications of the restricted forest family."
+    },
+    {
+      "subject": "conifer_forest",
+      "kod": "20",
+      "object": 248,
+      "universum_id": 1,
+      "reason": "The selected forest or vegetation has this plant component; a component is not a genus. No numerical dominance or stand-purity claim is added."
+    },
+    {
+      "subject": "broadleaf_forest",
+      "kod": "20",
+      "object": 249,
+      "universum_id": 1,
+      "reason": "The selected forest or vegetation has this plant component; a component is not a genus. No numerical dominance or stand-purity claim is added."
+    },
+    {
+      "subject": "deciduous_forest",
+      "kod": "20",
+      "object": "deciduous_tree",
+      "universum_id": 1,
+      "reason": "The selected forest or vegetation has this plant component; a component is not a genus. No numerical dominance or stand-purity claim is added."
+    },
+    {
+      "subject": "evergreen_forest",
+      "kod": "20",
+      "object": "evergreen_tree",
+      "universum_id": 1,
+      "reason": "The selected forest or vegetation has this plant component; a component is not a genus. No numerical dominance or stand-purity claim is added."
+    },
+    {
+      "subject": "mixed_forest",
+      "kod": "20",
+      "object": 248,
+      "universum_id": 1,
+      "reason": "The selected forest or vegetation has this plant component; a component is not a genus. No numerical dominance or stand-purity claim is added."
+    },
+    {
+      "subject": "mixed_forest",
+      "kod": "20",
+      "object": 249,
+      "universum_id": 1,
+      "reason": "The selected forest or vegetation has this plant component; a component is not a genus. No numerical dominance or stand-purity claim is added."
+    },
+    {
+      "subject": "pine_forest",
+      "kod": "20",
+      "object": 126,
+      "universum_id": 1,
+      "reason": "The selected forest or vegetation has this plant component; a component is not a genus. No numerical dominance or stand-purity claim is added."
+    },
+    {
+      "subject": "spruce_forest",
+      "kod": "20",
+      "object": 1423,
+      "universum_id": 1,
+      "reason": "The selected forest or vegetation has this plant component; a component is not a genus. No numerical dominance or stand-purity claim is added."
+    },
+    {
+      "subject": "fir_forest",
+      "kod": "20",
+      "object": 5577,
+      "universum_id": 1,
+      "reason": "The selected forest or vegetation has this plant component; a component is not a genus. No numerical dominance or stand-purity claim is added."
+    },
+    {
+      "subject": "larch_forest",
+      "kod": "20",
+      "object": 5578,
+      "universum_id": 1,
+      "reason": "The selected forest or vegetation has this plant component; a component is not a genus. No numerical dominance or stand-purity claim is added."
+    },
+    {
+      "subject": "birch_grove",
+      "kod": "20",
+      "object": 125,
+      "universum_id": 1,
+      "reason": "The selected forest or vegetation has this plant component; a component is not a genus. No numerical dominance or stand-purity claim is added."
+    },
+    {
+      "subject": "vegetation",
+      "kod": "20",
+      "object": 26,
+      "universum_id": 1,
+      "reason": "The selected forest or vegetation has this plant component; a component is not a genus. No numerical dominance or stand-purity claim is added."
+    },
+    {
+      "subject": "forest_vegetation",
+      "kod": "20",
+      "object": 120,
+      "universum_id": 1,
+      "reason": "The selected forest or vegetation has this plant component; a component is not a genus. No numerical dominance or stand-purity claim is added."
+    },
+    {
+      "subject": 1642,
+      "kod": "20",
+      "object": "forest_vegetation",
+      "universum_id": 1,
+      "reason": "The selected forest or vegetation has this plant component; a component is not a genus. No numerical dominance or stand-purity claim is added."
+    }
+  ],
+  "checks": [
+    {
+      "subject": "deciduous_tree",
+      "kod": "14",
+      "object": 120,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "evergreen_tree",
+      "kod": "14",
+      "object": 120,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "deciduous_conifer",
+      "kod": "14",
+      "object": 248,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "evergreen_conifer",
+      "kod": "14",
+      "object": 248,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "deciduous_broadleaf",
+      "kod": "14",
+      "object": 249,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "evergreen_broadleaf",
+      "kod": "14",
+      "object": 249,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "deciduous_conifer",
+      "kod": "14",
+      "object": "deciduous_tree",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "evergreen_conifer",
+      "kod": "14",
+      "object": "evergreen_tree",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "deciduous_broadleaf",
+      "kod": "14",
+      "object": "deciduous_tree",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "evergreen_broadleaf",
+      "kod": "14",
+      "object": "evergreen_tree",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5578,
+      "kod": "14",
+      "object": 120,
+      "present": false
+    },
+    {
+      "subject": 5578,
+      "kod": "14",
+      "object": "deciduous_conifer",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5577,
+      "kod": "14",
+      "object": 120,
+      "present": false
+    },
+    {
+      "subject": 5577,
+      "kod": "14",
+      "object": "evergreen_conifer",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5529,
+      "kod": "61",
+      "object": 1642,
+      "present": false
+    },
+    {
+      "subject": 5530,
+      "kod": "61",
+      "object": 1642,
+      "present": false
+    },
+    {
+      "subject": 1642,
+      "kod": "61",
+      "object": 1646,
+      "present": false
+    },
+    {
+      "subject": "conifer_forest",
+      "kod": "14",
+      "object": 1642,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "broadleaf_forest",
+      "kod": "14",
+      "object": 1642,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "deciduous_forest",
+      "kod": "14",
+      "object": 1642,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "evergreen_forest",
+      "kod": "14",
+      "object": 1642,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mixed_forest",
+      "kod": "14",
+      "object": 1642,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rainforest",
+      "kod": "14",
+      "object": 1642,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "tropical_forest",
+      "kod": "14",
+      "object": 1642,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "temperate_forest",
+      "kod": "14",
+      "object": 1642,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "tropical_rainforest",
+      "kod": "14",
+      "object": "rainforest",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "temperate_rainforest",
+      "kod": "14",
+      "object": "rainforest",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "evergreen_conifer_forest",
+      "kod": "14",
+      "object": "conifer_forest",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "deciduous_conifer_forest",
+      "kod": "14",
+      "object": "conifer_forest",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "deciduous_broadleaf_forest",
+      "kod": "14",
+      "object": "broadleaf_forest",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "evergreen_broadleaf_forest",
+      "kod": "14",
+      "object": "broadleaf_forest",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pine_forest",
+      "kod": "14",
+      "object": "conifer_forest",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "spruce_forest",
+      "kod": "14",
+      "object": "conifer_forest",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fir_forest",
+      "kod": "14",
+      "object": "evergreen_conifer_forest",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "larch_forest",
+      "kod": "14",
+      "object": "deciduous_conifer_forest",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "birch_grove",
+      "kod": "14",
+      "object": 5530,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "tropical_rainforest",
+      "kod": "14",
+      "object": "tropical_forest",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "temperate_rainforest",
+      "kod": "14",
+      "object": "temperate_forest",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "evergreen_conifer_forest",
+      "kod": "14",
+      "object": "evergreen_forest",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "deciduous_conifer_forest",
+      "kod": "14",
+      "object": "deciduous_forest",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "deciduous_broadleaf_forest",
+      "kod": "14",
+      "object": "deciduous_forest",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "evergreen_broadleaf_forest",
+      "kod": "14",
+      "object": "evergreen_forest",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "birch_grove",
+      "kod": "14",
+      "object": "broadleaf_forest",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "vegetation",
+      "kod": "14",
+      "object": 2636,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "forest_vegetation",
+      "kod": "14",
+      "object": "vegetation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "shrub_understorey",
+      "kod": "14",
+      "object": "forest_vegetation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "conifer_forest",
+      "kod": "20",
+      "object": 248,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "broadleaf_forest",
+      "kod": "20",
+      "object": 249,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "deciduous_forest",
+      "kod": "20",
+      "object": "deciduous_tree",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "evergreen_forest",
+      "kod": "20",
+      "object": "evergreen_tree",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mixed_forest",
+      "kod": "20",
+      "object": 248,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mixed_forest",
+      "kod": "20",
+      "object": 249,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pine_forest",
+      "kod": "20",
+      "object": 126,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "spruce_forest",
+      "kod": "20",
+      "object": 1423,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fir_forest",
+      "kod": "20",
+      "object": 5577,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "larch_forest",
+      "kod": "20",
+      "object": 5578,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "birch_grove",
+      "kod": "20",
+      "object": 125,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "vegetation",
+      "kod": "20",
+      "object": 26,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "forest_vegetation",
+      "kod": "20",
+      "object": 120,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1642,
+      "kod": "20",
+      "object": "forest_vegetation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "deciduous_tree",
+      "kod": "61",
+      "object": 248,
+      "present": false
+    },
+    {
+      "subject": "deciduous_forest",
+      "kod": "61",
+      "object": "conifer_forest",
+      "present": false
+    },
+    {
+      "subject": "rainforest",
+      "kod": "14",
+      "object": "tropical_forest",
+      "present": false
+    },
+    {
+      "subject": 1642,
+      "kod": "20",
+      "object": "shrub_understorey",
+      "present": false
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "deciduous_tree",
+      "ancestor": 120,
+      "present": true
+    },
+    {
+      "subject": "evergreen_tree",
+      "ancestor": 120,
+      "present": true
+    },
+    {
+      "subject": "deciduous_conifer",
+      "ancestor": 248,
+      "present": true
+    },
+    {
+      "subject": "evergreen_conifer",
+      "ancestor": 248,
+      "present": true
+    },
+    {
+      "subject": "deciduous_broadleaf",
+      "ancestor": 249,
+      "present": true
+    },
+    {
+      "subject": "evergreen_broadleaf",
+      "ancestor": 249,
+      "present": true
+    },
+    {
+      "subject": "conifer_forest",
+      "ancestor": 1642,
+      "present": true
+    },
+    {
+      "subject": "broadleaf_forest",
+      "ancestor": 1642,
+      "present": true
+    },
+    {
+      "subject": "deciduous_forest",
+      "ancestor": 1642,
+      "present": true
+    },
+    {
+      "subject": "evergreen_forest",
+      "ancestor": 1642,
+      "present": true
+    },
+    {
+      "subject": "mixed_forest",
+      "ancestor": 1642,
+      "present": true
+    },
+    {
+      "subject": "rainforest",
+      "ancestor": 1642,
+      "present": true
+    },
+    {
+      "subject": "tropical_forest",
+      "ancestor": 1642,
+      "present": true
+    },
+    {
+      "subject": "temperate_forest",
+      "ancestor": 1642,
+      "present": true
+    },
+    {
+      "subject": "tropical_rainforest",
+      "ancestor": "rainforest",
+      "present": true
+    },
+    {
+      "subject": "temperate_rainforest",
+      "ancestor": "rainforest",
+      "present": true
+    },
+    {
+      "subject": "evergreen_conifer_forest",
+      "ancestor": "conifer_forest",
+      "present": true
+    },
+    {
+      "subject": "deciduous_conifer_forest",
+      "ancestor": "conifer_forest",
+      "present": true
+    },
+    {
+      "subject": "deciduous_broadleaf_forest",
+      "ancestor": "broadleaf_forest",
+      "present": true
+    },
+    {
+      "subject": "evergreen_broadleaf_forest",
+      "ancestor": "broadleaf_forest",
+      "present": true
+    },
+    {
+      "subject": "pine_forest",
+      "ancestor": "conifer_forest",
+      "present": true
+    },
+    {
+      "subject": "spruce_forest",
+      "ancestor": "conifer_forest",
+      "present": true
+    },
+    {
+      "subject": "fir_forest",
+      "ancestor": "evergreen_conifer_forest",
+      "present": true
+    },
+    {
+      "subject": "larch_forest",
+      "ancestor": "deciduous_conifer_forest",
+      "present": true
+    },
+    {
+      "subject": "birch_grove",
+      "ancestor": 5530,
+      "present": true
+    },
+    {
+      "subject": "vegetation",
+      "ancestor": 2636,
+      "present": true
+    },
+    {
+      "subject": "forest_vegetation",
+      "ancestor": "vegetation",
+      "present": true
+    },
+    {
+      "subject": "shrub_understorey",
+      "ancestor": "forest_vegetation",
+      "present": true
+    },
+    {
+      "subject": 5578,
+      "ancestor": 248,
+      "present": true
+    },
+    {
+      "subject": 5578,
+      "ancestor": "deciduous_tree",
+      "present": true
+    },
+    {
+      "subject": 5578,
+      "ancestor": 120,
+      "present": true
+    },
+    {
+      "subject": 5577,
+      "ancestor": 248,
+      "present": true
+    },
+    {
+      "subject": 5577,
+      "ancestor": "evergreen_tree",
+      "present": true
+    },
+    {
+      "subject": 5529,
+      "ancestor": 1642,
+      "present": true
+    },
+    {
+      "subject": 5530,
+      "ancestor": 1642,
+      "present": true
+    },
+    {
+      "subject": "birch_grove",
+      "ancestor": 1642,
+      "present": true
+    },
+    {
+      "subject": "larch_forest",
+      "ancestor": "deciduous_forest",
+      "present": true
+    },
+    {
+      "subject": "larch_forest",
+      "ancestor": "conifer_forest",
+      "present": true
+    },
+    {
+      "subject": "deciduous_tree",
+      "ancestor": 249,
+      "present": false
+    },
+    {
+      "subject": 249,
+      "ancestor": "deciduous_tree",
+      "present": false
+    },
+    {
+      "subject": 248,
+      "ancestor": "evergreen_tree",
+      "present": false
+    },
+    {
+      "subject": 5578,
+      "ancestor": 249,
+      "present": false
+    },
+    {
+      "subject": "rainforest",
+      "ancestor": "tropical_forest",
+      "present": false
+    },
+    {
+      "subject": "temperate_rainforest",
+      "ancestor": "tropical_forest",
+      "present": false
+    },
+    {
+      "subject": "conifer_forest",
+      "ancestor": "evergreen_forest",
+      "present": false
+    },
+    {
+      "subject": "mixed_forest",
+      "ancestor": "conifer_forest",
+      "present": false
+    },
+    {
+      "subject": "mixed_forest",
+      "ancestor": "broadleaf_forest",
+      "present": false
+    },
+    {
+      "subject": "vegetation",
+      "ancestor": 26,
+      "present": false
+    },
+    {
+      "subject": "forest_vegetation",
+      "ancestor": 1642,
+      "present": false
+    },
+    {
+      "subject": "birch_grove",
+      "ancestor": 125,
+      "present": false
+    },
+    {
+      "subject": 5529,
+      "ancestor": "evergreen_conifer_forest",
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": 249,
+      "term": "broadleaf tree",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 249,
+      "term": "broad-leaved tree",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 249,
+      "term": "deciduous tree",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 248,
+      "term": "coniferous tree",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "deciduous_tree",
+      "term": "листопадное дерево",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "deciduous_tree",
+      "term": "deciduous tree",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "evergreen_tree",
+      "term": "вечнозелёное дерево",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "evergreen_tree",
+      "term": "evergreen tree",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "deciduous_conifer",
+      "term": "листопадное хвойное дерево",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "deciduous_conifer",
+      "term": "deciduous coniferous tree",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "deciduous_conifer",
+      "term": "deciduous conifer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "evergreen_conifer",
+      "term": "вечнозелёное хвойное дерево",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "evergreen_conifer",
+      "term": "evergreen coniferous tree",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "evergreen_conifer",
+      "term": "evergreen conifer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "deciduous_broadleaf",
+      "term": "листопадное лиственное дерево",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "deciduous_broadleaf",
+      "term": "deciduous broadleaf tree",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "evergreen_broadleaf",
+      "term": "вечнозелёное лиственное дерево",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "evergreen_broadleaf",
+      "term": "evergreen broadleaf tree",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5578,
+      "term": "larch tree",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5577,
+      "term": "fir tree",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5577,
+      "term": "true fir",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1642,
+      "term": "forest (wooded area)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1642,
+      "term": "woodland",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5529,
+      "term": "taiga forest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5530,
+      "term": "grove (small wood)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "conifer_forest",
+      "term": "хвойный лес",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "conifer_forest",
+      "term": "coniferous forest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "broadleaf_forest",
+      "term": "лиственный лес",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "broadleaf_forest",
+      "term": "broadleaf forest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "broadleaf_forest",
+      "term": "broad-leaved forest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "deciduous_forest",
+      "term": "листопадный лес",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "deciduous_forest",
+      "term": "deciduous forest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "evergreen_forest",
+      "term": "вечнозелёный лес",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "evergreen_forest",
+      "term": "evergreen forest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "mixed_forest",
+      "term": "смешанный хвойно-лиственный лес",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "mixed_forest",
+      "term": "mixed coniferous and broadleaf forest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "mixed_forest",
+      "term": "смешанный лес",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "mixed_forest",
+      "term": "mixed forest (coniferous and broadleaf)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rainforest",
+      "term": "дождевой лес",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rainforest",
+      "term": "rainforest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rainforest",
+      "term": "rain forest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "tropical_forest",
+      "term": "тропический лес",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "tropical_forest",
+      "term": "tropical forest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "temperate_forest",
+      "term": "лес умеренного пояса",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "temperate_forest",
+      "term": "temperate forest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "tropical_rainforest",
+      "term": "тропический дождевой лес",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "tropical_rainforest",
+      "term": "tropical rainforest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "tropical_rainforest",
+      "term": "tropical rain forest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "temperate_rainforest",
+      "term": "дождевой лес умеренного пояса",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "temperate_rainforest",
+      "term": "temperate rainforest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "temperate_rainforest",
+      "term": "temperate rain forest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "evergreen_conifer_forest",
+      "term": "вечнозелёный хвойный лес",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "evergreen_conifer_forest",
+      "term": "evergreen coniferous forest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "deciduous_conifer_forest",
+      "term": "листопадный хвойный лес",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "deciduous_conifer_forest",
+      "term": "deciduous coniferous forest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "deciduous_broadleaf_forest",
+      "term": "листопадный лиственный лес",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "deciduous_broadleaf_forest",
+      "term": "deciduous broadleaf forest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "evergreen_broadleaf_forest",
+      "term": "вечнозелёный лиственный лес",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "evergreen_broadleaf_forest",
+      "term": "evergreen broadleaf forest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pine_forest",
+      "term": "сосновый лес",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pine_forest",
+      "term": "pine forest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "spruce_forest",
+      "term": "еловый лес",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "spruce_forest",
+      "term": "spruce forest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fir_forest",
+      "term": "пихтовый лес",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fir_forest",
+      "term": "fir forest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "larch_forest",
+      "term": "лиственничный лес",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "larch_forest",
+      "term": "larch forest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "birch_grove",
+      "term": "берёзовая роща",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "birch_grove",
+      "term": "birch grove",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "vegetation",
+      "term": "растительность",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "vegetation",
+      "term": "vegetation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "forest_vegetation",
+      "term": "лесная растительность",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "forest_vegetation",
+      "term": "forest vegetation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "shrub_understorey",
+      "term": "подлесок",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "shrub_understorey",
+      "term": "shrub understorey",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "shrub_understorey",
+      "term": "shrub understory",
+      "lang": "en",
+      "present": true
+    }
+  ]
+}

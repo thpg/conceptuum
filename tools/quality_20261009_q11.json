@@ -1,0 +1,4364 @@
+{
+  "source": "quality-20261009-q11",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local database and working tree only. No commit, push or deployment.",
+    "scope": "Dictionary reconciliation: measurement instruments, their functions and targets, unit families, all seven SI base-unit names, and selected everyday units.",
+    "dictionary_comparison": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      },
+      "existing_concepts": 12499,
+      "existing_terms": 35112,
+      "existing_en_lemmas": 6172,
+      "normalized_lemmas_with_exact_en_candidate": 3822,
+      "synsets_with_exact_en_candidate": 15298,
+      "synsets_without_exact_en_candidate": 92221,
+      "existing_concepts_with_dictionary_candidate": 3923,
+      "existing_concepts_without_latin_en_term": 7302,
+      "caveat": "String matches are candidates, not verified sense alignments. No exact English candidate does not establish that a concept is absent; Russian labels, aliases and graph context require review."
+    },
+    "sources": {
+      "oewn_release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "oewn_download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "oewn_license": "https://github.com/globalwordnet/english-wordnet/blob/2025-edition/LICENSE.md",
+      "princeton_license": "https://github.com/globalwordnet/english-wordnet/blob/2025-edition/WNDB_License.txt",
+      "si_brochure": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf",
+      "si_version": "9th edition, version 4.01, June 2026; tables 2, 4, 7 and 8",
+      "measurement_unit": "https://jcgm.bipm.org/vim/en/1.9.html",
+      "measuring_instrument": "https://jcgm.bipm.org/vim/en/3.1.html"
+    },
+    "attribution": "Uses reviewed and adapted lexical data from Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton University WordNet. OEWN additions are licensed CC BY 4.0; the Princeton notice is reproduced in the Q11 report. Unit classifications are independently checked against the BIPM SI Brochure (CC BY 4.0). Russian labels, selection, scope restrictions and graph mappings are adaptations; no endorsement is implied.",
+    "context_policy": "All new concepts and assertions use the existing Everyday context U1. Existing home contexts are preserved; U2 remains empty.",
+    "method": "Full normalized English lemma comparison generates candidates only. Each selected meaning is checked against all existing names and RU/EN aliases, its existing parents, and dictionary sense definitions. Synsets and synonyms are selected manually. Productive measurement phrases are marked as composed meanings supported by instrument definitions, not invented dictionary entries.",
+    "existing_cohort": [
+      1501,
+      1686,
+      1908,
+      1909,
+      2338,
+      2651,
+      3098,
+      3555,
+      3563,
+      3867,
+      24457,
+      24458,
+      24459,
+      24460
+    ],
+    "sense_decisions": [
+      {
+        "concept": 2651,
+        "synset": "oewn-13604927-n",
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "The measurement-unit meaning already exists; do not duplicate unit."
+      },
+      {
+        "concept": 24457,
+        "synset": "oewn-13624548-n",
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "The linear-unit meaning is already the length-unit concept."
+      },
+      {
+        "concept": 24458,
+        "synset": "oewn-15179734-n",
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing time-unit family."
+      },
+      {
+        "concept": 24459,
+        "synset": "oewn-13629841-n",
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing temperature-unit family."
+      },
+      {
+        "concept": 3098,
+        "synset": "oewn-13681046-n",
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Meter/metre as a length unit already exists; the measuring-device homonym is different."
+      },
+      {
+        "concept": 1686,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing second as a time unit; its additional period interpretation is outside this batch."
+      },
+      {
+        "concept": 24460,
+        "synset": "oewn-13736596-n",
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Degree Celsius already exists below temperature degree; it is not kelvin."
+      },
+      {
+        "concept": 3563,
+        "synset": "oewn-13747698-n",
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Tonne already exists. Refine its genus to mass unit; do not import the ambiguous English ton."
+      },
+      {
+        "concept": 3555,
+        "synset": "oewn-04429007-n",
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Thermometer exists. Refine its genus and connect its temperature-measurement purpose."
+      },
+      {
+        "concept": 1501,
+        "synset": "oewn-04125870-n",
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse ruler as a measuring tool, not the person who governs."
+      },
+      {
+        "concept": 2338,
+        "synset": "oewn-04399200-n",
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse tape measure; retain the existing tool classification."
+      },
+      {
+        "concept": 1908,
+        "synset": "oewn-04149040-n",
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse scales, their existing weighing purpose and the reviewed mass target."
+      },
+      {
+        "concept": 1909,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing weighing process; do not create mass measurement as a duplicate."
+      },
+      {
+        "concept": 3867,
+        "synset": "oewn-00998911-n",
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the reviewed measurement action."
+      },
+      {
+        "concept": "mass_unit",
+        "synset": "oewn-13630457-n",
+        "decision": "add",
+        "alignment": "adapted unit-family sense",
+        "scope": "A unit for mass, distinct from a unit of force or an individual mass."
+      },
+      {
+        "concept": "area_unit",
+        "synset": "oewn-13621647-n",
+        "decision": "add",
+        "alignment": "adapted unit-family sense",
+        "scope": "A unit of area; use the individual-unit family sense, not a system of units."
+      },
+      {
+        "concept": "volume_unit",
+        "synset": "oewn-13622065-n",
+        "decision": "add",
+        "alignment": "adapted unit-family sense",
+        "scope": "A unit for three-dimensional volume or capacity."
+      },
+      {
+        "concept": "force_unit",
+        "synset": "oewn-13624308-n",
+        "decision": "add",
+        "alignment": "adapted unit-family sense",
+        "scope": "A measurement unit of physical force."
+      },
+      {
+        "concept": "pressure_unit",
+        "synset": "oewn-13629228-n",
+        "decision": "add",
+        "alignment": "adapted unit-family sense",
+        "scope": "A measurement unit of pressure."
+      },
+      {
+        "concept": "energy_unit",
+        "synset": "oewn-13630750-n",
+        "decision": "add",
+        "alignment": "adapted unit-family sense",
+        "scope": "An energy/work unit; not restricted to electrical energy."
+      },
+      {
+        "concept": "power_unit",
+        "synset": "oewn-13656569-n",
+        "decision": "add",
+        "alignment": "adapted unit-family sense",
+        "scope": "A unit of physical power. Broaden the dictionary electrical-only wording according to SI usage."
+      },
+      {
+        "concept": "current_unit",
+        "synset": "oewn-13654836-n",
+        "decision": "add",
+        "alignment": "adapted unit-family sense",
+        "scope": "A unit of current as a quantity, not a unit of charge."
+      },
+      {
+        "concept": "voltage_unit",
+        "synset": "oewn-13656245-n",
+        "decision": "add",
+        "alignment": "adapted unit-family sense",
+        "scope": "A unit of electric potential difference, kept distinct from a quantity or a charge."
+      },
+      {
+        "concept": "resistance_unit",
+        "synset": "oewn-13657032-n",
+        "decision": "add",
+        "alignment": "adapted unit-family sense",
+        "scope": "A unit of electrical resistance. The dictionary gloss describes a quantity, not the unit family."
+      },
+      {
+        "concept": "frequency_unit",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed family supported by SI",
+        "scope": "A unit for frequency. Hertz supplies the dictionary lexical anchor; SI table 4 supplies the family classification."
+      },
+      {
+        "concept": "substance_unit",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed family supported by SI",
+        "scope": "A unit of amount of substance. Mole is classified here, not as a mass unit."
+      },
+      {
+        "concept": "luminous_unit",
+        "synset": "oewn-13661529-n",
+        "decision": "add",
+        "alignment": "adapted unit-family sense",
+        "scope": "A unit for luminous intensity; candela is its SI base unit."
+      },
+      {
+        "concept": "kilogram",
+        "synset": "oewn-13746692-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "SI base unit of mass. No prototype-object definition is imported."
+      },
+      {
+        "concept": "gram",
+        "synset": "oewn-13745822-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Mass unit equal to 0.001 kilogram; mass is not force."
+      },
+      {
+        "concept": "milligram",
+        "synset": "oewn-13745171-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Mass unit equal to 0.001 gram."
+      },
+      {
+        "concept": "millimetre",
+        "synset": "oewn-13680427-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Length unit equal to 0.001 metre."
+      },
+      {
+        "concept": "centimetre",
+        "synset": "oewn-13680636-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Length unit equal to 0.01 metre."
+      },
+      {
+        "concept": "kilometre",
+        "synset": "oewn-13681796-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Length unit equal to 1000 metres."
+      },
+      {
+        "concept": "micrometre",
+        "synset": "oewn-13680266-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Length unit equal to one millionth of a metre. Separate from the micrometer instrument."
+      },
+      {
+        "concept": "litre",
+        "synset": "oewn-13645547-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Volume unit equal to one cubic decimetre. Do not use its obsolete water-mass definition."
+      },
+      {
+        "concept": "millilitre",
+        "synset": "oewn-13644955-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Volume unit equal to one cubic centimetre, or 0.001 litre. These are aliases of one unit, not separate concepts."
+      },
+      {
+        "concept": "cubic_metre",
+        "synset": "oewn-13646268-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "SI unit of volume equal to 1000 litres; a cubic metre is not a kind of linear metre."
+      },
+      {
+        "concept": "square_metre",
+        "synset": "oewn-13634537-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "SI area unit. A square metre is not a kind of linear metre."
+      },
+      {
+        "concept": "hectare",
+        "synset": "oewn-13635266-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Area unit equal to 10000 square metres."
+      },
+      {
+        "concept": "kelvin",
+        "synset": "oewn-13736861-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "SI base unit of thermodynamic temperature; it is not a temperature degree or an alias of degree Celsius."
+      },
+      {
+        "concept": "ampere",
+        "synset": "oewn-13658855-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Select the current SI ampere, not the separate historical international-ampere synset."
+      },
+      {
+        "concept": "volt",
+        "synset": "oewn-13664755-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "SI unit of electric potential difference."
+      },
+      {
+        "concept": "ohm",
+        "synset": "oewn-13668434-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "SI unit of electrical resistance, distinct from a resistor as a component."
+      },
+      {
+        "concept": "watt",
+        "synset": "oewn-13666001-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "SI unit of power; one joule per second. Power is not energy."
+      },
+      {
+        "concept": "kilowatt",
+        "synset": "oewn-13666240-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Power unit equal to 1000 watts; kilowatt-hour is a different energy unit."
+      },
+      {
+        "concept": "joule",
+        "synset": "oewn-13748184-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "SI unit of energy and work, not restricted to the electrical example in the dictionary."
+      },
+      {
+        "concept": "newton",
+        "synset": "oewn-13669285-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "SI unit of force, distinct from kilogram as mass and from the existing Newton person record (3167)."
+      },
+      {
+        "concept": "pascal",
+        "synset": "oewn-13733408-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Pressure unit, not the Pascal programming language. One newton per square metre."
+      },
+      {
+        "concept": "hertz",
+        "synset": "oewn-15304090-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Unit of frequency equal to one per second. It is not a duration or the frequency property itself."
+      },
+      {
+        "concept": "mole",
+        "synset": "oewn-13746191-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "SI unit of amount of substance. Reject the dictionary mass-unit parent and gram-molecular-weight gloss; do not confuse it with the insect, mammal, skin mark or mole sauce."
+      },
+      {
+        "concept": "candela",
+        "synset": "oewn-13663013-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "SI base unit of luminous intensity. The historical black-body realization in the dictionary is not imported, nor candle as a casual synonym."
+      },
+      {
+        "concept": "current_strength",
+        "synset": null,
+        "decision": "add",
+        "alignment": "quantity distinction supported by SI",
+        "scope": "The rate of electric charge transfer, measured in amperes. Distinct from the process of charge flow; the OEWN current synset is a related phenomenon, not an exact quantity mapping."
+      },
+      {
+        "concept": "current_strength",
+        "synset": "oewn-11463628-n",
+        "decision": "related, not equivalent",
+        "alignment": "related sense",
+        "scope": "Current as a flow phenomenon does not itself define the measured scalar quantity."
+      },
+      {
+        "concept": "voltage",
+        "synset": "oewn-11514227-n",
+        "decision": "add",
+        "alignment": "corrected and restricted quantity sense",
+        "scope": "Electric potential difference measured in volts. Do not import the erroneous difference-in-charge gloss or equate absolute potential with potential difference."
+      },
+      {
+        "concept": "resistance",
+        "synset": "oewn-11524386-n",
+        "decision": "add",
+        "alignment": "restricted quantity sense",
+        "scope": "Electrical resistance measured in ohms. Keep resistivity, impedance and the resistor device separate; the dictionary synonym list merges different quantities."
+      },
+      {
+        "concept": "atmospheric_pressure",
+        "synset": "oewn-11449572-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The pressure exerted by the atmosphere. Existing pressure is broader, so reuse it as genus."
+      },
+      {
+        "concept": "temperature_measurement",
+        "synset": "oewn-01118681-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Measurement of temperature; the action sense of thermometry, not the whole discipline."
+      },
+      {
+        "concept": "length_measurement",
+        "synset": "oewn-04125870-n",
+        "decision": "add",
+        "alignment": "composed purpose from cited instrument sense",
+        "scope": "The length-measurement purpose described for rulers and other length instruments."
+      },
+      {
+        "concept": "distance_measurement",
+        "synset": "oewn-03846663-n",
+        "decision": "add",
+        "alignment": "composed purpose from cited instrument sense",
+        "scope": "Measurement of distance, including distance travelled as recorded by an odometer."
+      },
+      {
+        "concept": "duration_measurement",
+        "synset": "oewn-04335324-n",
+        "decision": "add",
+        "alignment": "composed purpose from cited instrument sense",
+        "scope": "Measurement of elapsed duration. Avoid the separate dictionary timing senses of scheduling or coordination."
+      },
+      {
+        "concept": "pressure_measurement",
+        "synset": "oewn-04007857-n",
+        "decision": "add",
+        "alignment": "composed purpose from cited instrument sense",
+        "scope": "Measurement of pressure as described in the pressure-gauge definition."
+      },
+      {
+        "concept": "atmospheric_pressure_measurement",
+        "synset": "oewn-02797179-n",
+        "decision": "add",
+        "alignment": "composed purpose from cited instrument sense",
+        "scope": "The narrower atmospheric-pressure measurement performed with a barometer."
+      },
+      {
+        "concept": "current_measurement",
+        "synset": "oewn-02705848-n",
+        "decision": "add",
+        "alignment": "composed purpose from cited instrument sense",
+        "scope": "Measurement of current strength, not measurement of charge or of the ammeter itself."
+      },
+      {
+        "concept": "voltage_measurement",
+        "synset": "oewn-04548606-n",
+        "decision": "add",
+        "alignment": "composed purpose from cited instrument sense",
+        "scope": "Measurement of potential difference between two points."
+      },
+      {
+        "concept": "resistance_measurement",
+        "synset": "oewn-03848506-n",
+        "decision": "add",
+        "alignment": "composed purpose from cited instrument sense",
+        "scope": "Measurement of electrical resistance, without assuming measurement of resistivity or impedance."
+      },
+      {
+        "concept": "measuring_instrument",
+        "synset": "oewn-03739416-n",
+        "decision": "add",
+        "alignment": "restricted device sense",
+        "scope": "A device used for measurement. A measuring system can contain several devices, so that synonym is not imported."
+      },
+      {
+        "concept": "pressure_gauge",
+        "synset": "oewn-04007857-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A device for measuring fluid pressure. The narrower OEWN manometer entry is not imported as a second device."
+      },
+      {
+        "concept": "barometer",
+        "synset": "oewn-02797179-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A pressure-measuring instrument specifically for atmospheric pressure."
+      },
+      {
+        "concept": "ammeter",
+        "synset": "oewn-02705848-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An instrument whose measuring purpose is electric current strength."
+      },
+      {
+        "concept": "voltmeter",
+        "synset": "oewn-04548606-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An instrument for measuring electrical potential difference."
+      },
+      {
+        "concept": "ohmmeter",
+        "synset": "oewn-03848506-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An instrument for measuring electrical resistance."
+      },
+      {
+        "concept": "stopwatch",
+        "synset": "oewn-04335324-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A device for measuring elapsed intervals that can be started and stopped. It is not a second or a duration itself."
+      },
+      {
+        "concept": "odometer",
+        "synset": "oewn-03846663-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An instrument for recording distance travelled; it measures distance rather than instantaneous speed."
+      },
+      {
+        "concept": "micrometer_instrument",
+        "synset": "oewn-03765190-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The measuring instrument, distinct from the length unit with the same spelling. Its caliper subtype needs a separately reviewed Russian genus; use the nearest currently available genus."
+      }
+    ],
+    "limits": "This is the first reviewed dictionary batch, not a complete semantic comparison of 107519 synsets. Exact English mismatches are not absence counts. No relation grammar changes or automatic WordNet hypernym, antonym, or synonym import. Unit conversion factors are review metadata only: genus is not a scale-conversion relation. No obsolete SI definitions, unqualified ton, impedance/resistivity aliases for resistance, or measuring-system synonym for an individual instrument. Unit symbols are selected explicitly and are not generated by case folding. No application test suites.",
+    "new_term_collision_review": [
+      {
+        "key": "newton",
+        "term": "newton",
+        "lang": "en",
+        "existing": [
+          [
+            3167,
+            "ньютон"
+          ]
+        ],
+        "decision": "Existing 3167 is a person. Keep that identity and its terms; create the qualified force-unit meaning."
+      },
+      {
+        "key": "newton",
+        "term": "ньютон",
+        "lang": "ru",
+        "existing": [
+          [
+            3167,
+            "ньютон"
+          ]
+        ],
+        "decision": "Existing 3167 is a person. Keep that identity and its terms; create the qualified force-unit meaning."
+      },
+      {
+        "key": "pascal",
+        "term": "pascal",
+        "lang": "en",
+        "existing": [
+          [
+            379,
+            "Pascal"
+          ]
+        ],
+        "decision": "Existing 379 is the programming language in U3. Keep it unchanged; create the qualified pressure-unit meaning in U1."
+      },
+      {
+        "key": "pascal",
+        "term": "паскаль",
+        "lang": "ru",
+        "existing": [
+          [
+            379,
+            "Pascal"
+          ]
+        ],
+        "decision": "Existing 379 is the programming language in U3. Keep it unchanged; create the qualified pressure-unit meaning in U1."
+      },
+      {
+        "key": "mole",
+        "term": "mole",
+        "lang": "en",
+        "existing": [
+          [
+            1322,
+            "крот"
+          ]
+        ],
+        "decision": "Existing 1322 is the mammal (English mole); 1377 is the insect (Russian моль). Keep both unchanged; the amount-of-substance unit is a third meaning."
+      },
+      {
+        "key": "mole",
+        "term": "моль",
+        "lang": "ru",
+        "existing": [
+          [
+            1377,
+            "моль"
+          ]
+        ],
+        "decision": "Existing 1322 is the mammal (English mole); 1377 is the insect (Russian моль). Keep both unchanged; the amount-of-substance unit is a third meaning."
+      }
+    ]
+  },
+  "concepts": [
+    {
+      "key": "mass_unit",
+      "name": "единица массы",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица массы",
+          "ru"
+        ],
+        [
+          "mass unit",
+          "en"
+        ]
+      ],
+      "reason": "A unit for mass, distinct from a unit of force or an individual mass. Dictionary sense: oewn-13630457-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf Source: https://jcgm.bipm.org/vim/en/1.9.html"
+    },
+    {
+      "key": "area_unit",
+      "name": "единица площади",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица площади",
+          "ru"
+        ],
+        [
+          "area unit",
+          "en"
+        ]
+      ],
+      "reason": "A unit of area; use the individual-unit family sense, not a system of units. Dictionary sense: oewn-13621647-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf Source: https://jcgm.bipm.org/vim/en/1.9.html"
+    },
+    {
+      "key": "volume_unit",
+      "name": "единица объёма",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица объёма",
+          "ru"
+        ],
+        [
+          "volume unit",
+          "en"
+        ]
+      ],
+      "reason": "A unit for three-dimensional volume or capacity. Dictionary sense: oewn-13622065-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf Source: https://jcgm.bipm.org/vim/en/1.9.html"
+    },
+    {
+      "key": "force_unit",
+      "name": "единица силы",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица силы",
+          "ru"
+        ],
+        [
+          "force unit",
+          "en"
+        ]
+      ],
+      "reason": "A measurement unit of physical force. Dictionary sense: oewn-13624308-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf Source: https://jcgm.bipm.org/vim/en/1.9.html"
+    },
+    {
+      "key": "pressure_unit",
+      "name": "единица давления",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица давления",
+          "ru"
+        ],
+        [
+          "pressure unit",
+          "en"
+        ]
+      ],
+      "reason": "A measurement unit of pressure. Dictionary sense: oewn-13629228-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf Source: https://jcgm.bipm.org/vim/en/1.9.html"
+    },
+    {
+      "key": "energy_unit",
+      "name": "единица энергии",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица энергии",
+          "ru"
+        ],
+        [
+          "energy unit",
+          "en"
+        ]
+      ],
+      "reason": "An energy/work unit; not restricted to electrical energy. Dictionary sense: oewn-13630750-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf Source: https://jcgm.bipm.org/vim/en/1.9.html"
+    },
+    {
+      "key": "power_unit",
+      "name": "единица мощности",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица мощности",
+          "ru"
+        ],
+        [
+          "power unit",
+          "en"
+        ]
+      ],
+      "reason": "A unit of physical power. Broaden the dictionary electrical-only wording according to SI usage. Dictionary sense: oewn-13656569-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf Source: https://jcgm.bipm.org/vim/en/1.9.html"
+    },
+    {
+      "key": "current_unit",
+      "name": "единица силы электрического тока",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица силы электрического тока",
+          "ru"
+        ],
+        [
+          "electric current unit",
+          "en"
+        ]
+      ],
+      "reason": "A unit of current as a quantity, not a unit of charge. Dictionary sense: oewn-13654836-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf Source: https://jcgm.bipm.org/vim/en/1.9.html"
+    },
+    {
+      "key": "voltage_unit",
+      "name": "единица электрического напряжения",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица электрического напряжения",
+          "ru"
+        ],
+        [
+          "voltage unit",
+          "en"
+        ]
+      ],
+      "reason": "A unit of electric potential difference, kept distinct from a quantity or a charge. Dictionary sense: oewn-13656245-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf Source: https://jcgm.bipm.org/vim/en/1.9.html"
+    },
+    {
+      "key": "resistance_unit",
+      "name": "единица электрического сопротивления",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица электрического сопротивления",
+          "ru"
+        ],
+        [
+          "electrical resistance unit",
+          "en"
+        ]
+      ],
+      "reason": "A unit of electrical resistance. The dictionary gloss describes a quantity, not the unit family. Dictionary sense: oewn-13657032-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf Source: https://jcgm.bipm.org/vim/en/1.9.html"
+    },
+    {
+      "key": "frequency_unit",
+      "name": "единица частоты",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица частоты",
+          "ru"
+        ],
+        [
+          "frequency unit",
+          "en"
+        ]
+      ],
+      "reason": "A unit for frequency. Hertz supplies the dictionary lexical anchor; SI table 4 supplies the family classification. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf Source: https://jcgm.bipm.org/vim/en/1.9.html"
+    },
+    {
+      "key": "substance_unit",
+      "name": "единица количества вещества",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица количества вещества",
+          "ru"
+        ],
+        [
+          "unit of amount of substance",
+          "en"
+        ]
+      ],
+      "reason": "A unit of amount of substance. Mole is classified here, not as a mass unit. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf Source: https://jcgm.bipm.org/vim/en/1.9.html"
+    },
+    {
+      "key": "luminous_unit",
+      "name": "единица силы света",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица силы света",
+          "ru"
+        ],
+        [
+          "luminous intensity unit",
+          "en"
+        ]
+      ],
+      "reason": "A unit for luminous intensity; candela is its SI base unit. Dictionary sense: oewn-13661529-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf Source: https://jcgm.bipm.org/vim/en/1.9.html"
+    },
+    {
+      "key": "kilogram",
+      "name": "килограмм",
+      "parent": "mass_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "килограмм",
+          "ru"
+        ],
+        [
+          "kilogram",
+          "en"
+        ],
+        [
+          "kg",
+          "en"
+        ]
+      ],
+      "reason": "SI base unit of mass. No prototype-object definition is imported. Dictionary sense: oewn-13746692-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "gram",
+      "name": "грамм",
+      "parent": "mass_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "грамм",
+          "ru"
+        ],
+        [
+          "gram",
+          "en"
+        ],
+        [
+          "gramme",
+          "en"
+        ]
+      ],
+      "reason": "Mass unit equal to 0.001 kilogram; mass is not force. Dictionary sense: oewn-13745822-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "milligram",
+      "name": "миллиграмм",
+      "parent": "mass_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "миллиграмм",
+          "ru"
+        ],
+        [
+          "milligram",
+          "en"
+        ],
+        [
+          "mg",
+          "en"
+        ]
+      ],
+      "reason": "Mass unit equal to 0.001 gram. Dictionary sense: oewn-13745171-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "millimetre",
+      "name": "миллиметр",
+      "parent": 24457,
+      "universum_id": 1,
+      "terms": [
+        [
+          "миллиметр",
+          "ru"
+        ],
+        [
+          "millimetre",
+          "en"
+        ],
+        [
+          "millimeter",
+          "en"
+        ],
+        [
+          "mm",
+          "en"
+        ]
+      ],
+      "reason": "Length unit equal to 0.001 metre. Dictionary sense: oewn-13680427-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "centimetre",
+      "name": "сантиметр",
+      "parent": 24457,
+      "universum_id": 1,
+      "terms": [
+        [
+          "сантиметр",
+          "ru"
+        ],
+        [
+          "centimetre",
+          "en"
+        ],
+        [
+          "centimeter",
+          "en"
+        ],
+        [
+          "cm",
+          "en"
+        ]
+      ],
+      "reason": "Length unit equal to 0.01 metre. Dictionary sense: oewn-13680636-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "kilometre",
+      "name": "километр",
+      "parent": 24457,
+      "universum_id": 1,
+      "terms": [
+        [
+          "километр",
+          "ru"
+        ],
+        [
+          "kilometre",
+          "en"
+        ],
+        [
+          "kilometer",
+          "en"
+        ],
+        [
+          "km",
+          "en"
+        ]
+      ],
+      "reason": "Length unit equal to 1000 metres. Dictionary sense: oewn-13681796-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "micrometre",
+      "name": "микрометр (единица длины)",
+      "parent": 24457,
+      "universum_id": 1,
+      "terms": [
+        [
+          "микрометр (единица длины)",
+          "ru"
+        ],
+        [
+          "micrometre",
+          "en"
+        ],
+        [
+          "micrometer",
+          "en"
+        ],
+        [
+          "micron",
+          "en"
+        ],
+        [
+          "микрометр",
+          "ru"
+        ],
+        [
+          "микрон",
+          "ru"
+        ]
+      ],
+      "reason": "Length unit equal to one millionth of a metre. Separate from the micrometer instrument. Dictionary sense: oewn-13680266-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "litre",
+      "name": "литр",
+      "parent": "volume_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "литр",
+          "ru"
+        ],
+        [
+          "litre",
+          "en"
+        ],
+        [
+          "liter",
+          "en"
+        ],
+        [
+          "cubic decimetre",
+          "en"
+        ],
+        [
+          "cubic decimeter",
+          "en"
+        ],
+        [
+          "кубический дециметр",
+          "ru"
+        ]
+      ],
+      "reason": "Volume unit equal to one cubic decimetre. Do not use its obsolete water-mass definition. Dictionary sense: oewn-13645547-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "millilitre",
+      "name": "миллилитр",
+      "parent": "volume_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "миллилитр",
+          "ru"
+        ],
+        [
+          "millilitre",
+          "en"
+        ],
+        [
+          "milliliter",
+          "en"
+        ],
+        [
+          "mL",
+          "en"
+        ],
+        [
+          "cubic centimetre",
+          "en"
+        ],
+        [
+          "cubic centimeter",
+          "en"
+        ],
+        [
+          "кубический сантиметр",
+          "ru"
+        ]
+      ],
+      "reason": "Volume unit equal to one cubic centimetre, or 0.001 litre. These are aliases of one unit, not separate concepts. Dictionary sense: oewn-13644955-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "cubic_metre",
+      "name": "кубический метр",
+      "parent": "volume_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "кубический метр",
+          "ru"
+        ],
+        [
+          "cubic metre",
+          "en"
+        ],
+        [
+          "cubic meter",
+          "en"
+        ],
+        [
+          "kilolitre",
+          "en"
+        ],
+        [
+          "kiloliter",
+          "en"
+        ],
+        [
+          "килолитр",
+          "ru"
+        ]
+      ],
+      "reason": "SI unit of volume equal to 1000 litres; a cubic metre is not a kind of linear metre. Dictionary sense: oewn-13646268-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "square_metre",
+      "name": "квадратный метр",
+      "parent": "area_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "квадратный метр",
+          "ru"
+        ],
+        [
+          "square metre",
+          "en"
+        ],
+        [
+          "square meter",
+          "en"
+        ]
+      ],
+      "reason": "SI area unit. A square metre is not a kind of linear metre. Dictionary sense: oewn-13634537-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "hectare",
+      "name": "гектар",
+      "parent": "area_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "гектар",
+          "ru"
+        ],
+        [
+          "hectare",
+          "en"
+        ],
+        [
+          "ha",
+          "en"
+        ]
+      ],
+      "reason": "Area unit equal to 10000 square metres. Dictionary sense: oewn-13635266-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "kelvin",
+      "name": "кельвин",
+      "parent": 24459,
+      "universum_id": 1,
+      "terms": [
+        [
+          "кельвин",
+          "ru"
+        ],
+        [
+          "kelvin",
+          "en"
+        ]
+      ],
+      "reason": "SI base unit of thermodynamic temperature; it is not a temperature degree or an alias of degree Celsius. Dictionary sense: oewn-13736861-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "ampere",
+      "name": "ампер",
+      "parent": "current_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "ампер",
+          "ru"
+        ],
+        [
+          "ampere",
+          "en"
+        ]
+      ],
+      "reason": "Select the current SI ampere, not the separate historical international-ampere synset. Dictionary sense: oewn-13658855-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "volt",
+      "name": "вольт",
+      "parent": "voltage_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "вольт",
+          "ru"
+        ],
+        [
+          "volt",
+          "en"
+        ]
+      ],
+      "reason": "SI unit of electric potential difference. Dictionary sense: oewn-13664755-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "ohm",
+      "name": "ом",
+      "parent": "resistance_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "ом",
+          "ru"
+        ],
+        [
+          "ohm",
+          "en"
+        ]
+      ],
+      "reason": "SI unit of electrical resistance, distinct from a resistor as a component. Dictionary sense: oewn-13668434-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "watt",
+      "name": "ватт",
+      "parent": "power_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "ватт",
+          "ru"
+        ],
+        [
+          "watt",
+          "en"
+        ]
+      ],
+      "reason": "SI unit of power; one joule per second. Power is not energy. Dictionary sense: oewn-13666001-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "kilowatt",
+      "name": "киловатт",
+      "parent": "power_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "киловатт",
+          "ru"
+        ],
+        [
+          "kilowatt",
+          "en"
+        ],
+        [
+          "kW",
+          "en"
+        ]
+      ],
+      "reason": "Power unit equal to 1000 watts; kilowatt-hour is a different energy unit. Dictionary sense: oewn-13666240-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "joule",
+      "name": "джоуль",
+      "parent": "energy_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "джоуль",
+          "ru"
+        ],
+        [
+          "joule",
+          "en"
+        ]
+      ],
+      "reason": "SI unit of energy and work, not restricted to the electrical example in the dictionary. Dictionary sense: oewn-13748184-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "newton",
+      "name": "ньютон (единица силы)",
+      "parent": "force_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "ньютон (единица силы)",
+          "ru"
+        ],
+        [
+          "newton",
+          "en"
+        ],
+        [
+          "ньютон",
+          "ru"
+        ]
+      ],
+      "reason": "SI unit of force, distinct from kilogram as mass and from the existing Newton person record (3167). Dictionary sense: oewn-13669285-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "pascal",
+      "name": "паскаль (единица давления)",
+      "parent": "pressure_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "паскаль (единица давления)",
+          "ru"
+        ],
+        [
+          "pascal",
+          "en"
+        ],
+        [
+          "паскаль",
+          "ru"
+        ],
+        [
+          "Pa",
+          "en"
+        ]
+      ],
+      "reason": "Pressure unit, not the Pascal programming language. One newton per square metre. Dictionary sense: oewn-13733408-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "hertz",
+      "name": "герц",
+      "parent": "frequency_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "герц",
+          "ru"
+        ],
+        [
+          "hertz",
+          "en"
+        ],
+        [
+          "Hz",
+          "en"
+        ]
+      ],
+      "reason": "Unit of frequency equal to one per second. It is not a duration or the frequency property itself. Dictionary sense: oewn-15304090-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "mole",
+      "name": "моль (единица количества вещества)",
+      "parent": "substance_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "моль (единица количества вещества)",
+          "ru"
+        ],
+        [
+          "mole",
+          "en"
+        ],
+        [
+          "mol",
+          "en"
+        ],
+        [
+          "моль",
+          "ru"
+        ]
+      ],
+      "reason": "SI unit of amount of substance. Reject the dictionary mass-unit parent and gram-molecular-weight gloss; do not confuse it with the insect, mammal, skin mark or mole sauce. Dictionary sense: oewn-13746191-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "candela",
+      "name": "кандела",
+      "parent": "luminous_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "кандела",
+          "ru"
+        ],
+        [
+          "candela",
+          "en"
+        ],
+        [
+          "cd",
+          "en"
+        ]
+      ],
+      "reason": "SI base unit of luminous intensity. The historical black-body realization in the dictionary is not imported, nor candle as a casual synonym. Dictionary sense: oewn-13663013-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "current_strength",
+      "name": "сила электрического тока",
+      "parent": 2709,
+      "universum_id": 1,
+      "terms": [
+        [
+          "сила электрического тока",
+          "ru"
+        ],
+        [
+          "electric current (quantity)",
+          "en"
+        ],
+        [
+          "electric current strength",
+          "en"
+        ],
+        [
+          "сила тока",
+          "ru"
+        ]
+      ],
+      "reason": "The rate of electric charge transfer, measured in amperes. Distinct from the process of charge flow; the OEWN current synset is a related phenomenon, not an exact quantity mapping. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "voltage",
+      "name": "электрическое напряжение",
+      "parent": 2709,
+      "universum_id": 1,
+      "terms": [
+        [
+          "электрическое напряжение",
+          "ru"
+        ],
+        [
+          "voltage",
+          "en"
+        ],
+        [
+          "electric potential difference",
+          "en"
+        ],
+        [
+          "potential difference",
+          "en"
+        ],
+        [
+          "разность электрических потенциалов",
+          "ru"
+        ]
+      ],
+      "reason": "Electric potential difference measured in volts. Do not import the erroneous difference-in-charge gloss or equate absolute potential with potential difference. Dictionary sense: oewn-11514227-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "resistance",
+      "name": "электрическое сопротивление",
+      "parent": 2709,
+      "universum_id": 1,
+      "terms": [
+        [
+          "электрическое сопротивление",
+          "ru"
+        ],
+        [
+          "electrical resistance",
+          "en"
+        ],
+        [
+          "electric resistance",
+          "en"
+        ],
+        [
+          "ohmic resistance",
+          "en"
+        ]
+      ],
+      "reason": "Electrical resistance measured in ohms. Keep resistivity, impedance and the resistor device separate; the dictionary synonym list merges different quantities. Dictionary sense: oewn-11524386-n (Open English WordNet 2025). Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "atmospheric_pressure",
+      "name": "атмосферное давление",
+      "parent": 5196,
+      "universum_id": 1,
+      "terms": [
+        [
+          "атмосферное давление",
+          "ru"
+        ],
+        [
+          "atmospheric pressure",
+          "en"
+        ],
+        [
+          "air pressure",
+          "en"
+        ]
+      ],
+      "reason": "The pressure exerted by the atmosphere. Existing pressure is broader, so reuse it as genus. Dictionary sense: oewn-11449572-n (Open English WordNet 2025)."
+    },
+    {
+      "key": "temperature_measurement",
+      "name": "измерение температуры",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение температуры",
+          "ru"
+        ],
+        [
+          "temperature measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of temperature; the action sense of thermometry, not the whole discipline. Dictionary sense: oewn-01118681-n (Open English WordNet 2025)."
+    },
+    {
+      "key": "length_measurement",
+      "name": "измерение длины",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение длины",
+          "ru"
+        ],
+        [
+          "length measurement",
+          "en"
+        ]
+      ],
+      "reason": "The length-measurement purpose described for rulers and other length instruments. Dictionary sense: oewn-04125870-n (Open English WordNet 2025)."
+    },
+    {
+      "key": "distance_measurement",
+      "name": "измерение расстояния",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение расстояния",
+          "ru"
+        ],
+        [
+          "distance measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of distance, including distance travelled as recorded by an odometer. Dictionary sense: oewn-03846663-n (Open English WordNet 2025)."
+    },
+    {
+      "key": "duration_measurement",
+      "name": "измерение длительности",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение длительности",
+          "ru"
+        ],
+        [
+          "duration measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of elapsed duration. Avoid the separate dictionary timing senses of scheduling or coordination. Dictionary sense: oewn-04335324-n (Open English WordNet 2025)."
+    },
+    {
+      "key": "pressure_measurement",
+      "name": "измерение давления",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение давления",
+          "ru"
+        ],
+        [
+          "pressure measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of pressure as described in the pressure-gauge definition. Dictionary sense: oewn-04007857-n (Open English WordNet 2025)."
+    },
+    {
+      "key": "atmospheric_pressure_measurement",
+      "name": "измерение атмосферного давления",
+      "parent": "pressure_measurement",
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение атмосферного давления",
+          "ru"
+        ],
+        [
+          "atmospheric pressure measurement",
+          "en"
+        ]
+      ],
+      "reason": "The narrower atmospheric-pressure measurement performed with a barometer. Dictionary sense: oewn-02797179-n (Open English WordNet 2025)."
+    },
+    {
+      "key": "current_measurement",
+      "name": "измерение силы тока",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение силы тока",
+          "ru"
+        ],
+        [
+          "electric current measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of current strength, not measurement of charge or of the ammeter itself. Dictionary sense: oewn-02705848-n (Open English WordNet 2025)."
+    },
+    {
+      "key": "voltage_measurement",
+      "name": "измерение напряжения",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение напряжения",
+          "ru"
+        ],
+        [
+          "voltage measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of potential difference between two points. Dictionary sense: oewn-04548606-n (Open English WordNet 2025)."
+    },
+    {
+      "key": "resistance_measurement",
+      "name": "измерение электрического сопротивления",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение электрического сопротивления",
+          "ru"
+        ],
+        [
+          "electrical resistance measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of electrical resistance, without assuming measurement of resistivity or impedance. Dictionary sense: oewn-03848506-n (Open English WordNet 2025)."
+    },
+    {
+      "key": "measuring_instrument",
+      "name": "измерительный прибор",
+      "parent": 3352,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерительный прибор",
+          "ru"
+        ],
+        [
+          "measuring instrument",
+          "en"
+        ],
+        [
+          "measuring device",
+          "en"
+        ]
+      ],
+      "reason": "A device used for measurement. A measuring system can contain several devices, so that synonym is not imported. Dictionary sense: oewn-03739416-n (Open English WordNet 2025). Source: https://jcgm.bipm.org/vim/en/3.1.html"
+    },
+    {
+      "key": "pressure_gauge",
+      "name": "манометр",
+      "parent": "measuring_instrument",
+      "universum_id": 1,
+      "terms": [
+        [
+          "манометр",
+          "ru"
+        ],
+        [
+          "pressure gauge",
+          "en"
+        ],
+        [
+          "pressure gage",
+          "en"
+        ]
+      ],
+      "reason": "A device for measuring fluid pressure. The narrower OEWN manometer entry is not imported as a second device. Dictionary sense: oewn-04007857-n (Open English WordNet 2025)."
+    },
+    {
+      "key": "barometer",
+      "name": "барометр",
+      "parent": "pressure_gauge",
+      "universum_id": 1,
+      "terms": [
+        [
+          "барометр",
+          "ru"
+        ],
+        [
+          "barometer",
+          "en"
+        ]
+      ],
+      "reason": "A pressure-measuring instrument specifically for atmospheric pressure. Dictionary sense: oewn-02797179-n (Open English WordNet 2025)."
+    },
+    {
+      "key": "ammeter",
+      "name": "амперметр",
+      "parent": "measuring_instrument",
+      "universum_id": 1,
+      "terms": [
+        [
+          "амперметр",
+          "ru"
+        ],
+        [
+          "ammeter",
+          "en"
+        ]
+      ],
+      "reason": "An instrument whose measuring purpose is electric current strength. Dictionary sense: oewn-02705848-n (Open English WordNet 2025)."
+    },
+    {
+      "key": "voltmeter",
+      "name": "вольтметр",
+      "parent": "measuring_instrument",
+      "universum_id": 1,
+      "terms": [
+        [
+          "вольтметр",
+          "ru"
+        ],
+        [
+          "voltmeter",
+          "en"
+        ]
+      ],
+      "reason": "An instrument for measuring electrical potential difference. Dictionary sense: oewn-04548606-n (Open English WordNet 2025)."
+    },
+    {
+      "key": "ohmmeter",
+      "name": "омметр",
+      "parent": "measuring_instrument",
+      "universum_id": 1,
+      "terms": [
+        [
+          "омметр",
+          "ru"
+        ],
+        [
+          "ohmmeter",
+          "en"
+        ]
+      ],
+      "reason": "An instrument for measuring electrical resistance. Dictionary sense: oewn-03848506-n (Open English WordNet 2025)."
+    },
+    {
+      "key": "stopwatch",
+      "name": "секундомер",
+      "parent": "measuring_instrument",
+      "universum_id": 1,
+      "terms": [
+        [
+          "секундомер",
+          "ru"
+        ],
+        [
+          "stopwatch",
+          "en"
+        ],
+        [
+          "stop watch",
+          "en"
+        ]
+      ],
+      "reason": "A device for measuring elapsed intervals that can be started and stopped. It is not a second or a duration itself. Dictionary sense: oewn-04335324-n (Open English WordNet 2025)."
+    },
+    {
+      "key": "odometer",
+      "name": "одометр",
+      "parent": "measuring_instrument",
+      "universum_id": 1,
+      "terms": [
+        [
+          "одометр",
+          "ru"
+        ],
+        [
+          "odometer",
+          "en"
+        ],
+        [
+          "mileometer",
+          "en"
+        ],
+        [
+          "milometer",
+          "en"
+        ],
+        [
+          "hodometer",
+          "en"
+        ]
+      ],
+      "reason": "An instrument for recording distance travelled; it measures distance rather than instantaneous speed. Dictionary sense: oewn-03846663-n (Open English WordNet 2025)."
+    },
+    {
+      "key": "micrometer_instrument",
+      "name": "микрометр (прибор)",
+      "parent": "measuring_instrument",
+      "universum_id": 1,
+      "terms": [
+        [
+          "микрометр (прибор)",
+          "ru"
+        ],
+        [
+          "micrometer (instrument)",
+          "en"
+        ],
+        [
+          "micrometer",
+          "en"
+        ],
+        [
+          "micrometer gauge",
+          "en"
+        ],
+        [
+          "micrometer caliper",
+          "en"
+        ],
+        [
+          "микрометр",
+          "ru"
+        ]
+      ],
+      "reason": "The measuring instrument, distinct from the length unit with the same spelling. Its caliper subtype needs a separately reviewed Russian genus; use the nearest currently available genus. Dictionary sense: oewn-03765190-n (Open English WordNet 2025)."
+    }
+  ],
+  "renames": [],
+  "terms": [
+    {
+      "id": 24457,
+      "name": "единица длины",
+      "terms": [
+        [
+          "linear unit",
+          "en"
+        ],
+        [
+          "length unit",
+          "en"
+        ]
+      ],
+      "reason": "Add dictionary search labels to the existing length-unit family. Dictionary sense: oewn-13624548-n (Open English WordNet 2025)."
+    },
+    {
+      "id": 24458,
+      "name": "единица времени",
+      "terms": [
+        [
+          "time unit",
+          "en"
+        ]
+      ],
+      "reason": "Add the dictionary label to the existing family. Dictionary sense: oewn-15179734-n (Open English WordNet 2025)."
+    },
+    {
+      "id": 24459,
+      "name": "единица температуры",
+      "terms": [
+        [
+          "temperature unit",
+          "en"
+        ]
+      ],
+      "reason": "Add the dictionary label to the existing family. Dictionary sense: oewn-13629841-n (Open English WordNet 2025)."
+    },
+    {
+      "id": 3563,
+      "name": "тонна",
+      "terms": [
+        [
+          "metric ton",
+          "en"
+        ]
+      ],
+      "reason": "The metric tonne is distinct from the short and long ton. Dictionary sense: oewn-13747698-n (Open English WordNet 2025)."
+    },
+    {
+      "id": 1908,
+      "name": "весы",
+      "terms": [
+        [
+          "weighing machine",
+          "en"
+        ]
+      ],
+      "reason": "The dictionary measuring-instrument meaning matches the existing scales. Dictionary sense: oewn-04149040-n (Open English WordNet 2025)."
+    }
+  ],
+  "remove_terms": [],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 5833,
+      "before": [
+        3563,
+        "14",
+        2650,
+        1
+      ],
+      "reviewed_strength": null,
+      "reason": "Tonne is an existing measurement unit of mass; use the new nearest family rather than the general measure. Dictionary sense: oewn-13747698-n (Open English WordNet 2025).",
+      "replacements": [
+        [
+          3563,
+          "14",
+          "mass_unit",
+          null,
+          1
+        ]
+      ]
+    },
+    {
+      "id": 5825,
+      "before": [
+        3555,
+        "14",
+        3352,
+        1
+      ],
+      "reviewed_strength": null,
+      "reason": "A thermometer is a measuring instrument, the newly available nearest genus. Dictionary sense: oewn-04429007-n (Open English WordNet 2025).",
+      "replacements": [
+        [
+          3555,
+          "14",
+          "measuring_instrument",
+          null,
+          1
+        ]
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "subject": "temperature_measurement",
+      "kod": "27",
+      "object": 46,
+      "universum_id": 1,
+      "reason": "Measurement of temperature; the action sense of thermometry, not the whole discipline. Dictionary sense: oewn-01118681-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": "length_measurement",
+      "kod": "27",
+      "object": 2895,
+      "universum_id": 1,
+      "reason": "The length-measurement purpose described for rulers and other length instruments. Dictionary sense: oewn-04125870-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": "distance_measurement",
+      "kod": "27",
+      "object": 3420,
+      "universum_id": 1,
+      "reason": "Measurement of distance, including distance travelled as recorded by an odometer. Dictionary sense: oewn-03846663-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": "duration_measurement",
+      "kod": "27",
+      "object": 5019,
+      "universum_id": 1,
+      "reason": "Measurement of elapsed duration. Avoid the separate dictionary timing senses of scheduling or coordination. Dictionary sense: oewn-04335324-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": "pressure_measurement",
+      "kod": "27",
+      "object": 5196,
+      "universum_id": 1,
+      "reason": "Measurement of pressure as described in the pressure-gauge definition. Dictionary sense: oewn-04007857-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": "atmospheric_pressure_measurement",
+      "kod": "27",
+      "object": "atmospheric_pressure",
+      "universum_id": 1,
+      "reason": "The narrower atmospheric-pressure measurement performed with a barometer. Dictionary sense: oewn-02797179-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": "current_measurement",
+      "kod": "27",
+      "object": "current_strength",
+      "universum_id": 1,
+      "reason": "Measurement of current strength, not measurement of charge or of the ammeter itself. Dictionary sense: oewn-02705848-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": "voltage_measurement",
+      "kod": "27",
+      "object": "voltage",
+      "universum_id": 1,
+      "reason": "Measurement of potential difference between two points. Dictionary sense: oewn-04548606-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": "resistance_measurement",
+      "kod": "27",
+      "object": "resistance",
+      "universum_id": 1,
+      "reason": "Measurement of electrical resistance, without assuming measurement of resistivity or impedance. Dictionary sense: oewn-03848506-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": "measuring_instrument",
+      "kod": "21",
+      "object": 3867,
+      "universum_id": 1,
+      "reason": "The general purpose of a measuring instrument is measurement. Source: https://jcgm.bipm.org/vim/en/3.1.html"
+    },
+    {
+      "subject": "pressure_gauge",
+      "kod": "21",
+      "object": "pressure_measurement",
+      "universum_id": 1,
+      "reason": "A device for measuring fluid pressure. The narrower OEWN manometer entry is not imported as a second device. Dictionary sense: oewn-04007857-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": "barometer",
+      "kod": "21",
+      "object": "atmospheric_pressure_measurement",
+      "universum_id": 1,
+      "reason": "A pressure-measuring instrument specifically for atmospheric pressure. Dictionary sense: oewn-02797179-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": "ammeter",
+      "kod": "21",
+      "object": "current_measurement",
+      "universum_id": 1,
+      "reason": "An instrument whose measuring purpose is electric current strength. Dictionary sense: oewn-02705848-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": "voltmeter",
+      "kod": "21",
+      "object": "voltage_measurement",
+      "universum_id": 1,
+      "reason": "An instrument for measuring electrical potential difference. Dictionary sense: oewn-04548606-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": "ohmmeter",
+      "kod": "21",
+      "object": "resistance_measurement",
+      "universum_id": 1,
+      "reason": "An instrument for measuring electrical resistance. Dictionary sense: oewn-03848506-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": "stopwatch",
+      "kod": "21",
+      "object": "duration_measurement",
+      "universum_id": 1,
+      "reason": "A device for measuring elapsed intervals that can be started and stopped. It is not a second or a duration itself. Dictionary sense: oewn-04335324-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": "odometer",
+      "kod": "21",
+      "object": "distance_measurement",
+      "universum_id": 1,
+      "reason": "An instrument for recording distance travelled; it measures distance rather than instantaneous speed. Dictionary sense: oewn-03846663-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": "micrometer_instrument",
+      "kod": "21",
+      "object": "length_measurement",
+      "universum_id": 1,
+      "reason": "The measuring instrument, distinct from the length unit with the same spelling. Its caliper subtype needs a separately reviewed Russian genus; use the nearest currently available genus. Dictionary sense: oewn-03765190-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": 3555,
+      "kod": "21",
+      "object": "temperature_measurement",
+      "universum_id": 1,
+      "reason": "Thermometer purpose is temperature measurement. Dictionary sense: oewn-04429007-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": 1501,
+      "kod": "14",
+      "object": "measuring_instrument",
+      "universum_id": 1,
+      "reason": "Add the measuring-instrument classification alongside the existing general tool classification. Dictionary sense: oewn-04125870-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": 1501,
+      "kod": "21",
+      "object": "length_measurement",
+      "universum_id": 1,
+      "reason": "Record the measurement purpose of the existing instrument. Dictionary sense: oewn-04125870-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": 2338,
+      "kod": "14",
+      "object": "measuring_instrument",
+      "universum_id": 1,
+      "reason": "Add the measuring-instrument classification alongside the existing general tool classification. Dictionary sense: oewn-04399200-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": 2338,
+      "kod": "21",
+      "object": "length_measurement",
+      "universum_id": 1,
+      "reason": "Record the measurement purpose of the existing instrument. Dictionary sense: oewn-04399200-n (Open English WordNet 2025)."
+    },
+    {
+      "subject": 1908,
+      "kod": "14",
+      "object": "measuring_instrument",
+      "universum_id": 1,
+      "reason": "Add the measuring-instrument classification alongside the existing general tool classification. Dictionary sense: oewn-04149040-n (Open English WordNet 2025)."
+    }
+  ],
+  "checks": [
+    {
+      "subject": "mass_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "area_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "volume_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "force_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pressure_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "energy_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "power_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "current_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "voltage_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "resistance_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "frequency_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "substance_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "luminous_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kilogram",
+      "kod": "14",
+      "object": "mass_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "gram",
+      "kod": "14",
+      "object": "mass_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "milligram",
+      "kod": "14",
+      "object": "mass_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "millimetre",
+      "kod": "14",
+      "object": 24457,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "centimetre",
+      "kod": "14",
+      "object": 24457,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kilometre",
+      "kod": "14",
+      "object": 24457,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "micrometre",
+      "kod": "14",
+      "object": 24457,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "litre",
+      "kod": "14",
+      "object": "volume_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "millilitre",
+      "kod": "14",
+      "object": "volume_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cubic_metre",
+      "kod": "14",
+      "object": "volume_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "square_metre",
+      "kod": "14",
+      "object": "area_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hectare",
+      "kod": "14",
+      "object": "area_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kelvin",
+      "kod": "14",
+      "object": 24459,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "ampere",
+      "kod": "14",
+      "object": "current_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "volt",
+      "kod": "14",
+      "object": "voltage_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "ohm",
+      "kod": "14",
+      "object": "resistance_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "watt",
+      "kod": "14",
+      "object": "power_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kilowatt",
+      "kod": "14",
+      "object": "power_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "joule",
+      "kod": "14",
+      "object": "energy_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "newton",
+      "kod": "14",
+      "object": "force_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pascal",
+      "kod": "14",
+      "object": "pressure_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hertz",
+      "kod": "14",
+      "object": "frequency_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mole",
+      "kod": "14",
+      "object": "substance_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "candela",
+      "kod": "14",
+      "object": "luminous_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3563,
+      "kod": "14",
+      "object": 2650,
+      "present": false
+    },
+    {
+      "subject": 3563,
+      "kod": "14",
+      "object": "mass_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "current_strength",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "voltage",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "resistance",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "atmospheric_pressure",
+      "kod": "14",
+      "object": 5196,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "temperature_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "temperature_measurement",
+      "kod": "27",
+      "object": 46,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "length_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "length_measurement",
+      "kod": "27",
+      "object": 2895,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "distance_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "distance_measurement",
+      "kod": "27",
+      "object": 3420,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "duration_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "duration_measurement",
+      "kod": "27",
+      "object": 5019,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pressure_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pressure_measurement",
+      "kod": "27",
+      "object": 5196,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "atmospheric_pressure_measurement",
+      "kod": "14",
+      "object": "pressure_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "atmospheric_pressure_measurement",
+      "kod": "27",
+      "object": "atmospheric_pressure",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "current_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "current_measurement",
+      "kod": "27",
+      "object": "current_strength",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "voltage_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "voltage_measurement",
+      "kod": "27",
+      "object": "voltage",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "resistance_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "resistance_measurement",
+      "kod": "27",
+      "object": "resistance",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "measuring_instrument",
+      "kod": "14",
+      "object": 3352,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "measuring_instrument",
+      "kod": "21",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pressure_gauge",
+      "kod": "14",
+      "object": "measuring_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pressure_gauge",
+      "kod": "21",
+      "object": "pressure_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "barometer",
+      "kod": "14",
+      "object": "pressure_gauge",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "barometer",
+      "kod": "21",
+      "object": "atmospheric_pressure_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "ammeter",
+      "kod": "14",
+      "object": "measuring_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "ammeter",
+      "kod": "21",
+      "object": "current_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "voltmeter",
+      "kod": "14",
+      "object": "measuring_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "voltmeter",
+      "kod": "21",
+      "object": "voltage_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "ohmmeter",
+      "kod": "14",
+      "object": "measuring_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "ohmmeter",
+      "kod": "21",
+      "object": "resistance_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "stopwatch",
+      "kod": "14",
+      "object": "measuring_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "stopwatch",
+      "kod": "21",
+      "object": "duration_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "odometer",
+      "kod": "14",
+      "object": "measuring_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "odometer",
+      "kod": "21",
+      "object": "distance_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "micrometer_instrument",
+      "kod": "14",
+      "object": "measuring_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "micrometer_instrument",
+      "kod": "21",
+      "object": "length_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3555,
+      "kod": "14",
+      "object": 3352,
+      "present": false
+    },
+    {
+      "subject": 3555,
+      "kod": "14",
+      "object": "measuring_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3555,
+      "kod": "21",
+      "object": "temperature_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1501,
+      "kod": "14",
+      "object": "measuring_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1501,
+      "kod": "21",
+      "object": "length_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2338,
+      "kod": "14",
+      "object": "measuring_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2338,
+      "kod": "21",
+      "object": "length_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1908,
+      "kod": "14",
+      "object": "measuring_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1908,
+      "kod": "21",
+      "object": 1909,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1909,
+      "kod": "27",
+      "object": 3081,
+      "present": true,
+      "strength": null
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "gram",
+      "ancestor": "kilogram",
+      "present": false
+    },
+    {
+      "subject": "kilogram",
+      "ancestor": "gram",
+      "present": false
+    },
+    {
+      "subject": "millimetre",
+      "ancestor": 3098,
+      "present": false
+    },
+    {
+      "subject": "centimetre",
+      "ancestor": 3098,
+      "present": false
+    },
+    {
+      "subject": "kilometre",
+      "ancestor": 3098,
+      "present": false
+    },
+    {
+      "subject": "cubic_metre",
+      "ancestor": 3098,
+      "present": false
+    },
+    {
+      "subject": "square_metre",
+      "ancestor": 3098,
+      "present": false
+    },
+    {
+      "subject": "micrometre",
+      "ancestor": "micrometer_instrument",
+      "present": false
+    },
+    {
+      "subject": "micrometer_instrument",
+      "ancestor": "micrometre",
+      "present": false
+    },
+    {
+      "subject": "mole",
+      "ancestor": "mass_unit",
+      "present": false
+    },
+    {
+      "subject": "newton",
+      "ancestor": "mass_unit",
+      "present": false
+    },
+    {
+      "subject": "watt",
+      "ancestor": "energy_unit",
+      "present": false
+    },
+    {
+      "subject": "joule",
+      "ancestor": "power_unit",
+      "present": false
+    },
+    {
+      "subject": "hertz",
+      "ancestor": 24458,
+      "present": false
+    },
+    {
+      "subject": "kelvin",
+      "ancestor": 2862,
+      "present": false
+    },
+    {
+      "subject": "kelvin",
+      "ancestor": 24460,
+      "present": false
+    },
+    {
+      "subject": "newton",
+      "ancestor": 28,
+      "present": false
+    },
+    {
+      "subject": "pascal",
+      "ancestor": 354,
+      "present": false
+    },
+    {
+      "subject": "mole",
+      "ancestor": 107,
+      "present": false
+    },
+    {
+      "subject": "mole",
+      "ancestor": 1306,
+      "present": false
+    },
+    {
+      "subject": 3167,
+      "ancestor": 2651,
+      "present": false
+    },
+    {
+      "subject": 379,
+      "ancestor": 2651,
+      "present": false
+    },
+    {
+      "subject": 1322,
+      "ancestor": 2651,
+      "present": false
+    },
+    {
+      "subject": 1377,
+      "ancestor": 2651,
+      "present": false
+    },
+    {
+      "subject": "pressure_gauge",
+      "ancestor": "measuring_instrument",
+      "present": true
+    },
+    {
+      "subject": "barometer",
+      "ancestor": "measuring_instrument",
+      "present": true
+    },
+    {
+      "subject": "ammeter",
+      "ancestor": "measuring_instrument",
+      "present": true
+    },
+    {
+      "subject": "voltmeter",
+      "ancestor": "measuring_instrument",
+      "present": true
+    },
+    {
+      "subject": "ohmmeter",
+      "ancestor": "measuring_instrument",
+      "present": true
+    },
+    {
+      "subject": "stopwatch",
+      "ancestor": "measuring_instrument",
+      "present": true
+    },
+    {
+      "subject": "odometer",
+      "ancestor": "measuring_instrument",
+      "present": true
+    },
+    {
+      "subject": "micrometer_instrument",
+      "ancestor": "measuring_instrument",
+      "present": true
+    },
+    {
+      "subject": "mass_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "area_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "volume_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "force_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "pressure_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "energy_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "power_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "current_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "voltage_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "resistance_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "frequency_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "substance_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "luminous_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "kilogram",
+      "ancestor": "mass_unit",
+      "present": true
+    },
+    {
+      "subject": "gram",
+      "ancestor": "mass_unit",
+      "present": true
+    },
+    {
+      "subject": "milligram",
+      "ancestor": "mass_unit",
+      "present": true
+    },
+    {
+      "subject": "millimetre",
+      "ancestor": 24457,
+      "present": true
+    },
+    {
+      "subject": "centimetre",
+      "ancestor": 24457,
+      "present": true
+    },
+    {
+      "subject": "kilometre",
+      "ancestor": 24457,
+      "present": true
+    },
+    {
+      "subject": "micrometre",
+      "ancestor": 24457,
+      "present": true
+    },
+    {
+      "subject": "litre",
+      "ancestor": "volume_unit",
+      "present": true
+    },
+    {
+      "subject": "millilitre",
+      "ancestor": "volume_unit",
+      "present": true
+    },
+    {
+      "subject": "cubic_metre",
+      "ancestor": "volume_unit",
+      "present": true
+    },
+    {
+      "subject": "square_metre",
+      "ancestor": "area_unit",
+      "present": true
+    },
+    {
+      "subject": "hectare",
+      "ancestor": "area_unit",
+      "present": true
+    },
+    {
+      "subject": "kelvin",
+      "ancestor": 24459,
+      "present": true
+    },
+    {
+      "subject": "ampere",
+      "ancestor": "current_unit",
+      "present": true
+    },
+    {
+      "subject": "volt",
+      "ancestor": "voltage_unit",
+      "present": true
+    },
+    {
+      "subject": "ohm",
+      "ancestor": "resistance_unit",
+      "present": true
+    },
+    {
+      "subject": "watt",
+      "ancestor": "power_unit",
+      "present": true
+    },
+    {
+      "subject": "kilowatt",
+      "ancestor": "power_unit",
+      "present": true
+    },
+    {
+      "subject": "joule",
+      "ancestor": "energy_unit",
+      "present": true
+    },
+    {
+      "subject": "newton",
+      "ancestor": "force_unit",
+      "present": true
+    },
+    {
+      "subject": "pascal",
+      "ancestor": "pressure_unit",
+      "present": true
+    },
+    {
+      "subject": "hertz",
+      "ancestor": "frequency_unit",
+      "present": true
+    },
+    {
+      "subject": "mole",
+      "ancestor": "substance_unit",
+      "present": true
+    },
+    {
+      "subject": "candela",
+      "ancestor": "luminous_unit",
+      "present": true
+    },
+    {
+      "subject": "current_strength",
+      "ancestor": 2709,
+      "present": true
+    },
+    {
+      "subject": "voltage",
+      "ancestor": 2709,
+      "present": true
+    },
+    {
+      "subject": "resistance",
+      "ancestor": 2709,
+      "present": true
+    },
+    {
+      "subject": "atmospheric_pressure",
+      "ancestor": 5196,
+      "present": true
+    },
+    {
+      "subject": "temperature_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "length_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "distance_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "duration_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "pressure_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "atmospheric_pressure_measurement",
+      "ancestor": "pressure_measurement",
+      "present": true
+    },
+    {
+      "subject": "current_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "voltage_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "resistance_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "measuring_instrument",
+      "ancestor": 3352,
+      "present": true
+    },
+    {
+      "subject": "pressure_gauge",
+      "ancestor": "measuring_instrument",
+      "present": true
+    },
+    {
+      "subject": "barometer",
+      "ancestor": "pressure_gauge",
+      "present": true
+    },
+    {
+      "subject": "ammeter",
+      "ancestor": "measuring_instrument",
+      "present": true
+    },
+    {
+      "subject": "voltmeter",
+      "ancestor": "measuring_instrument",
+      "present": true
+    },
+    {
+      "subject": "ohmmeter",
+      "ancestor": "measuring_instrument",
+      "present": true
+    },
+    {
+      "subject": "stopwatch",
+      "ancestor": "measuring_instrument",
+      "present": true
+    },
+    {
+      "subject": "odometer",
+      "ancestor": "measuring_instrument",
+      "present": true
+    },
+    {
+      "subject": "micrometer_instrument",
+      "ancestor": "measuring_instrument",
+      "present": true
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": 24457,
+      "term": "linear unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 24457,
+      "term": "length unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 24458,
+      "term": "time unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 24459,
+      "term": "temperature unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3563,
+      "term": "metric ton",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1908,
+      "term": "weighing machine",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "mass_unit",
+      "term": "единица массы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "mass_unit",
+      "term": "mass unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "area_unit",
+      "term": "единица площади",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "area_unit",
+      "term": "area unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "volume_unit",
+      "term": "единица объёма",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "volume_unit",
+      "term": "volume unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "force_unit",
+      "term": "единица силы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "force_unit",
+      "term": "force unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pressure_unit",
+      "term": "единица давления",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pressure_unit",
+      "term": "pressure unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "energy_unit",
+      "term": "единица энергии",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "energy_unit",
+      "term": "energy unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "power_unit",
+      "term": "единица мощности",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "power_unit",
+      "term": "power unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "current_unit",
+      "term": "единица силы электрического тока",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "current_unit",
+      "term": "electric current unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "voltage_unit",
+      "term": "единица электрического напряжения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "voltage_unit",
+      "term": "voltage unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "resistance_unit",
+      "term": "единица электрического сопротивления",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "resistance_unit",
+      "term": "electrical resistance unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "frequency_unit",
+      "term": "единица частоты",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "frequency_unit",
+      "term": "frequency unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "substance_unit",
+      "term": "единица количества вещества",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "substance_unit",
+      "term": "unit of amount of substance",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "luminous_unit",
+      "term": "единица силы света",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "luminous_unit",
+      "term": "luminous intensity unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kilogram",
+      "term": "килограмм",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kilogram",
+      "term": "kilogram",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kilogram",
+      "term": "kg",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "gram",
+      "term": "грамм",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "gram",
+      "term": "gram",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "gram",
+      "term": "gramme",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "milligram",
+      "term": "миллиграмм",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "milligram",
+      "term": "milligram",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "milligram",
+      "term": "mg",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "millimetre",
+      "term": "миллиметр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "millimetre",
+      "term": "millimetre",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "millimetre",
+      "term": "millimeter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "millimetre",
+      "term": "mm",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "centimetre",
+      "term": "сантиметр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "centimetre",
+      "term": "centimetre",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "centimetre",
+      "term": "centimeter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "centimetre",
+      "term": "cm",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kilometre",
+      "term": "километр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kilometre",
+      "term": "kilometre",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kilometre",
+      "term": "kilometer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kilometre",
+      "term": "km",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "micrometre",
+      "term": "микрометр (единица длины)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "micrometre",
+      "term": "micrometre",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "micrometre",
+      "term": "micrometer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "micrometre",
+      "term": "micron",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "micrometre",
+      "term": "микрометр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "micrometre",
+      "term": "микрон",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "litre",
+      "term": "литр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "litre",
+      "term": "litre",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "litre",
+      "term": "liter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "litre",
+      "term": "cubic decimetre",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "litre",
+      "term": "cubic decimeter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "litre",
+      "term": "кубический дециметр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "millilitre",
+      "term": "миллилитр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "millilitre",
+      "term": "millilitre",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "millilitre",
+      "term": "milliliter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "millilitre",
+      "term": "mL",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "millilitre",
+      "term": "cubic centimetre",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "millilitre",
+      "term": "cubic centimeter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "millilitre",
+      "term": "кубический сантиметр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "cubic_metre",
+      "term": "кубический метр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "cubic_metre",
+      "term": "cubic metre",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cubic_metre",
+      "term": "cubic meter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cubic_metre",
+      "term": "kilolitre",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cubic_metre",
+      "term": "kiloliter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cubic_metre",
+      "term": "килолитр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "square_metre",
+      "term": "квадратный метр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "square_metre",
+      "term": "square metre",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "square_metre",
+      "term": "square meter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hectare",
+      "term": "гектар",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "hectare",
+      "term": "hectare",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hectare",
+      "term": "ha",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kelvin",
+      "term": "кельвин",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kelvin",
+      "term": "kelvin",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "ampere",
+      "term": "ампер",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "ampere",
+      "term": "ampere",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "volt",
+      "term": "вольт",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "volt",
+      "term": "volt",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "ohm",
+      "term": "ом",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "ohm",
+      "term": "ohm",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "watt",
+      "term": "ватт",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "watt",
+      "term": "watt",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kilowatt",
+      "term": "киловатт",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kilowatt",
+      "term": "kilowatt",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kilowatt",
+      "term": "kW",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "joule",
+      "term": "джоуль",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "joule",
+      "term": "joule",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "newton",
+      "term": "ньютон (единица силы)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "newton",
+      "term": "newton",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "newton",
+      "term": "ньютон",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pascal",
+      "term": "паскаль (единица давления)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pascal",
+      "term": "pascal",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pascal",
+      "term": "паскаль",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pascal",
+      "term": "Pa",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hertz",
+      "term": "герц",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "hertz",
+      "term": "hertz",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hertz",
+      "term": "Hz",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "mole",
+      "term": "моль (единица количества вещества)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "mole",
+      "term": "mole",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "mole",
+      "term": "mol",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "mole",
+      "term": "моль",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "candela",
+      "term": "кандела",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "candela",
+      "term": "candela",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "candela",
+      "term": "cd",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "current_strength",
+      "term": "сила электрического тока",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "current_strength",
+      "term": "electric current (quantity)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "current_strength",
+      "term": "electric current strength",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "current_strength",
+      "term": "сила тока",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "voltage",
+      "term": "электрическое напряжение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "voltage",
+      "term": "voltage",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "voltage",
+      "term": "electric potential difference",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "voltage",
+      "term": "potential difference",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "voltage",
+      "term": "разность электрических потенциалов",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "resistance",
+      "term": "электрическое сопротивление",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "resistance",
+      "term": "electrical resistance",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "resistance",
+      "term": "electric resistance",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "resistance",
+      "term": "ohmic resistance",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "atmospheric_pressure",
+      "term": "атмосферное давление",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "atmospheric_pressure",
+      "term": "atmospheric pressure",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "atmospheric_pressure",
+      "term": "air pressure",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "temperature_measurement",
+      "term": "измерение температуры",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "temperature_measurement",
+      "term": "temperature measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "length_measurement",
+      "term": "измерение длины",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "length_measurement",
+      "term": "length measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "distance_measurement",
+      "term": "измерение расстояния",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "distance_measurement",
+      "term": "distance measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "duration_measurement",
+      "term": "измерение длительности",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "duration_measurement",
+      "term": "duration measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pressure_measurement",
+      "term": "измерение давления",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pressure_measurement",
+      "term": "pressure measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "atmospheric_pressure_measurement",
+      "term": "измерение атмосферного давления",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "atmospheric_pressure_measurement",
+      "term": "atmospheric pressure measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "current_measurement",
+      "term": "измерение силы тока",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "current_measurement",
+      "term": "electric current measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "voltage_measurement",
+      "term": "измерение напряжения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "voltage_measurement",
+      "term": "voltage measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "resistance_measurement",
+      "term": "измерение электрического сопротивления",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "resistance_measurement",
+      "term": "electrical resistance measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "measuring_instrument",
+      "term": "измерительный прибор",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "measuring_instrument",
+      "term": "measuring instrument",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "measuring_instrument",
+      "term": "measuring device",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pressure_gauge",
+      "term": "манометр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pressure_gauge",
+      "term": "pressure gauge",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pressure_gauge",
+      "term": "pressure gage",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "barometer",
+      "term": "барометр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "barometer",
+      "term": "barometer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "ammeter",
+      "term": "амперметр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "ammeter",
+      "term": "ammeter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "voltmeter",
+      "term": "вольтметр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "voltmeter",
+      "term": "voltmeter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "ohmmeter",
+      "term": "омметр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "ohmmeter",
+      "term": "ohmmeter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "stopwatch",
+      "term": "секундомер",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "stopwatch",
+      "term": "stopwatch",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "stopwatch",
+      "term": "stop watch",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "odometer",
+      "term": "одометр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "odometer",
+      "term": "odometer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "odometer",
+      "term": "mileometer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "odometer",
+      "term": "milometer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "odometer",
+      "term": "hodometer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "micrometer_instrument",
+      "term": "микрометр (прибор)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "micrometer_instrument",
+      "term": "micrometer (instrument)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "micrometer_instrument",
+      "term": "micrometer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "micrometer_instrument",
+      "term": "micrometer gauge",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "micrometer_instrument",
+      "term": "micrometer caliper",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "micrometer_instrument",
+      "term": "микрометр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "resistance",
+      "term": "impedance",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "resistance",
+      "term": "resistivity",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "resistance",
+      "term": "resistor",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "voltage",
+      "term": "electric potential",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "mole",
+      "term": "gram molecule",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "candela",
+      "term": "candle",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 3563,
+      "term": "ton",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "measuring_instrument",
+      "term": "measuring system",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

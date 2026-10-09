@@ -1,0 +1,4602 @@
+{
+  "source": "quality-20261009-q17",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Kitchen utensils and cookware, food-processing purposes, measurement tools, household cleaning, and selected malformed action terms.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "measuring": "https://www.oxo.com/blog/cooking-and-baking/how-to-measure-ingredients",
+      "cups": "https://www.oxo.com/blog/cooking-and-baking/which-measuring-cup",
+      "board": "https://www.oxo.com/shop/kitchenware/cooking-baking/cutting-boards/carving-cutting-board.html",
+      "bowls": "https://www.oxo.com/shop/kitchenware/cooking-baking/mixing-bowls.html",
+      "spoons": "https://www.oxo.com/3-piece-wooden-spoon-set.html",
+      "aluminum": "https://www.zwilling.com/ca/zwilling-bologna-20-cm-%2F-8-inch-aluminum-frying-pan-1032995/1032995.html",
+      "glasspot": "https://glasscollection.cmog.org/objects/22799/pyrex-saucepan",
+      "castiron": "https://www.lodgecastiron.com/pages/cast-iron-product-guide",
+      "toaster": "https://kitchenaid.com.au/blogs/kitchenthusiast/how-do-toasters-work",
+      "whipping_ru": "https://gramota.ru/meta/vzbit",
+      "comminution_ru": "https://gramota.ru/meta/izmelchit",
+      "boiling_ru": "https://gramota.ru/poisk?dicts%5B0%5D=42&mode=slovari&query=%D0%BA%D0%B8%D0%BF%D1%8F%D1%82%D0%B8%D1%82%D1%8C&simple=0"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet. Retain CC BY 4.0 and underlying Princeton notices in docs/quality/2026-10-09-q11.md#sources-and-reuse. Manufacturer documentation, the Corning Museum of Glass collection and Gramota dictionary evidence refine selected scopes; no marketing, care or safety advice is imported.",
+    "existing_cohort": [
+      30,
+      90,
+      96,
+      101,
+      102,
+      127,
+      130,
+      251,
+      256,
+      1271,
+      1280,
+      1283,
+      1385,
+      1389,
+      1527,
+      1528,
+      1535,
+      1536,
+      1537,
+      1774,
+      1799,
+      1800,
+      1801,
+      1804,
+      1805,
+      1845,
+      2095,
+      2394,
+      3473,
+      5057,
+      5255,
+      5256,
+      5257,
+      5258,
+      5433,
+      5434,
+      5435,
+      5540,
+      9926,
+      11518,
+      11645,
+      12450,
+      12659,
+      13609,
+      14527,
+      18962,
+      24412,
+      24414,
+      24416,
+      24564,
+      24680,
+      24696,
+      24700
+    ],
+    "context_policy": "All new assertions use U1 and unspecified strength. Existing contexts, relation grammar and explicit negations remain unchanged. Unsupported inherited material percentages are rejected without inventing replacement prevalence estimates.",
+    "sense_decisions": [
+      {
+        "concept": "heat_cooking",
+        "synset": "oewn-00244785-n",
+        "decision": "add",
+        "alignment": "separate heat-specific sense",
+        "scope": "Preparing food through applied heat, narrower than the existing general food-preparation branch."
+      },
+      {
+        "concept": "cookware",
+        "synset": "oewn-03106637-n",
+        "decision": "add",
+        "alignment": "vessel scope",
+        "scope": "Cooking vessels and pans intended for heating food. Restrict the broad dictionary cooking-utensil cluster; a food turner or whisk is not a vessel."
+      },
+      {
+        "concept": "bakeware",
+        "synset": null,
+        "decision": "add",
+        "alignment": "manufacturer-supported family",
+        "scope": "Cookware intended for baking or roasting in an oven; no single material, temperature limit or food product is asserted."
+      },
+      {
+        "concept": "saucepan",
+        "synset": "oewn-04146060-n",
+        "decision": "add",
+        "alignment": "restricted vessel sense",
+        "scope": "A deep cooking vessel with a projecting handle, selected within the broad cooking-pot family. Not an excavator bucket."
+      },
+      {
+        "concept": "stockpot",
+        "synset": "oewn-04331435-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A cooking pot intended for preparing stock. No fixed volume or material is asserted."
+      },
+      {
+        "concept": "cast_iron_pan",
+        "synset": null,
+        "decision": "add",
+        "alignment": "material-defined subtype",
+        "scope": "A frying pan whose pan body is cast iron; coatings and handles may use other materials."
+      },
+      {
+        "concept": "aluminum_pan",
+        "synset": null,
+        "decision": "add",
+        "alignment": "material-defined subtype",
+        "scope": "A frying pan with an aluminum body; induction plates, coatings or handles need not be aluminum."
+      },
+      {
+        "concept": "glass_pot",
+        "synset": null,
+        "decision": "add",
+        "alignment": "material-defined subtype",
+        "scope": "A cooking pot with a glass body. The museum saucepan is evidence of the material possibility, not a universal handle, stove-compatibility or care rule."
+      },
+      {
+        "concept": "eating_spoon",
+        "synset": null,
+        "decision": "add",
+        "alignment": "purpose-defined subtype",
+        "scope": "A spoon intended for eating. Move the overly broad eating-purpose assertion here; measuring and cooking spoons retain the general spoon ancestor."
+      },
+      {
+        "concept": "cooking_spoon",
+        "synset": null,
+        "decision": "add",
+        "alignment": "purpose-defined subtype",
+        "scope": "A spoon intended for preparing food, including stirring. Neither wood nor metal is required."
+      },
+      {
+        "concept": "measuring_cup",
+        "synset": "oewn-03739296-n",
+        "decision": "add",
+        "alignment": "broaden graduated-only gloss",
+        "scope": "A kitchen tool for measuring ingredient volume. Include fixed-capacity dry cups as well as graduated liquid cups; not a drinking-glass material sense or a numerical cup unit."
+      },
+      {
+        "concept": "measuring_spoon",
+        "synset": null,
+        "decision": "add",
+        "alignment": "manufacturer-supported utensil",
+        "scope": "A spoon-shaped kitchen tool for measuring ingredient volume. A measuring utensil is distinct from a spoonful amount or a jurisdiction-specific tablespoon unit."
+      },
+      {
+        "concept": "mixing_bowl",
+        "synset": "oewn-03781079-n",
+        "decision": "add",
+        "alignment": "broaden mixer-only gloss",
+        "scope": "A bowl used when mixing ingredients by hand or machine; do not require an electric mixer."
+      },
+      {
+        "concept": "cutting_board",
+        "synset": "oewn-03029196-n",
+        "decision": "add",
+        "alignment": "material-neutral adaptation",
+        "scope": "A board used as a support while cutting food. Manufacturer polypropylene boards disprove a wood-only definition."
+      },
+      {
+        "concept": "kitchen_sieve",
+        "synset": "oewn-04223701-n",
+        "decision": "add",
+        "alignment": "food-use restriction",
+        "scope": "A kitchen tool for sifting food material through apertures. Exclude analytic screening and computer-display senses."
+      },
+      {
+        "concept": "flour_sifter",
+        "synset": "oewn-04223927-n",
+        "decision": "add",
+        "alignment": "flour-specific adaptation",
+        "scope": "A kitchen sieve intended for sifting flour; no crank, trigger mechanism or metal material is mandatory."
+      },
+      {
+        "concept": "mesh_strainer",
+        "synset": "oewn-04339381-n",
+        "decision": "add",
+        "alignment": "restricted strainer sense",
+        "scope": "A mesh kitchen strainer used to separate larger food particles from liquid. Do not identify it with every colander or all dry sieves."
+      },
+      {
+        "concept": "food_turner",
+        "synset": "oewn-04507355-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A kitchen implement for turning or lifting food. Do not import the dictionary broad cookware genus into the narrower vessel family."
+      },
+      {
+        "concept": "mixing_spatula",
+        "synset": "oewn-04277054-n",
+        "decision": "add",
+        "alignment": "restricted mixing-tool sense",
+        "scope": "A kitchen spatula used to mix or spread food; this is a food-use restriction of the wider hand-tool sense."
+      },
+      {
+        "concept": "kitchen_tongs",
+        "synset": "oewn-04458020-n",
+        "decision": "add",
+        "alignment": "food-use restriction",
+        "scope": "Tongs intended for taking hold of food. Pointed hooks, a separate hinge and one particular material are not universal."
+      },
+      {
+        "concept": "kitchen_mortar",
+        "synset": "oewn-03792434-n",
+        "decision": "add",
+        "alignment": "food-use restriction",
+        "scope": "A vessel used with a pestle to crush, grind or mix food. Exclude artillery, masonry mortar, and a claim that every mortar comes with a pestle."
+      },
+      {
+        "concept": "kitchen_pestle",
+        "synset": "oewn-03925411-n",
+        "decision": "add",
+        "alignment": "food-use restriction",
+        "scope": "A hand tool used to grind or crush food in a mortar. Exclude the ore-stamping machine and slab-grinding implement senses."
+      },
+      {
+        "concept": "food_mixing",
+        "synset": "oewn-00380891-n",
+        "decision": "add",
+        "alignment": "productive food subtype",
+        "scope": "Mixing food materials during preparation. The existing general mixing concept remains broader than food work."
+      },
+      {
+        "concept": "food_stirring",
+        "synset": "oewn-01898313-v",
+        "decision": "add",
+        "alignment": "productive food subtype",
+        "scope": "Stirring food material with an implement or mixer; not emotional agitation or mixing abstract ideas."
+      },
+      {
+        "concept": "food_whipping",
+        "synset": "oewn-01420833-v",
+        "decision": "add",
+        "alignment": "food-use restriction",
+        "scope": "Vigorous beating used when preparing food. The existing Russian action is broader and also covers fluffing nonfood objects."
+      },
+      {
+        "concept": "food_comminution",
+        "synset": null,
+        "decision": "add",
+        "alignment": "productive food subtype",
+        "scope": "Reducing food to smaller pieces or particles; do not restrict the general comminution anchor to food or to just one mechanism."
+      },
+      {
+        "concept": "food_grinding",
+        "synset": "oewn-00331892-v",
+        "decision": "add",
+        "alignment": "mechanism-specific food process",
+        "scope": "Reducing food by crushing, pounding or abrasion. Not the sound, dance, monotonous-work or particle-size noun senses."
+      },
+      {
+        "concept": "flour_sifting",
+        "synset": "oewn-01462658-v",
+        "decision": "add",
+        "alignment": "productive food subtype",
+        "scope": "Passing flour through a sieve to separate coarser material or lumps. Do not equate this with the dictionary noun for winnowing chaff."
+      },
+      {
+        "concept": "toast_bread",
+        "synset": "oewn-07702618-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Bread browned or crisped by heating. Exclude a drinking salutation, celebrated person and slang doomed-person meaning."
+      },
+      {
+        "concept": "bread_toasting",
+        "synset": "oewn-00247419-n",
+        "decision": "add",
+        "alignment": "bread restriction with heat-source-neutral adaptation",
+        "scope": "Browning or crisping bread through heat, including an electric toaster. This is not pan frying and need not use an open fire."
+      },
+      {
+        "concept": "physical_cleaning",
+        "synset": "oewn-00251880-n",
+        "decision": "add",
+        "alignment": "physical-process restriction",
+        "scope": "Removing unwanted dirt or contamination from physical objects. This broad physical process includes household and shoe cleaning; no disinfection or guaranteed cleanliness is asserted."
+      },
+      {
+        "concept": "shoe_cleaning",
+        "synset": null,
+        "decision": "add",
+        "alignment": "productive cleaning subtype",
+        "scope": "Removing dirt from footwear, distinct from removing the peel of food."
+      },
+      {
+        "concept": "cleaning_brush",
+        "synset": null,
+        "decision": "add",
+        "alignment": "purpose-defined subtype",
+        "scope": "A brush intended for physical cleaning. This purpose is not imposed on every brush, including brushes used to apply substances."
+      },
+      {
+        "concept": "shoe_brush",
+        "synset": null,
+        "decision": "add",
+        "alignment": "purpose-defined subtype",
+        "scope": "A brush specifically used to remove dirt from footwear; do not make shoe polish or a particular bristle material mandatory."
+      },
+      {
+        "concept": "scrubbing_brush",
+        "synset": "oewn-04163201-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A brush used for vigorous surface cleaning. Keep it narrower than the general cleaning-brush family."
+      },
+      {
+        "concept": 11518,
+        "synset": "oewn-01898313-v",
+        "decision": "reuse and repair terms",
+        "alignment": "reviewed sense",
+        "scope": "Physical stirring, including mechanical agitation, not metaphorical excitement."
+      },
+      {
+        "concept": 11645,
+        "synset": null,
+        "decision": "reuse and repair terms",
+        "alignment": "reviewed sense",
+        "scope": "Keep the Russian process broad enough for pillows and food; use a composed English label and put culinary whipping in a separate subtype."
+      },
+      {
+        "concept": 18962,
+        "synset": null,
+        "decision": "reuse and repair terms",
+        "alignment": "reviewed sense",
+        "scope": "Physical reduction to smaller pieces; the Russian dictionary includes grain, rock and ore, so do not restrict the anchor to food."
+      },
+      {
+        "concept": 12450,
+        "synset": "oewn-01462658-v",
+        "decision": "reuse and repair terms",
+        "alignment": "reviewed sense",
+        "scope": "Physical sieving, excluding analytic selection. Retain the proseyaniye variant pending historical usage review."
+      },
+      {
+        "concept": 12659,
+        "synset": "oewn-13461952-n",
+        "decision": "reuse and repair terms",
+        "alignment": "reviewed sense",
+        "scope": "Heat treatment of a liquid; preserve the existing water-boiling child and distinguish cooking by boiling. The uncertain shorter kipyatenie variant is deferred."
+      },
+      {
+        "concept": 13609,
+        "synset": "oewn-01252288-v",
+        "decision": "reuse and repair terms",
+        "alignment": "reviewed sense",
+        "scope": "Physical rubbing, broader than food grinding and distinct from a copied drawing made by rubbing."
+      },
+      {
+        "concept": 14527,
+        "synset": "oewn-02073479-v",
+        "decision": "reuse and repair terms",
+        "alignment": "reviewed sense",
+        "scope": "The action of causing liquid to flow; not emotion, rain, or a crowd moving."
+      },
+      {
+        "concept": 9926,
+        "synset": "oewn-02093687-v",
+        "decision": "reuse and repair terms",
+        "alignment": "reviewed sense",
+        "scope": "Physically changing which side of an object faces outward or upward; not communication, business turnover, or deliberation."
+      },
+      {
+        "concept": 1774,
+        "synset": "oewn-00251880-n",
+        "decision": "reuse and repair terms",
+        "alignment": "reviewed sense",
+        "scope": "Retain the household context; broad physical cleaning is a separate parent, and harvesting is excluded."
+      },
+      {
+        "concept": 3473,
+        "synset": "oewn-00380891-n",
+        "decision": "reuse and repair terms",
+        "alignment": "reviewed sense",
+        "scope": "Remove the wrong Russian verb meaning make someone laugh, which was tagged as English; preserve genuine mixing forms."
+      },
+      {
+        "concept": 24412,
+        "synset": "oewn-03626258-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reuse kitchen tool/utensil; no duplicate general kitchen-utensil node."
+      },
+      {
+        "concept": 1537,
+        "synset": "oewn-03070853-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reuse colander; do not make every colander a fine-mesh strainer."
+      },
+      {
+        "concept": 5257,
+        "synset": "oewn-04586220-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reuse culinary whisk; do not import the clothes-brush homonym or universal wire-material requirement."
+      },
+      {
+        "concept": 5256,
+        "synset": "oewn-03459829-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reuse grater and add a food-specific purpose."
+      },
+      {
+        "concept": 5258,
+        "synset": "oewn-04110300-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reuse rolling pin and its dough-rolling purpose; do not copy the wood-and-two-handles gloss as a universal condition."
+      },
+      {
+        "concept": 5433,
+        "synset": "oewn-04449446-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reuse toaster; distinguish the appliance from the person proposing a toast."
+      },
+      {
+        "concept": 1804,
+        "synset": "oewn-01265500-v",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Retain the food-peeling identity and move unrelated shoe/brush assertions."
+      },
+      {
+        "concept": 1774,
+        "synset": "oewn-00251880-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Retain household cleaning and qualify English lookup; broad physical cleaning is a separate genus."
+      },
+      {
+        "concept": 24696,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Laboratory volumetric ware is not a genus of ordinary kitchen measuring utensils."
+      },
+      {
+        "concept": 6411,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Defer the malformed preparation record until its general-preparation versus cooking senses are reviewed; do not guess a cooking duplicate merge."
+      },
+      {
+        "concept": 5074,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Physical seizing has misplaced poke/insert synonyms; defer that cohort rather than attach a new kitchen tool to the contaminated record."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-01256638-n",
+        "decision": "exclude homonym or narrower sense",
+        "alignment": "reviewed sense",
+        "scope": "Do not use the winnowing noun as a synonym of every sieve-based separation."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-13792309-n",
+        "decision": "exclude homonym or narrower sense",
+        "alignment": "reviewed sense",
+        "scope": "A spoonful quantity is not the spoon utensil or volume-measuring instrument."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-03792248-n",
+        "decision": "exclude homonym or narrower sense",
+        "alignment": "reviewed sense",
+        "scope": "Artillery mortar is not a kitchen vessel."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-14980028-n",
+        "decision": "exclude homonym or narrower sense",
+        "alignment": "reviewed sense",
+        "scope": "Masonry mortar is not a kitchen vessel."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-04307218-n",
+        "decision": "exclude homonym or narrower sense",
+        "alignment": "reviewed sense",
+        "scope": "An ore-stamping machine is not the kitchen hand pestle."
+      }
+    ],
+    "limits": "A bounded utensil and process cohort, not a complete kitchen or cleaning ontology. Broad dishware containment/purpose assertions, other cooking methods, cooking/food terminology, generic filter/sieve genera, fork/knife/glass material claims, physical grasping duplicates and the ambiguous generated preparation record 6411 need further review. The Russian variants proseyaniye and kipyateniye are retained pending separate historical/usage review; obvious doubled-suffix artifacts are removed. No culinary conversions, food safety rules, product recommendations or application test suites.",
+    "new_term_collisions": [],
+    "refreshed_comparison": {
+      "baseline": "Q16",
+      "existing_concepts": 12742,
+      "existing_terms": 35919,
+      "synsets_with_exact_en_candidate": 15477,
+      "synsets_without_exact_en_candidate": 92042,
+      "existing_concepts_with_dictionary_candidate": 4065,
+      "caveat": "Exact normalized English spellings are candidates, not semantic identities or a missing-concept count."
+    }
+  },
+  "concepts": [
+    {
+      "key": "heat_cooking",
+      "name": "тепловая обработка пищи",
+      "parent": 256,
+      "universum_id": 1,
+      "terms": [
+        [
+          "тепловая обработка пищи",
+          "ru"
+        ],
+        [
+          "cooking (heat treatment)",
+          "en"
+        ],
+        [
+          "cooking with heat",
+          "en"
+        ]
+      ],
+      "reason": "Preparing food through applied heat, narrower than the existing general food-preparation branch. OEWN 2025: oewn-00244785-n."
+    },
+    {
+      "key": "cookware",
+      "name": "посуда для теплового приготовления пищи",
+      "parent": 127,
+      "universum_id": 1,
+      "terms": [
+        [
+          "посуда для теплового приготовления пищи",
+          "ru"
+        ],
+        [
+          "cookware",
+          "en"
+        ]
+      ],
+      "reason": "Cooking vessels and pans intended for heating food. Restrict the broad dictionary cooking-utensil cluster; a food turner or whisk is not a vessel. OEWN 2025: oewn-03106637-n."
+    },
+    {
+      "key": "bakeware",
+      "name": "посуда для выпечки и запекания",
+      "parent": "cookware",
+      "universum_id": 1,
+      "terms": [
+        [
+          "посуда для выпечки и запекания",
+          "ru"
+        ],
+        [
+          "bakeware",
+          "en"
+        ]
+      ],
+      "reason": "Cookware intended for baking or roasting in an oven; no single material, temperature limit or food product is asserted. Source: https://www.lodgecastiron.com/pages/cast-iron-product-guide"
+    },
+    {
+      "key": "saucepan",
+      "name": "ковш (кухонная посуда)",
+      "parent": 130,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ковш (кухонная посуда)",
+          "ru"
+        ],
+        [
+          "saucepan",
+          "en"
+        ],
+        [
+          "кухонный ковш",
+          "ru"
+        ]
+      ],
+      "reason": "A deep cooking vessel with a projecting handle, selected within the broad cooking-pot family. Not an excavator bucket. OEWN 2025: oewn-04146060-n."
+    },
+    {
+      "key": "stockpot",
+      "name": "бульонная кастрюля",
+      "parent": 130,
+      "universum_id": 1,
+      "terms": [
+        [
+          "бульонная кастрюля",
+          "ru"
+        ],
+        [
+          "stockpot",
+          "en"
+        ],
+        [
+          "stock pot",
+          "en"
+        ]
+      ],
+      "reason": "A cooking pot intended for preparing stock. No fixed volume or material is asserted. OEWN 2025: oewn-04331435-n."
+    },
+    {
+      "key": "cast_iron_pan",
+      "name": "чугунная сковорода",
+      "parent": 1528,
+      "universum_id": 1,
+      "terms": [
+        [
+          "чугунная сковорода",
+          "ru"
+        ],
+        [
+          "cast-iron frying pan",
+          "en"
+        ],
+        [
+          "cast iron skillet",
+          "en"
+        ]
+      ],
+      "reason": "A frying pan whose pan body is cast iron; coatings and handles may use other materials. Source: https://www.lodgecastiron.com/pages/cast-iron-product-guide"
+    },
+    {
+      "key": "aluminum_pan",
+      "name": "алюминиевая сковорода",
+      "parent": 1528,
+      "universum_id": 1,
+      "terms": [
+        [
+          "алюминиевая сковорода",
+          "ru"
+        ],
+        [
+          "aluminum frying pan",
+          "en"
+        ],
+        [
+          "aluminium frying pan",
+          "en"
+        ]
+      ],
+      "reason": "A frying pan with an aluminum body; induction plates, coatings or handles need not be aluminum. Source: https://www.zwilling.com/ca/zwilling-bologna-20-cm-%2F-8-inch-aluminum-frying-pan-1032995/1032995.html"
+    },
+    {
+      "key": "glass_pot",
+      "name": "стеклянная кастрюля",
+      "parent": 130,
+      "universum_id": 1,
+      "terms": [
+        [
+          "стеклянная кастрюля",
+          "ru"
+        ],
+        [
+          "glass cooking pot",
+          "en"
+        ]
+      ],
+      "reason": "A cooking pot with a glass body. The museum saucepan is evidence of the material possibility, not a universal handle, stove-compatibility or care rule. Source: https://glasscollection.cmog.org/objects/22799/pyrex-saucepan"
+    },
+    {
+      "key": "eating_spoon",
+      "name": "ложка для еды",
+      "parent": 1527,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ложка для еды",
+          "ru"
+        ],
+        [
+          "eating spoon",
+          "en"
+        ]
+      ],
+      "reason": "A spoon intended for eating. Move the overly broad eating-purpose assertion here; measuring and cooking spoons retain the general spoon ancestor."
+    },
+    {
+      "key": "cooking_spoon",
+      "name": "ложка для приготовления пищи",
+      "parent": 1527,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ложка для приготовления пищи",
+          "ru"
+        ],
+        [
+          "cooking spoon",
+          "en"
+        ]
+      ],
+      "reason": "A spoon intended for preparing food, including stirring. Neither wood nor metal is required. Source: https://www.oxo.com/3-piece-wooden-spoon-set.html"
+    },
+    {
+      "key": "measuring_cup",
+      "name": "мерный стакан (кухонный)",
+      "parent": 24412,
+      "universum_id": 1,
+      "terms": [
+        [
+          "мерный стакан (кухонный)",
+          "ru"
+        ],
+        [
+          "measuring cup",
+          "en"
+        ],
+        [
+          "kitchen measuring cup",
+          "en"
+        ],
+        [
+          "мерный стакан",
+          "ru"
+        ]
+      ],
+      "reason": "A kitchen tool for measuring ingredient volume. Include fixed-capacity dry cups as well as graduated liquid cups; not a drinking-glass material sense or a numerical cup unit. OEWN 2025: oewn-03739296-n. Source: https://www.oxo.com/blog/cooking-and-baking/which-measuring-cup"
+    },
+    {
+      "key": "measuring_spoon",
+      "name": "мерная ложка",
+      "parent": 1527,
+      "universum_id": 1,
+      "terms": [
+        [
+          "мерная ложка",
+          "ru"
+        ],
+        [
+          "measuring spoon",
+          "en"
+        ]
+      ],
+      "reason": "A spoon-shaped kitchen tool for measuring ingredient volume. A measuring utensil is distinct from a spoonful amount or a jurisdiction-specific tablespoon unit. Source: https://www.oxo.com/blog/cooking-and-baking/how-to-measure-ingredients"
+    },
+    {
+      "key": "mixing_bowl",
+      "name": "миска для смешивания",
+      "parent": 1535,
+      "universum_id": 1,
+      "terms": [
+        [
+          "миска для смешивания",
+          "ru"
+        ],
+        [
+          "mixing bowl",
+          "en"
+        ]
+      ],
+      "reason": "A bowl used when mixing ingredients by hand or machine; do not require an electric mixer. OEWN 2025: oewn-03781079-n. Source: https://www.oxo.com/shop/kitchenware/cooking-baking/mixing-bowls.html"
+    },
+    {
+      "key": "cutting_board",
+      "name": "разделочная доска",
+      "parent": 24412,
+      "universum_id": 1,
+      "terms": [
+        [
+          "разделочная доска",
+          "ru"
+        ],
+        [
+          "cutting board",
+          "en"
+        ],
+        [
+          "chopping board",
+          "en"
+        ]
+      ],
+      "reason": "A board used as a support while cutting food. Manufacturer polypropylene boards disprove a wood-only definition. OEWN 2025: oewn-03029196-n. Source: https://www.oxo.com/shop/kitchenware/cooking-baking/cutting-boards/carving-cutting-board.html"
+    },
+    {
+      "key": "kitchen_sieve",
+      "name": "кухонное сито",
+      "parent": 24412,
+      "universum_id": 1,
+      "terms": [
+        [
+          "кухонное сито",
+          "ru"
+        ],
+        [
+          "kitchen sieve",
+          "en"
+        ]
+      ],
+      "reason": "A kitchen tool for sifting food material through apertures. Exclude analytic screening and computer-display senses. OEWN 2025: oewn-04223701-n."
+    },
+    {
+      "key": "flour_sifter",
+      "name": "сито для муки",
+      "parent": "kitchen_sieve",
+      "universum_id": 1,
+      "terms": [
+        [
+          "сито для муки",
+          "ru"
+        ],
+        [
+          "flour sifter",
+          "en"
+        ]
+      ],
+      "reason": "A kitchen sieve intended for sifting flour; no crank, trigger mechanism or metal material is mandatory. OEWN 2025: oewn-04223927-n."
+    },
+    {
+      "key": "mesh_strainer",
+      "name": "кухонное ситечко",
+      "parent": 24412,
+      "universum_id": 1,
+      "terms": [
+        [
+          "кухонное ситечко",
+          "ru"
+        ],
+        [
+          "kitchen mesh strainer",
+          "en"
+        ],
+        [
+          "food mesh strainer",
+          "en"
+        ]
+      ],
+      "reason": "A mesh kitchen strainer used to separate larger food particles from liquid. Do not identify it with every colander or all dry sieves. OEWN 2025: oewn-04339381-n."
+    },
+    {
+      "key": "food_turner",
+      "name": "лопатка для переворачивания пищи",
+      "parent": 24412,
+      "universum_id": 1,
+      "terms": [
+        [
+          "лопатка для переворачивания пищи",
+          "ru"
+        ],
+        [
+          "food turner",
+          "en"
+        ],
+        [
+          "spatula (food turner)",
+          "en"
+        ]
+      ],
+      "reason": "A kitchen implement for turning or lifting food. Do not import the dictionary broad cookware genus into the narrower vessel family. OEWN 2025: oewn-04507355-n."
+    },
+    {
+      "key": "mixing_spatula",
+      "name": "лопатка для смешивания",
+      "parent": 24412,
+      "universum_id": 1,
+      "terms": [
+        [
+          "лопатка для смешивания",
+          "ru"
+        ],
+        [
+          "mixing spatula",
+          "en"
+        ],
+        [
+          "spatula (mixing food)",
+          "en"
+        ]
+      ],
+      "reason": "A kitchen spatula used to mix or spread food; this is a food-use restriction of the wider hand-tool sense. OEWN 2025: oewn-04277054-n."
+    },
+    {
+      "key": "kitchen_tongs",
+      "name": "кухонные щипцы",
+      "parent": 24412,
+      "universum_id": 1,
+      "terms": [
+        [
+          "кухонные щипцы",
+          "ru"
+        ],
+        [
+          "kitchen tongs",
+          "en"
+        ],
+        [
+          "food tongs",
+          "en"
+        ]
+      ],
+      "reason": "Tongs intended for taking hold of food. Pointed hooks, a separate hinge and one particular material are not universal. OEWN 2025: oewn-04458020-n."
+    },
+    {
+      "key": "kitchen_mortar",
+      "name": "кухонная ступка",
+      "parent": 24412,
+      "universum_id": 1,
+      "terms": [
+        [
+          "кухонная ступка",
+          "ru"
+        ],
+        [
+          "kitchen mortar",
+          "en"
+        ],
+        [
+          "mortar (kitchen vessel)",
+          "en"
+        ]
+      ],
+      "reason": "A vessel used with a pestle to crush, grind or mix food. Exclude artillery, masonry mortar, and a claim that every mortar comes with a pestle. OEWN 2025: oewn-03792434-n."
+    },
+    {
+      "key": "kitchen_pestle",
+      "name": "кухонный пестик",
+      "parent": 24412,
+      "universum_id": 1,
+      "terms": [
+        [
+          "кухонный пестик",
+          "ru"
+        ],
+        [
+          "kitchen pestle",
+          "en"
+        ],
+        [
+          "pestle (kitchen hand tool)",
+          "en"
+        ]
+      ],
+      "reason": "A hand tool used to grind or crush food in a mortar. Exclude the ore-stamping machine and slab-grinding implement senses. OEWN 2025: oewn-03925411-n."
+    },
+    {
+      "key": "food_mixing",
+      "name": "смешивание пищевых продуктов",
+      "parent": 3473,
+      "universum_id": 1,
+      "terms": [
+        [
+          "смешивание пищевых продуктов",
+          "ru"
+        ],
+        [
+          "food mixing",
+          "en"
+        ]
+      ],
+      "reason": "Mixing food materials during preparation. The existing general mixing concept remains broader than food work. OEWN 2025: oewn-00380891-n."
+    },
+    {
+      "key": "food_stirring",
+      "name": "перемешивание пищевых продуктов",
+      "parent": 11518,
+      "universum_id": 1,
+      "terms": [
+        [
+          "перемешивание пищевых продуктов",
+          "ru"
+        ],
+        [
+          "food stirring",
+          "en"
+        ]
+      ],
+      "reason": "Stirring food material with an implement or mixer; not emotional agitation or mixing abstract ideas. OEWN 2025: oewn-01898313-v."
+    },
+    {
+      "key": "food_whipping",
+      "name": "взбивание пищевых продуктов",
+      "parent": 11645,
+      "universum_id": 1,
+      "terms": [
+        [
+          "взбивание пищевых продуктов",
+          "ru"
+        ],
+        [
+          "whipping (food)",
+          "en"
+        ],
+        [
+          "beating (food preparation)",
+          "en"
+        ]
+      ],
+      "reason": "Vigorous beating used when preparing food. The existing Russian action is broader and also covers fluffing nonfood objects. OEWN 2025: oewn-01420833-v. Source: https://gramota.ru/meta/vzbit"
+    },
+    {
+      "key": "food_comminution",
+      "name": "измельчение пищевых продуктов",
+      "parent": 18962,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измельчение пищевых продуктов",
+          "ru"
+        ],
+        [
+          "food comminution",
+          "en"
+        ],
+        [
+          "food size reduction",
+          "en"
+        ]
+      ],
+      "reason": "Reducing food to smaller pieces or particles; do not restrict the general comminution anchor to food or to just one mechanism. Source: https://gramota.ru/meta/izmelchit"
+    },
+    {
+      "key": "food_grinding",
+      "name": "размалывание пищевых продуктов",
+      "parent": "food_comminution",
+      "universum_id": 1,
+      "terms": [
+        [
+          "размалывание пищевых продуктов",
+          "ru"
+        ],
+        [
+          "food grinding",
+          "en"
+        ]
+      ],
+      "reason": "Reducing food by crushing, pounding or abrasion. Not the sound, dance, monotonous-work or particle-size noun senses. OEWN 2025: oewn-00331892-v."
+    },
+    {
+      "key": "flour_sifting",
+      "name": "просеивание муки",
+      "parent": 12450,
+      "universum_id": 1,
+      "terms": [
+        [
+          "просеивание муки",
+          "ru"
+        ],
+        [
+          "flour sifting",
+          "en"
+        ]
+      ],
+      "reason": "Passing flour through a sieve to separate coarser material or lumps. Do not equate this with the dictionary noun for winnowing chaff. OEWN 2025: oewn-01462658-v."
+    },
+    {
+      "key": "toast_bread",
+      "name": "тост (поджаренный хлеб)",
+      "parent": 102,
+      "universum_id": 1,
+      "terms": [
+        [
+          "тост (поджаренный хлеб)",
+          "ru"
+        ],
+        [
+          "toast (bread)",
+          "en"
+        ],
+        [
+          "toasted bread",
+          "en"
+        ]
+      ],
+      "reason": "Bread browned or crisped by heating. Exclude a drinking salutation, celebrated person and slang doomed-person meaning. OEWN 2025: oewn-07702618-n."
+    },
+    {
+      "key": "bread_toasting",
+      "name": "приготовление тостов",
+      "parent": "heat_cooking",
+      "universum_id": 1,
+      "terms": [
+        [
+          "приготовление тостов",
+          "ru"
+        ],
+        [
+          "bread toasting",
+          "en"
+        ],
+        [
+          "toasting (bread)",
+          "en"
+        ]
+      ],
+      "reason": "Browning or crisping bread through heat, including an electric toaster. This is not pan frying and need not use an open fire. OEWN 2025: oewn-00247419-n. Source: https://kitchenaid.com.au/blogs/kitchenthusiast/how-do-toasters-work"
+    },
+    {
+      "key": "physical_cleaning",
+      "name": "очистка от загрязнений",
+      "parent": 5017,
+      "universum_id": 1,
+      "terms": [
+        [
+          "очистка от загрязнений",
+          "ru"
+        ],
+        [
+          "cleaning (physical)",
+          "en"
+        ],
+        [
+          "physical cleaning",
+          "en"
+        ],
+        [
+          "cleansing (physical)",
+          "en"
+        ]
+      ],
+      "reason": "Removing unwanted dirt or contamination from physical objects. This broad physical process includes household and shoe cleaning; no disinfection or guaranteed cleanliness is asserted. OEWN 2025: oewn-00251880-n."
+    },
+    {
+      "key": "shoe_cleaning",
+      "name": "чистка обуви",
+      "parent": "physical_cleaning",
+      "universum_id": 1,
+      "terms": [
+        [
+          "чистка обуви",
+          "ru"
+        ],
+        [
+          "shoe cleaning",
+          "en"
+        ]
+      ],
+      "reason": "Removing dirt from footwear, distinct from removing the peel of food."
+    },
+    {
+      "key": "cleaning_brush",
+      "name": "щётка для очистки",
+      "parent": 5540,
+      "universum_id": 1,
+      "terms": [
+        [
+          "щётка для очистки",
+          "ru"
+        ],
+        [
+          "cleaning brush",
+          "en"
+        ]
+      ],
+      "reason": "A brush intended for physical cleaning. This purpose is not imposed on every brush, including brushes used to apply substances."
+    },
+    {
+      "key": "shoe_brush",
+      "name": "щётка для чистки обуви",
+      "parent": "cleaning_brush",
+      "universum_id": 1,
+      "terms": [
+        [
+          "щётка для чистки обуви",
+          "ru"
+        ],
+        [
+          "shoe-cleaning brush",
+          "en"
+        ],
+        [
+          "shoe brush (cleaning)",
+          "en"
+        ]
+      ],
+      "reason": "A brush specifically used to remove dirt from footwear; do not make shoe polish or a particular bristle material mandatory."
+    },
+    {
+      "key": "scrubbing_brush",
+      "name": "щётка для оттирания",
+      "parent": "cleaning_brush",
+      "universum_id": 1,
+      "terms": [
+        [
+          "щётка для оттирания",
+          "ru"
+        ],
+        [
+          "scrubbing brush",
+          "en"
+        ],
+        [
+          "scrub brush",
+          "en"
+        ]
+      ],
+      "reason": "A brush used for vigorous surface cleaning. Keep it narrower than the general cleaning-brush family. OEWN 2025: oewn-04163201-n."
+    }
+  ],
+  "renames": [
+    {
+      "id": 1804,
+      "before": "чистка",
+      "name": "снятие кожуры (приготовление пищи)",
+      "terms": [],
+      "reason": "The food-preparation parent, peeling translation and potato relation establish the selected food sense. Keep the existing Russian lookup form while separating shoe cleaning. OEWN 2025: oewn-01265500-v."
+    }
+  ],
+  "terms": [
+    {
+      "id": 256,
+      "name": "приготовление пищи",
+      "terms": [
+        [
+          "food preparation",
+          "en"
+        ]
+      ],
+      "reason": "The existing branch includes unheated preparation. Preserve it and add a separate heat-cooking subtype; do not equate all preparation with heat treatment."
+    },
+    {
+      "id": 24412,
+      "name": "кухонный инструмент",
+      "terms": [
+        [
+          "kitchen utensil",
+          "en"
+        ]
+      ],
+      "reason": "Reuse the existing kitchen-tool family instead of duplicating the dictionary kitchen-utensil entry. OEWN 2025: oewn-03626258-n."
+    },
+    {
+      "id": 130,
+      "name": "кастрюля",
+      "terms": [
+        [
+          "cooking pot",
+          "en"
+        ]
+      ],
+      "reason": "Qualify pot as a cooking vessel; exclude the flowerpot and slang homonyms. OEWN 2025: oewn-03996832-n."
+    },
+    {
+      "id": 1528,
+      "name": "сковорода",
+      "terms": [
+        [
+          "frypan",
+          "en"
+        ],
+        [
+          "skillet",
+          "en"
+        ]
+      ],
+      "reason": "Reuse the frying vessel without requiring any one construction material. OEWN 2025: oewn-03405146-n."
+    },
+    {
+      "id": 1527,
+      "name": "ложка",
+      "terms": [
+        [
+          "spoon (utensil)",
+          "en"
+        ]
+      ],
+      "reason": "Keep the utensil broad enough for eating, stirring and measuring; distinguish it from a spoonful quantity and a golfing club. OEWN 2025: oewn-04291140-n."
+    },
+    {
+      "id": 5057,
+      "name": "держание",
+      "terms": [
+        [
+          "holding (physical)",
+          "en"
+        ]
+      ],
+      "reason": "The existing physical-action genus selects holding an object, not property ownership or a financial holding."
+    },
+    {
+      "id": 11518,
+      "name": "перемешивание",
+      "terms": [
+        [
+          "stirring (materials)",
+          "en"
+        ],
+        [
+          "stirring",
+          "en"
+        ],
+        [
+          "перемешивать",
+          "ru"
+        ]
+      ],
+      "reason": "Physical stirring, including mechanical agitation, not metaphorical excitement. OEWN 2025: oewn-01898313-v."
+    },
+    {
+      "id": 11645,
+      "name": "взбивание",
+      "terms": [
+        [
+          "fluffing by beating",
+          "en"
+        ],
+        [
+          "взбивать",
+          "ru"
+        ]
+      ],
+      "reason": "Keep the Russian process broad enough for pillows and food; use a composed English label and put culinary whipping in a separate subtype."
+    },
+    {
+      "id": 18962,
+      "name": "измельчение",
+      "terms": [
+        [
+          "comminution",
+          "en"
+        ],
+        [
+          "size reduction (materials)",
+          "en"
+        ],
+        [
+          "измельчить",
+          "ru"
+        ],
+        [
+          "измельчать",
+          "ru"
+        ]
+      ],
+      "reason": "Physical reduction to smaller pieces; the Russian dictionary includes grain, rock and ore, so do not restrict the anchor to food."
+    },
+    {
+      "id": 12450,
+      "name": "просеивание",
+      "terms": [
+        [
+          "sieving (physical)",
+          "en"
+        ],
+        [
+          "sieving",
+          "en"
+        ],
+        [
+          "просеивать",
+          "ru"
+        ]
+      ],
+      "reason": "Physical sieving, excluding analytic selection. Retain the proseyaniye variant pending historical usage review. OEWN 2025: oewn-01462658-v."
+    },
+    {
+      "id": 12659,
+      "name": "кипячение",
+      "terms": [
+        [
+          "boiling (liquid heat treatment)",
+          "en"
+        ],
+        [
+          "to boil (a liquid)",
+          "en"
+        ]
+      ],
+      "reason": "Heat treatment of a liquid; preserve the existing water-boiling child and distinguish cooking by boiling. The uncertain shorter kipyatenie variant is deferred. OEWN 2025: oewn-13461952-n."
+    },
+    {
+      "id": 13609,
+      "name": "растирание",
+      "terms": [
+        [
+          "rubbing",
+          "en"
+        ],
+        [
+          "rubbing (physical action)",
+          "en"
+        ],
+        [
+          "растирать",
+          "ru"
+        ]
+      ],
+      "reason": "Physical rubbing, broader than food grinding and distinct from a copied drawing made by rubbing. OEWN 2025: oewn-01252288-v."
+    },
+    {
+      "id": 14527,
+      "name": "разливание",
+      "terms": [
+        [
+          "pouring (liquid)",
+          "en"
+        ],
+        [
+          "to pour (liquid)",
+          "en"
+        ],
+        [
+          "разливать",
+          "ru"
+        ]
+      ],
+      "reason": "The action of causing liquid to flow; not emotion, rain, or a crowd moving. OEWN 2025: oewn-02073479-v."
+    },
+    {
+      "id": 9926,
+      "name": "переворачивание",
+      "terms": [
+        [
+          "turning over (physical)",
+          "en"
+        ],
+        [
+          "flipping (physical object)",
+          "en"
+        ],
+        [
+          "переворачивать",
+          "ru"
+        ]
+      ],
+      "reason": "Physically changing which side of an object faces outward or upward; not communication, business turnover, or deliberation. OEWN 2025: oewn-02093687-v."
+    },
+    {
+      "id": 1774,
+      "name": "уборка",
+      "terms": [
+        [
+          "household cleaning",
+          "en"
+        ],
+        [
+          "housecleaning",
+          "en"
+        ],
+        [
+          "убирать",
+          "ru"
+        ]
+      ],
+      "reason": "Retain the household context; broad physical cleaning is a separate parent, and harvesting is excluded. OEWN 2025: oewn-00251880-n."
+    },
+    {
+      "id": 3473,
+      "name": "смешение",
+      "terms": [
+        [
+          "mixing (materials)",
+          "en"
+        ],
+        [
+          "смешивание",
+          "ru"
+        ]
+      ],
+      "reason": "Remove the wrong Russian verb meaning make someone laugh, which was tagged as English; preserve genuine mixing forms. OEWN 2025: oewn-00380891-n."
+    },
+    {
+      "id": 1804,
+      "name": "снятие кожуры (приготовление пищи)",
+      "terms": [
+        [
+          "food peeling",
+          "en"
+        ],
+        [
+          "peeling (food preparation)",
+          "en"
+        ],
+        [
+          "снятие кожуры",
+          "ru"
+        ]
+      ],
+      "reason": "Select removal of a food peel, not cleaning shoes. OEWN 2025: oewn-01265500-v."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 11518,
+      "term": "перемешиваание",
+      "lang": "ru",
+      "reason": "Remove an obvious generated suffix artifact; retain the normal Russian action noun and valid verb forms."
+    },
+    {
+      "id": 11518,
+      "term": "ПЕРЕМЕШИВАТЬ",
+      "lang": "en",
+      "reason": "Remove a Russian verb tagged as English. Genuine English labels and valid Russian forms are recorded separately."
+    },
+    {
+      "id": 11645,
+      "term": "взбиваание",
+      "lang": "ru",
+      "reason": "Remove an obvious generated suffix artifact; retain the normal Russian action noun and valid verb forms."
+    },
+    {
+      "id": 11645,
+      "term": "ВЗБИВАТЬ",
+      "lang": "en",
+      "reason": "Remove a Russian verb tagged as English. Genuine English labels and valid Russian forms are recorded separately."
+    },
+    {
+      "id": 18962,
+      "term": "измельчиение",
+      "lang": "ru",
+      "reason": "Remove an obvious generated suffix artifact; retain the normal Russian action noun and valid verb forms."
+    },
+    {
+      "id": 18962,
+      "term": "ИЗМЕЛЬЧИТЬ",
+      "lang": "en",
+      "reason": "Remove a Russian verb tagged as English. Genuine English labels and valid Russian forms are recorded separately."
+    },
+    {
+      "id": 12450,
+      "term": "просеяяние",
+      "lang": "ru",
+      "reason": "Remove an obvious generated suffix artifact; retain the normal Russian action noun and valid verb forms."
+    },
+    {
+      "id": 12450,
+      "term": "ПРОСЕЯТЬ",
+      "lang": "en",
+      "reason": "Remove a Russian verb tagged as English. Genuine English labels and valid Russian forms are recorded separately."
+    },
+    {
+      "id": 12659,
+      "term": "кипятиение",
+      "lang": "ru",
+      "reason": "Remove an obvious generated suffix artifact; retain the normal Russian action noun and valid verb forms."
+    },
+    {
+      "id": 12659,
+      "term": "КИПЯТИТЬ",
+      "lang": "en",
+      "reason": "Remove a Russian verb tagged as English. Genuine English labels and valid Russian forms are recorded separately."
+    },
+    {
+      "id": 13609,
+      "term": "растираание",
+      "lang": "ru",
+      "reason": "Remove an obvious generated suffix artifact; retain the normal Russian action noun and valid verb forms."
+    },
+    {
+      "id": 13609,
+      "term": "РАСТИРАТЬ",
+      "lang": "en",
+      "reason": "Remove a Russian verb tagged as English. Genuine English labels and valid Russian forms are recorded separately."
+    },
+    {
+      "id": 14527,
+      "term": "разливаание",
+      "lang": "ru",
+      "reason": "Remove an obvious generated suffix artifact; retain the normal Russian action noun and valid verb forms."
+    },
+    {
+      "id": 14527,
+      "term": "РАЗЛИВАТЬ",
+      "lang": "en",
+      "reason": "Remove a Russian verb tagged as English. Genuine English labels and valid Russian forms are recorded separately."
+    },
+    {
+      "id": 9926,
+      "term": "переворачиваание",
+      "lang": "ru",
+      "reason": "Remove an obvious generated suffix artifact; retain the normal Russian action noun and valid verb forms."
+    },
+    {
+      "id": 9926,
+      "term": "ПЕРЕВОРАЧИВАТЬ",
+      "lang": "en",
+      "reason": "Remove a Russian verb tagged as English. Genuine English labels and valid Russian forms are recorded separately."
+    },
+    {
+      "id": 1774,
+      "term": "убираание",
+      "lang": "ru",
+      "reason": "Remove an obvious generated suffix artifact; retain the normal Russian action noun and valid verb forms."
+    },
+    {
+      "id": 1774,
+      "term": "УБИРАТЬ",
+      "lang": "en",
+      "reason": "Remove a Russian verb tagged as English. Genuine English labels and valid Russian forms are recorded separately."
+    },
+    {
+      "id": 3473,
+      "term": "смешиение",
+      "lang": "ru",
+      "reason": "Remove an obvious generated suffix artifact; retain the normal Russian action noun and valid verb forms."
+    },
+    {
+      "id": 3473,
+      "term": "СМЕШИТЬ",
+      "lang": "en",
+      "reason": "Remove a Russian verb tagged as English. Genuine English labels and valid Russian forms are recorded separately."
+    }
+  ],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 18611,
+      "before": [
+        14527,
+        "14",
+        218,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          14527,
+          "14",
+          24700,
+          null,
+          1
+        ]
+      ],
+      "reason": "Pouring liquid is a form of liquid transfer, not emotion. OEWN 2025: oewn-02073479-v."
+    },
+    {
+      "id": 14010,
+      "before": [
+        9926,
+        "14",
+        64,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          9926,
+          "14",
+          5017,
+          null,
+          1
+        ]
+      ],
+      "reason": "Turning an object over is a physical action, not communication. OEWN 2025: oewn-02093687-v."
+    },
+    {
+      "id": 16534,
+      "before": [
+        12450,
+        "14",
+        65,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          12450,
+          "14",
+          5017,
+          null,
+          1
+        ]
+      ],
+      "reason": "Physical sieving has the direct physical-action genus; food sifting is a narrower preparation process. OEWN 2025: oewn-01462658-v."
+    },
+    {
+      "id": 7968,
+      "before": [
+        1774,
+        "14",
+        5017,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1774,
+          "14",
+          "physical_cleaning",
+          null,
+          1
+        ]
+      ],
+      "reason": "Household cleaning is a physical cleaning process; retain the separate household-action parent. OEWN 2025: oewn-00251880-n."
+    },
+    {
+      "id": 29430,
+      "before": [
+        127,
+        "23",
+        1240,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "Dishware and utensils are not universally porcelain; the review includes metal, wooden and glass objects. Source: https://www.oxo.com/3-piece-wooden-spoon-set.html"
+    },
+    {
+      "id": 29431,
+      "before": [
+        127,
+        "23",
+        5463,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "Dishware and utensils are not universally crystal; do not propagate this material into all cookware and measuring spoons. Source: https://www.oxo.com/3-piece-wooden-spoon-set.html"
+    },
+    {
+      "id": 8296,
+      "before": [
+        130,
+        "23",
+        96,
+        1
+      ],
+      "reviewed_strength": 95,
+      "replacements": [],
+      "reason": "A generic cooking pot is not defined as iron. Glass-bodied pots provide a counterexample; the inherited 95 percent has no reviewed statistical basis. Source: https://glasscollection.cmog.org/objects/22799/pyrex-saucepan"
+    },
+    {
+      "id": 2424,
+      "before": [
+        1528,
+        "23",
+        1283,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "A generic frying pan is not necessarily cast iron; specify cast iron on its material-defined subtype. Source: https://www.zwilling.com/ca/zwilling-bologna-20-cm-%2F-8-inch-aluminum-frying-pan-1032995/1032995.html"
+    },
+    {
+      "id": 8297,
+      "before": [
+        1528,
+        "23",
+        96,
+        1
+      ],
+      "reviewed_strength": 95,
+      "replacements": [],
+      "reason": "A generic frying pan need not have an iron body. No reviewed evidence establishes the inherited 95 percent. Source: https://www.zwilling.com/ca/zwilling-bologna-20-cm-%2F-8-inch-aluminum-frying-pan-1032995/1032995.html"
+    },
+    {
+      "id": 2422,
+      "before": [
+        1527,
+        "23",
+        1280,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "A generic spoon need not be steel; wooden spoons are documented utensils. Source: https://www.oxo.com/3-piece-wooden-spoon-set.html"
+    },
+    {
+      "id": 8293,
+      "before": [
+        1527,
+        "23",
+        96,
+        1
+      ],
+      "reviewed_strength": 95,
+      "replacements": [],
+      "reason": "A generic spoon need not be iron. Do not preserve an unsupported 95 percent after introducing measuring and cooking subtypes. Source: https://www.oxo.com/3-piece-wooden-spoon-set.html"
+    },
+    {
+      "id": 186,
+      "before": [
+        130,
+        "14",
+        127,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          130,
+          "14",
+          "cookware",
+          null,
+          1
+        ]
+      ],
+      "reason": "A cooking pot is a cooking vessel; the broader dishware ancestor remains. OEWN 2025: oewn-03996832-n."
+    },
+    {
+      "id": 2287,
+      "before": [
+        1528,
+        "14",
+        127,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1528,
+          "14",
+          "cookware",
+          null,
+          1
+        ]
+      ],
+      "reason": "A frying pan belongs to the cooking-vessel family. OEWN 2025: oewn-03405146-n."
+    },
+    {
+      "id": 9018,
+      "before": [
+        5255,
+        "14",
+        127,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          5255,
+          "14",
+          "bakeware",
+          null,
+          1
+        ]
+      ],
+      "reason": "A baking tray is bakeware. Do not restrict all trays to rectangular metal cookie sheets. OEWN 2025: oewn-03106447-n."
+    },
+    {
+      "id": 2698,
+      "before": [
+        1799,
+        "14",
+        256,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1799,
+          "14",
+          "heat_cooking",
+          null,
+          1
+        ]
+      ],
+      "reason": "Boiling food is a heat-cooking method; preserve the physical-action parent and all reviewed existing facts. OEWN 2025: oewn-00248659-n."
+    },
+    {
+      "id": 2699,
+      "before": [
+        1800,
+        "14",
+        256,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1800,
+          "14",
+          "heat_cooking",
+          null,
+          1
+        ]
+      ],
+      "reason": "Frying food is a heat-cooking method."
+    },
+    {
+      "id": 2700,
+      "before": [
+        1801,
+        "14",
+        256,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1801,
+          "14",
+          "heat_cooking",
+          null,
+          1
+        ]
+      ],
+      "reason": "Baking is a heat-cooking method, not every food-preparation activity. OEWN 2025: oewn-00247208-n."
+    },
+    {
+      "id": 4361,
+      "before": [
+        2394,
+        "14",
+        30,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2394,
+          "14",
+          24412,
+          null,
+          1
+        ]
+      ],
+      "reason": "A vegetable peeler is a kitchen tool; the broader tool ancestor remains. OEWN 2025: oewn-03911028-n."
+    },
+    {
+      "id": 8480,
+      "before": [
+        1804,
+        "27",
+        137,
+        1
+      ],
+      "reviewed_strength": 95,
+      "replacements": [
+        [
+          "shoe_cleaning",
+          "27",
+          137,
+          null,
+          1
+        ]
+      ],
+      "reason": "Footwear is the patient of shoe cleaning, not food peeling. Retain the intended fact on its qualified action without the unsupported 95 percent."
+    },
+    {
+      "id": 9523,
+      "before": [
+        5540,
+        "22",
+        1804,
+        1
+      ],
+      "reviewed_strength": 95,
+      "replacements": [
+        [
+          "cleaning_brush",
+          "21",
+          "physical_cleaning",
+          null,
+          1
+        ]
+      ],
+      "reason": "The generic brush record does not establish food-peeling capability. Record the cleaning purpose on a dedicated cleaning-brush subtype."
+    },
+    {
+      "id": 29435,
+      "before": [
+        1527,
+        "21",
+        1845,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          "eating_spoon",
+          "21",
+          1845,
+          null,
+          1
+        ]
+      ],
+      "reason": "Eating is the purpose of an eating spoon, not a necessary purpose of every cooking or measuring spoon. OEWN 2025: oewn-04291140-n."
+    },
+    {
+      "id": 29457,
+      "before": [
+        5433,
+        "21",
+        1800,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          5433,
+          "21",
+          "bread_toasting",
+          null,
+          1
+        ]
+      ],
+      "reason": "A toaster is intended and able to toast bread, not to pan-fry it. Replace the misplaced frying assertion without inventing a capability percentage. OEWN 2025: oewn-04449446-n. Source: https://kitchenaid.com.au/blogs/kitchenthusiast/how-do-toasters-work"
+    },
+    {
+      "id": 9268,
+      "before": [
+        5433,
+        "22",
+        1800,
+        1
+      ],
+      "reviewed_strength": 95,
+      "replacements": [
+        [
+          5433,
+          "22",
+          "bread_toasting",
+          null,
+          1
+        ]
+      ],
+      "reason": "A toaster is intended and able to toast bread, not to pan-fry it. Replace the misplaced frying assertion without inventing a capability percentage. OEWN 2025: oewn-04449446-n. Source: https://kitchenaid.com.au/blogs/kitchenthusiast/how-do-toasters-work"
+    }
+  ],
+  "edges": [
+    {
+      "subject": "cast_iron_pan",
+      "kod": "23",
+      "object": 1283,
+      "universum_id": 1,
+      "reason": "The named material is used in the vessel body; this does not require every component to share that material. Source: https://www.lodgecastiron.com/pages/cast-iron-product-guide"
+    },
+    {
+      "subject": "aluminum_pan",
+      "kod": "23",
+      "object": 1271,
+      "universum_id": 1,
+      "reason": "The named material is used in the vessel body; this does not require every component to share that material. Source: https://www.zwilling.com/ca/zwilling-bologna-20-cm-%2F-8-inch-aluminum-frying-pan-1032995/1032995.html"
+    },
+    {
+      "subject": "glass_pot",
+      "kod": "23",
+      "object": 90,
+      "universum_id": 1,
+      "reason": "The named material is used in the vessel body; this does not require every component to share that material. Source: https://glasscollection.cmog.org/objects/22799/pyrex-saucepan"
+    },
+    {
+      "subject": "cookware",
+      "kod": "21",
+      "object": "heat_cooking",
+      "universum_id": 1,
+      "reason": "Cooking vessels support preparation by heat."
+    },
+    {
+      "subject": "bakeware",
+      "kod": "21",
+      "object": 1801,
+      "universum_id": 1,
+      "reason": "Bakeware is intended for oven baking."
+    },
+    {
+      "subject": 1528,
+      "kod": "21",
+      "object": 1800,
+      "universum_id": 1,
+      "reason": "A frying pan is intended for frying."
+    },
+    {
+      "subject": "cooking_spoon",
+      "kod": "21",
+      "object": "food_stirring",
+      "universum_id": 1,
+      "reason": "A cooking spoon serves stirring food."
+    },
+    {
+      "subject": "measuring_cup",
+      "kod": "21",
+      "object": 24680,
+      "universum_id": 1,
+      "reason": "The cup measures ingredient volume, not mass."
+    },
+    {
+      "subject": "measuring_spoon",
+      "kod": "21",
+      "object": 24680,
+      "universum_id": 1,
+      "reason": "The spoon measures ingredient volume, not mass."
+    },
+    {
+      "subject": "mixing_bowl",
+      "kod": "21",
+      "object": "food_mixing",
+      "universum_id": 1,
+      "reason": "The bowl holds ingredients while they are mixed; an electric mixer is optional."
+    },
+    {
+      "subject": "cutting_board",
+      "kod": "21",
+      "object": 1805,
+      "universum_id": 1,
+      "reason": "The board supports food slicing."
+    },
+    {
+      "subject": "kitchen_sieve",
+      "kod": "21",
+      "object": 12450,
+      "universum_id": 1,
+      "reason": "The sieve serves physical sieving; food use is selected by its kitchen subtype."
+    },
+    {
+      "subject": "flour_sifter",
+      "kod": "21",
+      "object": "flour_sifting",
+      "universum_id": 1,
+      "reason": "The flour sifter serves sifting flour."
+    },
+    {
+      "subject": "mesh_strainer",
+      "kod": "21",
+      "object": 2095,
+      "universum_id": 1,
+      "reason": "The strainer serves the existing food-straining action."
+    },
+    {
+      "subject": "food_turner",
+      "kod": "21",
+      "object": 9926,
+      "universum_id": 1,
+      "reason": "The turner serves physically turning food over."
+    },
+    {
+      "subject": "mixing_spatula",
+      "kod": "21",
+      "object": "food_mixing",
+      "universum_id": 1,
+      "reason": "The selected spatula serves mixing food."
+    },
+    {
+      "subject": "kitchen_tongs",
+      "kod": "21",
+      "object": 5057,
+      "universum_id": 1,
+      "reason": "Tongs serve physically holding food, not conceptual understanding."
+    },
+    {
+      "subject": "kitchen_mortar",
+      "kod": "21",
+      "object": "food_grinding",
+      "universum_id": 1,
+      "reason": "The mortar supports grinding food with a pestle."
+    },
+    {
+      "subject": "kitchen_pestle",
+      "kod": "21",
+      "object": "food_grinding",
+      "universum_id": 1,
+      "reason": "The pestle is used in grinding food."
+    },
+    {
+      "subject": 2394,
+      "kod": "21",
+      "object": 1804,
+      "universum_id": 1,
+      "reason": "A vegetable peeler is intended for removing a food peel."
+    },
+    {
+      "subject": 1536,
+      "kod": "21",
+      "object": 24700,
+      "universum_id": 1,
+      "reason": "A ladle transfers liquids or liquid-containing food."
+    },
+    {
+      "subject": 5257,
+      "kod": "21",
+      "object": "food_whipping",
+      "universum_id": 1,
+      "reason": "The kitchen whisk serves culinary whipping."
+    },
+    {
+      "subject": 5256,
+      "kod": "21",
+      "object": "food_comminution",
+      "universum_id": 1,
+      "reason": "The grater serves food size reduction."
+    },
+    {
+      "subject": "shoe_brush",
+      "kod": "21",
+      "object": "shoe_cleaning",
+      "universum_id": 1,
+      "reason": "The selected brush serves cleaning footwear."
+    },
+    {
+      "subject": "scrubbing_brush",
+      "kod": "21",
+      "object": "physical_cleaning",
+      "universum_id": 1,
+      "reason": "The brush serves vigorous physical cleaning."
+    },
+    {
+      "subject": "food_mixing",
+      "kod": "27",
+      "object": 101,
+      "universum_id": 1,
+      "reason": "The selected food or flour is the patient of this specifically scoped process."
+    },
+    {
+      "subject": "food_stirring",
+      "kod": "27",
+      "object": 101,
+      "universum_id": 1,
+      "reason": "The selected food or flour is the patient of this specifically scoped process."
+    },
+    {
+      "subject": "food_whipping",
+      "kod": "27",
+      "object": 101,
+      "universum_id": 1,
+      "reason": "The selected food or flour is the patient of this specifically scoped process."
+    },
+    {
+      "subject": "food_comminution",
+      "kod": "27",
+      "object": 101,
+      "universum_id": 1,
+      "reason": "The selected food or flour is the patient of this specifically scoped process."
+    },
+    {
+      "subject": "food_grinding",
+      "kod": "27",
+      "object": 101,
+      "universum_id": 1,
+      "reason": "The selected food or flour is the patient of this specifically scoped process."
+    },
+    {
+      "subject": "flour_sifting",
+      "kod": "27",
+      "object": 251,
+      "universum_id": 1,
+      "reason": "The selected food or flour is the patient of this specifically scoped process."
+    },
+    {
+      "subject": "bread_toasting",
+      "kod": "27",
+      "object": 102,
+      "universum_id": 1,
+      "reason": "The selected food or flour is the patient of this specifically scoped process."
+    },
+    {
+      "subject": "bread_toasting",
+      "kod": "70",
+      "object": "toast_bread",
+      "universum_id": 1,
+      "reason": "Bread toasting produces toasted bread; the food product is distinct from the heating action. OEWN 2025: oewn-07702618-n. Source: https://kitchenaid.com.au/blogs/kitchenthusiast/how-do-toasters-work"
+    },
+    {
+      "subject": "cutting_board",
+      "kod": "25",
+      "object": 101,
+      "universum_id": 1,
+      "reason": "The selected kitchen tool acts on food material."
+    },
+    {
+      "subject": "mesh_strainer",
+      "kod": "25",
+      "object": 101,
+      "universum_id": 1,
+      "reason": "The selected kitchen tool acts on food material."
+    },
+    {
+      "subject": "food_turner",
+      "kod": "25",
+      "object": 101,
+      "universum_id": 1,
+      "reason": "The selected kitchen tool acts on food material."
+    },
+    {
+      "subject": "mixing_spatula",
+      "kod": "25",
+      "object": 101,
+      "universum_id": 1,
+      "reason": "The selected kitchen tool acts on food material."
+    },
+    {
+      "subject": "kitchen_tongs",
+      "kod": "25",
+      "object": 101,
+      "universum_id": 1,
+      "reason": "The selected kitchen tool acts on food material."
+    },
+    {
+      "subject": "kitchen_mortar",
+      "kod": "25",
+      "object": 101,
+      "universum_id": 1,
+      "reason": "The selected kitchen tool acts on food material."
+    },
+    {
+      "subject": "kitchen_pestle",
+      "kod": "25",
+      "object": 101,
+      "universum_id": 1,
+      "reason": "The selected kitchen tool acts on food material."
+    },
+    {
+      "subject": "shoe_brush",
+      "kod": "25",
+      "object": 137,
+      "universum_id": 1,
+      "reason": "The selected cleaning brush acts on footwear."
+    },
+    {
+      "subject": "cooking_spoon",
+      "kod": "14",
+      "object": 24412,
+      "universum_id": 1,
+      "reason": "A cooking spoon is a kitchen utensil."
+    },
+    {
+      "subject": "measuring_spoon",
+      "kod": "14",
+      "object": 24412,
+      "universum_id": 1,
+      "reason": "The selected volume-measuring spoon is a kitchen utensil."
+    },
+    {
+      "subject": "measuring_spoon",
+      "kod": "14",
+      "object": 24564,
+      "universum_id": 1,
+      "reason": "A volume-measuring spoon is also a measuring instrument."
+    },
+    {
+      "subject": "measuring_cup",
+      "kod": "14",
+      "object": 24564,
+      "universum_id": 1,
+      "reason": "A volume-measuring cup is also a measuring instrument."
+    },
+    {
+      "subject": 1537,
+      "kod": "14",
+      "object": 24412,
+      "universum_id": 1,
+      "reason": "A colander is also a kitchen tool, retaining its existing dishware genus."
+    },
+    {
+      "subject": 1536,
+      "kod": "14",
+      "object": 1527,
+      "universum_id": 1,
+      "reason": "A ladle is a spoon-shaped utensil for scooping or serving liquid food, retaining its dishware genus."
+    },
+    {
+      "subject": "food_mixing",
+      "kod": "14",
+      "object": 256,
+      "universum_id": 1,
+      "reason": "The food-specific process is also a food-preparation activity; its general physical-action parent remains broader."
+    },
+    {
+      "subject": "food_stirring",
+      "kod": "14",
+      "object": 256,
+      "universum_id": 1,
+      "reason": "The food-specific process is also a food-preparation activity; its general physical-action parent remains broader."
+    },
+    {
+      "subject": "food_whipping",
+      "kod": "14",
+      "object": 256,
+      "universum_id": 1,
+      "reason": "The food-specific process is also a food-preparation activity; its general physical-action parent remains broader."
+    },
+    {
+      "subject": "food_comminution",
+      "kod": "14",
+      "object": 256,
+      "universum_id": 1,
+      "reason": "The food-specific process is also a food-preparation activity; its general physical-action parent remains broader."
+    },
+    {
+      "subject": "flour_sifting",
+      "kod": "14",
+      "object": 256,
+      "universum_id": 1,
+      "reason": "The food-specific process is also a food-preparation activity; its general physical-action parent remains broader."
+    }
+  ],
+  "checks": [
+    {
+      "subject": "heat_cooking",
+      "kod": "14",
+      "object": 256,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cookware",
+      "kod": "14",
+      "object": 127,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "bakeware",
+      "kod": "14",
+      "object": "cookware",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "saucepan",
+      "kod": "14",
+      "object": 130,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "stockpot",
+      "kod": "14",
+      "object": 130,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cast_iron_pan",
+      "kod": "14",
+      "object": 1528,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "aluminum_pan",
+      "kod": "14",
+      "object": 1528,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "glass_pot",
+      "kod": "14",
+      "object": 130,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "eating_spoon",
+      "kod": "14",
+      "object": 1527,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cooking_spoon",
+      "kod": "14",
+      "object": 1527,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "measuring_cup",
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "measuring_spoon",
+      "kod": "14",
+      "object": 1527,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mixing_bowl",
+      "kod": "14",
+      "object": 1535,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cutting_board",
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kitchen_sieve",
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "flour_sifter",
+      "kod": "14",
+      "object": "kitchen_sieve",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mesh_strainer",
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_turner",
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mixing_spatula",
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kitchen_tongs",
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kitchen_mortar",
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kitchen_pestle",
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_mixing",
+      "kod": "14",
+      "object": 3473,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_stirring",
+      "kod": "14",
+      "object": 11518,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_whipping",
+      "kod": "14",
+      "object": 11645,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_comminution",
+      "kod": "14",
+      "object": 18962,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_grinding",
+      "kod": "14",
+      "object": "food_comminution",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "flour_sifting",
+      "kod": "14",
+      "object": 12450,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "toast_bread",
+      "kod": "14",
+      "object": 102,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "bread_toasting",
+      "kod": "14",
+      "object": "heat_cooking",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "physical_cleaning",
+      "kod": "14",
+      "object": 5017,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "shoe_cleaning",
+      "kod": "14",
+      "object": "physical_cleaning",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cleaning_brush",
+      "kod": "14",
+      "object": 5540,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "shoe_brush",
+      "kod": "14",
+      "object": "cleaning_brush",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "scrubbing_brush",
+      "kod": "14",
+      "object": "cleaning_brush",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 14527,
+      "kod": "14",
+      "object": 218,
+      "present": false
+    },
+    {
+      "subject": 14527,
+      "kod": "14",
+      "object": 24700,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 9926,
+      "kod": "14",
+      "object": 64,
+      "present": false
+    },
+    {
+      "subject": 9926,
+      "kod": "14",
+      "object": 5017,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 12450,
+      "kod": "14",
+      "object": 65,
+      "present": false
+    },
+    {
+      "subject": 12450,
+      "kod": "14",
+      "object": 5017,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1774,
+      "kod": "14",
+      "object": 5017,
+      "present": false
+    },
+    {
+      "subject": 1774,
+      "kod": "14",
+      "object": "physical_cleaning",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 127,
+      "kod": "23",
+      "object": 1240,
+      "present": false
+    },
+    {
+      "subject": 127,
+      "kod": "23",
+      "object": 5463,
+      "present": false
+    },
+    {
+      "subject": 130,
+      "kod": "23",
+      "object": 96,
+      "present": false
+    },
+    {
+      "subject": 1528,
+      "kod": "23",
+      "object": 1283,
+      "present": false
+    },
+    {
+      "subject": 1528,
+      "kod": "23",
+      "object": 96,
+      "present": false
+    },
+    {
+      "subject": 1527,
+      "kod": "23",
+      "object": 1280,
+      "present": false
+    },
+    {
+      "subject": 1527,
+      "kod": "23",
+      "object": 96,
+      "present": false
+    },
+    {
+      "subject": "cast_iron_pan",
+      "kod": "23",
+      "object": 1283,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "aluminum_pan",
+      "kod": "23",
+      "object": 1271,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "glass_pot",
+      "kod": "23",
+      "object": 90,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 130,
+      "kod": "14",
+      "object": 127,
+      "present": false
+    },
+    {
+      "subject": 130,
+      "kod": "14",
+      "object": "cookware",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1528,
+      "kod": "14",
+      "object": 127,
+      "present": false
+    },
+    {
+      "subject": 1528,
+      "kod": "14",
+      "object": "cookware",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5255,
+      "kod": "14",
+      "object": 127,
+      "present": false
+    },
+    {
+      "subject": 5255,
+      "kod": "14",
+      "object": "bakeware",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1799,
+      "kod": "14",
+      "object": 256,
+      "present": false
+    },
+    {
+      "subject": 1799,
+      "kod": "14",
+      "object": "heat_cooking",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1800,
+      "kod": "14",
+      "object": 256,
+      "present": false
+    },
+    {
+      "subject": 1800,
+      "kod": "14",
+      "object": "heat_cooking",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1801,
+      "kod": "14",
+      "object": 256,
+      "present": false
+    },
+    {
+      "subject": 1801,
+      "kod": "14",
+      "object": "heat_cooking",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2394,
+      "kod": "14",
+      "object": 30,
+      "present": false
+    },
+    {
+      "subject": 2394,
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1804,
+      "kod": "27",
+      "object": 137,
+      "present": false
+    },
+    {
+      "subject": "shoe_cleaning",
+      "kod": "27",
+      "object": 137,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5540,
+      "kod": "22",
+      "object": 1804,
+      "present": false
+    },
+    {
+      "subject": "cleaning_brush",
+      "kod": "21",
+      "object": "physical_cleaning",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1527,
+      "kod": "21",
+      "object": 1845,
+      "present": false
+    },
+    {
+      "subject": "eating_spoon",
+      "kod": "21",
+      "object": 1845,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5433,
+      "kod": "21",
+      "object": 1800,
+      "present": false
+    },
+    {
+      "subject": 5433,
+      "kod": "21",
+      "object": "bread_toasting",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5433,
+      "kod": "22",
+      "object": 1800,
+      "present": false
+    },
+    {
+      "subject": 5433,
+      "kod": "22",
+      "object": "bread_toasting",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cookware",
+      "kod": "21",
+      "object": "heat_cooking",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "bakeware",
+      "kod": "21",
+      "object": 1801,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1528,
+      "kod": "21",
+      "object": 1800,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cooking_spoon",
+      "kod": "21",
+      "object": "food_stirring",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "measuring_cup",
+      "kod": "21",
+      "object": 24680,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "measuring_spoon",
+      "kod": "21",
+      "object": 24680,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mixing_bowl",
+      "kod": "21",
+      "object": "food_mixing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cutting_board",
+      "kod": "21",
+      "object": 1805,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kitchen_sieve",
+      "kod": "21",
+      "object": 12450,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "flour_sifter",
+      "kod": "21",
+      "object": "flour_sifting",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mesh_strainer",
+      "kod": "21",
+      "object": 2095,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_turner",
+      "kod": "21",
+      "object": 9926,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mixing_spatula",
+      "kod": "21",
+      "object": "food_mixing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kitchen_tongs",
+      "kod": "21",
+      "object": 5057,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kitchen_mortar",
+      "kod": "21",
+      "object": "food_grinding",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kitchen_pestle",
+      "kod": "21",
+      "object": "food_grinding",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2394,
+      "kod": "21",
+      "object": 1804,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1536,
+      "kod": "21",
+      "object": 24700,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5257,
+      "kod": "21",
+      "object": "food_whipping",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5256,
+      "kod": "21",
+      "object": "food_comminution",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "shoe_brush",
+      "kod": "21",
+      "object": "shoe_cleaning",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "scrubbing_brush",
+      "kod": "21",
+      "object": "physical_cleaning",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_mixing",
+      "kod": "27",
+      "object": 101,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_stirring",
+      "kod": "27",
+      "object": 101,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_whipping",
+      "kod": "27",
+      "object": 101,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_comminution",
+      "kod": "27",
+      "object": 101,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_grinding",
+      "kod": "27",
+      "object": 101,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "flour_sifting",
+      "kod": "27",
+      "object": 251,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "bread_toasting",
+      "kod": "27",
+      "object": 102,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "bread_toasting",
+      "kod": "70",
+      "object": "toast_bread",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cutting_board",
+      "kod": "25",
+      "object": 101,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mesh_strainer",
+      "kod": "25",
+      "object": 101,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_turner",
+      "kod": "25",
+      "object": 101,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mixing_spatula",
+      "kod": "25",
+      "object": 101,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kitchen_tongs",
+      "kod": "25",
+      "object": 101,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kitchen_mortar",
+      "kod": "25",
+      "object": 101,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kitchen_pestle",
+      "kod": "25",
+      "object": 101,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "shoe_brush",
+      "kod": "25",
+      "object": 137,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cooking_spoon",
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "measuring_spoon",
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "measuring_spoon",
+      "kod": "14",
+      "object": 24564,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "measuring_cup",
+      "kod": "14",
+      "object": 24564,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1537,
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1536,
+      "kod": "14",
+      "object": 1527,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_mixing",
+      "kod": "14",
+      "object": 256,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_stirring",
+      "kod": "14",
+      "object": 256,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_whipping",
+      "kod": "14",
+      "object": 256,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_comminution",
+      "kod": "14",
+      "object": 256,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "flour_sifting",
+      "kod": "14",
+      "object": 256,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1804,
+      "kod": "27",
+      "object": 137,
+      "present": false
+    },
+    {
+      "subject": 5540,
+      "kod": "22",
+      "object": 1804,
+      "present": false
+    },
+    {
+      "subject": 5433,
+      "kod": "21",
+      "object": 1800,
+      "present": false
+    },
+    {
+      "subject": 5433,
+      "kod": "22",
+      "object": 1800,
+      "present": false
+    },
+    {
+      "subject": "cutting_board",
+      "kod": "23",
+      "object": 90,
+      "present": false
+    },
+    {
+      "subject": "measuring_cup",
+      "kod": "23",
+      "object": 90,
+      "present": false
+    },
+    {
+      "subject": "kitchen_mortar",
+      "kod": "20",
+      "object": "kitchen_pestle",
+      "present": false
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "heat_cooking",
+      "ancestor": 256,
+      "present": true
+    },
+    {
+      "subject": "cookware",
+      "ancestor": 127,
+      "present": true
+    },
+    {
+      "subject": "bakeware",
+      "ancestor": "cookware",
+      "present": true
+    },
+    {
+      "subject": "saucepan",
+      "ancestor": 130,
+      "present": true
+    },
+    {
+      "subject": "stockpot",
+      "ancestor": 130,
+      "present": true
+    },
+    {
+      "subject": "cast_iron_pan",
+      "ancestor": 1528,
+      "present": true
+    },
+    {
+      "subject": "aluminum_pan",
+      "ancestor": 1528,
+      "present": true
+    },
+    {
+      "subject": "glass_pot",
+      "ancestor": 130,
+      "present": true
+    },
+    {
+      "subject": "eating_spoon",
+      "ancestor": 1527,
+      "present": true
+    },
+    {
+      "subject": "cooking_spoon",
+      "ancestor": 1527,
+      "present": true
+    },
+    {
+      "subject": "measuring_cup",
+      "ancestor": 24412,
+      "present": true
+    },
+    {
+      "subject": "measuring_spoon",
+      "ancestor": 1527,
+      "present": true
+    },
+    {
+      "subject": "mixing_bowl",
+      "ancestor": 1535,
+      "present": true
+    },
+    {
+      "subject": "cutting_board",
+      "ancestor": 24412,
+      "present": true
+    },
+    {
+      "subject": "kitchen_sieve",
+      "ancestor": 24412,
+      "present": true
+    },
+    {
+      "subject": "flour_sifter",
+      "ancestor": "kitchen_sieve",
+      "present": true
+    },
+    {
+      "subject": "mesh_strainer",
+      "ancestor": 24412,
+      "present": true
+    },
+    {
+      "subject": "food_turner",
+      "ancestor": 24412,
+      "present": true
+    },
+    {
+      "subject": "mixing_spatula",
+      "ancestor": 24412,
+      "present": true
+    },
+    {
+      "subject": "kitchen_tongs",
+      "ancestor": 24412,
+      "present": true
+    },
+    {
+      "subject": "kitchen_mortar",
+      "ancestor": 24412,
+      "present": true
+    },
+    {
+      "subject": "kitchen_pestle",
+      "ancestor": 24412,
+      "present": true
+    },
+    {
+      "subject": "food_mixing",
+      "ancestor": 3473,
+      "present": true
+    },
+    {
+      "subject": "food_stirring",
+      "ancestor": 11518,
+      "present": true
+    },
+    {
+      "subject": "food_whipping",
+      "ancestor": 11645,
+      "present": true
+    },
+    {
+      "subject": "food_comminution",
+      "ancestor": 18962,
+      "present": true
+    },
+    {
+      "subject": "food_grinding",
+      "ancestor": "food_comminution",
+      "present": true
+    },
+    {
+      "subject": "flour_sifting",
+      "ancestor": 12450,
+      "present": true
+    },
+    {
+      "subject": "toast_bread",
+      "ancestor": 102,
+      "present": true
+    },
+    {
+      "subject": "bread_toasting",
+      "ancestor": "heat_cooking",
+      "present": true
+    },
+    {
+      "subject": "physical_cleaning",
+      "ancestor": 5017,
+      "present": true
+    },
+    {
+      "subject": "shoe_cleaning",
+      "ancestor": "physical_cleaning",
+      "present": true
+    },
+    {
+      "subject": "cleaning_brush",
+      "ancestor": 5540,
+      "present": true
+    },
+    {
+      "subject": "shoe_brush",
+      "ancestor": "cleaning_brush",
+      "present": true
+    },
+    {
+      "subject": "scrubbing_brush",
+      "ancestor": "cleaning_brush",
+      "present": true
+    },
+    {
+      "subject": 130,
+      "ancestor": 127,
+      "present": true
+    },
+    {
+      "subject": 1528,
+      "ancestor": 127,
+      "present": true
+    },
+    {
+      "subject": 5255,
+      "ancestor": 127,
+      "present": true
+    },
+    {
+      "subject": 2394,
+      "ancestor": 30,
+      "present": true
+    },
+    {
+      "subject": 1799,
+      "ancestor": 256,
+      "present": true
+    },
+    {
+      "subject": 1800,
+      "ancestor": 256,
+      "present": true
+    },
+    {
+      "subject": 1801,
+      "ancestor": 256,
+      "present": true
+    },
+    {
+      "subject": 1774,
+      "ancestor": 5017,
+      "present": true
+    },
+    {
+      "subject": 14527,
+      "ancestor": 5017,
+      "present": true
+    },
+    {
+      "subject": "measuring_cup",
+      "ancestor": 30,
+      "present": true
+    },
+    {
+      "subject": "measuring_spoon",
+      "ancestor": 30,
+      "present": true
+    },
+    {
+      "subject": 14527,
+      "ancestor": 218,
+      "present": false
+    },
+    {
+      "subject": 9926,
+      "ancestor": 64,
+      "present": false
+    },
+    {
+      "subject": "physical_cleaning",
+      "ancestor": 256,
+      "present": false
+    },
+    {
+      "subject": "shoe_cleaning",
+      "ancestor": 1804,
+      "present": false
+    },
+    {
+      "subject": "shoe_cleaning",
+      "ancestor": 256,
+      "present": false
+    },
+    {
+      "subject": "bread_toasting",
+      "ancestor": 1800,
+      "present": false
+    },
+    {
+      "subject": "measuring_cup",
+      "ancestor": 24696,
+      "present": false
+    },
+    {
+      "subject": "measuring_spoon",
+      "ancestor": 24696,
+      "present": false
+    },
+    {
+      "subject": "measuring_cup",
+      "ancestor": 2651,
+      "present": false
+    },
+    {
+      "subject": "measuring_spoon",
+      "ancestor": 2651,
+      "present": false
+    },
+    {
+      "subject": "measuring_cup",
+      "ancestor": 1532,
+      "present": false
+    },
+    {
+      "subject": "food_turner",
+      "ancestor": "cookware",
+      "present": false
+    },
+    {
+      "subject": "food_mixing",
+      "ancestor": "heat_cooking",
+      "present": false
+    },
+    {
+      "subject": "food_stirring",
+      "ancestor": "heat_cooking",
+      "present": false
+    },
+    {
+      "subject": "food_whipping",
+      "ancestor": "heat_cooking",
+      "present": false
+    },
+    {
+      "subject": "flour_sifting",
+      "ancestor": "heat_cooking",
+      "present": false
+    },
+    {
+      "subject": 11518,
+      "ancestor": 256,
+      "present": false
+    },
+    {
+      "subject": 11645,
+      "ancestor": 256,
+      "present": false
+    },
+    {
+      "subject": 18962,
+      "ancestor": 256,
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": 256,
+      "term": "food preparation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 24412,
+      "term": "kitchen utensil",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 130,
+      "term": "cooking pot",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1528,
+      "term": "frypan",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1528,
+      "term": "skillet",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1527,
+      "term": "spoon (utensil)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5057,
+      "term": "holding (physical)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "heat_cooking",
+      "term": "тепловая обработка пищи",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "heat_cooking",
+      "term": "cooking (heat treatment)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "heat_cooking",
+      "term": "cooking with heat",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cookware",
+      "term": "посуда для теплового приготовления пищи",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "cookware",
+      "term": "cookware",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "bakeware",
+      "term": "посуда для выпечки и запекания",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "bakeware",
+      "term": "bakeware",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "saucepan",
+      "term": "ковш (кухонная посуда)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "saucepan",
+      "term": "saucepan",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "saucepan",
+      "term": "кухонный ковш",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "stockpot",
+      "term": "бульонная кастрюля",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "stockpot",
+      "term": "stockpot",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "stockpot",
+      "term": "stock pot",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cast_iron_pan",
+      "term": "чугунная сковорода",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "cast_iron_pan",
+      "term": "cast-iron frying pan",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cast_iron_pan",
+      "term": "cast iron skillet",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "aluminum_pan",
+      "term": "алюминиевая сковорода",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "aluminum_pan",
+      "term": "aluminum frying pan",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "aluminum_pan",
+      "term": "aluminium frying pan",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "glass_pot",
+      "term": "стеклянная кастрюля",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "glass_pot",
+      "term": "glass cooking pot",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "eating_spoon",
+      "term": "ложка для еды",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "eating_spoon",
+      "term": "eating spoon",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cooking_spoon",
+      "term": "ложка для приготовления пищи",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "cooking_spoon",
+      "term": "cooking spoon",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "measuring_cup",
+      "term": "мерный стакан (кухонный)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "measuring_cup",
+      "term": "measuring cup",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "measuring_cup",
+      "term": "kitchen measuring cup",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "measuring_cup",
+      "term": "мерный стакан",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "measuring_spoon",
+      "term": "мерная ложка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "measuring_spoon",
+      "term": "measuring spoon",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "mixing_bowl",
+      "term": "миска для смешивания",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "mixing_bowl",
+      "term": "mixing bowl",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cutting_board",
+      "term": "разделочная доска",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "cutting_board",
+      "term": "cutting board",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cutting_board",
+      "term": "chopping board",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kitchen_sieve",
+      "term": "кухонное сито",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kitchen_sieve",
+      "term": "kitchen sieve",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "flour_sifter",
+      "term": "сито для муки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "flour_sifter",
+      "term": "flour sifter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "mesh_strainer",
+      "term": "кухонное ситечко",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "mesh_strainer",
+      "term": "kitchen mesh strainer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "mesh_strainer",
+      "term": "food mesh strainer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "food_turner",
+      "term": "лопатка для переворачивания пищи",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "food_turner",
+      "term": "food turner",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "food_turner",
+      "term": "spatula (food turner)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "mixing_spatula",
+      "term": "лопатка для смешивания",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "mixing_spatula",
+      "term": "mixing spatula",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "mixing_spatula",
+      "term": "spatula (mixing food)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kitchen_tongs",
+      "term": "кухонные щипцы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kitchen_tongs",
+      "term": "kitchen tongs",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kitchen_tongs",
+      "term": "food tongs",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kitchen_mortar",
+      "term": "кухонная ступка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kitchen_mortar",
+      "term": "kitchen mortar",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kitchen_mortar",
+      "term": "mortar (kitchen vessel)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kitchen_pestle",
+      "term": "кухонный пестик",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kitchen_pestle",
+      "term": "kitchen pestle",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kitchen_pestle",
+      "term": "pestle (kitchen hand tool)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "food_mixing",
+      "term": "смешивание пищевых продуктов",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "food_mixing",
+      "term": "food mixing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "food_stirring",
+      "term": "перемешивание пищевых продуктов",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "food_stirring",
+      "term": "food stirring",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "food_whipping",
+      "term": "взбивание пищевых продуктов",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "food_whipping",
+      "term": "whipping (food)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "food_whipping",
+      "term": "beating (food preparation)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "food_comminution",
+      "term": "измельчение пищевых продуктов",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "food_comminution",
+      "term": "food comminution",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "food_comminution",
+      "term": "food size reduction",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "food_grinding",
+      "term": "размалывание пищевых продуктов",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "food_grinding",
+      "term": "food grinding",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "flour_sifting",
+      "term": "просеивание муки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "flour_sifting",
+      "term": "flour sifting",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "toast_bread",
+      "term": "тост (поджаренный хлеб)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "toast_bread",
+      "term": "toast (bread)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "toast_bread",
+      "term": "toasted bread",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "bread_toasting",
+      "term": "приготовление тостов",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "bread_toasting",
+      "term": "bread toasting",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "bread_toasting",
+      "term": "toasting (bread)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "physical_cleaning",
+      "term": "очистка от загрязнений",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "physical_cleaning",
+      "term": "cleaning (physical)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "physical_cleaning",
+      "term": "physical cleaning",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "physical_cleaning",
+      "term": "cleansing (physical)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "shoe_cleaning",
+      "term": "чистка обуви",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "shoe_cleaning",
+      "term": "shoe cleaning",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cleaning_brush",
+      "term": "щётка для очистки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "cleaning_brush",
+      "term": "cleaning brush",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "shoe_brush",
+      "term": "щётка для чистки обуви",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "shoe_brush",
+      "term": "shoe-cleaning brush",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "shoe_brush",
+      "term": "shoe brush (cleaning)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "scrubbing_brush",
+      "term": "щётка для оттирания",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "scrubbing_brush",
+      "term": "scrubbing brush",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "scrubbing_brush",
+      "term": "scrub brush",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 11518,
+      "term": "stirring (materials)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 11518,
+      "term": "stirring",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 11518,
+      "term": "перемешивать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 11518,
+      "term": "перемешиваание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 11518,
+      "term": "ПЕРЕМЕШИВАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 11645,
+      "term": "fluffing by beating",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 11645,
+      "term": "взбивать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 11645,
+      "term": "взбиваание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 11645,
+      "term": "ВЗБИВАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 18962,
+      "term": "comminution",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 18962,
+      "term": "size reduction (materials)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 18962,
+      "term": "измельчить",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 18962,
+      "term": "измельчать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 18962,
+      "term": "измельчиение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 18962,
+      "term": "ИЗМЕЛЬЧИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 12450,
+      "term": "sieving (physical)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 12450,
+      "term": "sieving",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 12450,
+      "term": "просеивать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 12450,
+      "term": "просеяяние",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 12450,
+      "term": "ПРОСЕЯТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 12659,
+      "term": "boiling (liquid heat treatment)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 12659,
+      "term": "to boil (a liquid)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 12659,
+      "term": "кипятиение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 12659,
+      "term": "КИПЯТИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 13609,
+      "term": "rubbing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 13609,
+      "term": "rubbing (physical action)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 13609,
+      "term": "растирать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 13609,
+      "term": "растираание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 13609,
+      "term": "РАСТИРАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 14527,
+      "term": "pouring (liquid)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 14527,
+      "term": "to pour (liquid)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 14527,
+      "term": "разливать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 14527,
+      "term": "разливаание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 14527,
+      "term": "РАЗЛИВАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 9926,
+      "term": "turning over (physical)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 9926,
+      "term": "flipping (physical object)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 9926,
+      "term": "переворачивать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 9926,
+      "term": "переворачиваание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 9926,
+      "term": "ПЕРЕВОРАЧИВАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 1774,
+      "term": "household cleaning",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1774,
+      "term": "housecleaning",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1774,
+      "term": "убирать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1774,
+      "term": "убираание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 1774,
+      "term": "УБИРАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 3473,
+      "term": "mixing (materials)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3473,
+      "term": "смешивание",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 3473,
+      "term": "смешиение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 3473,
+      "term": "СМЕШИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 1804,
+      "term": "снятие кожуры (приготовление пищи)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1804,
+      "term": "food peeling",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1804,
+      "term": "peeling (food preparation)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1804,
+      "term": "снятие кожуры",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 3473,
+      "term": "смешать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 12450,
+      "term": "просеяние",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 12659,
+      "term": "кипятение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1804,
+      "term": "чистка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "measuring_cup",
+      "term": "cup",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "measuring_spoon",
+      "term": "tablespoon",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "kitchen_mortar",
+      "term": "howitzer",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "kitchen_pestle",
+      "term": "stamp",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "food_whipping",
+      "term": "flogging",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

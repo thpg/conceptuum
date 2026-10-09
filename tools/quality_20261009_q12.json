@@ -1,0 +1,3473 @@
+{
+  "source": "quality-20261009-q12",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Humidity, wind and rotational measurement; acceleration action/quantity distinction; dimensional tools, timekeeping and selected inherited terminology.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "refreshed_comparison": {
+      "baseline": "Q11",
+      "existing_concepts": 12558,
+      "existing_terms": 35290,
+      "synsets_with_exact_en_candidate": 15349,
+      "synsets_without_exact_en_candidate": 92170,
+      "existing_concepts_with_dictionary_candidate": 3970,
+      "existing_concepts_without_latin_en": 7302,
+      "caveat": "Normalized lemma candidates only; Russian labels and concept context still require review."
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "humidity": "https://www.weather.gov/lmk/humidity",
+      "weather": "https://www.weather.gov/otx/Full_Weather_Glossary",
+      "calipers": "https://www.mitutoyo.com/metrology-insights/mitutoyo-calipers-digital-dial-and-vernier-calipers-precision-measurement-tools-for-manufacturing/",
+      "ru_caliper": "https://gramota.ru/poisk?mode=slovari&query=%D1%88%D1%82%D0%B0%D0%BD%D0%B3%D0%B5%D0%BD%D1%86%D0%B8%D1%80%D0%BA%D1%83%D0%BB%D1%8C&simple=0",
+      "tachometer": "https://www.hioki.com/download/28346",
+      "acceleration": "https://openstax.org/books/physics/pages/3-1-acceleration",
+      "accelerometer": "https://www.analog.com/en/resources/glossary/accelerometer.html",
+      "level": "https://www.stabila.com/en/products/details/type-70-spirit-level.html",
+      "si": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf",
+      "instrument": "https://jcgm.bipm.org/vim/en/3.1.html"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet. CC BY 4.0 and the underlying Princeton notice are retained in docs/quality/2026-10-09-q11.md#sources-and-reuse. Russian labels, sense restrictions, productive action phrases, and graph mappings are adaptations.",
+    "existing_cohort": [
+      99,
+      1501,
+      1581,
+      1659,
+      2338,
+      2339,
+      2606,
+      2819,
+      2857,
+      2888,
+      2895,
+      3462,
+      3555,
+      3867,
+      5026,
+      5914,
+      5915,
+      6402,
+      10646,
+      24564,
+      24570,
+      24572
+    ],
+    "context_policy": "All new concepts and assertions use U1. Existing home contexts remain unchanged; change 2606 also receives its missing U1 parent without removing its U5 parent. U2 stays empty.",
+    "sense_decisions": [
+      {
+        "concept": 5914,
+        "synset": "oewn-14558298-n",
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Wetness is broader than atmospheric humidity."
+      },
+      {
+        "concept": 5915,
+        "synset": "oewn-02559590-s",
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Existing damp property receives a real English translation."
+      },
+      {
+        "concept": 6402,
+        "synset": "oewn-02558087-a",
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Existing wet property receives a real English translation."
+      },
+      {
+        "concept": "air_humidity",
+        "synset": "oewn-14559245-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Moisture in atmospheric air, narrower than the existing wetness property."
+      },
+      {
+        "concept": "relative_humidity",
+        "synset": "oewn-13847292-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Humidity expressed relative to saturation at the same temperature. It is distinct from mass of water per volume of air."
+      },
+      {
+        "concept": "absolute_humidity",
+        "synset": null,
+        "decision": "add",
+        "alignment": "subject-source extension",
+        "scope": "Mass of water vapour per volume of air; distinct from relative and specific humidity."
+      },
+      {
+        "concept": "dew_point",
+        "synset": "oewn-05020826-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The temperature at which air becomes saturated upon cooling under the specified pressure and moisture conditions. It is a temperature, not a geometrical point or a humidity percentage."
+      },
+      {
+        "concept": "humidity_measurement",
+        "synset": "oewn-03559640-n",
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of atmospheric humidity."
+      },
+      {
+        "concept": "relative_humidity_measurement",
+        "synset": "oewn-04023965-n",
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement specifically of relative humidity."
+      },
+      {
+        "concept": "hygrometer",
+        "synset": "oewn-03559640-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An instrument for measuring humidity; retain the broader NWS usage rather than require every hygrometer to report relative humidity."
+      },
+      {
+        "concept": "psychrometer",
+        "synset": "oewn-04023965-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The paired wet/dry-bulb instrument determines humidity from two temperature readings."
+      },
+      {
+        "concept": "dry_bulb_thermometer",
+        "synset": "oewn-03255803-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The dry-bulb thermometer used as the ambient-temperature reference; distinct from the temperature reading."
+      },
+      {
+        "concept": "wet_bulb_thermometer",
+        "synset": "oewn-04580911-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The thermometer with a moistened covering at its bulb; distinct from a generic thermometer merely exposed to wet weather."
+      },
+      {
+        "concept": "wind_speed",
+        "synset": null,
+        "decision": "add",
+        "alignment": "quantity scope from instrument definition",
+        "scope": "The speed of air motion, distinct from the direction from which the wind blows."
+      },
+      {
+        "concept": "periodic_frequency",
+        "synset": "oewn-15303267-n",
+        "decision": "add",
+        "alignment": "restricted physical sense",
+        "scope": "The rate of repeated cycles of a periodic process; exclude statistical relative frequency and an absolute category count. Oscillation frequency is a narrower application, not an imported synonym."
+      },
+      {
+        "concept": "rotational_frequency",
+        "synset": "oewn-04389967-n",
+        "decision": "add",
+        "alignment": "quantity scope from instrument definition",
+        "scope": "Number of revolutions per unit time, as reported by a tachometer. Do not equate it with angular velocity in radians per second."
+      },
+      {
+        "concept": "rpm_unit",
+        "synset": "oewn-15307088-n",
+        "decision": "add",
+        "alignment": "restricted unit sense",
+        "scope": "A rotational-frequency unit, not the rotational-frequency property itself. The r/min notation is supported by the instrument manual."
+      },
+      {
+        "concept": "physical_acceleration",
+        "synset": "oewn-15300837-n",
+        "decision": "add",
+        "alignment": "corrected physical quantity sense",
+        "scope": "Rate of change of velocity, including direction changes and slowing down. The dictionary increase-only gloss is too narrow."
+      },
+      {
+        "concept": "speed_measurement",
+        "synset": "oewn-04280915-n",
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of scalar speed."
+      },
+      {
+        "concept": "wind_speed_measurement",
+        "synset": "oewn-02713288-n",
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "The speed measurement made with an anemometer. No wind-direction capability is universally asserted."
+      },
+      {
+        "concept": "frequency_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of periodic frequency, distinct from counting statistical category membership."
+      },
+      {
+        "concept": "rotational_frequency_measurement",
+        "synset": "oewn-04389967-n",
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of revolutions per unit time."
+      },
+      {
+        "concept": "acceleration_measurement",
+        "synset": "oewn-02673565-n",
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of acceleration; no universal zero-at-rest or gravity-compensation behaviour is asserted."
+      },
+      {
+        "concept": "anemometer",
+        "synset": "oewn-02713288-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Use the NWS wind-speed function. Direction measurement is not required of every anemometer."
+      },
+      {
+        "concept": "speedometer",
+        "synset": "oewn-04280915-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An instrument indicating vehicle speed; not distance travelled."
+      },
+      {
+        "concept": "tachometer",
+        "synset": "oewn-04389967-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An instrument measuring rotational rate; do not use general linear speed as its selected target."
+      },
+      {
+        "concept": "accelerometer",
+        "synset": "oewn-02673565-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A sensor for measuring acceleration, not limited to aircraft or rockets as in the dictionary example."
+      },
+      {
+        "concept": "length_instrument",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed instrument family",
+        "scope": "An instrument intended for linear-dimension measurement. This includes rulers, tapes, micrometers and calipers."
+      },
+      {
+        "concept": "slide_caliper",
+        "synset": "oewn-02943283-n",
+        "decision": "add",
+        "alignment": "narrower Russian instrument sense",
+        "scope": "Restrict the broad dictionary caliper to the sliding-jaw instrument denoted by the Russian term. Micrometers are not classified as sliding calipers."
+      },
+      {
+        "concept": "vernier_caliper",
+        "synset": "oewn-04536263-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The sliding caliper with a vernier scale. The ambiguous vernier micrometer synonym is excluded."
+      },
+      {
+        "concept": "dial_caliper",
+        "synset": null,
+        "decision": "add",
+        "alignment": "manufacturer-supported subtype",
+        "scope": "The sliding caliper with a dial indication; its display differs from a vernier scale."
+      },
+      {
+        "concept": "digital_caliper",
+        "synset": null,
+        "decision": "add",
+        "alignment": "manufacturer-supported subtype",
+        "scope": "The sliding caliper with a digital indication; no universal accuracy or material is asserted."
+      },
+      {
+        "concept": "diameter_length",
+        "synset": "oewn-05109077-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The length of the diameter segment, distinct from that geometric segment itself."
+      },
+      {
+        "concept": "diameter_measurement",
+        "synset": "oewn-00649423-v",
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of the diameter length, not measurement of an abstract line as an object."
+      },
+      {
+        "concept": "depth_measurement",
+        "synset": "oewn-03182839-n",
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of depth, a reviewed existing length concept."
+      },
+      {
+        "concept": "depth_gauge",
+        "synset": "oewn-03182839-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An instrument for the depth of holes, grooves or other recesses; not a gauge of an arbitrary numerical quantity."
+      },
+      {
+        "concept": "timekeeping",
+        "synset": "oewn-15198759-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The process of determining time, specializing measurement. The existing generic counting-out verbs are not synonyms."
+      },
+      {
+        "concept": "timepiece",
+        "synset": "oewn-04445087-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The shared instrument class for clocks, interval timers and stopwatches. It is not a person acting as a timekeeper."
+      },
+      {
+        "concept": "interval_timer",
+        "synset": "oewn-04445438-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The timer that measures an interval and signals its end; not the control-switch device or sports official."
+      },
+      {
+        "concept": 1581,
+        "synset": "oewn-03050242-n",
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Preserve the existing time-of-day clock identity under the new shared timepiece family."
+      },
+      {
+        "concept": 24570,
+        "synset": "oewn-04335324-n",
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "The stopwatch retains its existing duration-measurement purpose."
+      },
+      {
+        "concept": "spirit_level",
+        "synset": "oewn-03664184-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The level using a bubble vial. Manufacturer examples also support vertical readings; not every level is restricted to horizontal use."
+      },
+      {
+        "concept": 1501,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse ruler, preserving its tool classification and measurement purpose."
+      },
+      {
+        "concept": 2338,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse tape measure and its purpose."
+      },
+      {
+        "concept": 24572,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse micrometer instrument, separate from the length unit and sliding caliper."
+      },
+      {
+        "concept": 3555,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the thermometer as genus of wet/dry-bulb instruments."
+      },
+      {
+        "concept": 2857,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse depth as a length quantity."
+      },
+      {
+        "concept": 3462,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse scalar speed."
+      },
+      {
+        "concept": 2819,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse rotation as a motion process."
+      },
+      {
+        "concept": 1659,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse wind as a phenomenon."
+      },
+      {
+        "concept": 13368,
+        "synset": null,
+        "decision": "defer",
+        "alignment": "reviewed sense",
+        "scope": "Generic counting-out action with malformed aliases; not exact timekeeping. Separate lexical review pending."
+      },
+      {
+        "concept": 15016,
+        "synset": null,
+        "decision": "defer",
+        "alignment": "reviewed sense",
+        "scope": "Possible counting-out duplicate; no merge without reviewing its lexical history."
+      },
+      {
+        "concept": 3129,
+        "synset": null,
+        "decision": "defer",
+        "alignment": "reviewed sense",
+        "scope": "Spatial-direction taxonomy and action aliases need review before wind-direction measurement."
+      },
+      {
+        "concept": 4811,
+        "synset": null,
+        "decision": "defer",
+        "alignment": "reviewed sense",
+        "scope": "Horizontal orientation is misclassified as shape; defer the orientation cohort."
+      },
+      {
+        "concept": 5026,
+        "synset": null,
+        "decision": "defer",
+        "alignment": "reviewed sense",
+        "scope": "Mixed habitual/typical/frequent children remain pending after removing only the invalid time genus."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-02943283-n",
+        "decision": "defer",
+        "alignment": "translation scope limit",
+        "scope": "The English caliper umbrella spans more tools than Russian shtangentsirkul. No broad Russian equivalence or micrometer-to-sliding-caliper edge is asserted."
+      }
+    ],
+    "limits": "This cohort is not a bulk synset import. General caliper is broader than Russian shtangentsirkul; only the sliding-caliper sense and supported subtypes are added. Vernier scales, geometric segment/chord genera, wetness-value duplicates, other frequency/duration children, wind direction, and the wider counting duplicates remain pending. Numerical conversions and sensor operating conditions are not encoded as genus or attribute links. No automatic confidence percentages or application test suites.",
+    "new_term_collisions": [
+      {
+        "key": "physical_acceleration",
+        "term": "ускорение",
+        "lang": "ru",
+        "existing": [
+          [
+            10646,
+            "ускорение"
+          ]
+        ]
+      },
+      {
+        "key": "diameter_length",
+        "term": "diameter",
+        "lang": "en",
+        "existing": [
+          [
+            2888,
+            "диаметр"
+          ]
+        ]
+      },
+      {
+        "key": "diameter_length",
+        "term": "диаметр",
+        "lang": "ru",
+        "existing": [
+          [
+            2888,
+            "диаметр"
+          ]
+        ]
+      }
+    ],
+    "collision_decisions": [
+      {
+        "new_key": "physical_acceleration",
+        "existing_id": 10646,
+        "decision": "Keep separate qualified quantity and speeding-up process concepts. The shared Russian acceleration term is intentionally ambiguous for lookup."
+      },
+      {
+        "new_key": "diameter_length",
+        "existing_id": 2888,
+        "decision": "Keep separate qualified length and geometric-segment concepts. Both retain bare diameter terms; lexical identity is not sense identity."
+      }
+    ],
+    "superseded_q11_conditions": "Q11 direct genus conditions for ruler 1501, tape measure 2338, micrometer instrument 24572, and stopwatch 24570 are superseded by nearer genera. Their previous broader genera remain ancestors; their Q11 purpose edges are preserved."
+  },
+  "concepts": [
+    {
+      "key": "air_humidity",
+      "name": "влажность воздуха",
+      "parent": 5914,
+      "universum_id": 1,
+      "terms": [
+        [
+          "влажность воздуха",
+          "ru"
+        ],
+        [
+          "air humidity",
+          "en"
+        ],
+        [
+          "humidity",
+          "en"
+        ],
+        [
+          "atmospheric humidity",
+          "en"
+        ]
+      ],
+      "reason": "Moisture in atmospheric air, narrower than the existing wetness property. OEWN 2025: oewn-14559245-n. Source: https://www.weather.gov/lmk/humidity"
+    },
+    {
+      "key": "relative_humidity",
+      "name": "относительная влажность воздуха",
+      "parent": "air_humidity",
+      "universum_id": 1,
+      "terms": [
+        [
+          "относительная влажность воздуха",
+          "ru"
+        ],
+        [
+          "relative humidity",
+          "en"
+        ],
+        [
+          "относительная влажность",
+          "ru"
+        ]
+      ],
+      "reason": "Humidity expressed relative to saturation at the same temperature. It is distinct from mass of water per volume of air. OEWN 2025: oewn-13847292-n. Source: https://www.weather.gov/lmk/humidity"
+    },
+    {
+      "key": "absolute_humidity",
+      "name": "абсолютная влажность воздуха",
+      "parent": "air_humidity",
+      "universum_id": 1,
+      "terms": [
+        [
+          "абсолютная влажность воздуха",
+          "ru"
+        ],
+        [
+          "absolute humidity",
+          "en"
+        ],
+        [
+          "абсолютная влажность",
+          "ru"
+        ]
+      ],
+      "reason": "Mass of water vapour per volume of air; distinct from relative and specific humidity. Source: https://www.weather.gov/lmk/humidity"
+    },
+    {
+      "key": "dew_point",
+      "name": "точка росы",
+      "parent": 46,
+      "universum_id": 1,
+      "terms": [
+        [
+          "точка росы",
+          "ru"
+        ],
+        [
+          "dew point",
+          "en"
+        ],
+        [
+          "dew-point temperature",
+          "en"
+        ],
+        [
+          "температура точки росы",
+          "ru"
+        ]
+      ],
+      "reason": "The temperature at which air becomes saturated upon cooling under the specified pressure and moisture conditions. It is a temperature, not a geometrical point or a humidity percentage. OEWN 2025: oewn-05020826-n. Source: https://www.weather.gov/lmk/humidity"
+    },
+    {
+      "key": "humidity_measurement",
+      "name": "измерение влажности воздуха",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение влажности воздуха",
+          "ru"
+        ],
+        [
+          "air humidity measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of atmospheric humidity. OEWN 2025: oewn-03559640-n. Source: https://www.weather.gov/otx/Full_Weather_Glossary"
+    },
+    {
+      "key": "relative_humidity_measurement",
+      "name": "измерение относительной влажности",
+      "parent": "humidity_measurement",
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение относительной влажности",
+          "ru"
+        ],
+        [
+          "relative humidity measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement specifically of relative humidity. OEWN 2025: oewn-04023965-n. Source: https://www.weather.gov/lmk/humidity"
+    },
+    {
+      "key": "hygrometer",
+      "name": "гигрометр",
+      "parent": 24564,
+      "universum_id": 1,
+      "terms": [
+        [
+          "гигрометр",
+          "ru"
+        ],
+        [
+          "hygrometer",
+          "en"
+        ]
+      ],
+      "reason": "An instrument for measuring humidity; retain the broader NWS usage rather than require every hygrometer to report relative humidity. OEWN 2025: oewn-03559640-n. Source: https://www.weather.gov/otx/Full_Weather_Glossary"
+    },
+    {
+      "key": "psychrometer",
+      "name": "психрометр",
+      "parent": "hygrometer",
+      "universum_id": 1,
+      "terms": [
+        [
+          "психрометр",
+          "ru"
+        ],
+        [
+          "psychrometer",
+          "en"
+        ]
+      ],
+      "reason": "The paired wet/dry-bulb instrument determines humidity from two temperature readings. OEWN 2025: oewn-04023965-n."
+    },
+    {
+      "key": "dry_bulb_thermometer",
+      "name": "термометр с сухим резервуаром",
+      "parent": 3555,
+      "universum_id": 1,
+      "terms": [
+        [
+          "термометр с сухим резервуаром",
+          "ru"
+        ],
+        [
+          "dry-bulb thermometer",
+          "en"
+        ],
+        [
+          "сухой термометр психрометра",
+          "ru"
+        ]
+      ],
+      "reason": "The dry-bulb thermometer used as the ambient-temperature reference; distinct from the temperature reading. OEWN 2025: oewn-03255803-n."
+    },
+    {
+      "key": "wet_bulb_thermometer",
+      "name": "термометр со смоченным резервуаром",
+      "parent": 3555,
+      "universum_id": 1,
+      "terms": [
+        [
+          "термометр со смоченным резервуаром",
+          "ru"
+        ],
+        [
+          "wet-bulb thermometer",
+          "en"
+        ],
+        [
+          "смоченный термометр психрометра",
+          "ru"
+        ]
+      ],
+      "reason": "The thermometer with a moistened covering at its bulb; distinct from a generic thermometer merely exposed to wet weather. OEWN 2025: oewn-04580911-n."
+    },
+    {
+      "key": "wind_speed",
+      "name": "скорость ветра",
+      "parent": 3462,
+      "universum_id": 1,
+      "terms": [
+        [
+          "скорость ветра",
+          "ru"
+        ],
+        [
+          "wind speed",
+          "en"
+        ]
+      ],
+      "reason": "The speed of air motion, distinct from the direction from which the wind blows. Source: https://www.weather.gov/otx/Full_Weather_Glossary"
+    },
+    {
+      "key": "periodic_frequency",
+      "name": "частота периодического процесса",
+      "parent": 5026,
+      "universum_id": 1,
+      "terms": [
+        [
+          "частота периодического процесса",
+          "ru"
+        ],
+        [
+          "periodic frequency",
+          "en"
+        ]
+      ],
+      "reason": "The rate of repeated cycles of a periodic process; exclude statistical relative frequency and an absolute category count. Oscillation frequency is a narrower application, not an imported synonym. OEWN 2025: oewn-15303267-n. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "rotational_frequency",
+      "name": "частота вращения",
+      "parent": "periodic_frequency",
+      "universum_id": 1,
+      "terms": [
+        [
+          "частота вращения",
+          "ru"
+        ],
+        [
+          "rotational frequency",
+          "en"
+        ],
+        [
+          "rotational speed",
+          "en"
+        ],
+        [
+          "rotation rate",
+          "en"
+        ]
+      ],
+      "reason": "Number of revolutions per unit time, as reported by a tachometer. Do not equate it with angular velocity in radians per second. OEWN 2025: oewn-04389967-n. Source: https://www.hioki.com/download/28346"
+    },
+    {
+      "key": "rpm_unit",
+      "name": "оборот в минуту",
+      "parent": 24524,
+      "universum_id": 1,
+      "terms": [
+        [
+          "оборот в минуту",
+          "ru"
+        ],
+        [
+          "revolutions per minute",
+          "en"
+        ],
+        [
+          "rpm",
+          "en"
+        ],
+        [
+          "r/min",
+          "en"
+        ],
+        [
+          "об/мин",
+          "ru"
+        ]
+      ],
+      "reason": "A rotational-frequency unit, not the rotational-frequency property itself. The r/min notation is supported by the instrument manual. OEWN 2025: oewn-15307088-n. Source: https://www.hioki.com/download/28346"
+    },
+    {
+      "key": "physical_acceleration",
+      "name": "ускорение (физическая величина)",
+      "parent": 2709,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ускорение (физическая величина)",
+          "ru"
+        ],
+        [
+          "acceleration (physical quantity)",
+          "en"
+        ],
+        [
+          "acceleration",
+          "en"
+        ],
+        [
+          "ускорение",
+          "ru"
+        ]
+      ],
+      "reason": "Rate of change of velocity, including direction changes and slowing down. The dictionary increase-only gloss is too narrow. OEWN 2025: oewn-15300837-n. Source: https://openstax.org/books/physics/pages/3-1-acceleration"
+    },
+    {
+      "key": "speed_measurement",
+      "name": "измерение скорости",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение скорости",
+          "ru"
+        ],
+        [
+          "speed measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of scalar speed. OEWN 2025: oewn-04280915-n."
+    },
+    {
+      "key": "wind_speed_measurement",
+      "name": "измерение скорости ветра",
+      "parent": "speed_measurement",
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение скорости ветра",
+          "ru"
+        ],
+        [
+          "wind speed measurement",
+          "en"
+        ]
+      ],
+      "reason": "The speed measurement made with an anemometer. No wind-direction capability is universally asserted. OEWN 2025: oewn-02713288-n. Source: https://www.weather.gov/otx/Full_Weather_Glossary"
+    },
+    {
+      "key": "frequency_measurement",
+      "name": "измерение частоты",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение частоты",
+          "ru"
+        ],
+        [
+          "frequency measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of periodic frequency, distinct from counting statistical category membership. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "rotational_frequency_measurement",
+      "name": "измерение частоты вращения",
+      "parent": "frequency_measurement",
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение частоты вращения",
+          "ru"
+        ],
+        [
+          "rotational frequency measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of revolutions per unit time. OEWN 2025: oewn-04389967-n. Source: https://www.hioki.com/download/28346"
+    },
+    {
+      "key": "acceleration_measurement",
+      "name": "измерение ускорения",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение ускорения",
+          "ru"
+        ],
+        [
+          "acceleration measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of acceleration; no universal zero-at-rest or gravity-compensation behaviour is asserted. OEWN 2025: oewn-02673565-n. Source: https://www.analog.com/en/resources/glossary/accelerometer.html"
+    },
+    {
+      "key": "anemometer",
+      "name": "анемометр",
+      "parent": 24564,
+      "universum_id": 1,
+      "terms": [
+        [
+          "анемометр",
+          "ru"
+        ],
+        [
+          "anemometer",
+          "en"
+        ],
+        [
+          "wind gauge",
+          "en"
+        ]
+      ],
+      "reason": "Use the NWS wind-speed function. Direction measurement is not required of every anemometer. OEWN 2025: oewn-02713288-n. Source: https://www.weather.gov/otx/Full_Weather_Glossary"
+    },
+    {
+      "key": "speedometer",
+      "name": "спидометр",
+      "parent": 24564,
+      "universum_id": 1,
+      "terms": [
+        [
+          "спидометр",
+          "ru"
+        ],
+        [
+          "speedometer",
+          "en"
+        ]
+      ],
+      "reason": "An instrument indicating vehicle speed; not distance travelled. OEWN 2025: oewn-04280915-n."
+    },
+    {
+      "key": "tachometer",
+      "name": "тахометр",
+      "parent": 24564,
+      "universum_id": 1,
+      "terms": [
+        [
+          "тахометр",
+          "ru"
+        ],
+        [
+          "tachometer",
+          "en"
+        ]
+      ],
+      "reason": "An instrument measuring rotational rate; do not use general linear speed as its selected target. OEWN 2025: oewn-04389967-n. Source: https://www.hioki.com/download/28346"
+    },
+    {
+      "key": "accelerometer",
+      "name": "акселерометр",
+      "parent": 24564,
+      "universum_id": 1,
+      "terms": [
+        [
+          "акселерометр",
+          "ru"
+        ],
+        [
+          "accelerometer",
+          "en"
+        ]
+      ],
+      "reason": "A sensor for measuring acceleration, not limited to aircraft or rockets as in the dictionary example. OEWN 2025: oewn-02673565-n. Source: https://www.analog.com/en/resources/glossary/accelerometer.html"
+    },
+    {
+      "key": "length_instrument",
+      "name": "прибор для измерения длины",
+      "parent": 24564,
+      "universum_id": 1,
+      "terms": [
+        [
+          "прибор для измерения длины",
+          "ru"
+        ],
+        [
+          "length measuring instrument",
+          "en"
+        ]
+      ],
+      "reason": "An instrument intended for linear-dimension measurement. This includes rulers, tapes, micrometers and calipers. Source: https://www.mitutoyo.com/metrology-insights/mitutoyo-calipers-digital-dial-and-vernier-calipers-precision-measurement-tools-for-manufacturing/"
+    },
+    {
+      "key": "slide_caliper",
+      "name": "штангенциркуль",
+      "parent": "length_instrument",
+      "universum_id": 1,
+      "terms": [
+        [
+          "штангенциркуль",
+          "ru"
+        ],
+        [
+          "sliding caliper",
+          "en"
+        ],
+        [
+          "slide caliper",
+          "en"
+        ],
+        [
+          "caliper",
+          "en"
+        ],
+        [
+          "calliper",
+          "en"
+        ]
+      ],
+      "reason": "Restrict the broad dictionary caliper to the sliding-jaw instrument denoted by the Russian term. Micrometers are not classified as sliding calipers. OEWN 2025: oewn-02943283-n. Source: https://www.mitutoyo.com/metrology-insights/mitutoyo-calipers-digital-dial-and-vernier-calipers-precision-measurement-tools-for-manufacturing/"
+    },
+    {
+      "key": "vernier_caliper",
+      "name": "нониусный штангенциркуль",
+      "parent": "slide_caliper",
+      "universum_id": 1,
+      "terms": [
+        [
+          "нониусный штангенциркуль",
+          "ru"
+        ],
+        [
+          "vernier caliper",
+          "en"
+        ],
+        [
+          "штангенциркуль с нониусом",
+          "ru"
+        ]
+      ],
+      "reason": "The sliding caliper with a vernier scale. The ambiguous vernier micrometer synonym is excluded. OEWN 2025: oewn-04536263-n. Source: https://www.mitutoyo.com/metrology-insights/mitutoyo-calipers-digital-dial-and-vernier-calipers-precision-measurement-tools-for-manufacturing/"
+    },
+    {
+      "key": "dial_caliper",
+      "name": "стрелочный штангенциркуль",
+      "parent": "slide_caliper",
+      "universum_id": 1,
+      "terms": [
+        [
+          "стрелочный штангенциркуль",
+          "ru"
+        ],
+        [
+          "dial caliper",
+          "en"
+        ],
+        [
+          "штангенциркуль с круговой шкалой",
+          "ru"
+        ]
+      ],
+      "reason": "The sliding caliper with a dial indication; its display differs from a vernier scale. Source: https://www.mitutoyo.com/metrology-insights/mitutoyo-calipers-digital-dial-and-vernier-calipers-precision-measurement-tools-for-manufacturing/"
+    },
+    {
+      "key": "digital_caliper",
+      "name": "цифровой штангенциркуль",
+      "parent": "slide_caliper",
+      "universum_id": 1,
+      "terms": [
+        [
+          "цифровой штангенциркуль",
+          "ru"
+        ],
+        [
+          "digital caliper",
+          "en"
+        ],
+        [
+          "электронный штангенциркуль",
+          "ru"
+        ]
+      ],
+      "reason": "The sliding caliper with a digital indication; no universal accuracy or material is asserted. Source: https://www.mitutoyo.com/metrology-insights/mitutoyo-calipers-digital-dial-and-vernier-calipers-precision-measurement-tools-for-manufacturing/"
+    },
+    {
+      "key": "diameter_length",
+      "name": "диаметр (длина)",
+      "parent": 2895,
+      "universum_id": 1,
+      "terms": [
+        [
+          "диаметр (длина)",
+          "ru"
+        ],
+        [
+          "diameter (length)",
+          "en"
+        ],
+        [
+          "diameter",
+          "en"
+        ],
+        [
+          "диаметр",
+          "ru"
+        ]
+      ],
+      "reason": "The length of the diameter segment, distinct from that geometric segment itself. OEWN 2025: oewn-05109077-n."
+    },
+    {
+      "key": "diameter_measurement",
+      "name": "измерение диаметра",
+      "parent": 24556,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение диаметра",
+          "ru"
+        ],
+        [
+          "diameter measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of the diameter length, not measurement of an abstract line as an object. OEWN 2025: oewn-00649423-v."
+    },
+    {
+      "key": "depth_measurement",
+      "name": "измерение глубины",
+      "parent": 24556,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение глубины",
+          "ru"
+        ],
+        [
+          "depth measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of depth, a reviewed existing length concept. OEWN 2025: oewn-03182839-n."
+    },
+    {
+      "key": "depth_gauge",
+      "name": "глубиномер",
+      "parent": "length_instrument",
+      "universum_id": 1,
+      "terms": [
+        [
+          "глубиномер",
+          "ru"
+        ],
+        [
+          "depth gauge",
+          "en"
+        ],
+        [
+          "depth gage",
+          "en"
+        ]
+      ],
+      "reason": "An instrument for the depth of holes, grooves or other recesses; not a gauge of an arbitrary numerical quantity. OEWN 2025: oewn-03182839-n."
+    },
+    {
+      "key": "timekeeping",
+      "name": "отсчёт времени",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "отсчёт времени",
+          "ru"
+        ],
+        [
+          "timekeeping",
+          "en"
+        ],
+        [
+          "определение времени",
+          "ru"
+        ]
+      ],
+      "reason": "The process of determining time, specializing measurement. The existing generic counting-out verbs are not synonyms. OEWN 2025: oewn-15198759-n."
+    },
+    {
+      "key": "timepiece",
+      "name": "прибор для отсчёта времени",
+      "parent": 24564,
+      "universum_id": 1,
+      "terms": [
+        [
+          "прибор для отсчёта времени",
+          "ru"
+        ],
+        [
+          "timepiece",
+          "en"
+        ]
+      ],
+      "reason": "The shared instrument class for clocks, interval timers and stopwatches. It is not a person acting as a timekeeper. OEWN 2025: oewn-04445087-n."
+    },
+    {
+      "key": "interval_timer",
+      "name": "таймер (отсчёт интервала)",
+      "parent": "timepiece",
+      "universum_id": 1,
+      "terms": [
+        [
+          "таймер (отсчёт интервала)",
+          "ru"
+        ],
+        [
+          "interval timer",
+          "en"
+        ],
+        [
+          "timer",
+          "en"
+        ],
+        [
+          "таймер",
+          "ru"
+        ]
+      ],
+      "reason": "The timer that measures an interval and signals its end; not the control-switch device or sports official. OEWN 2025: oewn-04445438-n."
+    },
+    {
+      "key": "spirit_level",
+      "name": "пузырьковый уровень",
+      "parent": 2339,
+      "universum_id": 1,
+      "terms": [
+        [
+          "пузырьковый уровень",
+          "ru"
+        ],
+        [
+          "spirit level",
+          "en"
+        ],
+        [
+          "bubble level",
+          "en"
+        ]
+      ],
+      "reason": "The level using a bubble vial. Manufacturer examples also support vertical readings; not every level is restricted to horizontal use. OEWN 2025: oewn-03664184-n. Source: https://www.stabila.com/en/products/details/type-70-spirit-level.html"
+    }
+  ],
+  "renames": [
+    {
+      "id": 10646,
+      "before": "ускорение",
+      "name": "ускорение (процесс)",
+      "terms": [],
+      "reason": "The existing verb-derived entry denotes speeding up; keep it distinct from the vector quantity. OEWN 2025: oewn-00331283-n. Source: https://openstax.org/books/physics/pages/3-1-acceleration"
+    },
+    {
+      "id": 2888,
+      "before": "диаметр",
+      "name": "диаметр (отрезок)",
+      "terms": [],
+      "reason": "Qualify the existing geometric segment sense before adding the corresponding length. OEWN 2025: oewn-13894356-n."
+    },
+    {
+      "id": 2339,
+      "before": "уровень",
+      "name": "уровень (измерительный инструмент)",
+      "terms": [],
+      "reason": "Qualify the existing tool meaning, keeping the broad device separate from its bubble implementation. OEWN 2025: oewn-03664184-n. Source: https://www.stabila.com/en/products/details/type-70-spirit-level.html"
+    }
+  ],
+  "terms": [
+    {
+      "id": 5914,
+      "name": "влажность",
+      "terms": [
+        [
+          "wetness",
+          "en"
+        ]
+      ],
+      "reason": "The existing property includes damp/wet objects, not just atmospheric humidity. OEWN 2025: oewn-14558298-n."
+    },
+    {
+      "id": 5915,
+      "name": "сырое",
+      "terms": [
+        [
+          "damp",
+          "en"
+        ],
+        [
+          "moist",
+          "en"
+        ],
+        [
+          "сырой (влажный)",
+          "ru"
+        ]
+      ],
+      "reason": "Choose the slightly wet sense, not uncooked food. OEWN 2025: oewn-02559590-s."
+    },
+    {
+      "id": 6402,
+      "name": "мокрое",
+      "terms": [
+        [
+          "wet",
+          "en"
+        ],
+        [
+          "мокрый",
+          "ru"
+        ]
+      ],
+      "reason": "Choose the covered-or-soaked-with-liquid property. OEWN 2025: oewn-02558087-a."
+    },
+    {
+      "id": 5026,
+      "name": "частота",
+      "terms": [
+        [
+          "occurrence frequency",
+          "en"
+        ]
+      ],
+      "reason": "Clarify the occurrence-rate sense shared by the generic frequency record. OEWN 2025: oewn-15303267-n."
+    },
+    {
+      "id": 10646,
+      "name": "ускорение (процесс)",
+      "terms": [
+        [
+          "acceleration (speeding up)",
+          "en"
+        ],
+        [
+          "speeding up",
+          "en"
+        ],
+        [
+          "speedup",
+          "en"
+        ],
+        [
+          "ускорить",
+          "ru"
+        ],
+        [
+          "ускорять",
+          "ru"
+        ]
+      ],
+      "reason": "Retain the process meaning with real English labels. OEWN 2025: oewn-00331283-n."
+    },
+    {
+      "id": 2888,
+      "name": "диаметр (отрезок)",
+      "terms": [
+        [
+          "diameter (line segment)",
+          "en"
+        ]
+      ],
+      "reason": "Retain diameter as a geometric object with the legacy bare term. OEWN 2025: oewn-13894356-n."
+    },
+    {
+      "id": 2339,
+      "name": "уровень (измерительный инструмент)",
+      "terms": [
+        [
+          "level (measuring instrument)",
+          "en"
+        ]
+      ],
+      "reason": "The existing tool is a measuring level; broad ordinal level senses remain separate."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 5915,
+      "term": "сырое",
+      "lang": "en",
+      "reason": "A Russian form mislabeled as English; the Russian-tagged term remains."
+    },
+    {
+      "id": 6402,
+      "term": "мокрое",
+      "lang": "en",
+      "reason": "A Russian form mislabeled as English; the Russian-tagged term remains."
+    },
+    {
+      "id": 10646,
+      "term": "ускориение",
+      "lang": "ru",
+      "reason": "Malformed generated alias; the established noun ускорение is retained."
+    },
+    {
+      "id": 10646,
+      "term": "УСКОРИТЬ",
+      "lang": "en",
+      "reason": "Russian infinitive with the wrong language tag; keep the correct RU alias."
+    }
+  ],
+  "leaf_merges": [],
+  "initial_edges": [
+    {
+      "subject": 2606,
+      "kod": "14",
+      "object": 2535,
+      "universum_id": 1,
+      "reason": "The change anchor already has this U5 genus; explicitly connect the same meaning in U1."
+    }
+  ],
+  "repairs": [
+    {
+      "id": 7492,
+      "before": [
+        5026,
+        "14",
+        1675,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "Occurrence frequency is not a kind of time. Keep its existing quantity genus and leave mixed descendants for their own review. OEWN 2025: oewn-15303267-n."
+    },
+    {
+      "id": 14730,
+      "before": [
+        10646,
+        "14",
+        64,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          10646,
+          "14",
+          2606,
+          null,
+          1
+        ]
+      ],
+      "reason": "Speeding up is a change, not a kind of communication. Preserve the old strength=100 row as rejected history. OEWN 2025: oewn-00331283-n."
+    },
+    {
+      "id": 32008,
+      "before": [
+        1501,
+        "14",
+        24564,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1501,
+          "14",
+          "length_instrument",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the previously broad measuring-instrument genus to the new length-instrument family. Source: https://www.mitutoyo.com/metrology-insights/mitutoyo-calipers-digital-dial-and-vernier-calipers-precision-measurement-tools-for-manufacturing/"
+    },
+    {
+      "id": 32010,
+      "before": [
+        2338,
+        "14",
+        24564,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2338,
+          "14",
+          "length_instrument",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the previously broad measuring-instrument genus to the new length-instrument family. Source: https://www.mitutoyo.com/metrology-insights/mitutoyo-calipers-digital-dial-and-vernier-calipers-precision-measurement-tools-for-manufacturing/"
+    },
+    {
+      "id": 31986,
+      "before": [
+        24572,
+        "14",
+        24564,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          24572,
+          "14",
+          "length_instrument",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the previously broad measuring-instrument genus to the new length-instrument family. Source: https://www.mitutoyo.com/metrology-insights/mitutoyo-calipers-digital-dial-and-vernier-calipers-precision-measurement-tools-for-manufacturing/"
+    },
+    {
+      "id": 2340,
+      "before": [
+        1581,
+        "14",
+        1571,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1581,
+          "14",
+          "timepiece",
+          null,
+          1
+        ]
+      ],
+      "reason": "Use the shared timekeeping instrument genus for the existing clock; clocks are not limited to household appliances. OEWN 2025: oewn-03050242-n."
+    },
+    {
+      "id": 31982,
+      "before": [
+        24570,
+        "14",
+        24564,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          24570,
+          "14",
+          "timepiece",
+          null,
+          1
+        ]
+      ],
+      "reason": "A stopwatch is a timepiece. Do not put every stopwatch under an interval timer requiring an end signal. OEWN 2025: oewn-04335324-n."
+    },
+    {
+      "id": 2919,
+      "before": [
+        1581,
+        "21",
+        1818,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The clock has timekeeping as its inherited purpose. General arithmetic counting is not the defining purpose. OEWN 2025: oewn-03050242-n."
+    }
+  ],
+  "edges": [
+    {
+      "subject": "relative_humidity",
+      "kod": "14",
+      "object": 2709,
+      "universum_id": 1,
+      "reason": "Relative humidity is also a dimensionless physical quantity. OEWN 2025: oewn-13847292-n. Source: https://www.weather.gov/lmk/humidity"
+    },
+    {
+      "subject": "absolute_humidity",
+      "kod": "14",
+      "object": 2709,
+      "universum_id": 1,
+      "reason": "Absolute humidity is also a physical quantity with mass-per-volume dimension. Source: https://www.weather.gov/lmk/humidity"
+    },
+    {
+      "subject": 99,
+      "kod": "20",
+      "object": "air_humidity",
+      "universum_id": 1,
+      "reason": "Air has a humidity property; no nonzero value is asserted for every air sample. OEWN 2025: oewn-14559245-n. Source: https://www.weather.gov/lmk/humidity"
+    },
+    {
+      "subject": "humidity_measurement",
+      "kod": "27",
+      "object": "air_humidity",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. OEWN 2025: oewn-03559640-n. Source: https://www.weather.gov/otx/Full_Weather_Glossary"
+    },
+    {
+      "subject": "relative_humidity_measurement",
+      "kod": "27",
+      "object": "relative_humidity",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. OEWN 2025: oewn-04023965-n. Source: https://www.weather.gov/lmk/humidity"
+    },
+    {
+      "subject": "hygrometer",
+      "kod": "21",
+      "object": "humidity_measurement",
+      "universum_id": 1,
+      "reason": "The instrument is intended for the selected measurement. OEWN 2025: oewn-03559640-n. Source: https://www.weather.gov/otx/Full_Weather_Glossary"
+    },
+    {
+      "subject": "psychrometer",
+      "kod": "21",
+      "object": "relative_humidity_measurement",
+      "universum_id": 1,
+      "reason": "The instrument is intended for the selected measurement. OEWN 2025: oewn-04023965-n."
+    },
+    {
+      "subject": "psychrometer",
+      "kod": "20",
+      "object": "dry_bulb_thermometer",
+      "universum_id": 1,
+      "reason": "A dry-bulb thermometer is a component of this instrument. OEWN 2025: oewn-04023965-n."
+    },
+    {
+      "subject": "psychrometer",
+      "kod": "20",
+      "object": "wet_bulb_thermometer",
+      "universum_id": 1,
+      "reason": "A wet-bulb thermometer is a component of this instrument. OEWN 2025: oewn-04023965-n."
+    },
+    {
+      "subject": "periodic_frequency",
+      "kod": "14",
+      "object": 2709,
+      "universum_id": 1,
+      "reason": "Periodic frequency is a physical quantity as well as a specialization of occurrence frequency. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "subject": 2819,
+      "kod": "20",
+      "object": "rotational_frequency",
+      "universum_id": 1,
+      "reason": "Rotation has a rate measured as cycles per unit time. OEWN 2025: oewn-04389967-n. Source: https://www.hioki.com/download/28346"
+    },
+    {
+      "subject": 1659,
+      "kod": "20",
+      "object": "wind_speed",
+      "universum_id": 1,
+      "reason": "Wind has speed; the instrument measuring it is a separate object. OEWN 2025: oewn-02713288-n. Source: https://www.weather.gov/otx/Full_Weather_Glossary"
+    },
+    {
+      "subject": "speed_measurement",
+      "kod": "27",
+      "object": 3462,
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. OEWN 2025: oewn-04280915-n."
+    },
+    {
+      "subject": "wind_speed_measurement",
+      "kod": "27",
+      "object": "wind_speed",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. OEWN 2025: oewn-02713288-n. Source: https://www.weather.gov/otx/Full_Weather_Glossary"
+    },
+    {
+      "subject": "frequency_measurement",
+      "kod": "27",
+      "object": "periodic_frequency",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "subject": "rotational_frequency_measurement",
+      "kod": "27",
+      "object": "rotational_frequency",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. OEWN 2025: oewn-04389967-n. Source: https://www.hioki.com/download/28346"
+    },
+    {
+      "subject": "acceleration_measurement",
+      "kod": "27",
+      "object": "physical_acceleration",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. OEWN 2025: oewn-02673565-n. Source: https://www.analog.com/en/resources/glossary/accelerometer.html"
+    },
+    {
+      "subject": "anemometer",
+      "kod": "21",
+      "object": "wind_speed_measurement",
+      "universum_id": 1,
+      "reason": "The instrument is intended for the selected measurement. OEWN 2025: oewn-02713288-n. Source: https://www.weather.gov/otx/Full_Weather_Glossary"
+    },
+    {
+      "subject": "speedometer",
+      "kod": "21",
+      "object": "speed_measurement",
+      "universum_id": 1,
+      "reason": "The instrument is intended for the selected measurement. OEWN 2025: oewn-04280915-n."
+    },
+    {
+      "subject": "tachometer",
+      "kod": "21",
+      "object": "rotational_frequency_measurement",
+      "universum_id": 1,
+      "reason": "The instrument is intended for the selected measurement. OEWN 2025: oewn-04389967-n. Source: https://www.hioki.com/download/28346"
+    },
+    {
+      "subject": "accelerometer",
+      "kod": "21",
+      "object": "acceleration_measurement",
+      "universum_id": 1,
+      "reason": "The instrument is intended for the selected measurement. OEWN 2025: oewn-02673565-n. Source: https://www.analog.com/en/resources/glossary/accelerometer.html"
+    },
+    {
+      "subject": 10646,
+      "kod": "27",
+      "object": 3462,
+      "universum_id": 1,
+      "reason": "The process changes speed; this is the property it acts on, not a claim that it measures physical acceleration. OEWN 2025: oewn-00331283-n."
+    },
+    {
+      "subject": "length_instrument",
+      "kod": "21",
+      "object": 24556,
+      "universum_id": 1,
+      "reason": "The family has length measurement as its shared purpose. Source: https://www.mitutoyo.com/metrology-insights/mitutoyo-calipers-digital-dial-and-vernier-calipers-precision-measurement-tools-for-manufacturing/"
+    },
+    {
+      "subject": "diameter_measurement",
+      "kod": "27",
+      "object": "diameter_length",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. OEWN 2025: oewn-00649423-v."
+    },
+    {
+      "subject": "depth_measurement",
+      "kod": "27",
+      "object": 2857,
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. OEWN 2025: oewn-03182839-n."
+    },
+    {
+      "subject": "depth_gauge",
+      "kod": "21",
+      "object": "depth_measurement",
+      "universum_id": 1,
+      "reason": "The instrument is intended for the selected measurement. OEWN 2025: oewn-03182839-n."
+    },
+    {
+      "subject": "slide_caliper",
+      "kod": "21",
+      "object": "diameter_measurement",
+      "universum_id": 1,
+      "reason": "Caliper applications include diameter measurements. This does not imply every model supports every inside/depth mode. OEWN 2025: oewn-00649423-v. Source: https://www.mitutoyo.com/metrology-insights/mitutoyo-calipers-digital-dial-and-vernier-calipers-precision-measurement-tools-for-manufacturing/"
+    },
+    {
+      "subject": "timepiece",
+      "kod": "21",
+      "object": "timekeeping",
+      "universum_id": 1,
+      "reason": "Time determination is the common purpose of a timepiece. OEWN 2025: oewn-04445087-n."
+    },
+    {
+      "subject": "interval_timer",
+      "kod": "21",
+      "object": 24558,
+      "universum_id": 1,
+      "reason": "The instrument is intended for the selected measurement. OEWN 2025: oewn-04445438-n."
+    },
+    {
+      "subject": 2339,
+      "kod": "14",
+      "object": 24564,
+      "universum_id": 1,
+      "reason": "A level is also a measuring instrument; keep its existing general tool genus. Source: https://www.stabila.com/en/products/details/type-70-spirit-level.html"
+    }
+  ],
+  "checks": [
+    {
+      "subject": "air_humidity",
+      "kod": "14",
+      "object": 5914,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "relative_humidity",
+      "kod": "14",
+      "object": "air_humidity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "absolute_humidity",
+      "kod": "14",
+      "object": "air_humidity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "dew_point",
+      "kod": "14",
+      "object": 46,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "relative_humidity",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "absolute_humidity",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 99,
+      "kod": "20",
+      "object": "air_humidity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "humidity_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "humidity_measurement",
+      "kod": "27",
+      "object": "air_humidity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "relative_humidity_measurement",
+      "kod": "14",
+      "object": "humidity_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "relative_humidity_measurement",
+      "kod": "27",
+      "object": "relative_humidity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hygrometer",
+      "kod": "14",
+      "object": 24564,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hygrometer",
+      "kod": "21",
+      "object": "humidity_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "psychrometer",
+      "kod": "14",
+      "object": "hygrometer",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "psychrometer",
+      "kod": "21",
+      "object": "relative_humidity_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "dry_bulb_thermometer",
+      "kod": "14",
+      "object": 3555,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "wet_bulb_thermometer",
+      "kod": "14",
+      "object": 3555,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "psychrometer",
+      "kod": "20",
+      "object": "dry_bulb_thermometer",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "psychrometer",
+      "kod": "20",
+      "object": "wet_bulb_thermometer",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "wind_speed",
+      "kod": "14",
+      "object": 3462,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "periodic_frequency",
+      "kod": "14",
+      "object": 5026,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rotational_frequency",
+      "kod": "14",
+      "object": "periodic_frequency",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rpm_unit",
+      "kod": "14",
+      "object": 24524,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "physical_acceleration",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5026,
+      "kod": "14",
+      "object": 1675,
+      "present": false
+    },
+    {
+      "subject": "periodic_frequency",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2819,
+      "kod": "20",
+      "object": "rotational_frequency",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1659,
+      "kod": "20",
+      "object": "wind_speed",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "speed_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "speed_measurement",
+      "kod": "27",
+      "object": 3462,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "wind_speed_measurement",
+      "kod": "14",
+      "object": "speed_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "wind_speed_measurement",
+      "kod": "27",
+      "object": "wind_speed",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "frequency_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "frequency_measurement",
+      "kod": "27",
+      "object": "periodic_frequency",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rotational_frequency_measurement",
+      "kod": "14",
+      "object": "frequency_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rotational_frequency_measurement",
+      "kod": "27",
+      "object": "rotational_frequency",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "acceleration_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "acceleration_measurement",
+      "kod": "27",
+      "object": "physical_acceleration",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "anemometer",
+      "kod": "14",
+      "object": 24564,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "anemometer",
+      "kod": "21",
+      "object": "wind_speed_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "speedometer",
+      "kod": "14",
+      "object": 24564,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "speedometer",
+      "kod": "21",
+      "object": "speed_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "tachometer",
+      "kod": "14",
+      "object": 24564,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "tachometer",
+      "kod": "21",
+      "object": "rotational_frequency_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "accelerometer",
+      "kod": "14",
+      "object": 24564,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "accelerometer",
+      "kod": "21",
+      "object": "acceleration_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2606,
+      "kod": "14",
+      "object": 2535,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 10646,
+      "kod": "14",
+      "object": 64,
+      "present": false
+    },
+    {
+      "subject": 10646,
+      "kod": "14",
+      "object": 2606,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 10646,
+      "kod": "27",
+      "object": 3462,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "length_instrument",
+      "kod": "14",
+      "object": 24564,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "length_instrument",
+      "kod": "21",
+      "object": 24556,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "slide_caliper",
+      "kod": "14",
+      "object": "length_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "vernier_caliper",
+      "kod": "14",
+      "object": "slide_caliper",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "dial_caliper",
+      "kod": "14",
+      "object": "slide_caliper",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "digital_caliper",
+      "kod": "14",
+      "object": "slide_caliper",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "diameter_length",
+      "kod": "14",
+      "object": 2895,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "diameter_measurement",
+      "kod": "14",
+      "object": 24556,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "diameter_measurement",
+      "kod": "27",
+      "object": "diameter_length",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "depth_measurement",
+      "kod": "14",
+      "object": 24556,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "depth_measurement",
+      "kod": "27",
+      "object": 2857,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "depth_gauge",
+      "kod": "14",
+      "object": "length_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "depth_gauge",
+      "kod": "21",
+      "object": "depth_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "slide_caliper",
+      "kod": "21",
+      "object": "diameter_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1501,
+      "kod": "14",
+      "object": 24564,
+      "present": false
+    },
+    {
+      "subject": 1501,
+      "kod": "14",
+      "object": "length_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2338,
+      "kod": "14",
+      "object": 24564,
+      "present": false
+    },
+    {
+      "subject": 2338,
+      "kod": "14",
+      "object": "length_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 24572,
+      "kod": "14",
+      "object": 24564,
+      "present": false
+    },
+    {
+      "subject": 24572,
+      "kod": "14",
+      "object": "length_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "timekeeping",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "timepiece",
+      "kod": "14",
+      "object": 24564,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "timepiece",
+      "kod": "21",
+      "object": "timekeeping",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "interval_timer",
+      "kod": "14",
+      "object": "timepiece",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "interval_timer",
+      "kod": "21",
+      "object": 24558,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1581,
+      "kod": "14",
+      "object": 1571,
+      "present": false
+    },
+    {
+      "subject": 1581,
+      "kod": "14",
+      "object": "timepiece",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 24570,
+      "kod": "14",
+      "object": 24564,
+      "present": false
+    },
+    {
+      "subject": 24570,
+      "kod": "14",
+      "object": "timepiece",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1581,
+      "kod": "21",
+      "object": 1818,
+      "present": false
+    },
+    {
+      "subject": 2339,
+      "kod": "14",
+      "object": 24564,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "spirit_level",
+      "kod": "14",
+      "object": 2339,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 24570,
+      "kod": "21",
+      "object": 24558,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 24572,
+      "kod": "21",
+      "object": 24556,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1501,
+      "kod": "21",
+      "object": 24556,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2338,
+      "kod": "21",
+      "object": 24556,
+      "present": true,
+      "strength": null
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "physical_acceleration",
+      "ancestor": 10646,
+      "present": false
+    },
+    {
+      "subject": 10646,
+      "ancestor": "physical_acceleration",
+      "present": false
+    },
+    {
+      "subject": "physical_acceleration",
+      "ancestor": 64,
+      "present": false
+    },
+    {
+      "subject": 10646,
+      "ancestor": 64,
+      "present": false
+    },
+    {
+      "subject": "periodic_frequency",
+      "ancestor": 1675,
+      "present": false
+    },
+    {
+      "subject": "rotational_frequency",
+      "ancestor": 3462,
+      "present": false
+    },
+    {
+      "subject": "diameter_length",
+      "ancestor": 2701,
+      "present": false
+    },
+    {
+      "subject": 2888,
+      "ancestor": 2895,
+      "present": false
+    },
+    {
+      "subject": "rpm_unit",
+      "ancestor": "rotational_frequency",
+      "present": false
+    },
+    {
+      "subject": "dew_point",
+      "ancestor": 2700,
+      "present": false
+    },
+    {
+      "subject": 24572,
+      "ancestor": "slide_caliper",
+      "present": false
+    },
+    {
+      "subject": 24570,
+      "ancestor": "interval_timer",
+      "present": false
+    },
+    {
+      "subject": "air_humidity",
+      "ancestor": 5915,
+      "present": false
+    },
+    {
+      "subject": "air_humidity",
+      "ancestor": 6402,
+      "present": false
+    },
+    {
+      "subject": 1501,
+      "ancestor": "length_instrument",
+      "present": true
+    },
+    {
+      "subject": 2338,
+      "ancestor": "length_instrument",
+      "present": true
+    },
+    {
+      "subject": 24572,
+      "ancestor": "length_instrument",
+      "present": true
+    },
+    {
+      "subject": 1581,
+      "ancestor": "timepiece",
+      "present": true
+    },
+    {
+      "subject": 24570,
+      "ancestor": "timepiece",
+      "present": true
+    },
+    {
+      "subject": "relative_humidity",
+      "ancestor": 5914,
+      "present": true
+    },
+    {
+      "subject": "absolute_humidity",
+      "ancestor": 5914,
+      "present": true
+    },
+    {
+      "subject": "spirit_level",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": "air_humidity",
+      "ancestor": 5914,
+      "present": true
+    },
+    {
+      "subject": "relative_humidity",
+      "ancestor": "air_humidity",
+      "present": true
+    },
+    {
+      "subject": "absolute_humidity",
+      "ancestor": "air_humidity",
+      "present": true
+    },
+    {
+      "subject": "dew_point",
+      "ancestor": 46,
+      "present": true
+    },
+    {
+      "subject": "humidity_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "relative_humidity_measurement",
+      "ancestor": "humidity_measurement",
+      "present": true
+    },
+    {
+      "subject": "hygrometer",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": "psychrometer",
+      "ancestor": "hygrometer",
+      "present": true
+    },
+    {
+      "subject": "dry_bulb_thermometer",
+      "ancestor": 3555,
+      "present": true
+    },
+    {
+      "subject": "wet_bulb_thermometer",
+      "ancestor": 3555,
+      "present": true
+    },
+    {
+      "subject": "wind_speed",
+      "ancestor": 3462,
+      "present": true
+    },
+    {
+      "subject": "periodic_frequency",
+      "ancestor": 5026,
+      "present": true
+    },
+    {
+      "subject": "rotational_frequency",
+      "ancestor": "periodic_frequency",
+      "present": true
+    },
+    {
+      "subject": "rpm_unit",
+      "ancestor": 24524,
+      "present": true
+    },
+    {
+      "subject": "physical_acceleration",
+      "ancestor": 2709,
+      "present": true
+    },
+    {
+      "subject": "speed_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "wind_speed_measurement",
+      "ancestor": "speed_measurement",
+      "present": true
+    },
+    {
+      "subject": "frequency_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "rotational_frequency_measurement",
+      "ancestor": "frequency_measurement",
+      "present": true
+    },
+    {
+      "subject": "acceleration_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "anemometer",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": "speedometer",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": "tachometer",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": "accelerometer",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": "length_instrument",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": "slide_caliper",
+      "ancestor": "length_instrument",
+      "present": true
+    },
+    {
+      "subject": "vernier_caliper",
+      "ancestor": "slide_caliper",
+      "present": true
+    },
+    {
+      "subject": "dial_caliper",
+      "ancestor": "slide_caliper",
+      "present": true
+    },
+    {
+      "subject": "digital_caliper",
+      "ancestor": "slide_caliper",
+      "present": true
+    },
+    {
+      "subject": "diameter_length",
+      "ancestor": 2895,
+      "present": true
+    },
+    {
+      "subject": "diameter_measurement",
+      "ancestor": 24556,
+      "present": true
+    },
+    {
+      "subject": "depth_measurement",
+      "ancestor": 24556,
+      "present": true
+    },
+    {
+      "subject": "depth_gauge",
+      "ancestor": "length_instrument",
+      "present": true
+    },
+    {
+      "subject": "timekeeping",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "timepiece",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": "interval_timer",
+      "ancestor": "timepiece",
+      "present": true
+    },
+    {
+      "subject": "spirit_level",
+      "ancestor": 2339,
+      "present": true
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": 5914,
+      "term": "wetness",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5915,
+      "term": "damp",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5915,
+      "term": "moist",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5915,
+      "term": "сырой (влажный)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 6402,
+      "term": "wet",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 6402,
+      "term": "мокрый",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 5915,
+      "term": "сырое",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 6402,
+      "term": "мокрое",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "air_humidity",
+      "term": "влажность воздуха",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "air_humidity",
+      "term": "air humidity",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "air_humidity",
+      "term": "humidity",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "air_humidity",
+      "term": "atmospheric humidity",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "relative_humidity",
+      "term": "относительная влажность воздуха",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "relative_humidity",
+      "term": "relative humidity",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "relative_humidity",
+      "term": "относительная влажность",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "absolute_humidity",
+      "term": "абсолютная влажность воздуха",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "absolute_humidity",
+      "term": "absolute humidity",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "absolute_humidity",
+      "term": "абсолютная влажность",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "dew_point",
+      "term": "точка росы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "dew_point",
+      "term": "dew point",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "dew_point",
+      "term": "dew-point temperature",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "dew_point",
+      "term": "температура точки росы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "humidity_measurement",
+      "term": "измерение влажности воздуха",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "humidity_measurement",
+      "term": "air humidity measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "relative_humidity_measurement",
+      "term": "измерение относительной влажности",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "relative_humidity_measurement",
+      "term": "relative humidity measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hygrometer",
+      "term": "гигрометр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "hygrometer",
+      "term": "hygrometer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "psychrometer",
+      "term": "психрометр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "psychrometer",
+      "term": "psychrometer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "dry_bulb_thermometer",
+      "term": "термометр с сухим резервуаром",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "dry_bulb_thermometer",
+      "term": "dry-bulb thermometer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "dry_bulb_thermometer",
+      "term": "сухой термометр психрометра",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "wet_bulb_thermometer",
+      "term": "термометр со смоченным резервуаром",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "wet_bulb_thermometer",
+      "term": "wet-bulb thermometer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "wet_bulb_thermometer",
+      "term": "смоченный термометр психрометра",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "wind_speed",
+      "term": "скорость ветра",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "wind_speed",
+      "term": "wind speed",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "periodic_frequency",
+      "term": "частота периодического процесса",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "periodic_frequency",
+      "term": "periodic frequency",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rotational_frequency",
+      "term": "частота вращения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rotational_frequency",
+      "term": "rotational frequency",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rotational_frequency",
+      "term": "rotational speed",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rotational_frequency",
+      "term": "rotation rate",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rpm_unit",
+      "term": "оборот в минуту",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rpm_unit",
+      "term": "revolutions per minute",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rpm_unit",
+      "term": "rpm",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rpm_unit",
+      "term": "r/min",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rpm_unit",
+      "term": "об/мин",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "physical_acceleration",
+      "term": "ускорение (физическая величина)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "physical_acceleration",
+      "term": "acceleration (physical quantity)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "physical_acceleration",
+      "term": "acceleration",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "physical_acceleration",
+      "term": "ускорение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 5026,
+      "term": "occurrence frequency",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "speed_measurement",
+      "term": "измерение скорости",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "speed_measurement",
+      "term": "speed measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "wind_speed_measurement",
+      "term": "измерение скорости ветра",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "wind_speed_measurement",
+      "term": "wind speed measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "frequency_measurement",
+      "term": "измерение частоты",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "frequency_measurement",
+      "term": "frequency measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rotational_frequency_measurement",
+      "term": "измерение частоты вращения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rotational_frequency_measurement",
+      "term": "rotational frequency measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "acceleration_measurement",
+      "term": "измерение ускорения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "acceleration_measurement",
+      "term": "acceleration measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "anemometer",
+      "term": "анемометр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "anemometer",
+      "term": "anemometer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "anemometer",
+      "term": "wind gauge",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "speedometer",
+      "term": "спидометр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "speedometer",
+      "term": "speedometer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "tachometer",
+      "term": "тахометр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "tachometer",
+      "term": "tachometer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "accelerometer",
+      "term": "акселерометр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "accelerometer",
+      "term": "accelerometer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 10646,
+      "term": "ускорение (процесс)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 10646,
+      "term": "acceleration (speeding up)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 10646,
+      "term": "speeding up",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 10646,
+      "term": "speedup",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 10646,
+      "term": "ускорить",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 10646,
+      "term": "ускорять",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 10646,
+      "term": "ускориение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 10646,
+      "term": "УСКОРИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "length_instrument",
+      "term": "прибор для измерения длины",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "length_instrument",
+      "term": "length measuring instrument",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "slide_caliper",
+      "term": "штангенциркуль",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "slide_caliper",
+      "term": "sliding caliper",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "slide_caliper",
+      "term": "slide caliper",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "slide_caliper",
+      "term": "caliper",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "slide_caliper",
+      "term": "calliper",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "vernier_caliper",
+      "term": "нониусный штангенциркуль",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "vernier_caliper",
+      "term": "vernier caliper",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "vernier_caliper",
+      "term": "штангенциркуль с нониусом",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "dial_caliper",
+      "term": "стрелочный штангенциркуль",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "dial_caliper",
+      "term": "dial caliper",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "dial_caliper",
+      "term": "штангенциркуль с круговой шкалой",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "digital_caliper",
+      "term": "цифровой штангенциркуль",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "digital_caliper",
+      "term": "digital caliper",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "digital_caliper",
+      "term": "электронный штангенциркуль",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 2888,
+      "term": "диаметр (отрезок)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 2888,
+      "term": "diameter (line segment)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "diameter_length",
+      "term": "диаметр (длина)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "diameter_length",
+      "term": "diameter (length)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "diameter_length",
+      "term": "diameter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "diameter_length",
+      "term": "диаметр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "diameter_measurement",
+      "term": "измерение диаметра",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "diameter_measurement",
+      "term": "diameter measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "depth_measurement",
+      "term": "измерение глубины",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "depth_measurement",
+      "term": "depth measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "depth_gauge",
+      "term": "глубиномер",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "depth_gauge",
+      "term": "depth gauge",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "depth_gauge",
+      "term": "depth gage",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "timekeeping",
+      "term": "отсчёт времени",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "timekeeping",
+      "term": "timekeeping",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "timekeeping",
+      "term": "определение времени",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "timepiece",
+      "term": "прибор для отсчёта времени",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "timepiece",
+      "term": "timepiece",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "interval_timer",
+      "term": "таймер (отсчёт интервала)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "interval_timer",
+      "term": "interval timer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "interval_timer",
+      "term": "timer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "interval_timer",
+      "term": "таймер",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 2339,
+      "term": "уровень (измерительный инструмент)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 2339,
+      "term": "level (measuring instrument)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "spirit_level",
+      "term": "пузырьковый уровень",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "spirit_level",
+      "term": "spirit level",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "spirit_level",
+      "term": "bubble level",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "vernier_caliper",
+      "term": "vernier micrometer",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "rotational_frequency",
+      "term": "angular velocity",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "relative_humidity",
+      "term": "absolute humidity",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "absolute_humidity",
+      "term": "specific humidity",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "timepiece",
+      "term": "timekeeper",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "hygrometer",
+      "term": "psychrometer",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

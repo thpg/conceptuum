@@ -1,0 +1,3213 @@
+{
+  "source": "quality-20261009-q26",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Family groups versus kinship relations, household units, shared family-role genera, full and half siblings, and great-grandparent/great-grandchild roles. Correct co-role pairs misrepresented as converses.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "nuclear": "https://dictionary.cambridge.org/dictionary/english/nuclear-family?topic=family-relations-in-general",
+      "extended": "https://dictionary.cambridge.org/us/dictionary/english/extended-family",
+      "household": "https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/families/methodologies/familiesandhouseholdsqmi",
+      "siblings": "https://dictionary.cambridge.org/thesaurus/articles/sibling",
+      "half_brother": "https://dictionary.cambridge.org/us/dictionary/english/half-brother",
+      "stepbrother": "https://dictionary.cambridge.org/dictionary/english/stepbrother",
+      "full": "https://www.collinsdictionary.com/dictionary/english/full",
+      "russian_brother": "https://gramota.ru/meta/brat-54715"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet; CC BY 4.0 and Princeton notices remain in docs/quality/2026-10-09-q11.md#sources-and-reuse. Cambridge, Collins, Gramota and ONS support selected corrections. Definitions are not copied; scope and graph mappings are editorial adaptations.",
+    "existing_cohort": [
+      79,
+      81,
+      238,
+      239,
+      240,
+      1875,
+      1876,
+      1877,
+      1878,
+      1879,
+      1880,
+      2102,
+      2103,
+      2104,
+      2105,
+      2106,
+      2107,
+      2108,
+      2109,
+      2110,
+      2111,
+      2112,
+      2113,
+      2114,
+      2115,
+      2116,
+      2117,
+      2636,
+      2637,
+      3078,
+      3454,
+      5177,
+      5513,
+      5514,
+      5697
+    ],
+    "context_policy": "All new concepts and assertions use U1 with unspecified strength. A family group, a kinship relationship and a person in a family role are different kinds of concept. Role definitions use the same reference person; changing that reference does not license a genus. No new blanket exclusions are introduced.",
+    "sense_decisions": [
+      {
+        "concept": "sibling",
+        "synset": "oewn-10614572-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The gender-neutral family role covering brothers and sisters, distinct from a particular sibling pair or kinship relation. Do not require the reference person to have an opposite-gender sibling."
+      },
+      {
+        "concept": "grandparent",
+        "synset": "oewn-10162692-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A parent of the reference person's parent; a person in a family role, not the relation or a mandatory male/female pair."
+      },
+      {
+        "concept": "grandchild",
+        "synset": "oewn-10161110-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A child of the reference person's child. The role does not require the person to be a minor."
+      },
+      {
+        "concept": "spouse",
+        "synset": "oewn-10660018-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A person's partner in marriage. Use a gender-neutral genus for existing husband and wife; do not import generic partner, an eligibility rule or a particular jurisdiction."
+      },
+      {
+        "concept": "aunt_or_uncle",
+        "synset": null,
+        "decision": "add",
+        "alignment": "shared role genus",
+        "scope": "The family role covering the reference person's aunt or uncle, including the relevant parent-sibling and marriage-connected uses. It does not require both an aunt and an uncle."
+      },
+      {
+        "concept": "niece_or_nephew",
+        "synset": null,
+        "decision": "add",
+        "alignment": "shared role genus",
+        "scope": "The family role covering the reference person's niece or nephew. No age restriction or opposite-gender counterpart is asserted."
+      },
+      {
+        "concept": "blood_relative",
+        "synset": "oewn-10255811-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A person related through biological descent. This person role is distinct from blood kinship as a relation; no coefficient of relatedness is asserted."
+      },
+      {
+        "concept": "nuclear_family",
+        "synset": "oewn-07989934-n",
+        "decision": "add",
+        "alignment": "corrected dictionary scope",
+        "scope": "Select the two-parent-and-children family unit. Correct the dictionary gloss that incorrectly includes grandparents. No requirement about parent gender, a child's age, marriage or a shared address is imported."
+      },
+      {
+        "concept": "extended_family",
+        "synset": "oewn-07990100-n",
+        "decision": "add",
+        "alignment": "broadened family group scope",
+        "scope": "A family group extending beyond the parent/child unit to other relatives. Co-residence and blood-only membership are not required; the group is not a kind of nuclear family."
+      },
+      {
+        "concept": "single_parent_family",
+        "synset": null,
+        "decision": "add",
+        "alignment": "family composition restriction",
+        "scope": "A family unit consisting of one parent and that parent's child or children. This is the unit's composition, not a claim that no other biological parent exists or a legal family classification."
+      },
+      {
+        "concept": "household",
+        "synset": "oewn-08094856-n",
+        "decision": "add",
+        "alignment": "living unit including one-person households",
+        "scope": "A domestic living unit comprising one person or multiple people with shared living arrangements. It need not be a family and is not a house building or the household-economy discipline. Use the collection genus so one-person units are allowed."
+      },
+      {
+        "concept": "single_person_household",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composition restriction",
+        "scope": "A household with one resident member. The living unit is distinct from the individual person; census eligibility rules are not imported."
+      },
+      {
+        "concept": "multi_person_household",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composition restriction",
+        "scope": "A household with more than one resident member. Members need not be related."
+      },
+      {
+        "concept": "family_household",
+        "synset": null,
+        "decision": "add",
+        "alignment": "restricted family/household intersection",
+        "scope": "The restricted case in which the whole household is one co-resident family group. It has both household and family genera; not every household is a family and not every family shares a household."
+      },
+      {
+        "concept": "full_sibling",
+        "synset": null,
+        "decision": "add",
+        "alignment": "shared-parent restriction",
+        "scope": "A sibling sharing both biological parents with the same reference person. This scope is not an assertion about the completeness or value of a family."
+      },
+      {
+        "concept": "half_sibling",
+        "synset": null,
+        "decision": "add",
+        "alignment": "shared-parent restriction",
+        "scope": "A sibling sharing one biological parent, while the other is different, relative to the same person. Do not import a step-sibling synonym."
+      },
+      {
+        "concept": "full_brother",
+        "synset": null,
+        "decision": "add",
+        "alignment": "brother/full-sibling intersection",
+        "scope": "A brother sharing both biological parents with the reference person."
+      },
+      {
+        "concept": "full_sister",
+        "synset": null,
+        "decision": "add",
+        "alignment": "sister/full-sibling intersection",
+        "scope": "A sister sharing both biological parents with the reference person."
+      },
+      {
+        "concept": "half_brother",
+        "synset": "oewn-10673760-n",
+        "decision": "add",
+        "alignment": "corrected dictionary synonym set",
+        "scope": "A brother sharing exactly one biological parent. Exclude the dictionary's stepbrother synonym and the ambiguous Russian svodny translation."
+      },
+      {
+        "concept": "half_sister",
+        "synset": "oewn-10622650-n",
+        "decision": "add",
+        "alignment": "corrected dictionary synonym set",
+        "scope": "A sister sharing exactly one biological parent. Exclude the dictionary's stepsister synonym."
+      },
+      {
+        "concept": "maternal_half_sibling",
+        "synset": null,
+        "decision": "add",
+        "alignment": "shared-mother restriction",
+        "scope": "A half sibling sharing the biological mother, with a different biological father, relative to the same person."
+      },
+      {
+        "concept": "paternal_half_sibling",
+        "synset": null,
+        "decision": "add",
+        "alignment": "shared-father restriction",
+        "scope": "A half sibling sharing the biological father, with a different biological mother, relative to the same person. Select the precise sibling sense, not every colloquial blood-relative usage."
+      },
+      {
+        "concept": "maternal_half_brother",
+        "synset": null,
+        "decision": "add",
+        "alignment": "two-role intersection",
+        "scope": "A half brother on the shared-mother side."
+      },
+      {
+        "concept": "paternal_half_brother",
+        "synset": null,
+        "decision": "add",
+        "alignment": "two-role intersection",
+        "scope": "A half brother on the shared-father side."
+      },
+      {
+        "concept": "maternal_half_sister",
+        "synset": null,
+        "decision": "add",
+        "alignment": "two-role intersection",
+        "scope": "A half sister on the shared-mother side."
+      },
+      {
+        "concept": "paternal_half_sister",
+        "synset": null,
+        "decision": "add",
+        "alignment": "two-role intersection",
+        "scope": "A half sister on the shared-father side."
+      },
+      {
+        "concept": "great_grandparent",
+        "synset": "oewn-10165294-n",
+        "decision": "add",
+        "alignment": "fixed-reference kinship degree",
+        "scope": "A parent of the reference person's grandparent. Do not classify it as that same person's grandparent by changing the reference point."
+      },
+      {
+        "concept": "great_grandmother",
+        "synset": "oewn-10165110-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The grandmother's or grandfather's mother, relative to the same reference person."
+      },
+      {
+        "concept": "great_grandfather",
+        "synset": "oewn-10165202-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The grandmother's or grandfather's father, relative to the same reference person."
+      },
+      {
+        "concept": "great_grandchild",
+        "synset": "oewn-10164860-n",
+        "decision": "add",
+        "alignment": "corrected fixed-reference genus",
+        "scope": "A child of the reference person's grandchild. Do not import the dictionary grandchild genus when it changes the reference person or generation."
+      },
+      {
+        "concept": "great_grandson",
+        "synset": "oewn-10165422-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The grandson's or granddaughter's son, relative to the same reference person."
+      },
+      {
+        "concept": "great_granddaughter",
+        "synset": "oewn-10165000-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The grandson's or granddaughter's daughter, relative to the same reference person."
+      },
+      {
+        "concept": 2106,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Plural parents may be a duplicate or a collective; leave its genus unchanged until the choice is reviewed. Its false temporal sequence is removed."
+      },
+      {
+        "concept": 3078,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Mother/mom duplicate and its potential references need a separate merge review."
+      },
+      {
+        "concept": 5697,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The archaic mother form is an established word, not an automatically malformed term; defer deduplication."
+      },
+      {
+        "concept": 5177,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Grandfather/older-man meanings need review before merging the ded record."
+      },
+      {
+        "concept": 3454,
+        "synset": "oewn-08124465-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Family can also denote a taxonomic rank or group. Do not silently merge it into the human family record."
+      },
+      {
+        "concept": 239,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Marriage relationship, wedding event and marital formation remain distinct review topics."
+      },
+      {
+        "concept": 1879,
+        "synset": "oewn-10660018-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The old husband/wife converse example needs a context-scope review; no new universal gender pairing is asserted."
+      },
+      {
+        "concept": 2117,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Cousin may differ in gender and genealogical degree across English and Russian; defer its sense split."
+      }
+    ],
+    "limits": "No legal status, eligibility, inheritance right, custody rule, DNA percentage or biological diagnostic claim. Household wording is a broad living-unit sense, not an import of every UK census criterion. Exact member counts and reference-person bindings are scope notes, not executable cardinality or genealogy rules. Mother/mom/mater and grandfather aliases, plural parents, family/taxonomic-family, spouse-context rules, wedding causation and cousin scope require separate review. No application test suites.",
+    "exclusion_review": {
+      "context": "U1 positive genus witnesses",
+      "before_conflicting_edges": 10,
+      "resolved_edges": [
+        7999
+      ],
+      "decision": "Keep upper object/relation exclusion 7999; remove the incorrect family-to-social-relation genus that supplies its witness. No exclusion edge is changed or added.",
+      "remaining_candidates_expected": 9
+    },
+    "new_term_collisions": [],
+    "collision_decision": "No exact normalized cross-language collision is accepted. Kinship, blood kinship, family, family roles and person/group anchors are reused; ambiguous historical duplicates remain queued.",
+    "refreshed_comparison": {
+      "baseline": "Q25",
+      "existing_concepts": 13029,
+      "existing_terms": 36725,
+      "synsets_with_exact_en_candidate": 15587,
+      "synsets_without_exact_en_candidate": 91932,
+      "existing_concepts_with_dictionary_candidate": 4163,
+      "caveat": "Normalized spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "sibling",
+      "name": "брат или сестра",
+      "parent": 2103,
+      "universum_id": 1,
+      "terms": [
+        [
+          "брат или сестра",
+          "ru"
+        ],
+        [
+          "sibling",
+          "en"
+        ]
+      ],
+      "reason": "The gender-neutral family role covering brothers and sisters, distinct from a particular sibling pair or kinship relation. Do not require the reference person to have an opposite-gender sibling. OEWN 2025: oewn-10614572-n. Source: https://dictionary.cambridge.org/thesaurus/articles/sibling"
+    },
+    {
+      "key": "grandparent",
+      "name": "бабушка или дедушка",
+      "parent": 2103,
+      "universum_id": 1,
+      "terms": [
+        [
+          "бабушка или дедушка",
+          "ru"
+        ],
+        [
+          "grandparent",
+          "en"
+        ]
+      ],
+      "reason": "A parent of the reference person's parent; a person in a family role, not the relation or a mandatory male/female pair. OEWN 2025: oewn-10162692-n. Source: https://dictionary.cambridge.org/thesaurus/articles/sibling"
+    },
+    {
+      "key": "grandchild",
+      "name": "внук или внучка",
+      "parent": 2103,
+      "universum_id": 1,
+      "terms": [
+        [
+          "внук или внучка",
+          "ru"
+        ],
+        [
+          "grandchild",
+          "en"
+        ]
+      ],
+      "reason": "A child of the reference person's child. The role does not require the person to be a minor. OEWN 2025: oewn-10161110-n. Source: https://dictionary.cambridge.org/thesaurus/articles/sibling"
+    },
+    {
+      "key": "spouse",
+      "name": "супружеский партнёр",
+      "parent": 2103,
+      "universum_id": 1,
+      "terms": [
+        [
+          "супружеский партнёр",
+          "ru"
+        ],
+        [
+          "spouse",
+          "en"
+        ]
+      ],
+      "reason": "A person's partner in marriage. Use a gender-neutral genus for existing husband and wife; do not import generic partner, an eligibility rule or a particular jurisdiction. OEWN 2025: oewn-10660018-n."
+    },
+    {
+      "key": "aunt_or_uncle",
+      "name": "тётя или дядя",
+      "parent": 2103,
+      "universum_id": 1,
+      "terms": [
+        [
+          "тётя или дядя",
+          "ru"
+        ],
+        [
+          "aunt or uncle",
+          "en"
+        ]
+      ],
+      "reason": "The family role covering the reference person's aunt or uncle, including the relevant parent-sibling and marriage-connected uses. It does not require both an aunt and an uncle."
+    },
+    {
+      "key": "niece_or_nephew",
+      "name": "племянник или племянница",
+      "parent": 2103,
+      "universum_id": 1,
+      "terms": [
+        [
+          "племянник или племянница",
+          "ru"
+        ],
+        [
+          "niece or nephew",
+          "en"
+        ]
+      ],
+      "reason": "The family role covering the reference person's niece or nephew. No age restriction or opposite-gender counterpart is asserted."
+    },
+    {
+      "key": "blood_relative",
+      "name": "кровный родственник",
+      "parent": 2103,
+      "universum_id": 1,
+      "terms": [
+        [
+          "кровный родственник",
+          "ru"
+        ],
+        [
+          "blood relative",
+          "en"
+        ],
+        [
+          "blood relation (person)",
+          "en"
+        ]
+      ],
+      "reason": "A person related through biological descent. This person role is distinct from blood kinship as a relation; no coefficient of relatedness is asserted. OEWN 2025: oewn-10255811-n."
+    },
+    {
+      "key": "nuclear_family",
+      "name": "нуклеарная семья",
+      "parent": 2102,
+      "universum_id": 1,
+      "terms": [
+        [
+          "нуклеарная семья",
+          "ru"
+        ],
+        [
+          "nuclear family",
+          "en"
+        ]
+      ],
+      "reason": "Select the two-parent-and-children family unit. Correct the dictionary gloss that incorrectly includes grandparents. No requirement about parent gender, a child's age, marriage or a shared address is imported. OEWN 2025: oewn-07989934-n. Source: https://dictionary.cambridge.org/dictionary/english/nuclear-family?topic=family-relations-in-general"
+    },
+    {
+      "key": "extended_family",
+      "name": "расширенная семья",
+      "parent": 2102,
+      "universum_id": 1,
+      "terms": [
+        [
+          "расширенная семья",
+          "ru"
+        ],
+        [
+          "extended family",
+          "en"
+        ]
+      ],
+      "reason": "A family group extending beyond the parent/child unit to other relatives. Co-residence and blood-only membership are not required; the group is not a kind of nuclear family. OEWN 2025: oewn-07990100-n. Source: https://dictionary.cambridge.org/us/dictionary/english/extended-family"
+    },
+    {
+      "key": "single_parent_family",
+      "name": "семья с одним родителем",
+      "parent": 2102,
+      "universum_id": 1,
+      "terms": [
+        [
+          "семья с одним родителем",
+          "ru"
+        ],
+        [
+          "single-parent family",
+          "en"
+        ]
+      ],
+      "reason": "A family unit consisting of one parent and that parent's child or children. This is the unit's composition, not a claim that no other biological parent exists or a legal family classification."
+    },
+    {
+      "key": "household",
+      "name": "домохозяйство (совместное проживание)",
+      "parent": 2636,
+      "universum_id": 1,
+      "terms": [
+        [
+          "домохозяйство (совместное проживание)",
+          "ru"
+        ],
+        [
+          "household",
+          "en"
+        ],
+        [
+          "household (living unit)",
+          "en"
+        ],
+        [
+          "домохозяйство",
+          "ru"
+        ]
+      ],
+      "reason": "A domestic living unit comprising one person or multiple people with shared living arrangements. It need not be a family and is not a house building or the household-economy discipline. Use the collection genus so one-person units are allowed. OEWN 2025: oewn-08094856-n. Source: https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/families/methodologies/familiesandhouseholdsqmi"
+    },
+    {
+      "key": "single_person_household",
+      "name": "домохозяйство из одного человека",
+      "parent": "household",
+      "universum_id": 1,
+      "terms": [
+        [
+          "домохозяйство из одного человека",
+          "ru"
+        ],
+        [
+          "single-person household",
+          "en"
+        ],
+        [
+          "one-person household",
+          "en"
+        ]
+      ],
+      "reason": "A household with one resident member. The living unit is distinct from the individual person; census eligibility rules are not imported. Source: https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/families/methodologies/familiesandhouseholdsqmi"
+    },
+    {
+      "key": "multi_person_household",
+      "name": "домохозяйство из нескольких человек",
+      "parent": "household",
+      "universum_id": 1,
+      "terms": [
+        [
+          "домохозяйство из нескольких человек",
+          "ru"
+        ],
+        [
+          "multi-person household",
+          "en"
+        ]
+      ],
+      "reason": "A household with more than one resident member. Members need not be related. Source: https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/families/methodologies/familiesandhouseholdsqmi"
+    },
+    {
+      "key": "family_household",
+      "name": "домохозяйство одной семьи",
+      "parent": "multi_person_household",
+      "universum_id": 1,
+      "terms": [
+        [
+          "домохозяйство одной семьи",
+          "ru"
+        ],
+        [
+          "household consisting of one family",
+          "en"
+        ]
+      ],
+      "reason": "The restricted case in which the whole household is one co-resident family group. It has both household and family genera; not every household is a family and not every family shares a household. Source: https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/families/methodologies/familiesandhouseholdsqmi"
+    },
+    {
+      "key": "full_sibling",
+      "name": "полнородный брат или сестра",
+      "parent": "sibling",
+      "universum_id": 1,
+      "terms": [
+        [
+          "полнородный брат или сестра",
+          "ru"
+        ],
+        [
+          "full sibling",
+          "en"
+        ]
+      ],
+      "reason": "A sibling sharing both biological parents with the same reference person. This scope is not an assertion about the completeness or value of a family. Source: https://www.collinsdictionary.com/dictionary/english/full"
+    },
+    {
+      "key": "half_sibling",
+      "name": "неполнородный брат или сестра",
+      "parent": "sibling",
+      "universum_id": 1,
+      "terms": [
+        [
+          "неполнородный брат или сестра",
+          "ru"
+        ],
+        [
+          "half sibling",
+          "en"
+        ],
+        [
+          "half-sibling",
+          "en"
+        ]
+      ],
+      "reason": "A sibling sharing one biological parent, while the other is different, relative to the same person. Do not import a step-sibling synonym. Source: https://dictionary.cambridge.org/us/dictionary/english/half-brother"
+    },
+    {
+      "key": "full_brother",
+      "name": "полнородный брат",
+      "parent": 1877,
+      "universum_id": 1,
+      "terms": [
+        [
+          "полнородный брат",
+          "ru"
+        ],
+        [
+          "full brother",
+          "en"
+        ]
+      ],
+      "reason": "A brother sharing both biological parents with the reference person. Source: https://www.collinsdictionary.com/dictionary/english/full"
+    },
+    {
+      "key": "full_sister",
+      "name": "полнородная сестра",
+      "parent": 1878,
+      "universum_id": 1,
+      "terms": [
+        [
+          "полнородная сестра",
+          "ru"
+        ],
+        [
+          "full sister",
+          "en"
+        ]
+      ],
+      "reason": "A sister sharing both biological parents with the reference person. Source: https://www.collinsdictionary.com/dictionary/english/full"
+    },
+    {
+      "key": "half_brother",
+      "name": "неполнородный брат",
+      "parent": 1877,
+      "universum_id": 1,
+      "terms": [
+        [
+          "неполнородный брат",
+          "ru"
+        ],
+        [
+          "half brother",
+          "en"
+        ],
+        [
+          "half-brother",
+          "en"
+        ]
+      ],
+      "reason": "A brother sharing exactly one biological parent. Exclude the dictionary's stepbrother synonym and the ambiguous Russian svodny translation. OEWN 2025: oewn-10673760-n. Source: https://dictionary.cambridge.org/us/dictionary/english/half-brother"
+    },
+    {
+      "key": "half_sister",
+      "name": "неполнородная сестра",
+      "parent": 1878,
+      "universum_id": 1,
+      "terms": [
+        [
+          "неполнородная сестра",
+          "ru"
+        ],
+        [
+          "half sister",
+          "en"
+        ],
+        [
+          "half-sister",
+          "en"
+        ]
+      ],
+      "reason": "A sister sharing exactly one biological parent. Exclude the dictionary's stepsister synonym. OEWN 2025: oewn-10622650-n. Source: https://dictionary.cambridge.org/thesaurus/articles/sibling"
+    },
+    {
+      "key": "maternal_half_sibling",
+      "name": "единоутробный брат или сестра",
+      "parent": "half_sibling",
+      "universum_id": 1,
+      "terms": [
+        [
+          "единоутробный брат или сестра",
+          "ru"
+        ],
+        [
+          "maternal half sibling",
+          "en"
+        ]
+      ],
+      "reason": "A half sibling sharing the biological mother, with a different biological father, relative to the same person. Source: https://gramota.ru/meta/brat-54715"
+    },
+    {
+      "key": "paternal_half_sibling",
+      "name": "единокровный брат или сестра",
+      "parent": "half_sibling",
+      "universum_id": 1,
+      "terms": [
+        [
+          "единокровный брат или сестра",
+          "ru"
+        ],
+        [
+          "paternal half sibling",
+          "en"
+        ]
+      ],
+      "reason": "A half sibling sharing the biological father, with a different biological mother, relative to the same person. Select the precise sibling sense, not every colloquial blood-relative usage. Source: https://gramota.ru/meta/brat-54715"
+    },
+    {
+      "key": "maternal_half_brother",
+      "name": "единоутробный брат",
+      "parent": "half_brother",
+      "universum_id": 1,
+      "terms": [
+        [
+          "единоутробный брат",
+          "ru"
+        ],
+        [
+          "maternal half brother",
+          "en"
+        ]
+      ],
+      "reason": "A half brother on the shared-mother side. Source: https://gramota.ru/meta/brat-54715"
+    },
+    {
+      "key": "paternal_half_brother",
+      "name": "единокровный брат",
+      "parent": "half_brother",
+      "universum_id": 1,
+      "terms": [
+        [
+          "единокровный брат",
+          "ru"
+        ],
+        [
+          "paternal half brother",
+          "en"
+        ]
+      ],
+      "reason": "A half brother on the shared-father side. Source: https://gramota.ru/meta/brat-54715"
+    },
+    {
+      "key": "maternal_half_sister",
+      "name": "единоутробная сестра",
+      "parent": "half_sister",
+      "universum_id": 1,
+      "terms": [
+        [
+          "единоутробная сестра",
+          "ru"
+        ],
+        [
+          "maternal half sister",
+          "en"
+        ]
+      ],
+      "reason": "A half sister on the shared-mother side. Source: https://gramota.ru/meta/brat-54715"
+    },
+    {
+      "key": "paternal_half_sister",
+      "name": "единокровная сестра",
+      "parent": "half_sister",
+      "universum_id": 1,
+      "terms": [
+        [
+          "единокровная сестра",
+          "ru"
+        ],
+        [
+          "paternal half sister",
+          "en"
+        ]
+      ],
+      "reason": "A half sister on the shared-father side. Source: https://gramota.ru/meta/brat-54715"
+    },
+    {
+      "key": "great_grandparent",
+      "name": "прабабушка или прадедушка",
+      "parent": 2103,
+      "universum_id": 1,
+      "terms": [
+        [
+          "прабабушка или прадедушка",
+          "ru"
+        ],
+        [
+          "great-grandparent",
+          "en"
+        ],
+        [
+          "great grandparent",
+          "en"
+        ]
+      ],
+      "reason": "A parent of the reference person's grandparent. Do not classify it as that same person's grandparent by changing the reference point. OEWN 2025: oewn-10165294-n."
+    },
+    {
+      "key": "great_grandmother",
+      "name": "прабабушка",
+      "parent": "great_grandparent",
+      "universum_id": 1,
+      "terms": [
+        [
+          "прабабушка",
+          "ru"
+        ],
+        [
+          "great-grandmother",
+          "en"
+        ],
+        [
+          "great grandmother",
+          "en"
+        ]
+      ],
+      "reason": "The grandmother's or grandfather's mother, relative to the same reference person. OEWN 2025: oewn-10165110-n."
+    },
+    {
+      "key": "great_grandfather",
+      "name": "прадедушка",
+      "parent": "great_grandparent",
+      "universum_id": 1,
+      "terms": [
+        [
+          "прадедушка",
+          "ru"
+        ],
+        [
+          "great-grandfather",
+          "en"
+        ],
+        [
+          "great grandfather",
+          "en"
+        ],
+        [
+          "прадед",
+          "ru"
+        ]
+      ],
+      "reason": "The grandmother's or grandfather's father, relative to the same reference person. OEWN 2025: oewn-10165202-n."
+    },
+    {
+      "key": "great_grandchild",
+      "name": "правнук или правнучка",
+      "parent": 2103,
+      "universum_id": 1,
+      "terms": [
+        [
+          "правнук или правнучка",
+          "ru"
+        ],
+        [
+          "great-grandchild",
+          "en"
+        ],
+        [
+          "great grandchild",
+          "en"
+        ]
+      ],
+      "reason": "A child of the reference person's grandchild. Do not import the dictionary grandchild genus when it changes the reference person or generation. OEWN 2025: oewn-10164860-n."
+    },
+    {
+      "key": "great_grandson",
+      "name": "правнук",
+      "parent": "great_grandchild",
+      "universum_id": 1,
+      "terms": [
+        [
+          "правнук",
+          "ru"
+        ],
+        [
+          "great-grandson",
+          "en"
+        ],
+        [
+          "great grandson",
+          "en"
+        ]
+      ],
+      "reason": "The grandson's or granddaughter's son, relative to the same reference person. OEWN 2025: oewn-10165422-n."
+    },
+    {
+      "key": "great_granddaughter",
+      "name": "правнучка",
+      "parent": "great_grandchild",
+      "universum_id": 1,
+      "terms": [
+        [
+          "правнучка",
+          "ru"
+        ],
+        [
+          "great-granddaughter",
+          "en"
+        ],
+        [
+          "great granddaughter",
+          "en"
+        ]
+      ],
+      "reason": "The grandson's or granddaughter's daughter, relative to the same reference person. OEWN 2025: oewn-10165000-n."
+    }
+  ],
+  "renames": [],
+  "terms": [
+    {
+      "id": 81,
+      "name": "родство",
+      "terms": [
+        [
+          "family relationship",
+          "en"
+        ]
+      ],
+      "reason": "Reuse the existing kinship relation rather than creating a duplicate family-relationship node. OEWN 2025: oewn-13834819-n."
+    },
+    {
+      "id": 2102,
+      "name": "семья",
+      "terms": [
+        [
+          "family group",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the group sense, distinct from a household, taxonomic family and kinship relation."
+    },
+    {
+      "id": 1876,
+      "name": "ребёнок в семье",
+      "terms": [
+        [
+          "child (family role)",
+          "en"
+        ]
+      ],
+      "reason": "The offspring role includes adult children and is distinct from the age category."
+    },
+    {
+      "id": 238,
+      "name": "кровное родство",
+      "terms": [
+        [
+          "consanguinity",
+          "en"
+        ]
+      ],
+      "reason": "Use an established English kinship-relation label, distinct from the blood-relative person."
+    }
+  ],
+  "remove_terms": [],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 3791,
+      "before": [
+        2102,
+        "14",
+        79,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The existing family denotes a group of people, not a relation. Retain its group genus 7966 and reuse kinship 81 for the relation. Preserve the upper object/relation exclusion 7999. OEWN 2025: oewn-07986853-n."
+    },
+    {
+      "id": 296,
+      "before": [
+        240,
+        "14",
+        81,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          240,
+          "14",
+          79,
+          null,
+          1
+        ]
+      ],
+      "reason": "Friendship is a social relation but not necessarily kinship. Preserve the narrower blood-kinship and marriage relations under kinship."
+    },
+    {
+      "id": 2817,
+      "before": [
+        1877,
+        "14",
+        2103,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1877,
+          "14",
+          "sibling",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing family role through its shared genus while preserving relative/person ancestry. Do not confuse a family role with a relationship or an age category."
+    },
+    {
+      "id": 2818,
+      "before": [
+        1878,
+        "14",
+        2103,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1878,
+          "14",
+          "sibling",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing family role through its shared genus while preserving relative/person ancestry. Do not confuse a family role with a relationship or an age category."
+    },
+    {
+      "id": 2819,
+      "before": [
+        1879,
+        "14",
+        2103,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1879,
+          "14",
+          "spouse",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing family role through its shared genus while preserving relative/person ancestry. Do not confuse a family role with a relationship or an age category."
+    },
+    {
+      "id": 2820,
+      "before": [
+        1880,
+        "14",
+        2103,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1880,
+          "14",
+          "spouse",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing family role through its shared genus while preserving relative/person ancestry. Do not confuse a family role with a relationship or an age category."
+    },
+    {
+      "id": 3793,
+      "before": [
+        2104,
+        "14",
+        2103,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2104,
+          "14",
+          1875,
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing family role through its shared genus while preserving relative/person ancestry. Do not confuse a family role with a relationship or an age category."
+    },
+    {
+      "id": 3794,
+      "before": [
+        2105,
+        "14",
+        2103,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2105,
+          "14",
+          1875,
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing family role through its shared genus while preserving relative/person ancestry. Do not confuse a family role with a relationship or an age category."
+    },
+    {
+      "id": 3796,
+      "before": [
+        2107,
+        "14",
+        2103,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2107,
+          "14",
+          1876,
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing family role through its shared genus while preserving relative/person ancestry. Do not confuse a family role with a relationship or an age category."
+    },
+    {
+      "id": 3797,
+      "before": [
+        2108,
+        "14",
+        2103,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2108,
+          "14",
+          1876,
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing family role through its shared genus while preserving relative/person ancestry. Do not confuse a family role with a relationship or an age category."
+    },
+    {
+      "id": 3798,
+      "before": [
+        2109,
+        "14",
+        2103,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2109,
+          "14",
+          "grandparent",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing family role through its shared genus while preserving relative/person ancestry. Do not confuse a family role with a relationship or an age category."
+    },
+    {
+      "id": 3799,
+      "before": [
+        2110,
+        "14",
+        2103,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2110,
+          "14",
+          "grandparent",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing family role through its shared genus while preserving relative/person ancestry. Do not confuse a family role with a relationship or an age category."
+    },
+    {
+      "id": 3800,
+      "before": [
+        2111,
+        "14",
+        2103,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2111,
+          "14",
+          "grandchild",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing family role through its shared genus while preserving relative/person ancestry. Do not confuse a family role with a relationship or an age category."
+    },
+    {
+      "id": 3801,
+      "before": [
+        2112,
+        "14",
+        2103,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2112,
+          "14",
+          "grandchild",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing family role through its shared genus while preserving relative/person ancestry. Do not confuse a family role with a relationship or an age category."
+    },
+    {
+      "id": 3802,
+      "before": [
+        2113,
+        "14",
+        2103,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2113,
+          "14",
+          "aunt_or_uncle",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing family role through its shared genus while preserving relative/person ancestry. Do not confuse a family role with a relationship or an age category."
+    },
+    {
+      "id": 3803,
+      "before": [
+        2114,
+        "14",
+        2103,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2114,
+          "14",
+          "aunt_or_uncle",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing family role through its shared genus while preserving relative/person ancestry. Do not confuse a family role with a relationship or an age category."
+    },
+    {
+      "id": 3804,
+      "before": [
+        2115,
+        "14",
+        2103,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2115,
+          "14",
+          "niece_or_nephew",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing family role through its shared genus while preserving relative/person ancestry. Do not confuse a family role with a relationship or an age category."
+    },
+    {
+      "id": 3805,
+      "before": [
+        2116,
+        "14",
+        2103,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2116,
+          "14",
+          "niece_or_nephew",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing family role through its shared genus while preserving relative/person ancestry. Do not confuse a family role with a relationship or an age category."
+    },
+    {
+      "id": 3840,
+      "before": [
+        1877,
+        "62",
+        1878,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The male and female co-roles are not converses and do not universally imply one another. A brother need not have a sister, a son need not have a daughter counterpart, and comparable family roles have the same problem. Use genuine cross-generation converse families where supported."
+    },
+    {
+      "id": 3841,
+      "before": [
+        2104,
+        "62",
+        2105,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The male and female co-roles are not converses and do not universally imply one another. A brother need not have a sister, a son need not have a daughter counterpart, and comparable family roles have the same problem. Use genuine cross-generation converse families where supported."
+    },
+    {
+      "id": 3842,
+      "before": [
+        2107,
+        "62",
+        2108,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The male and female co-roles are not converses and do not universally imply one another. A brother need not have a sister, a son need not have a daughter counterpart, and comparable family roles have the same problem. Use genuine cross-generation converse families where supported."
+    },
+    {
+      "id": 3843,
+      "before": [
+        2109,
+        "62",
+        2110,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The male and female co-roles are not converses and do not universally imply one another. A brother need not have a sister, a son need not have a daughter counterpart, and comparable family roles have the same problem. Use genuine cross-generation converse families where supported."
+    },
+    {
+      "id": 3844,
+      "before": [
+        2113,
+        "62",
+        2114,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The male and female co-roles are not converses and do not universally imply one another. A brother need not have a sister, a son need not have a daughter counterpart, and comparable family roles have the same problem. Use genuine cross-generation converse families where supported."
+    },
+    {
+      "id": 3845,
+      "before": [
+        2115,
+        "62",
+        2116,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The male and female co-roles are not converses and do not universally imply one another. A brother need not have a sister, a son need not have a daughter counterpart, and comparable family roles have the same problem. Use genuine cross-generation converse families where supported."
+    },
+    {
+      "id": 3846,
+      "before": [
+        2111,
+        "62",
+        2112,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The male and female co-roles are not converses and do not universally imply one another. A brother need not have a sister, a son need not have a daughter counterpart, and comparable family roles have the same problem. Use genuine cross-generation converse families where supported."
+    },
+    {
+      "id": 3847,
+      "before": [
+        2104,
+        "70",
+        1432,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The generic mother role is not limited to giving birth, and its child need not be in the age category child. A birth event, biological-parent restriction and child family role must be distinguished before a production assertion is made."
+    },
+    {
+      "id": 3848,
+      "before": [
+        2106,
+        "72",
+        2111,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "Family roles are not a universal temporal sequence of age categories. An infant can already be a son; parents as a generic class do not invariably precede a particular grandson. Do not encode genealogy as unqualified event order."
+    },
+    {
+      "id": 3849,
+      "before": [
+        1433,
+        "72",
+        2107,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "Family roles are not a universal temporal sequence of age categories. An infant can already be a son; parents as a generic class do not invariably precede a particular grandson. Do not encode genealogy as unqualified event order."
+    }
+  ],
+  "edges": [
+    {
+      "subject": "multi_person_household",
+      "kod": "14",
+      "object": 2637,
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications under the same reference-person and group-composition scope."
+    },
+    {
+      "subject": "family_household",
+      "kod": "14",
+      "object": 2102,
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications under the same reference-person and group-composition scope."
+    },
+    {
+      "subject": "full_sibling",
+      "kod": "14",
+      "object": "blood_relative",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications under the same reference-person and group-composition scope."
+    },
+    {
+      "subject": "half_sibling",
+      "kod": "14",
+      "object": "blood_relative",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications under the same reference-person and group-composition scope."
+    },
+    {
+      "subject": "full_brother",
+      "kod": "14",
+      "object": "full_sibling",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications under the same reference-person and group-composition scope."
+    },
+    {
+      "subject": "full_sister",
+      "kod": "14",
+      "object": "full_sibling",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications under the same reference-person and group-composition scope."
+    },
+    {
+      "subject": "half_brother",
+      "kod": "14",
+      "object": "half_sibling",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications under the same reference-person and group-composition scope."
+    },
+    {
+      "subject": "half_sister",
+      "kod": "14",
+      "object": "half_sibling",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications under the same reference-person and group-composition scope."
+    },
+    {
+      "subject": "maternal_half_brother",
+      "kod": "14",
+      "object": "maternal_half_sibling",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications under the same reference-person and group-composition scope."
+    },
+    {
+      "subject": "paternal_half_brother",
+      "kod": "14",
+      "object": "paternal_half_sibling",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications under the same reference-person and group-composition scope."
+    },
+    {
+      "subject": "maternal_half_sister",
+      "kod": "14",
+      "object": "maternal_half_sibling",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications under the same reference-person and group-composition scope."
+    },
+    {
+      "subject": "paternal_half_sister",
+      "kod": "14",
+      "object": "paternal_half_sibling",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications under the same reference-person and group-composition scope."
+    },
+    {
+      "subject": "grandparent",
+      "kod": "62",
+      "object": "grandchild",
+      "universum_id": 1,
+      "reason": "These are converse family-role families in the same genealogical relationship. The link expresses mutual role existence, not set overlap or an executable link between named people."
+    },
+    {
+      "subject": "aunt_or_uncle",
+      "kod": "62",
+      "object": "niece_or_nephew",
+      "universum_id": 1,
+      "reason": "These are converse family-role families in the same genealogical relationship. The link expresses mutual role existence, not set overlap or an executable link between named people."
+    },
+    {
+      "subject": "great_grandparent",
+      "kod": "62",
+      "object": "great_grandchild",
+      "universum_id": 1,
+      "reason": "These are converse family-role families in the same genealogical relationship. The link expresses mutual role existence, not set overlap or an executable link between named people."
+    },
+    {
+      "subject": "household",
+      "kod": "20",
+      "object": 28,
+      "universum_id": 1,
+      "reason": "The selected living unit or family composition has person members in this role. This is component membership, not a genus or a machine-enforced exact cardinality."
+    },
+    {
+      "subject": "nuclear_family",
+      "kod": "20",
+      "object": 1875,
+      "universum_id": 1,
+      "reason": "The selected living unit or family composition has person members in this role. This is component membership, not a genus or a machine-enforced exact cardinality."
+    },
+    {
+      "subject": "nuclear_family",
+      "kod": "20",
+      "object": 1876,
+      "universum_id": 1,
+      "reason": "The selected living unit or family composition has person members in this role. This is component membership, not a genus or a machine-enforced exact cardinality."
+    },
+    {
+      "subject": "single_parent_family",
+      "kod": "20",
+      "object": 1875,
+      "universum_id": 1,
+      "reason": "The selected living unit or family composition has person members in this role. This is component membership, not a genus or a machine-enforced exact cardinality."
+    },
+    {
+      "subject": "single_parent_family",
+      "kod": "20",
+      "object": 1876,
+      "universum_id": 1,
+      "reason": "The selected living unit or family composition has person members in this role. This is component membership, not a genus or a machine-enforced exact cardinality."
+    }
+  ],
+  "checks": [
+    {
+      "subject": "sibling",
+      "kod": "14",
+      "object": 2103,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "grandparent",
+      "kod": "14",
+      "object": 2103,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "grandchild",
+      "kod": "14",
+      "object": 2103,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "spouse",
+      "kod": "14",
+      "object": 2103,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "aunt_or_uncle",
+      "kod": "14",
+      "object": 2103,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "niece_or_nephew",
+      "kod": "14",
+      "object": 2103,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "blood_relative",
+      "kod": "14",
+      "object": 2103,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "nuclear_family",
+      "kod": "14",
+      "object": 2102,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "extended_family",
+      "kod": "14",
+      "object": 2102,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "single_parent_family",
+      "kod": "14",
+      "object": 2102,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "household",
+      "kod": "14",
+      "object": 2636,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "single_person_household",
+      "kod": "14",
+      "object": "household",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "multi_person_household",
+      "kod": "14",
+      "object": "household",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "family_household",
+      "kod": "14",
+      "object": "multi_person_household",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "full_sibling",
+      "kod": "14",
+      "object": "sibling",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "half_sibling",
+      "kod": "14",
+      "object": "sibling",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "full_brother",
+      "kod": "14",
+      "object": 1877,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "full_sister",
+      "kod": "14",
+      "object": 1878,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "half_brother",
+      "kod": "14",
+      "object": 1877,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "half_sister",
+      "kod": "14",
+      "object": 1878,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "maternal_half_sibling",
+      "kod": "14",
+      "object": "half_sibling",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "paternal_half_sibling",
+      "kod": "14",
+      "object": "half_sibling",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "maternal_half_brother",
+      "kod": "14",
+      "object": "half_brother",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "paternal_half_brother",
+      "kod": "14",
+      "object": "half_brother",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "maternal_half_sister",
+      "kod": "14",
+      "object": "half_sister",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "paternal_half_sister",
+      "kod": "14",
+      "object": "half_sister",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "great_grandparent",
+      "kod": "14",
+      "object": 2103,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "great_grandmother",
+      "kod": "14",
+      "object": "great_grandparent",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "great_grandfather",
+      "kod": "14",
+      "object": "great_grandparent",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "great_grandchild",
+      "kod": "14",
+      "object": 2103,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "great_grandson",
+      "kod": "14",
+      "object": "great_grandchild",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "great_granddaughter",
+      "kod": "14",
+      "object": "great_grandchild",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "multi_person_household",
+      "kod": "14",
+      "object": 2637,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "family_household",
+      "kod": "14",
+      "object": 2102,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "full_sibling",
+      "kod": "14",
+      "object": "blood_relative",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "half_sibling",
+      "kod": "14",
+      "object": "blood_relative",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "full_brother",
+      "kod": "14",
+      "object": "full_sibling",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "full_sister",
+      "kod": "14",
+      "object": "full_sibling",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "half_brother",
+      "kod": "14",
+      "object": "half_sibling",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "half_sister",
+      "kod": "14",
+      "object": "half_sibling",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "maternal_half_brother",
+      "kod": "14",
+      "object": "maternal_half_sibling",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "paternal_half_brother",
+      "kod": "14",
+      "object": "paternal_half_sibling",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "maternal_half_sister",
+      "kod": "14",
+      "object": "maternal_half_sibling",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "paternal_half_sister",
+      "kod": "14",
+      "object": "paternal_half_sibling",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2102,
+      "kod": "14",
+      "object": 79,
+      "present": false
+    },
+    {
+      "subject": 240,
+      "kod": "14",
+      "object": 81,
+      "present": false
+    },
+    {
+      "subject": 240,
+      "kod": "14",
+      "object": 79,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1877,
+      "kod": "14",
+      "object": 2103,
+      "present": false
+    },
+    {
+      "subject": 1877,
+      "kod": "14",
+      "object": "sibling",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1878,
+      "kod": "14",
+      "object": 2103,
+      "present": false
+    },
+    {
+      "subject": 1878,
+      "kod": "14",
+      "object": "sibling",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1879,
+      "kod": "14",
+      "object": 2103,
+      "present": false
+    },
+    {
+      "subject": 1879,
+      "kod": "14",
+      "object": "spouse",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1880,
+      "kod": "14",
+      "object": 2103,
+      "present": false
+    },
+    {
+      "subject": 1880,
+      "kod": "14",
+      "object": "spouse",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2104,
+      "kod": "14",
+      "object": 2103,
+      "present": false
+    },
+    {
+      "subject": 2104,
+      "kod": "14",
+      "object": 1875,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2105,
+      "kod": "14",
+      "object": 2103,
+      "present": false
+    },
+    {
+      "subject": 2105,
+      "kod": "14",
+      "object": 1875,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2107,
+      "kod": "14",
+      "object": 2103,
+      "present": false
+    },
+    {
+      "subject": 2107,
+      "kod": "14",
+      "object": 1876,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2108,
+      "kod": "14",
+      "object": 2103,
+      "present": false
+    },
+    {
+      "subject": 2108,
+      "kod": "14",
+      "object": 1876,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2109,
+      "kod": "14",
+      "object": 2103,
+      "present": false
+    },
+    {
+      "subject": 2109,
+      "kod": "14",
+      "object": "grandparent",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2110,
+      "kod": "14",
+      "object": 2103,
+      "present": false
+    },
+    {
+      "subject": 2110,
+      "kod": "14",
+      "object": "grandparent",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2111,
+      "kod": "14",
+      "object": 2103,
+      "present": false
+    },
+    {
+      "subject": 2111,
+      "kod": "14",
+      "object": "grandchild",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2112,
+      "kod": "14",
+      "object": 2103,
+      "present": false
+    },
+    {
+      "subject": 2112,
+      "kod": "14",
+      "object": "grandchild",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2113,
+      "kod": "14",
+      "object": 2103,
+      "present": false
+    },
+    {
+      "subject": 2113,
+      "kod": "14",
+      "object": "aunt_or_uncle",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2114,
+      "kod": "14",
+      "object": 2103,
+      "present": false
+    },
+    {
+      "subject": 2114,
+      "kod": "14",
+      "object": "aunt_or_uncle",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2115,
+      "kod": "14",
+      "object": 2103,
+      "present": false
+    },
+    {
+      "subject": 2115,
+      "kod": "14",
+      "object": "niece_or_nephew",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2116,
+      "kod": "14",
+      "object": 2103,
+      "present": false
+    },
+    {
+      "subject": 2116,
+      "kod": "14",
+      "object": "niece_or_nephew",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1877,
+      "kod": "62",
+      "object": 1878,
+      "present": false
+    },
+    {
+      "subject": 2104,
+      "kod": "62",
+      "object": 2105,
+      "present": false
+    },
+    {
+      "subject": 2107,
+      "kod": "62",
+      "object": 2108,
+      "present": false
+    },
+    {
+      "subject": 2109,
+      "kod": "62",
+      "object": 2110,
+      "present": false
+    },
+    {
+      "subject": 2113,
+      "kod": "62",
+      "object": 2114,
+      "present": false
+    },
+    {
+      "subject": 2115,
+      "kod": "62",
+      "object": 2116,
+      "present": false
+    },
+    {
+      "subject": 2111,
+      "kod": "62",
+      "object": 2112,
+      "present": false
+    },
+    {
+      "subject": 2104,
+      "kod": "70",
+      "object": 1432,
+      "present": false
+    },
+    {
+      "subject": 2106,
+      "kod": "72",
+      "object": 2111,
+      "present": false
+    },
+    {
+      "subject": 1433,
+      "kod": "72",
+      "object": 2107,
+      "present": false
+    },
+    {
+      "subject": "grandparent",
+      "kod": "62",
+      "object": "grandchild",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "aunt_or_uncle",
+      "kod": "62",
+      "object": "niece_or_nephew",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "great_grandparent",
+      "kod": "62",
+      "object": "great_grandchild",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "household",
+      "kod": "20",
+      "object": 28,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "nuclear_family",
+      "kod": "20",
+      "object": 1875,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "nuclear_family",
+      "kod": "20",
+      "object": 1876,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "single_parent_family",
+      "kod": "20",
+      "object": 1875,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "single_parent_family",
+      "kod": "20",
+      "object": 1876,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 17,
+      "kod": "61",
+      "object": 20,
+      "present": true
+    },
+    {
+      "subject": 1875,
+      "kod": "62",
+      "object": 1876,
+      "present": true
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "sibling",
+      "ancestor": 2103,
+      "present": true
+    },
+    {
+      "subject": "grandparent",
+      "ancestor": 2103,
+      "present": true
+    },
+    {
+      "subject": "grandchild",
+      "ancestor": 2103,
+      "present": true
+    },
+    {
+      "subject": "spouse",
+      "ancestor": 2103,
+      "present": true
+    },
+    {
+      "subject": "aunt_or_uncle",
+      "ancestor": 2103,
+      "present": true
+    },
+    {
+      "subject": "niece_or_nephew",
+      "ancestor": 2103,
+      "present": true
+    },
+    {
+      "subject": "blood_relative",
+      "ancestor": 2103,
+      "present": true
+    },
+    {
+      "subject": "nuclear_family",
+      "ancestor": 2102,
+      "present": true
+    },
+    {
+      "subject": "extended_family",
+      "ancestor": 2102,
+      "present": true
+    },
+    {
+      "subject": "single_parent_family",
+      "ancestor": 2102,
+      "present": true
+    },
+    {
+      "subject": "household",
+      "ancestor": 2636,
+      "present": true
+    },
+    {
+      "subject": "single_person_household",
+      "ancestor": "household",
+      "present": true
+    },
+    {
+      "subject": "multi_person_household",
+      "ancestor": "household",
+      "present": true
+    },
+    {
+      "subject": "family_household",
+      "ancestor": "multi_person_household",
+      "present": true
+    },
+    {
+      "subject": "full_sibling",
+      "ancestor": "sibling",
+      "present": true
+    },
+    {
+      "subject": "half_sibling",
+      "ancestor": "sibling",
+      "present": true
+    },
+    {
+      "subject": "full_brother",
+      "ancestor": 1877,
+      "present": true
+    },
+    {
+      "subject": "full_sister",
+      "ancestor": 1878,
+      "present": true
+    },
+    {
+      "subject": "half_brother",
+      "ancestor": 1877,
+      "present": true
+    },
+    {
+      "subject": "half_sister",
+      "ancestor": 1878,
+      "present": true
+    },
+    {
+      "subject": "maternal_half_sibling",
+      "ancestor": "half_sibling",
+      "present": true
+    },
+    {
+      "subject": "paternal_half_sibling",
+      "ancestor": "half_sibling",
+      "present": true
+    },
+    {
+      "subject": "maternal_half_brother",
+      "ancestor": "half_brother",
+      "present": true
+    },
+    {
+      "subject": "paternal_half_brother",
+      "ancestor": "half_brother",
+      "present": true
+    },
+    {
+      "subject": "maternal_half_sister",
+      "ancestor": "half_sister",
+      "present": true
+    },
+    {
+      "subject": "paternal_half_sister",
+      "ancestor": "half_sister",
+      "present": true
+    },
+    {
+      "subject": "great_grandparent",
+      "ancestor": 2103,
+      "present": true
+    },
+    {
+      "subject": "great_grandmother",
+      "ancestor": "great_grandparent",
+      "present": true
+    },
+    {
+      "subject": "great_grandfather",
+      "ancestor": "great_grandparent",
+      "present": true
+    },
+    {
+      "subject": "great_grandchild",
+      "ancestor": 2103,
+      "present": true
+    },
+    {
+      "subject": "great_grandson",
+      "ancestor": "great_grandchild",
+      "present": true
+    },
+    {
+      "subject": "great_granddaughter",
+      "ancestor": "great_grandchild",
+      "present": true
+    },
+    {
+      "subject": 2102,
+      "ancestor": 2637,
+      "present": true
+    },
+    {
+      "subject": 240,
+      "ancestor": 79,
+      "present": true
+    },
+    {
+      "subject": 2104,
+      "ancestor": 1875,
+      "present": true
+    },
+    {
+      "subject": 2105,
+      "ancestor": 1875,
+      "present": true
+    },
+    {
+      "subject": 2107,
+      "ancestor": 1876,
+      "present": true
+    },
+    {
+      "subject": 2108,
+      "ancestor": 1876,
+      "present": true
+    },
+    {
+      "subject": 1877,
+      "ancestor": "sibling",
+      "present": true
+    },
+    {
+      "subject": 1878,
+      "ancestor": "sibling",
+      "present": true
+    },
+    {
+      "subject": 1879,
+      "ancestor": "spouse",
+      "present": true
+    },
+    {
+      "subject": 1880,
+      "ancestor": "spouse",
+      "present": true
+    },
+    {
+      "subject": 2109,
+      "ancestor": "grandparent",
+      "present": true
+    },
+    {
+      "subject": 2110,
+      "ancestor": "grandparent",
+      "present": true
+    },
+    {
+      "subject": 2111,
+      "ancestor": "grandchild",
+      "present": true
+    },
+    {
+      "subject": 2112,
+      "ancestor": "grandchild",
+      "present": true
+    },
+    {
+      "subject": "family_household",
+      "ancestor": 2102,
+      "present": true
+    },
+    {
+      "subject": "family_household",
+      "ancestor": "household",
+      "present": true
+    },
+    {
+      "subject": "maternal_half_brother",
+      "ancestor": "half_sibling",
+      "present": true
+    },
+    {
+      "subject": "maternal_half_brother",
+      "ancestor": "blood_relative",
+      "present": true
+    },
+    {
+      "subject": "paternal_half_sister",
+      "ancestor": "sibling",
+      "present": true
+    },
+    {
+      "subject": "nuclear_family",
+      "ancestor": 2637,
+      "present": true
+    },
+    {
+      "subject": 2102,
+      "ancestor": 20,
+      "present": false
+    },
+    {
+      "subject": 240,
+      "ancestor": 81,
+      "present": false
+    },
+    {
+      "subject": 238,
+      "ancestor": 2103,
+      "present": false
+    },
+    {
+      "subject": "blood_relative",
+      "ancestor": 238,
+      "present": false
+    },
+    {
+      "subject": "sibling",
+      "ancestor": 81,
+      "present": false
+    },
+    {
+      "subject": "household",
+      "ancestor": 2102,
+      "present": false
+    },
+    {
+      "subject": "household",
+      "ancestor": 2637,
+      "present": false
+    },
+    {
+      "subject": "single_person_household",
+      "ancestor": 2637,
+      "present": false
+    },
+    {
+      "subject": "household",
+      "ancestor": 28,
+      "present": false
+    },
+    {
+      "subject": "extended_family",
+      "ancestor": "nuclear_family",
+      "present": false
+    },
+    {
+      "subject": "nuclear_family",
+      "ancestor": "extended_family",
+      "present": false
+    },
+    {
+      "subject": "nuclear_family",
+      "ancestor": "household",
+      "present": false
+    },
+    {
+      "subject": "full_sibling",
+      "ancestor": "half_sibling",
+      "present": false
+    },
+    {
+      "subject": "half_sibling",
+      "ancestor": "full_sibling",
+      "present": false
+    },
+    {
+      "subject": "great_grandparent",
+      "ancestor": "grandparent",
+      "present": false
+    },
+    {
+      "subject": "great_grandchild",
+      "ancestor": "grandchild",
+      "present": false
+    },
+    {
+      "subject": "great_grandmother",
+      "ancestor": 2109,
+      "present": false
+    },
+    {
+      "subject": "great_grandson",
+      "ancestor": 2111,
+      "present": false
+    },
+    {
+      "subject": 2107,
+      "ancestor": 1432,
+      "present": false
+    },
+    {
+      "subject": 2108,
+      "ancestor": 1432,
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": "sibling",
+      "term": "брат или сестра",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "sibling",
+      "term": "sibling",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "grandparent",
+      "term": "бабушка или дедушка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "grandparent",
+      "term": "grandparent",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "grandchild",
+      "term": "внук или внучка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "grandchild",
+      "term": "grandchild",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "spouse",
+      "term": "супружеский партнёр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "spouse",
+      "term": "spouse",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "aunt_or_uncle",
+      "term": "тётя или дядя",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "aunt_or_uncle",
+      "term": "aunt or uncle",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "niece_or_nephew",
+      "term": "племянник или племянница",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "niece_or_nephew",
+      "term": "niece or nephew",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "blood_relative",
+      "term": "кровный родственник",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "blood_relative",
+      "term": "blood relative",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "blood_relative",
+      "term": "blood relation (person)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "nuclear_family",
+      "term": "нуклеарная семья",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "nuclear_family",
+      "term": "nuclear family",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "extended_family",
+      "term": "расширенная семья",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "extended_family",
+      "term": "extended family",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "single_parent_family",
+      "term": "семья с одним родителем",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "single_parent_family",
+      "term": "single-parent family",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "household",
+      "term": "домохозяйство (совместное проживание)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "household",
+      "term": "household",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "household",
+      "term": "household (living unit)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "household",
+      "term": "домохозяйство",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "single_person_household",
+      "term": "домохозяйство из одного человека",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "single_person_household",
+      "term": "single-person household",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "single_person_household",
+      "term": "one-person household",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "multi_person_household",
+      "term": "домохозяйство из нескольких человек",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "multi_person_household",
+      "term": "multi-person household",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "family_household",
+      "term": "домохозяйство одной семьи",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "family_household",
+      "term": "household consisting of one family",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "full_sibling",
+      "term": "полнородный брат или сестра",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "full_sibling",
+      "term": "full sibling",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "half_sibling",
+      "term": "неполнородный брат или сестра",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "half_sibling",
+      "term": "half sibling",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "half_sibling",
+      "term": "half-sibling",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "full_brother",
+      "term": "полнородный брат",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "full_brother",
+      "term": "full brother",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "full_sister",
+      "term": "полнородная сестра",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "full_sister",
+      "term": "full sister",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "half_brother",
+      "term": "неполнородный брат",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "half_brother",
+      "term": "half brother",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "half_brother",
+      "term": "half-brother",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "half_sister",
+      "term": "неполнородная сестра",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "half_sister",
+      "term": "half sister",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "half_sister",
+      "term": "half-sister",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "maternal_half_sibling",
+      "term": "единоутробный брат или сестра",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "maternal_half_sibling",
+      "term": "maternal half sibling",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "paternal_half_sibling",
+      "term": "единокровный брат или сестра",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "paternal_half_sibling",
+      "term": "paternal half sibling",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "maternal_half_brother",
+      "term": "единоутробный брат",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "maternal_half_brother",
+      "term": "maternal half brother",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "paternal_half_brother",
+      "term": "единокровный брат",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "paternal_half_brother",
+      "term": "paternal half brother",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "maternal_half_sister",
+      "term": "единоутробная сестра",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "maternal_half_sister",
+      "term": "maternal half sister",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "paternal_half_sister",
+      "term": "единокровная сестра",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "paternal_half_sister",
+      "term": "paternal half sister",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "great_grandparent",
+      "term": "прабабушка или прадедушка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "great_grandparent",
+      "term": "great-grandparent",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "great_grandparent",
+      "term": "great grandparent",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "great_grandmother",
+      "term": "прабабушка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "great_grandmother",
+      "term": "great-grandmother",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "great_grandmother",
+      "term": "great grandmother",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "great_grandfather",
+      "term": "прадедушка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "great_grandfather",
+      "term": "great-grandfather",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "great_grandfather",
+      "term": "great grandfather",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "great_grandfather",
+      "term": "прадед",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "great_grandchild",
+      "term": "правнук или правнучка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "great_grandchild",
+      "term": "great-grandchild",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "great_grandchild",
+      "term": "great grandchild",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "great_grandson",
+      "term": "правнук",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "great_grandson",
+      "term": "great-grandson",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "great_grandson",
+      "term": "great grandson",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "great_granddaughter",
+      "term": "правнучка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "great_granddaughter",
+      "term": "great-granddaughter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "great_granddaughter",
+      "term": "great granddaughter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 81,
+      "term": "family relationship",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2102,
+      "term": "family group",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1876,
+      "term": "child (family role)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 238,
+      "term": "consanguinity",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "half_brother",
+      "term": "stepbrother",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "half_sister",
+      "term": "stepsister",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "household",
+      "term": "family",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "household",
+      "term": "house",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "blood_relative",
+      "term": "kinship",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "sibling",
+      "term": "sib",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

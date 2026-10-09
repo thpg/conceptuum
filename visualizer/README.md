@@ -1,5 +1,8 @@
 # Conceptuum visualizer
 
+Bundled and published site data: **Q39**. The data publication updates the
+database and version metadata; the interface remains at revision `2026-10-08.4`.
+
 A Go HTTP server with a dependency-free HTML, CSS, and JavaScript explorer.
 See the [project setup guide](../docs/setup.md) for database configuration.
 
@@ -118,7 +121,7 @@ An absent catalog path is **not** a semantic exclusion. These counts concern
 stored concept records, not people, objects, probabilities, or real-world
 cardinalities. Catalog overlaps do not create code-40 edges in the database.
 
-| Demo | What the current Q9 data demonstrates |
+| Demo | What each demo demonstrates |
 |---|---|
 | [Cross-cutting classifications](https://conceptuum.su/?demo=judgment-grid&lang=en) | Judgment quality and quantity form four occupied cross-classification regions |
 | [Three-way intersection](https://conceptuum.su/?demo=shared-intersection&lang=en) | 35 judgment records lie within both thought content and logical form |

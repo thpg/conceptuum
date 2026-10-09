@@ -1,0 +1,2715 @@
+{
+  "source": "quality-20261009-q38",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "SQL namespaces and identifiers; query descriptions, execution and results; ordinary/materialized views; plans, scans and join algorithms; constrained column sets; relational algebra as a formal query language.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "schemas": "https://www.postgresql.org/docs/18/ddl-schemas.html",
+      "lexical": "https://www.postgresql.org/docs/18/sql-syntax-lexical.html",
+      "select": "https://www.postgresql.org/docs/18/sql-select.html",
+      "views": "https://www.postgresql.org/docs/18/tutorial-views.html",
+      "create_view": "https://www.postgresql.org/docs/18/sql-createview.html",
+      "materialized": "https://www.postgresql.org/docs/18/rules-materializedviews.html",
+      "refresh": "https://www.postgresql.org/docs/18/sql-refreshmaterializedview.html",
+      "plans": "https://www.postgresql.org/docs/18/using-explain.html",
+      "planner": "https://www.postgresql.org/docs/18/planner-optimizer.html",
+      "executor": "https://www.postgresql.org/docs/18/executor.html",
+      "joins": "https://www.postgresql.org/docs/18/queries-table-expressions.html",
+      "constraints": "https://www.postgresql.org/docs/18/ddl-constraints.html",
+      "foreign_keys": "https://www.sqlite.org/foreignkeys.html",
+      "algebra": "https://www.cs.iit.edu/~cs561/cs425/algebra/home.html"
+    },
+    "attribution": "Open English WordNet 2025 candidate review continues with the notices in docs/quality/2026-10-09-q11.md#sources-and-reuse. PostgreSQL 18, SQLite and the Illinois Institute of Technology relational-algebra tutorial support technical extensions missing from the general dictionary. Qualified labels, intersections and graph mappings are editorial adaptations. Source prose and SQL examples are not copied.",
+    "existing_cohort": [
+      1050,
+      1161,
+      943,
+      942,
+      359,
+      357,
+      358,
+      275,
+      442,
+      417,
+      428,
+      25307,
+      25306,
+      25311,
+      25315,
+      25316,
+      25317,
+      25318,
+      25319,
+      25321,
+      764,
+      267,
+      272,
+      25310,
+      3267,
+      627
+    ],
+    "context_policy": "All new concepts and assertions use U3 with unspecified strength. Preserve old home contexts; expose the existing general plan genus in U3 rather than duplicate it. Constraints and their column sets are distinct; algorithms and execution are distinct.",
+    "sense_decisions": [
+      {
+        "concept": "namespace",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A naming scope for information objects; not physical space."
+      },
+      {
+        "concept": "sql_schema_namespace",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A named namespace grouping database objects; distinct from a description of database structure."
+      },
+      {
+        "concept": "sql_identifier",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A lexical name identifying an SQL object; no database-independent case-folding policy."
+      },
+      {
+        "concept": "quoted_sql_identifier",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The delimited identifier form using double quotes; not a string literal."
+      },
+      {
+        "concept": "unquoted_sql_identifier",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The unquoted lexical identifier form; reserved-word rules depend on the SQL implementation."
+      },
+      {
+        "concept": "qualified_sql_name",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A compound object name including its schema qualifier; not a single identifier token."
+      },
+      {
+        "concept": "query_specification",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A specification requesting database data, distinct from executing it or sending a network message."
+      },
+      {
+        "concept": "sql_select_statement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A complete SQL SELECT statement specifying retrieval; not its running execution."
+      },
+      {
+        "concept": "query_result",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Data returned by a database retrieval query; not the query text, plan or execution."
+      },
+      {
+        "concept": "tabular_query_result",
+        "synset": null,
+        "decision": "add",
+        "alignment": "data/structure intersection",
+        "scope": "A query result with a tabular structure; duplicates are not excluded."
+      },
+      {
+        "concept": "database_view",
+        "synset": null,
+        "decision": "add",
+        "alignment": "view family including materialized variants",
+        "scope": "A named tabular view defined by a query, with ordinary and materialized forms distinguished below."
+      },
+      {
+        "concept": "virtual_view",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An ordinary view whose defining query supplies rows when referenced; no separately maintained view-row storage."
+      },
+      {
+        "concept": "materialized_view",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A query-defined view with persisted results; those results need not be current."
+      },
+      {
+        "concept": "view_definition",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The retained definition of a query-defined view, separate from its result rows."
+      },
+      {
+        "concept": "materialized_refresh",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Recomputing the contents of a materialized view using its definition; no automatic scheduling or incremental implementation is assumed."
+      },
+      {
+        "concept": "query_plan",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An executable strategy described as plan nodes; not the execution itself or a guaranteed fastest strategy."
+      },
+      {
+        "concept": "query_plan_node",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "One described operation within a query plan, distinct from running that operation."
+      },
+      {
+        "concept": "query_planning",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Producing a query execution plan from the query specification."
+      },
+      {
+        "concept": "query_optimizer",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Software that evaluates candidate plans and chooses a plan under its cost model."
+      },
+      {
+        "concept": "query_execution",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Executing a data-retrieval query, distinct from planning and representing the request."
+      },
+      {
+        "concept": "completed_query_execution",
+        "synset": null,
+        "decision": "add",
+        "alignment": "completion restriction",
+        "scope": "A successfully completed retrieval execution producing a result, which can be empty."
+      },
+      {
+        "concept": "database_scan",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Execution of a database access operation; not its plan node."
+      },
+      {
+        "concept": "table_scan",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Scanning table data as a database access operation."
+      },
+      {
+        "concept": "index_scan",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Traversing a database index for data access; no universal speed advantage or heap-access rule."
+      },
+      {
+        "concept": "join_execution",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Executing a join over tabular inputs; distinguish the operation from the selected join algorithm."
+      },
+      {
+        "concept": "join_algorithm",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An algorithm for implementing a database join."
+      },
+      {
+        "concept": "hash_join",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A join algorithm based on hash lookup of join keys."
+      },
+      {
+        "concept": "merge_join",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A join algorithm traversing inputs ordered on their join keys; sorting need not be a separate step."
+      },
+      {
+        "concept": "column_set",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A selected collection of columns from a table; distinct from a column value or a constraint."
+      },
+      {
+        "concept": "one_column_set",
+        "synset": null,
+        "decision": "add",
+        "alignment": "arity restriction",
+        "scope": "A column set containing one column; not identified with the column itself."
+      },
+      {
+        "concept": "multiple_column_set",
+        "synset": null,
+        "decision": "add",
+        "alignment": "arity restriction",
+        "scope": "A column set containing multiple columns."
+      },
+      {
+        "concept": "foreign_key_columns",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The local referencing columns of a foreign key; they need not uniquely identify local rows."
+      },
+      {
+        "concept": "primary_key_columns",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The columns designated as a table primary key; not the constraint rule or an index."
+      },
+      {
+        "concept": "single_foreign_key_columns",
+        "synset": null,
+        "decision": "add",
+        "alignment": "role/arity intersection",
+        "scope": "A foreign-key column set with one local column."
+      },
+      {
+        "concept": "composite_foreign_key_columns",
+        "synset": null,
+        "decision": "add",
+        "alignment": "role/arity intersection",
+        "scope": "A foreign-key set spanning multiple local columns."
+      },
+      {
+        "concept": "composite_primary_key_columns",
+        "synset": null,
+        "decision": "add",
+        "alignment": "role/arity intersection",
+        "scope": "A primary-key set spanning multiple columns."
+      },
+      {
+        "concept": 25307,
+        "synset": null,
+        "decision": "reuse or distinguish",
+        "alignment": "reviewed sense",
+        "scope": "Preserve schema description; namespace is a separate meaning."
+      },
+      {
+        "concept": 764,
+        "synset": null,
+        "decision": "reuse or distinguish",
+        "alignment": "reviewed sense",
+        "scope": "Preserve the existing foreign-key rule and introduce its constrained column-set meaning separately."
+      },
+      {
+        "concept": 943,
+        "synset": null,
+        "decision": "reuse or distinguish",
+        "alignment": "reviewed sense",
+        "scope": "Reuse nested loops as an algorithm rather than creating a duplicate from a different capitalization."
+      },
+      {
+        "concept": 1161,
+        "synset": null,
+        "decision": "reuse or distinguish",
+        "alignment": "reviewed sense",
+        "scope": "Tuple remains queued; no SQL row is asserted to be an ordered mathematical tuple merely by a common database label."
+      },
+      {
+        "concept": 1050,
+        "synset": null,
+        "decision": "reuse or distinguish",
+        "alignment": "reviewed sense",
+        "scope": "Correct the query-language classification; relation and operator semantics need a separate detailed cohort."
+      },
+      {
+        "concept": 275,
+        "synset": null,
+        "decision": "reuse or distinguish",
+        "alignment": "reviewed sense",
+        "scope": "A query description is not automatically a network request."
+      },
+      {
+        "concept": "database_view",
+        "synset": null,
+        "decision": "reuse or distinguish",
+        "alignment": "reviewed sense",
+        "scope": "Use a query-defined view family with materialized and nonmaterialized restrictions; do not force stored results onto ordinary views."
+      },
+      {
+        "concept": "query_optimizer",
+        "synset": "oewn-00260894-n",
+        "decision": "reuse or distinguish",
+        "alignment": "reviewed sense",
+        "scope": "The everyday optimization gloss promises rendering optimal; technical query planning only selects under its cost model."
+      },
+      {
+        "concept": "database_view",
+        "synset": "oewn-05954491-n",
+        "decision": "reuse or distinguish",
+        "alignment": "reviewed sense",
+        "scope": "The dictionary opinion/view homonym is unrelated to a database view."
+      },
+      {
+        "concept": "sql_schema_namespace",
+        "synset": "oewn-05936599-n",
+        "decision": "reuse or distinguish",
+        "alignment": "reviewed sense",
+        "scope": "The dictionary cognitive schema is unrelated to a database namespace."
+      }
+    ],
+    "transient_term_removals": [
+      [
+        1050,
+        "Relational algebra",
+        "ru"
+      ]
+    ],
+    "limits": "No database schema or application data is changed. Namespaces are not schema descriptions. Materialized views are not universally current, automatically refreshed or faster. No optimal-plan guarantee, mandatory index scan, foreign-key uniqueness, mandatory external-table reference, candidate-key minimality or universal case-folding rule is added. Relational algebra is corrected in its query-language reading; its operator family and tuple/set semantics remain queued. Existing generic querying probabilities are preserved without recalibration.",
+    "exclusion_review": {
+      "contexts": [
+        "U1",
+        "U3"
+      ],
+      "before_u1_conflicting_edges": 0,
+      "before_u3_conflicting_edges": 0,
+      "decision": "Keep clear scans and preserve upper exclusions and explicit negations; distinctions do not require new universal exclusions."
+    },
+    "new_term_collisions": [],
+    "collision_decision": "No new normalized-term collisions accepted. Reuse the plan, nested-loop algorithm, constraints and relational-algebra records. New technical senses use qualified terms.",
+    "refreshed_comparison": {
+      "baseline": "Q37",
+      "existing_concepts": 13379,
+      "existing_terms": 37647,
+      "synsets_with_exact_en_candidate": 15672,
+      "synsets_without_exact_en_candidate": 91847,
+      "existing_concepts_with_dictionary_candidate": 4242,
+      "caveat": "Spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "namespace",
+      "name": "пространство имён (вычислительная техника)",
+      "parent": 265,
+      "universum_id": 3,
+      "terms": [
+        [
+          "пространство имён (вычислительная техника)",
+          "ru"
+        ],
+        [
+          "namespace (computing)",
+          "en"
+        ]
+      ],
+      "reason": "A naming scope for information objects; not physical space. Source: https://www.postgresql.org/docs/18/ddl-schemas.html"
+    },
+    {
+      "key": "sql_schema_namespace",
+      "name": "схема SQL (пространство имён)",
+      "parent": "namespace",
+      "universum_id": 3,
+      "terms": [
+        [
+          "схема SQL (пространство имён)",
+          "ru"
+        ],
+        [
+          "SQL schema namespace",
+          "en"
+        ]
+      ],
+      "reason": "A named namespace grouping database objects; distinct from a description of database structure. Source: https://www.postgresql.org/docs/18/ddl-schemas.html"
+    },
+    {
+      "key": "sql_identifier",
+      "name": "идентификатор SQL",
+      "parent": 442,
+      "universum_id": 3,
+      "terms": [
+        [
+          "идентификатор SQL",
+          "ru"
+        ],
+        [
+          "SQL identifier",
+          "en"
+        ]
+      ],
+      "reason": "A lexical name identifying an SQL object; no database-independent case-folding policy. Source: https://www.postgresql.org/docs/18/sql-syntax-lexical.html"
+    },
+    {
+      "key": "quoted_sql_identifier",
+      "name": "идентификатор SQL в двойных кавычках",
+      "parent": "sql_identifier",
+      "universum_id": 3,
+      "terms": [
+        [
+          "идентификатор SQL в двойных кавычках",
+          "ru"
+        ],
+        [
+          "double-quoted SQL identifier",
+          "en"
+        ]
+      ],
+      "reason": "The delimited identifier form using double quotes; not a string literal. Source: https://www.postgresql.org/docs/18/sql-syntax-lexical.html"
+    },
+    {
+      "key": "unquoted_sql_identifier",
+      "name": "идентификатор SQL без кавычек",
+      "parent": "sql_identifier",
+      "universum_id": 3,
+      "terms": [
+        [
+          "идентификатор SQL без кавычек",
+          "ru"
+        ],
+        [
+          "unquoted SQL identifier",
+          "en"
+        ]
+      ],
+      "reason": "The unquoted lexical identifier form; reserved-word rules depend on the SQL implementation. Source: https://www.postgresql.org/docs/18/sql-syntax-lexical.html"
+    },
+    {
+      "key": "qualified_sql_name",
+      "name": "имя объекта SQL с указанием схемы",
+      "parent": 362,
+      "universum_id": 3,
+      "terms": [
+        [
+          "имя объекта SQL с указанием схемы",
+          "ru"
+        ],
+        [
+          "schema-qualified SQL object name",
+          "en"
+        ]
+      ],
+      "reason": "A compound object name including its schema qualifier; not a single identifier token. Source: https://www.postgresql.org/docs/18/ddl-schemas.html"
+    },
+    {
+      "key": "query_specification",
+      "name": "запрос данных к БД (описание)",
+      "parent": 265,
+      "universum_id": 3,
+      "terms": [
+        [
+          "запрос данных к БД (описание)",
+          "ru"
+        ],
+        [
+          "database retrieval query specification",
+          "en"
+        ]
+      ],
+      "reason": "A specification requesting database data, distinct from executing it or sending a network message. Source: https://www.postgresql.org/docs/18/sql-select.html"
+    },
+    {
+      "key": "sql_select_statement",
+      "name": "оператор SELECT языка SQL",
+      "parent": 417,
+      "universum_id": 3,
+      "terms": [
+        [
+          "оператор SELECT языка SQL",
+          "ru"
+        ],
+        [
+          "SQL SELECT statement",
+          "en"
+        ]
+      ],
+      "reason": "A complete SQL SELECT statement specifying retrieval; not its running execution. Source: https://www.postgresql.org/docs/18/sql-select.html"
+    },
+    {
+      "key": "query_result",
+      "name": "результат запроса данных к БД",
+      "parent": 266,
+      "universum_id": 3,
+      "terms": [
+        [
+          "результат запроса данных к БД",
+          "ru"
+        ],
+        [
+          "database query result",
+          "en"
+        ]
+      ],
+      "reason": "Data returned by a database retrieval query; not the query text, plan or execution. Source: https://www.postgresql.org/docs/18/sql-select.html"
+    },
+    {
+      "key": "tabular_query_result",
+      "name": "табличный результат запроса БД",
+      "parent": 627,
+      "universum_id": 3,
+      "terms": [
+        [
+          "табличный результат запроса БД",
+          "ru"
+        ],
+        [
+          "tabular database query result",
+          "en"
+        ]
+      ],
+      "reason": "A query result with a tabular structure; duplicates are not excluded. Source: https://www.postgresql.org/docs/18/sql-select.html"
+    },
+    {
+      "key": "database_view",
+      "name": "представление БД, заданное запросом",
+      "parent": 627,
+      "universum_id": 3,
+      "terms": [
+        [
+          "представление БД, заданное запросом",
+          "ru"
+        ],
+        [
+          "query-defined database view",
+          "en"
+        ]
+      ],
+      "reason": "A named tabular view defined by a query, with ordinary and materialized forms distinguished below. Source: https://www.postgresql.org/docs/18/tutorial-views.html"
+    },
+    {
+      "key": "virtual_view",
+      "name": "нематериализованное представление БД",
+      "parent": "database_view",
+      "universum_id": 3,
+      "terms": [
+        [
+          "нематериализованное представление БД",
+          "ru"
+        ],
+        [
+          "nonmaterialized database view",
+          "en"
+        ],
+        [
+          "virtual database view",
+          "en"
+        ]
+      ],
+      "reason": "An ordinary view whose defining query supplies rows when referenced; no separately maintained view-row storage. Source: https://www.postgresql.org/docs/18/sql-createview.html"
+    },
+    {
+      "key": "materialized_view",
+      "name": "материализованное представление БД",
+      "parent": "database_view",
+      "universum_id": 3,
+      "terms": [
+        [
+          "материализованное представление БД",
+          "ru"
+        ],
+        [
+          "materialized database view",
+          "en"
+        ],
+        [
+          "materialized view",
+          "en"
+        ]
+      ],
+      "reason": "A query-defined view with persisted results; those results need not be current. Source: https://www.postgresql.org/docs/18/rules-materializedviews.html"
+    },
+    {
+      "key": "view_definition",
+      "name": "определение представления БД",
+      "parent": 265,
+      "universum_id": 3,
+      "terms": [
+        [
+          "определение представления БД",
+          "ru"
+        ],
+        [
+          "database view definition",
+          "en"
+        ]
+      ],
+      "reason": "The retained definition of a query-defined view, separate from its result rows. Source: https://www.postgresql.org/docs/18/sql-createview.html"
+    },
+    {
+      "key": "materialized_refresh",
+      "name": "обновление материализованного представления",
+      "parent": 325,
+      "universum_id": 3,
+      "terms": [
+        [
+          "обновление материализованного представления",
+          "ru"
+        ],
+        [
+          "materialized view refresh",
+          "en"
+        ]
+      ],
+      "reason": "Recomputing the contents of a materialized view using its definition; no automatic scheduling or incremental implementation is assumed. Source: https://www.postgresql.org/docs/18/sql-refreshmaterializedview.html"
+    },
+    {
+      "key": "query_plan",
+      "name": "план выполнения запроса БД",
+      "parent": 3267,
+      "universum_id": 3,
+      "terms": [
+        [
+          "план выполнения запроса БД",
+          "ru"
+        ],
+        [
+          "database query execution plan",
+          "en"
+        ],
+        [
+          "query execution plan",
+          "en"
+        ]
+      ],
+      "reason": "An executable strategy described as plan nodes; not the execution itself or a guaranteed fastest strategy. Source: https://www.postgresql.org/docs/18/using-explain.html"
+    },
+    {
+      "key": "query_plan_node",
+      "name": "узел плана выполнения запроса",
+      "parent": 265,
+      "universum_id": 3,
+      "terms": [
+        [
+          "узел плана выполнения запроса",
+          "ru"
+        ],
+        [
+          "query execution plan node",
+          "en"
+        ]
+      ],
+      "reason": "One described operation within a query plan, distinct from running that operation. Source: https://www.postgresql.org/docs/18/using-explain.html"
+    },
+    {
+      "key": "query_planning",
+      "name": "планирование выполнения запроса БД",
+      "parent": 325,
+      "universum_id": 3,
+      "terms": [
+        [
+          "планирование выполнения запроса БД",
+          "ru"
+        ],
+        [
+          "database query planning",
+          "en"
+        ]
+      ],
+      "reason": "Producing a query execution plan from the query specification. Source: https://www.postgresql.org/docs/18/planner-optimizer.html"
+    },
+    {
+      "key": "query_optimizer",
+      "name": "компонент оптимизации запросов БД",
+      "parent": 346,
+      "universum_id": 3,
+      "terms": [
+        [
+          "компонент оптимизации запросов БД",
+          "ru"
+        ],
+        [
+          "database query optimizer component",
+          "en"
+        ]
+      ],
+      "reason": "Software that evaluates candidate plans and chooses a plan under its cost model. Source: https://www.postgresql.org/docs/18/planner-optimizer.html"
+    },
+    {
+      "key": "query_execution",
+      "name": "выполнение запроса данных к БД",
+      "parent": 359,
+      "universum_id": 3,
+      "terms": [
+        [
+          "выполнение запроса данных к БД",
+          "ru"
+        ],
+        [
+          "database retrieval query execution",
+          "en"
+        ]
+      ],
+      "reason": "Executing a data-retrieval query, distinct from planning and representing the request. Source: https://www.postgresql.org/docs/18/executor.html"
+    },
+    {
+      "key": "completed_query_execution",
+      "name": "завершённое выполнение запроса данных",
+      "parent": "query_execution",
+      "universum_id": 3,
+      "terms": [
+        [
+          "завершённое выполнение запроса данных",
+          "ru"
+        ],
+        [
+          "completed retrieval query execution",
+          "en"
+        ]
+      ],
+      "reason": "A successfully completed retrieval execution producing a result, which can be empty. Source: https://www.postgresql.org/docs/18/executor.html"
+    },
+    {
+      "key": "database_scan",
+      "name": "сканирование данных БД",
+      "parent": 325,
+      "universum_id": 3,
+      "terms": [
+        [
+          "сканирование данных БД",
+          "ru"
+        ],
+        [
+          "database data scan",
+          "en"
+        ]
+      ],
+      "reason": "Execution of a database access operation; not its plan node. Source: https://www.postgresql.org/docs/18/using-explain.html"
+    },
+    {
+      "key": "table_scan",
+      "name": "сканирование таблицы БД",
+      "parent": "database_scan",
+      "universum_id": 3,
+      "terms": [
+        [
+          "сканирование таблицы БД",
+          "ru"
+        ],
+        [
+          "database table scan",
+          "en"
+        ]
+      ],
+      "reason": "Scanning table data as a database access operation. Source: https://www.postgresql.org/docs/18/using-explain.html"
+    },
+    {
+      "key": "index_scan",
+      "name": "сканирование индекса БД",
+      "parent": "database_scan",
+      "universum_id": 3,
+      "terms": [
+        [
+          "сканирование индекса БД",
+          "ru"
+        ],
+        [
+          "database index scan",
+          "en"
+        ]
+      ],
+      "reason": "Traversing a database index for data access; no universal speed advantage or heap-access rule. Source: https://www.postgresql.org/docs/18/using-explain.html"
+    },
+    {
+      "key": "join_execution",
+      "name": "выполнение соединения табличных данных",
+      "parent": 325,
+      "universum_id": 3,
+      "terms": [
+        [
+          "выполнение соединения табличных данных",
+          "ru"
+        ],
+        [
+          "database join execution",
+          "en"
+        ]
+      ],
+      "reason": "Executing a join over tabular inputs; distinguish the operation from the selected join algorithm. Source: https://www.postgresql.org/docs/18/queries-table-expressions.html"
+    },
+    {
+      "key": "join_algorithm",
+      "name": "алгоритм соединения табличных данных",
+      "parent": 942,
+      "universum_id": 3,
+      "terms": [
+        [
+          "алгоритм соединения табличных данных",
+          "ru"
+        ],
+        [
+          "database join algorithm",
+          "en"
+        ]
+      ],
+      "reason": "An algorithm for implementing a database join. Source: https://www.postgresql.org/docs/18/planner-optimizer.html"
+    },
+    {
+      "key": "hash_join",
+      "name": "алгоритм хеш-соединения",
+      "parent": "join_algorithm",
+      "universum_id": 3,
+      "terms": [
+        [
+          "алгоритм хеш-соединения",
+          "ru"
+        ],
+        [
+          "hash join algorithm",
+          "en"
+        ]
+      ],
+      "reason": "A join algorithm based on hash lookup of join keys. Source: https://www.postgresql.org/docs/18/planner-optimizer.html"
+    },
+    {
+      "key": "merge_join",
+      "name": "алгоритм соединения слиянием",
+      "parent": "join_algorithm",
+      "universum_id": 3,
+      "terms": [
+        [
+          "алгоритм соединения слиянием",
+          "ru"
+        ],
+        [
+          "merge join algorithm",
+          "en"
+        ]
+      ],
+      "reason": "A join algorithm traversing inputs ordered on their join keys; sorting need not be a separate step. Source: https://www.postgresql.org/docs/18/planner-optimizer.html"
+    },
+    {
+      "key": "column_set",
+      "name": "набор столбцов таблицы БД",
+      "parent": 265,
+      "universum_id": 3,
+      "terms": [
+        [
+          "набор столбцов таблицы БД",
+          "ru"
+        ],
+        [
+          "database table column set",
+          "en"
+        ]
+      ],
+      "reason": "A selected collection of columns from a table; distinct from a column value or a constraint. Source: https://www.postgresql.org/docs/18/ddl-constraints.html"
+    },
+    {
+      "key": "one_column_set",
+      "name": "набор из одного столбца БД",
+      "parent": "column_set",
+      "universum_id": 3,
+      "terms": [
+        [
+          "набор из одного столбца БД",
+          "ru"
+        ],
+        [
+          "single-column database column set",
+          "en"
+        ]
+      ],
+      "reason": "A column set containing one column; not identified with the column itself. Source: https://www.postgresql.org/docs/18/ddl-constraints.html"
+    },
+    {
+      "key": "multiple_column_set",
+      "name": "набор из нескольких столбцов БД",
+      "parent": "column_set",
+      "universum_id": 3,
+      "terms": [
+        [
+          "набор из нескольких столбцов БД",
+          "ru"
+        ],
+        [
+          "multi-column database column set",
+          "en"
+        ]
+      ],
+      "reason": "A column set containing multiple columns. Source: https://www.postgresql.org/docs/18/ddl-constraints.html"
+    },
+    {
+      "key": "foreign_key_columns",
+      "name": "столбцы внешнего ключа БД",
+      "parent": "column_set",
+      "universum_id": 3,
+      "terms": [
+        [
+          "столбцы внешнего ключа БД",
+          "ru"
+        ],
+        [
+          "foreign key column set",
+          "en"
+        ]
+      ],
+      "reason": "The local referencing columns of a foreign key; they need not uniquely identify local rows. Source: https://www.sqlite.org/foreignkeys.html"
+    },
+    {
+      "key": "primary_key_columns",
+      "name": "столбцы первичного ключа БД",
+      "parent": "column_set",
+      "universum_id": 3,
+      "terms": [
+        [
+          "столбцы первичного ключа БД",
+          "ru"
+        ],
+        [
+          "primary key column set",
+          "en"
+        ]
+      ],
+      "reason": "The columns designated as a table primary key; not the constraint rule or an index. Source: https://www.postgresql.org/docs/18/ddl-constraints.html"
+    },
+    {
+      "key": "single_foreign_key_columns",
+      "name": "внешний ключ из одного столбца (набор)",
+      "parent": "foreign_key_columns",
+      "universum_id": 3,
+      "terms": [
+        [
+          "внешний ключ из одного столбца (набор)",
+          "ru"
+        ],
+        [
+          "single-column foreign key column set",
+          "en"
+        ]
+      ],
+      "reason": "A foreign-key column set with one local column. Source: https://www.sqlite.org/foreignkeys.html"
+    },
+    {
+      "key": "composite_foreign_key_columns",
+      "name": "составной внешний ключ (набор столбцов)",
+      "parent": "foreign_key_columns",
+      "universum_id": 3,
+      "terms": [
+        [
+          "составной внешний ключ (набор столбцов)",
+          "ru"
+        ],
+        [
+          "composite foreign key column set",
+          "en"
+        ]
+      ],
+      "reason": "A foreign-key set spanning multiple local columns. Source: https://www.sqlite.org/foreignkeys.html"
+    },
+    {
+      "key": "composite_primary_key_columns",
+      "name": "составной первичный ключ (набор столбцов)",
+      "parent": "primary_key_columns",
+      "universum_id": 3,
+      "terms": [
+        [
+          "составной первичный ключ (набор столбцов)",
+          "ru"
+        ],
+        [
+          "composite primary key column set",
+          "en"
+        ]
+      ],
+      "reason": "A primary-key set spanning multiple columns. Source: https://www.postgresql.org/docs/18/ddl-constraints.html"
+    }
+  ],
+  "renames": [
+    {
+      "id": 1050,
+      "before": "Relational algebra",
+      "name": "реляционная алгебра (язык запросов)",
+      "terms": [],
+      "reason": "Select relational algebra in its formal query-language reading, distinct from stored data and executable query results. Source: https://www.cs.iit.edu/~cs561/cs425/algebra/home.html"
+    }
+  ],
+  "terms": [
+    {
+      "id": 943,
+      "name": "Nested loops join",
+      "terms": [
+        [
+          "nested-loop join algorithm",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the algorithm, excluding a join execution or a plan-node instance."
+    },
+    {
+      "id": 1050,
+      "name": "реляционная алгебра (язык запросов)",
+      "terms": [
+        [
+          "relational algebra (query language)",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the selected formal-language reading; the original relational-algebra terms remain."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 1050,
+      "term": "Relational algebra",
+      "lang": "ru",
+      "reason": "Remove the English alias temporarily generated with a Russian tag by the rename helper; preserve its original English term."
+    }
+  ],
+  "leaf_merges": [],
+  "initial_edges": [
+    {
+      "subject": 3267,
+      "kod": "14",
+      "object": 265,
+      "universum_id": 3,
+      "reason": "Expose the already reviewed general plan-as-information genus in U3 for technical plans."
+    }
+  ],
+  "repairs": [
+    {
+      "id": 1642,
+      "before": [
+        1050,
+        "14",
+        266,
+        3
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1050,
+          "14",
+          357,
+          null,
+          3
+        ]
+      ],
+      "reason": "Relational algebra supplies a formal language for querying relations; it is not the data being queried. Source: https://www.cs.iit.edu/~cs561/cs425/algebra/home.html"
+    }
+  ],
+  "edges": [
+    {
+      "subject": "qualified_sql_name",
+      "kod": "20",
+      "object": "sql_identifier",
+      "universum_id": 3,
+      "reason": "Identifier components form the qualified name."
+    },
+    {
+      "subject": "sql_select_statement",
+      "kod": "14",
+      "object": "query_specification",
+      "universum_id": 3,
+      "reason": "The SELECT statement also specifies a data-retrieval query."
+    },
+    {
+      "subject": "tabular_query_result",
+      "kod": "14",
+      "object": "query_result",
+      "universum_id": 3,
+      "reason": "The tabular structure also constitutes returned query data."
+    },
+    {
+      "subject": "view_definition",
+      "kod": "20",
+      "object": "query_specification",
+      "universum_id": 3,
+      "reason": "A defining query is part of the view definition."
+    },
+    {
+      "subject": "database_view",
+      "kod": "20",
+      "object": "view_definition",
+      "universum_id": 3,
+      "reason": "The view has a defining description; the view is not identical with that description."
+    },
+    {
+      "subject": "materialized_refresh",
+      "kod": "27",
+      "object": "materialized_view",
+      "universum_id": 3,
+      "reason": "The materialized view is the refresh target."
+    },
+    {
+      "subject": "query_plan",
+      "kod": "20",
+      "object": "query_plan_node",
+      "universum_id": 3,
+      "reason": "Nodes form the plan representation."
+    },
+    {
+      "subject": "query_planning",
+      "kod": "27",
+      "object": "query_specification",
+      "universum_id": 3,
+      "reason": "The query description is the planning input."
+    },
+    {
+      "subject": "query_planning",
+      "kod": "70",
+      "object": "query_plan",
+      "universum_id": 3,
+      "reason": "Successful planning produces a plan."
+    },
+    {
+      "subject": "query_optimizer",
+      "kod": "21",
+      "object": "query_planning",
+      "universum_id": 3,
+      "reason": "Planning is the software component purpose; optimality is not guaranteed."
+    },
+    {
+      "subject": "query_execution",
+      "kod": "27",
+      "object": "query_specification",
+      "universum_id": 3,
+      "reason": "The retrieval query specification is what is executed."
+    },
+    {
+      "subject": "completed_query_execution",
+      "kod": "70",
+      "object": "query_result",
+      "universum_id": 3,
+      "reason": "Successful retrieval completion produces the result data; general execution can fail."
+    },
+    {
+      "subject": "table_scan",
+      "kod": "27",
+      "object": 272,
+      "universum_id": 3,
+      "reason": "The database table is the scan target."
+    },
+    {
+      "subject": "index_scan",
+      "kod": "27",
+      "object": 25310,
+      "universum_id": 3,
+      "reason": "The index data structure is the scan target."
+    },
+    {
+      "subject": "join_execution",
+      "kod": "27",
+      "object": 627,
+      "universum_id": 3,
+      "reason": "Tabular data are the join inputs."
+    },
+    {
+      "subject": "join_algorithm",
+      "kod": "21",
+      "object": "join_execution",
+      "universum_id": 3,
+      "reason": "Join execution is the algorithm purpose."
+    },
+    {
+      "subject": 943,
+      "kod": "14",
+      "object": "join_algorithm",
+      "universum_id": 3,
+      "reason": "Reuse the existing nested-loops join algorithm; retain its programming-algorithm genus."
+    },
+    {
+      "subject": "column_set",
+      "kod": "20",
+      "object": 25306,
+      "universum_id": 3,
+      "reason": "Columns are members of the selected column set."
+    },
+    {
+      "subject": "foreign_key_columns",
+      "kod": "20",
+      "object": 764,
+      "universum_id": 3,
+      "reason": "The column set is governed by the existing foreign-key integrity constraint, without being that rule."
+    },
+    {
+      "subject": "primary_key_columns",
+      "kod": "20",
+      "object": 25315,
+      "universum_id": 3,
+      "reason": "The column set has the primary-key constraint."
+    },
+    {
+      "subject": "single_foreign_key_columns",
+      "kod": "14",
+      "object": "one_column_set",
+      "universum_id": 3,
+      "reason": "The one-column restriction also applies."
+    },
+    {
+      "subject": "single_foreign_key_columns",
+      "kod": "20",
+      "object": 25318,
+      "universum_id": 3,
+      "reason": "The existing one-column foreign-key constraint governs this set."
+    },
+    {
+      "subject": "composite_foreign_key_columns",
+      "kod": "14",
+      "object": "multiple_column_set",
+      "universum_id": 3,
+      "reason": "The multiple-column restriction also applies."
+    },
+    {
+      "subject": "composite_foreign_key_columns",
+      "kod": "20",
+      "object": 25319,
+      "universum_id": 3,
+      "reason": "The existing composite foreign-key constraint governs this set."
+    },
+    {
+      "subject": "composite_primary_key_columns",
+      "kod": "14",
+      "object": "multiple_column_set",
+      "universum_id": 3,
+      "reason": "The multiple-column restriction also applies."
+    },
+    {
+      "subject": "composite_primary_key_columns",
+      "kod": "20",
+      "object": 25321,
+      "universum_id": 3,
+      "reason": "The existing composite primary-key constraint governs this set."
+    }
+  ],
+  "checks": [
+    {
+      "subject": "namespace",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sql_schema_namespace",
+      "kod": "14",
+      "object": "namespace",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sql_identifier",
+      "kod": "14",
+      "object": 442,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "quoted_sql_identifier",
+      "kod": "14",
+      "object": "sql_identifier",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "unquoted_sql_identifier",
+      "kod": "14",
+      "object": "sql_identifier",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "qualified_sql_name",
+      "kod": "14",
+      "object": 362,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "qualified_sql_name",
+      "kod": "20",
+      "object": "sql_identifier",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "query_specification",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sql_select_statement",
+      "kod": "14",
+      "object": 417,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sql_select_statement",
+      "kod": "14",
+      "object": "query_specification",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "query_result",
+      "kod": "14",
+      "object": 266,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "tabular_query_result",
+      "kod": "14",
+      "object": 627,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "tabular_query_result",
+      "kod": "14",
+      "object": "query_result",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "database_view",
+      "kod": "14",
+      "object": 627,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "virtual_view",
+      "kod": "14",
+      "object": "database_view",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "materialized_view",
+      "kod": "14",
+      "object": "database_view",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "view_definition",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "view_definition",
+      "kod": "20",
+      "object": "query_specification",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "database_view",
+      "kod": "20",
+      "object": "view_definition",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "materialized_refresh",
+      "kod": "14",
+      "object": 325,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "materialized_refresh",
+      "kod": "27",
+      "object": "materialized_view",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3267,
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "query_plan",
+      "kod": "14",
+      "object": 3267,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "query_plan_node",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "query_plan",
+      "kod": "20",
+      "object": "query_plan_node",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "query_planning",
+      "kod": "14",
+      "object": 325,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "query_planning",
+      "kod": "27",
+      "object": "query_specification",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "query_planning",
+      "kod": "70",
+      "object": "query_plan",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "query_optimizer",
+      "kod": "14",
+      "object": 346,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "query_optimizer",
+      "kod": "21",
+      "object": "query_planning",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "query_execution",
+      "kod": "14",
+      "object": 359,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "query_execution",
+      "kod": "27",
+      "object": "query_specification",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "completed_query_execution",
+      "kod": "14",
+      "object": "query_execution",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "completed_query_execution",
+      "kod": "70",
+      "object": "query_result",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "database_scan",
+      "kod": "14",
+      "object": 325,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "table_scan",
+      "kod": "14",
+      "object": "database_scan",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "table_scan",
+      "kod": "27",
+      "object": 272,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "index_scan",
+      "kod": "14",
+      "object": "database_scan",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "index_scan",
+      "kod": "27",
+      "object": 25310,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "join_execution",
+      "kod": "14",
+      "object": 325,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "join_execution",
+      "kod": "27",
+      "object": 627,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "join_algorithm",
+      "kod": "14",
+      "object": 942,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "join_algorithm",
+      "kod": "21",
+      "object": "join_execution",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 943,
+      "kod": "14",
+      "object": "join_algorithm",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hash_join",
+      "kod": "14",
+      "object": "join_algorithm",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "merge_join",
+      "kod": "14",
+      "object": "join_algorithm",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "column_set",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "column_set",
+      "kod": "20",
+      "object": 25306,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "one_column_set",
+      "kod": "14",
+      "object": "column_set",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "multiple_column_set",
+      "kod": "14",
+      "object": "column_set",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "foreign_key_columns",
+      "kod": "14",
+      "object": "column_set",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "foreign_key_columns",
+      "kod": "20",
+      "object": 764,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "primary_key_columns",
+      "kod": "14",
+      "object": "column_set",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "primary_key_columns",
+      "kod": "20",
+      "object": 25315,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "single_foreign_key_columns",
+      "kod": "14",
+      "object": "foreign_key_columns",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "single_foreign_key_columns",
+      "kod": "14",
+      "object": "one_column_set",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "single_foreign_key_columns",
+      "kod": "20",
+      "object": 25318,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "composite_foreign_key_columns",
+      "kod": "14",
+      "object": "foreign_key_columns",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "composite_foreign_key_columns",
+      "kod": "14",
+      "object": "multiple_column_set",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "composite_foreign_key_columns",
+      "kod": "20",
+      "object": 25319,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "composite_primary_key_columns",
+      "kod": "14",
+      "object": "primary_key_columns",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "composite_primary_key_columns",
+      "kod": "14",
+      "object": "multiple_column_set",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "composite_primary_key_columns",
+      "kod": "20",
+      "object": 25321,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1050,
+      "kod": "14",
+      "object": 266,
+      "present": false
+    },
+    {
+      "subject": 1050,
+      "kod": "14",
+      "object": 357,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 943,
+      "kod": "14",
+      "object": 942,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 764,
+      "kod": "14",
+      "object": 25311,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25307,
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25315,
+      "kod": "14",
+      "object": 25311,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 272,
+      "kod": "14",
+      "object": 627,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 417,
+      "kod": "14",
+      "object": 362,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 442,
+      "kod": "14",
+      "object": 362,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1050,
+      "kod": "14",
+      "object": 357,
+      "present": true,
+      "strength": null
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "namespace",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": "sql_schema_namespace",
+      "ancestor": "namespace",
+      "present": true
+    },
+    {
+      "subject": "sql_identifier",
+      "ancestor": 442,
+      "present": true
+    },
+    {
+      "subject": "quoted_sql_identifier",
+      "ancestor": "sql_identifier",
+      "present": true
+    },
+    {
+      "subject": "unquoted_sql_identifier",
+      "ancestor": "sql_identifier",
+      "present": true
+    },
+    {
+      "subject": "qualified_sql_name",
+      "ancestor": 362,
+      "present": true
+    },
+    {
+      "subject": "query_specification",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": "sql_select_statement",
+      "ancestor": 417,
+      "present": true
+    },
+    {
+      "subject": "query_result",
+      "ancestor": 266,
+      "present": true
+    },
+    {
+      "subject": "tabular_query_result",
+      "ancestor": 627,
+      "present": true
+    },
+    {
+      "subject": "database_view",
+      "ancestor": 627,
+      "present": true
+    },
+    {
+      "subject": "virtual_view",
+      "ancestor": "database_view",
+      "present": true
+    },
+    {
+      "subject": "materialized_view",
+      "ancestor": "database_view",
+      "present": true
+    },
+    {
+      "subject": "view_definition",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": "materialized_refresh",
+      "ancestor": 325,
+      "present": true
+    },
+    {
+      "subject": "query_plan",
+      "ancestor": 3267,
+      "present": true
+    },
+    {
+      "subject": "query_plan_node",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": "query_planning",
+      "ancestor": 325,
+      "present": true
+    },
+    {
+      "subject": "query_optimizer",
+      "ancestor": 346,
+      "present": true
+    },
+    {
+      "subject": "query_execution",
+      "ancestor": 359,
+      "present": true
+    },
+    {
+      "subject": "completed_query_execution",
+      "ancestor": "query_execution",
+      "present": true
+    },
+    {
+      "subject": "database_scan",
+      "ancestor": 325,
+      "present": true
+    },
+    {
+      "subject": "table_scan",
+      "ancestor": "database_scan",
+      "present": true
+    },
+    {
+      "subject": "index_scan",
+      "ancestor": "database_scan",
+      "present": true
+    },
+    {
+      "subject": "join_execution",
+      "ancestor": 325,
+      "present": true
+    },
+    {
+      "subject": "join_algorithm",
+      "ancestor": 942,
+      "present": true
+    },
+    {
+      "subject": "hash_join",
+      "ancestor": "join_algorithm",
+      "present": true
+    },
+    {
+      "subject": "merge_join",
+      "ancestor": "join_algorithm",
+      "present": true
+    },
+    {
+      "subject": "column_set",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": "one_column_set",
+      "ancestor": "column_set",
+      "present": true
+    },
+    {
+      "subject": "multiple_column_set",
+      "ancestor": "column_set",
+      "present": true
+    },
+    {
+      "subject": "foreign_key_columns",
+      "ancestor": "column_set",
+      "present": true
+    },
+    {
+      "subject": "primary_key_columns",
+      "ancestor": "column_set",
+      "present": true
+    },
+    {
+      "subject": "single_foreign_key_columns",
+      "ancestor": "foreign_key_columns",
+      "present": true
+    },
+    {
+      "subject": "composite_foreign_key_columns",
+      "ancestor": "foreign_key_columns",
+      "present": true
+    },
+    {
+      "subject": "composite_primary_key_columns",
+      "ancestor": "primary_key_columns",
+      "present": true
+    },
+    {
+      "subject": 1050,
+      "ancestor": 357,
+      "present": true
+    },
+    {
+      "subject": 1050,
+      "ancestor": 353,
+      "present": true
+    },
+    {
+      "subject": "sql_select_statement",
+      "ancestor": "query_specification",
+      "present": true
+    },
+    {
+      "subject": "tabular_query_result",
+      "ancestor": "query_result",
+      "present": true
+    },
+    {
+      "subject": "materialized_view",
+      "ancestor": "database_view",
+      "present": true
+    },
+    {
+      "subject": "query_plan",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": 943,
+      "ancestor": "join_algorithm",
+      "present": true
+    },
+    {
+      "subject": "single_foreign_key_columns",
+      "ancestor": "one_column_set",
+      "present": true
+    },
+    {
+      "subject": "composite_foreign_key_columns",
+      "ancestor": "multiple_column_set",
+      "present": true
+    },
+    {
+      "subject": "composite_primary_key_columns",
+      "ancestor": "multiple_column_set",
+      "present": true
+    },
+    {
+      "subject": 1050,
+      "ancestor": 266,
+      "present": false
+    },
+    {
+      "subject": "namespace",
+      "ancestor": 2648,
+      "present": false
+    },
+    {
+      "subject": "sql_schema_namespace",
+      "ancestor": 25307,
+      "present": false
+    },
+    {
+      "subject": "sql_schema_namespace",
+      "ancestor": 267,
+      "present": false
+    },
+    {
+      "subject": "qualified_sql_name",
+      "ancestor": "sql_identifier",
+      "present": false
+    },
+    {
+      "subject": "query_specification",
+      "ancestor": 275,
+      "present": false
+    },
+    {
+      "subject": "query_specification",
+      "ancestor": "query_execution",
+      "present": false
+    },
+    {
+      "subject": "query_result",
+      "ancestor": "query_specification",
+      "present": false
+    },
+    {
+      "subject": "database_view",
+      "ancestor": 267,
+      "present": false
+    },
+    {
+      "subject": "database_view",
+      "ancestor": "query_specification",
+      "present": false
+    },
+    {
+      "subject": "virtual_view",
+      "ancestor": "materialized_view",
+      "present": false
+    },
+    {
+      "subject": "materialized_view",
+      "ancestor": "virtual_view",
+      "present": false
+    },
+    {
+      "subject": "view_definition",
+      "ancestor": "database_view",
+      "present": false
+    },
+    {
+      "subject": "query_plan",
+      "ancestor": "query_execution",
+      "present": false
+    },
+    {
+      "subject": "query_plan_node",
+      "ancestor": 325,
+      "present": false
+    },
+    {
+      "subject": "query_optimizer",
+      "ancestor": "query_plan",
+      "present": false
+    },
+    {
+      "subject": "query_optimizer",
+      "ancestor": 325,
+      "present": false
+    },
+    {
+      "subject": "index_scan",
+      "ancestor": "table_scan",
+      "present": false
+    },
+    {
+      "subject": "join_algorithm",
+      "ancestor": "join_execution",
+      "present": false
+    },
+    {
+      "subject": "column_set",
+      "ancestor": 25306,
+      "present": false
+    },
+    {
+      "subject": "foreign_key_columns",
+      "ancestor": 764,
+      "present": false
+    },
+    {
+      "subject": "foreign_key_columns",
+      "ancestor": "primary_key_columns",
+      "present": false
+    },
+    {
+      "subject": "primary_key_columns",
+      "ancestor": 25315,
+      "present": false
+    },
+    {
+      "subject": "primary_key_columns",
+      "ancestor": 25310,
+      "present": false
+    },
+    {
+      "subject": "single_foreign_key_columns",
+      "ancestor": "multiple_column_set",
+      "present": false
+    },
+    {
+      "subject": "composite_foreign_key_columns",
+      "ancestor": "one_column_set",
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": "namespace",
+      "term": "пространство имён (вычислительная техника)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "namespace",
+      "term": "namespace (computing)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "sql_schema_namespace",
+      "term": "схема SQL (пространство имён)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "sql_schema_namespace",
+      "term": "SQL schema namespace",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "sql_identifier",
+      "term": "идентификатор SQL",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "sql_identifier",
+      "term": "SQL identifier",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "quoted_sql_identifier",
+      "term": "идентификатор SQL в двойных кавычках",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "quoted_sql_identifier",
+      "term": "double-quoted SQL identifier",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "unquoted_sql_identifier",
+      "term": "идентификатор SQL без кавычек",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "unquoted_sql_identifier",
+      "term": "unquoted SQL identifier",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "qualified_sql_name",
+      "term": "имя объекта SQL с указанием схемы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "qualified_sql_name",
+      "term": "schema-qualified SQL object name",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "query_specification",
+      "term": "запрос данных к БД (описание)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "query_specification",
+      "term": "database retrieval query specification",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "sql_select_statement",
+      "term": "оператор SELECT языка SQL",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "sql_select_statement",
+      "term": "SQL SELECT statement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "query_result",
+      "term": "результат запроса данных к БД",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "query_result",
+      "term": "database query result",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "tabular_query_result",
+      "term": "табличный результат запроса БД",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "tabular_query_result",
+      "term": "tabular database query result",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "database_view",
+      "term": "представление БД, заданное запросом",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "database_view",
+      "term": "query-defined database view",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "virtual_view",
+      "term": "нематериализованное представление БД",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "virtual_view",
+      "term": "nonmaterialized database view",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "virtual_view",
+      "term": "virtual database view",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "materialized_view",
+      "term": "материализованное представление БД",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "materialized_view",
+      "term": "materialized database view",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "materialized_view",
+      "term": "materialized view",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "view_definition",
+      "term": "определение представления БД",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "view_definition",
+      "term": "database view definition",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "materialized_refresh",
+      "term": "обновление материализованного представления",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "materialized_refresh",
+      "term": "materialized view refresh",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "query_plan",
+      "term": "план выполнения запроса БД",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "query_plan",
+      "term": "database query execution plan",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "query_plan",
+      "term": "query execution plan",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "query_plan_node",
+      "term": "узел плана выполнения запроса",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "query_plan_node",
+      "term": "query execution plan node",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "query_planning",
+      "term": "планирование выполнения запроса БД",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "query_planning",
+      "term": "database query planning",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "query_optimizer",
+      "term": "компонент оптимизации запросов БД",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "query_optimizer",
+      "term": "database query optimizer component",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "query_execution",
+      "term": "выполнение запроса данных к БД",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "query_execution",
+      "term": "database retrieval query execution",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "completed_query_execution",
+      "term": "завершённое выполнение запроса данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "completed_query_execution",
+      "term": "completed retrieval query execution",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "database_scan",
+      "term": "сканирование данных БД",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "database_scan",
+      "term": "database data scan",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "table_scan",
+      "term": "сканирование таблицы БД",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "table_scan",
+      "term": "database table scan",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "index_scan",
+      "term": "сканирование индекса БД",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "index_scan",
+      "term": "database index scan",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "join_execution",
+      "term": "выполнение соединения табличных данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "join_execution",
+      "term": "database join execution",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "join_algorithm",
+      "term": "алгоритм соединения табличных данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "join_algorithm",
+      "term": "database join algorithm",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 943,
+      "term": "nested-loop join algorithm",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hash_join",
+      "term": "алгоритм хеш-соединения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "hash_join",
+      "term": "hash join algorithm",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "merge_join",
+      "term": "алгоритм соединения слиянием",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "merge_join",
+      "term": "merge join algorithm",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "column_set",
+      "term": "набор столбцов таблицы БД",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "column_set",
+      "term": "database table column set",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "one_column_set",
+      "term": "набор из одного столбца БД",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "one_column_set",
+      "term": "single-column database column set",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "multiple_column_set",
+      "term": "набор из нескольких столбцов БД",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "multiple_column_set",
+      "term": "multi-column database column set",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "foreign_key_columns",
+      "term": "столбцы внешнего ключа БД",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "foreign_key_columns",
+      "term": "foreign key column set",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "primary_key_columns",
+      "term": "столбцы первичного ключа БД",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "primary_key_columns",
+      "term": "primary key column set",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "single_foreign_key_columns",
+      "term": "внешний ключ из одного столбца (набор)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "single_foreign_key_columns",
+      "term": "single-column foreign key column set",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "composite_foreign_key_columns",
+      "term": "составной внешний ключ (набор столбцов)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "composite_foreign_key_columns",
+      "term": "composite foreign key column set",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "composite_primary_key_columns",
+      "term": "составной первичный ключ (набор столбцов)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "composite_primary_key_columns",
+      "term": "composite primary key column set",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1050,
+      "term": "реляционная алгебра (язык запросов)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1050,
+      "term": "relational algebra (query language)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1050,
+      "term": "Relational algebra",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 1050,
+      "term": "Relational algebra",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "sql_schema_namespace",
+      "term": "schema",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "database_view",
+      "term": "view",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "query_specification",
+      "term": "query",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "query_plan",
+      "term": "plan",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "join_algorithm",
+      "term": "join",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "foreign_key_columns",
+      "term": "foreign key",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "primary_key_columns",
+      "term": "primary key",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

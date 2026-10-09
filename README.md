@@ -4,7 +4,7 @@ A concept graph with typed relations, multilingual terms, and definitions genera
 
 conceptuum represents meanings as nodes and connects them through relations such as genus, purpose, material, opposition, and cause. It combines a MariaDB snapshot, a Python engine for querying and reviewing the graph, and a Go web visualizer. An optional retrieval demo supplies graph context to a local language model.
 
-**Development version:** [0.1.0-dev](VERSION) · **Data snapshot:** [Q9, 2026-10-09](docs/quality/2026-10-09-q9.md) · **[Changelog](CHANGELOG.md)** · **[Live demo](https://conceptuum.su)**
+**Development version:** [0.1.0-dev](VERSION) · **Data snapshot:** [Q39, 2026-10-09](docs/quality/2026-10-09-q39.md) · **Published site data:** Q39 · **[Changelog](CHANGELOG.md)** · **[Live demo](https://conceptuum.su)**
 
 ## Euler diagrams from the concept graph
 
@@ -73,12 +73,12 @@ An operation and its numerical result are different meanings. The `defin` field 
 | Component | Version / requirement |
 |---|---|
 | Project | **0.1.0-dev**, an unreleased development version |
-| Bundled data | **2026-10-09 / Q9**; versioned separately from the code |
+| Bundled and live data | **2026-10-09 / Q39** |
 | Python | **3.9+**; checked with **3.9.13** |
 | PyMySQL | **1.2.0**, pinned in [requirements.txt](requirements.txt) |
 | pymorphy3 | **2.0.6**, pinned for Russian morphological matching |
 | Go | **1.26.1+**, required by [visualizer/go.mod](visualizer/go.mod); only needed for the visualizer |
-| MariaDB | Local setup checked on **5.5.42**; live Q9 import and visualizer checked on **11.8.6** |
+| MariaDB | Local setup checked on **5.5.42**; live Q39 import and visualizer checked on **11.8.6** |
 
 The MariaDB version records the existing test environment. Compatibility with other server versions, including MySQL, needs separate verification. Python direct dependencies are pinned; Go dependencies are recorded in `go.mod` and `go.sum`.
 
@@ -230,11 +230,13 @@ The unit tests need no database or model. The audits read the configured databas
 
 ## Data snapshot and limits
 
-The bundled **Q9** snapshot contains **12,491 concepts**, **15,717 accepted edges**, **805 rejected edges**, **58,117 genus paths**, and **35,048 terms** across everyday, IT, legal, and logic universes.
+The published **Q39** snapshot contains **13,456 concepts**, **17,350 accepted edges**, **1,100 rejected edges**, **64,683 genus paths**, and **37,825 terms** across everyday, IT, legal, and logic universes. Compared with Q9, the combined Q10–Q39 reviews add a net **965 concepts**, **1,633 accepted edges**, and **2,777 terms**.
 
-Q9 adds mathematical sets, cardinality properties, and set operations; separates the everyday collection sense; and corrects subset/JRE and runtime classifications. It has zero detected signature violations, hierarchy cycles, and self-loops; all 23 explicit negations survived the review. These checks establish structural consistency, not complete or verified knowledge. **7,302 concepts still lack an English-tagged term containing Latin letters**, and even Latin-script terms need translation review. Long queries can retrieve extra senses through individual words.
+Q11–Q39 use Open English WordNet 2025 to guide reviewed additions. Q39 adds 41 concepts and 106 relations for physical containers, material/use intersections, bristled tools, applicators, cleaning tools and scrapers. Ten inherited assertions, five labels and ten malformed or incorrectly tagged terms are corrected.
 
-The [coverage review and filling plan](PLAN.md) prioritizes the remaining work. Sources and exact changes are recorded in the [Q9 review](docs/quality/2026-10-09-q9.md) and its [batch manifest](tools/quality_20261009_q9.json). The [changelog](CHANGELOG.md) separates code versions from data revisions; older entries in the [maintainer state](STATE.md) include Russian text.
+GitHub and the hosted demo include Q39. All six deployed tables match the reviewed snapshot, with timestamps compared in UTC. The SQL dump explicitly retains the source database's `utf8_general_ci` collation so newer MariaDB defaults do not merge distinct term keys during import. The local audit detected no signature violations, hierarchy cycles, or self-loops; all 23 explicit negations survived the reviews. These checks establish structural consistency, not complete or verified knowledge. **7,251 concepts still lack an English-tagged term containing Latin letters**, and even Latin-script terms need translation review.
+
+The [coverage review and filling plan](PLAN.md) prioritizes remaining work. Sources and exact changes are recorded in the [Q39 review](docs/quality/2026-10-09-q39.md) and its [batch manifest](tools/quality_20261009_q39.json). The [Q11 review](docs/quality/2026-10-09-q11.md) retains the pinned dictionary comparison and source notices. The [changelog](CHANGELOG.md) separates code versions from data revisions; older entries in the [maintainer state](STATE.md) include Russian text.
 
 ## Documentation
 
@@ -252,4 +254,4 @@ The six storage tables are `concept`, `concept_term`, `edge`, `relevant`, `unive
 
 ## License
 
-[MIT](LICENSE).
+[MIT](LICENSE) for project code and original contributions. Q11–Q39 contain reviewed adaptations from Open English WordNet 2025, derived from Princeton WordNet, and BIPM unit information. Their attribution and source license notices are retained in the [Q11 source notice](docs/quality/2026-10-09-q11.md#sources-and-reuse).

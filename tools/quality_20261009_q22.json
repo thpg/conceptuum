@@ -1,0 +1,2726 @@
+{
+  "source": "quality-20261009-q22",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Weather conditions, precipitation processes, weather quantities and observations; broaden natural phenomenon beyond physical process and separate forecasts from forecasting.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "glossary": "https://www.weather.gov/otx/full_weather_glossary",
+      "climate": "https://weather.metoffice.gov.uk/climate/climate-explained/what-is-climate",
+      "rain_measurement": "https://weather.metoffice.gov.uk/guides/observations/how-we-measure-rainfall",
+      "observations": "https://weather.metoffice.gov.uk/learn-about/met-office-for-schools/other-content/other-resources/how-to-measure-the-weather",
+      "sleet": "https://weather.metoffice.gov.uk/learn-about/weather/types-of-weather/snow/sleet",
+      "forecast": "https://weather.metoffice.gov.uk/guides/what-does-this-forecast-mean",
+      "freezing_ru": "https://method.meteorf.ru/publ/tr/tr382/htm/04.htm"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet; CC BY 4.0 and Princeton notices remain in docs/quality/2026-10-09-q11.md#sources-and-reuse. NWS and Met Office references independently check meteorological scope. Definitions are not copied verbatim; labels, restrictions and graph mappings are editorial adaptations.",
+    "existing_cohort": [
+      46,
+      54,
+      84,
+      92,
+      99,
+      1218,
+      1226,
+      1258,
+      1651,
+      1652,
+      1653,
+      1654,
+      1655,
+      1659,
+      1662,
+      1663,
+      1671,
+      1674,
+      2074,
+      2414,
+      2596,
+      2633,
+      2743,
+      2797,
+      2895,
+      3004,
+      3129,
+      3555,
+      3867,
+      23450,
+      24554,
+      24555,
+      24556,
+      24573,
+      24574,
+      24576,
+      24583,
+      24589
+    ],
+    "context_policy": "New concepts and assertions use U1 with unspecified strength. Keep weather conditions, falling precipitation, deposited materials, measured quantities and informational products distinct. Home contexts and relation grammar remain unchanged.",
+    "sense_decisions": [
+      {
+        "concept": "atmospheric_phenomenon",
+        "synset": "oewn-11445694-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A natural phenomenon of the atmosphere; this family can include conditions and processes without identifying them."
+      },
+      {
+        "concept": "precipitation_process",
+        "synset": "oewn-11515038-n",
+        "decision": "add",
+        "alignment": "process rather than amount or material",
+        "scope": "Water falling from clouds as droplets or ice particles. Select the physical occurrence, not deposited material, accumulated amount, haste or chemical precipitation."
+      },
+      {
+        "concept": "rain_shower",
+        "synset": "oewn-11522915-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A short rain episode. Do not equate every shower with heavy downpour or with a shower fixture."
+      },
+      {
+        "concept": "snow_shower",
+        "synset": null,
+        "decision": "add",
+        "alignment": "duration-pattern restriction",
+        "scope": "A short snowfall episode; no required wind or heavy-snow threshold."
+      },
+      {
+        "concept": "hailfall",
+        "synset": "oewn-11485929-n",
+        "decision": "add",
+        "alignment": "process rather than hail material",
+        "scope": "The falling of hail, distinct from the existing hail-material record 1226. No thunderstorm or temperature threshold is universal."
+      },
+      {
+        "concept": "freezing_rain",
+        "synset": null,
+        "decision": "add",
+        "alignment": "freezing-on-contact restriction",
+        "scope": "Rain whose supercooled drops freeze on contact with exposed surfaces. Distinguish it from already frozen ice pellets and from the resulting ice coating. The Russian term is also used in the cited Roshydromet research."
+      },
+      {
+        "concept": "freezing_drizzle",
+        "synset": null,
+        "decision": "add",
+        "alignment": "freezing-on-contact restriction",
+        "scope": "Drizzle that freezes on contact. No rain/drizzle drop-size threshold is encoded."
+      },
+      {
+        "concept": "rain_snow_mix",
+        "synset": "oewn-11528369-n",
+        "decision": "add",
+        "alignment": "regional sense qualified",
+        "scope": "A precipitation episode with both rain and snow components. Bare sleet is excluded because American usage commonly denotes ice pellets."
+      },
+      {
+        "concept": "rainy_weather",
+        "synset": "oewn-02561103-s",
+        "decision": "add",
+        "alignment": "weather class from scoped adjective",
+        "scope": "Weather characterized by rain. The whole atmospheric condition is distinct from the falling-water process."
+      },
+      {
+        "concept": "windy_weather",
+        "synset": "oewn-00306024-s",
+        "decision": "add",
+        "alignment": "weather class from scoped adjective",
+        "scope": "Weather characterized by wind. No warning threshold or metaphorical verbose meaning is imported."
+      },
+      {
+        "concept": "rainy_windy_weather",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "Weather with both rain and wind; an explicit shared subtype of the two conditions."
+      },
+      {
+        "concept": "snowfall_weather",
+        "synset": null,
+        "decision": "add",
+        "alignment": "weather condition with specified occurrence",
+        "scope": "Weather during snowfall, not merely a landscape with old snow on the ground."
+      },
+      {
+        "concept": "air_temperature",
+        "synset": null,
+        "decision": "add",
+        "alignment": "medium-specific quantity",
+        "scope": "Temperature of air at the relevant place and time, distinct from dew-point temperature, apparent temperature and a thermometer."
+      },
+      {
+        "concept": "cloud_amount",
+        "synset": null,
+        "decision": "add",
+        "alignment": "fraction-valued physical quantity",
+        "scope": "The fraction of sky covered by clouds. Select a quantitative property, not a cloud object, bad-weather judgment or atmospheric state."
+      },
+      {
+        "concept": "precipitation_depth",
+        "synset": null,
+        "decision": "add",
+        "alignment": "water-equivalent depth quantity",
+        "scope": "Equivalent liquid-water depth accumulated over a specified area and interval. This is a length quantity, not the falling process or water volume."
+      },
+      {
+        "concept": "rainfall_depth",
+        "synset": null,
+        "decision": "add",
+        "alignment": "rain-specific depth quantity",
+        "scope": "Accumulated depth due to liquid rain for a specified place and interval."
+      },
+      {
+        "concept": "snow_depth",
+        "synset": null,
+        "decision": "add",
+        "alignment": "snow-layer dimension",
+        "scope": "Depth of a snow layer. This is distinct from its liquid-water equivalent and from new snowfall amount."
+      },
+      {
+        "concept": "visibility_distance",
+        "synset": null,
+        "decision": "add",
+        "alignment": "distance quantity rather than general perceptibility",
+        "scope": "Horizontal distance over which a suitable object can be identified under the relevant observing conditions. Do not reuse the existing truth/semblance record 2797."
+      },
+      {
+        "concept": "air_temperature_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measure air temperature, preserving general temperature-measurement ancestry."
+      },
+      {
+        "concept": "precipitation_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measure accumulated water-equivalent depth over a specified interval."
+      },
+      {
+        "concept": "rainfall_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measure the rainfall contribution to accumulated depth."
+      },
+      {
+        "concept": "snow_depth_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measure snow-layer depth rather than assume a constant conversion to water equivalent."
+      },
+      {
+        "concept": "visibility_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Determine meteorological visibility distance under the applicable observation conditions."
+      },
+      {
+        "concept": "precipitation_gauge",
+        "synset": "oewn-04056697-n",
+        "decision": "add",
+        "alignment": "measurement-family adaptation",
+        "scope": "Instrument for precipitation measurement. Its design and preparation determine which precipitation phases can be measured."
+      },
+      {
+        "concept": "rain_gauge",
+        "synset": "oewn-04056697-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Restrict the instrument to measuring rain; do not require a heater or snow-melting capability."
+      },
+      {
+        "concept": "snow_depth_instrument",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A snow-layer depth instrument, without restricting every design to a ruler, laser or ultrasonic sensor."
+      },
+      {
+        "concept": "air_thermometer",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A thermometer intended for air-temperature measurement, not an implied dew-point or infrared surface-temperature instrument."
+      },
+      {
+        "concept": "forecast_information",
+        "synset": "oewn-06762595-n",
+        "decision": "add",
+        "alignment": "information rather than prediction process",
+        "scope": "An informational prediction of future development. It is neither the forecasting activity nor a guarantee that the predicted event will occur."
+      },
+      {
+        "concept": "weather_forecast",
+        "synset": "oewn-06763412-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A prediction about future atmospheric conditions; not a report of measurements already made."
+      },
+      {
+        "concept": "weather_forecasting",
+        "synset": "oewn-06762443-n",
+        "decision": "add",
+        "alignment": "activity rather than forecast statement",
+        "scope": "The activity of predicting weather. Adapt the dictionary statement-oriented hierarchy to the existing forecasting action."
+      },
+      {
+        "concept": "weather_observation",
+        "synset": "oewn-01004898-n",
+        "decision": "add",
+        "alignment": "observing activity",
+        "scope": "Observing weather and recording relevant conditions or measurements. Do not require every observation to measure every weather quantity."
+      },
+      {
+        "concept": "weather_record",
+        "synset": null,
+        "decision": "add",
+        "alignment": "information product",
+        "scope": "Recorded information from an observation, distinct from the observation activity and from a forecast."
+      },
+      {
+        "concept": 3004,
+        "synset": "oewn-14542968-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Keep the long-term weather-pattern meaning and its natural-phenomenon genus; do not collapse it into current weather or a single averaging interval."
+      },
+      {
+        "concept": 1663,
+        "synset": "oewn-11478731-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The dictionary material gloss incorrectly speaks of droplets of water vapor. Water droplets are liquid; do not copy that phrase or combine material and phenomenon genera."
+      },
+      {
+        "concept": 1662,
+        "synset": "oewn-11529988-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Russian metel may involve blowing existing snow without fresh snowfall. Defer its blizzard translation and thresholds; do not force all cases beneath snowfall."
+      },
+      {
+        "concept": 2797,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The visibility label and truth/semblance genus are ambiguous. Keep it unchanged pending a dedicated sense split; the meteorological distance is unambiguously separate."
+      },
+      {
+        "concept": 3129,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Direction currently mixes spatial orientation and directing verbs. Defer wind direction and vane purposes until that family is reviewed."
+      },
+      {
+        "concept": 2743,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The atmosphere/layer part-whole distinction requires a separate review; a stratosphere is not a kind of atmosphere."
+      },
+      {
+        "concept": 1258,
+        "synset": "oewn-14858302-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Dew is condensed liquid on a surface, not falling precipitation."
+      },
+      {
+        "concept": 1674,
+        "synset": "oewn-14939773-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The existing frost record is deposited solid material, not every use of frost for freezing weather or the deposition process."
+      }
+    ],
+    "limits": "No forecast guarantee, regional alert threshold, climate averaging mandate, instrument accuracy, quantitative weather cutoff or universal causal probability. Do not import the bare ambiguous sleet term or the water-vapor-droplet error in the dictionary fog gloss. Fog/cloud material senses, atmospheric layers, wind-direction/space senses, general visibility, freezing deposits, inherited weather percentages and physical genera of other natural phenomena remain queued. No application test suites.",
+    "exclusion_review": {
+      "context": "U1 positive genus witnesses",
+      "before_conflicting_edges": 15,
+      "resolved_edges": [
+        3478
+      ],
+      "decision": "Reject weather/natural-phenomenon exclusion while preserving that ancestry. Broaden natural phenomenon so weather states are not forced to be processes. Preserve all other exclusion rows.",
+      "remaining_candidates_expected": 14
+    },
+    "new_term_collisions": [],
+    "collision_decision": "No exact normalized cross-language collision is accepted. Existing humidity, dew point, pressure, wind speed, measuring tools and forecasting are reused.",
+    "refreshed_comparison": {
+      "baseline": "Q21",
+      "existing_concepts": 12892,
+      "existing_terms": 36374,
+      "synsets_with_exact_en_candidate": 15543,
+      "synsets_without_exact_en_candidate": 91976,
+      "existing_concepts_with_dictionary_candidate": 4121,
+      "caveat": "Normalized spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "atmospheric_phenomenon",
+      "name": "атмосферное явление",
+      "parent": 1651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "атмосферное явление",
+          "ru"
+        ],
+        [
+          "atmospheric phenomenon",
+          "en"
+        ]
+      ],
+      "reason": "A natural phenomenon of the atmosphere; this family can include conditions and processes without identifying them. OEWN 2025: oewn-11445694-n."
+    },
+    {
+      "key": "precipitation_process",
+      "name": "выпадение атмосферных осадков",
+      "parent": "atmospheric_phenomenon",
+      "universum_id": 1,
+      "terms": [
+        [
+          "выпадение атмосферных осадков",
+          "ru"
+        ],
+        [
+          "precipitation (falling atmospheric water)",
+          "en"
+        ],
+        [
+          "atmospheric precipitation (process)",
+          "en"
+        ]
+      ],
+      "reason": "Water falling from clouds as droplets or ice particles. Select the physical occurrence, not deposited material, accumulated amount, haste or chemical precipitation. OEWN 2025: oewn-11515038-n. Source: https://www.weather.gov/otx/full_weather_glossary"
+    },
+    {
+      "key": "rain_shower",
+      "name": "кратковременный дождь",
+      "parent": 1652,
+      "universum_id": 1,
+      "terms": [
+        [
+          "кратковременный дождь",
+          "ru"
+        ],
+        [
+          "rain shower",
+          "en"
+        ]
+      ],
+      "reason": "A short rain episode. Do not equate every shower with heavy downpour or with a shower fixture. OEWN 2025: oewn-11522915-n. Source: https://www.weather.gov/otx/full_weather_glossary"
+    },
+    {
+      "key": "snow_shower",
+      "name": "кратковременный снегопад",
+      "parent": 1653,
+      "universum_id": 1,
+      "terms": [
+        [
+          "кратковременный снегопад",
+          "ru"
+        ],
+        [
+          "snow shower",
+          "en"
+        ]
+      ],
+      "reason": "A short snowfall episode; no required wind or heavy-snow threshold. Source: https://www.weather.gov/otx/full_weather_glossary"
+    },
+    {
+      "key": "hailfall",
+      "name": "выпадение града",
+      "parent": "precipitation_process",
+      "universum_id": 1,
+      "terms": [
+        [
+          "выпадение града",
+          "ru"
+        ],
+        [
+          "hailfall",
+          "en"
+        ],
+        [
+          "hail precipitation",
+          "en"
+        ]
+      ],
+      "reason": "The falling of hail, distinct from the existing hail-material record 1226. No thunderstorm or temperature threshold is universal. OEWN 2025: oewn-11485929-n. Source: https://www.weather.gov/otx/full_weather_glossary"
+    },
+    {
+      "key": "freezing_rain",
+      "name": "замерзающий дождь",
+      "parent": 1652,
+      "universum_id": 1,
+      "terms": [
+        [
+          "замерзающий дождь",
+          "ru"
+        ],
+        [
+          "freezing rain",
+          "en"
+        ],
+        [
+          "переохлаждённый дождь",
+          "ru"
+        ]
+      ],
+      "reason": "Rain whose supercooled drops freeze on contact with exposed surfaces. Distinguish it from already frozen ice pellets and from the resulting ice coating. The Russian term is also used in the cited Roshydromet research. Source: https://method.meteorf.ru/publ/tr/tr382/htm/04.htm"
+    },
+    {
+      "key": "freezing_drizzle",
+      "name": "замерзающая морось",
+      "parent": 1655,
+      "universum_id": 1,
+      "terms": [
+        [
+          "замерзающая морось",
+          "ru"
+        ],
+        [
+          "freezing drizzle",
+          "en"
+        ],
+        [
+          "переохлаждённая морось",
+          "ru"
+        ]
+      ],
+      "reason": "Drizzle that freezes on contact. No rain/drizzle drop-size threshold is encoded. Source: https://www.weather.gov/otx/full_weather_glossary"
+    },
+    {
+      "key": "rain_snow_mix",
+      "name": "дождь со снегом",
+      "parent": "precipitation_process",
+      "universum_id": 1,
+      "terms": [
+        [
+          "дождь со снегом",
+          "ru"
+        ],
+        [
+          "mixed rain and snow",
+          "en"
+        ],
+        [
+          "sleet (rain and snow)",
+          "en"
+        ]
+      ],
+      "reason": "A precipitation episode with both rain and snow components. Bare sleet is excluded because American usage commonly denotes ice pellets. OEWN 2025: oewn-11528369-n. Source: https://weather.metoffice.gov.uk/learn-about/weather/types-of-weather/snow/sleet"
+    },
+    {
+      "key": "rainy_weather",
+      "name": "дождливая погода",
+      "parent": 2074,
+      "universum_id": 1,
+      "terms": [
+        [
+          "дождливая погода",
+          "ru"
+        ],
+        [
+          "rainy weather",
+          "en"
+        ]
+      ],
+      "reason": "Weather characterized by rain. The whole atmospheric condition is distinct from the falling-water process. OEWN 2025: oewn-02561103-s."
+    },
+    {
+      "key": "windy_weather",
+      "name": "ветреная погода",
+      "parent": 2074,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ветреная погода",
+          "ru"
+        ],
+        [
+          "windy weather",
+          "en"
+        ]
+      ],
+      "reason": "Weather characterized by wind. No warning threshold or metaphorical verbose meaning is imported. OEWN 2025: oewn-00306024-s."
+    },
+    {
+      "key": "rainy_windy_weather",
+      "name": "дождливая ветреная погода",
+      "parent": "rainy_weather",
+      "universum_id": 1,
+      "terms": [
+        [
+          "дождливая ветреная погода",
+          "ru"
+        ],
+        [
+          "rainy and windy weather",
+          "en"
+        ]
+      ],
+      "reason": "Weather with both rain and wind; an explicit shared subtype of the two conditions."
+    },
+    {
+      "key": "snowfall_weather",
+      "name": "погода со снегопадом",
+      "parent": 2074,
+      "universum_id": 1,
+      "terms": [
+        [
+          "погода со снегопадом",
+          "ru"
+        ],
+        [
+          "weather with snowfall",
+          "en"
+        ]
+      ],
+      "reason": "Weather during snowfall, not merely a landscape with old snow on the ground. Source: https://www.weather.gov/otx/full_weather_glossary"
+    },
+    {
+      "key": "air_temperature",
+      "name": "температура воздуха",
+      "parent": 46,
+      "universum_id": 1,
+      "terms": [
+        [
+          "температура воздуха",
+          "ru"
+        ],
+        [
+          "air temperature",
+          "en"
+        ]
+      ],
+      "reason": "Temperature of air at the relevant place and time, distinct from dew-point temperature, apparent temperature and a thermometer. Source: https://weather.metoffice.gov.uk/learn-about/met-office-for-schools/other-content/other-resources/how-to-measure-the-weather"
+    },
+    {
+      "key": "cloud_amount",
+      "name": "облачность (доля неба)",
+      "parent": 2709,
+      "universum_id": 1,
+      "terms": [
+        [
+          "облачность (доля неба)",
+          "ru"
+        ],
+        [
+          "cloud amount (sky fraction)",
+          "en"
+        ],
+        [
+          "cloud cover fraction",
+          "en"
+        ]
+      ],
+      "reason": "The fraction of sky covered by clouds. Select a quantitative property, not a cloud object, bad-weather judgment or atmospheric state. Source: https://weather.metoffice.gov.uk/learn-about/met-office-for-schools/other-content/other-resources/how-to-measure-the-weather"
+    },
+    {
+      "key": "precipitation_depth",
+      "name": "высота слоя атмосферных осадков",
+      "parent": 2895,
+      "universum_id": 1,
+      "terms": [
+        [
+          "высота слоя атмосферных осадков",
+          "ru"
+        ],
+        [
+          "precipitation depth",
+          "en"
+        ],
+        [
+          "precipitation amount (water-equivalent depth)",
+          "en"
+        ]
+      ],
+      "reason": "Equivalent liquid-water depth accumulated over a specified area and interval. This is a length quantity, not the falling process or water volume. Source: https://weather.metoffice.gov.uk/guides/observations/how-we-measure-rainfall"
+    },
+    {
+      "key": "rainfall_depth",
+      "name": "высота слоя дождевых осадков",
+      "parent": "precipitation_depth",
+      "universum_id": 1,
+      "terms": [
+        [
+          "высота слоя дождевых осадков",
+          "ru"
+        ],
+        [
+          "rainfall depth",
+          "en"
+        ]
+      ],
+      "reason": "Accumulated depth due to liquid rain for a specified place and interval. Source: https://weather.metoffice.gov.uk/guides/observations/how-we-measure-rainfall"
+    },
+    {
+      "key": "snow_depth",
+      "name": "высота снежного покрова",
+      "parent": 2895,
+      "universum_id": 1,
+      "terms": [
+        [
+          "высота снежного покрова",
+          "ru"
+        ],
+        [
+          "snow depth",
+          "en"
+        ]
+      ],
+      "reason": "Depth of a snow layer. This is distinct from its liquid-water equivalent and from new snowfall amount. Source: https://weather.metoffice.gov.uk/learn-about/met-office-for-schools/other-content/other-resources/how-to-measure-the-weather"
+    },
+    {
+      "key": "visibility_distance",
+      "name": "метеорологическая дальность видимости",
+      "parent": 2895,
+      "universum_id": 1,
+      "terms": [
+        [
+          "метеорологическая дальность видимости",
+          "ru"
+        ],
+        [
+          "meteorological visibility distance",
+          "en"
+        ],
+        [
+          "meteorological visibility",
+          "en"
+        ]
+      ],
+      "reason": "Horizontal distance over which a suitable object can be identified under the relevant observing conditions. Do not reuse the existing truth/semblance record 2797. Source: https://www.weather.gov/otx/full_weather_glossary"
+    },
+    {
+      "key": "air_temperature_measurement",
+      "name": "измерение температуры воздуха",
+      "parent": 24555,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение температуры воздуха",
+          "ru"
+        ],
+        [
+          "air temperature measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measure air temperature, preserving general temperature-measurement ancestry. Source: https://weather.metoffice.gov.uk/learn-about/met-office-for-schools/other-content/other-resources/how-to-measure-the-weather"
+    },
+    {
+      "key": "precipitation_measurement",
+      "name": "измерение высоты слоя осадков",
+      "parent": 24556,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение высоты слоя осадков",
+          "ru"
+        ],
+        [
+          "precipitation depth measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measure accumulated water-equivalent depth over a specified interval. Source: https://weather.metoffice.gov.uk/guides/observations/how-we-measure-rainfall"
+    },
+    {
+      "key": "rainfall_measurement",
+      "name": "измерение высоты слоя дождевых осадков",
+      "parent": "precipitation_measurement",
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение высоты слоя дождевых осадков",
+          "ru"
+        ],
+        [
+          "rainfall depth measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measure the rainfall contribution to accumulated depth. Source: https://weather.metoffice.gov.uk/guides/observations/how-we-measure-rainfall"
+    },
+    {
+      "key": "snow_depth_measurement",
+      "name": "измерение высоты снежного покрова",
+      "parent": 24556,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение высоты снежного покрова",
+          "ru"
+        ],
+        [
+          "snow depth measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measure snow-layer depth rather than assume a constant conversion to water equivalent. Source: https://weather.metoffice.gov.uk/learn-about/met-office-for-schools/other-content/other-resources/how-to-measure-the-weather"
+    },
+    {
+      "key": "visibility_measurement",
+      "name": "измерение дальности видимости",
+      "parent": 24556,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение дальности видимости",
+          "ru"
+        ],
+        [
+          "meteorological visibility measurement",
+          "en"
+        ]
+      ],
+      "reason": "Determine meteorological visibility distance under the applicable observation conditions. Source: https://weather.metoffice.gov.uk/learn-about/met-office-for-schools/other-content/other-resources/how-to-measure-the-weather"
+    },
+    {
+      "key": "precipitation_gauge",
+      "name": "осадкомер",
+      "parent": 24564,
+      "universum_id": 1,
+      "terms": [
+        [
+          "осадкомер",
+          "ru"
+        ],
+        [
+          "precipitation gauge",
+          "en"
+        ]
+      ],
+      "reason": "Instrument for precipitation measurement. Its design and preparation determine which precipitation phases can be measured. OEWN 2025: oewn-04056697-n. Source: https://weather.metoffice.gov.uk/guides/observations/how-we-measure-rainfall"
+    },
+    {
+      "key": "rain_gauge",
+      "name": "дождемер",
+      "parent": "precipitation_gauge",
+      "universum_id": 1,
+      "terms": [
+        [
+          "дождемер",
+          "ru"
+        ],
+        [
+          "rain gauge",
+          "en"
+        ],
+        [
+          "rain gage",
+          "en"
+        ]
+      ],
+      "reason": "Restrict the instrument to measuring rain; do not require a heater or snow-melting capability. OEWN 2025: oewn-04056697-n. Source: https://weather.metoffice.gov.uk/guides/observations/how-we-measure-rainfall"
+    },
+    {
+      "key": "snow_depth_instrument",
+      "name": "прибор для измерения высоты снежного покрова",
+      "parent": 24564,
+      "universum_id": 1,
+      "terms": [
+        [
+          "прибор для измерения высоты снежного покрова",
+          "ru"
+        ],
+        [
+          "snow depth measuring instrument",
+          "en"
+        ]
+      ],
+      "reason": "A snow-layer depth instrument, without restricting every design to a ruler, laser or ultrasonic sensor. Source: https://weather.metoffice.gov.uk/learn-about/met-office-for-schools/other-content/other-resources/how-to-measure-the-weather"
+    },
+    {
+      "key": "air_thermometer",
+      "name": "термометр для измерения температуры воздуха",
+      "parent": 3555,
+      "universum_id": 1,
+      "terms": [
+        [
+          "термометр для измерения температуры воздуха",
+          "ru"
+        ],
+        [
+          "air thermometer",
+          "en"
+        ]
+      ],
+      "reason": "A thermometer intended for air-temperature measurement, not an implied dew-point or infrared surface-temperature instrument. Source: https://weather.metoffice.gov.uk/learn-about/met-office-for-schools/other-content/other-resources/how-to-measure-the-weather"
+    },
+    {
+      "key": "forecast_information",
+      "name": "прогноз (информационный результат)",
+      "parent": 265,
+      "universum_id": 1,
+      "terms": [
+        [
+          "прогноз (информационный результат)",
+          "ru"
+        ],
+        [
+          "forecast (information)",
+          "en"
+        ],
+        [
+          "прогноз",
+          "ru"
+        ],
+        [
+          "forecast",
+          "en"
+        ]
+      ],
+      "reason": "An informational prediction of future development. It is neither the forecasting activity nor a guarantee that the predicted event will occur. OEWN 2025: oewn-06762595-n."
+    },
+    {
+      "key": "weather_forecast",
+      "name": "прогноз погоды",
+      "parent": "forecast_information",
+      "universum_id": 1,
+      "terms": [
+        [
+          "прогноз погоды",
+          "ru"
+        ],
+        [
+          "weather forecast",
+          "en"
+        ],
+        [
+          "weather outlook",
+          "en"
+        ]
+      ],
+      "reason": "A prediction about future atmospheric conditions; not a report of measurements already made. OEWN 2025: oewn-06763412-n. Source: https://weather.metoffice.gov.uk/guides/what-does-this-forecast-mean"
+    },
+    {
+      "key": "weather_forecasting",
+      "name": "прогнозирование погоды",
+      "parent": 23450,
+      "universum_id": 1,
+      "terms": [
+        [
+          "прогнозирование погоды",
+          "ru"
+        ],
+        [
+          "weather forecasting",
+          "en"
+        ]
+      ],
+      "reason": "The activity of predicting weather. Adapt the dictionary statement-oriented hierarchy to the existing forecasting action. OEWN 2025: oewn-06762443-n. Source: https://weather.metoffice.gov.uk/guides/what-does-this-forecast-mean"
+    },
+    {
+      "key": "weather_observation",
+      "name": "метеорологическое наблюдение",
+      "parent": 2596,
+      "universum_id": 1,
+      "terms": [
+        [
+          "метеорологическое наблюдение",
+          "ru"
+        ],
+        [
+          "meteorological observation",
+          "en"
+        ],
+        [
+          "weather observation (activity)",
+          "en"
+        ]
+      ],
+      "reason": "Observing weather and recording relevant conditions or measurements. Do not require every observation to measure every weather quantity. OEWN 2025: oewn-01004898-n. Source: https://weather.metoffice.gov.uk/learn-about/met-office-for-schools/other-content/other-resources/how-to-measure-the-weather"
+    },
+    {
+      "key": "weather_record",
+      "name": "запись метеорологического наблюдения",
+      "parent": 265,
+      "universum_id": 1,
+      "terms": [
+        [
+          "запись метеорологического наблюдения",
+          "ru"
+        ],
+        [
+          "weather observation record",
+          "en"
+        ]
+      ],
+      "reason": "Recorded information from an observation, distinct from the observation activity and from a forecast. Source: https://weather.metoffice.gov.uk/learn-about/met-office-for-schools/other-content/other-resources/how-to-measure-the-weather"
+    }
+  ],
+  "renames": [],
+  "terms": [
+    {
+      "id": 2074,
+      "name": "погода",
+      "terms": [
+        [
+          "weather condition",
+          "en"
+        ]
+      ],
+      "reason": "Retain the atmospheric-condition sense rather than endure, weathering or sailing homonyms. OEWN 2025: oewn-11545095-n."
+    },
+    {
+      "id": 3004,
+      "name": "климат",
+      "terms": [
+        [
+          "climate (long-term weather pattern)",
+          "en"
+        ]
+      ],
+      "reason": "Keep the longer-term distribution of weather distinct from the conditions at one observation time. No fixed averaging period is required. OEWN 2025: oewn-14542968-n."
+    },
+    {
+      "id": 1652,
+      "name": "дождь",
+      "terms": [
+        [
+          "rainfall (process)",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the falling-water meaning; rainfall depth receives its own quantity record. OEWN 2025: oewn-11521799-n."
+    }
+  ],
+  "remove_terms": [],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 2477,
+      "before": [
+        1651,
+        "14",
+        54,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1651,
+          "14",
+          2535,
+          null,
+          1
+        ]
+      ],
+      "reason": "Natural phenomenon includes atmospheric conditions and is broader than physical process. Use phenomenon as the genus; add physical-process ancestry only to the selected process senses below. OEWN 2025: oewn-11428673-n."
+    },
+    {
+      "id": 3478,
+      "before": [
+        1651,
+        "61",
+        2074,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "Weather is a natural atmospheric phenomenon, so it cannot be disjoint from natural phenomenon. Retain that ancestry through atmospheric phenomenon. OEWN 2025: oewn-11545095-n. Source: https://weather.metoffice.gov.uk/climate/climate-explained/what-is-climate"
+    },
+    {
+      "id": 3321,
+      "before": [
+        2074,
+        "14",
+        1651,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2074,
+          "14",
+          "atmospheric_phenomenon",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine weather through atmospheric phenomenon; retain natural-phenomenon ancestry. OEWN 2025: oewn-11545095-n. Source: https://weather.metoffice.gov.uk/climate/climate-explained/what-is-climate"
+    },
+    {
+      "id": 2478,
+      "before": [
+        1652,
+        "14",
+        1651,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1652,
+          "14",
+          "precipitation_process",
+          null,
+          1
+        ]
+      ],
+      "reason": "Rain is the selected falling-liquid precipitation process. Keep its ordinary drizzle subtype without importing every specialized reporting convention. OEWN 2025: oewn-11521799-n. Source: https://www.weather.gov/otx/full_weather_glossary"
+    },
+    {
+      "id": 2479,
+      "before": [
+        1653,
+        "14",
+        1651,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1653,
+          "14",
+          "precipitation_process",
+          null,
+          1
+        ]
+      ],
+      "reason": "Snowfall is falling precipitation, distinct from snow as material or snow-cover depth. OEWN 2025: oewn-11528800-n. Source: https://www.weather.gov/otx/full_weather_glossary"
+    },
+    {
+      "id": 2489,
+      "before": [
+        1663,
+        "14",
+        1651,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1663,
+          "14",
+          "atmospheric_phenomenon",
+          null,
+          1
+        ]
+      ],
+      "reason": "Keep fog as the existing atmospheric phenomenon. Its material aerosol sense is not combined with the phenomenon record. OEWN 2025: oewn-14545250-n. Source: https://www.weather.gov/otx/full_weather_glossary"
+    }
+  ],
+  "edges": [
+    {
+      "subject": 2074,
+      "kod": "14",
+      "object": 2633,
+      "universum_id": 1,
+      "reason": "Select the atmospheric condition at a place and time, not a weathering process. OEWN 2025: oewn-11545095-n. Source: https://weather.metoffice.gov.uk/climate/climate-explained/what-is-climate"
+    },
+    {
+      "subject": "precipitation_process",
+      "kod": "14",
+      "object": 54,
+      "universum_id": 1,
+      "reason": "The selected falling of droplets or ice is a physical process, unlike an atmospheric state. OEWN 2025: oewn-11515038-n."
+    },
+    {
+      "subject": 1659,
+      "kod": "14",
+      "object": 54,
+      "universum_id": 1,
+      "reason": "Wind in the existing atmospheric-motion sense retains physical-process ancestry after broadening natural phenomenon. OEWN 2025: oewn-11445694-n. Source: https://www.weather.gov/otx/full_weather_glossary"
+    },
+    {
+      "subject": "rain_snow_mix",
+      "kod": "20",
+      "object": 1652,
+      "universum_id": 1,
+      "reason": "The mixed episode includes a rain component; it is not classified as exclusively liquid precipitation."
+    },
+    {
+      "subject": "rain_snow_mix",
+      "kod": "20",
+      "object": 1653,
+      "universum_id": 1,
+      "reason": "The mixed episode includes a snowfall component; it is not classified as exclusively solid precipitation."
+    },
+    {
+      "subject": "hailfall",
+      "kod": "20",
+      "object": 1226,
+      "universum_id": 1,
+      "reason": "Falling hail is the material component of the occurrence, not its genus."
+    },
+    {
+      "subject": "rainy_windy_weather",
+      "kod": "14",
+      "object": "windy_weather",
+      "universum_id": 1,
+      "reason": "Rain and wind conditions may coexist without equating their physical processes."
+    },
+    {
+      "subject": "rainy_weather",
+      "kod": "20",
+      "object": 1652,
+      "universum_id": 1,
+      "reason": "The atmospheric condition includes the specified weather process; component presence does not mean is-a."
+    },
+    {
+      "subject": "windy_weather",
+      "kod": "20",
+      "object": 1659,
+      "universum_id": 1,
+      "reason": "The atmospheric condition includes the specified weather process; component presence does not mean is-a."
+    },
+    {
+      "subject": "snowfall_weather",
+      "kod": "20",
+      "object": 1653,
+      "universum_id": 1,
+      "reason": "The atmospheric condition includes the specified weather process; component presence does not mean is-a."
+    },
+    {
+      "subject": 99,
+      "kod": "20",
+      "object": "air_temperature",
+      "universum_id": 1,
+      "reason": "The selected material, process or atmospheric condition has this scoped measurable quantity. No value or causal probability is asserted."
+    },
+    {
+      "subject": 2074,
+      "kod": "20",
+      "object": "air_temperature",
+      "universum_id": 1,
+      "reason": "The selected material, process or atmospheric condition has this scoped measurable quantity. No value or causal probability is asserted."
+    },
+    {
+      "subject": 2074,
+      "kod": "20",
+      "object": 24554,
+      "universum_id": 1,
+      "reason": "The selected material, process or atmospheric condition has this scoped measurable quantity. No value or causal probability is asserted."
+    },
+    {
+      "subject": 2074,
+      "kod": "20",
+      "object": 24573,
+      "universum_id": 1,
+      "reason": "The selected material, process or atmospheric condition has this scoped measurable quantity. No value or causal probability is asserted."
+    },
+    {
+      "subject": 2074,
+      "kod": "20",
+      "object": "cloud_amount",
+      "universum_id": 1,
+      "reason": "The selected material, process or atmospheric condition has this scoped measurable quantity. No value or causal probability is asserted."
+    },
+    {
+      "subject": 2074,
+      "kod": "20",
+      "object": "visibility_distance",
+      "universum_id": 1,
+      "reason": "The selected material, process or atmospheric condition has this scoped measurable quantity. No value or causal probability is asserted."
+    },
+    {
+      "subject": "precipitation_process",
+      "kod": "20",
+      "object": "precipitation_depth",
+      "universum_id": 1,
+      "reason": "The selected material, process or atmospheric condition has this scoped measurable quantity. No value or causal probability is asserted."
+    },
+    {
+      "subject": 1652,
+      "kod": "20",
+      "object": "rainfall_depth",
+      "universum_id": 1,
+      "reason": "The selected material, process or atmospheric condition has this scoped measurable quantity. No value or causal probability is asserted."
+    },
+    {
+      "subject": 1218,
+      "kod": "20",
+      "object": "snow_depth",
+      "universum_id": 1,
+      "reason": "The selected material, process or atmospheric condition has this scoped measurable quantity. No value or causal probability is asserted."
+    },
+    {
+      "subject": "air_temperature_measurement",
+      "kod": "27",
+      "object": "air_temperature",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://weather.metoffice.gov.uk/learn-about/met-office-for-schools/other-content/other-resources/how-to-measure-the-weather"
+    },
+    {
+      "subject": "precipitation_measurement",
+      "kod": "27",
+      "object": "precipitation_depth",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://weather.metoffice.gov.uk/guides/observations/how-we-measure-rainfall"
+    },
+    {
+      "subject": "rainfall_measurement",
+      "kod": "27",
+      "object": "rainfall_depth",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://weather.metoffice.gov.uk/guides/observations/how-we-measure-rainfall"
+    },
+    {
+      "subject": "snow_depth_measurement",
+      "kod": "27",
+      "object": "snow_depth",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://weather.metoffice.gov.uk/learn-about/met-office-for-schools/other-content/other-resources/how-to-measure-the-weather"
+    },
+    {
+      "subject": "visibility_measurement",
+      "kod": "27",
+      "object": "visibility_distance",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://weather.metoffice.gov.uk/learn-about/met-office-for-schools/other-content/other-resources/how-to-measure-the-weather"
+    },
+    {
+      "subject": "precipitation_gauge",
+      "kod": "21",
+      "object": "precipitation_measurement",
+      "universum_id": 1,
+      "reason": "Intended to measure accumulated precipitation depth. Source: https://weather.metoffice.gov.uk/guides/observations/how-we-measure-rainfall"
+    },
+    {
+      "subject": "rain_gauge",
+      "kod": "21",
+      "object": "rainfall_measurement",
+      "universum_id": 1,
+      "reason": "The instrument is intended for the selected measurement. OEWN 2025: oewn-04056697-n. Source: https://weather.metoffice.gov.uk/guides/observations/how-we-measure-rainfall"
+    },
+    {
+      "subject": "snow_depth_instrument",
+      "kod": "21",
+      "object": "snow_depth_measurement",
+      "universum_id": 1,
+      "reason": "The instrument is intended for the selected measurement. Source: https://weather.metoffice.gov.uk/learn-about/met-office-for-schools/other-content/other-resources/how-to-measure-the-weather"
+    },
+    {
+      "subject": "air_thermometer",
+      "kod": "21",
+      "object": "air_temperature_measurement",
+      "universum_id": 1,
+      "reason": "The instrument is intended for the selected measurement. Source: https://weather.metoffice.gov.uk/learn-about/met-office-for-schools/other-content/other-resources/how-to-measure-the-weather"
+    },
+    {
+      "subject": 23450,
+      "kod": "70",
+      "object": "forecast_information",
+      "universum_id": 1,
+      "reason": "Forecasting produces a forecast, not necessarily the future event described. OEWN 2025: oewn-06762595-n."
+    },
+    {
+      "subject": "weather_forecasting",
+      "kod": "27",
+      "object": 2074,
+      "universum_id": 1,
+      "reason": "Weather is the phenomenon being predicted, not produced by the act of forecasting."
+    },
+    {
+      "subject": "weather_forecasting",
+      "kod": "70",
+      "object": "weather_forecast",
+      "universum_id": 1,
+      "reason": "The forecasting activity produces a weather forecast as information."
+    },
+    {
+      "subject": "weather_observation",
+      "kod": "27",
+      "object": 2074,
+      "universum_id": 1,
+      "reason": "The selected observation concerns weather conditions."
+    },
+    {
+      "subject": "weather_observation",
+      "kod": "70",
+      "object": "weather_record",
+      "universum_id": 1,
+      "reason": "The scoped observing-and-recording activity produces a record."
+    }
+  ],
+  "checks": [
+    {
+      "subject": 1651,
+      "kod": "14",
+      "object": 54,
+      "present": false
+    },
+    {
+      "subject": 1651,
+      "kod": "14",
+      "object": 2535,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1651,
+      "kod": "61",
+      "object": 2074,
+      "present": false
+    },
+    {
+      "subject": "atmospheric_phenomenon",
+      "kod": "14",
+      "object": 1651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2074,
+      "kod": "14",
+      "object": 1651,
+      "present": false
+    },
+    {
+      "subject": 2074,
+      "kod": "14",
+      "object": "atmospheric_phenomenon",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2074,
+      "kod": "14",
+      "object": 2633,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "precipitation_process",
+      "kod": "14",
+      "object": "atmospheric_phenomenon",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "precipitation_process",
+      "kod": "14",
+      "object": 54,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1652,
+      "kod": "14",
+      "object": 1651,
+      "present": false
+    },
+    {
+      "subject": 1652,
+      "kod": "14",
+      "object": "precipitation_process",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1653,
+      "kod": "14",
+      "object": 1651,
+      "present": false
+    },
+    {
+      "subject": 1653,
+      "kod": "14",
+      "object": "precipitation_process",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1659,
+      "kod": "14",
+      "object": 54,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1663,
+      "kod": "14",
+      "object": 1651,
+      "present": false
+    },
+    {
+      "subject": 1663,
+      "kod": "14",
+      "object": "atmospheric_phenomenon",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rain_shower",
+      "kod": "14",
+      "object": 1652,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "snow_shower",
+      "kod": "14",
+      "object": 1653,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hailfall",
+      "kod": "14",
+      "object": "precipitation_process",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "freezing_rain",
+      "kod": "14",
+      "object": 1652,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "freezing_drizzle",
+      "kod": "14",
+      "object": 1655,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rain_snow_mix",
+      "kod": "14",
+      "object": "precipitation_process",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rain_snow_mix",
+      "kod": "20",
+      "object": 1652,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rain_snow_mix",
+      "kod": "20",
+      "object": 1653,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hailfall",
+      "kod": "20",
+      "object": 1226,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rainy_weather",
+      "kod": "14",
+      "object": 2074,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "windy_weather",
+      "kod": "14",
+      "object": 2074,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rainy_windy_weather",
+      "kod": "14",
+      "object": "rainy_weather",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rainy_windy_weather",
+      "kod": "14",
+      "object": "windy_weather",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "snowfall_weather",
+      "kod": "14",
+      "object": 2074,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rainy_weather",
+      "kod": "20",
+      "object": 1652,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "windy_weather",
+      "kod": "20",
+      "object": 1659,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "snowfall_weather",
+      "kod": "20",
+      "object": 1653,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "air_temperature",
+      "kod": "14",
+      "object": 46,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cloud_amount",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "precipitation_depth",
+      "kod": "14",
+      "object": 2895,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rainfall_depth",
+      "kod": "14",
+      "object": "precipitation_depth",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "snow_depth",
+      "kod": "14",
+      "object": 2895,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "visibility_distance",
+      "kod": "14",
+      "object": 2895,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 99,
+      "kod": "20",
+      "object": "air_temperature",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2074,
+      "kod": "20",
+      "object": "air_temperature",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2074,
+      "kod": "20",
+      "object": 24554,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2074,
+      "kod": "20",
+      "object": 24573,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2074,
+      "kod": "20",
+      "object": "cloud_amount",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2074,
+      "kod": "20",
+      "object": "visibility_distance",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "precipitation_process",
+      "kod": "20",
+      "object": "precipitation_depth",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1652,
+      "kod": "20",
+      "object": "rainfall_depth",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1218,
+      "kod": "20",
+      "object": "snow_depth",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "air_temperature_measurement",
+      "kod": "14",
+      "object": 24555,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "air_temperature_measurement",
+      "kod": "27",
+      "object": "air_temperature",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "precipitation_measurement",
+      "kod": "14",
+      "object": 24556,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "precipitation_measurement",
+      "kod": "27",
+      "object": "precipitation_depth",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rainfall_measurement",
+      "kod": "14",
+      "object": "precipitation_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rainfall_measurement",
+      "kod": "27",
+      "object": "rainfall_depth",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "snow_depth_measurement",
+      "kod": "14",
+      "object": 24556,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "snow_depth_measurement",
+      "kod": "27",
+      "object": "snow_depth",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "visibility_measurement",
+      "kod": "14",
+      "object": 24556,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "visibility_measurement",
+      "kod": "27",
+      "object": "visibility_distance",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "precipitation_gauge",
+      "kod": "14",
+      "object": 24564,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "precipitation_gauge",
+      "kod": "21",
+      "object": "precipitation_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rain_gauge",
+      "kod": "14",
+      "object": "precipitation_gauge",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rain_gauge",
+      "kod": "21",
+      "object": "rainfall_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "snow_depth_instrument",
+      "kod": "14",
+      "object": 24564,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "snow_depth_instrument",
+      "kod": "21",
+      "object": "snow_depth_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "air_thermometer",
+      "kod": "14",
+      "object": 3555,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "air_thermometer",
+      "kod": "21",
+      "object": "air_temperature_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "forecast_information",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "weather_forecast",
+      "kod": "14",
+      "object": "forecast_information",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "weather_forecasting",
+      "kod": "14",
+      "object": 23450,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "weather_observation",
+      "kod": "14",
+      "object": 2596,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "weather_record",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 23450,
+      "kod": "70",
+      "object": "forecast_information",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "weather_forecasting",
+      "kod": "27",
+      "object": 2074,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "weather_forecasting",
+      "kod": "70",
+      "object": "weather_forecast",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "weather_observation",
+      "kod": "27",
+      "object": 2074,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "weather_observation",
+      "kod": "70",
+      "object": "weather_record",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "weather_forecasting",
+      "kod": "70",
+      "object": 2074,
+      "present": false
+    },
+    {
+      "subject": "weather_observation",
+      "kod": "70",
+      "object": 2074,
+      "present": false
+    },
+    {
+      "subject": "rain_shower",
+      "kod": "14",
+      "object": 1654,
+      "present": false
+    },
+    {
+      "subject": "rainy_weather",
+      "kod": "61",
+      "object": "windy_weather",
+      "present": false
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "atmospheric_phenomenon",
+      "ancestor": 1651,
+      "present": true
+    },
+    {
+      "subject": "precipitation_process",
+      "ancestor": "atmospheric_phenomenon",
+      "present": true
+    },
+    {
+      "subject": "rain_shower",
+      "ancestor": 1652,
+      "present": true
+    },
+    {
+      "subject": "snow_shower",
+      "ancestor": 1653,
+      "present": true
+    },
+    {
+      "subject": "hailfall",
+      "ancestor": "precipitation_process",
+      "present": true
+    },
+    {
+      "subject": "freezing_rain",
+      "ancestor": 1652,
+      "present": true
+    },
+    {
+      "subject": "freezing_drizzle",
+      "ancestor": 1655,
+      "present": true
+    },
+    {
+      "subject": "rain_snow_mix",
+      "ancestor": "precipitation_process",
+      "present": true
+    },
+    {
+      "subject": "rainy_weather",
+      "ancestor": 2074,
+      "present": true
+    },
+    {
+      "subject": "windy_weather",
+      "ancestor": 2074,
+      "present": true
+    },
+    {
+      "subject": "rainy_windy_weather",
+      "ancestor": "rainy_weather",
+      "present": true
+    },
+    {
+      "subject": "snowfall_weather",
+      "ancestor": 2074,
+      "present": true
+    },
+    {
+      "subject": "air_temperature",
+      "ancestor": 46,
+      "present": true
+    },
+    {
+      "subject": "cloud_amount",
+      "ancestor": 2709,
+      "present": true
+    },
+    {
+      "subject": "precipitation_depth",
+      "ancestor": 2895,
+      "present": true
+    },
+    {
+      "subject": "rainfall_depth",
+      "ancestor": "precipitation_depth",
+      "present": true
+    },
+    {
+      "subject": "snow_depth",
+      "ancestor": 2895,
+      "present": true
+    },
+    {
+      "subject": "visibility_distance",
+      "ancestor": 2895,
+      "present": true
+    },
+    {
+      "subject": "air_temperature_measurement",
+      "ancestor": 24555,
+      "present": true
+    },
+    {
+      "subject": "precipitation_measurement",
+      "ancestor": 24556,
+      "present": true
+    },
+    {
+      "subject": "rainfall_measurement",
+      "ancestor": "precipitation_measurement",
+      "present": true
+    },
+    {
+      "subject": "snow_depth_measurement",
+      "ancestor": 24556,
+      "present": true
+    },
+    {
+      "subject": "visibility_measurement",
+      "ancestor": 24556,
+      "present": true
+    },
+    {
+      "subject": "precipitation_gauge",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": "rain_gauge",
+      "ancestor": "precipitation_gauge",
+      "present": true
+    },
+    {
+      "subject": "snow_depth_instrument",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": "air_thermometer",
+      "ancestor": 3555,
+      "present": true
+    },
+    {
+      "subject": "forecast_information",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": "weather_forecast",
+      "ancestor": "forecast_information",
+      "present": true
+    },
+    {
+      "subject": "weather_forecasting",
+      "ancestor": 23450,
+      "present": true
+    },
+    {
+      "subject": "weather_observation",
+      "ancestor": 2596,
+      "present": true
+    },
+    {
+      "subject": "weather_record",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": 2074,
+      "ancestor": 1651,
+      "present": true
+    },
+    {
+      "subject": 2074,
+      "ancestor": 2633,
+      "present": true
+    },
+    {
+      "subject": 1652,
+      "ancestor": 1651,
+      "present": true
+    },
+    {
+      "subject": 1652,
+      "ancestor": 54,
+      "present": true
+    },
+    {
+      "subject": 1653,
+      "ancestor": 54,
+      "present": true
+    },
+    {
+      "subject": 1659,
+      "ancestor": 54,
+      "present": true
+    },
+    {
+      "subject": 1663,
+      "ancestor": 1651,
+      "present": true
+    },
+    {
+      "subject": "freezing_drizzle",
+      "ancestor": "precipitation_process",
+      "present": true
+    },
+    {
+      "subject": "rainy_windy_weather",
+      "ancestor": "rainy_weather",
+      "present": true
+    },
+    {
+      "subject": "rainy_windy_weather",
+      "ancestor": "windy_weather",
+      "present": true
+    },
+    {
+      "subject": "rain_gauge",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": "air_thermometer",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": 1651,
+      "ancestor": 54,
+      "present": false
+    },
+    {
+      "subject": 2074,
+      "ancestor": 2631,
+      "present": false
+    },
+    {
+      "subject": "atmospheric_phenomenon",
+      "ancestor": 54,
+      "present": false
+    },
+    {
+      "subject": "precipitation_process",
+      "ancestor": 2074,
+      "present": false
+    },
+    {
+      "subject": "rainy_weather",
+      "ancestor": 54,
+      "present": false
+    },
+    {
+      "subject": "rain_snow_mix",
+      "ancestor": 1652,
+      "present": false
+    },
+    {
+      "subject": "rain_snow_mix",
+      "ancestor": 1653,
+      "present": false
+    },
+    {
+      "subject": "hailfall",
+      "ancestor": 84,
+      "present": false
+    },
+    {
+      "subject": "hailfall",
+      "ancestor": 1226,
+      "present": false
+    },
+    {
+      "subject": "precipitation_depth",
+      "ancestor": "precipitation_process",
+      "present": false
+    },
+    {
+      "subject": "snow_depth",
+      "ancestor": "precipitation_depth",
+      "present": false
+    },
+    {
+      "subject": "visibility_distance",
+      "ancestor": 2797,
+      "present": false
+    },
+    {
+      "subject": "cloud_amount",
+      "ancestor": 2074,
+      "present": false
+    },
+    {
+      "subject": "forecast_information",
+      "ancestor": 23450,
+      "present": false
+    },
+    {
+      "subject": "weather_forecast",
+      "ancestor": 2074,
+      "present": false
+    },
+    {
+      "subject": "weather_record",
+      "ancestor": "weather_observation",
+      "present": false
+    },
+    {
+      "subject": 1258,
+      "ancestor": "precipitation_process",
+      "present": false
+    },
+    {
+      "subject": 1674,
+      "ancestor": "precipitation_process",
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": "atmospheric_phenomenon",
+      "term": "атмосферное явление",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "atmospheric_phenomenon",
+      "term": "atmospheric phenomenon",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2074,
+      "term": "weather condition",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3004,
+      "term": "climate (long-term weather pattern)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "precipitation_process",
+      "term": "выпадение атмосферных осадков",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "precipitation_process",
+      "term": "precipitation (falling atmospheric water)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "precipitation_process",
+      "term": "atmospheric precipitation (process)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1652,
+      "term": "rainfall (process)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rain_shower",
+      "term": "кратковременный дождь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rain_shower",
+      "term": "rain shower",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "snow_shower",
+      "term": "кратковременный снегопад",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "snow_shower",
+      "term": "snow shower",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hailfall",
+      "term": "выпадение града",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "hailfall",
+      "term": "hailfall",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hailfall",
+      "term": "hail precipitation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "freezing_rain",
+      "term": "замерзающий дождь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "freezing_rain",
+      "term": "freezing rain",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "freezing_rain",
+      "term": "переохлаждённый дождь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "freezing_drizzle",
+      "term": "замерзающая морось",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "freezing_drizzle",
+      "term": "freezing drizzle",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "freezing_drizzle",
+      "term": "переохлаждённая морось",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rain_snow_mix",
+      "term": "дождь со снегом",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rain_snow_mix",
+      "term": "mixed rain and snow",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rain_snow_mix",
+      "term": "sleet (rain and snow)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rainy_weather",
+      "term": "дождливая погода",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rainy_weather",
+      "term": "rainy weather",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "windy_weather",
+      "term": "ветреная погода",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "windy_weather",
+      "term": "windy weather",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rainy_windy_weather",
+      "term": "дождливая ветреная погода",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rainy_windy_weather",
+      "term": "rainy and windy weather",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "snowfall_weather",
+      "term": "погода со снегопадом",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "snowfall_weather",
+      "term": "weather with snowfall",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "air_temperature",
+      "term": "температура воздуха",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "air_temperature",
+      "term": "air temperature",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cloud_amount",
+      "term": "облачность (доля неба)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "cloud_amount",
+      "term": "cloud amount (sky fraction)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cloud_amount",
+      "term": "cloud cover fraction",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "precipitation_depth",
+      "term": "высота слоя атмосферных осадков",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "precipitation_depth",
+      "term": "precipitation depth",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "precipitation_depth",
+      "term": "precipitation amount (water-equivalent depth)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rainfall_depth",
+      "term": "высота слоя дождевых осадков",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rainfall_depth",
+      "term": "rainfall depth",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "snow_depth",
+      "term": "высота снежного покрова",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "snow_depth",
+      "term": "snow depth",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "visibility_distance",
+      "term": "метеорологическая дальность видимости",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "visibility_distance",
+      "term": "meteorological visibility distance",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "visibility_distance",
+      "term": "meteorological visibility",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "air_temperature_measurement",
+      "term": "измерение температуры воздуха",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "air_temperature_measurement",
+      "term": "air temperature measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "precipitation_measurement",
+      "term": "измерение высоты слоя осадков",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "precipitation_measurement",
+      "term": "precipitation depth measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rainfall_measurement",
+      "term": "измерение высоты слоя дождевых осадков",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rainfall_measurement",
+      "term": "rainfall depth measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "snow_depth_measurement",
+      "term": "измерение высоты снежного покрова",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "snow_depth_measurement",
+      "term": "snow depth measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "visibility_measurement",
+      "term": "измерение дальности видимости",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "visibility_measurement",
+      "term": "meteorological visibility measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "precipitation_gauge",
+      "term": "осадкомер",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "precipitation_gauge",
+      "term": "precipitation gauge",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rain_gauge",
+      "term": "дождемер",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rain_gauge",
+      "term": "rain gauge",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rain_gauge",
+      "term": "rain gage",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "snow_depth_instrument",
+      "term": "прибор для измерения высоты снежного покрова",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "snow_depth_instrument",
+      "term": "snow depth measuring instrument",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "air_thermometer",
+      "term": "термометр для измерения температуры воздуха",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "air_thermometer",
+      "term": "air thermometer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "forecast_information",
+      "term": "прогноз (информационный результат)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "forecast_information",
+      "term": "forecast (information)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "forecast_information",
+      "term": "прогноз",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "forecast_information",
+      "term": "forecast",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "weather_forecast",
+      "term": "прогноз погоды",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "weather_forecast",
+      "term": "weather forecast",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "weather_forecast",
+      "term": "weather outlook",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "weather_forecasting",
+      "term": "прогнозирование погоды",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "weather_forecasting",
+      "term": "weather forecasting",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "weather_observation",
+      "term": "метеорологическое наблюдение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "weather_observation",
+      "term": "meteorological observation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "weather_observation",
+      "term": "weather observation (activity)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "weather_record",
+      "term": "запись метеорологического наблюдения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "weather_record",
+      "term": "weather observation record",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rain_snow_mix",
+      "term": "sleet",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

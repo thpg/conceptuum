@@ -1,0 +1,4177 @@
+{
+  "source": "quality-20261009-q39",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Physical containers, vessel materials and food-use intersections; bristled tools, applicators, cleaning implements and scrapers; selected spelling, storage and sweeping repairs.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "ru_brush": "https://ruslang.ru/sites/default/files/2024-12/ASRYa-4-2.pdf",
+      "ru_jar": "https://gramota.ru/poisk?dicts%5B%5D=42&mode=slovari&query=%D0%B1%D0%B0%D0%BD%D0%BA%D0%B0",
+      "ru_spelling": "https://gramota.ru/storage/public/normdicts/orfograficheskij_slovar.pdf",
+      "ru_coloring": "https://gramota.ru/spravka/vopros/285746",
+      "pastry": "https://www.oxo.com/silicone-1-in-pastry-brush.html",
+      "bottle_brush": "https://www.oxo.com/bottle-brush.html?___store=oxo",
+      "dish_brush": "https://www.oxo.com/shop/cleaning-organization/kitchen/sponge-brushes.html",
+      "squeegee": "https://www.oxo.com/shop/cleaning-organization/multi-use-squeegee-with-hook.html",
+      "ice_scraper": "https://www.oxo.com/extendable-twister-snow-brush.html",
+      "paint_scraper": "https://www.bahco.com/gb_en/paint-scrapers-with-rigid-blade-and-plastic-handle-pb_2165_.html",
+      "glass_jar": "https://www.ballmasonjars.com/products/jars/canning-jars/ball%C2%AE-mason-jars-lids%2C-wide-mouth/SP_1888124.html",
+      "plastic_jar": "https://www.thermofisher.com/fr/en/home/life-science/lab-plasticware-supplies/reusable-plasticware/plastic-jars.html",
+      "metal_bottle": "https://www.hydroflask.com/shop/bottles-drinkware/bottles/",
+      "food_can": "https://www.crowncork.com/aerosol-food-packaging/products/food-cans",
+      "beverage_can": "https://crowncork.com/beverage-packaging/products/beverage-cans"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025, with CC BY 4.0 and Princeton notices retained in docs/quality/2026-10-09-q11.md#sources-and-reuse. Russian dictionaries support selected labels; manufacturer descriptions support material and purpose counterexamples. Qualified labels and multiple-genus intersections are editorial adaptations, not dictionary quotations.",
+    "existing_cohort": [
+      30,
+      127,
+      1507,
+      5540,
+      2397,
+      24790,
+      24792,
+      24793,
+      24794,
+      25183,
+      25185,
+      1531,
+      1530,
+      3500,
+      25174,
+      17359,
+      19036,
+      17520,
+      2398,
+      254,
+      5168,
+      6938,
+      25187,
+      1598,
+      1903,
+      2404,
+      1608,
+      347,
+      1242,
+      1231
+    ],
+    "context_policy": "All new concepts and assertions use U1 with unspecified strength. Preserve old home contexts and reviewed direct genera except the explicitly listed corrections. Reuse physical and lexical anchors; no software-container ancestry is imported.",
+    "sense_decisions": [
+      {
+        "concept": "physical_container",
+        "synset": "oewn-03099154-n",
+        "decision": "add",
+        "alignment": "artifact restriction of container",
+        "scope": "An artifact designed to contain physical things; exclude software containers, natural cavities and a quantity of contents."
+      },
+      {
+        "concept": "glass_vessel",
+        "synset": null,
+        "decision": "add",
+        "alignment": "material restriction",
+        "scope": "A vessel with a glass body; closures and other components can use different materials."
+      },
+      {
+        "concept": "plastic_vessel",
+        "synset": null,
+        "decision": "add",
+        "alignment": "material restriction",
+        "scope": "A vessel with a plastic body, independent of its intended contents."
+      },
+      {
+        "concept": "metal_vessel",
+        "synset": null,
+        "decision": "add",
+        "alignment": "material restriction",
+        "scope": "A vessel with a metal body; no particular metal is required."
+      },
+      {
+        "concept": "glass_jar",
+        "synset": null,
+        "decision": "add",
+        "alignment": "form/material intersection",
+        "scope": "The named vessel form with the specified body material; no exclusive contents or universal closure requirement."
+      },
+      {
+        "concept": "plastic_jar",
+        "synset": null,
+        "decision": "add",
+        "alignment": "form/material intersection",
+        "scope": "The named vessel form with the specified body material; no exclusive contents or universal closure requirement."
+      },
+      {
+        "concept": "glass_bottle",
+        "synset": null,
+        "decision": "add",
+        "alignment": "form/material intersection",
+        "scope": "The named vessel form with the specified body material; no exclusive contents or universal closure requirement."
+      },
+      {
+        "concept": "plastic_bottle",
+        "synset": null,
+        "decision": "add",
+        "alignment": "form/material intersection",
+        "scope": "The named vessel form with the specified body material; no exclusive contents or universal closure requirement."
+      },
+      {
+        "concept": "metal_bottle",
+        "synset": null,
+        "decision": "add",
+        "alignment": "form/material intersection",
+        "scope": "The named vessel form with the specified body material; no exclusive contents or universal closure requirement."
+      },
+      {
+        "concept": "food_storage",
+        "synset": null,
+        "decision": "add",
+        "alignment": "patient restriction",
+        "scope": "Storage restricted to food as its object; not the universal meaning of storage."
+      },
+      {
+        "concept": "food_container",
+        "synset": null,
+        "decision": "add",
+        "alignment": "use restriction",
+        "scope": "A manufactured container intended for storing food; it may be empty and need not be a vessel of a particular shape."
+      },
+      {
+        "concept": "food_jar",
+        "synset": null,
+        "decision": "add",
+        "alignment": "form/use intersection",
+        "scope": "A jar intended for food storage."
+      },
+      {
+        "concept": "glass_food_jar",
+        "synset": null,
+        "decision": "add",
+        "alignment": "form/material/use intersection",
+        "scope": "The intersection of glass jars and food-storage jars."
+      },
+      {
+        "concept": "metal_can",
+        "synset": "oewn-02950393-n",
+        "decision": "add",
+        "alignment": "packaging sense with state restriction removed",
+        "scope": "A packaging can with a metal body; opening or emptying it does not erase its type. Do not equate tin can with elemental tin."
+      },
+      {
+        "concept": "food_can",
+        "synset": null,
+        "decision": "add",
+        "alignment": "packaging/use intersection",
+        "scope": "A metal packaging can intended for food, distinct from a jar or a canful."
+      },
+      {
+        "concept": "beverage_can",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A metal can intended for beverage packaging, without requiring a specific metal."
+      },
+      {
+        "concept": "steel_can",
+        "synset": null,
+        "decision": "add",
+        "alignment": "material restriction",
+        "scope": "A packaging can with a steel body; coatings and ends need not share its material."
+      },
+      {
+        "concept": "aluminum_can",
+        "synset": null,
+        "decision": "add",
+        "alignment": "material restriction",
+        "scope": "A packaging can with an aluminium body; not the metal substance itself."
+      },
+      {
+        "concept": "steel_food_can",
+        "synset": null,
+        "decision": "add",
+        "alignment": "material/use intersection",
+        "scope": "A food-packaging can with a steel body."
+      },
+      {
+        "concept": "aluminum_beverage_can",
+        "synset": null,
+        "decision": "add",
+        "alignment": "material/use intersection",
+        "scope": "A beverage can with an aluminium body."
+      },
+      {
+        "concept": "can_opening",
+        "synset": null,
+        "decision": "add",
+        "alignment": "patient restriction",
+        "scope": "Opening the metal packaging container, independent of any particular opener design."
+      },
+      {
+        "concept": "bristled_tool",
+        "synset": "oewn-02911542-n",
+        "decision": "add",
+        "alignment": "editorial structural family",
+        "scope": "A tool whose working part has hair, fibres or bristles, natural or synthetic. The descriptive family connects brushes and application brushes without making pastry tools drawing tools."
+      },
+      {
+        "concept": "surface_application",
+        "synset": "oewn-00713478-n",
+        "decision": "add",
+        "alignment": "physical action restriction",
+        "scope": "Covering a physical surface by applying a substance; distinguish the action from the resulting layer or software application."
+      },
+      {
+        "concept": "applicator",
+        "synset": "oewn-02733263-n",
+        "decision": "add",
+        "alignment": "physical-tool restriction",
+        "scope": "A physical tool intended to apply a substance; no particular bristle or roller construction is required."
+      },
+      {
+        "concept": "paint_application",
+        "synset": "oewn-01365439-v",
+        "decision": "add",
+        "alignment": "method/material restriction",
+        "scope": "The paint-coating sense, excluding making an artwork by nonpaint media or dyeing material in a bath."
+      },
+      {
+        "concept": "paintbrush",
+        "synset": "oewn-03881909-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A bristled applicator for paint, including artistic and decorating uses."
+      },
+      {
+        "concept": "artist_paintbrush",
+        "synset": null,
+        "decision": "add",
+        "alignment": "purpose intersection",
+        "scope": "The intersection of drawing brushes and brushes for applying paint; not all drawing brushes use paint."
+      },
+      {
+        "concept": "paint_roller",
+        "synset": "oewn-03882907-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An applicator spreading paint with a rolling working surface; it is not a bristled brush by definition."
+      },
+      {
+        "concept": "hairbrush",
+        "synset": "oewn-03480704-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A brush for arranging a persons hair; not automatically a cleaning brush or a toothed comb."
+      },
+      {
+        "concept": "cleaning_tool",
+        "synset": "oewn-03043932-n",
+        "decision": "add",
+        "alignment": "tool restriction of cleaning implement",
+        "scope": "A physical tool intended for cleaning; exclude the wider equipment sense that also includes home appliances."
+      },
+      {
+        "concept": "nailbrush",
+        "synset": "oewn-03810720-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A cleaning brush for bodily nails, excluding metal fasteners."
+      },
+      {
+        "concept": "bottle_cleaning",
+        "synset": null,
+        "decision": "add",
+        "alignment": "patient restriction",
+        "scope": "Physical cleaning restricted to a bottle; no particular liquid, disinfectant or hygiene guarantee."
+      },
+      {
+        "concept": "bottle_brush",
+        "synset": "oewn-02880884-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A brush shaped to clean bottle interiors; exclude similarly named plants."
+      },
+      {
+        "concept": "dish_brush",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A cleaning brush for washing dishware."
+      },
+      {
+        "concept": "scraper",
+        "synset": "oewn-04158045-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A handheld scraping tool, distinct from data scraping software or a motorised earthmoving machine."
+      },
+      {
+        "concept": "cleaning_scraper",
+        "synset": null,
+        "decision": "add",
+        "alignment": "construction/purpose intersection",
+        "scope": "A hand scraper intended to remove unwanted deposits; not all scraping is cleaning."
+      },
+      {
+        "concept": "ice_scraper",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A handheld tool for scraping away ice; no melting mechanism or universal surface compatibility."
+      },
+      {
+        "concept": "paint_scraper",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A handheld tool for removing paint by scraping, not applying paint."
+      },
+      {
+        "concept": "water_squeegeeing",
+        "synset": "oewn-01395444-v",
+        "decision": "add",
+        "alignment": "physical action restriction",
+        "scope": "Mechanically moving water away with a flexible wiping edge; not evaporation or scraping solid ice."
+      },
+      {
+        "concept": "squeegee",
+        "synset": "oewn-04300059-n",
+        "decision": "add",
+        "alignment": "water-removal restriction",
+        "scope": "A handheld implement with a flexible edge for clearing water. No mandatory natural-rubber material, T-shape or stain-removal function."
+      },
+      {
+        "concept": "dustpan",
+        "synset": "oewn-03263712-n",
+        "decision": "add",
+        "alignment": "artifact sense, not quantity",
+        "scope": "A manufactured receptacle used to collect swept debris; no mandatory short handle or actual contents."
+      },
+      {
+        "concept": 1507,
+        "synset": "oewn-02911542-n",
+        "decision": "reuse, correct or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reuse and qualify the drawing brush; broad English brush is not a reason to put pastry brushes under it."
+      },
+      {
+        "concept": 5540,
+        "synset": "oewn-02911542-n",
+        "decision": "reuse, correct or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing brush family. A descriptive structural family provides its common genus with application brushes."
+      },
+      {
+        "concept": 1531,
+        "synset": "oewn-03598713-n",
+        "decision": "reuse, correct or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reuse jar, remove universal glass and food assumptions, and distinguish packaging-can vocabulary."
+      },
+      {
+        "concept": 1530,
+        "synset": "oewn-02879899-n",
+        "decision": "reuse, correct or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reuse bottle; the dictionary glass-or-plastic wording is too narrow for metal bottles."
+      },
+      {
+        "concept": 3500,
+        "synset": "oewn-04538393-n",
+        "decision": "reuse, correct or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the manufactured vessel meaning, not a ship or anatomical tube."
+      },
+      {
+        "concept": 347,
+        "synset": "oewn-03099154-n",
+        "decision": "reuse, correct or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Exact English container also finds the existing software concept; do not reuse it as a physical genus."
+      },
+      {
+        "concept": 1274,
+        "synset": "oewn-14683034-n",
+        "decision": "reuse, correct or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Tin the metal is not tin the packaging container; no universal tin-material edge is imported."
+      },
+      {
+        "concept": 19036,
+        "synset": null,
+        "decision": "reuse, correct or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The near-synonymous scraping-off record needs separate aspect and merge review; do not manufacture a semantic distinction merely to retain it."
+      },
+      {
+        "concept": 13031,
+        "synset": null,
+        "decision": "reuse, correct or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The generated label comes from подметить (notice), not подметать (sweep); do not merge on spelling proximity."
+      },
+      {
+        "concept": 6938,
+        "synset": null,
+        "decision": "reuse, correct or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Use the attested modern action label; other generated painting and dyeing records remain queued."
+      },
+      {
+        "concept": "squeegee",
+        "synset": "oewn-04300059-n",
+        "decision": "reuse, correct or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Modern silicone-edge tools refute a strict natural-rubber requirement; water removal need not be dirt removal."
+      },
+      {
+        "concept": "scraper",
+        "synset": "oewn-07407582-n",
+        "decision": "reuse, correct or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The noun scraping can denote sound; that is not the physical-removal action."
+      },
+      {
+        "concept": 254,
+        "synset": null,
+        "decision": "reuse, correct or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Generic storage has social, physical and digital uses; food gets a restricted action rather than a universal patient assertion."
+      }
+    ],
+    "transient_term_removals": [],
+    "limits": "No bulk import or new exclusion axioms. Container material describes its body, not every cap, seal or coating. A food-storage purpose does not assert current contents, food-contact certification, leakproofness or a canning procedure. A metal can need not be currently sealed, full or made of elemental tin. Ordinary brush senses exclude electrical contacts, animal tails and thickets. Natural and synthetic bristles are allowed. Scraping synonyms and remaining generated painting aliases need further review. Existing storage, bottle, drawing, wiping and bucket probabilities remain uncalibrated.",
+    "exclusion_review": {
+      "contexts": [
+        "U1",
+        "U3"
+      ],
+      "before_u1_conflicting_edges": 0,
+      "before_u3_conflicting_edges": 0,
+      "decision": "Preserve clear scans, upper exclusions and all explicit negations. Intersection concepts express supported overlaps without adding blanket disjointness claims."
+    },
+    "new_term_collisions": [],
+    "collision_decision": "No new normalized-term collisions accepted. Reuse jars, bottles, vessels, buckets, brushes and existing actions. Container and tin homonyms receive qualified labels.",
+    "refreshed_comparison": {
+      "baseline": "Q38",
+      "existing_concepts": 13415,
+      "existing_terms": 37725,
+      "synsets_with_exact_en_candidate": 15672,
+      "synsets_without_exact_en_candidate": 91847,
+      "existing_concepts_with_dictionary_candidate": 4242,
+      "caveat": "Spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "physical_container",
+      "name": "контейнер (физическая ёмкость)",
+      "parent": 29,
+      "universum_id": 1,
+      "terms": [
+        [
+          "контейнер (физическая ёмкость)",
+          "ru"
+        ],
+        [
+          "manufactured physical container",
+          "en"
+        ]
+      ],
+      "reason": "An artifact designed to contain physical things; exclude software containers, natural cavities and a quantity of contents. OEWN 2025: oewn-03099154-n."
+    },
+    {
+      "key": "glass_vessel",
+      "name": "стеклянный сосуд",
+      "parent": 3500,
+      "universum_id": 1,
+      "terms": [
+        [
+          "стеклянный сосуд",
+          "ru"
+        ],
+        [
+          "glass vessel",
+          "en"
+        ]
+      ],
+      "reason": "A vessel with a glass body; closures and other components can use different materials. Source: https://www.ballmasonjars.com/products/jars/canning-jars/ball%C2%AE-mason-jars-lids%2C-wide-mouth/SP_1888124.html"
+    },
+    {
+      "key": "plastic_vessel",
+      "name": "пластмассовый сосуд",
+      "parent": 3500,
+      "universum_id": 1,
+      "terms": [
+        [
+          "пластмассовый сосуд",
+          "ru"
+        ],
+        [
+          "plastic vessel",
+          "en"
+        ]
+      ],
+      "reason": "A vessel with a plastic body, independent of its intended contents. Source: https://www.thermofisher.com/fr/en/home/life-science/lab-plasticware-supplies/reusable-plasticware/plastic-jars.html"
+    },
+    {
+      "key": "metal_vessel",
+      "name": "металлический сосуд",
+      "parent": 3500,
+      "universum_id": 1,
+      "terms": [
+        [
+          "металлический сосуд",
+          "ru"
+        ],
+        [
+          "metal vessel",
+          "en"
+        ]
+      ],
+      "reason": "A vessel with a metal body; no particular metal is required. Source: https://www.crowncork.com/aerosol-food-packaging/products/food-cans"
+    },
+    {
+      "key": "glass_jar",
+      "name": "стеклянная банка",
+      "parent": 1531,
+      "universum_id": 1,
+      "terms": [
+        [
+          "стеклянная банка",
+          "ru"
+        ],
+        [
+          "glass jar",
+          "en"
+        ]
+      ],
+      "reason": "The named vessel form with the specified body material; no exclusive contents or universal closure requirement. Source: https://www.ballmasonjars.com/products/jars/canning-jars/ball%C2%AE-mason-jars-lids%2C-wide-mouth/SP_1888124.html"
+    },
+    {
+      "key": "plastic_jar",
+      "name": "пластмассовая банка",
+      "parent": 1531,
+      "universum_id": 1,
+      "terms": [
+        [
+          "пластмассовая банка",
+          "ru"
+        ],
+        [
+          "plastic jar",
+          "en"
+        ]
+      ],
+      "reason": "The named vessel form with the specified body material; no exclusive contents or universal closure requirement. Source: https://www.thermofisher.com/fr/en/home/life-science/lab-plasticware-supplies/reusable-plasticware/plastic-jars.html"
+    },
+    {
+      "key": "glass_bottle",
+      "name": "стеклянная бутылка",
+      "parent": 1530,
+      "universum_id": 1,
+      "terms": [
+        [
+          "стеклянная бутылка",
+          "ru"
+        ],
+        [
+          "glass bottle",
+          "en"
+        ]
+      ],
+      "reason": "The named vessel form with the specified body material; no exclusive contents or universal closure requirement. Source: https://en-word.net/downloads"
+    },
+    {
+      "key": "plastic_bottle",
+      "name": "пластмассовая бутылка",
+      "parent": 1530,
+      "universum_id": 1,
+      "terms": [
+        [
+          "пластмассовая бутылка",
+          "ru"
+        ],
+        [
+          "plastic bottle",
+          "en"
+        ]
+      ],
+      "reason": "The named vessel form with the specified body material; no exclusive contents or universal closure requirement. Source: https://en-word.net/downloads"
+    },
+    {
+      "key": "metal_bottle",
+      "name": "металлическая бутылка",
+      "parent": 1530,
+      "universum_id": 1,
+      "terms": [
+        [
+          "металлическая бутылка",
+          "ru"
+        ],
+        [
+          "metal bottle",
+          "en"
+        ]
+      ],
+      "reason": "The named vessel form with the specified body material; no exclusive contents or universal closure requirement. Source: https://www.hydroflask.com/shop/bottles-drinkware/bottles/"
+    },
+    {
+      "key": "food_storage",
+      "name": "хранение пищи",
+      "parent": 254,
+      "universum_id": 1,
+      "terms": [
+        [
+          "хранение пищи",
+          "ru"
+        ],
+        [
+          "food storage",
+          "en"
+        ]
+      ],
+      "reason": "Storage restricted to food as its object; not the universal meaning of storage. Source: https://www.crowncork.com/aerosol-food-packaging/products/food-cans"
+    },
+    {
+      "key": "food_container",
+      "name": "ёмкость для хранения пищи",
+      "parent": "physical_container",
+      "universum_id": 1,
+      "terms": [
+        [
+          "ёмкость для хранения пищи",
+          "ru"
+        ],
+        [
+          "food storage container",
+          "en"
+        ]
+      ],
+      "reason": "A manufactured container intended for storing food; it may be empty and need not be a vessel of a particular shape. Source: https://www.ballmasonjars.com/products/jars/canning-jars/ball%C2%AE-mason-jars-lids%2C-wide-mouth/SP_1888124.html"
+    },
+    {
+      "key": "food_jar",
+      "name": "банка для хранения пищи",
+      "parent": 1531,
+      "universum_id": 1,
+      "terms": [
+        [
+          "банка для хранения пищи",
+          "ru"
+        ],
+        [
+          "food storage jar",
+          "en"
+        ]
+      ],
+      "reason": "A jar intended for food storage. Source: https://www.ballmasonjars.com/products/jars/canning-jars/ball%C2%AE-mason-jars-lids%2C-wide-mouth/SP_1888124.html"
+    },
+    {
+      "key": "glass_food_jar",
+      "name": "стеклянная банка для хранения пищи",
+      "parent": "glass_jar",
+      "universum_id": 1,
+      "terms": [
+        [
+          "стеклянная банка для хранения пищи",
+          "ru"
+        ],
+        [
+          "glass food storage jar",
+          "en"
+        ]
+      ],
+      "reason": "The intersection of glass jars and food-storage jars. Source: https://www.ballmasonjars.com/products/jars/canning-jars/ball%C2%AE-mason-jars-lids%2C-wide-mouth/SP_1888124.html"
+    },
+    {
+      "key": "metal_can",
+      "name": "металлическая банка (упаковка)",
+      "parent": "metal_vessel",
+      "universum_id": 1,
+      "terms": [
+        [
+          "металлическая банка (упаковка)",
+          "ru"
+        ],
+        [
+          "can (metal container)",
+          "en"
+        ],
+        [
+          "tin can",
+          "en"
+        ]
+      ],
+      "reason": "A packaging can with a metal body; opening or emptying it does not erase its type. Do not equate tin can with elemental tin. OEWN 2025: oewn-02950393-n."
+    },
+    {
+      "key": "food_can",
+      "name": "консервная банка (металлическая)",
+      "parent": "metal_can",
+      "universum_id": 1,
+      "terms": [
+        [
+          "консервная банка (металлическая)",
+          "ru"
+        ],
+        [
+          "metal food can",
+          "en"
+        ],
+        [
+          "food can",
+          "en"
+        ]
+      ],
+      "reason": "A metal packaging can intended for food, distinct from a jar or a canful. Source: https://www.crowncork.com/aerosol-food-packaging/products/food-cans"
+    },
+    {
+      "key": "beverage_can",
+      "name": "металлическая банка для напитка",
+      "parent": "metal_can",
+      "universum_id": 1,
+      "terms": [
+        [
+          "металлическая банка для напитка",
+          "ru"
+        ],
+        [
+          "beverage can",
+          "en"
+        ]
+      ],
+      "reason": "A metal can intended for beverage packaging, without requiring a specific metal. Source: https://crowncork.com/beverage-packaging/products/beverage-cans"
+    },
+    {
+      "key": "steel_can",
+      "name": "стальная упаковочная банка",
+      "parent": "metal_can",
+      "universum_id": 1,
+      "terms": [
+        [
+          "стальная упаковочная банка",
+          "ru"
+        ],
+        [
+          "steel can",
+          "en"
+        ]
+      ],
+      "reason": "A packaging can with a steel body; coatings and ends need not share its material. Source: https://www.crowncork.com/aerosol-food-packaging/products/food-cans"
+    },
+    {
+      "key": "aluminum_can",
+      "name": "алюминиевая упаковочная банка",
+      "parent": "metal_can",
+      "universum_id": 1,
+      "terms": [
+        [
+          "алюминиевая упаковочная банка",
+          "ru"
+        ],
+        [
+          "aluminium can",
+          "en"
+        ],
+        [
+          "aluminum can",
+          "en"
+        ]
+      ],
+      "reason": "A packaging can with an aluminium body; not the metal substance itself. Source: https://www.crowncork.com/aerosol-food-packaging/products/food-cans"
+    },
+    {
+      "key": "steel_food_can",
+      "name": "стальная консервная банка",
+      "parent": "food_can",
+      "universum_id": 1,
+      "terms": [
+        [
+          "стальная консервная банка",
+          "ru"
+        ],
+        [
+          "steel food can",
+          "en"
+        ]
+      ],
+      "reason": "A food-packaging can with a steel body. Source: https://www.crowncork.com/aerosol-food-packaging/products/food-cans"
+    },
+    {
+      "key": "aluminum_beverage_can",
+      "name": "алюминиевая банка для напитка",
+      "parent": "beverage_can",
+      "universum_id": 1,
+      "terms": [
+        [
+          "алюминиевая банка для напитка",
+          "ru"
+        ],
+        [
+          "aluminium beverage can",
+          "en"
+        ],
+        [
+          "aluminum beverage can",
+          "en"
+        ]
+      ],
+      "reason": "A beverage can with an aluminium body. Source: https://crowncork.com/beverage-packaging/products/beverage-cans"
+    },
+    {
+      "key": "can_opening",
+      "name": "открывание металлической упаковочной банки",
+      "parent": 1786,
+      "universum_id": 1,
+      "terms": [
+        [
+          "открывание металлической упаковочной банки",
+          "ru"
+        ],
+        [
+          "opening a metal can",
+          "en"
+        ]
+      ],
+      "reason": "Opening the metal packaging container, independent of any particular opener design. Source: https://www.crowncork.com/aerosol-food-packaging/products/food-cans"
+    },
+    {
+      "key": "bristled_tool",
+      "name": "инструмент с рабочей щетиной",
+      "parent": 30,
+      "universum_id": 1,
+      "terms": [
+        [
+          "инструмент с рабочей щетиной",
+          "ru"
+        ],
+        [
+          "bristled tool",
+          "en"
+        ]
+      ],
+      "reason": "A tool whose working part has hair, fibres or bristles, natural or synthetic. The descriptive family connects brushes and application brushes without making pastry tools drawing tools. OEWN 2025: oewn-02911542-n. Source: https://www.oxo.com/silicone-1-in-pastry-brush.html"
+    },
+    {
+      "key": "surface_application",
+      "name": "нанесение вещества на поверхность",
+      "parent": 5168,
+      "universum_id": 1,
+      "terms": [
+        [
+          "нанесение вещества на поверхность",
+          "ru"
+        ],
+        [
+          "applying a substance to a surface",
+          "en"
+        ]
+      ],
+      "reason": "Covering a physical surface by applying a substance; distinguish the action from the resulting layer or software application. OEWN 2025: oewn-00713478-n."
+    },
+    {
+      "key": "applicator",
+      "name": "аппликатор (инструмент для нанесения вещества)",
+      "parent": 30,
+      "universum_id": 1,
+      "terms": [
+        [
+          "аппликатор (инструмент для нанесения вещества)",
+          "ru"
+        ],
+        [
+          "applicator (physical tool)",
+          "en"
+        ]
+      ],
+      "reason": "A physical tool intended to apply a substance; no particular bristle or roller construction is required. OEWN 2025: oewn-02733263-n."
+    },
+    {
+      "key": "paint_application",
+      "name": "нанесение краски на поверхность",
+      "parent": 6938,
+      "universum_id": 1,
+      "terms": [
+        [
+          "нанесение краски на поверхность",
+          "ru"
+        ],
+        [
+          "applying paint to a surface",
+          "en"
+        ]
+      ],
+      "reason": "The paint-coating sense, excluding making an artwork by nonpaint media or dyeing material in a bath. OEWN 2025: oewn-01365439-v."
+    },
+    {
+      "key": "paintbrush",
+      "name": "кисть для нанесения краски",
+      "parent": "bristled_tool",
+      "universum_id": 1,
+      "terms": [
+        [
+          "кисть для нанесения краски",
+          "ru"
+        ],
+        [
+          "paintbrush",
+          "en"
+        ]
+      ],
+      "reason": "A bristled applicator for paint, including artistic and decorating uses. OEWN 2025: oewn-03881909-n."
+    },
+    {
+      "key": "artist_paintbrush",
+      "name": "кисть для рисования красками",
+      "parent": 1507,
+      "universum_id": 1,
+      "terms": [
+        [
+          "кисть для рисования красками",
+          "ru"
+        ],
+        [
+          "artist paintbrush",
+          "en"
+        ]
+      ],
+      "reason": "The intersection of drawing brushes and brushes for applying paint; not all drawing brushes use paint. Source: https://ruslang.ru/sites/default/files/2024-12/ASRYa-4-2.pdf"
+    },
+    {
+      "key": "paint_roller",
+      "name": "малярный валик",
+      "parent": "applicator",
+      "universum_id": 1,
+      "terms": [
+        [
+          "малярный валик",
+          "ru"
+        ],
+        [
+          "paint roller",
+          "en"
+        ]
+      ],
+      "reason": "An applicator spreading paint with a rolling working surface; it is not a bristled brush by definition. OEWN 2025: oewn-03882907-n."
+    },
+    {
+      "key": "hairbrush",
+      "name": "щётка для волос",
+      "parent": 5540,
+      "universum_id": 1,
+      "terms": [
+        [
+          "щётка для волос",
+          "ru"
+        ],
+        [
+          "hairbrush",
+          "en"
+        ]
+      ],
+      "reason": "A brush for arranging a persons hair; not automatically a cleaning brush or a toothed comb. OEWN 2025: oewn-03480704-n."
+    },
+    {
+      "key": "cleaning_tool",
+      "name": "инструмент для очистки",
+      "parent": 30,
+      "universum_id": 1,
+      "terms": [
+        [
+          "инструмент для очистки",
+          "ru"
+        ],
+        [
+          "cleaning tool (physical)",
+          "en"
+        ]
+      ],
+      "reason": "A physical tool intended for cleaning; exclude the wider equipment sense that also includes home appliances. OEWN 2025: oewn-03043932-n."
+    },
+    {
+      "key": "nailbrush",
+      "name": "щётка для чистки ногтей",
+      "parent": 24792,
+      "universum_id": 1,
+      "terms": [
+        [
+          "щётка для чистки ногтей",
+          "ru"
+        ],
+        [
+          "nailbrush",
+          "en"
+        ]
+      ],
+      "reason": "A cleaning brush for bodily nails, excluding metal fasteners. OEWN 2025: oewn-03810720-n."
+    },
+    {
+      "key": "bottle_cleaning",
+      "name": "очистка бутылки",
+      "parent": 24790,
+      "universum_id": 1,
+      "terms": [
+        [
+          "очистка бутылки",
+          "ru"
+        ],
+        [
+          "bottle cleaning",
+          "en"
+        ]
+      ],
+      "reason": "Physical cleaning restricted to a bottle; no particular liquid, disinfectant or hygiene guarantee. Source: https://www.oxo.com/bottle-brush.html?___store=oxo"
+    },
+    {
+      "key": "bottle_brush",
+      "name": "ёршик для бутылок",
+      "parent": 24792,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ёршик для бутылок",
+          "ru"
+        ],
+        [
+          "bottlebrush (cleaning tool)",
+          "en"
+        ],
+        [
+          "bottle brush",
+          "en"
+        ],
+        [
+          "щётка для бутылок",
+          "ru"
+        ]
+      ],
+      "reason": "A brush shaped to clean bottle interiors; exclude similarly named plants. OEWN 2025: oewn-02880884-n."
+    },
+    {
+      "key": "dish_brush",
+      "name": "щётка для мытья посуды",
+      "parent": 24792,
+      "universum_id": 1,
+      "terms": [
+        [
+          "щётка для мытья посуды",
+          "ru"
+        ],
+        [
+          "dishwashing brush",
+          "en"
+        ],
+        [
+          "dish brush",
+          "en"
+        ]
+      ],
+      "reason": "A cleaning brush for washing dishware. Source: https://www.oxo.com/shop/cleaning-organization/kitchen/sponge-brushes.html"
+    },
+    {
+      "key": "scraper",
+      "name": "скребок (ручной инструмент)",
+      "parent": 30,
+      "universum_id": 1,
+      "terms": [
+        [
+          "скребок (ручной инструмент)",
+          "ru"
+        ],
+        [
+          "scraper (hand tool)",
+          "en"
+        ],
+        [
+          "hand scraper",
+          "en"
+        ]
+      ],
+      "reason": "A handheld scraping tool, distinct from data scraping software or a motorised earthmoving machine. OEWN 2025: oewn-04158045-n."
+    },
+    {
+      "key": "cleaning_scraper",
+      "name": "скребок для очистки",
+      "parent": "scraper",
+      "universum_id": 1,
+      "terms": [
+        [
+          "скребок для очистки",
+          "ru"
+        ],
+        [
+          "cleaning scraper",
+          "en"
+        ]
+      ],
+      "reason": "A hand scraper intended to remove unwanted deposits; not all scraping is cleaning. Source: https://www.bahco.com/gb_en/paint-scrapers-with-rigid-blade-and-plastic-handle-pb_2165_.html"
+    },
+    {
+      "key": "ice_scraper",
+      "name": "скребок для льда",
+      "parent": "scraper",
+      "universum_id": 1,
+      "terms": [
+        [
+          "скребок для льда",
+          "ru"
+        ],
+        [
+          "ice scraper",
+          "en"
+        ]
+      ],
+      "reason": "A handheld tool for scraping away ice; no melting mechanism or universal surface compatibility. Source: https://www.oxo.com/extendable-twister-snow-brush.html"
+    },
+    {
+      "key": "paint_scraper",
+      "name": "скребок для удаления краски",
+      "parent": "scraper",
+      "universum_id": 1,
+      "terms": [
+        [
+          "скребок для удаления краски",
+          "ru"
+        ],
+        [
+          "paint scraper",
+          "en"
+        ]
+      ],
+      "reason": "A handheld tool for removing paint by scraping, not applying paint. Source: https://www.bahco.com/gb_en/paint-scrapers-with-rigid-blade-and-plastic-handle-pb_2165_.html"
+    },
+    {
+      "key": "water_squeegeeing",
+      "name": "сгон воды с поверхности",
+      "parent": 5017,
+      "universum_id": 1,
+      "terms": [
+        [
+          "сгон воды с поверхности",
+          "ru"
+        ],
+        [
+          "squeegeeing water from a surface",
+          "en"
+        ]
+      ],
+      "reason": "Mechanically moving water away with a flexible wiping edge; not evaporation or scraping solid ice. OEWN 2025: oewn-01395444-v. Source: https://www.oxo.com/shop/cleaning-organization/multi-use-squeegee-with-hook.html"
+    },
+    {
+      "key": "squeegee",
+      "name": "сгон для воды (ручной инструмент)",
+      "parent": 30,
+      "universum_id": 1,
+      "terms": [
+        [
+          "сгон для воды (ручной инструмент)",
+          "ru"
+        ],
+        [
+          "water-removal squeegee",
+          "en"
+        ]
+      ],
+      "reason": "A handheld implement with a flexible edge for clearing water. No mandatory natural-rubber material, T-shape or stain-removal function. OEWN 2025: oewn-04300059-n. Source: https://www.oxo.com/shop/cleaning-organization/multi-use-squeegee-with-hook.html"
+    },
+    {
+      "key": "dustpan",
+      "name": "совок для мусора",
+      "parent": "physical_container",
+      "universum_id": 1,
+      "terms": [
+        [
+          "совок для мусора",
+          "ru"
+        ],
+        [
+          "dustpan",
+          "en"
+        ]
+      ],
+      "reason": "A manufactured receptacle used to collect swept debris; no mandatory short handle or actual contents. OEWN 2025: oewn-03263712-n."
+    }
+  ],
+  "renames": [
+    {
+      "id": 3500,
+      "before": "сосуд",
+      "name": "сосуд (ёмкость)",
+      "terms": [],
+      "reason": "Select a hollow manufactured vessel, excluding a ship or a body vessel. OEWN 2025: oewn-04538393-n."
+    },
+    {
+      "id": 1531,
+      "before": "банка",
+      "name": "банка (сосуд с широким горлом)",
+      "terms": [],
+      "reason": "Select the storage-jar reading, separate from the metal packaging-can reading and quantity senses. Source: https://gramota.ru/poisk?dicts%5B%5D=42&mode=slovari&query=%D0%B1%D0%B0%D0%BD%D0%BA%D0%B0"
+    },
+    {
+      "id": 5168,
+      "before": "покрытие",
+      "name": "покрытие (действие)",
+      "terms": [],
+      "reason": "The existing verb-derived meaning is an action, not a material layer or fabric. OEWN 2025: oewn-00713478-n."
+    },
+    {
+      "id": 1507,
+      "before": "кисть",
+      "name": "кисть для рисования",
+      "terms": [],
+      "reason": "The old drawing purpose selects an artists drawing brush. It can apply ink as well as paint; do not make every drawing brush a paintbrush. Source: https://ruslang.ru/sites/default/files/2024-12/ASRYa-4-2.pdf"
+    },
+    {
+      "id": 6938,
+      "before": "красение",
+      "name": "окрашивание (действие)",
+      "terms": [],
+      "reason": "Replace a generated canonical label with a standard action phrase; this family includes applying paint or dye, distinct from the resulting colour. Source: https://gramota.ru/spravka/vopros/285746"
+    }
+  ],
+  "terms": [
+    {
+      "id": 3500,
+      "name": "сосуд (ёмкость)",
+      "terms": [
+        [
+          "vessel (container)",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the physical-container reading. OEWN 2025: oewn-04538393-n."
+    },
+    {
+      "id": 1531,
+      "name": "банка (сосуд с широким горлом)",
+      "terms": [
+        [
+          "jar (wide-mouthed vessel)",
+          "en"
+        ]
+      ],
+      "reason": "Keep jar distinct from jarful and packaging-can senses. OEWN 2025: oewn-03598713-n."
+    },
+    {
+      "id": 1530,
+      "name": "бутылка",
+      "terms": [
+        [
+          "bottle (vessel)",
+          "en"
+        ]
+      ],
+      "reason": "Keep the vessel distinct from bottleful, feeding-bottle-specific and verbal senses. OEWN 2025: oewn-02879899-n."
+    },
+    {
+      "id": 1608,
+      "name": "ведро",
+      "terms": [
+        [
+          "pail",
+          "en"
+        ]
+      ],
+      "reason": "Reuse the existing bucket instead of duplicating the synonym. OEWN 2025: oewn-02913195-n."
+    },
+    {
+      "id": 254,
+      "name": "хранение",
+      "terms": [
+        [
+          "хранить",
+          "ru"
+        ]
+      ],
+      "reason": "Retain the standard Russian verb with the correct language tag."
+    },
+    {
+      "id": 5540,
+      "name": "щётка",
+      "terms": [
+        [
+          "brush (bristled tool)",
+          "en"
+        ]
+      ],
+      "reason": "Exclude the electrical-contact, tail and thicket homonyms. OEWN 2025: oewn-02911542-n."
+    },
+    {
+      "id": 5168,
+      "name": "покрытие (действие)",
+      "terms": [
+        [
+          "covering (physical action)",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the existing physical action."
+    },
+    {
+      "id": 1507,
+      "name": "кисть для рисования",
+      "terms": [
+        [
+          "artist drawing brush",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the existing drawing instrument, excluding a hand, tassel or digital brush."
+    },
+    {
+      "id": 6938,
+      "name": "окрашивание (действие)",
+      "terms": [
+        [
+          "coloring (physical action)",
+          "en"
+        ],
+        [
+          "colouring (physical action)",
+          "en"
+        ],
+        [
+          "красить",
+          "ru"
+        ]
+      ],
+      "reason": "Select the physical colouring action and preserve its standard Russian verb."
+    },
+    {
+      "id": 17359,
+      "name": "соскребание",
+      "terms": [
+        [
+          "scraping material off a surface",
+          "en"
+        ],
+        [
+          "соскребать",
+          "ru"
+        ]
+      ],
+      "reason": "Select physical removal by scraping, excluding sound, a bow and collected scrapings."
+    },
+    {
+      "id": 17520,
+      "name": "подметание",
+      "terms": [
+        [
+          "sweeping (cleaning action)",
+          "en"
+        ],
+        [
+          "подметать",
+          "ru"
+        ]
+      ],
+      "reason": "Retain the attested sweeping noun and correctly tag the Russian infinitive. OEWN 2025: oewn-00253174-n."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 254,
+      "term": "храниение",
+      "lang": "ru",
+      "reason": "Malformed generated alias; retain the established noun хранение and verb хранить."
+    },
+    {
+      "id": 254,
+      "term": "ХРАНИТЬ",
+      "lang": "en",
+      "reason": "Russian infinitive mislabeled as English; retain storage and the Russian-tagged infinitive."
+    },
+    {
+      "id": 5168,
+      "term": "КРЫТЬ",
+      "lang": "en",
+      "reason": "Russian infinitive mislabeled as English; its Russian alias and English covering remain."
+    },
+    {
+      "id": 6938,
+      "term": "красение",
+      "lang": "ru",
+      "reason": "Remove the generated action label or wrong language tag for this selected modern action; retain окрашивание (действие) and красить."
+    },
+    {
+      "id": 6938,
+      "term": "красиение",
+      "lang": "ru",
+      "reason": "Remove the generated action label or wrong language tag for this selected modern action; retain окрашивание (действие) and красить."
+    },
+    {
+      "id": 6938,
+      "term": "КРАСИТЬ",
+      "lang": "en",
+      "reason": "Remove the generated action label or wrong language tag for this selected modern action; retain окрашивание (действие) and красить."
+    },
+    {
+      "id": 17359,
+      "term": "соскребаание",
+      "lang": "ru",
+      "reason": "Malformed generated alias; retain standard соскребание and соскребать."
+    },
+    {
+      "id": 17359,
+      "term": "СОСКРЕБАТЬ",
+      "lang": "en",
+      "reason": "Russian infinitive mislabeled as English; retain the correctly tagged Russian verb."
+    },
+    {
+      "id": 17520,
+      "term": "подметаание",
+      "lang": "ru",
+      "reason": "Malformed generated alias; standard подметание is retained."
+    },
+    {
+      "id": 17520,
+      "term": "ПОДМЕТАТЬ",
+      "lang": "en",
+      "reason": "Russian infinitive mislabeled as English; retain the corrected RU alias."
+    }
+  ],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 5770,
+      "before": [
+        3500,
+        "14",
+        127,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          3500,
+          "14",
+          "physical_container",
+          null,
+          1
+        ]
+      ],
+      "reason": "Vessels include laboratory and industrial containers; dishware is not their universal genus. OEWN 2025: oewn-04538393-n."
+    },
+    {
+      "id": 2290,
+      "before": [
+        1531,
+        "14",
+        127,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1531,
+          "14",
+          3500,
+          null,
+          1
+        ]
+      ],
+      "reason": "A jar is a vessel, with no universal tableware, food or glass restriction. OEWN 2025: oewn-03598713-n. Source: https://www.thermofisher.com/fr/en/home/life-science/lab-plasticware-supplies/reusable-plasticware/plastic-jars.html"
+    },
+    {
+      "id": 2289,
+      "before": [
+        1530,
+        "14",
+        127,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1530,
+          "14",
+          3500,
+          null,
+          1
+        ]
+      ],
+      "reason": "Bottles include nonfood and nonglass vessels; the dishware genus is too narrow. OEWN 2025: oewn-02879899-n. Source: https://www.hydroflask.com/shop/bottles-drinkware/bottles/"
+    },
+    {
+      "id": 2412,
+      "before": [
+        1531,
+        "23",
+        90,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          "glass_jar",
+          "23",
+          90,
+          null,
+          1
+        ]
+      ],
+      "reason": "Move the universal glass claim from all jars to the explicit glass-jar subtype. Source: https://www.thermofisher.com/fr/en/home/life-science/lab-plasticware-supplies/reusable-plasticware/plastic-jars.html"
+    },
+    {
+      "id": 2411,
+      "before": [
+        1530,
+        "23",
+        90,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          "glass_bottle",
+          "23",
+          90,
+          null,
+          1
+        ]
+      ],
+      "reason": "Move the universal glass claim from all bottles to the explicit glass-bottle subtype. Source: https://www.hydroflask.com/shop/bottles-drinkware/bottles/"
+    },
+    {
+      "id": 554,
+      "before": [
+        254,
+        "14",
+        63,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          254,
+          "14",
+          19,
+          null,
+          1
+        ]
+      ],
+      "reason": "Storage includes keeping physical objects and data; it is not universally a social action."
+    },
+    {
+      "id": 29456,
+      "before": [
+        254,
+        "27",
+        101,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          "food_storage",
+          "27",
+          101,
+          null,
+          1
+        ]
+      ],
+      "reason": "Food is the patient of food storage, not of every storage action."
+    },
+    {
+      "id": 21604,
+      "before": [
+        17520,
+        "14",
+        54,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          17520,
+          "14",
+          24790,
+          null,
+          1
+        ]
+      ],
+      "reason": "Sweeping is a physical cleaning action, not an autonomous physical process. OEWN 2025: oewn-00253174-n."
+    },
+    {
+      "id": 7681,
+      "before": [
+        2398,
+        "21",
+        1773,
+        1
+      ],
+      "reviewed_strength": 40,
+      "replacements": [
+        [
+          2398,
+          "21",
+          17520,
+          null,
+          1
+        ]
+      ],
+      "reason": "Replace the unsupported washing-purpose percentage with the ordinary sweeping purpose. OEWN 2025: oewn-02910059-n."
+    },
+    {
+      "id": 9672,
+      "before": [
+        2398,
+        "70",
+        5029,
+        1
+      ],
+      "reviewed_strength": 90,
+      "replacements": [],
+      "reason": "A broom alone does not causally produce a clean state; its purpose and the sweeping action express the supported relationship."
+    }
+  ],
+  "edges": [
+    {
+      "subject": 1608,
+      "kod": "14",
+      "object": 3500,
+      "universum_id": 1,
+      "reason": "The existing bucket is a vessel; retain its old artifact genus. OEWN 2025: oewn-02913195-n."
+    },
+    {
+      "subject": "glass_vessel",
+      "kod": "23",
+      "object": 90,
+      "universum_id": 1,
+      "reason": "Glass is the vessel body material, not necessarily every component material."
+    },
+    {
+      "subject": "plastic_vessel",
+      "kod": "23",
+      "object": 1231,
+      "universum_id": 1,
+      "reason": "Plastic is the vessel body material."
+    },
+    {
+      "subject": "metal_vessel",
+      "kod": "23",
+      "object": 23,
+      "universum_id": 1,
+      "reason": "Metal is the vessel body material."
+    },
+    {
+      "subject": "glass_jar",
+      "kod": "14",
+      "object": "glass_vessel",
+      "universum_id": 1,
+      "reason": "The material-specific vessel family also applies."
+    },
+    {
+      "subject": "plastic_jar",
+      "kod": "14",
+      "object": "plastic_vessel",
+      "universum_id": 1,
+      "reason": "The material-specific vessel family also applies."
+    },
+    {
+      "subject": "glass_bottle",
+      "kod": "14",
+      "object": "glass_vessel",
+      "universum_id": 1,
+      "reason": "The material-specific vessel family also applies."
+    },
+    {
+      "subject": "plastic_bottle",
+      "kod": "14",
+      "object": "plastic_vessel",
+      "universum_id": 1,
+      "reason": "The material-specific vessel family also applies."
+    },
+    {
+      "subject": "metal_bottle",
+      "kod": "14",
+      "object": "metal_vessel",
+      "universum_id": 1,
+      "reason": "The material-specific vessel family also applies."
+    },
+    {
+      "subject": "food_storage",
+      "kod": "14",
+      "object": 5017,
+      "universum_id": 1,
+      "reason": "Keeping physical food is also a physical action."
+    },
+    {
+      "subject": "food_container",
+      "kod": "21",
+      "object": "food_storage",
+      "universum_id": 1,
+      "reason": "The intended use is food storage, without asserting current food contents."
+    },
+    {
+      "subject": "food_jar",
+      "kod": "14",
+      "object": "food_container",
+      "universum_id": 1,
+      "reason": "The food-storage use also applies."
+    },
+    {
+      "subject": "glass_food_jar",
+      "kod": "14",
+      "object": "food_jar",
+      "universum_id": 1,
+      "reason": "The food-jar family also applies."
+    },
+    {
+      "subject": "food_can",
+      "kod": "14",
+      "object": "food_container",
+      "universum_id": 1,
+      "reason": "Food cans also belong to the food-storage-container family."
+    },
+    {
+      "subject": "steel_can",
+      "kod": "23",
+      "object": 1280,
+      "universum_id": 1,
+      "reason": "Steel is the can body material."
+    },
+    {
+      "subject": "aluminum_can",
+      "kod": "23",
+      "object": 1271,
+      "universum_id": 1,
+      "reason": "Aluminium is the can body material."
+    },
+    {
+      "subject": "steel_food_can",
+      "kod": "14",
+      "object": "steel_can",
+      "universum_id": 1,
+      "reason": "The steel-body family also applies."
+    },
+    {
+      "subject": "aluminum_beverage_can",
+      "kod": "14",
+      "object": "aluminum_can",
+      "universum_id": 1,
+      "reason": "The aluminium-body family also applies."
+    },
+    {
+      "subject": "can_opening",
+      "kod": "27",
+      "object": "metal_can",
+      "universum_id": 1,
+      "reason": "The metal can is the opening target."
+    },
+    {
+      "subject": 25174,
+      "kod": "21",
+      "object": "can_opening",
+      "universum_id": 1,
+      "reason": "Give the reviewed manual can opener its more precise purpose; retain general opening."
+    },
+    {
+      "subject": 25174,
+      "kod": "25",
+      "object": "metal_can",
+      "universum_id": 1,
+      "reason": "The manual can opener acts on the metal can, not on its food contents."
+    },
+    {
+      "subject": 5540,
+      "kod": "14",
+      "object": "bristled_tool",
+      "universum_id": 1,
+      "reason": "Reuse the existing brush family and its cleaning-brush descendants."
+    },
+    {
+      "subject": "applicator",
+      "kod": "21",
+      "object": "surface_application",
+      "universum_id": 1,
+      "reason": "Applying a substance is the tool purpose."
+    },
+    {
+      "subject": 1507,
+      "kod": "14",
+      "object": "bristled_tool",
+      "universum_id": 1,
+      "reason": "Drawing brushes share the structural bristled-tool family."
+    },
+    {
+      "subject": 1507,
+      "kod": "14",
+      "object": "applicator",
+      "universum_id": 1,
+      "reason": "Drawing brushes apply a substance to a surface."
+    },
+    {
+      "subject": 25183,
+      "kod": "14",
+      "object": "bristled_tool",
+      "universum_id": 1,
+      "reason": "Pastry brushes share the bristled-tool structure, including synthetic silicone bristles. Source: https://www.oxo.com/silicone-1-in-pastry-brush.html"
+    },
+    {
+      "subject": 25183,
+      "kod": "14",
+      "object": "applicator",
+      "universum_id": 1,
+      "reason": "The pastry brush also serves as an applicator. Source: https://www.oxo.com/silicone-1-in-pastry-brush.html"
+    },
+    {
+      "subject": 25187,
+      "kod": "14",
+      "object": "surface_application",
+      "universum_id": 1,
+      "reason": "Coating a food surface is also application of a substance; preserve both reviewed Q30 genera."
+    },
+    {
+      "subject": "paint_application",
+      "kod": "14",
+      "object": "surface_application",
+      "universum_id": 1,
+      "reason": "Applying paint is also substance application."
+    },
+    {
+      "subject": "paintbrush",
+      "kod": "14",
+      "object": "applicator",
+      "universum_id": 1,
+      "reason": "A paintbrush is also a substance applicator."
+    },
+    {
+      "subject": "paintbrush",
+      "kod": "21",
+      "object": "paint_application",
+      "universum_id": 1,
+      "reason": "The paintbrush purpose is applying paint."
+    },
+    {
+      "subject": "artist_paintbrush",
+      "kod": "14",
+      "object": "paintbrush",
+      "universum_id": 1,
+      "reason": "The paint-applicator family also applies."
+    },
+    {
+      "subject": "paint_roller",
+      "kod": "21",
+      "object": "paint_application",
+      "universum_id": 1,
+      "reason": "Applying paint is the roller purpose."
+    },
+    {
+      "subject": "hairbrush",
+      "kod": "21",
+      "object": 1903,
+      "universum_id": 1,
+      "reason": "The reviewed hair-arranging action is its purpose."
+    },
+    {
+      "subject": "hairbrush",
+      "kod": "25",
+      "object": 1461,
+      "universum_id": 1,
+      "reason": "Hair is what the brush acts upon."
+    },
+    {
+      "subject": "cleaning_tool",
+      "kod": "21",
+      "object": 24790,
+      "universum_id": 1,
+      "reason": "Physical cleaning is the tool purpose."
+    },
+    {
+      "subject": 24792,
+      "kod": "14",
+      "object": "cleaning_tool",
+      "universum_id": 1,
+      "reason": "The existing cleaning brush also belongs to the cleaning-tool family."
+    },
+    {
+      "subject": 2397,
+      "kod": "14",
+      "object": 24792,
+      "universum_id": 1,
+      "reason": "Toothbrushes are cleaning brushes; retain the old tool genus and tooth target. OEWN 2025: oewn-04460427-n."
+    },
+    {
+      "subject": "nailbrush",
+      "kod": "25",
+      "object": 2404,
+      "universum_id": 1,
+      "reason": "The nail body part is the tool target, not a metal nail."
+    },
+    {
+      "subject": "bottle_cleaning",
+      "kod": "27",
+      "object": 1530,
+      "universum_id": 1,
+      "reason": "The bottle is the cleaning target."
+    },
+    {
+      "subject": "bottle_brush",
+      "kod": "21",
+      "object": "bottle_cleaning",
+      "universum_id": 1,
+      "reason": "Bottle cleaning is the selected purpose."
+    },
+    {
+      "subject": "bottle_brush",
+      "kod": "25",
+      "object": 1530,
+      "universum_id": 1,
+      "reason": "The bottle itself is the target."
+    },
+    {
+      "subject": "dish_brush",
+      "kod": "21",
+      "object": 1807,
+      "universum_id": 1,
+      "reason": "Reuse dishwashing as the purpose."
+    },
+    {
+      "subject": "dish_brush",
+      "kod": "25",
+      "object": 127,
+      "universum_id": 1,
+      "reason": "Dishware is the target."
+    },
+    {
+      "subject": "scraper",
+      "kod": "21",
+      "object": 17359,
+      "universum_id": 1,
+      "reason": "Physical scraping-off is the selected purpose."
+    },
+    {
+      "subject": 25185,
+      "kod": "14",
+      "object": "scraper",
+      "universum_id": 1,
+      "reason": "The bench dough scraper also belongs to the broader scraper family; retain its kitchen-tool genus and food-preparation purpose."
+    },
+    {
+      "subject": "cleaning_scraper",
+      "kod": "14",
+      "object": "cleaning_tool",
+      "universum_id": 1,
+      "reason": "The cleaning-tool purpose also applies."
+    },
+    {
+      "subject": "ice_scraper",
+      "kod": "25",
+      "object": 87,
+      "universum_id": 1,
+      "reason": "Ice is what the scraper removes."
+    },
+    {
+      "subject": "paint_scraper",
+      "kod": "25",
+      "object": 1242,
+      "universum_id": 1,
+      "reason": "The removed paint is the tool target."
+    },
+    {
+      "subject": "water_squeegeeing",
+      "kod": "27",
+      "object": 92,
+      "universum_id": 1,
+      "reason": "Water is the displaced material."
+    },
+    {
+      "subject": "squeegee",
+      "kod": "21",
+      "object": "water_squeegeeing",
+      "universum_id": 1,
+      "reason": "Water removal is the intended action."
+    },
+    {
+      "subject": "squeegee",
+      "kod": "25",
+      "object": 92,
+      "universum_id": 1,
+      "reason": "The flexible edge acts on water; solid ice scraping is separate."
+    },
+    {
+      "subject": 2398,
+      "kod": "14",
+      "object": "cleaning_tool",
+      "universum_id": 1,
+      "reason": "A broom is a cleaning tool; keep its previous general-tool genus. OEWN 2025: oewn-02910059-n."
+    },
+    {
+      "subject": "dustpan",
+      "kod": "14",
+      "object": "cleaning_tool",
+      "universum_id": 1,
+      "reason": "The receptacle also functions as a cleaning tool."
+    },
+    {
+      "subject": "dustpan",
+      "kod": "21",
+      "object": 17520,
+      "universum_id": 1,
+      "reason": "A dustpan supports the sweeping action by receiving the swept material."
+    },
+    {
+      "subject": "dustpan",
+      "kod": "25",
+      "object": 2406,
+      "universum_id": 1,
+      "reason": "Swept debris is what this tool handles."
+    }
+  ],
+  "checks": [
+    {
+      "subject": "physical_container",
+      "kod": "14",
+      "object": 29,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3500,
+      "kod": "14",
+      "object": 127,
+      "present": false
+    },
+    {
+      "subject": 3500,
+      "kod": "14",
+      "object": "physical_container",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1531,
+      "kod": "14",
+      "object": 127,
+      "present": false
+    },
+    {
+      "subject": 1531,
+      "kod": "14",
+      "object": 3500,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1530,
+      "kod": "14",
+      "object": 127,
+      "present": false
+    },
+    {
+      "subject": 1530,
+      "kod": "14",
+      "object": 3500,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1608,
+      "kod": "14",
+      "object": 3500,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "glass_vessel",
+      "kod": "14",
+      "object": 3500,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "glass_vessel",
+      "kod": "23",
+      "object": 90,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "plastic_vessel",
+      "kod": "14",
+      "object": 3500,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "plastic_vessel",
+      "kod": "23",
+      "object": 1231,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "metal_vessel",
+      "kod": "14",
+      "object": 3500,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "metal_vessel",
+      "kod": "23",
+      "object": 23,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "glass_jar",
+      "kod": "14",
+      "object": 1531,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "glass_jar",
+      "kod": "14",
+      "object": "glass_vessel",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "plastic_jar",
+      "kod": "14",
+      "object": 1531,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "plastic_jar",
+      "kod": "14",
+      "object": "plastic_vessel",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "glass_bottle",
+      "kod": "14",
+      "object": 1530,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "glass_bottle",
+      "kod": "14",
+      "object": "glass_vessel",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "plastic_bottle",
+      "kod": "14",
+      "object": 1530,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "plastic_bottle",
+      "kod": "14",
+      "object": "plastic_vessel",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "metal_bottle",
+      "kod": "14",
+      "object": 1530,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "metal_bottle",
+      "kod": "14",
+      "object": "metal_vessel",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1531,
+      "kod": "23",
+      "object": 90,
+      "present": false
+    },
+    {
+      "subject": "glass_jar",
+      "kod": "23",
+      "object": 90,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1530,
+      "kod": "23",
+      "object": 90,
+      "present": false
+    },
+    {
+      "subject": "glass_bottle",
+      "kod": "23",
+      "object": 90,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 254,
+      "kod": "14",
+      "object": 63,
+      "present": false
+    },
+    {
+      "subject": 254,
+      "kod": "14",
+      "object": 19,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_storage",
+      "kod": "14",
+      "object": 254,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_storage",
+      "kod": "14",
+      "object": 5017,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 254,
+      "kod": "27",
+      "object": 101,
+      "present": false
+    },
+    {
+      "subject": "food_storage",
+      "kod": "27",
+      "object": 101,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_container",
+      "kod": "14",
+      "object": "physical_container",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_container",
+      "kod": "21",
+      "object": "food_storage",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_jar",
+      "kod": "14",
+      "object": 1531,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_jar",
+      "kod": "14",
+      "object": "food_container",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "glass_food_jar",
+      "kod": "14",
+      "object": "glass_jar",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "glass_food_jar",
+      "kod": "14",
+      "object": "food_jar",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "metal_can",
+      "kod": "14",
+      "object": "metal_vessel",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_can",
+      "kod": "14",
+      "object": "metal_can",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_can",
+      "kod": "14",
+      "object": "food_container",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "beverage_can",
+      "kod": "14",
+      "object": "metal_can",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "steel_can",
+      "kod": "14",
+      "object": "metal_can",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "steel_can",
+      "kod": "23",
+      "object": 1280,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "aluminum_can",
+      "kod": "14",
+      "object": "metal_can",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "aluminum_can",
+      "kod": "23",
+      "object": 1271,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "steel_food_can",
+      "kod": "14",
+      "object": "food_can",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "steel_food_can",
+      "kod": "14",
+      "object": "steel_can",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "aluminum_beverage_can",
+      "kod": "14",
+      "object": "beverage_can",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "aluminum_beverage_can",
+      "kod": "14",
+      "object": "aluminum_can",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "can_opening",
+      "kod": "14",
+      "object": 1786,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "can_opening",
+      "kod": "27",
+      "object": "metal_can",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25174,
+      "kod": "21",
+      "object": "can_opening",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25174,
+      "kod": "25",
+      "object": "metal_can",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "bristled_tool",
+      "kod": "14",
+      "object": 30,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5540,
+      "kod": "14",
+      "object": "bristled_tool",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "surface_application",
+      "kod": "14",
+      "object": 5168,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "applicator",
+      "kod": "14",
+      "object": 30,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "applicator",
+      "kod": "21",
+      "object": "surface_application",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1507,
+      "kod": "14",
+      "object": "bristled_tool",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1507,
+      "kod": "14",
+      "object": "applicator",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25183,
+      "kod": "14",
+      "object": "bristled_tool",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25183,
+      "kod": "14",
+      "object": "applicator",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25187,
+      "kod": "14",
+      "object": "surface_application",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "paint_application",
+      "kod": "14",
+      "object": 6938,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "paint_application",
+      "kod": "14",
+      "object": "surface_application",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "paintbrush",
+      "kod": "14",
+      "object": "bristled_tool",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "paintbrush",
+      "kod": "14",
+      "object": "applicator",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "paintbrush",
+      "kod": "21",
+      "object": "paint_application",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "artist_paintbrush",
+      "kod": "14",
+      "object": 1507,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "artist_paintbrush",
+      "kod": "14",
+      "object": "paintbrush",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "paint_roller",
+      "kod": "14",
+      "object": "applicator",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "paint_roller",
+      "kod": "21",
+      "object": "paint_application",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hairbrush",
+      "kod": "14",
+      "object": 5540,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hairbrush",
+      "kod": "21",
+      "object": 1903,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hairbrush",
+      "kod": "25",
+      "object": 1461,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cleaning_tool",
+      "kod": "14",
+      "object": 30,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cleaning_tool",
+      "kod": "21",
+      "object": 24790,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 24792,
+      "kod": "14",
+      "object": "cleaning_tool",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2397,
+      "kod": "14",
+      "object": 24792,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "nailbrush",
+      "kod": "14",
+      "object": 24792,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "nailbrush",
+      "kod": "25",
+      "object": 2404,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "bottle_cleaning",
+      "kod": "14",
+      "object": 24790,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "bottle_cleaning",
+      "kod": "27",
+      "object": 1530,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "bottle_brush",
+      "kod": "14",
+      "object": 24792,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "bottle_brush",
+      "kod": "21",
+      "object": "bottle_cleaning",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "bottle_brush",
+      "kod": "25",
+      "object": 1530,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "dish_brush",
+      "kod": "14",
+      "object": 24792,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "dish_brush",
+      "kod": "21",
+      "object": 1807,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "dish_brush",
+      "kod": "25",
+      "object": 127,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "scraper",
+      "kod": "14",
+      "object": 30,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "scraper",
+      "kod": "21",
+      "object": 17359,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25185,
+      "kod": "14",
+      "object": "scraper",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cleaning_scraper",
+      "kod": "14",
+      "object": "scraper",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cleaning_scraper",
+      "kod": "14",
+      "object": "cleaning_tool",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "ice_scraper",
+      "kod": "14",
+      "object": "scraper",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "ice_scraper",
+      "kod": "25",
+      "object": 87,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "paint_scraper",
+      "kod": "14",
+      "object": "scraper",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "paint_scraper",
+      "kod": "25",
+      "object": 1242,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "water_squeegeeing",
+      "kod": "14",
+      "object": 5017,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "water_squeegeeing",
+      "kod": "27",
+      "object": 92,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "squeegee",
+      "kod": "14",
+      "object": 30,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "squeegee",
+      "kod": "21",
+      "object": "water_squeegeeing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "squeegee",
+      "kod": "25",
+      "object": 92,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 17520,
+      "kod": "14",
+      "object": 54,
+      "present": false
+    },
+    {
+      "subject": 17520,
+      "kod": "14",
+      "object": 24790,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2398,
+      "kod": "14",
+      "object": "cleaning_tool",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2398,
+      "kod": "21",
+      "object": 1773,
+      "present": false
+    },
+    {
+      "subject": 2398,
+      "kod": "21",
+      "object": 17520,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2398,
+      "kod": "70",
+      "object": 5029,
+      "present": false
+    },
+    {
+      "subject": "dustpan",
+      "kod": "14",
+      "object": "physical_container",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "dustpan",
+      "kod": "14",
+      "object": "cleaning_tool",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "dustpan",
+      "kod": "21",
+      "object": 17520,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "dustpan",
+      "kod": "25",
+      "object": 2406,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1530,
+      "kod": "23",
+      "object": 90,
+      "present": false
+    },
+    {
+      "subject": 1531,
+      "kod": "23",
+      "object": 90,
+      "present": false
+    },
+    {
+      "subject": 254,
+      "kod": "27",
+      "object": 101,
+      "present": false
+    },
+    {
+      "subject": 2398,
+      "kod": "21",
+      "object": 1773,
+      "present": false
+    },
+    {
+      "subject": 2398,
+      "kod": "70",
+      "object": 5029,
+      "present": false
+    },
+    {
+      "subject": 1507,
+      "kod": "21",
+      "object": 1819,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25183,
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25185,
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25187,
+      "kod": "14",
+      "object": 10959,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25187,
+      "kod": "14",
+      "object": 256,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25174,
+      "kod": "21",
+      "object": 1786,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2397,
+      "kod": "14",
+      "object": 30,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5540,
+      "kod": "14",
+      "object": 30,
+      "present": true,
+      "strength": 100
+    },
+    {
+      "subject": 1608,
+      "kod": "14",
+      "object": 29,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 17359,
+      "kod": "14",
+      "object": 5017,
+      "present": true,
+      "strength": 100
+    },
+    {
+      "subject": 6938,
+      "kod": "14",
+      "object": 5017,
+      "present": true,
+      "strength": 100
+    },
+    {
+      "subject": 5168,
+      "kod": "14",
+      "object": 5017,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1530,
+      "kod": "22",
+      "object": 254,
+      "present": true,
+      "strength": 95
+    },
+    {
+      "subject": 1608,
+      "kod": "23",
+      "object": 96,
+      "present": true,
+      "strength": 95
+    },
+    {
+      "subject": 1819,
+      "kod": "74",
+      "object": 1507,
+      "present": true,
+      "strength": 90
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "physical_container",
+      "ancestor": 29,
+      "present": true
+    },
+    {
+      "subject": "glass_vessel",
+      "ancestor": 3500,
+      "present": true
+    },
+    {
+      "subject": "plastic_vessel",
+      "ancestor": 3500,
+      "present": true
+    },
+    {
+      "subject": "metal_vessel",
+      "ancestor": 3500,
+      "present": true
+    },
+    {
+      "subject": "glass_jar",
+      "ancestor": 1531,
+      "present": true
+    },
+    {
+      "subject": "plastic_jar",
+      "ancestor": 1531,
+      "present": true
+    },
+    {
+      "subject": "glass_bottle",
+      "ancestor": 1530,
+      "present": true
+    },
+    {
+      "subject": "plastic_bottle",
+      "ancestor": 1530,
+      "present": true
+    },
+    {
+      "subject": "metal_bottle",
+      "ancestor": 1530,
+      "present": true
+    },
+    {
+      "subject": "food_storage",
+      "ancestor": 254,
+      "present": true
+    },
+    {
+      "subject": "food_container",
+      "ancestor": "physical_container",
+      "present": true
+    },
+    {
+      "subject": "food_jar",
+      "ancestor": 1531,
+      "present": true
+    },
+    {
+      "subject": "glass_food_jar",
+      "ancestor": "glass_jar",
+      "present": true
+    },
+    {
+      "subject": "metal_can",
+      "ancestor": "metal_vessel",
+      "present": true
+    },
+    {
+      "subject": "food_can",
+      "ancestor": "metal_can",
+      "present": true
+    },
+    {
+      "subject": "beverage_can",
+      "ancestor": "metal_can",
+      "present": true
+    },
+    {
+      "subject": "steel_can",
+      "ancestor": "metal_can",
+      "present": true
+    },
+    {
+      "subject": "aluminum_can",
+      "ancestor": "metal_can",
+      "present": true
+    },
+    {
+      "subject": "steel_food_can",
+      "ancestor": "food_can",
+      "present": true
+    },
+    {
+      "subject": "aluminum_beverage_can",
+      "ancestor": "beverage_can",
+      "present": true
+    },
+    {
+      "subject": "can_opening",
+      "ancestor": 1786,
+      "present": true
+    },
+    {
+      "subject": "bristled_tool",
+      "ancestor": 30,
+      "present": true
+    },
+    {
+      "subject": "surface_application",
+      "ancestor": 5168,
+      "present": true
+    },
+    {
+      "subject": "applicator",
+      "ancestor": 30,
+      "present": true
+    },
+    {
+      "subject": "paint_application",
+      "ancestor": 6938,
+      "present": true
+    },
+    {
+      "subject": "paintbrush",
+      "ancestor": "bristled_tool",
+      "present": true
+    },
+    {
+      "subject": "artist_paintbrush",
+      "ancestor": 1507,
+      "present": true
+    },
+    {
+      "subject": "paint_roller",
+      "ancestor": "applicator",
+      "present": true
+    },
+    {
+      "subject": "hairbrush",
+      "ancestor": 5540,
+      "present": true
+    },
+    {
+      "subject": "cleaning_tool",
+      "ancestor": 30,
+      "present": true
+    },
+    {
+      "subject": "nailbrush",
+      "ancestor": 24792,
+      "present": true
+    },
+    {
+      "subject": "bottle_cleaning",
+      "ancestor": 24790,
+      "present": true
+    },
+    {
+      "subject": "bottle_brush",
+      "ancestor": 24792,
+      "present": true
+    },
+    {
+      "subject": "dish_brush",
+      "ancestor": 24792,
+      "present": true
+    },
+    {
+      "subject": "scraper",
+      "ancestor": 30,
+      "present": true
+    },
+    {
+      "subject": "cleaning_scraper",
+      "ancestor": "scraper",
+      "present": true
+    },
+    {
+      "subject": "ice_scraper",
+      "ancestor": "scraper",
+      "present": true
+    },
+    {
+      "subject": "paint_scraper",
+      "ancestor": "scraper",
+      "present": true
+    },
+    {
+      "subject": "water_squeegeeing",
+      "ancestor": 5017,
+      "present": true
+    },
+    {
+      "subject": "squeegee",
+      "ancestor": 30,
+      "present": true
+    },
+    {
+      "subject": "dustpan",
+      "ancestor": "physical_container",
+      "present": true
+    },
+    {
+      "subject": "glass_food_jar",
+      "ancestor": "glass_vessel",
+      "present": true
+    },
+    {
+      "subject": "glass_food_jar",
+      "ancestor": "food_container",
+      "present": true
+    },
+    {
+      "subject": "steel_food_can",
+      "ancestor": "steel_can",
+      "present": true
+    },
+    {
+      "subject": "aluminum_beverage_can",
+      "ancestor": "aluminum_can",
+      "present": true
+    },
+    {
+      "subject": "food_can",
+      "ancestor": "food_container",
+      "present": true
+    },
+    {
+      "subject": 2397,
+      "ancestor": 5540,
+      "present": true
+    },
+    {
+      "subject": 25183,
+      "ancestor": "bristled_tool",
+      "present": true
+    },
+    {
+      "subject": 25183,
+      "ancestor": "applicator",
+      "present": true
+    },
+    {
+      "subject": "artist_paintbrush",
+      "ancestor": "paintbrush",
+      "present": true
+    },
+    {
+      "subject": "cleaning_scraper",
+      "ancestor": "cleaning_tool",
+      "present": true
+    },
+    {
+      "subject": "dustpan",
+      "ancestor": 30,
+      "present": true
+    },
+    {
+      "subject": "dustpan",
+      "ancestor": "physical_container",
+      "present": true
+    },
+    {
+      "subject": 17520,
+      "ancestor": 5017,
+      "present": true
+    },
+    {
+      "subject": "food_storage",
+      "ancestor": 5017,
+      "present": true
+    },
+    {
+      "subject": 1530,
+      "ancestor": 29,
+      "present": true
+    },
+    {
+      "subject": 1531,
+      "ancestor": 29,
+      "present": true
+    },
+    {
+      "subject": 1608,
+      "ancestor": "physical_container",
+      "present": true
+    },
+    {
+      "subject": "physical_container",
+      "ancestor": 347,
+      "present": false
+    },
+    {
+      "subject": 3500,
+      "ancestor": 127,
+      "present": false
+    },
+    {
+      "subject": 1531,
+      "ancestor": 127,
+      "present": false
+    },
+    {
+      "subject": 1530,
+      "ancestor": 127,
+      "present": false
+    },
+    {
+      "subject": "glass_jar",
+      "ancestor": "food_container",
+      "present": false
+    },
+    {
+      "subject": "plastic_jar",
+      "ancestor": "glass_vessel",
+      "present": false
+    },
+    {
+      "subject": "metal_bottle",
+      "ancestor": "glass_vessel",
+      "present": false
+    },
+    {
+      "subject": "metal_can",
+      "ancestor": 1531,
+      "present": false
+    },
+    {
+      "subject": "metal_can",
+      "ancestor": 1274,
+      "present": false
+    },
+    {
+      "subject": "food_can",
+      "ancestor": 101,
+      "present": false
+    },
+    {
+      "subject": "beverage_can",
+      "ancestor": "aluminum_can",
+      "present": false
+    },
+    {
+      "subject": "steel_food_can",
+      "ancestor": "aluminum_can",
+      "present": false
+    },
+    {
+      "subject": "food_storage",
+      "ancestor": 63,
+      "present": false
+    },
+    {
+      "subject": 254,
+      "ancestor": 63,
+      "present": false
+    },
+    {
+      "subject": "bristled_tool",
+      "ancestor": 1507,
+      "present": false
+    },
+    {
+      "subject": 25183,
+      "ancestor": 1507,
+      "present": false
+    },
+    {
+      "subject": "paintbrush",
+      "ancestor": 1507,
+      "present": false
+    },
+    {
+      "subject": 1507,
+      "ancestor": "paintbrush",
+      "present": false
+    },
+    {
+      "subject": "paint_roller",
+      "ancestor": "bristled_tool",
+      "present": false
+    },
+    {
+      "subject": "hairbrush",
+      "ancestor": 1598,
+      "present": false
+    },
+    {
+      "subject": "hairbrush",
+      "ancestor": 24792,
+      "present": false
+    },
+    {
+      "subject": "nailbrush",
+      "ancestor": 1498,
+      "present": false
+    },
+    {
+      "subject": "ice_scraper",
+      "ancestor": "squeegee",
+      "present": false
+    },
+    {
+      "subject": "squeegee",
+      "ancestor": "scraper",
+      "present": false
+    },
+    {
+      "subject": "squeegee",
+      "ancestor": "cleaning_tool",
+      "present": false
+    },
+    {
+      "subject": "water_squeegeeing",
+      "ancestor": 54,
+      "present": false
+    },
+    {
+      "subject": 17520,
+      "ancestor": 54,
+      "present": false
+    },
+    {
+      "subject": "dustpan",
+      "ancestor": 3500,
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": "physical_container",
+      "term": "контейнер (физическая ёмкость)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "physical_container",
+      "term": "manufactured physical container",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3500,
+      "term": "сосуд (ёмкость)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 3500,
+      "term": "vessel (container)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1531,
+      "term": "банка (сосуд с широким горлом)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1531,
+      "term": "jar (wide-mouthed vessel)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1530,
+      "term": "bottle (vessel)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1608,
+      "term": "pail",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "glass_vessel",
+      "term": "стеклянный сосуд",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "glass_vessel",
+      "term": "glass vessel",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "plastic_vessel",
+      "term": "пластмассовый сосуд",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "plastic_vessel",
+      "term": "plastic vessel",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "metal_vessel",
+      "term": "металлический сосуд",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "metal_vessel",
+      "term": "metal vessel",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "glass_jar",
+      "term": "стеклянная банка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "glass_jar",
+      "term": "glass jar",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "plastic_jar",
+      "term": "пластмассовая банка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "plastic_jar",
+      "term": "plastic jar",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "glass_bottle",
+      "term": "стеклянная бутылка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "glass_bottle",
+      "term": "glass bottle",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "plastic_bottle",
+      "term": "пластмассовая бутылка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "plastic_bottle",
+      "term": "plastic bottle",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "metal_bottle",
+      "term": "металлическая бутылка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "metal_bottle",
+      "term": "metal bottle",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "food_storage",
+      "term": "хранение пищи",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "food_storage",
+      "term": "food storage",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 254,
+      "term": "хранить",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 254,
+      "term": "храниение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 254,
+      "term": "ХРАНИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "food_container",
+      "term": "ёмкость для хранения пищи",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "food_container",
+      "term": "food storage container",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "food_jar",
+      "term": "банка для хранения пищи",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "food_jar",
+      "term": "food storage jar",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "glass_food_jar",
+      "term": "стеклянная банка для хранения пищи",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "glass_food_jar",
+      "term": "glass food storage jar",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "metal_can",
+      "term": "металлическая банка (упаковка)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "metal_can",
+      "term": "can (metal container)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "metal_can",
+      "term": "tin can",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "food_can",
+      "term": "консервная банка (металлическая)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "food_can",
+      "term": "metal food can",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "food_can",
+      "term": "food can",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "beverage_can",
+      "term": "металлическая банка для напитка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "beverage_can",
+      "term": "beverage can",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "steel_can",
+      "term": "стальная упаковочная банка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "steel_can",
+      "term": "steel can",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "aluminum_can",
+      "term": "алюминиевая упаковочная банка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "aluminum_can",
+      "term": "aluminium can",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "aluminum_can",
+      "term": "aluminum can",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "steel_food_can",
+      "term": "стальная консервная банка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "steel_food_can",
+      "term": "steel food can",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "aluminum_beverage_can",
+      "term": "алюминиевая банка для напитка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "aluminum_beverage_can",
+      "term": "aluminium beverage can",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "aluminum_beverage_can",
+      "term": "aluminum beverage can",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "can_opening",
+      "term": "открывание металлической упаковочной банки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "can_opening",
+      "term": "opening a metal can",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "bristled_tool",
+      "term": "инструмент с рабочей щетиной",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "bristled_tool",
+      "term": "bristled tool",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5540,
+      "term": "brush (bristled tool)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "surface_application",
+      "term": "нанесение вещества на поверхность",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "surface_application",
+      "term": "applying a substance to a surface",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5168,
+      "term": "покрытие (действие)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 5168,
+      "term": "КРЫТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 5168,
+      "term": "covering (physical action)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "applicator",
+      "term": "аппликатор (инструмент для нанесения вещества)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "applicator",
+      "term": "applicator (physical tool)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1507,
+      "term": "кисть для рисования",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1507,
+      "term": "artist drawing brush",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 6938,
+      "term": "окрашивание (действие)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 6938,
+      "term": "coloring (physical action)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 6938,
+      "term": "colouring (physical action)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 6938,
+      "term": "красить",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 6938,
+      "term": "красение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 6938,
+      "term": "красиение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 6938,
+      "term": "КРАСИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "paint_application",
+      "term": "нанесение краски на поверхность",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "paint_application",
+      "term": "applying paint to a surface",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "paintbrush",
+      "term": "кисть для нанесения краски",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "paintbrush",
+      "term": "paintbrush",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "artist_paintbrush",
+      "term": "кисть для рисования красками",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "artist_paintbrush",
+      "term": "artist paintbrush",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "paint_roller",
+      "term": "малярный валик",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "paint_roller",
+      "term": "paint roller",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hairbrush",
+      "term": "щётка для волос",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "hairbrush",
+      "term": "hairbrush",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cleaning_tool",
+      "term": "инструмент для очистки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "cleaning_tool",
+      "term": "cleaning tool (physical)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "nailbrush",
+      "term": "щётка для чистки ногтей",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "nailbrush",
+      "term": "nailbrush",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "bottle_cleaning",
+      "term": "очистка бутылки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "bottle_cleaning",
+      "term": "bottle cleaning",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "bottle_brush",
+      "term": "ёршик для бутылок",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "bottle_brush",
+      "term": "bottlebrush (cleaning tool)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "bottle_brush",
+      "term": "bottle brush",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "bottle_brush",
+      "term": "щётка для бутылок",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "dish_brush",
+      "term": "щётка для мытья посуды",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "dish_brush",
+      "term": "dishwashing brush",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "dish_brush",
+      "term": "dish brush",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 17359,
+      "term": "scraping material off a surface",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 17359,
+      "term": "соскребать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 17359,
+      "term": "соскребаание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 17359,
+      "term": "СОСКРЕБАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "scraper",
+      "term": "скребок (ручной инструмент)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "scraper",
+      "term": "scraper (hand tool)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "scraper",
+      "term": "hand scraper",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cleaning_scraper",
+      "term": "скребок для очистки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "cleaning_scraper",
+      "term": "cleaning scraper",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "ice_scraper",
+      "term": "скребок для льда",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "ice_scraper",
+      "term": "ice scraper",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "paint_scraper",
+      "term": "скребок для удаления краски",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "paint_scraper",
+      "term": "paint scraper",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "water_squeegeeing",
+      "term": "сгон воды с поверхности",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "water_squeegeeing",
+      "term": "squeegeeing water from a surface",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "squeegee",
+      "term": "сгон для воды (ручной инструмент)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "squeegee",
+      "term": "water-removal squeegee",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 17520,
+      "term": "sweeping (cleaning action)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 17520,
+      "term": "подметать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 17520,
+      "term": "подметаание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 17520,
+      "term": "ПОДМЕТАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "dustpan",
+      "term": "совок для мусора",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "dustpan",
+      "term": "dustpan",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "physical_container",
+      "term": "container",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "metal_can",
+      "term": "tin",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "scraper",
+      "term": "scraping",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "bottle_brush",
+      "term": "bottlebrush",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "food_can",
+      "term": "jarful",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "surface_application",
+      "term": "application",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

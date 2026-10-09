@@ -1,0 +1,3417 @@
+{
+  "source": "quality-20261009-q25",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Rule-governed game activities, sports by equipment and team format, physical exercise, and physical game equipment. Separate cards as activity from playing cards as objects.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "game": "https://dictionary.cambridge.org/us/dictionary/english/game",
+      "gymnastics": "https://www.collinsdictionary.com/dictionary/english/gymnastics",
+      "racket_sport": "https://dictionary.cambridge.org/dictionary/english/racket-sport",
+      "table_tennis": "https://www.cambridge.org/elt/objectivepet/ObjPET_WLM_WithDefinitions.pdf",
+      "shuttlecock": "https://system.bwfbadminton.com/documents/folder_1_81/folder_1_140/folder_1_165/1%20Shuttlecocks%20Overview.pdf"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet; CC BY 4.0 and Princeton notices remain in docs/quality/2026-10-09-q11.md#sources-and-reuse. Cambridge, Collins and BWF support terminology and selected scope corrections. Definitions are not copied; graph mappings and restrictions are editorial adaptations.",
+    "existing_cohort": [
+      19,
+      29,
+      63,
+      237,
+      3599,
+      1610,
+      1612,
+      2161,
+      2162,
+      2163,
+      2164,
+      2165,
+      2166,
+      2167,
+      2170,
+      2742,
+      2998,
+      3497,
+      5017,
+      5396,
+      5402,
+      5403,
+      5404,
+      5405,
+      5406,
+      5407,
+      5408,
+      5594,
+      5595,
+      5596,
+      24430
+    ],
+    "context_policy": "All new concepts and assertions use U1 with unspecified strength. Game activity, physical equipment, intended use and playing format remain separate. Social interaction and bodily action are not mutually exclusive. Sport is not universally classified as physical exercise; its existing scope includes chess.",
+    "sense_decisions": [
+      {
+        "concept": "rule_game",
+        "synset": "oewn-00456623-n",
+        "decision": "add",
+        "alignment": "activity restriction",
+        "scope": "A game activity structured by rules; select the activity sense rather than equipment, hunted animals, a match result or musical performance. Do not require gambling or competition between multiple players."
+      },
+      {
+        "concept": "board_game",
+        "synset": "oewn-00503426-n",
+        "decision": "add",
+        "alignment": "board-mechanics family",
+        "scope": "A game organized around a designated game board and its positions. The mechanics can be represented physically or digitally; this activity is not a wooden board, equipment set or a generic game on a sports field."
+      },
+      {
+        "concept": "tile_game",
+        "synset": null,
+        "decision": "add",
+        "alignment": "game-mechanics family",
+        "scope": "A rule-governed game using tiles as playing units, including a digital representation of those units. A rigid game board is not required."
+      },
+      {
+        "concept": "sporting_game",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed intersection",
+        "scope": "The overlap of sports activity and rule-governed game activity. Do not identify every form of sport, physical exercise or informal play with this restricted family."
+      },
+      {
+        "concept": "team_sport",
+        "synset": "oewn-00889222-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Sport played in opposing teams. The selected format concerns the competing sides in play, not a club affiliation or a tournament team made up of singles players."
+      },
+      {
+        "concept": "ball_sport",
+        "synset": "oewn-00472512-n",
+        "decision": "add",
+        "alignment": "broadened equipment-defined family",
+        "scope": "Sporting games using a ball. Broaden the dictionary field-only wording to include court and table sports; exclude a shuttlecock and a hockey puck."
+      },
+      {
+        "concept": "racket_sport",
+        "synset": null,
+        "decision": "add",
+        "alignment": "equipment-defined family",
+        "scope": "Sporting games played with rackets, including table-tennis rackets. Not all rackets have strings and not all racket sports use a ball."
+      },
+      {
+        "concept": "badminton",
+        "synset": "oewn-00481519-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The racket game using a shuttlecock, distinct from tennis and from a ball-game family. No scoring system or equipment regulation is encoded."
+      },
+      {
+        "concept": "table_tennis",
+        "synset": "oewn-00500274-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The game using rackets and a small ball across a table. It is a racket sport and a ball sport, not a subtype of lawn tennis."
+      },
+      {
+        "concept": "squash",
+        "synset": "oewn-00480898-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The racket-and-ball game, not a vegetable, plant, drink or crushing action."
+      },
+      {
+        "concept": "doubles_tennis",
+        "synset": "oewn-00484519-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Tennis with a pair of players on each side. This is a team format without claiming that every form of tennis is a team sport."
+      },
+      {
+        "concept": "singles_tennis",
+        "synset": "oewn-00484324-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Tennis with one player on each side. A singles match may still count toward a wider team competition; no blanket social or event exclusion is asserted."
+      },
+      {
+        "concept": "doubles_badminton",
+        "synset": "oewn-00484616-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Badminton with a pair of players on each side. Do not import bare doubles as an unambiguous synonym."
+      },
+      {
+        "concept": "singles_badminton",
+        "synset": "oewn-00484420-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Badminton with one player on each side. This format remains distinct from the type of tournament or club membership."
+      },
+      {
+        "concept": "doubles_table_tennis",
+        "synset": null,
+        "decision": "add",
+        "alignment": "qualified playing format",
+        "scope": "Table tennis played by a pair on each side. No service order, scoring rule or equipment specification is asserted."
+      },
+      {
+        "concept": "game_equipment",
+        "synset": "oewn-03419072-n",
+        "decision": "add",
+        "alignment": "physical equipment family",
+        "scope": "Physical artifacts intended for play or games. Broaden organized-game wording to include informal play; an equipment item is not the game activity itself."
+      },
+      {
+        "concept": "sports_ball",
+        "synset": null,
+        "decision": "add",
+        "alignment": "purpose-defined intersection",
+        "scope": "A ball intended for sport, also belonging to sports equipment. Not every ball is a toy, sporting item or geometrically exact sphere."
+      },
+      {
+        "concept": "toy_ball",
+        "synset": null,
+        "decision": "add",
+        "alignment": "purpose-defined intersection",
+        "scope": "A ball designed as a toy. This preserves the legitimate overlap without making every sporting ball a toy."
+      },
+      {
+        "concept": "racket",
+        "synset": "oewn-04045857-n",
+        "decision": "add",
+        "alignment": "physical implement sense",
+        "scope": "A racket for striking a ball or shuttlecock in a racket game. Strings are common but not universal; include the solid striking surface of a table-tennis racket."
+      },
+      {
+        "concept": "tennis_racket",
+        "synset": "oewn-04416941-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A racket intended for tennis; no frame material, size or string specification is asserted."
+      },
+      {
+        "concept": "badminton_racket",
+        "synset": "oewn-02775705-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A racket intended for badminton; historical battledore meanings are not automatically imported."
+      },
+      {
+        "concept": "table_tennis_racket",
+        "synset": "oewn-04388811-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The racket, paddle or bat used in table tennis. Use the selected sports-racket family; it need not have strings."
+      },
+      {
+        "concept": "squash_racket",
+        "synset": "oewn-04299552-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A racket intended for squash. Do not import the bare bat synonym, which has other sports and animal senses."
+      },
+      {
+        "concept": "shuttlecock",
+        "synset": "oewn-04219349-n",
+        "decision": "add",
+        "alignment": "broadened material scope",
+        "scope": "The badminton projectile, with a base and drag-producing skirt. Allow feathered and synthetic constructions; do not require natural feathers or classify it as a ball."
+      },
+      {
+        "concept": "tennis_ball",
+        "synset": "oewn-04416650-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A ball intended for tennis; no particular material, pressure or dimension is asserted."
+      },
+      {
+        "concept": "table_tennis_ball",
+        "synset": "oewn-03949089-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The light hollow ball intended for table tennis; do not prescribe a material or current competition dimensions."
+      },
+      {
+        "concept": "soccer_ball",
+        "synset": "oewn-04261790-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A ball intended for association football, not every regional football-code ball."
+      },
+      {
+        "concept": "basketball_ball",
+        "synset": "oewn-02805592-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The physical ball used in basketball, distinct from the existing basketball activity."
+      },
+      {
+        "concept": "volleyball_ball",
+        "synset": "oewn-04547339-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The physical ball used in volleyball, distinct from the existing volleyball activity."
+      },
+      {
+        "concept": "playing_card",
+        "synset": "oewn-03970276-n",
+        "decision": "add",
+        "alignment": "physical object separated from activity",
+        "scope": "A physical card intended for card games. Move the old equipment label off the activity record. Do not import maps, circuit cards or a fixed deck size."
+      },
+      {
+        "concept": "game_tile",
+        "synset": null,
+        "decision": "add",
+        "alignment": "physical game component",
+        "scope": "A physical tile used as a playing unit, distinct from the activity or a software representation."
+      },
+      {
+        "concept": "domino_tile",
+        "synset": "oewn-03225505-n",
+        "decision": "add",
+        "alignment": "broadened domino-set scope",
+        "scope": "The physical domino playing piece. Do not limit every set to double-six values or import the mask and cloak homonyms."
+      },
+      {
+        "concept": "game_board",
+        "synset": "oewn-02860303-n",
+        "decision": "add",
+        "alignment": "physical artifact restriction",
+        "scope": "A physical game board rather than the activity, electronic circuit, governing committee or generic timber plank."
+      },
+      {
+        "concept": "chessboard",
+        "synset": "oewn-03017971-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The physical board intended for chess; not a chess game or a software-rendered board."
+      },
+      {
+        "concept": "physical_exercise",
+        "synset": "oewn-00625978-n",
+        "decision": "add",
+        "alignment": "physical activity restriction",
+        "scope": "Bodily exercise performed for practice or physical conditioning. It is a kind of exercise and physical action, not every bodily motion and not necessarily competitive sport."
+      },
+      {
+        "concept": "gymnastic_exercise",
+        "synset": "oewn-00436718-n",
+        "decision": "add",
+        "alignment": "exercise scope wider than competitive discipline",
+        "scope": "Physical exercises involving gymnastic movement and control. Competition is not required, and no therapeutic outcome or exercise instructions are asserted."
+      },
+      {
+        "concept": 237,
+        "synset": "oewn-00408356-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The existing play root also has musical and verb-generated descendants. Reuse it as the broad play anchor but add a narrower rule-game family instead of equating all senses."
+      },
+      {
+        "concept": 2161,
+        "synset": "oewn-00524569-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The existing sport family includes chess. Do not import a universal physical-exertion genus from the narrower dictionary gloss."
+      },
+      {
+        "concept": 2742,
+        "synset": "oewn-00524569-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Athletics can mean sport broadly or track and field more narrowly. Do not create an identity or new children until the existing Russian athletics record is qualified."
+      },
+      {
+        "concept": 5403,
+        "synset": "oewn-00452356-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Existing cycling selects bicycle sport. Do not import motorcycle racing or generic bicycle travel from wider cycling usages."
+      },
+      {
+        "concept": 5408,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Mountaineering is narrower than generic climbing. Preserve this for a separate activity/sport review."
+      },
+      {
+        "concept": 1612,
+        "synset": "oewn-02781674-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the play/sport ball, distinct from a geometrical ball, dance event or other spherical object."
+      },
+      {
+        "concept": 3497,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Competition is reused later for events; do not make every sport activity a particular competition event."
+      }
+    ],
+    "limits": "No competition regulations, fixed scores, dimensions, deck sizes, player eligibility, exercise prescription or health outcome. Board, card and tile game families describe game mechanics and do not require every occurrence to use physical equipment. Equipment concepts explicitly select physical artifacts. Musical play, sports event/discipline scope, athletics/track-and-field, general swimming versus vessels, mountaineering/climbing, skiing and the remaining generated action names need further review. No application test suites.",
+    "exclusion_review": {
+      "context": "U1 positive genus witnesses",
+      "before_conflicting_edges": 12,
+      "resolved_edges": [
+        3958,
+        8153
+      ],
+      "decision": "Reject the false gymnastics/sport and social/physical-action exclusions, and the sport/play exclusion before adding reviewed game/sport intersections. Retain both genus families and leave other exclusions untouched.",
+      "remaining_candidates_expected": 10
+    },
+    "new_term_collisions": [
+      {
+        "key": "playing_card",
+        "term": "playing cards",
+        "lang": "en",
+        "existing": [
+          [
+            5595,
+            "карты"
+          ]
+        ],
+        "decision": "Reviewed move: remove the object label from card-game activity before attaching it to the physical-card sense."
+      }
+    ],
+    "collision_decision": "One exact collision is a reviewed label move from card-game activity to physical playing cards. All other new names and aliases have no exact normalized cross-language match. Existing games, sport disciplines, balls, card artifacts and sports equipment are reused.",
+    "refreshed_comparison": {
+      "baseline": "Q24",
+      "existing_concepts": 12993,
+      "existing_terms": 36629,
+      "synsets_with_exact_en_candidate": 15571,
+      "synsets_without_exact_en_candidate": 91948,
+      "existing_concepts_with_dictionary_candidate": 4144,
+      "caveat": "Normalized spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "rule_game",
+      "name": "игра по правилам",
+      "parent": 237,
+      "universum_id": 1,
+      "terms": [
+        [
+          "игра по правилам",
+          "ru"
+        ],
+        [
+          "rule-governed game",
+          "en"
+        ],
+        [
+          "game (rule-governed activity)",
+          "en"
+        ]
+      ],
+      "reason": "A game activity structured by rules; select the activity sense rather than equipment, hunted animals, a match result or musical performance. Do not require gambling or competition between multiple players. OEWN 2025: oewn-00456623-n. Source: https://dictionary.cambridge.org/us/dictionary/english/game"
+    },
+    {
+      "key": "board_game",
+      "name": "игра на игровой доске",
+      "parent": "rule_game",
+      "universum_id": 1,
+      "terms": [
+        [
+          "игра на игровой доске",
+          "ru"
+        ],
+        [
+          "board game",
+          "en"
+        ]
+      ],
+      "reason": "A game organized around a designated game board and its positions. The mechanics can be represented physically or digitally; this activity is not a wooden board, equipment set or a generic game on a sports field. OEWN 2025: oewn-00503426-n."
+    },
+    {
+      "key": "tile_game",
+      "name": "игра с игровыми костяшками",
+      "parent": "rule_game",
+      "universum_id": 1,
+      "terms": [
+        [
+          "игра с игровыми костяшками",
+          "ru"
+        ],
+        [
+          "tile-based game",
+          "en"
+        ]
+      ],
+      "reason": "A rule-governed game using tiles as playing units, including a digital representation of those units. A rigid game board is not required."
+    },
+    {
+      "key": "sporting_game",
+      "name": "спортивная игра",
+      "parent": 2161,
+      "universum_id": 1,
+      "terms": [
+        [
+          "спортивная игра",
+          "ru"
+        ],
+        [
+          "sporting game",
+          "en"
+        ]
+      ],
+      "reason": "The overlap of sports activity and rule-governed game activity. Do not identify every form of sport, physical exercise or informal play with this restricted family. Source: https://dictionary.cambridge.org/us/dictionary/english/game"
+    },
+    {
+      "key": "team_sport",
+      "name": "командный спорт",
+      "parent": 2161,
+      "universum_id": 1,
+      "terms": [
+        [
+          "командный спорт",
+          "ru"
+        ],
+        [
+          "team sport",
+          "en"
+        ]
+      ],
+      "reason": "Sport played in opposing teams. The selected format concerns the competing sides in play, not a club affiliation or a tournament team made up of singles players. OEWN 2025: oewn-00889222-n."
+    },
+    {
+      "key": "ball_sport",
+      "name": "спортивная игра с мячом",
+      "parent": "sporting_game",
+      "universum_id": 1,
+      "terms": [
+        [
+          "спортивная игра с мячом",
+          "ru"
+        ],
+        [
+          "ball sport",
+          "en"
+        ]
+      ],
+      "reason": "Sporting games using a ball. Broaden the dictionary field-only wording to include court and table sports; exclude a shuttlecock and a hockey puck. OEWN 2025: oewn-00472512-n."
+    },
+    {
+      "key": "racket_sport",
+      "name": "спортивная игра с ракеткой",
+      "parent": "sporting_game",
+      "universum_id": 1,
+      "terms": [
+        [
+          "спортивная игра с ракеткой",
+          "ru"
+        ],
+        [
+          "racket sport",
+          "en"
+        ],
+        [
+          "racquet sport",
+          "en"
+        ]
+      ],
+      "reason": "Sporting games played with rackets, including table-tennis rackets. Not all rackets have strings and not all racket sports use a ball. Source: https://dictionary.cambridge.org/dictionary/english/racket-sport"
+    },
+    {
+      "key": "badminton",
+      "name": "бадминтон",
+      "parent": "racket_sport",
+      "universum_id": 1,
+      "terms": [
+        [
+          "бадминтон",
+          "ru"
+        ],
+        [
+          "badminton",
+          "en"
+        ]
+      ],
+      "reason": "The racket game using a shuttlecock, distinct from tennis and from a ball-game family. No scoring system or equipment regulation is encoded. OEWN 2025: oewn-00481519-n."
+    },
+    {
+      "key": "table_tennis",
+      "name": "настольный теннис",
+      "parent": "racket_sport",
+      "universum_id": 1,
+      "terms": [
+        [
+          "настольный теннис",
+          "ru"
+        ],
+        [
+          "table tennis",
+          "en"
+        ],
+        [
+          "ping pong",
+          "en"
+        ]
+      ],
+      "reason": "The game using rackets and a small ball across a table. It is a racket sport and a ball sport, not a subtype of lawn tennis. OEWN 2025: oewn-00500274-n. Source: https://www.cambridge.org/elt/objectivepet/ObjPET_WLM_WithDefinitions.pdf"
+    },
+    {
+      "key": "squash",
+      "name": "сквош (игра)",
+      "parent": "racket_sport",
+      "universum_id": 1,
+      "terms": [
+        [
+          "сквош (игра)",
+          "ru"
+        ],
+        [
+          "squash (sport)",
+          "en"
+        ],
+        [
+          "сквош",
+          "ru"
+        ]
+      ],
+      "reason": "The racket-and-ball game, not a vegetable, plant, drink or crushing action. OEWN 2025: oewn-00480898-n."
+    },
+    {
+      "key": "doubles_tennis",
+      "name": "парная игра в теннис",
+      "parent": 2166,
+      "universum_id": 1,
+      "terms": [
+        [
+          "парная игра в теннис",
+          "ru"
+        ],
+        [
+          "doubles tennis",
+          "en"
+        ]
+      ],
+      "reason": "Tennis with a pair of players on each side. This is a team format without claiming that every form of tennis is a team sport. OEWN 2025: oewn-00484519-n."
+    },
+    {
+      "key": "singles_tennis",
+      "name": "одиночная игра в теннис",
+      "parent": 2166,
+      "universum_id": 1,
+      "terms": [
+        [
+          "одиночная игра в теннис",
+          "ru"
+        ],
+        [
+          "singles tennis",
+          "en"
+        ]
+      ],
+      "reason": "Tennis with one player on each side. A singles match may still count toward a wider team competition; no blanket social or event exclusion is asserted. OEWN 2025: oewn-00484324-n."
+    },
+    {
+      "key": "doubles_badminton",
+      "name": "парная игра в бадминтон",
+      "parent": "badminton",
+      "universum_id": 1,
+      "terms": [
+        [
+          "парная игра в бадминтон",
+          "ru"
+        ],
+        [
+          "doubles badminton",
+          "en"
+        ]
+      ],
+      "reason": "Badminton with a pair of players on each side. Do not import bare doubles as an unambiguous synonym. OEWN 2025: oewn-00484616-n."
+    },
+    {
+      "key": "singles_badminton",
+      "name": "одиночная игра в бадминтон",
+      "parent": "badminton",
+      "universum_id": 1,
+      "terms": [
+        [
+          "одиночная игра в бадминтон",
+          "ru"
+        ],
+        [
+          "singles badminton",
+          "en"
+        ]
+      ],
+      "reason": "Badminton with one player on each side. This format remains distinct from the type of tournament or club membership. OEWN 2025: oewn-00484420-n."
+    },
+    {
+      "key": "doubles_table_tennis",
+      "name": "парная игра в настольный теннис",
+      "parent": "table_tennis",
+      "universum_id": 1,
+      "terms": [
+        [
+          "парная игра в настольный теннис",
+          "ru"
+        ],
+        [
+          "doubles table tennis",
+          "en"
+        ]
+      ],
+      "reason": "Table tennis played by a pair on each side. No service order, scoring rule or equipment specification is asserted. Source: https://www.cambridge.org/elt/objectivepet/ObjPET_WLM_WithDefinitions.pdf"
+    },
+    {
+      "key": "game_equipment",
+      "name": "игровой инвентарь",
+      "parent": 29,
+      "universum_id": 1,
+      "terms": [
+        [
+          "игровой инвентарь",
+          "ru"
+        ],
+        [
+          "game equipment",
+          "en"
+        ]
+      ],
+      "reason": "Physical artifacts intended for play or games. Broaden organized-game wording to include informal play; an equipment item is not the game activity itself. OEWN 2025: oewn-03419072-n."
+    },
+    {
+      "key": "sports_ball",
+      "name": "спортивный мяч",
+      "parent": 1612,
+      "universum_id": 1,
+      "terms": [
+        [
+          "спортивный мяч",
+          "ru"
+        ],
+        [
+          "sports ball",
+          "en"
+        ]
+      ],
+      "reason": "A ball intended for sport, also belonging to sports equipment. Not every ball is a toy, sporting item or geometrically exact sphere."
+    },
+    {
+      "key": "toy_ball",
+      "name": "игрушечный мяч",
+      "parent": 1612,
+      "universum_id": 1,
+      "terms": [
+        [
+          "игрушечный мяч",
+          "ru"
+        ],
+        [
+          "toy ball",
+          "en"
+        ]
+      ],
+      "reason": "A ball designed as a toy. This preserves the legitimate overlap without making every sporting ball a toy."
+    },
+    {
+      "key": "racket",
+      "name": "ракетка (спортивный инвентарь)",
+      "parent": 24430,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ракетка (спортивный инвентарь)",
+          "ru"
+        ],
+        [
+          "sports racket",
+          "en"
+        ],
+        [
+          "racket (sports implement)",
+          "en"
+        ],
+        [
+          "racquet (sports implement)",
+          "en"
+        ],
+        [
+          "ракетка",
+          "ru"
+        ]
+      ],
+      "reason": "A racket for striking a ball or shuttlecock in a racket game. Strings are common but not universal; include the solid striking surface of a table-tennis racket. OEWN 2025: oewn-04045857-n."
+    },
+    {
+      "key": "tennis_racket",
+      "name": "теннисная ракетка",
+      "parent": "racket",
+      "universum_id": 1,
+      "terms": [
+        [
+          "теннисная ракетка",
+          "ru"
+        ],
+        [
+          "tennis racket",
+          "en"
+        ],
+        [
+          "tennis racquet",
+          "en"
+        ]
+      ],
+      "reason": "A racket intended for tennis; no frame material, size or string specification is asserted. OEWN 2025: oewn-04416941-n."
+    },
+    {
+      "key": "badminton_racket",
+      "name": "ракетка для бадминтона",
+      "parent": "racket",
+      "universum_id": 1,
+      "terms": [
+        [
+          "ракетка для бадминтона",
+          "ru"
+        ],
+        [
+          "badminton racket",
+          "en"
+        ],
+        [
+          "badminton racquet",
+          "en"
+        ]
+      ],
+      "reason": "A racket intended for badminton; historical battledore meanings are not automatically imported. OEWN 2025: oewn-02775705-n."
+    },
+    {
+      "key": "table_tennis_racket",
+      "name": "ракетка для настольного тенниса",
+      "parent": "racket",
+      "universum_id": 1,
+      "terms": [
+        [
+          "ракетка для настольного тенниса",
+          "ru"
+        ],
+        [
+          "table-tennis racket",
+          "en"
+        ],
+        [
+          "table-tennis bat",
+          "en"
+        ],
+        [
+          "table-tennis racquet",
+          "en"
+        ]
+      ],
+      "reason": "The racket, paddle or bat used in table tennis. Use the selected sports-racket family; it need not have strings. OEWN 2025: oewn-04388811-n."
+    },
+    {
+      "key": "squash_racket",
+      "name": "ракетка для сквоша",
+      "parent": "racket",
+      "universum_id": 1,
+      "terms": [
+        [
+          "ракетка для сквоша",
+          "ru"
+        ],
+        [
+          "squash racket",
+          "en"
+        ],
+        [
+          "squash racquet",
+          "en"
+        ]
+      ],
+      "reason": "A racket intended for squash. Do not import the bare bat synonym, which has other sports and animal senses. OEWN 2025: oewn-04299552-n."
+    },
+    {
+      "key": "shuttlecock",
+      "name": "волан для бадминтона",
+      "parent": 24430,
+      "universum_id": 1,
+      "terms": [
+        [
+          "волан для бадминтона",
+          "ru"
+        ],
+        [
+          "shuttlecock",
+          "en"
+        ],
+        [
+          "badminton shuttlecock",
+          "en"
+        ]
+      ],
+      "reason": "The badminton projectile, with a base and drag-producing skirt. Allow feathered and synthetic constructions; do not require natural feathers or classify it as a ball. OEWN 2025: oewn-04219349-n. Source: https://system.bwfbadminton.com/documents/folder_1_81/folder_1_140/folder_1_165/1%20Shuttlecocks%20Overview.pdf"
+    },
+    {
+      "key": "tennis_ball",
+      "name": "теннисный мяч",
+      "parent": "sports_ball",
+      "universum_id": 1,
+      "terms": [
+        [
+          "теннисный мяч",
+          "ru"
+        ],
+        [
+          "tennis ball",
+          "en"
+        ]
+      ],
+      "reason": "A ball intended for tennis; no particular material, pressure or dimension is asserted. OEWN 2025: oewn-04416650-n."
+    },
+    {
+      "key": "table_tennis_ball",
+      "name": "мяч для настольного тенниса",
+      "parent": "sports_ball",
+      "universum_id": 1,
+      "terms": [
+        [
+          "мяч для настольного тенниса",
+          "ru"
+        ],
+        [
+          "table-tennis ball",
+          "en"
+        ],
+        [
+          "ping-pong ball",
+          "en"
+        ]
+      ],
+      "reason": "The light hollow ball intended for table tennis; do not prescribe a material or current competition dimensions. OEWN 2025: oewn-03949089-n."
+    },
+    {
+      "key": "soccer_ball",
+      "name": "футбольный мяч",
+      "parent": "sports_ball",
+      "universum_id": 1,
+      "terms": [
+        [
+          "футбольный мяч",
+          "ru"
+        ],
+        [
+          "soccer ball",
+          "en"
+        ]
+      ],
+      "reason": "A ball intended for association football, not every regional football-code ball. OEWN 2025: oewn-04261790-n."
+    },
+    {
+      "key": "basketball_ball",
+      "name": "баскетбольный мяч",
+      "parent": "sports_ball",
+      "universum_id": 1,
+      "terms": [
+        [
+          "баскетбольный мяч",
+          "ru"
+        ],
+        [
+          "basketball (ball)",
+          "en"
+        ]
+      ],
+      "reason": "The physical ball used in basketball, distinct from the existing basketball activity. OEWN 2025: oewn-02805592-n."
+    },
+    {
+      "key": "volleyball_ball",
+      "name": "волейбольный мяч",
+      "parent": "sports_ball",
+      "universum_id": 1,
+      "terms": [
+        [
+          "волейбольный мяч",
+          "ru"
+        ],
+        [
+          "volleyball (ball)",
+          "en"
+        ]
+      ],
+      "reason": "The physical ball used in volleyball, distinct from the existing volleyball activity. OEWN 2025: oewn-04547339-n."
+    },
+    {
+      "key": "playing_card",
+      "name": "игральная карта",
+      "parent": 2998,
+      "universum_id": 1,
+      "terms": [
+        [
+          "игральная карта",
+          "ru"
+        ],
+        [
+          "playing card",
+          "en"
+        ],
+        [
+          "playing cards",
+          "en"
+        ]
+      ],
+      "reason": "A physical card intended for card games. Move the old equipment label off the activity record. Do not import maps, circuit cards or a fixed deck size. OEWN 2025: oewn-03970276-n."
+    },
+    {
+      "key": "game_tile",
+      "name": "игровая костяшка",
+      "parent": "game_equipment",
+      "universum_id": 1,
+      "terms": [
+        [
+          "игровая костяшка",
+          "ru"
+        ],
+        [
+          "game tile",
+          "en"
+        ]
+      ],
+      "reason": "A physical tile used as a playing unit, distinct from the activity or a software representation."
+    },
+    {
+      "key": "domino_tile",
+      "name": "костяшка домино",
+      "parent": "game_tile",
+      "universum_id": 1,
+      "terms": [
+        [
+          "костяшка домино",
+          "ru"
+        ],
+        [
+          "domino tile",
+          "en"
+        ]
+      ],
+      "reason": "The physical domino playing piece. Do not limit every set to double-six values or import the mask and cloak homonyms. OEWN 2025: oewn-03225505-n."
+    },
+    {
+      "key": "game_board",
+      "name": "игровая доска",
+      "parent": "game_equipment",
+      "universum_id": 1,
+      "terms": [
+        [
+          "игровая доска",
+          "ru"
+        ],
+        [
+          "physical game board",
+          "en"
+        ],
+        [
+          "gameboard",
+          "en"
+        ]
+      ],
+      "reason": "A physical game board rather than the activity, electronic circuit, governing committee or generic timber plank. OEWN 2025: oewn-02860303-n."
+    },
+    {
+      "key": "chessboard",
+      "name": "шахматная доска",
+      "parent": "game_board",
+      "universum_id": 1,
+      "terms": [
+        [
+          "шахматная доска",
+          "ru"
+        ],
+        [
+          "chessboard",
+          "en"
+        ],
+        [
+          "chess board",
+          "en"
+        ]
+      ],
+      "reason": "The physical board intended for chess; not a chess game or a software-rendered board. OEWN 2025: oewn-03017971-n."
+    },
+    {
+      "key": "physical_exercise",
+      "name": "физическое упражнение",
+      "parent": 3599,
+      "universum_id": 1,
+      "terms": [
+        [
+          "физическое упражнение",
+          "ru"
+        ],
+        [
+          "physical exercise",
+          "en"
+        ]
+      ],
+      "reason": "Bodily exercise performed for practice or physical conditioning. It is a kind of exercise and physical action, not every bodily motion and not necessarily competitive sport. OEWN 2025: oewn-00625978-n."
+    },
+    {
+      "key": "gymnastic_exercise",
+      "name": "гимнастические упражнения",
+      "parent": "physical_exercise",
+      "universum_id": 1,
+      "terms": [
+        [
+          "гимнастические упражнения",
+          "ru"
+        ],
+        [
+          "gymnastic exercises",
+          "en"
+        ]
+      ],
+      "reason": "Physical exercises involving gymnastic movement and control. Competition is not required, and no therapeutic outcome or exercise instructions are asserted. OEWN 2025: oewn-00436718-n. Source: https://www.collinsdictionary.com/dictionary/english/gymnastics"
+    }
+  ],
+  "renames": [
+    {
+      "id": 2170,
+      "before": "гимнастика",
+      "name": "гимнастика (вид спорта)",
+      "terms": [],
+      "reason": "Retain the existing sporting-discipline sense, distinct from the broader gymnastic-exercise family. OEWN 2025: oewn-00434742-n."
+    },
+    {
+      "id": 5595,
+      "before": "карты",
+      "name": "карточная игра",
+      "terms": [],
+      "reason": "The existing game genus selects card-game activity, not a pack of physical playing cards. OEWN 2025: oewn-00489236-n."
+    }
+  ],
+  "terms": [
+    {
+      "id": 2170,
+      "name": "гимнастика (вид спорта)",
+      "terms": [
+        [
+          "gymnastics (sport)",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the sporting sense without importing every physical or metaphorical gymnastics use. OEWN 2025: oewn-00434742-n."
+    },
+    {
+      "id": 5596,
+      "name": "домино",
+      "terms": [
+        [
+          "dominoes (game)",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the existing game record rather than merge it with the playing pieces."
+    },
+    {
+      "id": 5595,
+      "name": "карточная игра",
+      "terms": [
+        [
+          "card game",
+          "en"
+        ]
+      ],
+      "reason": "Use the English activity label for the existing game record. OEWN 2025: oewn-00489236-n."
+    },
+    {
+      "id": 2162,
+      "name": "футбол",
+      "terms": [
+        [
+          "soccer",
+          "en"
+        ],
+        [
+          "association football",
+          "en"
+        ]
+      ],
+      "reason": "Add unambiguous English names for the existing association-football activity."
+    },
+    {
+      "id": 24430,
+      "name": "спортивный инвентарь",
+      "terms": [
+        [
+          "sporting equipment",
+          "en"
+        ]
+      ],
+      "reason": "Reuse the existing sports-equipment family instead of creating a synonym duplicate."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 5595,
+      "term": "playing cards",
+      "lang": "en",
+      "reason": "Move the physical-object label from the game activity to the new physical playing-card record."
+    }
+  ],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 3957,
+      "before": [
+        237,
+        "61",
+        2161,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "Sport and play are not mutually exclusive: tennis, football and chess supply game/sport intersections. Keep their distinct families. OEWN 2025: oewn-00456623-n. Source: https://dictionary.cambridge.org/us/dictionary/english/game"
+    },
+    {
+      "id": 3958,
+      "before": [
+        2161,
+        "61",
+        2170,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The selected gymnastics sport cannot be disjoint from its own sport genus. Keep genus 3905 and qualify the competitive-discipline sense. OEWN 2025: oewn-00434742-n."
+    },
+    {
+      "id": 8153,
+      "before": [
+        63,
+        "61",
+        5017,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "Social action and physical action classify different aspects. A sporting activity can involve both bodily action and social participation. Reject the universal exclusion, not either genus. Existing shared descendants still need individual sense review."
+    },
+    {
+      "id": 3897,
+      "before": [
+        2162,
+        "14",
+        2161,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2162,
+          "14",
+          "team_sport",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing football, hockey, basketball, volleyball and baseball sport records through team sport. Preserve sport ancestry. OEWN 2025: oewn-00889222-n."
+    },
+    {
+      "id": 3898,
+      "before": [
+        2163,
+        "14",
+        2161,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2163,
+          "14",
+          "team_sport",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing football, hockey, basketball, volleyball and baseball sport records through team sport. Preserve sport ancestry. OEWN 2025: oewn-00889222-n."
+    },
+    {
+      "id": 3899,
+      "before": [
+        2164,
+        "14",
+        2161,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2164,
+          "14",
+          "team_sport",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing football, hockey, basketball, volleyball and baseball sport records through team sport. Preserve sport ancestry. OEWN 2025: oewn-00889222-n."
+    },
+    {
+      "id": 3900,
+      "before": [
+        2165,
+        "14",
+        2161,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2165,
+          "14",
+          "team_sport",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing football, hockey, basketball, volleyball and baseball sport records through team sport. Preserve sport ancestry. OEWN 2025: oewn-00889222-n."
+    },
+    {
+      "id": 9159,
+      "before": [
+        5396,
+        "14",
+        2161,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          5396,
+          "14",
+          "team_sport",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing football, hockey, basketball, volleyball and baseball sport records through team sport. Preserve sport ancestry. OEWN 2025: oewn-00889222-n."
+    },
+    {
+      "id": 3901,
+      "before": [
+        2166,
+        "14",
+        2161,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2166,
+          "14",
+          "racket_sport",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine tennis by its racket-game family, retaining the broader sport ancestor. OEWN 2025: oewn-00483309-n."
+    },
+    {
+      "id": 9587,
+      "before": [
+        5594,
+        "14",
+        237,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          5594,
+          "14",
+          "board_game",
+          null,
+          1
+        ]
+      ],
+      "reason": "Draughts/checkers belongs to the board-game family; the activity is distinct from its physical pieces. Do not restrict all variants to the dictionary example of twelve pieces. OEWN 2025: oewn-00503963-n."
+    },
+    {
+      "id": 9589,
+      "before": [
+        5596,
+        "14",
+        237,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          5596,
+          "14",
+          "tile_game",
+          null,
+          1
+        ]
+      ],
+      "reason": "The existing dominoes record denotes the game, distinct from its physical tiles. OEWN 2025: oewn-00500488-n."
+    },
+    {
+      "id": 9588,
+      "before": [
+        5595,
+        "14",
+        237,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          5595,
+          "14",
+          "rule_game",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the selected card-game activity without claiming that every game uses a physical table. OEWN 2025: oewn-00489236-n."
+    },
+    {
+      "id": 2371,
+      "before": [
+        1612,
+        "14",
+        1610,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1612,
+          "14",
+          "game_equipment",
+          null,
+          1
+        ]
+      ],
+      "reason": "A ball for play or sport is game equipment. Being a toy is a narrower intended-use classification; introduce toy ball rather than classifying every sports ball as a toy. OEWN 2025: oewn-02781674-n."
+    },
+    {
+      "id": 9585,
+      "before": [
+        1612,
+        "22",
+        237,
+        1
+      ],
+      "reviewed_strength": 95,
+      "replacements": [],
+      "reason": "A ball is used for play; it does not itself perform play as an actor. Preserve the already accepted purpose relation 2928."
+    }
+  ],
+  "edges": [
+    {
+      "subject": "sporting_game",
+      "kod": "14",
+      "object": "rule_game",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications without equating activity with equipment, form with purpose, or social participation with absence of physical action."
+    },
+    {
+      "subject": "table_tennis",
+      "kod": "14",
+      "object": "ball_sport",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications without equating activity with equipment, form with purpose, or social participation with absence of physical action."
+    },
+    {
+      "subject": "squash",
+      "kod": "14",
+      "object": "ball_sport",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications without equating activity with equipment, form with purpose, or social participation with absence of physical action."
+    },
+    {
+      "subject": "doubles_tennis",
+      "kod": "14",
+      "object": "team_sport",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications without equating activity with equipment, form with purpose, or social participation with absence of physical action."
+    },
+    {
+      "subject": "doubles_badminton",
+      "kod": "14",
+      "object": "team_sport",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications without equating activity with equipment, form with purpose, or social participation with absence of physical action."
+    },
+    {
+      "subject": "doubles_table_tennis",
+      "kod": "14",
+      "object": "team_sport",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications without equating activity with equipment, form with purpose, or social participation with absence of physical action."
+    },
+    {
+      "subject": "sports_ball",
+      "kod": "14",
+      "object": 24430,
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications without equating activity with equipment, form with purpose, or social participation with absence of physical action."
+    },
+    {
+      "subject": "toy_ball",
+      "kod": "14",
+      "object": 1610,
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications without equating activity with equipment, form with purpose, or social participation with absence of physical action."
+    },
+    {
+      "subject": "racket",
+      "kod": "14",
+      "object": "game_equipment",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications without equating activity with equipment, form with purpose, or social participation with absence of physical action."
+    },
+    {
+      "subject": "shuttlecock",
+      "kod": "14",
+      "object": "game_equipment",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications without equating activity with equipment, form with purpose, or social participation with absence of physical action."
+    },
+    {
+      "subject": "playing_card",
+      "kod": "14",
+      "object": "game_equipment",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications without equating activity with equipment, form with purpose, or social participation with absence of physical action."
+    },
+    {
+      "subject": "physical_exercise",
+      "kod": "14",
+      "object": 5017,
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications without equating activity with equipment, form with purpose, or social participation with absence of physical action."
+    },
+    {
+      "subject": 2170,
+      "kod": "14",
+      "object": "gymnastic_exercise",
+      "universum_id": 1,
+      "reason": "Keep both reviewed classifications without equating activity with equipment, form with purpose, or social participation with absence of physical action."
+    },
+    {
+      "subject": 2162,
+      "kod": "14",
+      "object": "ball_sport",
+      "universum_id": 1,
+      "reason": "The selected sport is also a game using a ball. Its equipment is not an ancestor of the activity."
+    },
+    {
+      "subject": 2164,
+      "kod": "14",
+      "object": "ball_sport",
+      "universum_id": 1,
+      "reason": "The selected sport is also a game using a ball. Its equipment is not an ancestor of the activity."
+    },
+    {
+      "subject": 2165,
+      "kod": "14",
+      "object": "ball_sport",
+      "universum_id": 1,
+      "reason": "The selected sport is also a game using a ball. Its equipment is not an ancestor of the activity."
+    },
+    {
+      "subject": 5396,
+      "kod": "14",
+      "object": "ball_sport",
+      "universum_id": 1,
+      "reason": "The selected sport is also a game using a ball. Its equipment is not an ancestor of the activity."
+    },
+    {
+      "subject": 2163,
+      "kod": "14",
+      "object": "sporting_game",
+      "universum_id": 1,
+      "reason": "Hockey is a sporting game, but the broad hockey label does not establish that every variant uses a ball or is played on ice."
+    },
+    {
+      "subject": 2166,
+      "kod": "14",
+      "object": "ball_sport",
+      "universum_id": 1,
+      "reason": "Tennis is both a racket sport and a ball sport. OEWN 2025: oewn-00483309-n."
+    },
+    {
+      "subject": 2167,
+      "kod": "14",
+      "object": "board_game",
+      "universum_id": 1,
+      "reason": "Chess is a board-mechanics game as well as an existing sport. This does not turn its rules, board or pieces into the same object. OEWN 2025: oewn-00504248-n."
+    },
+    {
+      "subject": "game_equipment",
+      "kod": "21",
+      "object": 237,
+      "universum_id": 1,
+      "reason": "This physical equipment is intended for the selected activity. Purpose is distinct from the equipment performing the activity, containing the whole activity or being a subtype of it."
+    },
+    {
+      "subject": "sports_ball",
+      "kod": "21",
+      "object": 2161,
+      "universum_id": 1,
+      "reason": "This physical equipment is intended for the selected activity. Purpose is distinct from the equipment performing the activity, containing the whole activity or being a subtype of it."
+    },
+    {
+      "subject": "toy_ball",
+      "kod": "21",
+      "object": 237,
+      "universum_id": 1,
+      "reason": "This physical equipment is intended for the selected activity. Purpose is distinct from the equipment performing the activity, containing the whole activity or being a subtype of it."
+    },
+    {
+      "subject": "racket",
+      "kod": "21",
+      "object": "racket_sport",
+      "universum_id": 1,
+      "reason": "This physical equipment is intended for the selected activity. Purpose is distinct from the equipment performing the activity, containing the whole activity or being a subtype of it."
+    },
+    {
+      "subject": "tennis_racket",
+      "kod": "21",
+      "object": 2166,
+      "universum_id": 1,
+      "reason": "This physical equipment is intended for the selected activity. Purpose is distinct from the equipment performing the activity, containing the whole activity or being a subtype of it."
+    },
+    {
+      "subject": "badminton_racket",
+      "kod": "21",
+      "object": "badminton",
+      "universum_id": 1,
+      "reason": "This physical equipment is intended for the selected activity. Purpose is distinct from the equipment performing the activity, containing the whole activity or being a subtype of it."
+    },
+    {
+      "subject": "table_tennis_racket",
+      "kod": "21",
+      "object": "table_tennis",
+      "universum_id": 1,
+      "reason": "This physical equipment is intended for the selected activity. Purpose is distinct from the equipment performing the activity, containing the whole activity or being a subtype of it."
+    },
+    {
+      "subject": "squash_racket",
+      "kod": "21",
+      "object": "squash",
+      "universum_id": 1,
+      "reason": "This physical equipment is intended for the selected activity. Purpose is distinct from the equipment performing the activity, containing the whole activity or being a subtype of it."
+    },
+    {
+      "subject": "shuttlecock",
+      "kod": "21",
+      "object": "badminton",
+      "universum_id": 1,
+      "reason": "This physical equipment is intended for the selected activity. Purpose is distinct from the equipment performing the activity, containing the whole activity or being a subtype of it."
+    },
+    {
+      "subject": "tennis_ball",
+      "kod": "21",
+      "object": 2166,
+      "universum_id": 1,
+      "reason": "This physical equipment is intended for the selected activity. Purpose is distinct from the equipment performing the activity, containing the whole activity or being a subtype of it."
+    },
+    {
+      "subject": "table_tennis_ball",
+      "kod": "21",
+      "object": "table_tennis",
+      "universum_id": 1,
+      "reason": "This physical equipment is intended for the selected activity. Purpose is distinct from the equipment performing the activity, containing the whole activity or being a subtype of it."
+    },
+    {
+      "subject": "soccer_ball",
+      "kod": "21",
+      "object": 2162,
+      "universum_id": 1,
+      "reason": "This physical equipment is intended for the selected activity. Purpose is distinct from the equipment performing the activity, containing the whole activity or being a subtype of it."
+    },
+    {
+      "subject": "basketball_ball",
+      "kod": "21",
+      "object": 2164,
+      "universum_id": 1,
+      "reason": "This physical equipment is intended for the selected activity. Purpose is distinct from the equipment performing the activity, containing the whole activity or being a subtype of it."
+    },
+    {
+      "subject": "volleyball_ball",
+      "kod": "21",
+      "object": 2165,
+      "universum_id": 1,
+      "reason": "This physical equipment is intended for the selected activity. Purpose is distinct from the equipment performing the activity, containing the whole activity or being a subtype of it."
+    },
+    {
+      "subject": "playing_card",
+      "kod": "21",
+      "object": 5595,
+      "universum_id": 1,
+      "reason": "This physical equipment is intended for the selected activity. Purpose is distinct from the equipment performing the activity, containing the whole activity or being a subtype of it."
+    },
+    {
+      "subject": "game_tile",
+      "kod": "21",
+      "object": "tile_game",
+      "universum_id": 1,
+      "reason": "This physical equipment is intended for the selected activity. Purpose is distinct from the equipment performing the activity, containing the whole activity or being a subtype of it."
+    },
+    {
+      "subject": "domino_tile",
+      "kod": "21",
+      "object": 5596,
+      "universum_id": 1,
+      "reason": "This physical equipment is intended for the selected activity. Purpose is distinct from the equipment performing the activity, containing the whole activity or being a subtype of it."
+    },
+    {
+      "subject": "game_board",
+      "kod": "21",
+      "object": "board_game",
+      "universum_id": 1,
+      "reason": "This physical equipment is intended for the selected activity. Purpose is distinct from the equipment performing the activity, containing the whole activity or being a subtype of it."
+    },
+    {
+      "subject": "chessboard",
+      "kod": "21",
+      "object": 2167,
+      "universum_id": 1,
+      "reason": "This physical equipment is intended for the selected activity. Purpose is distinct from the equipment performing the activity, containing the whole activity or being a subtype of it."
+    }
+  ],
+  "checks": [
+    {
+      "subject": "rule_game",
+      "kod": "14",
+      "object": 237,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "board_game",
+      "kod": "14",
+      "object": "rule_game",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "tile_game",
+      "kod": "14",
+      "object": "rule_game",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sporting_game",
+      "kod": "14",
+      "object": 2161,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "team_sport",
+      "kod": "14",
+      "object": 2161,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "ball_sport",
+      "kod": "14",
+      "object": "sporting_game",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "racket_sport",
+      "kod": "14",
+      "object": "sporting_game",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "badminton",
+      "kod": "14",
+      "object": "racket_sport",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "table_tennis",
+      "kod": "14",
+      "object": "racket_sport",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "squash",
+      "kod": "14",
+      "object": "racket_sport",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "doubles_tennis",
+      "kod": "14",
+      "object": 2166,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "singles_tennis",
+      "kod": "14",
+      "object": 2166,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "doubles_badminton",
+      "kod": "14",
+      "object": "badminton",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "singles_badminton",
+      "kod": "14",
+      "object": "badminton",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "doubles_table_tennis",
+      "kod": "14",
+      "object": "table_tennis",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "game_equipment",
+      "kod": "14",
+      "object": 29,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sports_ball",
+      "kod": "14",
+      "object": 1612,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "toy_ball",
+      "kod": "14",
+      "object": 1612,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "racket",
+      "kod": "14",
+      "object": 24430,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "tennis_racket",
+      "kod": "14",
+      "object": "racket",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "badminton_racket",
+      "kod": "14",
+      "object": "racket",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "table_tennis_racket",
+      "kod": "14",
+      "object": "racket",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "squash_racket",
+      "kod": "14",
+      "object": "racket",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "shuttlecock",
+      "kod": "14",
+      "object": 24430,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "tennis_ball",
+      "kod": "14",
+      "object": "sports_ball",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "table_tennis_ball",
+      "kod": "14",
+      "object": "sports_ball",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "soccer_ball",
+      "kod": "14",
+      "object": "sports_ball",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "basketball_ball",
+      "kod": "14",
+      "object": "sports_ball",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "volleyball_ball",
+      "kod": "14",
+      "object": "sports_ball",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "playing_card",
+      "kod": "14",
+      "object": 2998,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "game_tile",
+      "kod": "14",
+      "object": "game_equipment",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "domino_tile",
+      "kod": "14",
+      "object": "game_tile",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "game_board",
+      "kod": "14",
+      "object": "game_equipment",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "chessboard",
+      "kod": "14",
+      "object": "game_board",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "physical_exercise",
+      "kod": "14",
+      "object": 3599,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "gymnastic_exercise",
+      "kod": "14",
+      "object": "physical_exercise",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sporting_game",
+      "kod": "14",
+      "object": "rule_game",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "table_tennis",
+      "kod": "14",
+      "object": "ball_sport",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "squash",
+      "kod": "14",
+      "object": "ball_sport",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "doubles_tennis",
+      "kod": "14",
+      "object": "team_sport",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "doubles_badminton",
+      "kod": "14",
+      "object": "team_sport",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "doubles_table_tennis",
+      "kod": "14",
+      "object": "team_sport",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sports_ball",
+      "kod": "14",
+      "object": 24430,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "toy_ball",
+      "kod": "14",
+      "object": 1610,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "racket",
+      "kod": "14",
+      "object": "game_equipment",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "shuttlecock",
+      "kod": "14",
+      "object": "game_equipment",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "playing_card",
+      "kod": "14",
+      "object": "game_equipment",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "physical_exercise",
+      "kod": "14",
+      "object": 5017,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2170,
+      "kod": "14",
+      "object": "gymnastic_exercise",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 237,
+      "kod": "61",
+      "object": 2161,
+      "present": false
+    },
+    {
+      "subject": 2161,
+      "kod": "61",
+      "object": 2170,
+      "present": false
+    },
+    {
+      "subject": 63,
+      "kod": "61",
+      "object": 5017,
+      "present": false
+    },
+    {
+      "subject": 2162,
+      "kod": "14",
+      "object": 2161,
+      "present": false
+    },
+    {
+      "subject": 2162,
+      "kod": "14",
+      "object": "team_sport",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2163,
+      "kod": "14",
+      "object": 2161,
+      "present": false
+    },
+    {
+      "subject": 2163,
+      "kod": "14",
+      "object": "team_sport",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2164,
+      "kod": "14",
+      "object": 2161,
+      "present": false
+    },
+    {
+      "subject": 2164,
+      "kod": "14",
+      "object": "team_sport",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2165,
+      "kod": "14",
+      "object": 2161,
+      "present": false
+    },
+    {
+      "subject": 2165,
+      "kod": "14",
+      "object": "team_sport",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5396,
+      "kod": "14",
+      "object": 2161,
+      "present": false
+    },
+    {
+      "subject": 5396,
+      "kod": "14",
+      "object": "team_sport",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2162,
+      "kod": "14",
+      "object": "ball_sport",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2164,
+      "kod": "14",
+      "object": "ball_sport",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2165,
+      "kod": "14",
+      "object": "ball_sport",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5396,
+      "kod": "14",
+      "object": "ball_sport",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2163,
+      "kod": "14",
+      "object": "sporting_game",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2166,
+      "kod": "14",
+      "object": 2161,
+      "present": false
+    },
+    {
+      "subject": 2166,
+      "kod": "14",
+      "object": "racket_sport",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2166,
+      "kod": "14",
+      "object": "ball_sport",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2167,
+      "kod": "14",
+      "object": "board_game",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5594,
+      "kod": "14",
+      "object": 237,
+      "present": false
+    },
+    {
+      "subject": 5594,
+      "kod": "14",
+      "object": "board_game",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5596,
+      "kod": "14",
+      "object": 237,
+      "present": false
+    },
+    {
+      "subject": 5596,
+      "kod": "14",
+      "object": "tile_game",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5595,
+      "kod": "14",
+      "object": 237,
+      "present": false
+    },
+    {
+      "subject": 5595,
+      "kod": "14",
+      "object": "rule_game",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1612,
+      "kod": "14",
+      "object": 1610,
+      "present": false
+    },
+    {
+      "subject": 1612,
+      "kod": "14",
+      "object": "game_equipment",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1612,
+      "kod": "22",
+      "object": 237,
+      "present": false
+    },
+    {
+      "subject": "game_equipment",
+      "kod": "21",
+      "object": 237,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sports_ball",
+      "kod": "21",
+      "object": 2161,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "toy_ball",
+      "kod": "21",
+      "object": 237,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "racket",
+      "kod": "21",
+      "object": "racket_sport",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "tennis_racket",
+      "kod": "21",
+      "object": 2166,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "badminton_racket",
+      "kod": "21",
+      "object": "badminton",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "table_tennis_racket",
+      "kod": "21",
+      "object": "table_tennis",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "squash_racket",
+      "kod": "21",
+      "object": "squash",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "shuttlecock",
+      "kod": "21",
+      "object": "badminton",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "tennis_ball",
+      "kod": "21",
+      "object": 2166,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "table_tennis_ball",
+      "kod": "21",
+      "object": "table_tennis",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "soccer_ball",
+      "kod": "21",
+      "object": 2162,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "basketball_ball",
+      "kod": "21",
+      "object": 2164,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "volleyball_ball",
+      "kod": "21",
+      "object": 2165,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "playing_card",
+      "kod": "21",
+      "object": 5595,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "game_tile",
+      "kod": "21",
+      "object": "tile_game",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "domino_tile",
+      "kod": "21",
+      "object": 5596,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "game_board",
+      "kod": "21",
+      "object": "board_game",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "chessboard",
+      "kod": "21",
+      "object": 2167,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1612,
+      "kod": "21",
+      "object": 237,
+      "present": true,
+      "strength": null
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "rule_game",
+      "ancestor": 237,
+      "present": true
+    },
+    {
+      "subject": "board_game",
+      "ancestor": "rule_game",
+      "present": true
+    },
+    {
+      "subject": "tile_game",
+      "ancestor": "rule_game",
+      "present": true
+    },
+    {
+      "subject": "sporting_game",
+      "ancestor": 2161,
+      "present": true
+    },
+    {
+      "subject": "team_sport",
+      "ancestor": 2161,
+      "present": true
+    },
+    {
+      "subject": "ball_sport",
+      "ancestor": "sporting_game",
+      "present": true
+    },
+    {
+      "subject": "racket_sport",
+      "ancestor": "sporting_game",
+      "present": true
+    },
+    {
+      "subject": "badminton",
+      "ancestor": "racket_sport",
+      "present": true
+    },
+    {
+      "subject": "table_tennis",
+      "ancestor": "racket_sport",
+      "present": true
+    },
+    {
+      "subject": "squash",
+      "ancestor": "racket_sport",
+      "present": true
+    },
+    {
+      "subject": "doubles_tennis",
+      "ancestor": 2166,
+      "present": true
+    },
+    {
+      "subject": "singles_tennis",
+      "ancestor": 2166,
+      "present": true
+    },
+    {
+      "subject": "doubles_badminton",
+      "ancestor": "badminton",
+      "present": true
+    },
+    {
+      "subject": "singles_badminton",
+      "ancestor": "badminton",
+      "present": true
+    },
+    {
+      "subject": "doubles_table_tennis",
+      "ancestor": "table_tennis",
+      "present": true
+    },
+    {
+      "subject": "game_equipment",
+      "ancestor": 29,
+      "present": true
+    },
+    {
+      "subject": "sports_ball",
+      "ancestor": 1612,
+      "present": true
+    },
+    {
+      "subject": "toy_ball",
+      "ancestor": 1612,
+      "present": true
+    },
+    {
+      "subject": "racket",
+      "ancestor": 24430,
+      "present": true
+    },
+    {
+      "subject": "tennis_racket",
+      "ancestor": "racket",
+      "present": true
+    },
+    {
+      "subject": "badminton_racket",
+      "ancestor": "racket",
+      "present": true
+    },
+    {
+      "subject": "table_tennis_racket",
+      "ancestor": "racket",
+      "present": true
+    },
+    {
+      "subject": "squash_racket",
+      "ancestor": "racket",
+      "present": true
+    },
+    {
+      "subject": "shuttlecock",
+      "ancestor": 24430,
+      "present": true
+    },
+    {
+      "subject": "tennis_ball",
+      "ancestor": "sports_ball",
+      "present": true
+    },
+    {
+      "subject": "table_tennis_ball",
+      "ancestor": "sports_ball",
+      "present": true
+    },
+    {
+      "subject": "soccer_ball",
+      "ancestor": "sports_ball",
+      "present": true
+    },
+    {
+      "subject": "basketball_ball",
+      "ancestor": "sports_ball",
+      "present": true
+    },
+    {
+      "subject": "volleyball_ball",
+      "ancestor": "sports_ball",
+      "present": true
+    },
+    {
+      "subject": "playing_card",
+      "ancestor": 2998,
+      "present": true
+    },
+    {
+      "subject": "game_tile",
+      "ancestor": "game_equipment",
+      "present": true
+    },
+    {
+      "subject": "domino_tile",
+      "ancestor": "game_tile",
+      "present": true
+    },
+    {
+      "subject": "game_board",
+      "ancestor": "game_equipment",
+      "present": true
+    },
+    {
+      "subject": "chessboard",
+      "ancestor": "game_board",
+      "present": true
+    },
+    {
+      "subject": "physical_exercise",
+      "ancestor": 3599,
+      "present": true
+    },
+    {
+      "subject": "gymnastic_exercise",
+      "ancestor": "physical_exercise",
+      "present": true
+    },
+    {
+      "subject": 2170,
+      "ancestor": 2161,
+      "present": true
+    },
+    {
+      "subject": 2170,
+      "ancestor": "physical_exercise",
+      "present": true
+    },
+    {
+      "subject": 2170,
+      "ancestor": 63,
+      "present": true
+    },
+    {
+      "subject": 2170,
+      "ancestor": 5017,
+      "present": true
+    },
+    {
+      "subject": 2162,
+      "ancestor": 2161,
+      "present": true
+    },
+    {
+      "subject": 2163,
+      "ancestor": 2161,
+      "present": true
+    },
+    {
+      "subject": 2164,
+      "ancestor": 2161,
+      "present": true
+    },
+    {
+      "subject": 2165,
+      "ancestor": 2161,
+      "present": true
+    },
+    {
+      "subject": 5396,
+      "ancestor": 2161,
+      "present": true
+    },
+    {
+      "subject": 2166,
+      "ancestor": 2161,
+      "present": true
+    },
+    {
+      "subject": 2167,
+      "ancestor": 237,
+      "present": true
+    },
+    {
+      "subject": 5594,
+      "ancestor": 237,
+      "present": true
+    },
+    {
+      "subject": 5595,
+      "ancestor": 237,
+      "present": true
+    },
+    {
+      "subject": 5596,
+      "ancestor": 237,
+      "present": true
+    },
+    {
+      "subject": "table_tennis",
+      "ancestor": "ball_sport",
+      "present": true
+    },
+    {
+      "subject": "doubles_tennis",
+      "ancestor": "racket_sport",
+      "present": true
+    },
+    {
+      "subject": "doubles_tennis",
+      "ancestor": "team_sport",
+      "present": true
+    },
+    {
+      "subject": "doubles_table_tennis",
+      "ancestor": "team_sport",
+      "present": true
+    },
+    {
+      "subject": "doubles_table_tennis",
+      "ancestor": "ball_sport",
+      "present": true
+    },
+    {
+      "subject": "toy_ball",
+      "ancestor": 1610,
+      "present": true
+    },
+    {
+      "subject": "sports_ball",
+      "ancestor": 24430,
+      "present": true
+    },
+    {
+      "subject": "playing_card",
+      "ancestor": 29,
+      "present": true
+    },
+    {
+      "subject": "gymnastic_exercise",
+      "ancestor": 5017,
+      "present": true
+    },
+    {
+      "subject": 1612,
+      "ancestor": 1610,
+      "present": false
+    },
+    {
+      "subject": "sports_ball",
+      "ancestor": 1610,
+      "present": false
+    },
+    {
+      "subject": 2161,
+      "ancestor": "physical_exercise",
+      "present": false
+    },
+    {
+      "subject": "physical_exercise",
+      "ancestor": 2161,
+      "present": false
+    },
+    {
+      "subject": "gymnastic_exercise",
+      "ancestor": 2161,
+      "present": false
+    },
+    {
+      "subject": "badminton",
+      "ancestor": "ball_sport",
+      "present": false
+    },
+    {
+      "subject": "racket_sport",
+      "ancestor": "ball_sport",
+      "present": false
+    },
+    {
+      "subject": "table_tennis",
+      "ancestor": 2166,
+      "present": false
+    },
+    {
+      "subject": "shuttlecock",
+      "ancestor": 1612,
+      "present": false
+    },
+    {
+      "subject": "playing_card",
+      "ancestor": 237,
+      "present": false
+    },
+    {
+      "subject": 5595,
+      "ancestor": 29,
+      "present": false
+    },
+    {
+      "subject": "domino_tile",
+      "ancestor": 5596,
+      "present": false
+    },
+    {
+      "subject": "game_board",
+      "ancestor": "board_game",
+      "present": false
+    },
+    {
+      "subject": "chessboard",
+      "ancestor": 2167,
+      "present": false
+    },
+    {
+      "subject": "board_game",
+      "ancestor": 29,
+      "present": false
+    },
+    {
+      "subject": "singles_tennis",
+      "ancestor": "team_sport",
+      "present": false
+    },
+    {
+      "subject": "singles_badminton",
+      "ancestor": "team_sport",
+      "present": false
+    },
+    {
+      "subject": 2163,
+      "ancestor": "ball_sport",
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": "rule_game",
+      "term": "игра по правилам",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rule_game",
+      "term": "rule-governed game",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rule_game",
+      "term": "game (rule-governed activity)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "board_game",
+      "term": "игра на игровой доске",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "board_game",
+      "term": "board game",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "tile_game",
+      "term": "игра с игровыми костяшками",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "tile_game",
+      "term": "tile-based game",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "sporting_game",
+      "term": "спортивная игра",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "sporting_game",
+      "term": "sporting game",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "team_sport",
+      "term": "командный спорт",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "team_sport",
+      "term": "team sport",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "ball_sport",
+      "term": "спортивная игра с мячом",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "ball_sport",
+      "term": "ball sport",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "racket_sport",
+      "term": "спортивная игра с ракеткой",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "racket_sport",
+      "term": "racket sport",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "racket_sport",
+      "term": "racquet sport",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "badminton",
+      "term": "бадминтон",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "badminton",
+      "term": "badminton",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "table_tennis",
+      "term": "настольный теннис",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "table_tennis",
+      "term": "table tennis",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "table_tennis",
+      "term": "ping pong",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "squash",
+      "term": "сквош (игра)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "squash",
+      "term": "squash (sport)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "squash",
+      "term": "сквош",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "doubles_tennis",
+      "term": "парная игра в теннис",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "doubles_tennis",
+      "term": "doubles tennis",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "singles_tennis",
+      "term": "одиночная игра в теннис",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "singles_tennis",
+      "term": "singles tennis",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "doubles_badminton",
+      "term": "парная игра в бадминтон",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "doubles_badminton",
+      "term": "doubles badminton",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "singles_badminton",
+      "term": "одиночная игра в бадминтон",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "singles_badminton",
+      "term": "singles badminton",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "doubles_table_tennis",
+      "term": "парная игра в настольный теннис",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "doubles_table_tennis",
+      "term": "doubles table tennis",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "game_equipment",
+      "term": "игровой инвентарь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "game_equipment",
+      "term": "game equipment",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "sports_ball",
+      "term": "спортивный мяч",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "sports_ball",
+      "term": "sports ball",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "toy_ball",
+      "term": "игрушечный мяч",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "toy_ball",
+      "term": "toy ball",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "racket",
+      "term": "ракетка (спортивный инвентарь)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "racket",
+      "term": "sports racket",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "racket",
+      "term": "racket (sports implement)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "racket",
+      "term": "racquet (sports implement)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "racket",
+      "term": "ракетка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "tennis_racket",
+      "term": "теннисная ракетка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "tennis_racket",
+      "term": "tennis racket",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "tennis_racket",
+      "term": "tennis racquet",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "badminton_racket",
+      "term": "ракетка для бадминтона",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "badminton_racket",
+      "term": "badminton racket",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "badminton_racket",
+      "term": "badminton racquet",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "table_tennis_racket",
+      "term": "ракетка для настольного тенниса",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "table_tennis_racket",
+      "term": "table-tennis racket",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "table_tennis_racket",
+      "term": "table-tennis bat",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "table_tennis_racket",
+      "term": "table-tennis racquet",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "squash_racket",
+      "term": "ракетка для сквоша",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "squash_racket",
+      "term": "squash racket",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "squash_racket",
+      "term": "squash racquet",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "shuttlecock",
+      "term": "волан для бадминтона",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "shuttlecock",
+      "term": "shuttlecock",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "shuttlecock",
+      "term": "badminton shuttlecock",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "tennis_ball",
+      "term": "теннисный мяч",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "tennis_ball",
+      "term": "tennis ball",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "table_tennis_ball",
+      "term": "мяч для настольного тенниса",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "table_tennis_ball",
+      "term": "table-tennis ball",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "table_tennis_ball",
+      "term": "ping-pong ball",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "soccer_ball",
+      "term": "футбольный мяч",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "soccer_ball",
+      "term": "soccer ball",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "basketball_ball",
+      "term": "баскетбольный мяч",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "basketball_ball",
+      "term": "basketball (ball)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "volleyball_ball",
+      "term": "волейбольный мяч",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "volleyball_ball",
+      "term": "volleyball (ball)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "playing_card",
+      "term": "игральная карта",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "playing_card",
+      "term": "playing card",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "playing_card",
+      "term": "playing cards",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "game_tile",
+      "term": "игровая костяшка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "game_tile",
+      "term": "game tile",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "domino_tile",
+      "term": "костяшка домино",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "domino_tile",
+      "term": "domino tile",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "game_board",
+      "term": "игровая доска",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "game_board",
+      "term": "physical game board",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "game_board",
+      "term": "gameboard",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "chessboard",
+      "term": "шахматная доска",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "chessboard",
+      "term": "chessboard",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "chessboard",
+      "term": "chess board",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "physical_exercise",
+      "term": "физическое упражнение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "physical_exercise",
+      "term": "physical exercise",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "gymnastic_exercise",
+      "term": "гимнастические упражнения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "gymnastic_exercise",
+      "term": "gymnastic exercises",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2170,
+      "term": "гимнастика (вид спорта)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 2170,
+      "term": "gymnastics (sport)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5596,
+      "term": "dominoes (game)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5595,
+      "term": "карточная игра",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 5595,
+      "term": "card game",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5595,
+      "term": "playing cards",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 2162,
+      "term": "soccer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2162,
+      "term": "association football",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 24430,
+      "term": "sporting equipment",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "basketball_ball",
+      "term": "basketball",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "volleyball_ball",
+      "term": "volleyball",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "squash",
+      "term": "squash",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "racket",
+      "term": "racket",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "domino_tile",
+      "term": "domino",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "doubles_tennis",
+      "term": "doubles",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "doubles_badminton",
+      "term": "doubles",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

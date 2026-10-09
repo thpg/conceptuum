@@ -1,0 +1,2711 @@
+{
+  "source": "quality-20261009-q34",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Hardware versus software client/server meanings; file and database services; Jenkins and software automation; browser and HTTP intermediary roles; caches and client-server design.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "http": "https://www.rfc-editor.org/rfc/rfc9110.html",
+      "cache": "https://www.rfc-editor.org/rfc/rfc9111.html",
+      "web_server": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server",
+      "browser": "https://developer.mozilla.org/en-US/docs/Glossary/Browser",
+      "database": "https://www.postgresql.org/docs/18/tutorial-arch.html",
+      "file_service": "https://www.samba.org/samba/what_is_samba.html",
+      "jenkins": "https://www.jenkins.io/doc/",
+      "pipeline": "https://www.jenkins.io/doc/book/pipeline/",
+      "style": "https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet; CC BY 4.0 and Princeton notices remain in docs/quality/2026-10-09-q11.md#sources-and-reuse. IETF, MDN, PostgreSQL, Samba, Jenkins and Fielding support technical extensions. Source prose and code are not copied; qualified labels and graph mappings are editorial adaptations.",
+    "existing_cohort": [
+      277,
+      302,
+      303,
+      304,
+      309,
+      310,
+      311,
+      855,
+      491,
+      573,
+      322,
+      324,
+      267,
+      268,
+      346,
+      24421,
+      24428,
+      24429,
+      25216,
+      25217,
+      25190,
+      25191,
+      671,
+      1000,
+      1585
+    ],
+    "context_policy": "All new concepts and assertions use U3 with unspecified strength. Existing home contexts and valid direct genera remain unchanged. Client and server are roles in an interaction, not mutually exclusive kinds of program. Generic service requests may use local IPC; their network-specific children remain narrower.",
+    "sense_decisions": [
+      {
+        "concept": "service_request_processing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "generalized service operation",
+        "scope": "Processing a request to a software service, including local interprocess communication."
+      },
+      {
+        "concept": "service_request_sending",
+        "synset": null,
+        "decision": "add",
+        "alignment": "generalized service operation",
+        "scope": "Sending a request to a software service; a physical network is not required."
+      },
+      {
+        "concept": "server_software",
+        "synset": null,
+        "decision": "add",
+        "alignment": "software service role",
+        "scope": "Software providing a service to requesting client software; distinguish it from the host hardware."
+      },
+      {
+        "concept": "client_software",
+        "synset": null,
+        "decision": "add",
+        "alignment": "software service role",
+        "scope": "Software requesting another service in a particular interaction; it can also serve other clients."
+      },
+      {
+        "concept": "database_server_software",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Software serving database operations requested by clients, distinct from the database data and its physical host."
+      },
+      {
+        "concept": "database_client_software",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A client program making requests to a database service; it may run on the same machine."
+      },
+      {
+        "concept": "file_server_hardware",
+        "synset": "oewn-03342439-n",
+        "decision": "add",
+        "alignment": "qualified physical dictionary sense",
+        "scope": "A physical server used to provide shared file access; distinguish it from the serving program."
+      },
+      {
+        "concept": "file_server_software",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Software providing access to files through a service."
+      },
+      {
+        "concept": "file_serving",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Providing network clients with access to files; not a physical serving utensil or merely storing a file."
+      },
+      {
+        "concept": 303,
+        "synset": "oewn-04182208-n",
+        "decision": "reuse with qualified hardware scope",
+        "alignment": "reviewed sense",
+        "scope": "The existing hardware genus matches the physical-server sense; do not import the waiter, sports player or utensil senses."
+      },
+      {
+        "concept": 311,
+        "synset": "oewn-03832647-n",
+        "decision": "restrict dictionary candidate",
+        "alignment": "reviewed sense",
+        "scope": "The dictionary definition includes any network-connected computer. Client role requires requesting a service; do not equate all network hosts with clients."
+      },
+      {
+        "concept": 304,
+        "synset": "oewn-04610757-n",
+        "decision": "reuse without dated comparison",
+        "alignment": "reviewed sense",
+        "scope": "Retain workstation as a computer kind without importing the historic microcomputer performance comparison."
+      },
+      {
+        "concept": "automation_software",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Software intended to automate tasks, distinct from the automation process itself."
+      },
+      {
+        "concept": "automation_server",
+        "synset": null,
+        "decision": "add",
+        "alignment": "service-role and purpose intersection",
+        "scope": "Server software intended to coordinate automated tasks."
+      },
+      {
+        "concept": "build_automation",
+        "synset": null,
+        "decision": "add",
+        "alignment": "automation target restriction",
+        "scope": "Automation directed at the named development activity; distinguish it from every manual or automated execution of that activity."
+      },
+      {
+        "concept": "test_automation",
+        "synset": null,
+        "decision": "add",
+        "alignment": "automation target restriction",
+        "scope": "Automation directed at the named development activity; distinguish it from every manual or automated execution of that activity."
+      },
+      {
+        "concept": "deployment_automation",
+        "synset": null,
+        "decision": "add",
+        "alignment": "automation target restriction",
+        "scope": "Automation directed at the named development activity; distinguish it from every manual or automated execution of that activity."
+      },
+      {
+        "concept": "http_user_agent",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An initiating HTTP client role; live human interaction is not required."
+      },
+      {
+        "concept": "web_browser",
+        "synset": "oewn-06583477-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An application for retrieving and presenting web pages; not a casual human shopper."
+      },
+      {
+        "concept": "http_crawler",
+        "synset": null,
+        "decision": "add",
+        "alignment": "protocol-restricted crawler",
+        "scope": "An automated user agent traversing web resources through HTTP; it need not build a search-engine index."
+      },
+      {
+        "concept": "http_origin",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Software able to originate authoritative responses for its target resources."
+      },
+      {
+        "concept": "http_intermediary",
+        "synset": null,
+        "decision": "add",
+        "alignment": "restricted dual-role software",
+        "scope": "An active HTTP message intermediary using HTTP on both sides, with distinct connection roles."
+      },
+      {
+        "concept": "forward_proxy",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The client-selected HTTP message-forwarding proxy role."
+      },
+      {
+        "concept": "reverse_proxy",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An HTTP-facing gateway whose backend protocol need not be HTTP."
+      },
+      {
+        "concept": "http_reverse_proxy",
+        "synset": null,
+        "decision": "add",
+        "alignment": "gateway/protocol intersection",
+        "scope": "A reverse proxy specifically using HTTP on both sides."
+      },
+      {
+        "concept": "http_cache",
+        "synset": null,
+        "decision": "add",
+        "alignment": "software-component sense",
+        "scope": "The software subsystem managing reusable HTTP responses; distinguish it from the stored response data and hardware memory."
+      },
+      {
+        "concept": "private_cache",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A cache component dedicated to one user; private does not mean cryptographically protected or secret."
+      },
+      {
+        "concept": "shared_cache",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A cache component supporting reuse across multiple users."
+      },
+      {
+        "concept": "http_caching",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Managing storage and reuse of eligible HTTP responses under the protocol rules."
+      },
+      {
+        "concept": "caching_http_software",
+        "synset": null,
+        "decision": "add",
+        "alignment": "component/capability restriction",
+        "scope": "Software incorporating an HTTP response cache, without imposing a client-only or server-only role."
+      },
+      {
+        "concept": "shared_caching_proxy",
+        "synset": null,
+        "decision": "add",
+        "alignment": "role/cache intersection",
+        "scope": "A forward proxy specifically incorporating a shared HTTP cache."
+      },
+      {
+        "concept": "client_server_style",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The software design style separating requesting clients and service providers."
+      },
+      {
+        "concept": "client_server_architecture",
+        "synset": null,
+        "decision": "add",
+        "alignment": "architecture/style restriction",
+        "scope": "A software architecture conforming to the client-server style, distinct from the style itself."
+      },
+      {
+        "concept": 277,
+        "synset": null,
+        "decision": "preserve and defer wider branch",
+        "alignment": "reviewed sense",
+        "scope": "Preserve the broader software tree, including inherited repository/tool and development-result claims still awaiting review."
+      },
+      {
+        "concept": 267,
+        "synset": null,
+        "decision": "preserve and defer wider branch",
+        "alignment": "reviewed sense",
+        "scope": "Database data, DBMS products, database systems and keys require a dedicated review before changing their old children."
+      },
+      {
+        "concept": 1585,
+        "synset": null,
+        "decision": "preserve and defer wider branch",
+        "alignment": "reviewed sense",
+        "scope": "The broad computer record remains under home appliances; do not propagate that narrow household genus into every new technical role."
+      },
+      {
+        "concept": 1000,
+        "synset": null,
+        "decision": "preserve and defer wider branch",
+        "alignment": "reviewed sense",
+        "scope": "Pipeline is polysemous across a workflow description, execution and processor design. Do not identify it with Jenkins Pipeline without reviewing the original sense."
+      },
+      {
+        "concept": 671,
+        "synset": null,
+        "decision": "preserve and defer wider branch",
+        "alignment": "reviewed sense",
+        "scope": "Preserve software architecture; its Dataflow Programming child needs a separate paradigm review."
+      },
+      {
+        "concept": 324,
+        "synset": null,
+        "decision": "preserve and defer wider branch",
+        "alignment": "reviewed sense",
+        "scope": "Preserve existing deployment/release chronology and outcome rows pending a lifecycle review."
+      },
+      {
+        "concept": 24421,
+        "synset": null,
+        "decision": "preserve and defer wider branch",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the physical network-host family; virtual host and virtual machine meanings need separate records."
+      }
+    ],
+    "limits": "No deployment, network service, scraper or test suite is executed. No product-version, performance or security guarantee is encoded. A reverse proxy may use a non-HTTP backend; only an explicitly HTTP-to-HTTP subtype receives both HTTP endpoint genera. Caching is optional, and private does not mean secret. General computer/home-appliance ancestry, database/DBMS/SQLite/foreign-key distinctions, dataflow, Pipeline, protocol/standard links and inherited lifecycle probabilities remain queued.",
+    "exclusion_review": {
+      "contexts": [
+        "U1",
+        "U3"
+      ],
+      "before_u1_conflicting_edges": 0,
+      "before_u3_conflicting_edges": 0,
+      "decision": "Preserve zero shared-descendant exclusion candidates in both contexts. Client/server program roles may overlap; no global disjointness assertion is added."
+    },
+    "new_term_collisions": [],
+    "collision_decision": "No normalized collision accepted for a new term. Reuse the physical server/client, HTTP software, Jenkins, automation and build process records. Do not import English homonyms as identities.",
+    "refreshed_comparison": {
+      "baseline": "Q33",
+      "existing_concepts": 13250,
+      "existing_terms": 37327,
+      "synsets_with_exact_en_candidate": 15661,
+      "synsets_without_exact_en_candidate": 91858,
+      "existing_concepts_with_dictionary_candidate": 4232,
+      "caveat": "Spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "service_request_processing",
+      "name": "обработка запроса к программной службе",
+      "parent": 325,
+      "universum_id": 3,
+      "terms": [
+        [
+          "обработка запроса к программной службе",
+          "ru"
+        ],
+        [
+          "service request processing",
+          "en"
+        ]
+      ],
+      "reason": "Processing a request to a software service, including local interprocess communication. Source: https://www.postgresql.org/docs/18/tutorial-arch.html"
+    },
+    {
+      "key": "service_request_sending",
+      "name": "отправка запроса к программной службе",
+      "parent": 325,
+      "universum_id": 3,
+      "terms": [
+        [
+          "отправка запроса к программной службе",
+          "ru"
+        ],
+        [
+          "service request sending",
+          "en"
+        ]
+      ],
+      "reason": "Sending a request to a software service; a physical network is not required. Source: https://www.postgresql.org/docs/18/tutorial-arch.html"
+    },
+    {
+      "key": "server_software",
+      "name": "серверное программное обеспечение",
+      "parent": 277,
+      "universum_id": 3,
+      "terms": [
+        [
+          "серверное программное обеспечение",
+          "ru"
+        ],
+        [
+          "server software",
+          "en"
+        ]
+      ],
+      "reason": "Software providing a service to requesting client software; distinguish it from the host hardware. Source: https://www.postgresql.org/docs/18/tutorial-arch.html"
+    },
+    {
+      "key": "client_software",
+      "name": "клиентское программное обеспечение",
+      "parent": 277,
+      "universum_id": 3,
+      "terms": [
+        [
+          "клиентское программное обеспечение",
+          "ru"
+        ],
+        [
+          "client software",
+          "en"
+        ]
+      ],
+      "reason": "Software requesting another service in a particular interaction; it can also serve other clients. Source: https://www.postgresql.org/docs/18/tutorial-arch.html"
+    },
+    {
+      "key": "database_server_software",
+      "name": "серверное программное обеспечение баз данных",
+      "parent": "server_software",
+      "universum_id": 3,
+      "terms": [
+        [
+          "серверное программное обеспечение баз данных",
+          "ru"
+        ],
+        [
+          "database server software",
+          "en"
+        ]
+      ],
+      "reason": "Software serving database operations requested by clients, distinct from the database data and its physical host. Source: https://www.postgresql.org/docs/18/tutorial-arch.html"
+    },
+    {
+      "key": "database_client_software",
+      "name": "клиентское программное обеспечение баз данных",
+      "parent": "client_software",
+      "universum_id": 3,
+      "terms": [
+        [
+          "клиентское программное обеспечение баз данных",
+          "ru"
+        ],
+        [
+          "database client software",
+          "en"
+        ]
+      ],
+      "reason": "A client program making requests to a database service; it may run on the same machine. Source: https://www.postgresql.org/docs/18/tutorial-arch.html"
+    },
+    {
+      "key": "file_server_hardware",
+      "name": "файловый сервер (аппаратное устройство)",
+      "parent": 303,
+      "universum_id": 3,
+      "terms": [
+        [
+          "файловый сервер (аппаратное устройство)",
+          "ru"
+        ],
+        [
+          "file server hardware",
+          "en"
+        ]
+      ],
+      "reason": "A physical server used to provide shared file access; distinguish it from the serving program. OEWN 2025: oewn-03342439-n."
+    },
+    {
+      "key": "file_server_software",
+      "name": "программное обеспечение файлового сервера",
+      "parent": "server_software",
+      "universum_id": 3,
+      "terms": [
+        [
+          "программное обеспечение файлового сервера",
+          "ru"
+        ],
+        [
+          "file server software",
+          "en"
+        ]
+      ],
+      "reason": "Software providing access to files through a service. Source: https://www.samba.org/samba/what_is_samba.html"
+    },
+    {
+      "key": "file_serving",
+      "name": "предоставление файлов по сети",
+      "parent": 325,
+      "universum_id": 3,
+      "terms": [
+        [
+          "предоставление файлов по сети",
+          "ru"
+        ],
+        [
+          "network file serving",
+          "en"
+        ]
+      ],
+      "reason": "Providing network clients with access to files; not a physical serving utensil or merely storing a file. Source: https://www.samba.org/samba/what_is_samba.html"
+    },
+    {
+      "key": "automation_software",
+      "name": "программное обеспечение автоматизации",
+      "parent": 277,
+      "universum_id": 3,
+      "terms": [
+        [
+          "программное обеспечение автоматизации",
+          "ru"
+        ],
+        [
+          "automation software",
+          "en"
+        ]
+      ],
+      "reason": "Software intended to automate tasks, distinct from the automation process itself. Source: https://www.jenkins.io/doc/"
+    },
+    {
+      "key": "automation_server",
+      "name": "сервер автоматизации (программное обеспечение)",
+      "parent": "server_software",
+      "universum_id": 3,
+      "terms": [
+        [
+          "сервер автоматизации (программное обеспечение)",
+          "ru"
+        ],
+        [
+          "automation server software",
+          "en"
+        ]
+      ],
+      "reason": "Server software intended to coordinate automated tasks. Source: https://www.jenkins.io/doc/"
+    },
+    {
+      "key": "build_automation",
+      "name": "автоматизация сборки программного обеспечения",
+      "parent": 573,
+      "universum_id": 3,
+      "terms": [
+        [
+          "автоматизация сборки программного обеспечения",
+          "ru"
+        ],
+        [
+          "software build automation",
+          "en"
+        ]
+      ],
+      "reason": "Automation directed at the named development activity; distinguish it from every manual or automated execution of that activity. Source: https://www.jenkins.io/doc/"
+    },
+    {
+      "key": "test_automation",
+      "name": "автоматизация тестирования программного обеспечения",
+      "parent": 573,
+      "universum_id": 3,
+      "terms": [
+        [
+          "автоматизация тестирования программного обеспечения",
+          "ru"
+        ],
+        [
+          "software test automation",
+          "en"
+        ]
+      ],
+      "reason": "Automation directed at the named development activity; distinguish it from every manual or automated execution of that activity. Source: https://www.jenkins.io/doc/"
+    },
+    {
+      "key": "deployment_automation",
+      "name": "автоматизация развёртывания программного обеспечения",
+      "parent": 573,
+      "universum_id": 3,
+      "terms": [
+        [
+          "автоматизация развёртывания программного обеспечения",
+          "ru"
+        ],
+        [
+          "software deployment automation",
+          "en"
+        ]
+      ],
+      "reason": "Automation directed at the named development activity; distinguish it from every manual or automated execution of that activity. Source: https://www.jenkins.io/doc/"
+    },
+    {
+      "key": "http_user_agent",
+      "name": "пользовательский агент HTTP (программное обеспечение)",
+      "parent": 25217,
+      "universum_id": 3,
+      "terms": [
+        [
+          "пользовательский агент HTTP (программное обеспечение)",
+          "ru"
+        ],
+        [
+          "HTTP user agent software",
+          "en"
+        ]
+      ],
+      "reason": "An initiating HTTP client role; live human interaction is not required. Source: https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "key": "web_browser",
+      "name": "веб-браузер",
+      "parent": 285,
+      "universum_id": 3,
+      "terms": [
+        [
+          "веб-браузер",
+          "ru"
+        ],
+        [
+          "web browser",
+          "en"
+        ],
+        [
+          "браузер",
+          "ru"
+        ]
+      ],
+      "reason": "An application for retrieving and presenting web pages; not a casual human shopper. OEWN 2025: oewn-06583477-n. Source: https://developer.mozilla.org/en-US/docs/Glossary/Browser"
+    },
+    {
+      "key": "http_crawler",
+      "name": "робот для обхода веб-ресурсов по HTTP",
+      "parent": "http_user_agent",
+      "universum_id": 3,
+      "terms": [
+        [
+          "робот для обхода веб-ресурсов по HTTP",
+          "ru"
+        ],
+        [
+          "HTTP web crawler",
+          "en"
+        ]
+      ],
+      "reason": "An automated user agent traversing web resources through HTTP; it need not build a search-engine index. Source: https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "key": "http_origin",
+      "name": "исходный сервер HTTP (программное обеспечение)",
+      "parent": 25216,
+      "universum_id": 3,
+      "terms": [
+        [
+          "исходный сервер HTTP (программное обеспечение)",
+          "ru"
+        ],
+        [
+          "HTTP origin server software",
+          "en"
+        ]
+      ],
+      "reason": "Software able to originate authoritative responses for its target resources. Source: https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "key": "http_intermediary",
+      "name": "посредник между соединениями HTTP (программное обеспечение)",
+      "parent": 25216,
+      "universum_id": 3,
+      "terms": [
+        [
+          "посредник между соединениями HTTP (программное обеспечение)",
+          "ru"
+        ],
+        [
+          "HTTP-to-HTTP intermediary software",
+          "en"
+        ]
+      ],
+      "reason": "An active HTTP message intermediary using HTTP on both sides, with distinct connection roles. Source: https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "key": "forward_proxy",
+      "name": "прямой прокси HTTP (программное обеспечение)",
+      "parent": "http_intermediary",
+      "universum_id": 3,
+      "terms": [
+        [
+          "прямой прокси HTTP (программное обеспечение)",
+          "ru"
+        ],
+        [
+          "HTTP forward proxy software",
+          "en"
+        ]
+      ],
+      "reason": "The client-selected HTTP message-forwarding proxy role. Source: https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "key": "reverse_proxy",
+      "name": "обратный прокси HTTP (программное обеспечение)",
+      "parent": 25216,
+      "universum_id": 3,
+      "terms": [
+        [
+          "обратный прокси HTTP (программное обеспечение)",
+          "ru"
+        ],
+        [
+          "HTTP reverse proxy software",
+          "en"
+        ]
+      ],
+      "reason": "An HTTP-facing gateway whose backend protocol need not be HTTP. Source: https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "key": "http_reverse_proxy",
+      "name": "обратный прокси с HTTP на обеих сторонах",
+      "parent": "reverse_proxy",
+      "universum_id": 3,
+      "terms": [
+        [
+          "обратный прокси с HTTP на обеих сторонах",
+          "ru"
+        ],
+        [
+          "HTTP-to-HTTP reverse proxy software",
+          "en"
+        ]
+      ],
+      "reason": "A reverse proxy specifically using HTTP on both sides. Source: https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "key": "http_cache",
+      "name": "компонент кеширования HTTP",
+      "parent": 346,
+      "universum_id": 3,
+      "terms": [
+        [
+          "компонент кеширования HTTP",
+          "ru"
+        ],
+        [
+          "HTTP cache component",
+          "en"
+        ]
+      ],
+      "reason": "The software subsystem managing reusable HTTP responses; distinguish it from the stored response data and hardware memory. Source: https://www.rfc-editor.org/rfc/rfc9111.html"
+    },
+    {
+      "key": "private_cache",
+      "name": "компонент частного кеша HTTP",
+      "parent": "http_cache",
+      "universum_id": 3,
+      "terms": [
+        [
+          "компонент частного кеша HTTP",
+          "ru"
+        ],
+        [
+          "private HTTP cache component",
+          "en"
+        ]
+      ],
+      "reason": "A cache component dedicated to one user; private does not mean cryptographically protected or secret. Source: https://www.rfc-editor.org/rfc/rfc9111.html"
+    },
+    {
+      "key": "shared_cache",
+      "name": "компонент общего кеша HTTP",
+      "parent": "http_cache",
+      "universum_id": 3,
+      "terms": [
+        [
+          "компонент общего кеша HTTP",
+          "ru"
+        ],
+        [
+          "shared HTTP cache component",
+          "en"
+        ]
+      ],
+      "reason": "A cache component supporting reuse across multiple users. Source: https://www.rfc-editor.org/rfc/rfc9111.html"
+    },
+    {
+      "key": "http_caching",
+      "name": "кеширование ответов HTTP",
+      "parent": 325,
+      "universum_id": 3,
+      "terms": [
+        [
+          "кеширование ответов HTTP",
+          "ru"
+        ],
+        [
+          "HTTP response caching",
+          "en"
+        ]
+      ],
+      "reason": "Managing storage and reuse of eligible HTTP responses under the protocol rules. Source: https://www.rfc-editor.org/rfc/rfc9111.html"
+    },
+    {
+      "key": "caching_http_software",
+      "name": "программное обеспечение с кешированием HTTP",
+      "parent": 277,
+      "universum_id": 3,
+      "terms": [
+        [
+          "программное обеспечение с кешированием HTTP",
+          "ru"
+        ],
+        [
+          "HTTP caching software",
+          "en"
+        ]
+      ],
+      "reason": "Software incorporating an HTTP response cache, without imposing a client-only or server-only role. Source: https://www.rfc-editor.org/rfc/rfc9111.html"
+    },
+    {
+      "key": "shared_caching_proxy",
+      "name": "прямой прокси HTTP с общим кешем",
+      "parent": "forward_proxy",
+      "universum_id": 3,
+      "terms": [
+        [
+          "прямой прокси HTTP с общим кешем",
+          "ru"
+        ],
+        [
+          "shared-cache HTTP forward proxy software",
+          "en"
+        ]
+      ],
+      "reason": "A forward proxy specifically incorporating a shared HTTP cache. Source: https://www.rfc-editor.org/rfc/rfc9111.html"
+    },
+    {
+      "key": "client_server_style",
+      "name": "клиент-серверный архитектурный стиль",
+      "parent": 25190,
+      "universum_id": 3,
+      "terms": [
+        [
+          "клиент-серверный архитектурный стиль",
+          "ru"
+        ],
+        [
+          "client-server architectural style",
+          "en"
+        ]
+      ],
+      "reason": "The software design style separating requesting clients and service providers. Source: https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm"
+    },
+    {
+      "key": "client_server_architecture",
+      "name": "клиент-серверная архитектура",
+      "parent": 671,
+      "universum_id": 3,
+      "terms": [
+        [
+          "клиент-серверная архитектура",
+          "ru"
+        ],
+        [
+          "client-server architecture",
+          "en"
+        ]
+      ],
+      "reason": "A software architecture conforming to the client-server style, distinct from the style itself. Source: https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm"
+    }
+  ],
+  "renames": [
+    {
+      "id": 303,
+      "before": "server",
+      "name": "сервер (аппаратное устройство)",
+      "terms": [],
+      "reason": "Keep the existing physical server meaning; software receives a separate role family."
+    },
+    {
+      "id": 311,
+      "before": "client",
+      "name": "клиент (аппаратное устройство)",
+      "terms": [],
+      "reason": "Keep the physical device acting as a service client, not every computer merely connected to a network."
+    },
+    {
+      "id": 309,
+      "before": "web server",
+      "name": "веб-сервер (аппаратное устройство)",
+      "terms": [],
+      "reason": "Keep the physical web-server meaning; HTTP server software already has a separate record."
+    },
+    {
+      "id": 310,
+      "before": "database server",
+      "name": "сервер баз данных (аппаратное устройство)",
+      "terms": [],
+      "reason": "Keep the hardware database-server role, not database data or the serving program."
+    },
+    {
+      "id": 304,
+      "before": "workstation",
+      "name": "рабочая станция (компьютер)",
+      "terms": [],
+      "reason": "Select the physical computer meaning, without the dated requirement that it outperform every personal computer."
+    },
+    {
+      "id": 491,
+      "before": "build",
+      "name": "сборка программного обеспечения (процесс)",
+      "terms": [],
+      "reason": "Select the existing development process, distinct from a produced build artifact."
+    }
+  ],
+  "terms": [
+    {
+      "id": 303,
+      "name": "сервер (аппаратное устройство)",
+      "terms": [
+        [
+          "server hardware",
+          "en"
+        ]
+      ],
+      "reason": "Keep the existing physical server meaning; software receives a separate role family."
+    },
+    {
+      "id": 311,
+      "name": "клиент (аппаратное устройство)",
+      "terms": [
+        [
+          "client hardware",
+          "en"
+        ]
+      ],
+      "reason": "Keep the physical device acting as a service client, not every computer merely connected to a network."
+    },
+    {
+      "id": 309,
+      "name": "веб-сервер (аппаратное устройство)",
+      "terms": [
+        [
+          "web server hardware",
+          "en"
+        ]
+      ],
+      "reason": "Keep the physical web-server meaning; HTTP server software already has a separate record."
+    },
+    {
+      "id": 310,
+      "name": "сервер баз данных (аппаратное устройство)",
+      "terms": [
+        [
+          "database server hardware",
+          "en"
+        ]
+      ],
+      "reason": "Keep the hardware database-server role, not database data or the serving program."
+    },
+    {
+      "id": 304,
+      "name": "рабочая станция (компьютер)",
+      "terms": [
+        [
+          "workstation computer",
+          "en"
+        ]
+      ],
+      "reason": "Select the physical computer meaning, without the dated requirement that it outperform every personal computer."
+    },
+    {
+      "id": 855,
+      "name": "Jenkins",
+      "terms": [
+        [
+          "Jenkins automation server",
+          "en"
+        ],
+        [
+          "сервер автоматизации Jenkins",
+          "ru"
+        ]
+      ],
+      "reason": "Clarify the existing named software product without creating a duplicate."
+    },
+    {
+      "id": 491,
+      "name": "сборка программного обеспечения (процесс)",
+      "terms": [
+        [
+          "software build process",
+          "en"
+        ]
+      ],
+      "reason": "Qualify build as a process; leave artifact and release distinctions for a separate review."
+    }
+  ],
+  "remove_terms": [],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 8943,
+      "before": [
+        311,
+        "62",
+        303,
+        3
+      ],
+      "reviewed_strength": 95,
+      "replacements": [],
+      "reason": "The reverse client/server mutual-role row duplicates accepted edge 736 and adds an unsupported 95 percent value. Preserve edge 736 unchanged."
+    },
+    {
+      "id": 1436,
+      "before": [
+        855,
+        "14",
+        303,
+        3
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          855,
+          "14",
+          "automation_server",
+          null,
+          3
+        ]
+      ],
+      "reason": "Jenkins is automation server software, not the physical server hosting it. Source: https://www.jenkins.io/doc/"
+    }
+  ],
+  "edges": [
+    {
+      "subject": 24428,
+      "kod": "14",
+      "object": "service_request_processing",
+      "universum_id": 3,
+      "reason": "The existing network request operation is a narrower service-request operation."
+    },
+    {
+      "subject": 24429,
+      "kod": "14",
+      "object": "service_request_sending",
+      "universum_id": 3,
+      "reason": "The existing network sending operation is a narrower service-request operation."
+    },
+    {
+      "subject": "server_software",
+      "kod": "21",
+      "object": "service_request_processing",
+      "universum_id": 3,
+      "reason": "Purpose of the selected server role."
+    },
+    {
+      "subject": "client_software",
+      "kod": "21",
+      "object": "service_request_sending",
+      "universum_id": 3,
+      "reason": "Purpose of the selected client role."
+    },
+    {
+      "subject": "server_software",
+      "kod": "62",
+      "object": "client_software",
+      "universum_id": 3,
+      "reason": "Corresponding service roles; neither is declared exclusive of the other."
+    },
+    {
+      "subject": 25216,
+      "kod": "14",
+      "object": "server_software",
+      "universum_id": 3,
+      "reason": "Reuse the existing HTTP server software under the new general role family; preserve its valid direct software genus."
+    },
+    {
+      "subject": 25217,
+      "kod": "14",
+      "object": "client_software",
+      "universum_id": 3,
+      "reason": "Reuse the existing HTTP client software under the new general role family; preserve its valid direct software genus."
+    },
+    {
+      "subject": "database_server_software",
+      "kod": "62",
+      "object": "database_client_software",
+      "universum_id": 3,
+      "reason": "Corresponding software roles in database service interactions."
+    },
+    {
+      "subject": "file_serving",
+      "kod": "27",
+      "object": 268,
+      "universum_id": 3,
+      "reason": "Files are the target objects of this network service operation."
+    },
+    {
+      "subject": "file_server_hardware",
+      "kod": "21",
+      "object": "file_serving",
+      "universum_id": 3,
+      "reason": "Purpose of the physical file-server role."
+    },
+    {
+      "subject": "file_server_software",
+      "kod": "21",
+      "object": "file_serving",
+      "universum_id": 3,
+      "reason": "Purpose of the software file-server role."
+    },
+    {
+      "subject": 303,
+      "kod": "14",
+      "object": 24421,
+      "universum_id": 3,
+      "reason": "The selected physical network server is a network host."
+    },
+    {
+      "subject": 311,
+      "kod": "14",
+      "object": 24421,
+      "universum_id": 3,
+      "reason": "The selected physical network client is a network host; the converse is not asserted."
+    },
+    {
+      "subject": 309,
+      "kod": "21",
+      "object": 25214,
+      "universum_id": 3,
+      "reason": "The physical web-server role is intended for HTTP request processing. Source: https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server"
+    },
+    {
+      "subject": "automation_software",
+      "kod": "21",
+      "object": 573,
+      "universum_id": 3,
+      "reason": "Automation is the purpose of this software family."
+    },
+    {
+      "subject": "automation_server",
+      "kod": "14",
+      "object": "automation_software",
+      "universum_id": 3,
+      "reason": "An automation server is also automation software."
+    },
+    {
+      "subject": "build_automation",
+      "kod": "27",
+      "object": 491,
+      "universum_id": 3,
+      "reason": "The existing development process is the target of automation."
+    },
+    {
+      "subject": 855,
+      "kod": "21",
+      "object": "build_automation",
+      "universum_id": 3,
+      "reason": "Jenkins can be used to automate this development task; no mandatory pipeline or product-version claim. Source: https://www.jenkins.io/doc/"
+    },
+    {
+      "subject": "test_automation",
+      "kod": "27",
+      "object": 322,
+      "universum_id": 3,
+      "reason": "The existing development process is the target of automation."
+    },
+    {
+      "subject": 855,
+      "kod": "21",
+      "object": "test_automation",
+      "universum_id": 3,
+      "reason": "Jenkins can be used to automate this development task; no mandatory pipeline or product-version claim. Source: https://www.jenkins.io/doc/"
+    },
+    {
+      "subject": "deployment_automation",
+      "kod": "27",
+      "object": 324,
+      "universum_id": 3,
+      "reason": "The existing development process is the target of automation."
+    },
+    {
+      "subject": 855,
+      "kod": "21",
+      "object": "deployment_automation",
+      "universum_id": 3,
+      "reason": "Jenkins can be used to automate this development task; no mandatory pipeline or product-version claim. Source: https://www.jenkins.io/doc/"
+    },
+    {
+      "subject": "web_browser",
+      "kod": "14",
+      "object": "http_user_agent",
+      "universum_id": 3,
+      "reason": "A web browser also supplies the HTTP user-agent role; its other capabilities are not excluded. Source: https://developer.mozilla.org/en-US/docs/Glossary/Browser"
+    },
+    {
+      "subject": "http_intermediary",
+      "kod": "14",
+      "object": 25217,
+      "universum_id": 3,
+      "reason": "This explicitly HTTP-to-HTTP intermediary is also an HTTP client on its upstream connection."
+    },
+    {
+      "subject": "http_reverse_proxy",
+      "kod": "14",
+      "object": "http_intermediary",
+      "universum_id": 3,
+      "reason": "Both HTTP endpoint roles apply to this explicitly restricted gateway."
+    },
+    {
+      "subject": "http_caching",
+      "kod": "27",
+      "object": 25199,
+      "universum_id": 3,
+      "reason": "HTTP responses are the target of this operation; not every response is eligible for reuse."
+    },
+    {
+      "subject": "http_cache",
+      "kod": "21",
+      "object": "http_caching",
+      "universum_id": 3,
+      "reason": "Purpose of the software cache component."
+    },
+    {
+      "subject": "caching_http_software",
+      "kod": "20",
+      "object": "http_cache",
+      "universum_id": 3,
+      "reason": "The explicitly cache-enabled software includes the cache component."
+    },
+    {
+      "subject": "caching_http_software",
+      "kod": "21",
+      "object": "http_caching",
+      "universum_id": 3,
+      "reason": "This software is intended to support response caching."
+    },
+    {
+      "subject": "shared_caching_proxy",
+      "kod": "14",
+      "object": "caching_http_software",
+      "universum_id": 3,
+      "reason": "The restricted proxy is also cache-enabled software."
+    },
+    {
+      "subject": "shared_caching_proxy",
+      "kod": "20",
+      "object": "shared_cache",
+      "universum_id": 3,
+      "reason": "This specific proxy family includes a shared-cache component."
+    },
+    {
+      "subject": "client_server_architecture",
+      "kod": "20",
+      "object": "client_server_style",
+      "universum_id": 3,
+      "reason": "The style characterizes this restricted architecture family."
+    },
+    {
+      "subject": 25191,
+      "kod": "14",
+      "object": "client_server_style",
+      "universum_id": 3,
+      "reason": "REST refines client-server constraints with further architectural constraints. Source: https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm"
+    }
+  ],
+  "checks": [
+    {
+      "subject": "service_request_processing",
+      "kod": "14",
+      "object": 325,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "service_request_sending",
+      "kod": "14",
+      "object": 325,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 24428,
+      "kod": "14",
+      "object": "service_request_processing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 24429,
+      "kod": "14",
+      "object": "service_request_sending",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "server_software",
+      "kod": "14",
+      "object": 277,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "client_software",
+      "kod": "14",
+      "object": 277,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "server_software",
+      "kod": "21",
+      "object": "service_request_processing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "client_software",
+      "kod": "21",
+      "object": "service_request_sending",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "server_software",
+      "kod": "62",
+      "object": "client_software",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25216,
+      "kod": "14",
+      "object": "server_software",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25217,
+      "kod": "14",
+      "object": "client_software",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "database_server_software",
+      "kod": "14",
+      "object": "server_software",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "database_client_software",
+      "kod": "14",
+      "object": "client_software",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "database_server_software",
+      "kod": "62",
+      "object": "database_client_software",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "file_server_hardware",
+      "kod": "14",
+      "object": 303,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "file_server_software",
+      "kod": "14",
+      "object": "server_software",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "file_serving",
+      "kod": "14",
+      "object": 325,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "file_serving",
+      "kod": "27",
+      "object": 268,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "file_server_hardware",
+      "kod": "21",
+      "object": "file_serving",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "file_server_software",
+      "kod": "21",
+      "object": "file_serving",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 303,
+      "kod": "14",
+      "object": 24421,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 311,
+      "kod": "14",
+      "object": 24421,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 309,
+      "kod": "21",
+      "object": 25214,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 311,
+      "kod": "62",
+      "object": 303,
+      "present": false
+    },
+    {
+      "subject": "automation_software",
+      "kod": "14",
+      "object": 277,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "automation_software",
+      "kod": "21",
+      "object": 573,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "automation_server",
+      "kod": "14",
+      "object": "server_software",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "automation_server",
+      "kod": "14",
+      "object": "automation_software",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "build_automation",
+      "kod": "14",
+      "object": 573,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "build_automation",
+      "kod": "27",
+      "object": 491,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 855,
+      "kod": "21",
+      "object": "build_automation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "test_automation",
+      "kod": "14",
+      "object": 573,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "test_automation",
+      "kod": "27",
+      "object": 322,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 855,
+      "kod": "21",
+      "object": "test_automation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "deployment_automation",
+      "kod": "14",
+      "object": 573,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "deployment_automation",
+      "kod": "27",
+      "object": 324,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 855,
+      "kod": "21",
+      "object": "deployment_automation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 855,
+      "kod": "14",
+      "object": 303,
+      "present": false
+    },
+    {
+      "subject": 855,
+      "kod": "14",
+      "object": "automation_server",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_user_agent",
+      "kod": "14",
+      "object": 25217,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "web_browser",
+      "kod": "14",
+      "object": 285,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "web_browser",
+      "kod": "14",
+      "object": "http_user_agent",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_crawler",
+      "kod": "14",
+      "object": "http_user_agent",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_origin",
+      "kod": "14",
+      "object": 25216,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_intermediary",
+      "kod": "14",
+      "object": 25216,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_intermediary",
+      "kod": "14",
+      "object": 25217,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "forward_proxy",
+      "kod": "14",
+      "object": "http_intermediary",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "reverse_proxy",
+      "kod": "14",
+      "object": 25216,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_reverse_proxy",
+      "kod": "14",
+      "object": "reverse_proxy",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_reverse_proxy",
+      "kod": "14",
+      "object": "http_intermediary",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_cache",
+      "kod": "14",
+      "object": 346,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "private_cache",
+      "kod": "14",
+      "object": "http_cache",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "shared_cache",
+      "kod": "14",
+      "object": "http_cache",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_caching",
+      "kod": "14",
+      "object": 325,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_caching",
+      "kod": "27",
+      "object": 25199,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "http_cache",
+      "kod": "21",
+      "object": "http_caching",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "caching_http_software",
+      "kod": "14",
+      "object": 277,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "caching_http_software",
+      "kod": "20",
+      "object": "http_cache",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "caching_http_software",
+      "kod": "21",
+      "object": "http_caching",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "shared_caching_proxy",
+      "kod": "14",
+      "object": "forward_proxy",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "shared_caching_proxy",
+      "kod": "14",
+      "object": "caching_http_software",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "shared_caching_proxy",
+      "kod": "20",
+      "object": "shared_cache",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "client_server_style",
+      "kod": "14",
+      "object": 25190,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "client_server_architecture",
+      "kod": "14",
+      "object": 671,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "client_server_architecture",
+      "kod": "20",
+      "object": "client_server_style",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25191,
+      "kod": "14",
+      "object": "client_server_style",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 303,
+      "kod": "14",
+      "object": 302,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 311,
+      "kod": "14",
+      "object": 302,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 309,
+      "kod": "14",
+      "object": 303,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 310,
+      "kod": "14",
+      "object": 303,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 304,
+      "kod": "14",
+      "object": 302,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 303,
+      "kod": "62",
+      "object": 311,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25216,
+      "kod": "14",
+      "object": 277,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25217,
+      "kod": "14",
+      "object": 277,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 24428,
+      "kod": "14",
+      "object": 325,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 24429,
+      "kod": "14",
+      "object": 325,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 491,
+      "kod": "14",
+      "object": 319,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25191,
+      "kod": "14",
+      "object": 25190,
+      "present": true,
+      "strength": null
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "service_request_processing",
+      "ancestor": 325,
+      "present": true
+    },
+    {
+      "subject": "service_request_sending",
+      "ancestor": 325,
+      "present": true
+    },
+    {
+      "subject": "server_software",
+      "ancestor": 277,
+      "present": true
+    },
+    {
+      "subject": "client_software",
+      "ancestor": 277,
+      "present": true
+    },
+    {
+      "subject": "database_server_software",
+      "ancestor": "server_software",
+      "present": true
+    },
+    {
+      "subject": "database_client_software",
+      "ancestor": "client_software",
+      "present": true
+    },
+    {
+      "subject": "file_server_hardware",
+      "ancestor": 303,
+      "present": true
+    },
+    {
+      "subject": "file_server_software",
+      "ancestor": "server_software",
+      "present": true
+    },
+    {
+      "subject": "file_serving",
+      "ancestor": 325,
+      "present": true
+    },
+    {
+      "subject": "automation_software",
+      "ancestor": 277,
+      "present": true
+    },
+    {
+      "subject": "automation_server",
+      "ancestor": "server_software",
+      "present": true
+    },
+    {
+      "subject": "build_automation",
+      "ancestor": 573,
+      "present": true
+    },
+    {
+      "subject": "test_automation",
+      "ancestor": 573,
+      "present": true
+    },
+    {
+      "subject": "deployment_automation",
+      "ancestor": 573,
+      "present": true
+    },
+    {
+      "subject": "http_user_agent",
+      "ancestor": 25217,
+      "present": true
+    },
+    {
+      "subject": "web_browser",
+      "ancestor": 285,
+      "present": true
+    },
+    {
+      "subject": "http_crawler",
+      "ancestor": "http_user_agent",
+      "present": true
+    },
+    {
+      "subject": "http_origin",
+      "ancestor": 25216,
+      "present": true
+    },
+    {
+      "subject": "http_intermediary",
+      "ancestor": 25216,
+      "present": true
+    },
+    {
+      "subject": "forward_proxy",
+      "ancestor": "http_intermediary",
+      "present": true
+    },
+    {
+      "subject": "reverse_proxy",
+      "ancestor": 25216,
+      "present": true
+    },
+    {
+      "subject": "http_reverse_proxy",
+      "ancestor": "reverse_proxy",
+      "present": true
+    },
+    {
+      "subject": "http_cache",
+      "ancestor": 346,
+      "present": true
+    },
+    {
+      "subject": "private_cache",
+      "ancestor": "http_cache",
+      "present": true
+    },
+    {
+      "subject": "shared_cache",
+      "ancestor": "http_cache",
+      "present": true
+    },
+    {
+      "subject": "http_caching",
+      "ancestor": 325,
+      "present": true
+    },
+    {
+      "subject": "caching_http_software",
+      "ancestor": 277,
+      "present": true
+    },
+    {
+      "subject": "shared_caching_proxy",
+      "ancestor": "forward_proxy",
+      "present": true
+    },
+    {
+      "subject": "client_server_style",
+      "ancestor": 25190,
+      "present": true
+    },
+    {
+      "subject": "client_server_architecture",
+      "ancestor": 671,
+      "present": true
+    },
+    {
+      "subject": 25216,
+      "ancestor": "server_software",
+      "present": true
+    },
+    {
+      "subject": 25217,
+      "ancestor": "client_software",
+      "present": true
+    },
+    {
+      "subject": 24428,
+      "ancestor": "service_request_processing",
+      "present": true
+    },
+    {
+      "subject": 24429,
+      "ancestor": "service_request_sending",
+      "present": true
+    },
+    {
+      "subject": 303,
+      "ancestor": 24421,
+      "present": true
+    },
+    {
+      "subject": 311,
+      "ancestor": 24421,
+      "present": true
+    },
+    {
+      "subject": 855,
+      "ancestor": "automation_software",
+      "present": true
+    },
+    {
+      "subject": 855,
+      "ancestor": "server_software",
+      "present": true
+    },
+    {
+      "subject": "web_browser",
+      "ancestor": "http_user_agent",
+      "present": true
+    },
+    {
+      "subject": "web_browser",
+      "ancestor": 25217,
+      "present": true
+    },
+    {
+      "subject": "http_intermediary",
+      "ancestor": 25217,
+      "present": true
+    },
+    {
+      "subject": "http_reverse_proxy",
+      "ancestor": "http_intermediary",
+      "present": true
+    },
+    {
+      "subject": "shared_caching_proxy",
+      "ancestor": "caching_http_software",
+      "present": true
+    },
+    {
+      "subject": "automation_server",
+      "ancestor": "automation_software",
+      "present": true
+    },
+    {
+      "subject": 25191,
+      "ancestor": "client_server_style",
+      "present": true
+    },
+    {
+      "subject": "server_software",
+      "ancestor": 302,
+      "present": false
+    },
+    {
+      "subject": "client_software",
+      "ancestor": 302,
+      "present": false
+    },
+    {
+      "subject": 855,
+      "ancestor": 303,
+      "present": false
+    },
+    {
+      "subject": 855,
+      "ancestor": 302,
+      "present": false
+    },
+    {
+      "subject": "database_server_software",
+      "ancestor": 267,
+      "present": false
+    },
+    {
+      "subject": "database_server_software",
+      "ancestor": 310,
+      "present": false
+    },
+    {
+      "subject": "database_client_software",
+      "ancestor": 311,
+      "present": false
+    },
+    {
+      "subject": "file_server_software",
+      "ancestor": "file_server_hardware",
+      "present": false
+    },
+    {
+      "subject": "file_server_hardware",
+      "ancestor": 277,
+      "present": false
+    },
+    {
+      "subject": "server_software",
+      "ancestor": "client_software",
+      "present": false
+    },
+    {
+      "subject": "client_software",
+      "ancestor": "server_software",
+      "present": false
+    },
+    {
+      "subject": 24421,
+      "ancestor": 311,
+      "present": false
+    },
+    {
+      "subject": "reverse_proxy",
+      "ancestor": 25217,
+      "present": false
+    },
+    {
+      "subject": "reverse_proxy",
+      "ancestor": "http_intermediary",
+      "present": false
+    },
+    {
+      "subject": "http_user_agent",
+      "ancestor": "web_browser",
+      "present": false
+    },
+    {
+      "subject": "forward_proxy",
+      "ancestor": "caching_http_software",
+      "present": false
+    },
+    {
+      "subject": "shared_caching_proxy",
+      "ancestor": "shared_cache",
+      "present": false
+    },
+    {
+      "subject": "http_cache",
+      "ancestor": "http_caching",
+      "present": false
+    },
+    {
+      "subject": "private_cache",
+      "ancestor": "shared_cache",
+      "present": false
+    },
+    {
+      "subject": "shared_cache",
+      "ancestor": "private_cache",
+      "present": false
+    },
+    {
+      "subject": "client_server_architecture",
+      "ancestor": "client_server_style",
+      "present": false
+    },
+    {
+      "subject": "client_server_style",
+      "ancestor": 671,
+      "present": false
+    },
+    {
+      "subject": "client_server_style",
+      "ancestor": 25191,
+      "present": false
+    },
+    {
+      "subject": "service_request_processing",
+      "ancestor": 24428,
+      "present": false
+    },
+    {
+      "subject": "service_request_sending",
+      "ancestor": 24429,
+      "present": false
+    },
+    {
+      "subject": "build_automation",
+      "ancestor": 491,
+      "present": false
+    },
+    {
+      "subject": "test_automation",
+      "ancestor": 322,
+      "present": false
+    },
+    {
+      "subject": "deployment_automation",
+      "ancestor": 324,
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": "service_request_processing",
+      "term": "обработка запроса к программной службе",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "service_request_processing",
+      "term": "service request processing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "service_request_sending",
+      "term": "отправка запроса к программной службе",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "service_request_sending",
+      "term": "service request sending",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "server_software",
+      "term": "серверное программное обеспечение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "server_software",
+      "term": "server software",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "client_software",
+      "term": "клиентское программное обеспечение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "client_software",
+      "term": "client software",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "database_server_software",
+      "term": "серверное программное обеспечение баз данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "database_server_software",
+      "term": "database server software",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "database_client_software",
+      "term": "клиентское программное обеспечение баз данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "database_client_software",
+      "term": "database client software",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "file_server_hardware",
+      "term": "файловый сервер (аппаратное устройство)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "file_server_hardware",
+      "term": "file server hardware",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "file_server_software",
+      "term": "программное обеспечение файлового сервера",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "file_server_software",
+      "term": "file server software",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "file_serving",
+      "term": "предоставление файлов по сети",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "file_serving",
+      "term": "network file serving",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 303,
+      "term": "сервер (аппаратное устройство)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 303,
+      "term": "server hardware",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 311,
+      "term": "клиент (аппаратное устройство)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 311,
+      "term": "client hardware",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 309,
+      "term": "веб-сервер (аппаратное устройство)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 309,
+      "term": "web server hardware",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 310,
+      "term": "сервер баз данных (аппаратное устройство)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 310,
+      "term": "database server hardware",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 304,
+      "term": "рабочая станция (компьютер)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 304,
+      "term": "workstation computer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "automation_software",
+      "term": "программное обеспечение автоматизации",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "automation_software",
+      "term": "automation software",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "automation_server",
+      "term": "сервер автоматизации (программное обеспечение)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "automation_server",
+      "term": "automation server software",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "build_automation",
+      "term": "автоматизация сборки программного обеспечения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "build_automation",
+      "term": "software build automation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "test_automation",
+      "term": "автоматизация тестирования программного обеспечения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "test_automation",
+      "term": "software test automation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "deployment_automation",
+      "term": "автоматизация развёртывания программного обеспечения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "deployment_automation",
+      "term": "software deployment automation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 855,
+      "term": "Jenkins automation server",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 855,
+      "term": "сервер автоматизации Jenkins",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 491,
+      "term": "сборка программного обеспечения (процесс)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 491,
+      "term": "software build process",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "http_user_agent",
+      "term": "пользовательский агент HTTP (программное обеспечение)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "http_user_agent",
+      "term": "HTTP user agent software",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "web_browser",
+      "term": "веб-браузер",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "web_browser",
+      "term": "web browser",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "web_browser",
+      "term": "браузер",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "http_crawler",
+      "term": "робот для обхода веб-ресурсов по HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "http_crawler",
+      "term": "HTTP web crawler",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "http_origin",
+      "term": "исходный сервер HTTP (программное обеспечение)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "http_origin",
+      "term": "HTTP origin server software",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "http_intermediary",
+      "term": "посредник между соединениями HTTP (программное обеспечение)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "http_intermediary",
+      "term": "HTTP-to-HTTP intermediary software",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "forward_proxy",
+      "term": "прямой прокси HTTP (программное обеспечение)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "forward_proxy",
+      "term": "HTTP forward proxy software",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "reverse_proxy",
+      "term": "обратный прокси HTTP (программное обеспечение)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "reverse_proxy",
+      "term": "HTTP reverse proxy software",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "http_reverse_proxy",
+      "term": "обратный прокси с HTTP на обеих сторонах",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "http_reverse_proxy",
+      "term": "HTTP-to-HTTP reverse proxy software",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "http_cache",
+      "term": "компонент кеширования HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "http_cache",
+      "term": "HTTP cache component",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "private_cache",
+      "term": "компонент частного кеша HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "private_cache",
+      "term": "private HTTP cache component",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "shared_cache",
+      "term": "компонент общего кеша HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "shared_cache",
+      "term": "shared HTTP cache component",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "http_caching",
+      "term": "кеширование ответов HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "http_caching",
+      "term": "HTTP response caching",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "caching_http_software",
+      "term": "программное обеспечение с кешированием HTTP",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "caching_http_software",
+      "term": "HTTP caching software",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "shared_caching_proxy",
+      "term": "прямой прокси HTTP с общим кешем",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "shared_caching_proxy",
+      "term": "shared-cache HTTP forward proxy software",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "client_server_style",
+      "term": "клиент-серверный архитектурный стиль",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "client_server_style",
+      "term": "client-server architectural style",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "client_server_architecture",
+      "term": "клиент-серверная архитектура",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "client_server_architecture",
+      "term": "client-server architecture",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "server_software",
+      "term": "server",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "client_software",
+      "term": "client",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "http_cache",
+      "term": "cache",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "http_user_agent",
+      "term": "User-Agent",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "forward_proxy",
+      "term": "proxy",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "reverse_proxy",
+      "term": "gateway",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "web_browser",
+      "term": "browser",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "http_crawler",
+      "term": "spider",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "file_server_hardware",
+      "term": "file server",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

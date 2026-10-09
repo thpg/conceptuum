@@ -2,8 +2,8 @@
   "project": "Conceptuum",
   "code_version": "0.1.0-dev",
   "interface_revision": "2026-10-08.4",
-  "data_revision": "Q9",
-  "concepts": 12491,
-  "accepted_edges": 15717,
-  "source_dump_sha256": "2b787a6cad4aef527d5ea0017a97c002c81e610ab9ee99228ab10c4d018527ab"
+  "data_revision": "Q39",
+  "concepts": 13456,
+  "accepted_edges": 17350,
+  "source_dump_sha256": "f6c2496b3881b67082a4ab69415a496537b9adef558e724ee599aa2bbc38cac6"
 }

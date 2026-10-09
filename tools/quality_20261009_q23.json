@@ -1,0 +1,2876 @@
+{
+  "source": "quality-20261009-q23",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Dwellings, residential buildings, apartments, building components and rooms with combined uses; correct genus/part-whole confusion and unsupported universal features.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "houseboat": "https://dictionary.cambridge.org/us/dictionary/english/houseboat",
+      "studio": "https://dictionary.cambridge.org/us/dictionary/english/studio-apartment",
+      "semi": "https://dictionary.cambridge.org/us/dictionary/english/semi-detached?topic=houses-and-homes",
+      "bungalow": "https://dictionary.cambridge.org/dictionary/english/bungalow",
+      "stairwell": "https://www.oxfordlearnersdictionaries.com/definition/english/stairwell"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet; CC BY 4.0 and Princeton notices remain in docs/quality/2026-10-09-q11.md#sources-and-reuse. Cambridge Dictionary entries independently check housing senses and regional distinctions. Full definitions are not copied; qualified labels and graph mappings are editorial adaptations.",
+    "existing_cohort": [
+      1,
+      32,
+      149,
+      153,
+      154,
+      1543,
+      1549,
+      1557,
+      1778,
+      1845,
+      1895,
+      2366,
+      2367,
+      2368,
+      2369,
+      2370,
+      2371,
+      2373,
+      2375,
+      2376,
+      2675,
+      3322,
+      4697,
+      5118,
+      5503,
+      5504,
+      6401,
+      24411
+    ],
+    "context_policy": "New concepts and assertions use U1 with unspecified strength. Dwelling is a physical place serving residential use; a house here is a whole residential building and an apartment a unit within a building. Legal eligibility, ownership, tenure and occupancy rules are outside scope.",
+    "sense_decisions": [
+      {
+        "concept": "dwelling",
+        "synset": "oewn-03264208-n",
+        "decision": "add",
+        "alignment": "residential-function family",
+        "scope": "A physical place designed or used for people to reside in. Do not restrict it to a whole building, legal housing unit, current occupancy or a structure fixed to land."
+      },
+      {
+        "concept": "apartment_building",
+        "synset": "oewn-02729606-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A residential building divided into apartment units. The building contains apartments; it is not itself one apartment."
+      },
+      {
+        "concept": "two_unit_house",
+        "synset": "oewn-03261913-n",
+        "decision": "add",
+        "alignment": "disambiguated building sense",
+        "scope": "A whole residential building with two apartment units. Distinguish this meaning of duplex from a two-level apartment and from one semi-detached dwelling."
+      },
+      {
+        "concept": "detached_house",
+        "synset": "oewn-03185531-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A residential house standing separately from adjacent houses. Detached does not by itself imply one family or one apartment."
+      },
+      {
+        "concept": "terraced_house",
+        "synset": "oewn-04421104-n",
+        "decision": "add",
+        "alignment": "one house in a row",
+        "scope": "One residential house in a connected row. Do not identify a row house with the entire terrace or a house having an outdoor terrace."
+      },
+      {
+        "concept": "semi_detached_house",
+        "synset": "oewn-03261913-n",
+        "decision": "add",
+        "alignment": "regional sense restriction",
+        "scope": "Use the British sense of one house adjoining one other house. Do not copy the dictionary duplex synonym as identity with a whole two-unit building."
+      },
+      {
+        "concept": "single_storey_house",
+        "synset": null,
+        "decision": "add",
+        "alignment": "storey-count restriction",
+        "scope": "A residential house with one storey in the selected ordinary sense. Do not import bungalow or cottage as exact synonyms."
+      },
+      {
+        "concept": "house_with_basement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "component-defined restriction",
+        "scope": "Restrict the house family to buildings with a basement rather than asserting one for every house."
+      },
+      {
+        "concept": "house_with_attic",
+        "synset": null,
+        "decision": "add",
+        "alignment": "component-defined restriction",
+        "scope": "Restrict the house family to buildings with an attic rather than asserting one for every house."
+      },
+      {
+        "concept": "dwelling_with_balcony",
+        "synset": null,
+        "decision": "add",
+        "alignment": "component-defined restriction",
+        "scope": "A dwelling that includes a balcony; a functional/component classification independent of whole-building versus apartment unit."
+      },
+      {
+        "concept": "building_with_balcony",
+        "synset": null,
+        "decision": "add",
+        "alignment": "component-defined restriction",
+        "scope": "A building with a balcony, without treating balcony presence as universal for buildings."
+      },
+      {
+        "concept": "house_with_balcony",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed multiple-genus intersection",
+        "scope": "A whole residential building with a balcony."
+      },
+      {
+        "concept": "apartment_with_balcony",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "An apartment that includes a balcony. This does not make the whole building an apartment."
+      },
+      {
+        "concept": "two_level_apartment",
+        "synset": "oewn-03261768-n",
+        "decision": "add",
+        "alignment": "level-count sense",
+        "scope": "One apartment occupying two levels. Distinguish its layout from a whole building divided into two apartments; do not require a particular access mechanism."
+      },
+      {
+        "concept": "studio_apartment",
+        "synset": "oewn-04351812-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An apartment whose principal living functions share a main room, with separate sanitary facilities. Do not equate one bedroom with one total room."
+      },
+      {
+        "concept": "one_bedroom_apartment",
+        "synset": null,
+        "decision": "add",
+        "alignment": "bedroom-count restriction",
+        "scope": "An apartment with one bedroom. This does not state the total room count or translate the Russian one-room-apartment category."
+      },
+      {
+        "concept": "houseboat",
+        "synset": "oewn-03550650-n",
+        "decision": "add",
+        "alignment": "boat and dwelling intersection",
+        "scope": "A boat designed or used as a dwelling. Broaden the dictionary barge-only wording; do not classify every floating dwelling as a navigable boat or this boat as a land building."
+      },
+      {
+        "concept": "residential_room",
+        "synset": null,
+        "decision": "add",
+        "alignment": "room and residential-premises intersection",
+        "scope": "A room used for living in, distinct from every room in general and from an entire apartment."
+      },
+      {
+        "concept": "dining_room",
+        "synset": "oewn-03205385-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A room intended for dining, distinct from a public canteen or food-service organization."
+      },
+      {
+        "concept": "kitchen_dining_room",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "One room serving both kitchen and dining-room functions."
+      },
+      {
+        "concept": "living_bedroom",
+        "synset": "oewn-02825199-n",
+        "decision": "add",
+        "alignment": "room-use adaptation",
+        "scope": "One room serving sleeping and sitting/living functions. Select the room use, not necessarily a separate rented apartment or a self-contained bedsit."
+      },
+      {
+        "concept": "combined_bathroom",
+        "synset": "oewn-02810916-n",
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "One room serving bathing and toilet functions. Do not require both a bathtub and a shower."
+      },
+      {
+        "concept": "guest_bedroom",
+        "synset": null,
+        "decision": "add",
+        "alignment": "purpose restriction",
+        "scope": "A bedroom intended to accommodate guests; distinguish it from every guest reception room."
+      },
+      {
+        "concept": "laundry_room",
+        "synset": null,
+        "decision": "add",
+        "alignment": "purpose restriction",
+        "scope": "A room intended for washing laundry, not the commercial laundry business or a compulsory feature of every dwelling."
+      },
+      {
+        "concept": "stairwell",
+        "synset": "oewn-04305799-n",
+        "decision": "add",
+        "alignment": "enclosed architectural-space restriction",
+        "scope": "The enclosed vertical building space containing a staircase, distinct from the steps themselves, the central open void, an elevator shaft or a single landing. No fire-safety classification or enclosure standard is imported."
+      },
+      {
+        "concept": "stair_landing",
+        "synset": "oewn-03643825-n",
+        "decision": "add",
+        "alignment": "architectural sense",
+        "scope": "A platform within or at the end of a flight of stairs. Exclude aircraft landing, boat landing and the full staircase."
+      },
+      {
+        "concept": "building_with_stairs",
+        "synset": null,
+        "decision": "add",
+        "alignment": "component-defined restriction",
+        "scope": "A building with stairs. Not every building requires stairs."
+      },
+      {
+        "concept": "house_with_stairs",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "A whole residential building with stairs, without assuming that every house has them."
+      },
+      {
+        "concept": 3322,
+        "synset": "oewn-02916498-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Existing postroika/building may be a broader built structure; do not merge it solely from its English spelling."
+      },
+      {
+        "concept": 5504,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing childrens-room record later rather than importing nursery as a new synonym without age scope."
+      },
+      {
+        "concept": 3534,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Step is ambiguous between architectural step and abstract stage; do not merge it with step 1895 in this cohort."
+      },
+      {
+        "concept": 1543,
+        "synset": "oewn-03637568-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Portable and fixed ladders need a distinct instrument review; do not import them as exact staircase synonyms."
+      },
+      {
+        "concept": 149,
+        "synset": "oewn-02923176-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The dictionary equates cottage and bungalow in a single-storey gloss, but wider usage differs. Add only the explicit single-storey house family now."
+      },
+      {
+        "concept": 2366,
+        "synset": "oewn-03261768-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Duplex apartment and whole two-unit building remain distinct records and are not given an unqualified duplex alias."
+      }
+    ],
+    "limits": "No universal basement, attic, balcony, staircase, corridor, separate bedroom or separate living room on every house/building. Do not identify bedroom count with Russian total-room count, bungalow with all cottages, or the two meanings of duplex. Existing garage/structure, premises/space, house/school, tree/wood and other component/material percentages remain queued. No application test suites.",
+    "exclusion_review": {
+      "context": "U1 positive genus witnesses",
+      "before_conflicting_edges": 14,
+      "resolved_edges": [
+        8688
+      ],
+      "decision": "Retain the selected whole-house/apartment-unit exclusion and repair the wrong apartment genus. Reject bedroom/living-room and bathroom/toilet exclusions before adding their reviewed combined-use subtypes.",
+      "remaining_candidates_expected": 13
+    },
+    "new_term_collisions": [],
+    "collision_decision": "No exact normalized cross-language collision is accepted. Existing residential premises, residing, building components, stairs, storey, apartments and established rooms are reused.",
+    "refreshed_comparison": {
+      "baseline": "Q22",
+      "existing_concepts": 12924,
+      "existing_terms": 36454,
+      "synsets_with_exact_en_candidate": 15550,
+      "synsets_without_exact_en_candidate": 91969,
+      "existing_concepts_with_dictionary_candidate": 4128,
+      "caveat": "Normalized spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "dwelling",
+      "name": "жилище",
+      "parent": 1,
+      "universum_id": 1,
+      "terms": [
+        [
+          "жилище",
+          "ru"
+        ],
+        [
+          "dwelling",
+          "en"
+        ],
+        [
+          "dwelling (residential place)",
+          "en"
+        ]
+      ],
+      "reason": "A physical place designed or used for people to reside in. Do not restrict it to a whole building, legal housing unit, current occupancy or a structure fixed to land. OEWN 2025: oewn-03264208-n."
+    },
+    {
+      "key": "apartment_building",
+      "name": "многоквартирный дом",
+      "parent": 149,
+      "universum_id": 1,
+      "terms": [
+        [
+          "многоквартирный дом",
+          "ru"
+        ],
+        [
+          "apartment building",
+          "en"
+        ],
+        [
+          "apartment house",
+          "en"
+        ]
+      ],
+      "reason": "A residential building divided into apartment units. The building contains apartments; it is not itself one apartment. OEWN 2025: oewn-02729606-n."
+    },
+    {
+      "key": "two_unit_house",
+      "name": "двухквартирный дом",
+      "parent": "apartment_building",
+      "universum_id": 1,
+      "terms": [
+        [
+          "двухквартирный дом",
+          "ru"
+        ],
+        [
+          "two-unit residential building",
+          "en"
+        ],
+        [
+          "duplex (two-unit building)",
+          "en"
+        ]
+      ],
+      "reason": "A whole residential building with two apartment units. Distinguish this meaning of duplex from a two-level apartment and from one semi-detached dwelling. OEWN 2025: oewn-03261913-n."
+    },
+    {
+      "key": "detached_house",
+      "name": "отдельно стоящий жилой дом",
+      "parent": 149,
+      "universum_id": 1,
+      "terms": [
+        [
+          "отдельно стоящий жилой дом",
+          "ru"
+        ],
+        [
+          "detached house",
+          "en"
+        ]
+      ],
+      "reason": "A residential house standing separately from adjacent houses. Detached does not by itself imply one family or one apartment. OEWN 2025: oewn-03185531-n."
+    },
+    {
+      "key": "terraced_house",
+      "name": "жилой дом в ряду сблокированных домов",
+      "parent": 149,
+      "universum_id": 1,
+      "terms": [
+        [
+          "жилой дом в ряду сблокированных домов",
+          "ru"
+        ],
+        [
+          "terraced house",
+          "en"
+        ],
+        [
+          "row house",
+          "en"
+        ]
+      ],
+      "reason": "One residential house in a connected row. Do not identify a row house with the entire terrace or a house having an outdoor terrace. OEWN 2025: oewn-04421104-n."
+    },
+    {
+      "key": "semi_detached_house",
+      "name": "жилой дом, соединённый с соседним с одной стороны",
+      "parent": 149,
+      "universum_id": 1,
+      "terms": [
+        [
+          "жилой дом, соединённый с соседним с одной стороны",
+          "ru"
+        ],
+        [
+          "semi-detached house",
+          "en"
+        ],
+        [
+          "semidetached house",
+          "en"
+        ]
+      ],
+      "reason": "Use the British sense of one house adjoining one other house. Do not copy the dictionary duplex synonym as identity with a whole two-unit building. OEWN 2025: oewn-03261913-n. Source: https://dictionary.cambridge.org/us/dictionary/english/semi-detached?topic=houses-and-homes"
+    },
+    {
+      "key": "single_storey_house",
+      "name": "одноэтажный жилой дом",
+      "parent": 149,
+      "universum_id": 1,
+      "terms": [
+        [
+          "одноэтажный жилой дом",
+          "ru"
+        ],
+        [
+          "single-storey house",
+          "en"
+        ],
+        [
+          "single-story house",
+          "en"
+        ]
+      ],
+      "reason": "A residential house with one storey in the selected ordinary sense. Do not import bungalow or cottage as exact synonyms."
+    },
+    {
+      "key": "house_with_basement",
+      "name": "жилой дом с подвалом",
+      "parent": 149,
+      "universum_id": 1,
+      "terms": [
+        [
+          "жилой дом с подвалом",
+          "ru"
+        ],
+        [
+          "house with a basement",
+          "en"
+        ]
+      ],
+      "reason": "Restrict the house family to buildings with a basement rather than asserting one for every house."
+    },
+    {
+      "key": "house_with_attic",
+      "name": "жилой дом с чердаком",
+      "parent": 149,
+      "universum_id": 1,
+      "terms": [
+        [
+          "жилой дом с чердаком",
+          "ru"
+        ],
+        [
+          "house with an attic",
+          "en"
+        ]
+      ],
+      "reason": "Restrict the house family to buildings with an attic rather than asserting one for every house."
+    },
+    {
+      "key": "dwelling_with_balcony",
+      "name": "жилище с балконом",
+      "parent": "dwelling",
+      "universum_id": 1,
+      "terms": [
+        [
+          "жилище с балконом",
+          "ru"
+        ],
+        [
+          "dwelling with a balcony",
+          "en"
+        ]
+      ],
+      "reason": "A dwelling that includes a balcony; a functional/component classification independent of whole-building versus apartment unit."
+    },
+    {
+      "key": "building_with_balcony",
+      "name": "здание с балконом",
+      "parent": 2675,
+      "universum_id": 1,
+      "terms": [
+        [
+          "здание с балконом",
+          "ru"
+        ],
+        [
+          "building with a balcony",
+          "en"
+        ]
+      ],
+      "reason": "A building with a balcony, without treating balcony presence as universal for buildings."
+    },
+    {
+      "key": "house_with_balcony",
+      "name": "жилой дом с балконом",
+      "parent": 149,
+      "universum_id": 1,
+      "terms": [
+        [
+          "жилой дом с балконом",
+          "ru"
+        ],
+        [
+          "house with a balcony",
+          "en"
+        ]
+      ],
+      "reason": "A whole residential building with a balcony."
+    },
+    {
+      "key": "apartment_with_balcony",
+      "name": "квартира с балконом",
+      "parent": 2366,
+      "universum_id": 1,
+      "terms": [
+        [
+          "квартира с балконом",
+          "ru"
+        ],
+        [
+          "apartment with a balcony",
+          "en"
+        ]
+      ],
+      "reason": "An apartment that includes a balcony. This does not make the whole building an apartment."
+    },
+    {
+      "key": "two_level_apartment",
+      "name": "двухуровневая квартира",
+      "parent": 2366,
+      "universum_id": 1,
+      "terms": [
+        [
+          "двухуровневая квартира",
+          "ru"
+        ],
+        [
+          "two-level apartment",
+          "en"
+        ],
+        [
+          "duplex apartment",
+          "en"
+        ]
+      ],
+      "reason": "One apartment occupying two levels. Distinguish its layout from a whole building divided into two apartments; do not require a particular access mechanism. OEWN 2025: oewn-03261768-n."
+    },
+    {
+      "key": "studio_apartment",
+      "name": "квартира-студия",
+      "parent": 2366,
+      "universum_id": 1,
+      "terms": [
+        [
+          "квартира-студия",
+          "ru"
+        ],
+        [
+          "studio apartment",
+          "en"
+        ],
+        [
+          "studio flat",
+          "en"
+        ]
+      ],
+      "reason": "An apartment whose principal living functions share a main room, with separate sanitary facilities. Do not equate one bedroom with one total room. OEWN 2025: oewn-04351812-n. Source: https://dictionary.cambridge.org/us/dictionary/english/studio-apartment"
+    },
+    {
+      "key": "one_bedroom_apartment",
+      "name": "квартира с одной спальней",
+      "parent": 2366,
+      "universum_id": 1,
+      "terms": [
+        [
+          "квартира с одной спальней",
+          "ru"
+        ],
+        [
+          "one-bedroom apartment",
+          "en"
+        ]
+      ],
+      "reason": "An apartment with one bedroom. This does not state the total room count or translate the Russian one-room-apartment category."
+    },
+    {
+      "key": "houseboat",
+      "name": "жилая лодка",
+      "parent": 1557,
+      "universum_id": 1,
+      "terms": [
+        [
+          "жилая лодка",
+          "ru"
+        ],
+        [
+          "houseboat",
+          "en"
+        ],
+        [
+          "лодка для проживания",
+          "ru"
+        ]
+      ],
+      "reason": "A boat designed or used as a dwelling. Broaden the dictionary barge-only wording; do not classify every floating dwelling as a navigable boat or this boat as a land building. OEWN 2025: oewn-03550650-n. Source: https://dictionary.cambridge.org/us/dictionary/english/houseboat"
+    },
+    {
+      "key": "residential_room",
+      "name": "жилая комната",
+      "parent": 154,
+      "universum_id": 1,
+      "terms": [
+        [
+          "жилая комната",
+          "ru"
+        ],
+        [
+          "residential room",
+          "en"
+        ]
+      ],
+      "reason": "A room used for living in, distinct from every room in general and from an entire apartment."
+    },
+    {
+      "key": "dining_room",
+      "name": "столовая (комната)",
+      "parent": 154,
+      "universum_id": 1,
+      "terms": [
+        [
+          "столовая (комната)",
+          "ru"
+        ],
+        [
+          "dining room",
+          "en"
+        ],
+        [
+          "dining-room",
+          "en"
+        ]
+      ],
+      "reason": "A room intended for dining, distinct from a public canteen or food-service organization. OEWN 2025: oewn-03205385-n."
+    },
+    {
+      "key": "kitchen_dining_room",
+      "name": "кухня-столовая",
+      "parent": 2367,
+      "universum_id": 1,
+      "terms": [
+        [
+          "кухня-столовая",
+          "ru"
+        ],
+        [
+          "combined kitchen and dining room",
+          "en"
+        ]
+      ],
+      "reason": "One room serving both kitchen and dining-room functions."
+    },
+    {
+      "key": "living_bedroom",
+      "name": "гостиная-спальня",
+      "parent": 2368,
+      "universum_id": 1,
+      "terms": [
+        [
+          "гостиная-спальня",
+          "ru"
+        ],
+        [
+          "combined living room and bedroom",
+          "en"
+        ]
+      ],
+      "reason": "One room serving sleeping and sitting/living functions. Select the room use, not necessarily a separate rented apartment or a self-contained bedsit. OEWN 2025: oewn-02825199-n."
+    },
+    {
+      "key": "combined_bathroom",
+      "name": "совмещённый санузел",
+      "parent": 2370,
+      "universum_id": 1,
+      "terms": [
+        [
+          "совмещённый санузел",
+          "ru"
+        ],
+        [
+          "combined bathroom and toilet",
+          "en"
+        ]
+      ],
+      "reason": "One room serving bathing and toilet functions. Do not require both a bathtub and a shower. OEWN 2025: oewn-02810916-n."
+    },
+    {
+      "key": "guest_bedroom",
+      "name": "гостевая спальня",
+      "parent": 2368,
+      "universum_id": 1,
+      "terms": [
+        [
+          "гостевая спальня",
+          "ru"
+        ],
+        [
+          "guest bedroom",
+          "en"
+        ]
+      ],
+      "reason": "A bedroom intended to accommodate guests; distinguish it from every guest reception room."
+    },
+    {
+      "key": "laundry_room",
+      "name": "комната для стирки",
+      "parent": 154,
+      "universum_id": 1,
+      "terms": [
+        [
+          "комната для стирки",
+          "ru"
+        ],
+        [
+          "laundry room",
+          "en"
+        ]
+      ],
+      "reason": "A room intended for washing laundry, not the commercial laundry business or a compulsory feature of every dwelling."
+    },
+    {
+      "key": "stairwell",
+      "name": "лестничная клетка (пространство для лестницы)",
+      "parent": 24411,
+      "universum_id": 1,
+      "terms": [
+        [
+          "лестничная клетка (пространство для лестницы)",
+          "ru"
+        ],
+        [
+          "enclosed stairwell",
+          "en"
+        ],
+        [
+          "stairwell (enclosed space)",
+          "en"
+        ]
+      ],
+      "reason": "The enclosed vertical building space containing a staircase, distinct from the steps themselves, the central open void, an elevator shaft or a single landing. No fire-safety classification or enclosure standard is imported. OEWN 2025: oewn-04305799-n. Source: https://www.oxfordlearnersdictionaries.com/definition/english/stairwell"
+    },
+    {
+      "key": "stair_landing",
+      "name": "лестничная площадка",
+      "parent": 24411,
+      "universum_id": 1,
+      "terms": [
+        [
+          "лестничная площадка",
+          "ru"
+        ],
+        [
+          "stair landing",
+          "en"
+        ]
+      ],
+      "reason": "A platform within or at the end of a flight of stairs. Exclude aircraft landing, boat landing and the full staircase. OEWN 2025: oewn-03643825-n."
+    },
+    {
+      "key": "building_with_stairs",
+      "name": "здание с лестницей",
+      "parent": 2675,
+      "universum_id": 1,
+      "terms": [
+        [
+          "здание с лестницей",
+          "ru"
+        ],
+        [
+          "building with a staircase",
+          "en"
+        ]
+      ],
+      "reason": "A building with stairs. Not every building requires stairs."
+    },
+    {
+      "key": "house_with_stairs",
+      "name": "жилой дом с лестницей",
+      "parent": 149,
+      "universum_id": 1,
+      "terms": [
+        [
+          "жилой дом с лестницей",
+          "ru"
+        ],
+        [
+          "house with a staircase",
+          "en"
+        ]
+      ],
+      "reason": "A whole residential building with stairs, without assuming that every house has them."
+    }
+  ],
+  "renames": [
+    {
+      "id": 149,
+      "before": "дом",
+      "name": "дом (жилое здание)",
+      "terms": [],
+      "reason": "Select the whole residential building, as distinct from an apartment unit, household, institution or abstract home. OEWN 2025: oewn-03549540-n."
+    },
+    {
+      "id": 4697,
+      "before": "жилое",
+      "name": "жилое помещение",
+      "terms": [],
+      "reason": "The existing genus selects premises used for living. Make the implicit noun explicit rather than treating residential as an independent physical object."
+    }
+  ],
+  "terms": [
+    {
+      "id": 149,
+      "name": "дом (жилое здание)",
+      "terms": [
+        [
+          "house (residential building)",
+          "en"
+        ]
+      ],
+      "reason": "Keep the existing house term while qualifying the selected physical-building sense. OEWN 2025: oewn-03549540-n."
+    },
+    {
+      "id": 4697,
+      "name": "жилое помещение",
+      "terms": [
+        [
+          "residential premises",
+          "en"
+        ],
+        [
+          "living accommodation (premises)",
+          "en"
+        ]
+      ],
+      "reason": "Retain the selected physical-premises meaning without importing a jurisdiction-specific legal definition."
+    },
+    {
+      "id": 2366,
+      "name": "квартира",
+      "terms": [
+        [
+          "apartment (dwelling unit)",
+          "en"
+        ],
+        [
+          "flat (dwelling)",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the residential unit; do not require one floor, a balcony, a particular tenure or a separate bedroom. OEWN 2025: oewn-02729230-n."
+    },
+    {
+      "id": 5118,
+      "name": "этаж",
+      "terms": [
+        [
+          "story (building level)",
+          "en"
+        ],
+        [
+          "floor (building level)",
+          "en"
+        ]
+      ],
+      "reason": "Keep building level distinct from floor as a surface and story as a narrative. OEWN 2025: oewn-03370837-n."
+    },
+    {
+      "id": 1543,
+      "name": "лестница",
+      "terms": [
+        [
+          "staircase",
+          "en"
+        ],
+        [
+          "stairway",
+          "en"
+        ]
+      ],
+      "reason": "The existing step-and-railing facts select stairs; do not import the portable-ladder meaning of Russian lestnitsa. OEWN 2025: oewn-04305446-n."
+    },
+    {
+      "id": 6401,
+      "name": "проживание",
+      "terms": [
+        [
+          "residence (living in a place)",
+          "en"
+        ],
+        [
+          "residing",
+          "en"
+        ],
+        [
+          "reside",
+          "en"
+        ],
+        [
+          "to reside",
+          "en"
+        ],
+        [
+          "проживать",
+          "ru"
+        ]
+      ],
+      "reason": "Keep residence distinct from biological life, spending a period of life or spending money. No legal residence status is imported. OEWN 2025: oewn-01055844-n."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 6401,
+      "term": "проживаание",
+      "lang": "ru",
+      "reason": "Discard the generated doubled-vowel form; preserve the normal noun and add the valid Russian verb."
+    },
+    {
+      "id": 6401,
+      "term": "ПРОЖИВАТЬ",
+      "lang": "en",
+      "reason": "Correct the Russian verb language tag by retaining it as Russian and adding real English vocabulary."
+    }
+  ],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 205,
+      "before": [
+        149,
+        "14",
+        32,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          149,
+          "14",
+          2675,
+          null,
+          1
+        ]
+      ],
+      "reason": "A house in the selected physical sense is a building; structure remains an ancestor. OEWN 2025: oewn-03549540-n."
+    },
+    {
+      "id": 4227,
+      "before": [
+        2366,
+        "14",
+        149,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2366,
+          "14",
+          4697,
+          null,
+          1
+        ]
+      ],
+      "reason": "An apartment is residential premises, not a whole house/building. The retained house/apartment exclusion now has no shared genus witness. OEWN 2025: oewn-02729230-n."
+    },
+    {
+      "id": 4236,
+      "before": [
+        2375,
+        "14",
+        149,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2375,
+          "14",
+          24411,
+          null,
+          1
+        ]
+      ],
+      "reason": "An attic is a part of a building, not a type of house. It need not be a habitable room or an entire storey. OEWN 2025: oewn-03691456-n."
+    },
+    {
+      "id": 4237,
+      "before": [
+        2376,
+        "14",
+        149,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2376,
+          "14",
+          24411,
+          null,
+          1
+        ]
+      ],
+      "reason": "A basement is a lower part of a building, not a type of house. It may be partly below ground. OEWN 2025: oewn-02803656-n."
+    },
+    {
+      "id": 10485,
+      "before": [
+        6401,
+        "14",
+        5017,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          6401,
+          "14",
+          2633,
+          null,
+          1
+        ]
+      ],
+      "reason": "Select ongoing residence in a place as a state; it is not by itself a physical action. The dictionary activity wording is adapted to this explicitly chosen state sense. OEWN 2025: oewn-01055844-n."
+    },
+    {
+      "id": 7499,
+      "before": [
+        4697,
+        "21",
+        1960,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          4697,
+          "21",
+          6401,
+          null,
+          1
+        ]
+      ],
+      "reason": "Residential premises are intended for residing, not biological life as a generic process. OEWN 2025: oewn-01055844-n."
+    },
+    {
+      "id": 4325,
+      "before": [
+        154,
+        "20",
+        2366,
+        1
+      ],
+      "reviewed_strength": 95,
+      "replacements": [
+        [
+          2366,
+          "20",
+          154,
+          null,
+          1
+        ]
+      ],
+      "reason": "An apartment contains room space; a room does not contain an apartment as a required component. OEWN 2025: oewn-02729230-n."
+    },
+    {
+      "id": 4324,
+      "before": [
+        2366,
+        "20",
+        149,
+        1
+      ],
+      "reviewed_strength": 95,
+      "replacements": [],
+      "reason": "Reject the reversed component direction. A building/unit is not a required part of its balcony, attic, basement or apartment. Correct whole-to-part assertions are added only to the qualified families."
+    },
+    {
+      "id": 4336,
+      "before": [
+        1549,
+        "20",
+        2366,
+        1
+      ],
+      "reviewed_strength": 95,
+      "replacements": [],
+      "reason": "Reject the reversed component direction. A building/unit is not a required part of its balcony, attic, basement or apartment. Correct whole-to-part assertions are added only to the qualified families."
+    },
+    {
+      "id": 3365,
+      "before": [
+        1549,
+        "20",
+        149,
+        1
+      ],
+      "reviewed_strength": 30,
+      "replacements": [],
+      "reason": "Reject the reversed component direction. A building/unit is not a required part of its balcony, attic, basement or apartment. Correct whole-to-part assertions are added only to the qualified families."
+    },
+    {
+      "id": 4332,
+      "before": [
+        2375,
+        "20",
+        149,
+        1
+      ],
+      "reviewed_strength": 95,
+      "replacements": [],
+      "reason": "Reject the reversed component direction. A building/unit is not a required part of its balcony, attic, basement or apartment. Correct whole-to-part assertions are added only to the qualified families."
+    },
+    {
+      "id": 4333,
+      "before": [
+        2376,
+        "20",
+        149,
+        1
+      ],
+      "reviewed_strength": 95,
+      "replacements": [],
+      "reason": "Reject the reversed component direction. A building/unit is not a required part of its balcony, attic, basement or apartment. Correct whole-to-part assertions are added only to the qualified families."
+    },
+    {
+      "id": 29417,
+      "before": [
+        149,
+        "20",
+        2373,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The named room, basement, attic, staircase or balcony is not universal for every house/building. Preserve the old row as rejected history and use restricted families where supported."
+    },
+    {
+      "id": 29418,
+      "before": [
+        149,
+        "20",
+        2368,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The named room, basement, attic, staircase or balcony is not universal for every house/building. Preserve the old row as rejected history and use restricted families where supported."
+    },
+    {
+      "id": 29419,
+      "before": [
+        149,
+        "20",
+        2369,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The named room, basement, attic, staircase or balcony is not universal for every house/building. Preserve the old row as rejected history and use restricted families where supported."
+    },
+    {
+      "id": 29420,
+      "before": [
+        149,
+        "20",
+        2376,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The named room, basement, attic, staircase or balcony is not universal for every house/building. Preserve the old row as rejected history and use restricted families where supported."
+    },
+    {
+      "id": 29421,
+      "before": [
+        149,
+        "20",
+        2375,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The named room, basement, attic, staircase or balcony is not universal for every house/building. Preserve the old row as rejected history and use restricted families where supported."
+    },
+    {
+      "id": 29383,
+      "before": [
+        2675,
+        "20",
+        1543,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The named room, basement, attic, staircase or balcony is not universal for every house/building. Preserve the old row as rejected history and use restricted families where supported."
+    },
+    {
+      "id": 29406,
+      "before": [
+        2675,
+        "20",
+        1549,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The named room, basement, attic, staircase or balcony is not universal for every house/building. Preserve the old row as rejected history and use restricted families where supported."
+    },
+    {
+      "id": 4327,
+      "before": [
+        2368,
+        "61",
+        2369,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "Bedroom and living-room functions can coexist in one room. The combined-use subtype is a counterexample to universal disjointness. OEWN 2025: oewn-02825199-n."
+    },
+    {
+      "id": 4328,
+      "before": [
+        2370,
+        "61",
+        2371,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "A bathroom can contain toilet facilities in the same room. The combined-use subtype is a counterexample to universal disjointness. OEWN 2025: oewn-02810916-n."
+    }
+  ],
+  "edges": [
+    {
+      "subject": 149,
+      "kod": "14",
+      "object": "dwelling",
+      "universum_id": 1,
+      "reason": "The selected residential building is also a dwelling; residential function does not make every dwelling a building. OEWN 2025: oewn-03549540-n."
+    },
+    {
+      "subject": 4697,
+      "kod": "14",
+      "object": "dwelling",
+      "universum_id": 1,
+      "reason": "Residential premises are a dwelling in the broad functional sense, without forcing the premises family beneath building."
+    },
+    {
+      "subject": "dwelling",
+      "kod": "21",
+      "object": 6401,
+      "universum_id": 1,
+      "reason": "The physical dwelling serves the selected residence purpose."
+    },
+    {
+      "subject": "house_with_balcony",
+      "kod": "14",
+      "object": "dwelling_with_balcony",
+      "universum_id": 1,
+      "reason": "Preserve the second reviewed classification without replacing the first genus."
+    },
+    {
+      "subject": "house_with_balcony",
+      "kod": "14",
+      "object": "building_with_balcony",
+      "universum_id": 1,
+      "reason": "Preserve the second reviewed classification without replacing the first genus."
+    },
+    {
+      "subject": "apartment_with_balcony",
+      "kod": "14",
+      "object": "dwelling_with_balcony",
+      "universum_id": 1,
+      "reason": "Preserve the second reviewed classification without replacing the first genus."
+    },
+    {
+      "subject": "houseboat",
+      "kod": "14",
+      "object": "dwelling",
+      "universum_id": 1,
+      "reason": "Preserve the second reviewed classification without replacing the first genus."
+    },
+    {
+      "subject": "residential_room",
+      "kod": "14",
+      "object": 4697,
+      "universum_id": 1,
+      "reason": "Preserve the second reviewed classification without replacing the first genus."
+    },
+    {
+      "subject": "kitchen_dining_room",
+      "kod": "14",
+      "object": "dining_room",
+      "universum_id": 1,
+      "reason": "Preserve the second reviewed classification without replacing the first genus."
+    },
+    {
+      "subject": "living_bedroom",
+      "kod": "14",
+      "object": 2369,
+      "universum_id": 1,
+      "reason": "Preserve the second reviewed classification without replacing the first genus."
+    },
+    {
+      "subject": "combined_bathroom",
+      "kod": "14",
+      "object": 2371,
+      "universum_id": 1,
+      "reason": "Preserve the second reviewed classification without replacing the first genus."
+    },
+    {
+      "subject": "house_with_stairs",
+      "kod": "14",
+      "object": "building_with_stairs",
+      "universum_id": 1,
+      "reason": "Preserve the second reviewed classification without replacing the first genus."
+    },
+    {
+      "subject": "apartment_building",
+      "kod": "20",
+      "object": 2366,
+      "universum_id": 1,
+      "reason": "The qualified whole has this component; do not reverse containment or turn it into a genus relation."
+    },
+    {
+      "subject": "house_with_basement",
+      "kod": "20",
+      "object": 2376,
+      "universum_id": 1,
+      "reason": "The qualified whole has this component; do not reverse containment or turn it into a genus relation."
+    },
+    {
+      "subject": "house_with_attic",
+      "kod": "20",
+      "object": 2375,
+      "universum_id": 1,
+      "reason": "The qualified whole has this component; do not reverse containment or turn it into a genus relation."
+    },
+    {
+      "subject": "dwelling_with_balcony",
+      "kod": "20",
+      "object": 1549,
+      "universum_id": 1,
+      "reason": "The qualified whole has this component; do not reverse containment or turn it into a genus relation."
+    },
+    {
+      "subject": "building_with_balcony",
+      "kod": "20",
+      "object": 1549,
+      "universum_id": 1,
+      "reason": "The qualified whole has this component; do not reverse containment or turn it into a genus relation."
+    },
+    {
+      "subject": "building_with_stairs",
+      "kod": "20",
+      "object": 1543,
+      "universum_id": 1,
+      "reason": "The qualified whole has this component; do not reverse containment or turn it into a genus relation."
+    },
+    {
+      "subject": "one_bedroom_apartment",
+      "kod": "20",
+      "object": 2368,
+      "universum_id": 1,
+      "reason": "The qualified whole has this component; do not reverse containment or turn it into a genus relation."
+    },
+    {
+      "subject": "stairwell",
+      "kod": "20",
+      "object": 1543,
+      "universum_id": 1,
+      "reason": "The qualified whole has this component; do not reverse containment or turn it into a genus relation."
+    },
+    {
+      "subject": "dining_room",
+      "kod": "21",
+      "object": 1845,
+      "universum_id": 1,
+      "reason": "The room is intended for eating; do not import the food-substance sense of Russian eda. OEWN 2025: oewn-03205385-n."
+    },
+    {
+      "subject": "laundry_room",
+      "kod": "21",
+      "object": 1778,
+      "universum_id": 1,
+      "reason": "The room is intended for washing laundry; this does not prescribe a material, appliance or cleaning procedure."
+    }
+  ],
+  "checks": [
+    {
+      "subject": "dwelling",
+      "kod": "14",
+      "object": 1,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 149,
+      "kod": "14",
+      "object": 32,
+      "present": false
+    },
+    {
+      "subject": 149,
+      "kod": "14",
+      "object": 2675,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 149,
+      "kod": "14",
+      "object": "dwelling",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 4697,
+      "kod": "14",
+      "object": "dwelling",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2366,
+      "kod": "14",
+      "object": 149,
+      "present": false
+    },
+    {
+      "subject": 2366,
+      "kod": "14",
+      "object": 4697,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2375,
+      "kod": "14",
+      "object": 149,
+      "present": false
+    },
+    {
+      "subject": 2375,
+      "kod": "14",
+      "object": 24411,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2376,
+      "kod": "14",
+      "object": 149,
+      "present": false
+    },
+    {
+      "subject": 2376,
+      "kod": "14",
+      "object": 24411,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 6401,
+      "kod": "14",
+      "object": 5017,
+      "present": false
+    },
+    {
+      "subject": 6401,
+      "kod": "14",
+      "object": 2633,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 4697,
+      "kod": "21",
+      "object": 1960,
+      "present": false
+    },
+    {
+      "subject": 4697,
+      "kod": "21",
+      "object": 6401,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "dwelling",
+      "kod": "21",
+      "object": 6401,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "apartment_building",
+      "kod": "14",
+      "object": 149,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "two_unit_house",
+      "kod": "14",
+      "object": "apartment_building",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "detached_house",
+      "kod": "14",
+      "object": 149,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "terraced_house",
+      "kod": "14",
+      "object": 149,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "semi_detached_house",
+      "kod": "14",
+      "object": 149,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "single_storey_house",
+      "kod": "14",
+      "object": 149,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "house_with_basement",
+      "kod": "14",
+      "object": 149,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "house_with_attic",
+      "kod": "14",
+      "object": 149,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "dwelling_with_balcony",
+      "kod": "14",
+      "object": "dwelling",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "building_with_balcony",
+      "kod": "14",
+      "object": 2675,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "house_with_balcony",
+      "kod": "14",
+      "object": 149,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "apartment_with_balcony",
+      "kod": "14",
+      "object": 2366,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "two_level_apartment",
+      "kod": "14",
+      "object": 2366,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "studio_apartment",
+      "kod": "14",
+      "object": 2366,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "one_bedroom_apartment",
+      "kod": "14",
+      "object": 2366,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "houseboat",
+      "kod": "14",
+      "object": 1557,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "residential_room",
+      "kod": "14",
+      "object": 154,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "dining_room",
+      "kod": "14",
+      "object": 154,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kitchen_dining_room",
+      "kod": "14",
+      "object": 2367,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "living_bedroom",
+      "kod": "14",
+      "object": 2368,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "combined_bathroom",
+      "kod": "14",
+      "object": 2370,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "guest_bedroom",
+      "kod": "14",
+      "object": 2368,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "laundry_room",
+      "kod": "14",
+      "object": 154,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "stairwell",
+      "kod": "14",
+      "object": 24411,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "stair_landing",
+      "kod": "14",
+      "object": 24411,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "building_with_stairs",
+      "kod": "14",
+      "object": 2675,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "house_with_stairs",
+      "kod": "14",
+      "object": 149,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "house_with_balcony",
+      "kod": "14",
+      "object": "dwelling_with_balcony",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "house_with_balcony",
+      "kod": "14",
+      "object": "building_with_balcony",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "apartment_with_balcony",
+      "kod": "14",
+      "object": "dwelling_with_balcony",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "houseboat",
+      "kod": "14",
+      "object": "dwelling",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "residential_room",
+      "kod": "14",
+      "object": 4697,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kitchen_dining_room",
+      "kod": "14",
+      "object": "dining_room",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "living_bedroom",
+      "kod": "14",
+      "object": 2369,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "combined_bathroom",
+      "kod": "14",
+      "object": 2371,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "house_with_stairs",
+      "kod": "14",
+      "object": "building_with_stairs",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 154,
+      "kod": "20",
+      "object": 2366,
+      "present": false
+    },
+    {
+      "subject": 2366,
+      "kod": "20",
+      "object": 154,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2366,
+      "kod": "20",
+      "object": 149,
+      "present": false
+    },
+    {
+      "subject": 1549,
+      "kod": "20",
+      "object": 2366,
+      "present": false
+    },
+    {
+      "subject": 1549,
+      "kod": "20",
+      "object": 149,
+      "present": false
+    },
+    {
+      "subject": 2375,
+      "kod": "20",
+      "object": 149,
+      "present": false
+    },
+    {
+      "subject": 2376,
+      "kod": "20",
+      "object": 149,
+      "present": false
+    },
+    {
+      "subject": 149,
+      "kod": "20",
+      "object": 2373,
+      "present": false
+    },
+    {
+      "subject": 149,
+      "kod": "20",
+      "object": 2368,
+      "present": false
+    },
+    {
+      "subject": 149,
+      "kod": "20",
+      "object": 2369,
+      "present": false
+    },
+    {
+      "subject": 149,
+      "kod": "20",
+      "object": 2376,
+      "present": false
+    },
+    {
+      "subject": 149,
+      "kod": "20",
+      "object": 2375,
+      "present": false
+    },
+    {
+      "subject": 2675,
+      "kod": "20",
+      "object": 1543,
+      "present": false
+    },
+    {
+      "subject": 2675,
+      "kod": "20",
+      "object": 1549,
+      "present": false
+    },
+    {
+      "subject": 2368,
+      "kod": "61",
+      "object": 2369,
+      "present": false
+    },
+    {
+      "subject": 2370,
+      "kod": "61",
+      "object": 2371,
+      "present": false
+    },
+    {
+      "subject": "apartment_building",
+      "kod": "20",
+      "object": 2366,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "house_with_basement",
+      "kod": "20",
+      "object": 2376,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "house_with_attic",
+      "kod": "20",
+      "object": 2375,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "dwelling_with_balcony",
+      "kod": "20",
+      "object": 1549,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "building_with_balcony",
+      "kod": "20",
+      "object": 1549,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "building_with_stairs",
+      "kod": "20",
+      "object": 1543,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "one_bedroom_apartment",
+      "kod": "20",
+      "object": 2368,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "stairwell",
+      "kod": "20",
+      "object": 1543,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "dining_room",
+      "kod": "21",
+      "object": 1845,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "laundry_room",
+      "kod": "21",
+      "object": 1778,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 149,
+      "kod": "20",
+      "object": 2366,
+      "present": false
+    },
+    {
+      "subject": 2366,
+      "kod": "20",
+      "object": 1549,
+      "present": false
+    },
+    {
+      "subject": 149,
+      "kod": "20",
+      "object": 2375,
+      "present": false
+    },
+    {
+      "subject": 149,
+      "kod": "20",
+      "object": 2376,
+      "present": false
+    },
+    {
+      "subject": 149,
+      "kod": "20",
+      "object": 2368,
+      "present": false
+    },
+    {
+      "subject": 149,
+      "kod": "20",
+      "object": 2369,
+      "present": false
+    },
+    {
+      "subject": 149,
+      "kod": "20",
+      "object": 2373,
+      "present": false
+    },
+    {
+      "subject": 2675,
+      "kod": "20",
+      "object": 1543,
+      "present": false
+    },
+    {
+      "subject": 2675,
+      "kod": "20",
+      "object": 1549,
+      "present": false
+    },
+    {
+      "subject": 4697,
+      "kod": "21",
+      "object": 1960,
+      "present": false
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "dwelling",
+      "ancestor": 1,
+      "present": true
+    },
+    {
+      "subject": "apartment_building",
+      "ancestor": 149,
+      "present": true
+    },
+    {
+      "subject": "two_unit_house",
+      "ancestor": "apartment_building",
+      "present": true
+    },
+    {
+      "subject": "detached_house",
+      "ancestor": 149,
+      "present": true
+    },
+    {
+      "subject": "terraced_house",
+      "ancestor": 149,
+      "present": true
+    },
+    {
+      "subject": "semi_detached_house",
+      "ancestor": 149,
+      "present": true
+    },
+    {
+      "subject": "single_storey_house",
+      "ancestor": 149,
+      "present": true
+    },
+    {
+      "subject": "house_with_basement",
+      "ancestor": 149,
+      "present": true
+    },
+    {
+      "subject": "house_with_attic",
+      "ancestor": 149,
+      "present": true
+    },
+    {
+      "subject": "dwelling_with_balcony",
+      "ancestor": "dwelling",
+      "present": true
+    },
+    {
+      "subject": "building_with_balcony",
+      "ancestor": 2675,
+      "present": true
+    },
+    {
+      "subject": "house_with_balcony",
+      "ancestor": 149,
+      "present": true
+    },
+    {
+      "subject": "apartment_with_balcony",
+      "ancestor": 2366,
+      "present": true
+    },
+    {
+      "subject": "two_level_apartment",
+      "ancestor": 2366,
+      "present": true
+    },
+    {
+      "subject": "studio_apartment",
+      "ancestor": 2366,
+      "present": true
+    },
+    {
+      "subject": "one_bedroom_apartment",
+      "ancestor": 2366,
+      "present": true
+    },
+    {
+      "subject": "houseboat",
+      "ancestor": 1557,
+      "present": true
+    },
+    {
+      "subject": "residential_room",
+      "ancestor": 154,
+      "present": true
+    },
+    {
+      "subject": "dining_room",
+      "ancestor": 154,
+      "present": true
+    },
+    {
+      "subject": "kitchen_dining_room",
+      "ancestor": 2367,
+      "present": true
+    },
+    {
+      "subject": "living_bedroom",
+      "ancestor": 2368,
+      "present": true
+    },
+    {
+      "subject": "combined_bathroom",
+      "ancestor": 2370,
+      "present": true
+    },
+    {
+      "subject": "guest_bedroom",
+      "ancestor": 2368,
+      "present": true
+    },
+    {
+      "subject": "laundry_room",
+      "ancestor": 154,
+      "present": true
+    },
+    {
+      "subject": "stairwell",
+      "ancestor": 24411,
+      "present": true
+    },
+    {
+      "subject": "stair_landing",
+      "ancestor": 24411,
+      "present": true
+    },
+    {
+      "subject": "building_with_stairs",
+      "ancestor": 2675,
+      "present": true
+    },
+    {
+      "subject": "house_with_stairs",
+      "ancestor": 149,
+      "present": true
+    },
+    {
+      "subject": 149,
+      "ancestor": 2675,
+      "present": true
+    },
+    {
+      "subject": 149,
+      "ancestor": 32,
+      "present": true
+    },
+    {
+      "subject": 149,
+      "ancestor": "dwelling",
+      "present": true
+    },
+    {
+      "subject": 4697,
+      "ancestor": 153,
+      "present": true
+    },
+    {
+      "subject": 4697,
+      "ancestor": "dwelling",
+      "present": true
+    },
+    {
+      "subject": 2366,
+      "ancestor": 153,
+      "present": true
+    },
+    {
+      "subject": 2366,
+      "ancestor": "dwelling",
+      "present": true
+    },
+    {
+      "subject": 2375,
+      "ancestor": 24411,
+      "present": true
+    },
+    {
+      "subject": 2376,
+      "ancestor": 24411,
+      "present": true
+    },
+    {
+      "subject": 6401,
+      "ancestor": 2633,
+      "present": true
+    },
+    {
+      "subject": "houseboat",
+      "ancestor": 1557,
+      "present": true
+    },
+    {
+      "subject": "houseboat",
+      "ancestor": "dwelling",
+      "present": true
+    },
+    {
+      "subject": "kitchen_dining_room",
+      "ancestor": "dining_room",
+      "present": true
+    },
+    {
+      "subject": "living_bedroom",
+      "ancestor": 2369,
+      "present": true
+    },
+    {
+      "subject": "combined_bathroom",
+      "ancestor": 2371,
+      "present": true
+    },
+    {
+      "subject": "house_with_balcony",
+      "ancestor": "building_with_balcony",
+      "present": true
+    },
+    {
+      "subject": "dwelling",
+      "ancestor": 2675,
+      "present": false
+    },
+    {
+      "subject": 2366,
+      "ancestor": 149,
+      "present": false
+    },
+    {
+      "subject": 2366,
+      "ancestor": 2675,
+      "present": false
+    },
+    {
+      "subject": 2375,
+      "ancestor": 149,
+      "present": false
+    },
+    {
+      "subject": 2376,
+      "ancestor": 149,
+      "present": false
+    },
+    {
+      "subject": 149,
+      "ancestor": 153,
+      "present": false
+    },
+    {
+      "subject": 6401,
+      "ancestor": 19,
+      "present": false
+    },
+    {
+      "subject": 6401,
+      "ancestor": 5017,
+      "present": false
+    },
+    {
+      "subject": "houseboat",
+      "ancestor": 2675,
+      "present": false
+    },
+    {
+      "subject": "houseboat",
+      "ancestor": 149,
+      "present": false
+    },
+    {
+      "subject": "two_level_apartment",
+      "ancestor": "two_unit_house",
+      "present": false
+    },
+    {
+      "subject": "two_unit_house",
+      "ancestor": 2366,
+      "present": false
+    },
+    {
+      "subject": "studio_apartment",
+      "ancestor": "one_bedroom_apartment",
+      "present": false
+    },
+    {
+      "subject": "stairwell",
+      "ancestor": 1543,
+      "present": false
+    },
+    {
+      "subject": "stair_landing",
+      "ancestor": 1543,
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": "dwelling",
+      "term": "жилище",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "dwelling",
+      "term": "dwelling",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "dwelling",
+      "term": "dwelling (residential place)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 149,
+      "term": "дом (жилое здание)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 149,
+      "term": "house (residential building)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 4697,
+      "term": "жилое помещение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 4697,
+      "term": "residential premises",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 4697,
+      "term": "living accommodation (premises)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2366,
+      "term": "apartment (dwelling unit)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2366,
+      "term": "flat (dwelling)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5118,
+      "term": "story (building level)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5118,
+      "term": "floor (building level)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1543,
+      "term": "staircase",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1543,
+      "term": "stairway",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 6401,
+      "term": "residence (living in a place)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 6401,
+      "term": "residing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 6401,
+      "term": "reside",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 6401,
+      "term": "to reside",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 6401,
+      "term": "проживать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 6401,
+      "term": "проживаание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 6401,
+      "term": "ПРОЖИВАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "apartment_building",
+      "term": "многоквартирный дом",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "apartment_building",
+      "term": "apartment building",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "apartment_building",
+      "term": "apartment house",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "two_unit_house",
+      "term": "двухквартирный дом",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "two_unit_house",
+      "term": "two-unit residential building",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "two_unit_house",
+      "term": "duplex (two-unit building)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "detached_house",
+      "term": "отдельно стоящий жилой дом",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "detached_house",
+      "term": "detached house",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "terraced_house",
+      "term": "жилой дом в ряду сблокированных домов",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "terraced_house",
+      "term": "terraced house",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "terraced_house",
+      "term": "row house",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "semi_detached_house",
+      "term": "жилой дом, соединённый с соседним с одной стороны",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "semi_detached_house",
+      "term": "semi-detached house",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "semi_detached_house",
+      "term": "semidetached house",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "single_storey_house",
+      "term": "одноэтажный жилой дом",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "single_storey_house",
+      "term": "single-storey house",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "single_storey_house",
+      "term": "single-story house",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "house_with_basement",
+      "term": "жилой дом с подвалом",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "house_with_basement",
+      "term": "house with a basement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "house_with_attic",
+      "term": "жилой дом с чердаком",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "house_with_attic",
+      "term": "house with an attic",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "dwelling_with_balcony",
+      "term": "жилище с балконом",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "dwelling_with_balcony",
+      "term": "dwelling with a balcony",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "building_with_balcony",
+      "term": "здание с балконом",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "building_with_balcony",
+      "term": "building with a balcony",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "house_with_balcony",
+      "term": "жилой дом с балконом",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "house_with_balcony",
+      "term": "house with a balcony",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "apartment_with_balcony",
+      "term": "квартира с балконом",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "apartment_with_balcony",
+      "term": "apartment with a balcony",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "two_level_apartment",
+      "term": "двухуровневая квартира",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "two_level_apartment",
+      "term": "two-level apartment",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "two_level_apartment",
+      "term": "duplex apartment",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "studio_apartment",
+      "term": "квартира-студия",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "studio_apartment",
+      "term": "studio apartment",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "studio_apartment",
+      "term": "studio flat",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "one_bedroom_apartment",
+      "term": "квартира с одной спальней",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "one_bedroom_apartment",
+      "term": "one-bedroom apartment",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "houseboat",
+      "term": "жилая лодка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "houseboat",
+      "term": "houseboat",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "houseboat",
+      "term": "лодка для проживания",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "residential_room",
+      "term": "жилая комната",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "residential_room",
+      "term": "residential room",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "dining_room",
+      "term": "столовая (комната)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "dining_room",
+      "term": "dining room",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "dining_room",
+      "term": "dining-room",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kitchen_dining_room",
+      "term": "кухня-столовая",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kitchen_dining_room",
+      "term": "combined kitchen and dining room",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "living_bedroom",
+      "term": "гостиная-спальня",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "living_bedroom",
+      "term": "combined living room and bedroom",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "combined_bathroom",
+      "term": "совмещённый санузел",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "combined_bathroom",
+      "term": "combined bathroom and toilet",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "guest_bedroom",
+      "term": "гостевая спальня",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "guest_bedroom",
+      "term": "guest bedroom",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "laundry_room",
+      "term": "комната для стирки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "laundry_room",
+      "term": "laundry room",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "stairwell",
+      "term": "лестничная клетка (пространство для лестницы)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "stairwell",
+      "term": "enclosed stairwell",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "stairwell",
+      "term": "stairwell (enclosed space)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "stair_landing",
+      "term": "лестничная площадка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "stair_landing",
+      "term": "stair landing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "building_with_stairs",
+      "term": "здание с лестницей",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "building_with_stairs",
+      "term": "building with a staircase",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "house_with_stairs",
+      "term": "жилой дом с лестницей",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "house_with_stairs",
+      "term": "house with a staircase",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "two_level_apartment",
+      "term": "duplex",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "two_unit_house",
+      "term": "duplex",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "single_storey_house",
+      "term": "cottage",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "single_storey_house",
+      "term": "bungalow",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

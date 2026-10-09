@@ -1,0 +1,3238 @@
+{
+  "source": "quality-20261009-q13",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Mathematical written forms, fraction and decimal representations, numerical ratios and percentages, equation/proportion notation, and calculation targets.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "fractions": "https://openstax.org/books/prealgebra-2e/pages/4-1-visualize-fractions",
+      "algebra": "https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra",
+      "rational_expressions": "https://openstax.org/books/intermediate-algebra-2e/pages/7-1-multiply-and-divide-rational-expressions",
+      "ratios": "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate",
+      "percent": "https://openstax.org/books/prealgebra-2e/pages/6-1-understand-percent",
+      "proportions": "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications",
+      "denominators": "https://openstax.org/books/prealgebra-2e/pages/4-5-add-and-subtract-fractions-with-different-denominators",
+      "decimal": "https://openstax.org/books/prealgebra-2e/pages/5-1-decimals",
+      "rational": "https://openstax.org/books/contemporary-mathematics/pages/3-4-rational-numbers",
+      "digits": "https://openstax.org/books/contemporary-mathematics/pages/4-1-hindu-arabic-positional-system",
+      "signed_fractions": "https://www.eecs.yorku.ca/course_archive/2014-15/F/1710/rw_pub/page0/files/1710f14_C13_2014_10_21.pptx.pdf"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet. CC BY 4.0 and the underlying Princeton notice are retained in docs/quality/2026-10-09-q11.md#sources-and-reuse. OpenStax sources are credited individually; the notation/value distinctions and graph mappings are adaptations.",
+    "existing_cohort": [
+      265,
+      428,
+      435,
+      436,
+      439,
+      1817,
+      2606,
+      2656,
+      2657,
+      2658,
+      2699,
+      2842,
+      2903,
+      3397,
+      3649,
+      4824,
+      5024,
+      24484,
+      24513
+    ],
+    "context_policy": "All new concepts and assertions use U1. Existing home contexts and U3 programming meanings are preserved. Information object 265 gains its established abstract-object genus in U1 as well as U3. U2 stays empty.",
+    "representation_policy": "Written expressions and numerals are information objects, distinct from the abstract numbers they denote. A fraction source synset classified by value is explicitly adapted to its written-form sense; numeral-to-number denotation is not encoded as is-a, container content, causal production or equality of class extensions.",
+    "sense_decisions": [
+      {
+        "concept": "math_notation",
+        "synset": "oewn-06821578-n",
+        "decision": "add",
+        "alignment": "representation adaptation",
+        "scope": "An individual written mathematical form; not the entire notational system or the physical ink. This is an explicit written-form adaptation of the dictionary notation-system sense."
+      },
+      {
+        "concept": "math_symbol",
+        "synset": "oewn-06819327-n",
+        "decision": "add",
+        "alignment": "subject-restricted symbol sense",
+        "scope": "A symbol used in mathematical notation. Its meaning is distinct from its printed glyph or a programming character."
+      },
+      {
+        "concept": "math_expression",
+        "synset": "oewn-06744551-n",
+        "decision": "add",
+        "alignment": "corrected representation sense",
+        "scope": "A written expression, including a numeral, variable symbol, or valid combination of operation symbols. It need not assert a proposition; do not copy the dictionary mathematical-statement genus."
+      },
+      {
+        "concept": "numerical_expression",
+        "synset": null,
+        "decision": "add",
+        "alignment": "subject-source extension",
+        "scope": "A mathematical expression using number representations and operation signs, with no free variable required. A formula and its evaluated number are distinct."
+      },
+      {
+        "concept": "numeral",
+        "synset": "oewn-06820056-n",
+        "decision": "add",
+        "alignment": "representation sense",
+        "scope": "A symbol or written form representing a number, not the number itself and not a grammatical numeral word."
+      },
+      {
+        "concept": "digit",
+        "synset": "oewn-13763162-n",
+        "decision": "add",
+        "alignment": "corrected symbol/value mapping",
+        "scope": "Select a numeral symbol used as an element of a numeration system, not its integer value, a finger or a length measure. The OEWN integer genus is not copied."
+      },
+      {
+        "concept": "decimal_digit",
+        "synset": "oewn-13763838-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "One of the ten decimal digit symbols. This does not assert that every digit in every numeral system is decimal."
+      },
+      {
+        "concept": "fraction_expression",
+        "synset": "oewn-13754218-n",
+        "decision": "add",
+        "alignment": "representation adaptation",
+        "scope": "A numerator-over-denominator expression, evaluated only where the denominator is nonzero. The general expression may have symbolic components; its value is separate."
+      },
+      {
+        "concept": "common_fraction",
+        "synset": "oewn-13754435-n",
+        "decision": "add",
+        "alignment": "representation adaptation",
+        "scope": "A fractional representation with integer numerator and nonzero integer denominator. Values such as 5/5 may be integers; do not equate the notation with non-integer values."
+      },
+      {
+        "concept": "proper_fraction",
+        "synset": "oewn-13758061-n",
+        "decision": "add",
+        "alignment": "signed-scope correction",
+        "scope": "A common fraction whose absolute value is less than one. For nonnegative fractions with positive denominator this is numerator < denominator."
+      },
+      {
+        "concept": "improper_fraction",
+        "synset": "oewn-13757940-n",
+        "decision": "add",
+        "alignment": "corrected boundary condition",
+        "scope": "A common fraction whose absolute value is at least one. Include equal numerator/denominator magnitudes, such as 5/5; OEWN omits this boundary."
+      },
+      {
+        "concept": "reduced_fraction",
+        "synset": null,
+        "decision": "add",
+        "alignment": "subject-source extension",
+        "scope": "A common fraction in lowest terms: numerator and denominator have no common positive integer factor greater than one. This is independent of being proper or improper."
+      },
+      {
+        "concept": "mixed_numeral",
+        "synset": null,
+        "decision": "add",
+        "alignment": "representation adaptation",
+        "scope": "A whole-number part written together with a proper fractional part. This is the written form, not a new number class; the sign of a negative mixed numeral applies to the whole magnitude."
+      },
+      {
+        "concept": "decimal_numeral",
+        "synset": "oewn-13606512-n",
+        "decision": "add",
+        "alignment": "representation adaptation",
+        "scope": "A positional base-ten representation. This selected form is distinct from the abstract real number and from the whole decimal notation system."
+      },
+      {
+        "concept": "terminating_decimal",
+        "synset": null,
+        "decision": "add",
+        "alignment": "representation adaptation",
+        "scope": "A finite decimal representation. The finite written form is distinct from another recurring representation of the same value."
+      },
+      {
+        "concept": "repeating_decimal",
+        "synset": "oewn-13758516-n",
+        "decision": "add",
+        "alignment": "corrected representation hierarchy",
+        "scope": "An infinite decimal representation whose digit sequence eventually repeats. Do not make it a child of the finite power-of-ten-denominator fraction gloss."
+      },
+      {
+        "concept": "numerator_expression",
+        "synset": "oewn-13755011-n",
+        "decision": "add",
+        "alignment": "generalized expression role",
+        "scope": "The expression above the fraction bar, representing the dividend. The general numerator can be an algebraic expression; do not classify every such expression as an integer."
+      },
+      {
+        "concept": "denominator_expression",
+        "synset": "oewn-13755206-n",
+        "decision": "add",
+        "alignment": "generalized expression role",
+        "scope": "The expression below the fraction bar, representing the divisor. Evaluation excludes values for which it is zero."
+      },
+      {
+        "concept": "common_denominator",
+        "synset": "oewn-13757616-n",
+        "decision": "add",
+        "alignment": "representation adaptation",
+        "scope": "A shared denominator representation for numerical fractions; the represented integer is a common multiple of the original denominators. Exclude the figurative common-attribute sense."
+      },
+      {
+        "concept": "least_common_denominator",
+        "synset": null,
+        "decision": "add",
+        "alignment": "representation adaptation",
+        "scope": "The shared denominator form representing the least positive common multiple of the numerical denominators. It is not the greatest common divisor."
+      },
+      {
+        "concept": "fraction_bar",
+        "synset": null,
+        "decision": "add",
+        "alignment": "subject-source extension",
+        "scope": "The division-separating mark in fraction notation, whether horizontal or an appropriate slanted fraction stroke. Do not import the filesystem slash meaning."
+      },
+      {
+        "concept": "percent_sign",
+        "synset": "oewn-06841249-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The percent mark in a written percentage, distinct from the numeric ratio and its per-hundred scaling."
+      },
+      {
+        "concept": "percent_notation",
+        "synset": null,
+        "decision": "add",
+        "alignment": "representation adaptation",
+        "scope": "A written percentage with its percent sign. It denotes a per-hundred ratio; the sign is part of the notation, not part of the abstract number."
+      },
+      {
+        "concept": "numeric_ratio",
+        "synset": "oewn-13841419-n",
+        "decision": "add",
+        "alignment": "restricted numerical sense",
+        "scope": "The quotient value comparing two numbers, with a nonzero second operand. This is the numerical result sense, not all quantitative relations and not ratio notation itself."
+      },
+      {
+        "concept": "part_whole_ratio",
+        "synset": "oewn-13837954-n",
+        "decision": "add",
+        "alignment": "restricted numerical sense",
+        "scope": "The quotient comparing a nonnegative part with its positive whole, within zero and one. Distinct from the existing part/share object 2903."
+      },
+      {
+        "concept": "percentage_ratio",
+        "synset": "oewn-13839738-n",
+        "decision": "add",
+        "alignment": "corrected numerical scope",
+        "scope": "A numerical ratio expressed per hundred. It may exceed 100 percent; do not classify all percentages as a bounded part-to-whole share."
+      },
+      {
+        "concept": "equation_notation",
+        "synset": "oewn-06682609-n",
+        "decision": "add",
+        "alignment": "written statement sense",
+        "scope": "A written equality joining two mathematical expressions. It can be true or false and is distinct from equality as a relation and from the act of equating."
+      },
+      {
+        "concept": "equation_unknown",
+        "synset": null,
+        "decision": "add",
+        "alignment": "subject-source extension",
+        "scope": "An equation in which values of an unknown are to be determined. The narrower Russian equation usage is recorded separately from a purely numerical equality."
+      },
+      {
+        "concept": "proportion_notation",
+        "synset": null,
+        "decision": "add",
+        "alignment": "subject-source extension",
+        "scope": "A mathematical equality of two ratios, distinct from a single part-to-whole quotient or harmonious shape."
+      },
+      {
+        "concept": "math_variable",
+        "synset": "oewn-07285985-n",
+        "decision": "add",
+        "alignment": "restricted symbol sense",
+        "scope": "A symbol standing for a varying or unspecified value in a mathematical expression. Preserve the separate U3 programming-variable object."
+      },
+      {
+        "concept": "math_constant",
+        "synset": "oewn-13606632-n",
+        "decision": "add",
+        "alignment": "restricted numerical sense",
+        "scope": "A number with a fixed value in the selected mathematical context, separate from a programming constant declaration."
+      },
+      {
+        "concept": "numeric_coefficient",
+        "synset": "oewn-13607325-n",
+        "decision": "add",
+        "alignment": "restricted numerical sense",
+        "scope": "The fixed numerical factor of a term, with the mathematical context held fixed. Symbolic coefficient functions are outside this selected numeric sense."
+      },
+      {
+        "concept": "dividend",
+        "synset": "oewn-13755093-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The number being divided. Exclude financial dividend and do not identify the value with a written numerator expression."
+      },
+      {
+        "concept": "divisor_operand",
+        "synset": "oewn-13755307-n",
+        "decision": "add",
+        "alignment": "operand sense",
+        "scope": "The numerical operand by which another number is divided. This selected sense does not require exact integer divisibility."
+      },
+      {
+        "concept": "expression_evaluation",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed mathematical process",
+        "scope": "Calculate the value of a mathematical expression where it is defined. This is a process, distinct from an abstract arithmetic function."
+      },
+      {
+        "concept": "ratio_calculation",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed mathematical process",
+        "scope": "Determine the numerical comparison quotient; no division-by-zero value is asserted."
+      },
+      {
+        "concept": "percentage_calculation",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed mathematical process",
+        "scope": "Determine a numerical ratio expressed per hundred, allowing values greater than one hundred percent."
+      },
+      {
+        "concept": "expression_transformation",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed mathematical process",
+        "scope": "A process changing the written mathematical form. General transformations need not preserve value unless their narrower definition says so."
+      },
+      {
+        "concept": "fraction_reduction",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed mathematical process",
+        "scope": "Divide numerator and denominator by a shared nonzero integer factor to obtain an equivalent fraction. Cancellation concerns factors, not arbitrary added terms."
+      },
+      {
+        "concept": "denominator_alignment",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed mathematical process",
+        "scope": "Rewrite numerical fractions with a shared denominator while preserving each represented value."
+      },
+      {
+        "concept": "fraction_evaluation",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed mathematical process",
+        "scope": "Evaluate a fraction expression only where its denominator is nonzero."
+      },
+      {
+        "concept": 428,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Retain the U3 language-construct sense; it is not merged into mathematical notation."
+      },
+      {
+        "concept": 435,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Keep the programming syntax role separate from a numeric division operand."
+      },
+      {
+        "concept": 436,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Keep the U3 programming object separate from a mathematical symbol."
+      },
+      {
+        "concept": 439,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Keep the programming declaration meaning separate from a fixed numerical value."
+      },
+      {
+        "concept": 2842,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Its existing speech/utterance ancestry selects verbal expression, not a mathematical expression."
+      },
+      {
+        "concept": 3397,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "The relation remains distinct from a written equation."
+      },
+      {
+        "concept": 3649,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing number obtained by division as the nearest numerical-ratio genus."
+      },
+      {
+        "concept": 2903,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing part/share object and keep it distinct from a numerical part-to-whole ratio."
+      },
+      {
+        "concept": 265,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse information object with an explicit U1 genus."
+      },
+      {
+        "concept": 1817,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse calculation as the action genus."
+      },
+      {
+        "concept": 2606,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse change for expression transformations."
+      },
+      {
+        "concept": 2656,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse sign without importing mathematical statements as speech acts."
+      },
+      {
+        "concept": 2657,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse symbol as the mathematical-symbol genus."
+      },
+      {
+        "concept": 2658,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Keep the general symbolic formula separate; mathematical/chemical subtypes remain for future review."
+      },
+      {
+        "concept": 2699,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the abstract number anchor; notation is not its subtype."
+      },
+      {
+        "concept": 24484,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse integer as the numerical operand domain in source review, without classifying numeral syntax as integer."
+      },
+      {
+        "concept": 24513,
+        "synset": null,
+        "decision": "reuse",
+        "alignment": "reviewed sense",
+        "scope": "Reuse rational number; fraction representations are not new distinct rational values."
+      },
+      {
+        "concept": 4824,
+        "synset": "oewn-00518464-a",
+        "decision": "defer",
+        "alignment": "reviewed sense",
+        "scope": "The adjective fractional and legacy number genus do not specify whether this is a property, non-integer value, or fraction representation. Preserve it pending a dedicated lexical decision; do not merge it into the new written fraction."
+      },
+      {
+        "concept": 5024,
+        "synset": "oewn-04750264-n",
+        "decision": "defer",
+        "alignment": "reviewed sense",
+        "scope": "Logical identity remains separate from equation notation and an algebraic identity valid for all admissible values."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-13758337-n",
+        "decision": "defer",
+        "alignment": "reviewed sense",
+        "scope": "The dictionary decimal-fraction gloss is restricted to a proper fraction with power-of-ten denominator, while its repeating-decimal child exceeds that definition. Use separate representation genera; do not import the conflicting hierarchy."
+      }
+    ],
+    "limits": "The old fractional record 4824 remains pending because the adjective and numeric genus do not identify a precise value sense. General formula 2658, speech expression 2842, logical identity 5024 and numeric/programming homonyms are not merged. No arithmetic engine, literal value records, conversion coefficients or equation solver is added. Nonzero denominators and equality cases are review constraints, not executable arithmetic predicates. No application test suites.",
+    "new_term_collisions": [
+      {
+        "key": "math_expression",
+        "term": "expression",
+        "lang": "en",
+        "existing": [
+          [
+            428,
+            "expression"
+          ],
+          [
+            2842,
+            "выражение"
+          ]
+        ]
+      },
+      {
+        "key": "part_whole_ratio",
+        "term": "доля",
+        "lang": "ru",
+        "existing": [
+          [
+            2903,
+            "доля"
+          ]
+        ]
+      },
+      {
+        "key": "math_variable",
+        "term": "variable",
+        "lang": "en",
+        "existing": [
+          [
+            436,
+            "variable"
+          ]
+        ]
+      },
+      {
+        "key": "math_variable",
+        "term": "переменная",
+        "lang": "ru",
+        "existing": [
+          [
+            436,
+            "variable"
+          ],
+          [
+            1179,
+            "Var"
+          ]
+        ]
+      }
+    ],
+    "collision_decisions": {
+      "math_expression": "Keep the mathematical written form distinct from programming 428 and verbal 2842.",
+      "math_variable": "Keep the mathematical symbol distinct from programming variable 436 and Var construct 1179.",
+      "part_whole_ratio": "Keep the numerical comparison distinct from share/part object 2903."
+    },
+    "previous_conditions": "All Q12 conditions remain required without exceptions. The retained Q11 conditions remain unchanged, with only the four direct genera already superseded in Q12.",
+    "refreshed_comparison": {
+      "baseline": "Q12",
+      "existing_concepts": 12595,
+      "existing_terms": 35406,
+      "synsets_with_exact_en_candidate": 15380,
+      "synsets_without_exact_en_candidate": 92139,
+      "existing_concepts_with_dictionary_candidate": 3994,
+      "existing_concepts_without_latin_en": 7299,
+      "caveat": "String candidates only. No exact English match does not establish a missing meaning."
+    }
+  },
+  "concepts": [
+    {
+      "key": "math_notation",
+      "name": "математическая запись",
+      "parent": 265,
+      "universum_id": 1,
+      "terms": [
+        [
+          "математическая запись",
+          "ru"
+        ],
+        [
+          "mathematical notation (written form)",
+          "en"
+        ],
+        [
+          "mathematical written form",
+          "en"
+        ]
+      ],
+      "reason": "An individual written mathematical form; not the entire notational system or the physical ink. This is an explicit written-form adaptation of the dictionary notation-system sense. OEWN 2025: oewn-06821578-n. Source: https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra"
+    },
+    {
+      "key": "math_symbol",
+      "name": "математический символ",
+      "parent": 2657,
+      "universum_id": 1,
+      "terms": [
+        [
+          "математический символ",
+          "ru"
+        ],
+        [
+          "mathematical symbol",
+          "en"
+        ]
+      ],
+      "reason": "A symbol used in mathematical notation. Its meaning is distinct from its printed glyph or a programming character. OEWN 2025: oewn-06819327-n. Source: https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra"
+    },
+    {
+      "key": "math_expression",
+      "name": "математическое выражение",
+      "parent": "math_notation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "математическое выражение",
+          "ru"
+        ],
+        [
+          "mathematical expression",
+          "en"
+        ],
+        [
+          "expression",
+          "en"
+        ]
+      ],
+      "reason": "A written expression, including a numeral, variable symbol, or valid combination of operation symbols. It need not assert a proposition; do not copy the dictionary mathematical-statement genus. OEWN 2025: oewn-06744551-n. Source: https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra"
+    },
+    {
+      "key": "numerical_expression",
+      "name": "числовое выражение",
+      "parent": "math_expression",
+      "universum_id": 1,
+      "terms": [
+        [
+          "числовое выражение",
+          "ru"
+        ],
+        [
+          "numerical expression",
+          "en"
+        ]
+      ],
+      "reason": "A mathematical expression using number representations and operation signs, with no free variable required. A formula and its evaluated number are distinct. Source: https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra"
+    },
+    {
+      "key": "numeral",
+      "name": "запись числа",
+      "parent": "numerical_expression",
+      "universum_id": 1,
+      "terms": [
+        [
+          "запись числа",
+          "ru"
+        ],
+        [
+          "numeral",
+          "en"
+        ],
+        [
+          "number representation",
+          "en"
+        ],
+        [
+          "числовая запись",
+          "ru"
+        ]
+      ],
+      "reason": "A symbol or written form representing a number, not the number itself and not a grammatical numeral word. OEWN 2025: oewn-06820056-n. Source: https://openstax.org/books/contemporary-mathematics/pages/4-1-hindu-arabic-positional-system"
+    },
+    {
+      "key": "digit",
+      "name": "цифра",
+      "parent": "numeral",
+      "universum_id": 1,
+      "terms": [
+        [
+          "цифра",
+          "ru"
+        ],
+        [
+          "digit",
+          "en"
+        ],
+        [
+          "digit symbol",
+          "en"
+        ]
+      ],
+      "reason": "Select a numeral symbol used as an element of a numeration system, not its integer value, a finger or a length measure. The OEWN integer genus is not copied. OEWN 2025: oewn-13763162-n. Source: https://openstax.org/books/contemporary-mathematics/pages/4-1-hindu-arabic-positional-system"
+    },
+    {
+      "key": "decimal_digit",
+      "name": "десятичная цифра",
+      "parent": "digit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "десятичная цифра",
+          "ru"
+        ],
+        [
+          "decimal digit",
+          "en"
+        ]
+      ],
+      "reason": "One of the ten decimal digit symbols. This does not assert that every digit in every numeral system is decimal. OEWN 2025: oewn-13763838-n. Source: https://openstax.org/books/contemporary-mathematics/pages/4-1-hindu-arabic-positional-system"
+    },
+    {
+      "key": "fraction_expression",
+      "name": "дробь (математическая запись)",
+      "parent": "math_expression",
+      "universum_id": 1,
+      "terms": [
+        [
+          "дробь (математическая запись)",
+          "ru"
+        ],
+        [
+          "fraction (written expression)",
+          "en"
+        ],
+        [
+          "fraction",
+          "en"
+        ],
+        [
+          "дробь",
+          "ru"
+        ],
+        [
+          "дробная запись",
+          "ru"
+        ]
+      ],
+      "reason": "A numerator-over-denominator expression, evaluated only where the denominator is nonzero. The general expression may have symbolic components; its value is separate. OEWN 2025: oewn-13754218-n. Source: https://openstax.org/books/intermediate-algebra-2e/pages/7-1-multiply-and-divide-rational-expressions"
+    },
+    {
+      "key": "common_fraction",
+      "name": "обыкновенная дробь",
+      "parent": "fraction_expression",
+      "universum_id": 1,
+      "terms": [
+        [
+          "обыкновенная дробь",
+          "ru"
+        ],
+        [
+          "common fraction",
+          "en"
+        ],
+        [
+          "simple fraction",
+          "en"
+        ]
+      ],
+      "reason": "A fractional representation with integer numerator and nonzero integer denominator. Values such as 5/5 may be integers; do not equate the notation with non-integer values. OEWN 2025: oewn-13754435-n. Source: https://openstax.org/books/prealgebra-2e/pages/4-1-visualize-fractions"
+    },
+    {
+      "key": "proper_fraction",
+      "name": "правильная дробь",
+      "parent": "common_fraction",
+      "universum_id": 1,
+      "terms": [
+        [
+          "правильная дробь",
+          "ru"
+        ],
+        [
+          "proper fraction",
+          "en"
+        ]
+      ],
+      "reason": "A common fraction whose absolute value is less than one. For nonnegative fractions with positive denominator this is numerator < denominator. OEWN 2025: oewn-13758061-n. Source: https://www.eecs.yorku.ca/course_archive/2014-15/F/1710/rw_pub/page0/files/1710f14_C13_2014_10_21.pptx.pdf"
+    },
+    {
+      "key": "improper_fraction",
+      "name": "неправильная дробь",
+      "parent": "common_fraction",
+      "universum_id": 1,
+      "terms": [
+        [
+          "неправильная дробь",
+          "ru"
+        ],
+        [
+          "improper fraction",
+          "en"
+        ]
+      ],
+      "reason": "A common fraction whose absolute value is at least one. Include equal numerator/denominator magnitudes, such as 5/5; OEWN omits this boundary. OEWN 2025: oewn-13757940-n. Source: https://www.eecs.yorku.ca/course_archive/2014-15/F/1710/rw_pub/page0/files/1710f14_C13_2014_10_21.pptx.pdf"
+    },
+    {
+      "key": "reduced_fraction",
+      "name": "несократимая дробь",
+      "parent": "common_fraction",
+      "universum_id": 1,
+      "terms": [
+        [
+          "несократимая дробь",
+          "ru"
+        ],
+        [
+          "irreducible fraction",
+          "en"
+        ],
+        [
+          "reduced fraction",
+          "en"
+        ],
+        [
+          "fraction in lowest terms",
+          "en"
+        ]
+      ],
+      "reason": "A common fraction in lowest terms: numerator and denominator have no common positive integer factor greater than one. This is independent of being proper or improper. Source: https://openstax.org/books/intermediate-algebra-2e/pages/7-1-multiply-and-divide-rational-expressions"
+    },
+    {
+      "key": "mixed_numeral",
+      "name": "смешанная запись числа",
+      "parent": "numeral",
+      "universum_id": 1,
+      "terms": [
+        [
+          "смешанная запись числа",
+          "ru"
+        ],
+        [
+          "mixed number notation",
+          "en"
+        ],
+        [
+          "mixed number",
+          "en"
+        ],
+        [
+          "смешанное число",
+          "ru"
+        ]
+      ],
+      "reason": "A whole-number part written together with a proper fractional part. This is the written form, not a new number class; the sign of a negative mixed numeral applies to the whole magnitude. Source: https://openstax.org/books/prealgebra-2e/pages/4-1-visualize-fractions"
+    },
+    {
+      "key": "decimal_numeral",
+      "name": "десятичная запись числа",
+      "parent": "numeral",
+      "universum_id": 1,
+      "terms": [
+        [
+          "десятичная запись числа",
+          "ru"
+        ],
+        [
+          "decimal representation",
+          "en"
+        ],
+        [
+          "decimal numeral",
+          "en"
+        ]
+      ],
+      "reason": "A positional base-ten representation. This selected form is distinct from the abstract real number and from the whole decimal notation system. OEWN 2025: oewn-13606512-n. Source: https://openstax.org/books/prealgebra-2e/pages/5-1-decimals"
+    },
+    {
+      "key": "terminating_decimal",
+      "name": "конечная десятичная дробь (запись)",
+      "parent": "decimal_numeral",
+      "universum_id": 1,
+      "terms": [
+        [
+          "конечная десятичная дробь (запись)",
+          "ru"
+        ],
+        [
+          "terminating decimal",
+          "en"
+        ],
+        [
+          "конечная десятичная дробь",
+          "ru"
+        ]
+      ],
+      "reason": "A finite decimal representation. The finite written form is distinct from another recurring representation of the same value. Source: https://openstax.org/books/contemporary-mathematics/pages/3-4-rational-numbers"
+    },
+    {
+      "key": "repeating_decimal",
+      "name": "периодическая десятичная дробь (запись)",
+      "parent": "decimal_numeral",
+      "universum_id": 1,
+      "terms": [
+        [
+          "периодическая десятичная дробь (запись)",
+          "ru"
+        ],
+        [
+          "repeating decimal",
+          "en"
+        ],
+        [
+          "recurring decimal",
+          "en"
+        ],
+        [
+          "периодическая десятичная дробь",
+          "ru"
+        ]
+      ],
+      "reason": "An infinite decimal representation whose digit sequence eventually repeats. Do not make it a child of the finite power-of-ten-denominator fraction gloss. OEWN 2025: oewn-13758516-n. Source: https://openstax.org/books/contemporary-mathematics/pages/3-4-rational-numbers"
+    },
+    {
+      "key": "numerator_expression",
+      "name": "числитель дроби (выражение)",
+      "parent": "math_expression",
+      "universum_id": 1,
+      "terms": [
+        [
+          "числитель дроби (выражение)",
+          "ru"
+        ],
+        [
+          "numerator (expression)",
+          "en"
+        ],
+        [
+          "numerator",
+          "en"
+        ],
+        [
+          "числитель",
+          "ru"
+        ]
+      ],
+      "reason": "The expression above the fraction bar, representing the dividend. The general numerator can be an algebraic expression; do not classify every such expression as an integer. OEWN 2025: oewn-13755011-n. Source: https://openstax.org/books/intermediate-algebra-2e/pages/7-1-multiply-and-divide-rational-expressions"
+    },
+    {
+      "key": "denominator_expression",
+      "name": "знаменатель дроби (выражение)",
+      "parent": "math_expression",
+      "universum_id": 1,
+      "terms": [
+        [
+          "знаменатель дроби (выражение)",
+          "ru"
+        ],
+        [
+          "denominator (expression)",
+          "en"
+        ],
+        [
+          "denominator",
+          "en"
+        ],
+        [
+          "знаменатель",
+          "ru"
+        ]
+      ],
+      "reason": "The expression below the fraction bar, representing the divisor. Evaluation excludes values for which it is zero. OEWN 2025: oewn-13755206-n. Source: https://openstax.org/books/intermediate-algebra-2e/pages/7-1-multiply-and-divide-rational-expressions"
+    },
+    {
+      "key": "common_denominator",
+      "name": "общий знаменатель (запись)",
+      "parent": "denominator_expression",
+      "universum_id": 1,
+      "terms": [
+        [
+          "общий знаменатель (запись)",
+          "ru"
+        ],
+        [
+          "common denominator (written form)",
+          "en"
+        ],
+        [
+          "common denominator",
+          "en"
+        ],
+        [
+          "общий знаменатель",
+          "ru"
+        ]
+      ],
+      "reason": "A shared denominator representation for numerical fractions; the represented integer is a common multiple of the original denominators. Exclude the figurative common-attribute sense. OEWN 2025: oewn-13757616-n. Source: https://openstax.org/books/prealgebra-2e/pages/4-5-add-and-subtract-fractions-with-different-denominators"
+    },
+    {
+      "key": "least_common_denominator",
+      "name": "наименьший общий знаменатель (запись)",
+      "parent": "common_denominator",
+      "universum_id": 1,
+      "terms": [
+        [
+          "наименьший общий знаменатель (запись)",
+          "ru"
+        ],
+        [
+          "least common denominator",
+          "en"
+        ],
+        [
+          "LCD",
+          "en"
+        ],
+        [
+          "наименьший общий знаменатель",
+          "ru"
+        ]
+      ],
+      "reason": "The shared denominator form representing the least positive common multiple of the numerical denominators. It is not the greatest common divisor. Source: https://openstax.org/books/prealgebra-2e/pages/4-5-add-and-subtract-fractions-with-different-denominators"
+    },
+    {
+      "key": "fraction_bar",
+      "name": "дробная черта",
+      "parent": "math_symbol",
+      "universum_id": 1,
+      "terms": [
+        [
+          "дробная черта",
+          "ru"
+        ],
+        [
+          "fraction bar",
+          "en"
+        ],
+        [
+          "fraction line",
+          "en"
+        ]
+      ],
+      "reason": "The division-separating mark in fraction notation, whether horizontal or an appropriate slanted fraction stroke. Do not import the filesystem slash meaning. Source: https://openstax.org/books/prealgebra-2e/pages/4-1-visualize-fractions"
+    },
+    {
+      "key": "percent_sign",
+      "name": "знак процента",
+      "parent": "math_symbol",
+      "universum_id": 1,
+      "terms": [
+        [
+          "знак процента",
+          "ru"
+        ],
+        [
+          "percent sign",
+          "en"
+        ],
+        [
+          "percentage sign",
+          "en"
+        ],
+        [
+          "%",
+          "en"
+        ],
+        [
+          "%",
+          "ru"
+        ]
+      ],
+      "reason": "The percent mark in a written percentage, distinct from the numeric ratio and its per-hundred scaling. OEWN 2025: oewn-06841249-n. Source: https://openstax.org/books/prealgebra-2e/pages/6-1-understand-percent"
+    },
+    {
+      "key": "percent_notation",
+      "name": "процентная запись",
+      "parent": "numeral",
+      "universum_id": 1,
+      "terms": [
+        [
+          "процентная запись",
+          "ru"
+        ],
+        [
+          "percentage notation",
+          "en"
+        ],
+        [
+          "percent notation",
+          "en"
+        ]
+      ],
+      "reason": "A written percentage with its percent sign. It denotes a per-hundred ratio; the sign is part of the notation, not part of the abstract number. Source: https://openstax.org/books/prealgebra-2e/pages/6-1-understand-percent"
+    },
+    {
+      "key": "numeric_ratio",
+      "name": "отношение чисел",
+      "parent": 3649,
+      "universum_id": 1,
+      "terms": [
+        [
+          "отношение чисел",
+          "ru"
+        ],
+        [
+          "numerical ratio",
+          "en"
+        ],
+        [
+          "ratio",
+          "en"
+        ],
+        [
+          "числовое отношение",
+          "ru"
+        ]
+      ],
+      "reason": "The quotient value comparing two numbers, with a nonzero second operand. This is the numerical result sense, not all quantitative relations and not ratio notation itself. OEWN 2025: oewn-13841419-n. Source: https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate"
+    },
+    {
+      "key": "part_whole_ratio",
+      "name": "доля (отношение части к целому)",
+      "parent": "numeric_ratio",
+      "universum_id": 1,
+      "terms": [
+        [
+          "доля (отношение части к целому)",
+          "ru"
+        ],
+        [
+          "part-to-whole ratio",
+          "en"
+        ],
+        [
+          "доля",
+          "ru"
+        ]
+      ],
+      "reason": "The quotient comparing a nonnegative part with its positive whole, within zero and one. Distinct from the existing part/share object 2903. OEWN 2025: oewn-13837954-n. Source: https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate"
+    },
+    {
+      "key": "percentage_ratio",
+      "name": "процентное отношение",
+      "parent": "numeric_ratio",
+      "universum_id": 1,
+      "terms": [
+        [
+          "процентное отношение",
+          "ru"
+        ],
+        [
+          "percentage",
+          "en"
+        ],
+        [
+          "percent",
+          "en"
+        ],
+        [
+          "процент",
+          "ru"
+        ]
+      ],
+      "reason": "A numerical ratio expressed per hundred. It may exceed 100 percent; do not classify all percentages as a bounded part-to-whole share. OEWN 2025: oewn-13839738-n. Source: https://openstax.org/books/prealgebra-2e/pages/6-1-understand-percent"
+    },
+    {
+      "key": "equation_notation",
+      "name": "равенство (математическая запись)",
+      "parent": "math_notation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "равенство (математическая запись)",
+          "ru"
+        ],
+        [
+          "mathematical equation",
+          "en"
+        ],
+        [
+          "equation",
+          "en"
+        ],
+        [
+          "математическое равенство",
+          "ru"
+        ]
+      ],
+      "reason": "A written equality joining two mathematical expressions. It can be true or false and is distinct from equality as a relation and from the act of equating. OEWN 2025: oewn-06682609-n. Source: https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra"
+    },
+    {
+      "key": "equation_unknown",
+      "name": "уравнение с неизвестным",
+      "parent": "equation_notation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "уравнение с неизвестным",
+          "ru"
+        ],
+        [
+          "equation with an unknown",
+          "en"
+        ],
+        [
+          "уравнение",
+          "ru"
+        ]
+      ],
+      "reason": "An equation in which values of an unknown are to be determined. The narrower Russian equation usage is recorded separately from a purely numerical equality. Source: https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra"
+    },
+    {
+      "key": "proportion_notation",
+      "name": "пропорция (равенство отношений)",
+      "parent": "equation_notation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "пропорция (равенство отношений)",
+          "ru"
+        ],
+        [
+          "proportion (equality of ratios)",
+          "en"
+        ],
+        [
+          "proportion",
+          "en"
+        ],
+        [
+          "пропорция",
+          "ru"
+        ]
+      ],
+      "reason": "A mathematical equality of two ratios, distinct from a single part-to-whole quotient or harmonious shape. Source: https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications"
+    },
+    {
+      "key": "math_variable",
+      "name": "переменная (математический символ)",
+      "parent": "math_symbol",
+      "universum_id": 1,
+      "terms": [
+        [
+          "переменная (математический символ)",
+          "ru"
+        ],
+        [
+          "mathematical variable (symbol)",
+          "en"
+        ],
+        [
+          "variable",
+          "en"
+        ],
+        [
+          "переменная",
+          "ru"
+        ]
+      ],
+      "reason": "A symbol standing for a varying or unspecified value in a mathematical expression. Preserve the separate U3 programming-variable object. OEWN 2025: oewn-07285985-n. Source: https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra"
+    },
+    {
+      "key": "math_constant",
+      "name": "математическая константа (число)",
+      "parent": 2699,
+      "universum_id": 1,
+      "terms": [
+        [
+          "математическая константа (число)",
+          "ru"
+        ],
+        [
+          "mathematical constant",
+          "en"
+        ],
+        [
+          "numerical constant",
+          "en"
+        ]
+      ],
+      "reason": "A number with a fixed value in the selected mathematical context, separate from a programming constant declaration. OEWN 2025: oewn-13606632-n. Source: https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra"
+    },
+    {
+      "key": "numeric_coefficient",
+      "name": "числовой коэффициент",
+      "parent": "math_constant",
+      "universum_id": 1,
+      "terms": [
+        [
+          "числовой коэффициент",
+          "ru"
+        ],
+        [
+          "numerical coefficient",
+          "en"
+        ],
+        [
+          "coefficient",
+          "en"
+        ]
+      ],
+      "reason": "The fixed numerical factor of a term, with the mathematical context held fixed. Symbolic coefficient functions are outside this selected numeric sense. OEWN 2025: oewn-13607325-n. Source: https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra"
+    },
+    {
+      "key": "dividend",
+      "name": "делимое",
+      "parent": 2699,
+      "universum_id": 1,
+      "terms": [
+        [
+          "делимое",
+          "ru"
+        ],
+        [
+          "dividend (arithmetic)",
+          "en"
+        ],
+        [
+          "dividend",
+          "en"
+        ]
+      ],
+      "reason": "The number being divided. Exclude financial dividend and do not identify the value with a written numerator expression. OEWN 2025: oewn-13755093-n. Source: https://openstax.org/books/prealgebra-2e/pages/4-1-visualize-fractions"
+    },
+    {
+      "key": "divisor_operand",
+      "name": "делитель (операнд деления)",
+      "parent": 2699,
+      "universum_id": 1,
+      "terms": [
+        [
+          "делитель (операнд деления)",
+          "ru"
+        ],
+        [
+          "divisor (division operand)",
+          "en"
+        ],
+        [
+          "divisor",
+          "en"
+        ],
+        [
+          "делитель",
+          "ru"
+        ]
+      ],
+      "reason": "The numerical operand by which another number is divided. This selected sense does not require exact integer divisibility. OEWN 2025: oewn-13755307-n. Source: https://openstax.org/books/prealgebra-2e/pages/4-1-visualize-fractions"
+    },
+    {
+      "key": "expression_evaluation",
+      "name": "вычисление значения выражения",
+      "parent": 1817,
+      "universum_id": 1,
+      "terms": [
+        [
+          "вычисление значения выражения",
+          "ru"
+        ],
+        [
+          "expression evaluation",
+          "en"
+        ]
+      ],
+      "reason": "Calculate the value of a mathematical expression where it is defined. This is a process, distinct from an abstract arithmetic function. Source: https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra"
+    },
+    {
+      "key": "ratio_calculation",
+      "name": "вычисление отношения чисел",
+      "parent": 1817,
+      "universum_id": 1,
+      "terms": [
+        [
+          "вычисление отношения чисел",
+          "ru"
+        ],
+        [
+          "ratio calculation",
+          "en"
+        ]
+      ],
+      "reason": "Determine the numerical comparison quotient; no division-by-zero value is asserted. Source: https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate"
+    },
+    {
+      "key": "percentage_calculation",
+      "name": "вычисление процентного отношения",
+      "parent": "ratio_calculation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "вычисление процентного отношения",
+          "ru"
+        ],
+        [
+          "percentage calculation",
+          "en"
+        ]
+      ],
+      "reason": "Determine a numerical ratio expressed per hundred, allowing values greater than one hundred percent. Source: https://openstax.org/books/prealgebra-2e/pages/6-1-understand-percent"
+    },
+    {
+      "key": "expression_transformation",
+      "name": "преобразование математического выражения",
+      "parent": 2606,
+      "universum_id": 1,
+      "terms": [
+        [
+          "преобразование математического выражения",
+          "ru"
+        ],
+        [
+          "mathematical expression transformation",
+          "en"
+        ]
+      ],
+      "reason": "A process changing the written mathematical form. General transformations need not preserve value unless their narrower definition says so. Source: https://openstax.org/books/intermediate-algebra-2e/pages/7-1-multiply-and-divide-rational-expressions"
+    },
+    {
+      "key": "fraction_reduction",
+      "name": "сокращение дроби",
+      "parent": "expression_transformation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "сокращение дроби",
+          "ru"
+        ],
+        [
+          "fraction reduction",
+          "en"
+        ]
+      ],
+      "reason": "Divide numerator and denominator by a shared nonzero integer factor to obtain an equivalent fraction. Cancellation concerns factors, not arbitrary added terms. Source: https://openstax.org/books/intermediate-algebra-2e/pages/7-1-multiply-and-divide-rational-expressions"
+    },
+    {
+      "key": "denominator_alignment",
+      "name": "приведение дробей к общему знаменателю",
+      "parent": "expression_transformation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "приведение дробей к общему знаменателю",
+          "ru"
+        ],
+        [
+          "conversion to a common denominator",
+          "en"
+        ]
+      ],
+      "reason": "Rewrite numerical fractions with a shared denominator while preserving each represented value. Source: https://openstax.org/books/prealgebra-2e/pages/4-5-add-and-subtract-fractions-with-different-denominators"
+    },
+    {
+      "key": "fraction_evaluation",
+      "name": "вычисление значения дроби",
+      "parent": "expression_evaluation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "вычисление значения дроби",
+          "ru"
+        ],
+        [
+          "fraction evaluation",
+          "en"
+        ]
+      ],
+      "reason": "Evaluate a fraction expression only where its denominator is nonzero. Source: https://openstax.org/books/intermediate-algebra-2e/pages/7-1-multiply-and-divide-rational-expressions"
+    }
+  ],
+  "renames": [],
+  "terms": [
+    {
+      "id": 428,
+      "name": "expression",
+      "terms": [
+        [
+          "programming expression",
+          "en"
+        ]
+      ],
+      "reason": "Retain the U3 language-construct sense; it is not merged into mathematical notation."
+    },
+    {
+      "id": 435,
+      "name": "operand",
+      "terms": [
+        [
+          "programming operand",
+          "en"
+        ]
+      ],
+      "reason": "Keep the programming syntax role separate from a numeric division operand."
+    },
+    {
+      "id": 436,
+      "name": "variable",
+      "terms": [
+        [
+          "programming variable",
+          "en"
+        ]
+      ],
+      "reason": "Keep the U3 programming object separate from a mathematical symbol."
+    },
+    {
+      "id": 439,
+      "name": "constant",
+      "terms": [
+        [
+          "programming constant",
+          "en"
+        ]
+      ],
+      "reason": "Keep the programming declaration meaning separate from a fixed numerical value."
+    },
+    {
+      "id": 2842,
+      "name": "выражение",
+      "terms": [
+        [
+          "verbal expression",
+          "en"
+        ]
+      ],
+      "reason": "Its existing speech/utterance ancestry selects verbal expression, not a mathematical expression."
+    },
+    {
+      "id": 3397,
+      "name": "равенство",
+      "terms": [
+        [
+          "equality (relation)",
+          "en"
+        ]
+      ],
+      "reason": "The relation remains distinct from a written equation."
+    },
+    {
+      "id": 3649,
+      "name": "частное",
+      "terms": [
+        [
+          "division quotient",
+          "en"
+        ]
+      ],
+      "reason": "Reuse the existing number obtained by division as the nearest numerical-ratio genus."
+    },
+    {
+      "id": 2903,
+      "name": "доля",
+      "terms": [
+        [
+          "share (part)",
+          "en"
+        ]
+      ],
+      "reason": "Reuse the existing part/share object and keep it distinct from a numerical part-to-whole ratio."
+    }
+  ],
+  "remove_terms": [],
+  "leaf_merges": [],
+  "initial_edges": [
+    {
+      "subject": 265,
+      "kod": "14",
+      "object": 24470,
+      "universum_id": 1,
+      "reason": "The information-object meaning already has this U3 genus. Add its U1 context before connecting mathematical written forms."
+    }
+  ],
+  "repairs": [],
+  "edges": [
+    {
+      "subject": "math_symbol",
+      "kod": "14",
+      "object": "math_notation",
+      "universum_id": 1,
+      "reason": "A mathematical symbol is also an elementary written mathematical form. Source: https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra"
+    },
+    {
+      "subject": "common_fraction",
+      "kod": "14",
+      "object": "numeral",
+      "universum_id": 1,
+      "reason": "An ordinary numerical fraction is also a representation of a number. Source: https://openstax.org/books/prealgebra-2e/pages/4-1-visualize-fractions"
+    },
+    {
+      "subject": "fraction_expression",
+      "kod": "20",
+      "object": "numerator_expression",
+      "universum_id": 1,
+      "reason": "A fraction expression has this notation component; this is not a component decomposition of an abstract number. Source: https://openstax.org/books/intermediate-algebra-2e/pages/7-1-multiply-and-divide-rational-expressions"
+    },
+    {
+      "subject": "fraction_expression",
+      "kod": "20",
+      "object": "denominator_expression",
+      "universum_id": 1,
+      "reason": "A fraction expression has this notation component; this is not a component decomposition of an abstract number. Source: https://openstax.org/books/intermediate-algebra-2e/pages/7-1-multiply-and-divide-rational-expressions"
+    },
+    {
+      "subject": "fraction_expression",
+      "kod": "20",
+      "object": "fraction_bar",
+      "universum_id": 1,
+      "reason": "A fraction expression has this notation component; this is not a component decomposition of an abstract number. Source: https://openstax.org/books/intermediate-algebra-2e/pages/7-1-multiply-and-divide-rational-expressions"
+    },
+    {
+      "subject": "percent_notation",
+      "kod": "20",
+      "object": "percent_sign",
+      "universum_id": 1,
+      "reason": "A written percentage has a percent sign. Source: https://openstax.org/books/prealgebra-2e/pages/6-1-understand-percent"
+    },
+    {
+      "subject": "mixed_numeral",
+      "kod": "20",
+      "object": "proper_fraction",
+      "universum_id": 1,
+      "reason": "The mixed representation includes a proper fractional part; no multiplicity or literal numerator value is asserted. Source: https://openstax.org/books/prealgebra-2e/pages/4-1-visualize-fractions"
+    },
+    {
+      "subject": "equation_notation",
+      "kod": "20",
+      "object": "math_expression",
+      "universum_id": 1,
+      "reason": "The equality statement has expressions as components; no count is encoded by this relation. Source: https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra"
+    },
+    {
+      "subject": "math_variable",
+      "kod": "14",
+      "object": "math_expression",
+      "universum_id": 1,
+      "reason": "A mathematical variable symbol can itself be an expression. Source: https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra"
+    },
+    {
+      "subject": "expression_evaluation",
+      "kod": "27",
+      "object": "math_expression",
+      "universum_id": 1,
+      "reason": "This is the selected object of the mathematical process, distinct from its performer or result. Source: https://openstax.org/books/prealgebra-2e/pages/2-1-use-the-language-of-algebra"
+    },
+    {
+      "subject": "ratio_calculation",
+      "kod": "27",
+      "object": "numeric_ratio",
+      "universum_id": 1,
+      "reason": "This is the selected object of the mathematical process, distinct from its performer or result. Source: https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate"
+    },
+    {
+      "subject": "percentage_calculation",
+      "kod": "27",
+      "object": "percentage_ratio",
+      "universum_id": 1,
+      "reason": "This is the selected object of the mathematical process, distinct from its performer or result. Source: https://openstax.org/books/prealgebra-2e/pages/6-1-understand-percent"
+    },
+    {
+      "subject": "expression_transformation",
+      "kod": "27",
+      "object": "math_expression",
+      "universum_id": 1,
+      "reason": "This is the selected object of the mathematical process, distinct from its performer or result. Source: https://openstax.org/books/intermediate-algebra-2e/pages/7-1-multiply-and-divide-rational-expressions"
+    },
+    {
+      "subject": "fraction_reduction",
+      "kod": "27",
+      "object": "common_fraction",
+      "universum_id": 1,
+      "reason": "This is the selected object of the mathematical process, distinct from its performer or result. Source: https://openstax.org/books/intermediate-algebra-2e/pages/7-1-multiply-and-divide-rational-expressions"
+    },
+    {
+      "subject": "denominator_alignment",
+      "kod": "27",
+      "object": "common_fraction",
+      "universum_id": 1,
+      "reason": "This is the selected object of the mathematical process, distinct from its performer or result. Source: https://openstax.org/books/prealgebra-2e/pages/4-5-add-and-subtract-fractions-with-different-denominators"
+    },
+    {
+      "subject": "fraction_evaluation",
+      "kod": "27",
+      "object": "fraction_expression",
+      "universum_id": 1,
+      "reason": "This is the selected object of the mathematical process, distinct from its performer or result. Source: https://openstax.org/books/intermediate-algebra-2e/pages/7-1-multiply-and-divide-rational-expressions"
+    }
+  ],
+  "checks": [
+    {
+      "subject": 265,
+      "kod": "14",
+      "object": 24470,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "math_notation",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "math_symbol",
+      "kod": "14",
+      "object": 2657,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "math_symbol",
+      "kod": "14",
+      "object": "math_notation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "math_expression",
+      "kod": "14",
+      "object": "math_notation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "numerical_expression",
+      "kod": "14",
+      "object": "math_expression",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "numeral",
+      "kod": "14",
+      "object": "numerical_expression",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "digit",
+      "kod": "14",
+      "object": "numeral",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "decimal_digit",
+      "kod": "14",
+      "object": "digit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fraction_expression",
+      "kod": "14",
+      "object": "math_expression",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "common_fraction",
+      "kod": "14",
+      "object": "fraction_expression",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "common_fraction",
+      "kod": "14",
+      "object": "numeral",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "proper_fraction",
+      "kod": "14",
+      "object": "common_fraction",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "improper_fraction",
+      "kod": "14",
+      "object": "common_fraction",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "reduced_fraction",
+      "kod": "14",
+      "object": "common_fraction",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mixed_numeral",
+      "kod": "14",
+      "object": "numeral",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "decimal_numeral",
+      "kod": "14",
+      "object": "numeral",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "terminating_decimal",
+      "kod": "14",
+      "object": "decimal_numeral",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "repeating_decimal",
+      "kod": "14",
+      "object": "decimal_numeral",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "numerator_expression",
+      "kod": "14",
+      "object": "math_expression",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "denominator_expression",
+      "kod": "14",
+      "object": "math_expression",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "common_denominator",
+      "kod": "14",
+      "object": "denominator_expression",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "least_common_denominator",
+      "kod": "14",
+      "object": "common_denominator",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fraction_bar",
+      "kod": "14",
+      "object": "math_symbol",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "percent_sign",
+      "kod": "14",
+      "object": "math_symbol",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "percent_notation",
+      "kod": "14",
+      "object": "numeral",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fraction_expression",
+      "kod": "20",
+      "object": "numerator_expression",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fraction_expression",
+      "kod": "20",
+      "object": "denominator_expression",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fraction_expression",
+      "kod": "20",
+      "object": "fraction_bar",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "percent_notation",
+      "kod": "20",
+      "object": "percent_sign",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mixed_numeral",
+      "kod": "20",
+      "object": "proper_fraction",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "numeric_ratio",
+      "kod": "14",
+      "object": 3649,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "part_whole_ratio",
+      "kod": "14",
+      "object": "numeric_ratio",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "percentage_ratio",
+      "kod": "14",
+      "object": "numeric_ratio",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "equation_notation",
+      "kod": "14",
+      "object": "math_notation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "equation_unknown",
+      "kod": "14",
+      "object": "equation_notation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "proportion_notation",
+      "kod": "14",
+      "object": "equation_notation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "equation_notation",
+      "kod": "20",
+      "object": "math_expression",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "math_variable",
+      "kod": "14",
+      "object": "math_symbol",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "math_variable",
+      "kod": "14",
+      "object": "math_expression",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "math_constant",
+      "kod": "14",
+      "object": 2699,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "numeric_coefficient",
+      "kod": "14",
+      "object": "math_constant",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "dividend",
+      "kod": "14",
+      "object": 2699,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "divisor_operand",
+      "kod": "14",
+      "object": 2699,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "expression_evaluation",
+      "kod": "14",
+      "object": 1817,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "expression_evaluation",
+      "kod": "27",
+      "object": "math_expression",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "ratio_calculation",
+      "kod": "14",
+      "object": 1817,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "ratio_calculation",
+      "kod": "27",
+      "object": "numeric_ratio",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "percentage_calculation",
+      "kod": "14",
+      "object": "ratio_calculation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "percentage_calculation",
+      "kod": "27",
+      "object": "percentage_ratio",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "expression_transformation",
+      "kod": "14",
+      "object": 2606,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "expression_transformation",
+      "kod": "27",
+      "object": "math_expression",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fraction_reduction",
+      "kod": "14",
+      "object": "expression_transformation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fraction_reduction",
+      "kod": "27",
+      "object": "common_fraction",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "denominator_alignment",
+      "kod": "14",
+      "object": "expression_transformation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "denominator_alignment",
+      "kod": "27",
+      "object": "common_fraction",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fraction_evaluation",
+      "kod": "14",
+      "object": "expression_evaluation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fraction_evaluation",
+      "kod": "27",
+      "object": "fraction_expression",
+      "present": true,
+      "strength": null
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "math_expression",
+      "ancestor": 428,
+      "present": false
+    },
+    {
+      "subject": "math_expression",
+      "ancestor": 2842,
+      "present": false
+    },
+    {
+      "subject": "math_variable",
+      "ancestor": 436,
+      "present": false
+    },
+    {
+      "subject": "math_constant",
+      "ancestor": 439,
+      "present": false
+    },
+    {
+      "subject": "divisor_operand",
+      "ancestor": 435,
+      "present": false
+    },
+    {
+      "subject": "numeral",
+      "ancestor": 2699,
+      "present": false
+    },
+    {
+      "subject": "common_fraction",
+      "ancestor": 24513,
+      "present": false
+    },
+    {
+      "subject": "digit",
+      "ancestor": 24484,
+      "present": false
+    },
+    {
+      "subject": "numerator_expression",
+      "ancestor": "dividend",
+      "present": false
+    },
+    {
+      "subject": "denominator_expression",
+      "ancestor": "divisor_operand",
+      "present": false
+    },
+    {
+      "subject": "percentage_ratio",
+      "ancestor": "part_whole_ratio",
+      "present": false
+    },
+    {
+      "subject": "numeric_ratio",
+      "ancestor": "fraction_expression",
+      "present": false
+    },
+    {
+      "subject": "repeating_decimal",
+      "ancestor": "terminating_decimal",
+      "present": false
+    },
+    {
+      "subject": "equation_notation",
+      "ancestor": 3397,
+      "present": false
+    },
+    {
+      "subject": "proportion_notation",
+      "ancestor": "numeric_ratio",
+      "present": false
+    },
+    {
+      "subject": "fraction_expression",
+      "ancestor": 4824,
+      "present": false
+    },
+    {
+      "subject": "math_notation",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": "math_symbol",
+      "ancestor": 2657,
+      "present": true
+    },
+    {
+      "subject": "math_expression",
+      "ancestor": "math_notation",
+      "present": true
+    },
+    {
+      "subject": "numerical_expression",
+      "ancestor": "math_expression",
+      "present": true
+    },
+    {
+      "subject": "numeral",
+      "ancestor": "numerical_expression",
+      "present": true
+    },
+    {
+      "subject": "digit",
+      "ancestor": "numeral",
+      "present": true
+    },
+    {
+      "subject": "decimal_digit",
+      "ancestor": "digit",
+      "present": true
+    },
+    {
+      "subject": "fraction_expression",
+      "ancestor": "math_expression",
+      "present": true
+    },
+    {
+      "subject": "common_fraction",
+      "ancestor": "fraction_expression",
+      "present": true
+    },
+    {
+      "subject": "proper_fraction",
+      "ancestor": "common_fraction",
+      "present": true
+    },
+    {
+      "subject": "improper_fraction",
+      "ancestor": "common_fraction",
+      "present": true
+    },
+    {
+      "subject": "reduced_fraction",
+      "ancestor": "common_fraction",
+      "present": true
+    },
+    {
+      "subject": "mixed_numeral",
+      "ancestor": "numeral",
+      "present": true
+    },
+    {
+      "subject": "decimal_numeral",
+      "ancestor": "numeral",
+      "present": true
+    },
+    {
+      "subject": "terminating_decimal",
+      "ancestor": "decimal_numeral",
+      "present": true
+    },
+    {
+      "subject": "repeating_decimal",
+      "ancestor": "decimal_numeral",
+      "present": true
+    },
+    {
+      "subject": "numerator_expression",
+      "ancestor": "math_expression",
+      "present": true
+    },
+    {
+      "subject": "denominator_expression",
+      "ancestor": "math_expression",
+      "present": true
+    },
+    {
+      "subject": "common_denominator",
+      "ancestor": "denominator_expression",
+      "present": true
+    },
+    {
+      "subject": "least_common_denominator",
+      "ancestor": "common_denominator",
+      "present": true
+    },
+    {
+      "subject": "fraction_bar",
+      "ancestor": "math_symbol",
+      "present": true
+    },
+    {
+      "subject": "percent_sign",
+      "ancestor": "math_symbol",
+      "present": true
+    },
+    {
+      "subject": "percent_notation",
+      "ancestor": "numeral",
+      "present": true
+    },
+    {
+      "subject": "numeric_ratio",
+      "ancestor": 3649,
+      "present": true
+    },
+    {
+      "subject": "part_whole_ratio",
+      "ancestor": "numeric_ratio",
+      "present": true
+    },
+    {
+      "subject": "percentage_ratio",
+      "ancestor": "numeric_ratio",
+      "present": true
+    },
+    {
+      "subject": "equation_notation",
+      "ancestor": "math_notation",
+      "present": true
+    },
+    {
+      "subject": "equation_unknown",
+      "ancestor": "equation_notation",
+      "present": true
+    },
+    {
+      "subject": "proportion_notation",
+      "ancestor": "equation_notation",
+      "present": true
+    },
+    {
+      "subject": "math_variable",
+      "ancestor": "math_symbol",
+      "present": true
+    },
+    {
+      "subject": "math_constant",
+      "ancestor": 2699,
+      "present": true
+    },
+    {
+      "subject": "numeric_coefficient",
+      "ancestor": "math_constant",
+      "present": true
+    },
+    {
+      "subject": "dividend",
+      "ancestor": 2699,
+      "present": true
+    },
+    {
+      "subject": "divisor_operand",
+      "ancestor": 2699,
+      "present": true
+    },
+    {
+      "subject": "expression_evaluation",
+      "ancestor": 1817,
+      "present": true
+    },
+    {
+      "subject": "ratio_calculation",
+      "ancestor": 1817,
+      "present": true
+    },
+    {
+      "subject": "percentage_calculation",
+      "ancestor": "ratio_calculation",
+      "present": true
+    },
+    {
+      "subject": "expression_transformation",
+      "ancestor": 2606,
+      "present": true
+    },
+    {
+      "subject": "fraction_reduction",
+      "ancestor": "expression_transformation",
+      "present": true
+    },
+    {
+      "subject": "denominator_alignment",
+      "ancestor": "expression_transformation",
+      "present": true
+    },
+    {
+      "subject": "fraction_evaluation",
+      "ancestor": "expression_evaluation",
+      "present": true
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": "math_notation",
+      "term": "математическая запись",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "math_notation",
+      "term": "mathematical notation (written form)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "math_notation",
+      "term": "mathematical written form",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "math_symbol",
+      "term": "математический символ",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "math_symbol",
+      "term": "mathematical symbol",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "math_expression",
+      "term": "математическое выражение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "math_expression",
+      "term": "mathematical expression",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "math_expression",
+      "term": "expression",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "numerical_expression",
+      "term": "числовое выражение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "numerical_expression",
+      "term": "numerical expression",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "numeral",
+      "term": "запись числа",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "numeral",
+      "term": "numeral",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "numeral",
+      "term": "number representation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "numeral",
+      "term": "числовая запись",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "digit",
+      "term": "цифра",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "digit",
+      "term": "digit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "digit",
+      "term": "digit symbol",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "decimal_digit",
+      "term": "десятичная цифра",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "decimal_digit",
+      "term": "decimal digit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fraction_expression",
+      "term": "дробь (математическая запись)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fraction_expression",
+      "term": "fraction (written expression)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fraction_expression",
+      "term": "fraction",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fraction_expression",
+      "term": "дробь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fraction_expression",
+      "term": "дробная запись",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "common_fraction",
+      "term": "обыкновенная дробь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "common_fraction",
+      "term": "common fraction",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "common_fraction",
+      "term": "simple fraction",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "proper_fraction",
+      "term": "правильная дробь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "proper_fraction",
+      "term": "proper fraction",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "improper_fraction",
+      "term": "неправильная дробь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "improper_fraction",
+      "term": "improper fraction",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "reduced_fraction",
+      "term": "несократимая дробь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "reduced_fraction",
+      "term": "irreducible fraction",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "reduced_fraction",
+      "term": "reduced fraction",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "reduced_fraction",
+      "term": "fraction in lowest terms",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "mixed_numeral",
+      "term": "смешанная запись числа",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "mixed_numeral",
+      "term": "mixed number notation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "mixed_numeral",
+      "term": "mixed number",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "mixed_numeral",
+      "term": "смешанное число",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "decimal_numeral",
+      "term": "десятичная запись числа",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "decimal_numeral",
+      "term": "decimal representation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "decimal_numeral",
+      "term": "decimal numeral",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "terminating_decimal",
+      "term": "конечная десятичная дробь (запись)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "terminating_decimal",
+      "term": "terminating decimal",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "terminating_decimal",
+      "term": "конечная десятичная дробь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "repeating_decimal",
+      "term": "периодическая десятичная дробь (запись)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "repeating_decimal",
+      "term": "repeating decimal",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "repeating_decimal",
+      "term": "recurring decimal",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "repeating_decimal",
+      "term": "периодическая десятичная дробь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "numerator_expression",
+      "term": "числитель дроби (выражение)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "numerator_expression",
+      "term": "numerator (expression)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "numerator_expression",
+      "term": "numerator",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "numerator_expression",
+      "term": "числитель",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "denominator_expression",
+      "term": "знаменатель дроби (выражение)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "denominator_expression",
+      "term": "denominator (expression)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "denominator_expression",
+      "term": "denominator",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "denominator_expression",
+      "term": "знаменатель",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "common_denominator",
+      "term": "общий знаменатель (запись)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "common_denominator",
+      "term": "common denominator (written form)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "common_denominator",
+      "term": "common denominator",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "common_denominator",
+      "term": "общий знаменатель",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "least_common_denominator",
+      "term": "наименьший общий знаменатель (запись)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "least_common_denominator",
+      "term": "least common denominator",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "least_common_denominator",
+      "term": "LCD",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "least_common_denominator",
+      "term": "наименьший общий знаменатель",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fraction_bar",
+      "term": "дробная черта",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fraction_bar",
+      "term": "fraction bar",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fraction_bar",
+      "term": "fraction line",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "percent_sign",
+      "term": "знак процента",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "percent_sign",
+      "term": "percent sign",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "percent_sign",
+      "term": "percentage sign",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "percent_sign",
+      "term": "%",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "percent_sign",
+      "term": "%",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "percent_notation",
+      "term": "процентная запись",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "percent_notation",
+      "term": "percentage notation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "percent_notation",
+      "term": "percent notation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "numeric_ratio",
+      "term": "отношение чисел",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "numeric_ratio",
+      "term": "numerical ratio",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "numeric_ratio",
+      "term": "ratio",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "numeric_ratio",
+      "term": "числовое отношение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "part_whole_ratio",
+      "term": "доля (отношение части к целому)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "part_whole_ratio",
+      "term": "part-to-whole ratio",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "part_whole_ratio",
+      "term": "доля",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "percentage_ratio",
+      "term": "процентное отношение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "percentage_ratio",
+      "term": "percentage",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "percentage_ratio",
+      "term": "percent",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "percentage_ratio",
+      "term": "процент",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "equation_notation",
+      "term": "равенство (математическая запись)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "equation_notation",
+      "term": "mathematical equation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "equation_notation",
+      "term": "equation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "equation_notation",
+      "term": "математическое равенство",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "equation_unknown",
+      "term": "уравнение с неизвестным",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "equation_unknown",
+      "term": "equation with an unknown",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "equation_unknown",
+      "term": "уравнение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "proportion_notation",
+      "term": "пропорция (равенство отношений)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "proportion_notation",
+      "term": "proportion (equality of ratios)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "proportion_notation",
+      "term": "proportion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "proportion_notation",
+      "term": "пропорция",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "math_variable",
+      "term": "переменная (математический символ)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "math_variable",
+      "term": "mathematical variable (symbol)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "math_variable",
+      "term": "variable",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "math_variable",
+      "term": "переменная",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "math_constant",
+      "term": "математическая константа (число)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "math_constant",
+      "term": "mathematical constant",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "math_constant",
+      "term": "numerical constant",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "numeric_coefficient",
+      "term": "числовой коэффициент",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "numeric_coefficient",
+      "term": "numerical coefficient",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "numeric_coefficient",
+      "term": "coefficient",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "dividend",
+      "term": "делимое",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "dividend",
+      "term": "dividend (arithmetic)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "dividend",
+      "term": "dividend",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "divisor_operand",
+      "term": "делитель (операнд деления)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "divisor_operand",
+      "term": "divisor (division operand)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "divisor_operand",
+      "term": "divisor",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "divisor_operand",
+      "term": "делитель",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "expression_evaluation",
+      "term": "вычисление значения выражения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "expression_evaluation",
+      "term": "expression evaluation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "ratio_calculation",
+      "term": "вычисление отношения чисел",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "ratio_calculation",
+      "term": "ratio calculation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "percentage_calculation",
+      "term": "вычисление процентного отношения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "percentage_calculation",
+      "term": "percentage calculation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "expression_transformation",
+      "term": "преобразование математического выражения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "expression_transformation",
+      "term": "mathematical expression transformation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fraction_reduction",
+      "term": "сокращение дроби",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fraction_reduction",
+      "term": "fraction reduction",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "denominator_alignment",
+      "term": "приведение дробей к общему знаменателю",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "denominator_alignment",
+      "term": "conversion to a common denominator",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fraction_evaluation",
+      "term": "вычисление значения дроби",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fraction_evaluation",
+      "term": "fraction evaluation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 428,
+      "term": "programming expression",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 435,
+      "term": "programming operand",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 436,
+      "term": "programming variable",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 439,
+      "term": "programming constant",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2842,
+      "term": "verbal expression",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3397,
+      "term": "equality (relation)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3649,
+      "term": "division quotient",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2903,
+      "term": "share (part)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "proper_fraction",
+      "term": "improper fraction",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "reduced_fraction",
+      "term": "simple fraction",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "numeric_ratio",
+      "term": "proportion",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "math_constant",
+      "term": "programming constant",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "digit",
+      "term": "finger",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "fraction_expression",
+      "term": "fractional number",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "numeral",
+      "term": "number",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

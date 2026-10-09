@@ -1,6 +1,8 @@
 # Roadmap and coverage review
 
-Current baseline: [code 0.1.0-dev](VERSION), [data Q9](docs/quality/2026-10-09-q9.md).
+Current baseline: [code 0.1.0-dev](VERSION), [data Q39](docs/quality/2026-10-09-q39.md).
+Q10–Q39 are published to GitHub and the site at the user's request.
+Continue further filling locally unless publication is requested.
 This is the active work plan. Earlier expansion totals and relation-code
 instructions remain available in Git history; they do not describe the
 current graph or a sequence of scripts to rerun.
@@ -150,6 +152,134 @@ then uses practical tasks to extend the repaired common vocabulary.
 
 ## Filling plan
 
+### Active direction — dictionary-guided filling, Q11–Q39 (2026-10-09)
+
+The user requested a large English dictionary as the comparison source.
+Use **Open English WordNet 2025, base edition**, pinned by the download hash
+in the [Q11 manifest](tools/quality_20261009_q11.json). It contains 135,969
+lexical entries, 185,129 senses, and 107,519 synsets. The complete normalized
+English comparison is a candidate inventory; no English match does not mean
+that the Russian database lacks the concept.
+
+Q11 applies the first reviewed cohort locally: **59 additions**, 14 existing
+meanings reused, two genera refined, and 85 new relations, including 21 purpose
+or patient relations. All seven SI base-unit names are now represented.
+Instrument/unit and programming-language/unit homonyms remain distinct.
+The existing cohort's direct non-taxonomic coverage changes from
+9/14 to 10/14; 22/59 new concepts have such a relation.
+All new concepts have Russian and English terms. These are coverage counts,
+not a claim that unit definitions or the dictionary are fully represented.
+
+Q12 continues locally with **37 additions and 74 new relations**, including
+26 non-taxonomic links. It reviews humidity, wind/rotation measurement,
+acceleration, the caliper family, clocks, and levels. Three labels are qualified,
+eight relations withdrawn, and four malformed or mistagged terms removed.
+The 22-record existing cohort changes from 13/22 to 17/22 with direct
+non-taxonomic relations; 30/37 additions have such a relation. Missing
+Latin-script English terms decrease from 7,302 to 7,299. See the
+[Q12 report](docs/quality/2026-10-09-q12.md) for exact scope and source decisions.
+
+Q13 adds **41 concepts and 58 relations**, including 13 component or process-target links. Written fractions, decimals, and equations remain distinct from numbers and relations; programming homonyms retain their U3 meanings. All old records and terms are preserved. The ambiguous fractional record 4824 remains pending. See the [Q13 report](docs/quality/2026-10-09-q13.md).
+
+Q14 adds **54 concepts and 79 relations**, including 22 instrument-purpose or process-target links. It fills density, force, area, volume, electrical power and energy, related unit families, and laboratory volume instruments. One resultant-force genus is refined. See the [Q14 report](docs/quality/2026-10-09-q14.md).
+
+Q15 adds **28 concepts and 62 relations**. It distinguishes circle boundaries from filled disks, finite segments from complete lines, and geometric objects from lengths and angle quantities. Six genera are refined and the disk's misleading English circle term is replaced. See the [Q15 report](docs/quality/2026-10-09-q15.md).
+
+Q16 adds **27 concepts and 41 relations**, while consolidating three duplicate price evaluations. Payment action 7752 receives a correct name and social-action genus; payment amount 3268 and price 3643 gain a monetary-amount genus. Budget plans, funds, savings and saving processes stay distinct. See the [Q16 report](docs/quality/2026-10-09-q16.md).
+
+Q17 adds **35 concepts and 103 relations**, correcting 23 inherited assertions and 20 malformed or mistagged terms. It reuses existing utensils, adds cookware and measuring-tool families, separates food and general physical actions, and repairs the toaster and food-peeling relations. See the [Q17 report](docs/quality/2026-10-09-q17.md).
+
+Q18 adds **38 concepts and 77 relations**, correcting 15 inherited assertions and 12 lexical entries. Screws and nails gain fastener genera; their tools gain qualified purposes. Two false upper-graph exclusions are rejected, while 20 other U1 conflict candidates remain queued. See the [Q18 report](docs/quality/2026-10-09-q18.md).
+
+Q19 adds **28 concepts and 50 relations**, correcting 17 assertions and eight lexical entries. Wednesday and environment now have distinct records; calendar rules, labels, periods and planned events stay separate. One upper-graph conflict is resolved by the sense split; 19 candidates remain queued. See the [Q19 report](docs/quality/2026-10-09-q19.md).
+
+Q20 adds **21 concepts and 42 relations**, correcting nine assertions and 14 lexical entries. Chemical compound and physical joining now have distinct records; material composition and phase state stay separate. Reviewed solution intersections add useful shared genera for Euler diagrams. Seventeen U1 conflict candidates remain queued. See the [Q20 report](docs/quality/2026-10-09-q20.md).
+
+Q21 adds **28 concepts and 55 relations**, separating broadleaf from deciduous trees and forest landscape from collective vegetation. Deciduous conifers and temperate rainforests now provide explicit shared subtypes for Euler diagrams. Fifteen U1 conflict candidates remain queued. See the [Q21 report](docs/quality/2026-10-09-q21.md).
+
+Q22 adds **32 concepts and 70 relations** for weather, precipitation, measurements, observations and forecasts. Natural phenomenon now admits conditions without making them processes. Rainy/windy weather supplies a reviewed intersection; the rain/snow mixture uses component relations. Fourteen U1 conflict candidates remain queued. See the [Q22 report](docs/quality/2026-10-09-q22.md).
+
+Q23 adds **28 concepts and 57 relations**, correcting 21 assertions. Apartments, attics and basements are no longer kinds of whole houses. Optional features have restricted subjects; combined rooms and houseboats supply meaningful intersections. Thirteen U1 conflict candidates remain queued. See the [Q23 report](docs/quality/2026-10-09-q23.md).
+
+Q24 adds **41 concepts and 83 relations**, correcting 18 assertions. Optional materials and fasteners now have restricted subjects. Jeans combine trouser form with denim material; hooded rain jackets combine garment form, component and intended use. Twelve U1 conflict candidates remain queued. See the [Q24 report](docs/quality/2026-10-09-q24.md).
+
+Q25 adds **36 concepts and 85 relations**, correcting 14 assertions. Cards as a game are separate from physical playing cards; board games are separate from game boards. Tennis and table tennis share racket and ball classifications, while badminton uses a shuttlecock. Ten U1 conflict candidates remain queued. See the [Q25 report](docs/quality/2026-10-09-q25.md).
+
+Q26 adds **32 concepts and 69 relations**, correcting 28 assertions. Family groups, kinship relations and relatives as people are kept distinct. Household and family have a restricted intersection; half-sibling and maternal/paternal classifications form further intersections. Nine U1 conflict candidates remain queued. See the [Q26 report](docs/quality/2026-10-09-q26.md).
+
+Q27 adds **26 concepts and 51 relations**, correcting 13 assertions. Lighting state, lighting action, visible radiation, perceived brightness and physical measurement now have distinct meanings. Eight U1 conflict candidates remain queued. See the [Q27 report](docs/quality/2026-10-09-q27.md).
+
+Q28 adds **27 concepts and 54 relations**, correcting eight assertions and four malformed braking records. The batch separates physical quantities from motion processes and adds useful path/speed intersections. Seven U1 conflict candidates remain queued. See the [Q28 report](docs/quality/2026-10-09-q28.md).
+
+Q29 adds **32 concepts and 67 relations**, corrects 10 assertions and merges one archived duplicate. Recreational/method/location intersections and gear purposes expand practical graph coverage. Six U1 conflict candidates remain queued. See the [Q29 report](docs/quality/2026-10-09-q29.md).
+
+Q30 adds **26 concepts and 61 relations**, corrects four assertions and cleans six term rows. Round springform moulds and combined openers demonstrate supported intersections. Six U1 conflict candidates remain queued. See the [Q30 report](docs/quality/2026-10-09-q30.md).
+
+Q31 adds **30 IT concepts and 47 relations** and rejects the rest/API homonym error. HTTP methods, request messages, URI/URL families and software roles are distinguished. Six U1 exclusion candidates remain, with no U3 conflict introduced. See the [Q31 report](docs/quality/2026-10-09-q31.md).
+
+Q32 adds **28 concepts and 51 relations**, corrects seven assertions and merges one isolated duplicate. Authorship, recognition and information-status intersections extend the graph. Five U1 exclusion candidates remain. See the [Q32 report](docs/quality/2026-10-09-q32.md).
+
+Q33 adds **22 concepts and 39 relations**, corrects 19 assertions and separates state, process, property and vocal-action senses. The five remaining U1 shared-descendant exclusion candidates are resolved; broader semantic review is still needed. See the [Q33 report](docs/quality/2026-10-09-q33.md).
+
+Q34 adds **30 concepts and 64 relations** in U3, repairs Jenkins's parent and separates hardware, software, HTTP roles and caching. Both U1 and U3 shared-descendant exclusion scans remain clear. See the [Q34 report](docs/quality/2026-10-09-q34.md).
+
+Q35 adds **27 concepts and 49 relations**, reuses the DBMS record, corrects SQLite/table/foreign-key/transaction classifications, and cleans known rename-generated language errors. Both U1 and U3 shared-descendant exclusion scans remain clear. See the [Q35 report](docs/quality/2026-10-09-q35.md).
+
+Q36 adds **37 concepts and 84 relations**, repairs predator and hunter genera, separates catching from capture, and confines six named-fish targets to specific fishing concepts. U1/U3 shared-descendant exclusion scans remain clear. See the [Q36 report](docs/quality/2026-10-09-q36.md).
+
+Q37 adds **35 concepts and 68 relations**, separates motion paths from quantities, and adds translation, rolling, momentum, torque, kinetic energy and work. Both U1/U3 shared-descendant exclusion scans remain clear. See the [Q37 report](docs/quality/2026-10-09-q37.md).
+
+Q38 adds **36 concepts and 64 relations** for database namespaces, views, plans, scans, join algorithms and key column sets. Relational algebra now has a query-language genus. U1/U3 shared-descendant exclusion scans remain clear. See the [Q38 report](docs/quality/2026-10-09-q38.md).
+
+Q39 adds **41 concepts and 106 relations** for containers, material/use intersections, brushes and scraping tools. It corrects glass overgeneralizations, storage and sweeping scope, and ten malformed or incorrectly tagged terms. U1/U3 shared-descendant exclusion scans remain clear. See the [Q39 report](docs/quality/2026-10-09-q39.md).
+
+**Continue locally in this order:**
+
+1. Continue IT with relational-algebra operators and relation/tuple semantics, dataflow, Pipeline, protocol/standard links and broad versus programming identifiers. Review computer/home-appliance ancestry and virtual hosts before expanding hardware genera.
+2. Continue household materials and actions: knife materials, cutting dependencies, inherited food patients, storage/wiping/drawing probabilities, container closures and action sequences. Review scraping-off synonym records and generated painting/dyeing aliases before merging.
+3. Continue mechanics with reference frames, collisions, units for new quantities, potential energy and the inherited motion-to-sound probability. Review generated movement aliases individually.
+4. Continue animal and activity review: bear/panda taxonomy, fox/fox synonym records, foraging, broader scavenging, hunting capabilities, protection subtypes and physical versus mental catch meanings.
+5. Continue targeted review of emotion, sound, state, sleep/fatigue probabilities and knowledge branches: reputation, credibility, secrecy, lighting, family, calendar, money and geometry. Preserve upper distinctions and explicit negations.
+
+For each cohort, record reuse/add/defer decisions with stable dictionary
+sense IDs and a selected meaning. Review synonyms individually; OEWN's
+resistance, mole, and candela entries demonstrate why its wording and parents
+cannot be copied automatically. Unit conversions need a suitable data model;
+never substitute a genus or a generic attribute edge for a scale factor.
+Raw dictionary downloads and exploratory reports stay outside the repository.
+
+This direction expands the earlier pilot's scope at the user's request.
+The previous 25/33-concept estimates below are historical estimates, not a
+limit on dictionary-guided filling. Q10–Q39 were subsequently published at
+the user's request; the progress entries below retain their original review status.
+
+### Local progress — 2026-10-09, Q10
+
+Applied locally and exported: 30 existing records reviewed, eight new concepts,
+24 clarified labels, 21 rejected genus links, and 38 new relations. No records
+were merged. Types are separated from character/string values and mathematical
+numbers; address and processing genera are repaired. String length, regex
+purpose, and processing targets add explanatory facts beyond taxonomy.
+See the [Q10 report](docs/quality/2026-10-09-q10.md).
+
+Direct non-taxonomic relation coverage in the fixed cohort changed from
+0/30 to 2/30; 3/8 new concepts have a direct non-taxonomic relation.
+All reviewed and new records have Latin-script English terms. These remain
+coverage measures, not completeness scores.
+
+Revise the pilot's new-meaning estimate from 25 to 33: two type/value splits
+and six missing shared concepts were needed for the reviewed distinctions.
+Existing records were reused for real numbers, sequences, addresses, and
+processing specializations. Q10 overlaps earlier cohorts, so their counts must
+not simply be added. The approximately 100-meaning pilot remains in progress.
+
+**Earlier IT queue, still pending:** review Map and heap senses, event listeners, mutex,
+nonexecutable statements, program listings, variable-length fields, and
+Z-buffering. Then review encoding/code-point distinctions, signedness and
+numeric range properties, and fraction/percent/ratio vocabulary. Continue
+source review before selecting language-specific meanings for `void` or
+wide characters.
+
 ### Progress — 2026-10-09, Q9
 
 The second foundation increment reviews 12 existing records, merges one
@@ -170,8 +300,8 @@ estimate; prioritize reuse and enrichment of existing concepts in the next
 increment. Review that estimate explicitly if another missing genus is needed.
 The roughly 100-meaning pilot remains in progress.
 
-**Next:** review the remaining mixed data-type, data-structure, and model
-children, followed by fraction/percent/ratio and quantity/unit vocabulary.
+**Follow-up:** Q10 addresses selected type, structure, and model children
+locally; the next unresolved groups are listed in the Q10 progress entry.
 The legacy collection branch, general idempotence, and parser associativity
 remain separate review tasks. The two new Euler examples are documented as
 shared selections; arbitrary membership facts and a symbolic set solver are

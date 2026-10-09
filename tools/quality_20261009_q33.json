@@ -1,0 +1,2849 @@
+{
+  "source": "quality-20261009-q33",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Separate selected state, process, event, relation and property senses; expand sleep and mood; distinguish a vocal action from its sound and trudging from raving.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "sleep": "https://www.nhlbi.nih.gov/health/sleep",
+      "stages": "https://www.nhlbi.nih.gov/health/sleep/stages-of-sleep",
+      "dozing": "https://sensefreq.ruslang.ru/w/RNC%20(verbs)/%D0%B4%D1%80%D0%B5%D0%BC%D0%B0%D1%82%D1%8C",
+      "trudge": "https://gramota.ru/poisk?mode=slovari&query=%D1%80%D0%B5%D1%81%D1%82%D0%B8&simple=0",
+      "raving_ru": "https://ruslang.ru/sites/default/files/2024-02/%D0%90%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9%20%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C%20%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0.%20%D0%A2%D0%BE%D0%BC%201.pdf",
+      "raving_en": "https://dictionary.cambridge.org/dictionary/english/rave",
+      "lasting": "https://slovar.cc/rus/efremova/220076.html",
+      "occurrence": "https://gramota.ru/poisk?mode=all&query=%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D1%82%D1%81%D1%8F&simple=0"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet; CC BY 4.0 and Princeton notices remain in docs/quality/2026-10-09-q11.md#sources-and-reuse. NIH supports human sleep phase distinctions; Russian dictionary entries and Cambridge support selected verb senses. Qualified labels and graph mappings are editorial adaptations, not copied definitions.",
+    "existing_cohort": [
+      4790,
+      4813,
+      5846,
+      6154,
+      7175,
+      4132,
+      3900,
+      4031,
+      4457,
+      4260,
+      4402,
+      205,
+      15847,
+      6646,
+      7226,
+      19387,
+      207,
+      24433,
+      24558,
+      5019,
+      24480
+    ],
+    "context_policy": "All new concepts and assertions use U1 with unspecified strength. Existing home contexts and upper exclusions remain unchanged. Process/state classification is a local ontology decision and is not presented as a universal lexical distinction.",
+    "sense_decisions": [
+      {
+        "concept": "mental_state",
+        "synset": "oewn-14396987-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A condition of mental functioning, classified as a state rather than a mental process."
+      },
+      {
+        "concept": "emotional_state",
+        "synset": "oewn-14009303-n",
+        "decision": "add",
+        "alignment": "state sense mapped to local ontology",
+        "scope": "A mental condition with an emotional character; distinguish it from the process and adjective-property axes."
+      },
+      {
+        "concept": "emotional_property",
+        "synset": null,
+        "decision": "add",
+        "alignment": "editorial property family",
+        "scope": "A mental property characterizing emotion or mood; cheerfulness and sadness are not moral virtues or faults."
+      },
+      {
+        "concept": "cheerful_mood",
+        "synset": null,
+        "decision": "add",
+        "alignment": "state/property restriction",
+        "scope": "A mood characterized by cheerfulness; a state bearing a property rather than a subtype of that property."
+      },
+      {
+        "concept": "sad_mood",
+        "synset": null,
+        "decision": "add",
+        "alignment": "state/property restriction",
+        "scope": "A mood characterized by sadness; not a diagnosis or a moral failing."
+      },
+      {
+        "concept": "physiological_state",
+        "synset": "oewn-14057659-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A condition of a body or bodily functioning; separate from the physiological process family."
+      },
+      {
+        "concept": "asleep_state",
+        "synset": "oewn-14048353-n",
+        "decision": "add",
+        "alignment": "qualified state sense",
+        "scope": "The condition of being asleep, distinct from sleeping as an unfolding physiological process. Do not import absolute absence of awareness."
+      },
+      {
+        "concept": "awakening",
+        "synset": "oewn-01262453-n",
+        "decision": "add",
+        "alignment": "restricted physiological transition",
+        "scope": "The transition from sleep to wakefulness, not metaphorical awareness or a religious movement."
+      },
+      {
+        "concept": "sleepiness",
+        "synset": "oewn-14053917-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The sleepy condition or tendency to fall asleep; it does not imply that sleep has already begun."
+      },
+      {
+        "concept": "short_sleep",
+        "synset": "oewn-00860015-n",
+        "decision": "add",
+        "alignment": "duration-restricted sleeping process",
+        "scope": "A short episode of sleeping, with no fixed duration, time of day or requirement to be outside a bed."
+      },
+      {
+        "concept": "daytime_sleep",
+        "synset": null,
+        "decision": "add",
+        "alignment": "time-of-day restriction",
+        "scope": "Sleeping during the relevant daytime period; it need not be brief."
+      },
+      {
+        "concept": "short_daytime_sleep",
+        "synset": null,
+        "decision": "add",
+        "alignment": "duration/time-of-day intersection",
+        "scope": "The intersection of short duration and daytime occurrence; neither restriction alone entails the other."
+      },
+      {
+        "concept": "human_sleep",
+        "synset": null,
+        "decision": "add",
+        "alignment": "bearer-restricted sleeping process",
+        "scope": "Sleeping by a human, providing an explicit scope for the following clinical sleep-phase vocabulary."
+      },
+      {
+        "concept": "rem_sleep",
+        "synset": null,
+        "decision": "add",
+        "alignment": "phase restriction from subject source",
+        "scope": "Human sleeping during the rapid-eye-movement phase; a phase-restricted sleeping process, not the entire sleep cycle."
+      },
+      {
+        "concept": "nrem_sleep",
+        "synset": null,
+        "decision": "add",
+        "alignment": "phase restriction from subject source",
+        "scope": "Human sleeping during the non-REM phase, with the three stages distinguished by the subject source."
+      },
+      {
+        "concept": "nrem_n1",
+        "synset": null,
+        "decision": "add",
+        "alignment": "stage restriction from subject source",
+        "scope": "Human non-REM sleeping during stage 1, at the transition from wakefulness."
+      },
+      {
+        "concept": "nrem_n2",
+        "synset": null,
+        "decision": "add",
+        "alignment": "stage restriction from subject source",
+        "scope": "Human non-REM sleeping during stage 2; no fixed duration, frequency or diagnostic condition is encoded."
+      },
+      {
+        "concept": "nrem_n3",
+        "synset": null,
+        "decision": "add",
+        "alignment": "stage restriction from subject source",
+        "scope": "Human non-REM sleeping during the deep, slow-wave stage; it is narrower than non-REM sleep overall."
+      },
+      {
+        "concept": "sleep_duration",
+        "synset": null,
+        "decision": "add",
+        "alignment": "restricted duration quantity",
+        "scope": "The duration of a sleeping episode; a quantity distinct from the process, state and occupied time interval."
+      },
+      {
+        "concept": "sleep_duration_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of how long a sleeping episode lasts; no target value or health recommendation."
+      },
+      {
+        "concept": "howl_sound",
+        "synset": "oewn-07399967-n",
+        "decision": "add",
+        "alignment": "restricted perceived-sound sense",
+        "scope": "The perceived howl produced by a person or animal, distinct from producing it. Exclude analogous wind and machinery sounds."
+      },
+      {
+        "concept": "raving_speech",
+        "synset": null,
+        "decision": "add",
+        "alignment": "restricted Russian verb sense; not exact OEWN rave alignment",
+        "scope": "Incoherent vocal speech in a partly uncontrolled or altered state; this lexical behavior is not itself a medical diagnosis. Exclude enthusiastic praise and figurative obsession."
+      },
+      {
+        "concept": "raving_speech",
+        "synset": null,
+        "decision": "restrict English phrase",
+        "alignment": "reviewed sense",
+        "scope": "Cambridge rave supports uncontrolled speech, but is broader. The qualified English phrase selects the archived Russian vocal meaning; no exact synonymy with all rave senses is asserted."
+      },
+      {
+        "concept": 205,
+        "synset": null,
+        "decision": "reuse as qualified",
+        "alignment": "reviewed sense",
+        "scope": "Preserve all inherited bearer, purpose, study and sleep/fatigue edges. Separating the state does not newly validate inherited probability percentages."
+      },
+      {
+        "concept": 207,
+        "synset": null,
+        "decision": "reuse as qualified",
+        "alignment": "reviewed sense",
+        "scope": "Preserve walking and its two explicit negative animal capabilities; broad motion-verb aliases need a later review."
+      },
+      {
+        "concept": 24433,
+        "synset": null,
+        "decision": "reuse as qualified",
+        "alignment": "reviewed sense",
+        "scope": "Reuse vocalization and preserve singing and sound-production links."
+      },
+      {
+        "concept": 15847,
+        "synset": null,
+        "decision": "reuse as qualified",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing waking state rather than adding an English-word duplicate."
+      },
+      {
+        "concept": 7226,
+        "synset": null,
+        "decision": "reuse as qualified",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing dozing state; add sleepiness separately because feeling sleepy does not entail sleep."
+      },
+      {
+        "concept": 6154,
+        "synset": null,
+        "decision": "reuse as qualified",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the vocal action and create only its distinct perceived result."
+      },
+      {
+        "concept": 5846,
+        "synset": null,
+        "decision": "reuse as qualified",
+        "alignment": "reviewed sense",
+        "scope": "Reuse mood and introduce an explicit emotional-state family; grammatical mood remains outside scope."
+      }
+    ],
+    "limits": "No diagnosis, treatment, sleep-duration recommendation, mandatory stage sequence or claim that dreaming occurs only in REM. Human phase restrictions are not projected onto every animal. The wider emotion, sound, motion and state hierarchies remain only partly reviewed. Historical probabilities, including sleep/fatigue claims, remain untouched and are not newly endorsed. No application test suites.",
+    "split_archive": {
+      "concept": {
+        "dharma": 19387,
+        "nama": "бредение",
+        "defin": "бредение — движение [бытовой]; физиологический процесс [бытовой]",
+        "vol_zero": null,
+        "vol_ed": null,
+        "vol_countable": null,
+        "vol_sobir": null,
+        "vol_sootn": null,
+        "cont_konkr": null,
+        "cont_abs": null,
+        "cont_opred": null,
+        "cont_empir": null,
+        "universum_id": 1,
+        "processed": 1
+      },
+      "terms": [
+        {
+          "concept_id": 19387,
+          "term": "бредение",
+          "lang": "ru"
+        },
+        {
+          "concept_id": 19387,
+          "term": "бредиение",
+          "lang": "ru"
+        },
+        {
+          "concept_id": 19387,
+          "term": "БРЕДИТЬ",
+          "lang": "en"
+        },
+        {
+          "concept_id": 19387,
+          "term": "БРЕСТИ",
+          "lang": "en"
+        },
+        {
+          "concept_id": 19387,
+          "term": "брестие",
+          "lang": "ru"
+        }
+      ],
+      "edges": [
+        {
+          "id": 12121,
+          "dh1": 19387,
+          "kod": "14",
+          "dh2": 55,
+          "universum_id": 1,
+          "strength": 100,
+          "status": "ok",
+          "source": "fill",
+          "rationale": "rank_all",
+          "created_at": "2026-09-01 21:07:44"
+        },
+        {
+          "id": 23471,
+          "dh1": 19387,
+          "kod": "14",
+          "dh2": 202,
+          "universum_id": 1,
+          "strength": 100,
+          "status": "ok",
+          "source": "fill",
+          "rationale": "rank_all",
+          "created_at": "2026-09-01 21:07:49"
+        }
+      ],
+      "decision": "Retain the walking sense at 19387 and add a separate vocal raving sense. Generated ambiguous lookup forms are removed, without claiming that every historical use of the noun is invalid."
+    },
+    "exclusion_review": {
+      "before_u1_conflicting_edges": 5,
+      "resolved_edges": [
+        8000,
+        8002,
+        8024,
+        8026,
+        8032
+      ],
+      "remaining_u1_expected": 0,
+      "decision": "Remove incompatible mixed-sense genus assertions, never the upper exclusions themselves. Preserve all explicit negations. Zero shared-descendant witnesses is not full validation of every inherited edge."
+    },
+    "new_term_collisions": [
+      {
+        "key": "raving_speech",
+        "term": "бредить",
+        "lang": "ru",
+        "existing": [
+          [
+            19387,
+            "бредение"
+          ]
+        ]
+      }
+    ],
+    "collision_decision": "One intentional sense relocation: Russian бредить replaces the mistagged БРЕДИТЬ at the archived mixed walking record. No matching alias remains there after the planned removal. All other new terms have no normalized baseline collision. Reuse sleep process, mood, wakefulness, sleep onset, dozing, walking, vocalization and vocal howling.",
+    "refreshed_comparison": {
+      "baseline": "Q32",
+      "existing_concepts": 13228,
+      "existing_terms": 37260,
+      "synsets_with_exact_en_candidate": 15655,
+      "synsets_without_exact_en_candidate": 91864,
+      "existing_concepts_with_dictionary_candidate": 4226,
+      "caveat": "Spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "mental_state",
+      "name": "психическое состояние",
+      "parent": 2633,
+      "universum_id": 1,
+      "terms": [
+        [
+          "психическое состояние",
+          "ru"
+        ],
+        [
+          "mental state",
+          "en"
+        ]
+      ],
+      "reason": "A condition of mental functioning, classified as a state rather than a mental process. OEWN 2025: oewn-14396987-n."
+    },
+    {
+      "key": "emotional_state",
+      "name": "эмоциональное состояние",
+      "parent": "mental_state",
+      "universum_id": 1,
+      "terms": [
+        [
+          "эмоциональное состояние",
+          "ru"
+        ],
+        [
+          "emotional state",
+          "en"
+        ]
+      ],
+      "reason": "A mental condition with an emotional character; distinguish it from the process and adjective-property axes. OEWN 2025: oewn-14009303-n."
+    },
+    {
+      "key": "emotional_property",
+      "name": "эмоциональная характеристика",
+      "parent": 47,
+      "universum_id": 1,
+      "terms": [
+        [
+          "эмоциональная характеристика",
+          "ru"
+        ],
+        [
+          "emotional characteristic",
+          "en"
+        ]
+      ],
+      "reason": "A mental property characterizing emotion or mood; cheerfulness and sadness are not moral virtues or faults."
+    },
+    {
+      "key": "cheerful_mood",
+      "name": "весёлое настроение",
+      "parent": 5846,
+      "universum_id": 1,
+      "terms": [
+        [
+          "весёлое настроение",
+          "ru"
+        ],
+        [
+          "cheerful mood",
+          "en"
+        ]
+      ],
+      "reason": "A mood characterized by cheerfulness; a state bearing a property rather than a subtype of that property."
+    },
+    {
+      "key": "sad_mood",
+      "name": "грустное настроение",
+      "parent": 5846,
+      "universum_id": 1,
+      "terms": [
+        [
+          "грустное настроение",
+          "ru"
+        ],
+        [
+          "sad mood",
+          "en"
+        ]
+      ],
+      "reason": "A mood characterized by sadness; not a diagnosis or a moral failing."
+    },
+    {
+      "key": "physiological_state",
+      "name": "физиологическое состояние",
+      "parent": 2633,
+      "universum_id": 1,
+      "terms": [
+        [
+          "физиологическое состояние",
+          "ru"
+        ],
+        [
+          "physiological state",
+          "en"
+        ]
+      ],
+      "reason": "A condition of a body or bodily functioning; separate from the physiological process family. OEWN 2025: oewn-14057659-n."
+    },
+    {
+      "key": "asleep_state",
+      "name": "сон (состояние)",
+      "parent": "physiological_state",
+      "universum_id": 1,
+      "terms": [
+        [
+          "сон (состояние)",
+          "ru"
+        ],
+        [
+          "sleep state",
+          "en"
+        ],
+        [
+          "being asleep",
+          "en"
+        ]
+      ],
+      "reason": "The condition of being asleep, distinct from sleeping as an unfolding physiological process. Do not import absolute absence of awareness. OEWN 2025: oewn-14048353-n. Source: https://www.nhlbi.nih.gov/health/sleep"
+    },
+    {
+      "key": "awakening",
+      "name": "пробуждение от сна",
+      "parent": 202,
+      "universum_id": 1,
+      "terms": [
+        [
+          "пробуждение от сна",
+          "ru"
+        ],
+        [
+          "awakening from sleep",
+          "en"
+        ]
+      ],
+      "reason": "The transition from sleep to wakefulness, not metaphorical awareness or a religious movement. OEWN 2025: oewn-01262453-n."
+    },
+    {
+      "key": "sleepiness",
+      "name": "сонливость",
+      "parent": "physiological_state",
+      "universum_id": 1,
+      "terms": [
+        [
+          "сонливость",
+          "ru"
+        ],
+        [
+          "sleepiness",
+          "en"
+        ],
+        [
+          "drowsiness",
+          "en"
+        ]
+      ],
+      "reason": "The sleepy condition or tendency to fall asleep; it does not imply that sleep has already begun. OEWN 2025: oewn-14053917-n."
+    },
+    {
+      "key": "short_sleep",
+      "name": "кратковременный сон",
+      "parent": 205,
+      "universum_id": 1,
+      "terms": [
+        [
+          "кратковременный сон",
+          "ru"
+        ],
+        [
+          "nap (short sleep)",
+          "en"
+        ],
+        [
+          "short sleep",
+          "en"
+        ]
+      ],
+      "reason": "A short episode of sleeping, with no fixed duration, time of day or requirement to be outside a bed. OEWN 2025: oewn-00860015-n."
+    },
+    {
+      "key": "daytime_sleep",
+      "name": "дневной сон",
+      "parent": 205,
+      "universum_id": 1,
+      "terms": [
+        [
+          "дневной сон",
+          "ru"
+        ],
+        [
+          "daytime sleep",
+          "en"
+        ]
+      ],
+      "reason": "Sleeping during the relevant daytime period; it need not be brief."
+    },
+    {
+      "key": "short_daytime_sleep",
+      "name": "кратковременный дневной сон",
+      "parent": "short_sleep",
+      "universum_id": 1,
+      "terms": [
+        [
+          "кратковременный дневной сон",
+          "ru"
+        ],
+        [
+          "short daytime sleep",
+          "en"
+        ]
+      ],
+      "reason": "The intersection of short duration and daytime occurrence; neither restriction alone entails the other."
+    },
+    {
+      "key": "human_sleep",
+      "name": "сон человека (физиологический процесс)",
+      "parent": 205,
+      "universum_id": 1,
+      "terms": [
+        [
+          "сон человека (физиологический процесс)",
+          "ru"
+        ],
+        [
+          "human sleep (physiological process)",
+          "en"
+        ]
+      ],
+      "reason": "Sleeping by a human, providing an explicit scope for the following clinical sleep-phase vocabulary. Source: https://www.nhlbi.nih.gov/health/sleep/stages-of-sleep"
+    },
+    {
+      "key": "rem_sleep",
+      "name": "сон человека в фазе REM",
+      "parent": "human_sleep",
+      "universum_id": 1,
+      "terms": [
+        [
+          "сон человека в фазе REM",
+          "ru"
+        ],
+        [
+          "human REM sleep",
+          "en"
+        ],
+        [
+          "быстрый сон человека",
+          "ru"
+        ]
+      ],
+      "reason": "Human sleeping during the rapid-eye-movement phase; a phase-restricted sleeping process, not the entire sleep cycle. Source: https://www.nhlbi.nih.gov/health/sleep/stages-of-sleep"
+    },
+    {
+      "key": "nrem_sleep",
+      "name": "сон человека в фазе NREM",
+      "parent": "human_sleep",
+      "universum_id": 1,
+      "terms": [
+        [
+          "сон человека в фазе NREM",
+          "ru"
+        ],
+        [
+          "human non-REM sleep",
+          "en"
+        ],
+        [
+          "медленный сон человека",
+          "ru"
+        ]
+      ],
+      "reason": "Human sleeping during the non-REM phase, with the three stages distinguished by the subject source. Source: https://www.nhlbi.nih.gov/health/sleep/stages-of-sleep"
+    },
+    {
+      "key": "nrem_n1",
+      "name": "сон человека на стадии N1",
+      "parent": "nrem_sleep",
+      "universum_id": 1,
+      "terms": [
+        [
+          "сон человека на стадии N1",
+          "ru"
+        ],
+        [
+          "human stage N1 sleep",
+          "en"
+        ]
+      ],
+      "reason": "Human non-REM sleeping during stage 1, at the transition from wakefulness. Source: https://www.nhlbi.nih.gov/health/sleep/stages-of-sleep"
+    },
+    {
+      "key": "nrem_n2",
+      "name": "сон человека на стадии N2",
+      "parent": "nrem_sleep",
+      "universum_id": 1,
+      "terms": [
+        [
+          "сон человека на стадии N2",
+          "ru"
+        ],
+        [
+          "human stage N2 sleep",
+          "en"
+        ]
+      ],
+      "reason": "Human non-REM sleeping during stage 2; no fixed duration, frequency or diagnostic condition is encoded. Source: https://www.nhlbi.nih.gov/health/sleep/stages-of-sleep"
+    },
+    {
+      "key": "nrem_n3",
+      "name": "сон человека на стадии N3",
+      "parent": "nrem_sleep",
+      "universum_id": 1,
+      "terms": [
+        [
+          "сон человека на стадии N3",
+          "ru"
+        ],
+        [
+          "human stage N3 sleep",
+          "en"
+        ],
+        [
+          "human slow-wave sleep",
+          "en"
+        ],
+        [
+          "глубокий сон человека",
+          "ru"
+        ]
+      ],
+      "reason": "Human non-REM sleeping during the deep, slow-wave stage; it is narrower than non-REM sleep overall. Source: https://www.nhlbi.nih.gov/health/sleep/stages-of-sleep"
+    },
+    {
+      "key": "sleep_duration",
+      "name": "длительность сна",
+      "parent": 5019,
+      "universum_id": 1,
+      "terms": [
+        [
+          "длительность сна",
+          "ru"
+        ],
+        [
+          "sleep duration",
+          "en"
+        ]
+      ],
+      "reason": "The duration of a sleeping episode; a quantity distinct from the process, state and occupied time interval."
+    },
+    {
+      "key": "sleep_duration_measurement",
+      "name": "измерение длительности сна",
+      "parent": 24558,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение длительности сна",
+          "ru"
+        ],
+        [
+          "sleep duration measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of how long a sleeping episode lasts; no target value or health recommendation."
+    },
+    {
+      "key": "howl_sound",
+      "name": "вой (слышимый голосовой звук)",
+      "parent": 40,
+      "universum_id": 1,
+      "terms": [
+        [
+          "вой (слышимый голосовой звук)",
+          "ru"
+        ],
+        [
+          "howl (vocal sound)",
+          "en"
+        ]
+      ],
+      "reason": "The perceived howl produced by a person or animal, distinct from producing it. Exclude analogous wind and machinery sounds. OEWN 2025: oewn-07399967-n."
+    },
+    {
+      "key": "raving_speech",
+      "name": "бредить (бессвязно говорить)",
+      "parent": 24433,
+      "universum_id": 1,
+      "terms": [
+        [
+          "бредить (бессвязно говорить)",
+          "ru"
+        ],
+        [
+          "raving (incoherent vocal speech)",
+          "en"
+        ],
+        [
+          "бредить",
+          "ru"
+        ]
+      ],
+      "reason": "Incoherent vocal speech in a partly uncontrolled or altered state; this lexical behavior is not itself a medical diagnosis. Exclude enthusiastic praise and figurative obsession. Source: https://ruslang.ru/sites/default/files/2024-02/%D0%90%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9%20%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C%20%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0.%20%D0%A2%D0%BE%D0%BC%201.pdf"
+    }
+  ],
+  "renames": [
+    {
+      "id": 5846,
+      "before": "настроение",
+      "name": "настроение (эмоциональное состояние)",
+      "terms": [],
+      "reason": "Select the feeling-state sense, excluding grammatical mood, tuning and setting up. OEWN 2025: oewn-07566518-n."
+    },
+    {
+      "id": 205,
+      "before": "сон",
+      "name": "сон (физиологический процесс)",
+      "terms": [],
+      "reason": "Keep the established physiological process and its bearer, purpose and study relations; introduce a separate asleep state. OEWN 2025: oewn-00859826-n."
+    },
+    {
+      "id": 6646,
+      "before": "засыпание",
+      "name": "засыпание (переход ко сну)",
+      "terms": [],
+      "reason": "Qualify the transition into sleep, excluding the homonymous filling or covering with loose material."
+    },
+    {
+      "id": 7226,
+      "before": "дремание",
+      "name": "дремота (состояние лёгкого сна)",
+      "terms": [],
+      "reason": "Select being in light sleep; do not equate it with merely feeling sleepy. Source: https://sensefreq.ruslang.ru/w/RNC%20(verbs)/%D0%B4%D1%80%D0%B5%D0%BC%D0%B0%D1%82%D1%8C"
+    },
+    {
+      "id": 6154,
+      "before": "выть",
+      "name": "выть (голосовое действие)",
+      "terms": [],
+      "reason": "Select emitting a vocal howl rather than analogous wind noise or laughter. OEWN 2025: oewn-01048804-v."
+    },
+    {
+      "id": 7175,
+      "before": "взвыть",
+      "name": "взвыть (издать вой голосом)",
+      "terms": [],
+      "reason": "Select the sudden emission of a vocal howl; exclude non-vocal figurative uses."
+    },
+    {
+      "id": 19387,
+      "before": "бредение",
+      "name": "брести (ходьба)",
+      "terms": [],
+      "reason": "Use the attested motion verb for walking slowly or with difficulty. Separate it from бредить. Source: https://gramota.ru/poisk?mode=slovari&query=%D1%80%D0%B5%D1%81%D1%82%D0%B8&simple=0"
+    },
+    {
+      "id": 3900,
+      "before": "крыться",
+      "name": "крыться (быть скрытым)",
+      "terms": [],
+      "reason": "Select the already translated being-hidden state, rather than an active hiding action."
+    },
+    {
+      "id": 4260,
+      "before": "продержаться",
+      "name": "продержаться (сохранить состояние)",
+      "terms": [],
+      "reason": "Select remaining in a condition or usable for a period, rather than deliberate social resistance. Source: https://slovar.cc/rus/efremova/220076.html"
+    },
+    {
+      "id": 4402,
+      "before": "состояться",
+      "name": "состояться (о событии)",
+      "terms": [],
+      "reason": "Select an event actually occurring, excluding personal success or professional fulfillment. Source: https://gramota.ru/poisk?mode=all&query=%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D1%82%D1%81%D1%8F&simple=0"
+    }
+  ],
+  "terms": [
+    {
+      "id": 5846,
+      "name": "настроение (эмоциональное состояние)",
+      "terms": [
+        [
+          "mood (emotional state)",
+          "en"
+        ],
+        [
+          "mood",
+          "en"
+        ]
+      ],
+      "reason": "Supply the ordinary emotional-state English term, with a qualified alias. OEWN 2025: oewn-07566518-n."
+    },
+    {
+      "id": 205,
+      "name": "сон (физиологический процесс)",
+      "terms": [
+        [
+          "sleeping (physiological process)",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the selected process while retaining established sleep and Russian lookup aliases. OEWN 2025: oewn-00859826-n."
+    },
+    {
+      "id": 15847,
+      "name": "бодрствование",
+      "terms": [
+        [
+          "wakefulness (awake state)",
+          "en"
+        ],
+        [
+          "waking state",
+          "en"
+        ],
+        [
+          "бодрствовать",
+          "ru"
+        ]
+      ],
+      "reason": "Use the existing wakefulness record for the waking state, excluding insomnia and alertness as narrower meanings. OEWN 2025: oewn-05686315-n."
+    },
+    {
+      "id": 6646,
+      "name": "засыпание (переход ко сну)",
+      "terms": [
+        [
+          "falling asleep",
+          "en"
+        ],
+        [
+          "sleep onset",
+          "en"
+        ],
+        [
+          "засыпать (переход ко сну)",
+          "ru"
+        ]
+      ],
+      "reason": "Supply the sleep-transition vocabulary while retaining the existing physiological-process genus."
+    },
+    {
+      "id": 7226,
+      "name": "дремота (состояние лёгкого сна)",
+      "terms": [
+        [
+          "dozing state",
+          "en"
+        ],
+        [
+          "дремота",
+          "ru"
+        ],
+        [
+          "дремать",
+          "ru"
+        ]
+      ],
+      "reason": "Retain the existing state record and attested Russian forms. Dozing is distinct from the sleepy tendency before sleep."
+    },
+    {
+      "id": 6154,
+      "name": "выть (голосовое действие)",
+      "terms": [
+        [
+          "howling (vocal action)",
+          "en"
+        ],
+        [
+          "to howl (vocal action)",
+          "en"
+        ]
+      ],
+      "reason": "Separate the vocal action from the emitted sound. OEWN 2025: oewn-01048804-v."
+    },
+    {
+      "id": 7175,
+      "name": "взвыть (издать вой голосом)",
+      "terms": [
+        [
+          "to let out a howl",
+          "en"
+        ]
+      ],
+      "reason": "Supply a genuine English phrase for the selected vocal action."
+    },
+    {
+      "id": 19387,
+      "name": "брести (ходьба)",
+      "terms": [
+        [
+          "trudging",
+          "en"
+        ],
+        [
+          "to trudge",
+          "en"
+        ],
+        [
+          "брести",
+          "ru"
+        ]
+      ],
+      "reason": "Preserve the attested walking sense with proper language tags. OEWN 2025: oewn-01925197-v."
+    },
+    {
+      "id": 4031,
+      "name": "оспаривать",
+      "terms": [
+        [
+          "disputing a claim",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the existing communicative contesting sense; exclude a sporting competition."
+    },
+    {
+      "id": 4260,
+      "name": "продержаться (сохранить состояние)",
+      "terms": [
+        [
+          "remaining in a condition for a time",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the persistence-state reading; the old hold-out aliases remain contextual lookup terms."
+    },
+    {
+      "id": 4402,
+      "name": "состояться (о событии)",
+      "terms": [
+        [
+          "taking place (event occurrence)",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the occurrence sense without treating every grammatical use of the verb as an event. OEWN 2025: oewn-00340744-v."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 4790,
+      "term": "веселое",
+      "lang": "en",
+      "reason": "Russian adjective mislabeled as English; retain its correctly tagged Russian forms."
+    },
+    {
+      "id": 5846,
+      "term": "настроиение",
+      "lang": "ru",
+      "reason": "Malformed generated spelling; retain the attested настроение."
+    },
+    {
+      "id": 5846,
+      "term": "НАСТРОИТЬ",
+      "lang": "en",
+      "reason": "Russian verb mislabeled as English and referring to tuning/setting, not the selected noun mood."
+    },
+    {
+      "id": 15847,
+      "term": "бодрствоваание",
+      "lang": "ru",
+      "reason": "Malformed generated spelling; preserve бодрствование and add the correctly spelled verb."
+    },
+    {
+      "id": 15847,
+      "term": "БОДРСТВОВАТЬ",
+      "lang": "en",
+      "reason": "Russian verb mislabeled as English; a correctly tagged Russian term and genuine English terms replace it."
+    },
+    {
+      "id": 6646,
+      "term": "засыпаание",
+      "lang": "ru",
+      "reason": "Malformed generated spelling; preserve засыпание."
+    },
+    {
+      "id": 6646,
+      "term": "ЗАСЫПАТЬ",
+      "lang": "en",
+      "reason": "Russian homonymous verb mislabeled as English; replace with genuine English and a qualified Russian alias."
+    },
+    {
+      "id": 7226,
+      "term": "дремаание",
+      "lang": "ru",
+      "reason": "Malformed generated spelling; preserve the existing дремание and attested дремать."
+    },
+    {
+      "id": 7226,
+      "term": "ДРЕМАТЬ",
+      "lang": "en",
+      "reason": "Russian verb mislabeled as English; keep it with the correct language tag."
+    },
+    {
+      "id": 6154,
+      "term": "ВЫТЬ",
+      "lang": "en",
+      "reason": "Russian verb mislabeled as English; its Russian term remains."
+    },
+    {
+      "id": 7175,
+      "term": "ВЗВЫТЬ",
+      "lang": "en",
+      "reason": "Russian verb mislabeled as English; its Russian term remains."
+    },
+    {
+      "id": 19387,
+      "term": "бредение",
+      "lang": "ru",
+      "reason": "An ambiguous generated label for two different verbs; replace it with attested, qualified senses. The archived form is not declared universally unattested."
+    },
+    {
+      "id": 19387,
+      "term": "бредиение",
+      "lang": "ru",
+      "reason": "Malformed generated spelling; replace with the attested verb for each meaning."
+    },
+    {
+      "id": 19387,
+      "term": "брестие",
+      "lang": "ru",
+      "reason": "Unsupported generated nominalization; retain the attested verb брести."
+    },
+    {
+      "id": 19387,
+      "term": "БРЕСТИ",
+      "lang": "en",
+      "reason": "Russian motion verb mislabeled as English; preserve брести with the correct tag."
+    },
+    {
+      "id": 19387,
+      "term": "БРЕДИТЬ",
+      "lang": "en",
+      "reason": "Russian verb mislabeled as English and belonging to a different sense; represent the vocal meaning separately."
+    }
+  ],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 7255,
+      "before": [
+        4790,
+        "14",
+        49,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          4790,
+          "14",
+          "emotional_property",
+          null,
+          1
+        ]
+      ],
+      "reason": "The selected cheerful adjective denotes an emotional property, not a moral quality. OEWN 2025: oewn-00363547-a."
+    },
+    {
+      "id": 9895,
+      "before": [
+        4790,
+        "14",
+        218,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [],
+      "reason": "A cheerful property is not an emotion process; the corresponding mood is represented separately."
+    },
+    {
+      "id": 7278,
+      "before": [
+        4813,
+        "14",
+        49,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          4813,
+          "14",
+          "emotional_property",
+          null,
+          1
+        ]
+      ],
+      "reason": "The selected sad adjective denotes an emotional property, not a moral quality. OEWN 2025: oewn-01364779-a."
+    },
+    {
+      "id": 9930,
+      "before": [
+        5846,
+        "14",
+        218,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          5846,
+          "14",
+          "emotional_state",
+          null,
+          1
+        ]
+      ],
+      "reason": "Mood is a feeling state in this local ontology; the inherited emotion parent is a mental process. OEWN 2025: oewn-07566518-n."
+    },
+    {
+      "id": 10076,
+      "before": [
+        205,
+        "14",
+        2633,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [],
+      "reason": "Do not classify the sleeping process simultaneously as a state. The distinct state is newly represented without redirecting the existing process facts."
+    },
+    {
+      "id": 19931,
+      "before": [
+        15847,
+        "14",
+        2633,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          15847,
+          "14",
+          "physiological_state",
+          null,
+          1
+        ]
+      ],
+      "reason": "Wakefulness in the selected sense is the condition of being awake, not the act of waking. OEWN 2025: oewn-05686315-n."
+    },
+    {
+      "id": 11310,
+      "before": [
+        7226,
+        "14",
+        2633,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          7226,
+          "14",
+          "asleep_state",
+          null,
+          1
+        ]
+      ],
+      "reason": "The selected dozing state is a light-sleep state. The lexicon also offers a process sense, which is not imported here. Source: https://sensefreq.ruslang.ru/w/RNC%20(verbs)/%D0%B4%D1%80%D0%B5%D0%BC%D0%B0%D1%82%D1%8C"
+    },
+    {
+      "id": 10238,
+      "before": [
+        6154,
+        "14",
+        40,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          6154,
+          "14",
+          24433,
+          null,
+          1
+        ]
+      ],
+      "reason": "Producing a vocal howl is a vocalization, not a subtype of the sound property. OEWN 2025: oewn-01048804-v."
+    },
+    {
+      "id": 11259,
+      "before": [
+        7175,
+        "14",
+        64,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          7175,
+          "14",
+          6154,
+          null,
+          1
+        ]
+      ],
+      "reason": "A sudden vocal howl is a restricted howling action. It need not be an intentional communication."
+    },
+    {
+      "id": 29104,
+      "before": [
+        7175,
+        "14",
+        40,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [],
+      "reason": "The action producing the howl is not itself a sound property."
+    },
+    {
+      "id": 12121,
+      "before": [
+        19387,
+        "14",
+        55,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          19387,
+          "14",
+          207,
+          null,
+          1
+        ]
+      ],
+      "reason": "The selected trudging motion is walking; use the existing nearer genus. OEWN 2025: oewn-01925197-v. Source: https://gramota.ru/poisk?mode=slovari&query=%D1%80%D0%B5%D1%81%D1%82%D0%B8&simple=0"
+    },
+    {
+      "id": 23471,
+      "before": [
+        19387,
+        "14",
+        202,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [],
+      "reason": "The walking verb брести was conflated with бредить; do not infer a physiological-process genus from that second verb."
+    },
+    {
+      "id": 29011,
+      "before": [
+        4132,
+        "14",
+        2633,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [],
+      "reason": "Being subject to selects an existing relation sense, not a separate state genus. Preserve relation edge 6597."
+    },
+    {
+      "id": 28961,
+      "before": [
+        3900,
+        "14",
+        5017,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [],
+      "reason": "The selected hidden state is not the physical action of hiding; preserve the existing state genus."
+    },
+    {
+      "id": 28994,
+      "before": [
+        4031,
+        "14",
+        2633,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [],
+      "reason": "Disputing a claim is a communicative action, not a state."
+    },
+    {
+      "id": 29086,
+      "before": [
+        4457,
+        "14",
+        2633,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [],
+      "reason": "According someone an honor or attention selects a social action, not the resulting state."
+    },
+    {
+      "id": 29040,
+      "before": [
+        4260,
+        "14",
+        63,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [],
+      "reason": "Remaining in a condition is not necessarily a social action; the selected state meaning also applies to inanimate things. Source: https://slovar.cc/rus/efremova/220076.html"
+    },
+    {
+      "id": 6867,
+      "before": [
+        4402,
+        "14",
+        2631,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          4402,
+          "14",
+          2632,
+          null,
+          1
+        ]
+      ],
+      "reason": "The selected occurrence belongs to the event family in this ontology. OEWN 2025: oewn-00340744-v. Source: https://gramota.ru/poisk?mode=all&query=%D1%81%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D1%82%D1%81%D1%8F&simple=0"
+    },
+    {
+      "id": 29070,
+      "before": [
+        4402,
+        "14",
+        2633,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [],
+      "reason": "An event taking place is not the state of an entity."
+    }
+  ],
+  "edges": [
+    {
+      "subject": "cheerful_mood",
+      "kod": "20",
+      "object": 4790,
+      "universum_id": 1,
+      "reason": "This qualified mood bears the cheerful property."
+    },
+    {
+      "subject": "sad_mood",
+      "kod": "20",
+      "object": 4813,
+      "universum_id": 1,
+      "reason": "This qualified mood bears the sad property."
+    },
+    {
+      "subject": "awakening",
+      "kod": "70",
+      "object": 15847,
+      "universum_id": 1,
+      "reason": "Waking from sleep results in the waking state; no claim about every brief arousal is added."
+    },
+    {
+      "subject": "short_daytime_sleep",
+      "kod": "14",
+      "object": "daytime_sleep",
+      "universum_id": 1,
+      "reason": "A short daytime sleep also satisfies the daytime restriction."
+    },
+    {
+      "subject": "sleep_duration_measurement",
+      "kod": "27",
+      "object": "sleep_duration",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement."
+    },
+    {
+      "subject": 205,
+      "kod": "20",
+      "object": "sleep_duration",
+      "universum_id": 1,
+      "reason": "A sleeping process has a duration; no numerical value is asserted."
+    },
+    {
+      "subject": 6646,
+      "kod": "70",
+      "object": "asleep_state",
+      "universum_id": 1,
+      "reason": "The transition into sleep results in the asleep state."
+    },
+    {
+      "subject": 6154,
+      "kod": "70",
+      "object": "howl_sound",
+      "universum_id": 1,
+      "reason": "The vocal action produces the perceived howl."
+    }
+  ],
+  "checks": [
+    {
+      "subject": "mental_state",
+      "kod": "14",
+      "object": 2633,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "emotional_state",
+      "kod": "14",
+      "object": "mental_state",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "emotional_property",
+      "kod": "14",
+      "object": 47,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cheerful_mood",
+      "kod": "14",
+      "object": 5846,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sad_mood",
+      "kod": "14",
+      "object": 5846,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cheerful_mood",
+      "kod": "20",
+      "object": 4790,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sad_mood",
+      "kod": "20",
+      "object": 4813,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 4790,
+      "kod": "14",
+      "object": 49,
+      "present": false
+    },
+    {
+      "subject": 4790,
+      "kod": "14",
+      "object": "emotional_property",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 4790,
+      "kod": "14",
+      "object": 218,
+      "present": false
+    },
+    {
+      "subject": 4813,
+      "kod": "14",
+      "object": 49,
+      "present": false
+    },
+    {
+      "subject": 4813,
+      "kod": "14",
+      "object": "emotional_property",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5846,
+      "kod": "14",
+      "object": 218,
+      "present": false
+    },
+    {
+      "subject": 5846,
+      "kod": "14",
+      "object": "emotional_state",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "physiological_state",
+      "kod": "14",
+      "object": 2633,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "asleep_state",
+      "kod": "14",
+      "object": "physiological_state",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "awakening",
+      "kod": "14",
+      "object": 202,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "awakening",
+      "kod": "70",
+      "object": 15847,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sleepiness",
+      "kod": "14",
+      "object": "physiological_state",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "short_sleep",
+      "kod": "14",
+      "object": 205,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "daytime_sleep",
+      "kod": "14",
+      "object": 205,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "short_daytime_sleep",
+      "kod": "14",
+      "object": "short_sleep",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "short_daytime_sleep",
+      "kod": "14",
+      "object": "daytime_sleep",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "human_sleep",
+      "kod": "14",
+      "object": 205,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rem_sleep",
+      "kod": "14",
+      "object": "human_sleep",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "nrem_sleep",
+      "kod": "14",
+      "object": "human_sleep",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "nrem_n1",
+      "kod": "14",
+      "object": "nrem_sleep",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "nrem_n2",
+      "kod": "14",
+      "object": "nrem_sleep",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "nrem_n3",
+      "kod": "14",
+      "object": "nrem_sleep",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sleep_duration",
+      "kod": "14",
+      "object": 5019,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sleep_duration_measurement",
+      "kod": "14",
+      "object": 24558,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sleep_duration_measurement",
+      "kod": "27",
+      "object": "sleep_duration",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 205,
+      "kod": "20",
+      "object": "sleep_duration",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 205,
+      "kod": "14",
+      "object": 2633,
+      "present": false
+    },
+    {
+      "subject": 15847,
+      "kod": "14",
+      "object": 2633,
+      "present": false
+    },
+    {
+      "subject": 15847,
+      "kod": "14",
+      "object": "physiological_state",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 6646,
+      "kod": "70",
+      "object": "asleep_state",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 7226,
+      "kod": "14",
+      "object": 2633,
+      "present": false
+    },
+    {
+      "subject": 7226,
+      "kod": "14",
+      "object": "asleep_state",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "howl_sound",
+      "kod": "14",
+      "object": 40,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 6154,
+      "kod": "14",
+      "object": 40,
+      "present": false
+    },
+    {
+      "subject": 6154,
+      "kod": "14",
+      "object": 24433,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 6154,
+      "kod": "70",
+      "object": "howl_sound",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 7175,
+      "kod": "14",
+      "object": 64,
+      "present": false
+    },
+    {
+      "subject": 7175,
+      "kod": "14",
+      "object": 6154,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 7175,
+      "kod": "14",
+      "object": 40,
+      "present": false
+    },
+    {
+      "subject": 19387,
+      "kod": "14",
+      "object": 55,
+      "present": false
+    },
+    {
+      "subject": 19387,
+      "kod": "14",
+      "object": 207,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 19387,
+      "kod": "14",
+      "object": 202,
+      "present": false
+    },
+    {
+      "subject": "raving_speech",
+      "kod": "14",
+      "object": 24433,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 4132,
+      "kod": "14",
+      "object": 2633,
+      "present": false
+    },
+    {
+      "subject": 3900,
+      "kod": "14",
+      "object": 5017,
+      "present": false
+    },
+    {
+      "subject": 4031,
+      "kod": "14",
+      "object": 2633,
+      "present": false
+    },
+    {
+      "subject": 4457,
+      "kod": "14",
+      "object": 2633,
+      "present": false
+    },
+    {
+      "subject": 4260,
+      "kod": "14",
+      "object": 63,
+      "present": false
+    },
+    {
+      "subject": 4402,
+      "kod": "14",
+      "object": 2631,
+      "present": false
+    },
+    {
+      "subject": 4402,
+      "kod": "14",
+      "object": 2632,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 4402,
+      "kod": "14",
+      "object": 2633,
+      "present": false
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "mental_state",
+      "ancestor": 2633,
+      "present": true
+    },
+    {
+      "subject": "emotional_state",
+      "ancestor": "mental_state",
+      "present": true
+    },
+    {
+      "subject": "emotional_property",
+      "ancestor": 47,
+      "present": true
+    },
+    {
+      "subject": "cheerful_mood",
+      "ancestor": 5846,
+      "present": true
+    },
+    {
+      "subject": "sad_mood",
+      "ancestor": 5846,
+      "present": true
+    },
+    {
+      "subject": "physiological_state",
+      "ancestor": 2633,
+      "present": true
+    },
+    {
+      "subject": "asleep_state",
+      "ancestor": "physiological_state",
+      "present": true
+    },
+    {
+      "subject": "awakening",
+      "ancestor": 202,
+      "present": true
+    },
+    {
+      "subject": "sleepiness",
+      "ancestor": "physiological_state",
+      "present": true
+    },
+    {
+      "subject": "short_sleep",
+      "ancestor": 205,
+      "present": true
+    },
+    {
+      "subject": "daytime_sleep",
+      "ancestor": 205,
+      "present": true
+    },
+    {
+      "subject": "short_daytime_sleep",
+      "ancestor": "short_sleep",
+      "present": true
+    },
+    {
+      "subject": "human_sleep",
+      "ancestor": 205,
+      "present": true
+    },
+    {
+      "subject": "rem_sleep",
+      "ancestor": "human_sleep",
+      "present": true
+    },
+    {
+      "subject": "nrem_sleep",
+      "ancestor": "human_sleep",
+      "present": true
+    },
+    {
+      "subject": "nrem_n1",
+      "ancestor": "nrem_sleep",
+      "present": true
+    },
+    {
+      "subject": "nrem_n2",
+      "ancestor": "nrem_sleep",
+      "present": true
+    },
+    {
+      "subject": "nrem_n3",
+      "ancestor": "nrem_sleep",
+      "present": true
+    },
+    {
+      "subject": "sleep_duration",
+      "ancestor": 5019,
+      "present": true
+    },
+    {
+      "subject": "sleep_duration_measurement",
+      "ancestor": 24558,
+      "present": true
+    },
+    {
+      "subject": "howl_sound",
+      "ancestor": 40,
+      "present": true
+    },
+    {
+      "subject": "raving_speech",
+      "ancestor": 24433,
+      "present": true
+    },
+    {
+      "subject": 4790,
+      "ancestor": "emotional_property",
+      "present": true
+    },
+    {
+      "subject": 4813,
+      "ancestor": "emotional_property",
+      "present": true
+    },
+    {
+      "subject": 5846,
+      "ancestor": "mental_state",
+      "present": true
+    },
+    {
+      "subject": 15847,
+      "ancestor": "physiological_state",
+      "present": true
+    },
+    {
+      "subject": 7226,
+      "ancestor": "asleep_state",
+      "present": true
+    },
+    {
+      "subject": 6154,
+      "ancestor": 24433,
+      "present": true
+    },
+    {
+      "subject": 7175,
+      "ancestor": 24433,
+      "present": true
+    },
+    {
+      "subject": 19387,
+      "ancestor": 207,
+      "present": true
+    },
+    {
+      "subject": 4402,
+      "ancestor": 2632,
+      "present": true
+    },
+    {
+      "subject": "short_daytime_sleep",
+      "ancestor": "daytime_sleep",
+      "present": true
+    },
+    {
+      "subject": "nrem_n3",
+      "ancestor": "human_sleep",
+      "present": true
+    },
+    {
+      "subject": 4790,
+      "ancestor": 49,
+      "present": false
+    },
+    {
+      "subject": 4790,
+      "ancestor": 218,
+      "present": false
+    },
+    {
+      "subject": 4813,
+      "ancestor": 49,
+      "present": false
+    },
+    {
+      "subject": 5846,
+      "ancestor": 2631,
+      "present": false
+    },
+    {
+      "subject": 205,
+      "ancestor": 2633,
+      "present": false
+    },
+    {
+      "subject": "asleep_state",
+      "ancestor": 2631,
+      "present": false
+    },
+    {
+      "subject": 15847,
+      "ancestor": 2631,
+      "present": false
+    },
+    {
+      "subject": 7226,
+      "ancestor": 2631,
+      "present": false
+    },
+    {
+      "subject": 6154,
+      "ancestor": 40,
+      "present": false
+    },
+    {
+      "subject": 7175,
+      "ancestor": 40,
+      "present": false
+    },
+    {
+      "subject": 7175,
+      "ancestor": 64,
+      "present": false
+    },
+    {
+      "subject": 19387,
+      "ancestor": 202,
+      "present": false
+    },
+    {
+      "subject": "raving_speech",
+      "ancestor": 55,
+      "present": false
+    },
+    {
+      "subject": "howl_sound",
+      "ancestor": 24433,
+      "present": false
+    },
+    {
+      "subject": 4132,
+      "ancestor": 2633,
+      "present": false
+    },
+    {
+      "subject": 3900,
+      "ancestor": 19,
+      "present": false
+    },
+    {
+      "subject": 4031,
+      "ancestor": 2633,
+      "present": false
+    },
+    {
+      "subject": 4457,
+      "ancestor": 2633,
+      "present": false
+    },
+    {
+      "subject": 4260,
+      "ancestor": 19,
+      "present": false
+    },
+    {
+      "subject": 4402,
+      "ancestor": 2633,
+      "present": false
+    },
+    {
+      "subject": 4402,
+      "ancestor": 2631,
+      "present": false
+    },
+    {
+      "subject": "sleepiness",
+      "ancestor": "asleep_state",
+      "present": false
+    },
+    {
+      "subject": "asleep_state",
+      "ancestor": "sleepiness",
+      "present": false
+    },
+    {
+      "subject": "short_sleep",
+      "ancestor": "daytime_sleep",
+      "present": false
+    },
+    {
+      "subject": "daytime_sleep",
+      "ancestor": "short_sleep",
+      "present": false
+    },
+    {
+      "subject": "nrem_sleep",
+      "ancestor": "nrem_n3",
+      "present": false
+    },
+    {
+      "subject": "rem_sleep",
+      "ancestor": "nrem_sleep",
+      "present": false
+    },
+    {
+      "subject": "sleep_duration",
+      "ancestor": 205,
+      "present": false
+    },
+    {
+      "subject": "sleep_duration_measurement",
+      "ancestor": "sleep_duration",
+      "present": false
+    },
+    {
+      "subject": "cheerful_mood",
+      "ancestor": 4790,
+      "present": false
+    },
+    {
+      "subject": "sad_mood",
+      "ancestor": 4813,
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": "mental_state",
+      "term": "психическое состояние",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "mental_state",
+      "term": "mental state",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "emotional_state",
+      "term": "эмоциональное состояние",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "emotional_state",
+      "term": "emotional state",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "emotional_property",
+      "term": "эмоциональная характеристика",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "emotional_property",
+      "term": "emotional characteristic",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cheerful_mood",
+      "term": "весёлое настроение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "cheerful_mood",
+      "term": "cheerful mood",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "sad_mood",
+      "term": "грустное настроение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "sad_mood",
+      "term": "sad mood",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 4790,
+      "term": "веселое",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 5846,
+      "term": "настроение (эмоциональное состояние)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 5846,
+      "term": "mood (emotional state)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5846,
+      "term": "mood",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5846,
+      "term": "настроиение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 5846,
+      "term": "НАСТРОИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "physiological_state",
+      "term": "физиологическое состояние",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "physiological_state",
+      "term": "physiological state",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "asleep_state",
+      "term": "сон (состояние)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "asleep_state",
+      "term": "sleep state",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "asleep_state",
+      "term": "being asleep",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "awakening",
+      "term": "пробуждение от сна",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "awakening",
+      "term": "awakening from sleep",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "sleepiness",
+      "term": "сонливость",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "sleepiness",
+      "term": "sleepiness",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "sleepiness",
+      "term": "drowsiness",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "short_sleep",
+      "term": "кратковременный сон",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "short_sleep",
+      "term": "nap (short sleep)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "short_sleep",
+      "term": "short sleep",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "daytime_sleep",
+      "term": "дневной сон",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "daytime_sleep",
+      "term": "daytime sleep",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "short_daytime_sleep",
+      "term": "кратковременный дневной сон",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "short_daytime_sleep",
+      "term": "short daytime sleep",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "human_sleep",
+      "term": "сон человека (физиологический процесс)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "human_sleep",
+      "term": "human sleep (physiological process)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rem_sleep",
+      "term": "сон человека в фазе REM",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rem_sleep",
+      "term": "human REM sleep",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rem_sleep",
+      "term": "быстрый сон человека",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "nrem_sleep",
+      "term": "сон человека в фазе NREM",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "nrem_sleep",
+      "term": "human non-REM sleep",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "nrem_sleep",
+      "term": "медленный сон человека",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "nrem_n1",
+      "term": "сон человека на стадии N1",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "nrem_n1",
+      "term": "human stage N1 sleep",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "nrem_n2",
+      "term": "сон человека на стадии N2",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "nrem_n2",
+      "term": "human stage N2 sleep",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "nrem_n3",
+      "term": "сон человека на стадии N3",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "nrem_n3",
+      "term": "human stage N3 sleep",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "nrem_n3",
+      "term": "human slow-wave sleep",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "nrem_n3",
+      "term": "глубокий сон человека",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "sleep_duration",
+      "term": "длительность сна",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "sleep_duration",
+      "term": "sleep duration",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "sleep_duration_measurement",
+      "term": "измерение длительности сна",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "sleep_duration_measurement",
+      "term": "sleep duration measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 205,
+      "term": "сон (физиологический процесс)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 205,
+      "term": "sleeping (physiological process)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 15847,
+      "term": "wakefulness (awake state)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 15847,
+      "term": "waking state",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 15847,
+      "term": "бодрствовать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 15847,
+      "term": "бодрствоваание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 15847,
+      "term": "БОДРСТВОВАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 6646,
+      "term": "засыпание (переход ко сну)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 6646,
+      "term": "falling asleep",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 6646,
+      "term": "sleep onset",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 6646,
+      "term": "засыпать (переход ко сну)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 6646,
+      "term": "засыпаание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 6646,
+      "term": "ЗАСЫПАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 7226,
+      "term": "дремота (состояние лёгкого сна)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 7226,
+      "term": "dozing state",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 7226,
+      "term": "дремота",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 7226,
+      "term": "дремать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 7226,
+      "term": "дремаание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 7226,
+      "term": "ДРЕМАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "howl_sound",
+      "term": "вой (слышимый голосовой звук)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "howl_sound",
+      "term": "howl (vocal sound)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 6154,
+      "term": "выть (голосовое действие)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 6154,
+      "term": "howling (vocal action)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 6154,
+      "term": "to howl (vocal action)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 6154,
+      "term": "ВЫТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 7175,
+      "term": "взвыть (издать вой голосом)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 7175,
+      "term": "to let out a howl",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 7175,
+      "term": "ВЗВЫТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 19387,
+      "term": "брести (ходьба)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 19387,
+      "term": "trudging",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 19387,
+      "term": "to trudge",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 19387,
+      "term": "брести",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 19387,
+      "term": "бредение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 19387,
+      "term": "бредиение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 19387,
+      "term": "брестие",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 19387,
+      "term": "БРЕСТИ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 19387,
+      "term": "БРЕДИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "raving_speech",
+      "term": "бредить (бессвязно говорить)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "raving_speech",
+      "term": "raving (incoherent vocal speech)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "raving_speech",
+      "term": "бредить",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 3900,
+      "term": "крыться (быть скрытым)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 4031,
+      "term": "disputing a claim",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 4260,
+      "term": "продержаться (сохранить состояние)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 4260,
+      "term": "remaining in a condition for a time",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 4402,
+      "term": "состояться (о событии)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 4402,
+      "term": "taking place (event occurrence)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 19387,
+      "term": "бредить",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": "raving_speech",
+      "term": "брести",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": "asleep_state",
+      "term": "sleep",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "sleepiness",
+      "term": "dozing state",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "howl_sound",
+      "term": "howling (vocal action)",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "short_sleep",
+      "term": "nap",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "nrem_sleep",
+      "term": "human slow-wave sleep",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "emotional_state",
+      "term": "emotion",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

@@ -3,18 +3,89 @@
 Update this file at the end of each content session. Continue from the first
 unfinished item in [PLAN.md](PLAN.md), using the current snapshot below.
 
+**Publication policy:** Q10–Q39 are included in the Q39 repository and site
+publication requested on 2026-10-09. Continue further filling locally unless
+publication is requested. Experiments remain local.
+
 ## Current position
 
-- **Latest data work — Q9 (2026-10-09):** mathematical sets, cardinality
-  properties, and set operations are applied and published to https://conceptuum.su.
-  Corrected collection/set, subset/JRE, runtime, and concept-extension senses.
-  Added 19 concepts, merged one archived duplicate, renamed five records,
-  rejected seven relations, and added 50. All 23 explicit negations and all
-  unrelated existing edges are preserved; the relation grammar is unchanged.
-  All six live tables match the local database. Interface revision remains
-  `2026-10-08.4`. See the [Q9 report](docs/quality/2026-10-09-q9.md).
-  Next: mixed data-type, data-structure, and model children; then fraction,
-  percent, ratio, and units. The approximately 100-meaning pilot is in progress.
+- **Published data — Q39 (2026-10-09):** 13,456 concepts, 17,350 accepted edges,
+  and 37,825 terms. All six live tables match the reviewed snapshot with
+  timestamps compared in UTC. The SQL export explicitly preserves
+  `utf8_general_ci` for compatibility with the site's MariaDB 11.8.6.
+  Interface revision remains `2026-10-08.4`. See the
+  [publication record](docs/quality/2026-10-09-q39.md#publication).
+
+## Review history
+
+The following entries record each original review session. Statements about
+local-only work precede the combined Q39 repository and site publication.
+
+- **Latest local data — Q39 (2026-10-09):** Added 41 concepts and 106 relations in U1, with ten assertion repairs, five label changes and ten term removals. Material and food-use families intersect without making all jars or bottles glass or food containers. Pastry brushes and bench scrapers gain broader genera; sweeping and storage scope are corrected. U1/U3 exclusion scans remain clear. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q39 report](docs/quality/2026-10-09-q39.md) and [active queue](PLAN.md).
+- **Earlier local data — Q38 (2026-10-09):** Added 36 concepts and 64 relations in U3; corrected the relational-algebra genus and label. Namespaces, schema descriptions, query specifications, results, plans, execution and software remain distinct. Key column sets are linked to their separate constraints. U1/U3 scans remain clear, with no baseline term losses. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q38 report](docs/quality/2026-10-09-q38.md) and [active queue](PLAN.md).
+- **Earlier local data — Q37 (2026-10-09):** Added 35 concepts and 68 relations in U1; corrected one assertion and two labels. Motion processes, geometric paths and measured quantities remain distinct. Physical movement actions have explicit targets and resulting processes. Four malformed or mistagged terms are removed; U1/U3 exclusion scans remain clear. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q37 report](docs/quality/2026-10-09-q37.md) and [active queue](PLAN.md).
+- **Earlier local data — Q36 (2026-10-09):** Added 37 concepts and 84 relations in U1; corrected 14 assertions and four labels. Predator roles, taxonomic membership, human hunting occupations, catching activities, traps and bait are distinct. Seven malformed or mistagged terms are removed. U1/U3 exclusion scans remain clear. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q36 report](docs/quality/2026-10-09-q36.md) and [active queue](PLAN.md).
+- **Earlier local data — Q35 (2026-10-09):** Added 27 concepts and 49 relations in U3; corrected seven assertions and five labels. Database data, DBMS software, table structures, constraint rules and transaction operations now have distinct meanings. Six baseline and five transient language-tag errors are cleaned. U1/U3 exclusion scans remain clear. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q35 report](docs/quality/2026-10-09-q35.md) and [active queue](PLAN.md).
+- **Earlier local data — Q34 (2026-10-09):** Added 30 concepts and 64 relations in U3; corrected two assertions and six labels. Jenkins is software, while inherited physical client/server roles retain their facts. Both U1 and U3 remain clear in the shared-descendant exclusion scan. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q34 report](docs/quality/2026-10-09-q34.md) and [active queue](PLAN.md).
+- **Earlier local data — Q33 (2026-10-09):** Added 22 concepts and 39 relations; corrected 19 assertions, 10 labels and 16 term rows. The five remaining U1 shared-descendant exclusion candidates are resolved without deleting their upper exclusions. U1 and U3 each have zero candidates in this specific scan. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q33 report](docs/quality/2026-10-09-q33.md) and [active queue](PLAN.md).
+- **Earlier local data — Q32 (2026-10-09):** Added 28 concepts and 51 relations; corrected seven assertions and two labels, and merged one archived synonym duplicate with all terms retained. Five U1 exclusion candidates remain; U3 has none in the shared-descendant scan. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q32 report](docs/quality/2026-10-09-q32.md) and [active queue](PLAN.md).
+- **Earlier local data — Q31 (2026-10-09):** Added 30 concepts and 47 relations in U3. Rejected the mistaken rest/API attribute without changing either everyday rest sense. HTTP/REST API intersections, method semantics and resource identifiers now have explicit distinctions. Six U1 exclusion candidates remain; the U3 scan has none. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q31 report](docs/quality/2026-10-09-q31.md) and [active queue](PLAN.md).
+- **Earlier local data — Q30 (2026-10-09):** Added 26 concepts and 61 relations; corrected four assertions, one label and six term rows. New food-tool purposes extend existing cookware and utensil families. Six pre-existing U1 exclusion conflict candidates remain, with no new pair or witness. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q30 report](docs/quality/2026-10-09-q30.md) and [active queue](PLAN.md).
+- **Earlier local data — Q29 (2026-10-09):** Added 32 concepts and 67 relations; corrected 10 assertions and two labels. Merged one archived fishing leaf, preserving the rare Russian noun on the survivor. Fishing methods, purposes, equipment and roles are distinct, and six U1 exclusion conflict candidates remain. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q29 report](docs/quality/2026-10-09-q29.md) and [active queue](PLAN.md).
+- **Earlier local data — Q28 (2026-10-09):** Added 27 concepts and 54 relations, corrected eight assertions and eight labels, and removed fourteen malformed or mistagged term rows. Motion types form reviewed intersections. Stopping is a transition, rest is a state, and vector/angular quantities retain their own meanings. Seven U1 conflict candidates remain. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q28 report](docs/quality/2026-10-09-q28.md) and [active queue](PLAN.md).
+- **Earlier local data — Q27 (2026-10-09):** Added 26 concepts and 51 relations; corrected 13 assertions, qualified one label and removed or reassigned 10 term rows. Darkness is a lighting state, pale colours belong to hue and lightness families, and photometric quantities remain distinct from perception. Eight U1 exclusion conflict candidates remain. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q27 report](docs/quality/2026-10-09-q27.md) and [active queue](PLAN.md).
+- **Earlier local data — Q26 (2026-10-09):** Added 32 concepts and 69 relations for family groups, household units and kinship roles. Corrected 28 assertions without merging concepts or removing terms. The family group no longer inherits relation; friendship no longer necessarily inherits kinship. U1 exclusion conflicts fall from 10 to 9, with no new conflicts or witnesses and no changed exclusion edges. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q26 report](docs/quality/2026-10-09-q26.md) and [active queue](PLAN.md).
+- **Earlier local data — Q25 (2026-10-09):** Added 36 concepts and 85 relations for game activities, sports formats, exercise and equipment. Corrected 14 assertions and two canonical labels; moved one physical-object term off an activity. Sport/game and racket/ball intersections are represented without making every sport physical exercise. U1 exclusion conflicts fall from 12 to 10, with no new conflicts or witnesses. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q25 report](docs/quality/2026-10-09-q25.md) and [active queue](PLAN.md).
+- **Earlier local data — Q24 (2026-10-09):** Added 41 concepts and 83 relations for clothing uses, materials, construction and components. Corrected 18 assertions, one canonical label and two lexical errors. Footwear remains clothing; jeans now inherit from trousers and denim clothing. U1 exclusion conflicts fall from 13 to 12, with no new conflicts or witnesses. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q24 report](docs/quality/2026-10-09-q24.md) and [active queue](PLAN.md).
+- **Earlier local data — Q23 (2026-10-09):** Added 28 concepts and 57 relations for dwellings, buildings, parts and rooms. Corrected 21 assertions, two canonical labels and two lexical errors. The house/apartment exclusion is retained while its wrong genus witness is removed. Two universal room-use exclusions are rejected to admit combined uses. U1 exclusion conflicts fall from 14 to 13, with no new conflicts or witnesses. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q23 report](docs/quality/2026-10-09-q23.md) and [active queue](PLAN.md).
+- **Earlier local data — Q22 (2026-10-09):** Added 32 concepts and 70 relations for weather, precipitation, measured quantities and information products. Corrected six relations while retaining reviewed natural and physical-process ancestry. No terms were removed. U1 exclusion conflicts fall from 15 to 14 with no new conflicts or witnesses. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q22 report](docs/quality/2026-10-09-q22.md) and [active queue](PLAN.md).
+- **Earlier local data — Q21 (2026-10-09):** Added 28 concepts and 55 relations for forest types, tree foliage classes and vegetation. Corrected five relations and one English translation. Forest/grove and forest/taiga conflicts are resolved, and forest/jungle disjointness is also rejected. U1 exclusion conflicts fall from 17 to 15 with no new conflicts or witnesses. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q21 report](docs/quality/2026-10-09-q21.md) and [active queue](PLAN.md).
+- **Earlier local data — Q20 (2026-10-09):** Added 21 concepts and 42 relations for materials, solutions, dispersions, phase states and physical joining. Corrected nine relations, four labels and 14 lexical entries. Object/phenomenon and physical/mental-process conflicts are resolved through sense and genus corrections while their exclusions remain unchanged. U1 exclusion conflicts fall from 19 to 17, with no new conflicts or witnesses. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q20 report](docs/quality/2026-10-09-q20.md) and [active queue](PLAN.md).
+- **Earlier local data — Q19 (2026-10-09):** Added 28 concepts and 50 relations for calendars and scheduling. Corrected 17 relations, three labels and eight lexical entries. The Wednesday/environment split resolves the time/space contradiction without removing its exclusion. U1 exclusion conflicts fall from 20 to 19, with no new conflicts or witnesses. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q19 report](docs/quality/2026-10-09-q19.md) and [active queue](PLAN.md).
+- **Earlier local data — Q18 (2026-10-09):** Added 38 concepts and 77 relations for fasteners, threads, washers, tool types and physical installation actions. Corrected 15 relations, three action labels and 12 lexical entries. Rejected false tool/dishware and action/process exclusions; U1 exclusion conflicts with positive genus witnesses fall from 22 to 20, with no new conflicts or witnesses. Remaining candidates need individual review. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q18 report](docs/quality/2026-10-09-q18.md) and [active queue](PLAN.md).
+- **Earlier local data — Q17 (2026-10-09):** Added 35 concepts and 103 relations for cookware, kitchen tools, food processing and cleaning. Corrected 23 relations, qualified the food-peeling label, and removed 20 malformed or mistagged terms. Material claims are scoped to appropriate vessel subtypes; the toaster now has bread-toasting purpose and capability. All explicit negations and grammar rows are preserved. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q17 report](docs/quality/2026-10-09-q17.md) and [active queue](PLAN.md).
+- **Earlier local data — Q16 (2026-10-09):** Added 27 concepts and 41 relations for money, income, pay, expenses, budgets and savings. Consolidated three price-evaluation duplicates; refined four genera and two labels. Corrected payment nonwords and misplaced or mistagged terms. All explicit negations and grammar rows are preserved. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q16 report](docs/quality/2026-10-09-q16.md) and [active queue](PLAN.md).
+- **Earlier local data — Q15 (2026-10-09):** Added 28 concepts and 62 relations for plane geometry, lengths, and angle measurement. Refined six genera, qualified three existing labels, and replaced one misleading English disk translation. All 23 explicit negations and all grammar rows remain unchanged. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q15 report](docs/quality/2026-10-09-q15.md) and [active queue](PLAN.md).
+- **Earlier local data — Q14 (2026-10-09):** Added 54 concepts and 79 relations for physical quantities, derived units, measurement processes, and instruments. Refined one existing genus and qualified resultant force. All old terms, 23 explicit negations, and all grammar rows are preserved. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q14 report](docs/quality/2026-10-09-q14.md) and [active queue](PLAN.md).
+- **Earlier local data — Q13 (2026-10-09):** Added 41 concepts and 58 relations for fractions, ratios, percentages, decimal forms, equation notation, and calculation targets. Mathematical notation is separated from values and programming constructs. No old terms or edges were removed. All 23 explicit negations and all grammar rows are preserved. Local database, SQL, version metadata, and documentation are updated. No commit, push or deployment. See the [Q13 report](docs/quality/2026-10-09-q13.md) and [active queue](PLAN.md).
+- **Earlier local data — Q12 (2026-10-09):** continued the pinned dictionary
+  comparison with 37 concepts and 74 relations for humidity, motion
+  measurement, dimensional tools, and timekeeping. Reviewed 22 existing
+  records, qualified three labels, and withdrew eight relations. Acceleration
+  and diameter now have separate qualified senses. Removed four reviewed bad
+  terms; translation gaps decreased to 7,299. All 23 explicit negations,
+  29 grammar rows, and home contexts are preserved. Local DB, SQL snapshot,
+  version metadata, and documentation are updated; no commit, push or deployment.
+  See the [Q12 report](docs/quality/2026-10-09-q12.md). Next: mathematical ratios,
+  percentages and physical quantities, then the adjacent taxonomy queue.
+  Private review files: `G:\Projects\conceptuum-backups\quality-q12-20261009`.
+- **Earlier local data — Q11 (2026-10-09):** full lexical comparison with
+  Open English WordNet 2025 (135,969 entries; 107,519 synsets), followed by
+  the first reviewed measurement cohort. Added 59 concepts and 85 relations;
+  reused 14 existing meanings and refined two genera. Unit names, instruments,
+  measurement purposes and targets are connected. Dictionary homonyms and
+  scientific inaccuracies are reviewed explicitly against BIPM sources.
+  All old terms, 23 explicit negations, and 29 grammar rows are preserved.
+  Local DB, SQL, and version metadata are updated; no commit, push or deployment.
+  See the [Q11 report](docs/quality/2026-10-09-q11.md) and the active dictionary
+  queue in [PLAN.md](PLAN.md). Raw dictionary and comparison inventory:
+  `G:\Projects\conceptuum-backups\dictionary-oewn-2025-20261009`.
+- **Earlier local data — Q10 (2026-10-09):** reviewed 30 existing records;
+  added eight concepts, clarified 24 labels, rejected 21 genus assertions,
+  and added 38 relations. Corrected type/value, character/string, numeric,
+  address, and processing distinctions. Added string length and processing
+  roles. The database, SQL snapshot, and local version metadata are updated.
+  All 23 explicit negations and all 29 grammar rows are preserved.
+  No commit, push, or deployment was made. See the
+  [Q10 report](docs/quality/2026-10-09-q10.md).
+  Its remaining queue: data-structure homonyms and misplaced children,
+  encoding/code points, signedness/ranges, fraction/percent/ratio, and units.
+- **Earlier publication — Q9 (2026-10-09):** mathematical sets, cardinality,
+  set operations, and collection/runtime corrections are published to
+  https://conceptuum.su and GitHub commit `a4b334b`.
+  At deployment, all six live tables matched the Q9 snapshot. Q39 supersedes
+  that snapshot. Interface revision remains `2026-10-08.4`.
+  See the [Q9 report](docs/quality/2026-10-09-q9.md).
 - **Earlier foundation work — Q8 (2026-10-09):** corrected model/language,
   array/list/index, number/type, measurement, and three adjective meanings.
   Added six concepts and merged one duplicate. See the
@@ -256,16 +327,16 @@ unfinished item in [PLAN.md](PLAN.md), using the current snapshot below.
   извлекает лишние понятия по отдельным словам.
   Подробные ID и термины: `docs/quality/2026-10-08-q7-after.json`.
 
-## Current database snapshot — 2026-10-09, Q9
+## Current local database snapshot — 2026-10-09, Q39
 
 ```
-concepts:     12491 (Everyday: 11214, IT: 900, Legal: 160, Logic: 217)
-edges:        16522 (accepted: 15717, rejected: 805)
-paths:        58117
-terms:        35048 (RU/EN tags present; translation quality remains incomplete)
-without_latin_en: 7302
+concepts:     13456 (Everyday: 12049, IT: 1030, Legal: 160, Logic: 217)
+edges:        18450 (accepted: 17350, rejected: 1100)
+paths:        64683
+terms:        37825 (RU/EN tags present; translation quality remains incomplete)
+without_latin_en: 7251
 signature-invalid: 0
-processed:    1:11076  2:446  3:969
+processed:    1:11624  2:853  3:979
 self-loops:   0
 taxonomy cycles: 0
 deprecated relation codes: 0
@@ -276,6 +347,36 @@ explicit negations preserved: 23
 
 | Дата | Этап | Что сделано | concepts | edges | paths |
 |---|---|---|---|---|---|
+| 2026-10-09 | Q39 local | Containers, brushes, and scraping tools; 41 additions, 106 new relations; local only | 13456 | 18450 | 64683 |
+| 2026-10-09 | Q38 local | Database names, views, plans, and key columns; 36 additions, 64 new relations; local only | 13415 | 18344 | 64340 |
+| 2026-10-09 | Q37 local | Motion paths, inertia, momentum, and work; 35 additions, 68 new relations; local only | 13379 | 18280 | 64131 |
+| 2026-10-09 | Q36 local | Animal roles, hunting, catching, and bait; 37 additions, 84 new relations; local only | 13344 | 18212 | 63904 |
+| 2026-10-09 | Q35 local | Database software, structures, constraints, and transactions; 27 additions, 49 new relations; local only | 13307 | 18128 | 63601 |
+| 2026-10-09 | Q34 local | Client/server meanings, HTTP roles, and automation; 30 additions, 64 new relations; local only | 13280 | 18079 | 63450 |
+| 2026-10-09 | Q33 local | States, sleep, mood, and vocal actions; 22 additions, 39 new relations; local only | 13250 | 18015 | 63238 |
+| 2026-10-09 | Q32 local | Recognition, authorship, and information status; 28 additions, 51 new relations; local only | 13228 | 17976 | 63138 |
+| 2026-10-09 | Q31 local | REST, HTTP, and resource identifiers; 30 additions, 47 new relations; local only | 13201 | 17926 | 62983 |
+| 2026-10-09 | Q30 local | Bakeware, kitchen tools, and food actions; 26 additions, 61 new relations; local only | 13171 | 17879 | 62809 |
+| 2026-10-09 | Q29 local | Fishing methods, equipment, and participant roles; 32 additions, 67 new relations; local only | 13145 | 17818 | 62599 |
+| 2026-10-09 | Q28 local | Motion, quantities, and braking terminology; 27 additions, 54 new relations; local only | 13114 | 17752 | 62366 |
+| 2026-10-09 | Q27 local | Light, perception, and photometric measurement; 26 additions, 51 new relations; local only | 13087 | 17698 | 62203 |
+| 2026-10-09 | Q26 local | Family groups, household units, and kinship roles; 32 additions, 69 new relations; local only | 13061 | 17647 | 62045 |
+| 2026-10-09 | Q25 local | Game activities, sports formats, and physical equipment; 36 additions, 85 new relations; local only | 13029 | 17578 | 61669 |
+| 2026-10-09 | Q24 local | Clothing purposes, materials, components, and intersecting garment families; 41 additions, 83 new relations; local only | 12993 | 17493 | 61342 |
+| 2026-10-09 | Q23 local | Dwellings, building components, and combined room uses; 28 additions, 57 new relations; local only | 12952 | 17410 | 61029 |
+| 2026-10-09 | Q22 local | Weather, precipitation, quantities, and forecasts; 32 additions, 70 new relations; local only | 12924 | 17353 | 60808 |
+| 2026-10-09 | Q21 local | Forest types, foliage classes, and vegetation; 28 additions, 55 new relations; local only | 12892 | 17283 | 60651 |
+| 2026-10-09 | Q20 local | Material composition, phase states, and physical joining; 21 additions, 42 new relations; local only | 12864 | 17228 | 60422 |
+| 2026-10-09 | Q19 local | Calendars, scheduling, and the Wednesday/environment split; 28 additions, 50 new relations; local only | 12843 | 17186 | 60307 |
+| 2026-10-09 | Q18 local | Fasteners, gripping tools, and upper-graph exclusions; 38 additions, 77 new relations; local only | 12815 | 17136 | 60196 |
+| 2026-10-09 | Q17 local | Kitchen tools, cookware, food preparation, and cleaning; 35 additions, 103 new relations; local only | 12777 | 17059 | 59924 |
+| 2026-10-09 | Q16 local | Money vocabulary, budgets, savings, and payment repairs; 27 additions, 41 new relations; local only | 12742 | 16956 | 59653 |
+| 2026-10-09 | Q15 local | Plane geometry, geometric lengths, and angle measurement; 28 additions, 62 new relations; local only | 12718 | 16918 | 59528 |
+| 2026-10-09 | Q14 local | Physical quantities, derived units, and measurement instruments; 54 additions, 79 new relations; local only | 12690 | 16856 | 59328 |
+| 2026-10-09 | Q13 local | Fractions, ratios, percentages, and mathematical notation; 41 additions, 58 new relations; local only | 12636 | 16777 | 59005 |
+| 2026-10-09 | Q12 local | Humidity, motion measurement, dimensional tools, timekeeping; 37 additions, 8 withdrawn relations, 74 new relations; no publication | 12595 | 16719 | 58725 |
+| 2026-10-09 | Q11 local | Dictionary comparison; 59 additions, 2 refined genera, 85 new relations; no publication | 12558 | 16645 | 58486 |
+| 2026-10-09 | Q10 local | Types/values, text terminology, addresses, processing; 8 additions, 24 renames, 21 rejected genera, 38 added relations; no push or deployment | 12499 | 16560 | 58142 |
 | 2026-10-09 | Q9 | Sets, cardinality, set operations, collection and runtime senses; 19 additions, 1 merge, 7 rejected relations, 50 added relations; live dataset updated | 12491 | 16522 | 58117 |
 | 2026-10-09 | Q8 | Foundation pilot: model/language, array/list/index, number/type, measurement, adjectives; 6 additions, 1 merge, 11 rejected relations, 22 added relations; live dataset updated | 12473 | 16473 | 58000 |
 | 2026-10-08 | Q7 | Пять дублей с зависимыми связями объединены; операции отделены от результатов; поведение и роли процессов; 10 исправлений; уточнён код 27; 114 новых условий и 36 тестов | 12468 | 16452 | 57970 |

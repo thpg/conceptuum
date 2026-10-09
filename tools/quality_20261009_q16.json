@@ -1,0 +1,2844 @@
+{
+  "source": "quality-20261009-q16",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Everyday monetary amounts, income, spending, budgets and savings; repair payment terminology and duplicate price evaluations.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "glossary": "https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/glossary/",
+      "budget": "https://files.consumerfinance.gov/f/documents/cfpb_building_block_activities_learning-about-budgets_guide.pdf",
+      "saving": "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+      "money": "https://www.bankofengland.co.uk/explainers/what-is-money",
+      "payment_ru": "https://gramota.ru/meta/oplata"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet. Retain CC BY 4.0 and underlying Princeton notices in docs/quality/2026-10-09-q11.md#sources-and-reuse. CFPB financial-education material, Bank of England explanations and Gramota spelling evidence support selected terms. Labels and graph classifications are reviewed adaptations.",
+    "existing_cohort": [
+      51,
+      63,
+      1762,
+      1763,
+      1814,
+      1953,
+      1957,
+      1983,
+      2413,
+      2635,
+      2654,
+      2764,
+      2902,
+      2973,
+      3267,
+      3268,
+      3365,
+      3503,
+      3569,
+      3624,
+      3643,
+      3825,
+      4416,
+      5671,
+      7752,
+      8285,
+      9911,
+      11737,
+      24635
+    ],
+    "context_policy": "All additions use U1 and unspecified strength. Existing home contexts and grammar remain unchanged. U4 loan, property and money records are not merged into physical cash or payment quantities.",
+    "sense_decisions": [
+      {
+        "concept": 8285,
+        "synset": "oewn-00936868-s",
+        "decision": "merge into 1762",
+        "alignment": "reviewed sense",
+        "scope": "Costly in the high-price sense duplicates the existing expensive evaluation, not a separate price quantity."
+      },
+      {
+        "concept": 9911,
+        "synset": "oewn-00937468-a",
+        "decision": "merge into 1763",
+        "alignment": "reviewed sense",
+        "scope": "Inexpensive duplicates the existing cheap price evaluation; its parent expensive is wrong."
+      },
+      {
+        "concept": 5671,
+        "synset": "oewn-00936423-a",
+        "decision": "merge into 1762",
+        "alignment": "reviewed sense",
+        "scope": "The neuter adjective duplicate becomes a leaf after its two reviewed children are consolidated; reuse the existing expensive evaluation."
+      },
+      {
+        "concept": "monetary_amount",
+        "synset": "oewn-13352213-n",
+        "decision": "add",
+        "alignment": "quantity/object distinction",
+        "scope": "A quantity expressed in monetary units, distinct from the money resource, cash objects and monetary funds. Do not copy the dictionary asset genus for a numerical amount."
+      },
+      {
+        "concept": "income_amount",
+        "synset": "oewn-13276044-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A monetary amount accruing or received as income over a period. Separate this from arrival, gross receipts that merely exchange assets, and any jurisdiction-specific taxable-income rule."
+      },
+      {
+        "concept": "personal_income",
+        "synset": "oewn-13280258-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Income accruing to an individual, with no tax-law threshold or filing rule inferred."
+      },
+      {
+        "concept": "earned_income",
+        "synset": null,
+        "decision": "add",
+        "alignment": "financial-education scope",
+        "scope": "Income arising from paid work, including employment and self-employment in the selected everyday sense. Tax definitions and eligibility categories are not imported."
+      },
+      {
+        "concept": "unearned_income",
+        "synset": "oewn-13282496-n",
+        "decision": "add",
+        "alignment": "personal-income sense only",
+        "scope": "Personal income from sources other than current paid work. The accounting deferred-revenue meaning of unearned income/revenue is excluded."
+      },
+      {
+        "concept": "employment_pay",
+        "synset": "oewn-13300285-n",
+        "decision": "add",
+        "alignment": "restricted employee-pay sense",
+        "scope": "Monetary remuneration for employment. Restrict the dictionary remuneration cluster to employee pay; exclude compensation for damages and business net profit."
+      },
+      {
+        "concept": "salary",
+        "synset": null,
+        "decision": "add",
+        "alignment": "split from broad dictionary remuneration cluster",
+        "scope": "Employee pay specified as a fixed amount for a work period. Overtime, bonuses and deduction rules are not inferred for all employment."
+      },
+      {
+        "concept": "hourly_pay",
+        "synset": null,
+        "decision": "add",
+        "alignment": "restricted time-based pay",
+        "scope": "Employee remuneration calculated from a rate per hour and the paid working time; no statutory minimum rate is asserted."
+      },
+      {
+        "concept": "gross_pay",
+        "synset": null,
+        "decision": "add",
+        "alignment": "restricted payroll scope",
+        "scope": "Employee pay before applicable deductions. Do not treat this restricted payroll quantity as every possible gross-income sense."
+      },
+      {
+        "concept": "net_pay",
+        "synset": null,
+        "decision": "add",
+        "alignment": "restricted payroll scope",
+        "scope": "Employee pay remaining after applicable deductions. It is not the business-profit meaning of net income."
+      },
+      {
+        "concept": "expenditure_amount",
+        "synset": "oewn-13296311-n",
+        "decision": "add",
+        "alignment": "quantity rather than action",
+        "scope": "An amount of money spent, distinct from the spending action and from a general consumption of time or material. Do not import the tax-deductible-only expense sense."
+      },
+      {
+        "concept": "fixed_expense",
+        "synset": null,
+        "decision": "add",
+        "alignment": "household-budget scope",
+        "scope": "A recurring budget expense expected to stay at a similar amount during the relevant periods. This is not a universal monthly schedule or an accounting fixed-cost definition."
+      },
+      {
+        "concept": "variable_expense",
+        "synset": null,
+        "decision": "add",
+        "alignment": "household-budget scope",
+        "scope": "A budget expense whose amount varies across the selected periods. Do not confuse this with a business cost varying with production volume."
+      },
+      {
+        "concept": "monetary_cost",
+        "synset": "oewn-13296870-n",
+        "decision": "add",
+        "alignment": "restricted monetary cost",
+        "scope": "Cost expressed as a monetary amount. This is narrower than the dictionary cost that also includes time or effort; it is not identical to selling price or to the verb cost."
+      },
+      {
+        "concept": "interest_amount",
+        "synset": "oewn-13339606-n",
+        "decision": "add",
+        "alignment": "corrected charge scope",
+        "scope": "The monetary charge or return for use of money, including borrowing and deposit contexts. It is not curiosity, a percentage ratio, or necessarily a fixed charge."
+      },
+      {
+        "concept": "interest_rate",
+        "synset": "oewn-13340054-n",
+        "decision": "add",
+        "alignment": "period-aware rate quantity",
+        "scope": "A rate specifying interest relative to a monetary base for a stated period and convention. Do not equate the rate with the charged amount, the abstract numerical percentage, APR or APY."
+      },
+      {
+        "concept": "budget_plan",
+        "synset": "oewn-13442635-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A plan allocating expected monetary resources among spending and saving over a period. Distinct from an allocated fund; forecasts are not assertions that transactions have happened."
+      },
+      {
+        "concept": "personal_budget",
+        "synset": null,
+        "decision": "add",
+        "alignment": "productive subtype",
+        "scope": "A budget plan for one person."
+      },
+      {
+        "concept": "household_budget",
+        "synset": null,
+        "decision": "add",
+        "alignment": "productive subtype",
+        "scope": "A budget plan for a household, which need not coincide with an individual or legally defined family."
+      },
+      {
+        "concept": "monetary_fund",
+        "synset": "oewn-13379722-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Money set aside for a purpose, narrower than the existing general fund/reserve. The fund has an amount; it is not the amount quantity itself."
+      },
+      {
+        "concept": "savings",
+        "synset": "oewn-13380745-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Money retained for later use. Separate the accumulated resource from the act of saving and from a bank-account product."
+      },
+      {
+        "concept": "emergency_fund",
+        "synset": null,
+        "decision": "add",
+        "alignment": "financial-education subtype",
+        "scope": "A reserve for unexpected necessary expenses. No recommended reserve size, investment, or guaranteed protection is asserted."
+      },
+      {
+        "concept": "budget_fund",
+        "synset": "oewn-13443005-n",
+        "decision": "add",
+        "alignment": "separate budget-resource sense",
+        "scope": "Money allocated to a purpose, distinct from the budget plan and from a numerical monetary amount."
+      },
+      {
+        "concept": "money_management",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed everyday process",
+        "scope": "Organizing the use of monetary resources, including planning spending and saving. This is an everyday activity, not an investment service or IT memory management."
+      },
+      {
+        "concept": "budgeting",
+        "synset": "oewn-00725991-v",
+        "decision": "add",
+        "alignment": "process adaptation of dictionary verb",
+        "scope": "Planning the allocation of monetary resources. The selected process uses planning rather than the dictionary calculation-only parent."
+      },
+      {
+        "concept": "saving_money",
+        "synset": null,
+        "decision": "add",
+        "alignment": "financial-education process",
+        "scope": "Setting money aside for later use. Distinct from rescue, general preservation, cost cutting and the accumulated savings resource."
+      },
+      {
+        "concept": "money_spending",
+        "synset": "oewn-01124922-n",
+        "decision": "add",
+        "alignment": "restricted monetary action",
+        "scope": "The monetary spending process, narrower than the existing general spending action. The monetary amount spent is a separate quantity."
+      },
+      {
+        "concept": 1762,
+        "synset": "oewn-00936423-a",
+        "decision": "reuse or refine",
+        "alignment": "reviewed sense",
+        "scope": "Reuse high-price evaluation and consolidate duplicate adjective records."
+      },
+      {
+        "concept": 1763,
+        "synset": "oewn-00937468-a",
+        "decision": "reuse or refine",
+        "alignment": "reviewed sense",
+        "scope": "Reuse low-price evaluation; preserve its existing opposition to expensive."
+      },
+      {
+        "concept": 3268,
+        "synset": "oewn-13299398-n",
+        "decision": "reuse or refine",
+        "alignment": "reviewed sense",
+        "scope": "Reuse payment amount with a quantity genus and move verbs to action 7752."
+      },
+      {
+        "concept": 7752,
+        "synset": "oewn-01122769-n",
+        "decision": "reuse or refine",
+        "alignment": "reviewed sense",
+        "scope": "Repair the malformed payment action and its physical-motion genus."
+      },
+      {
+        "concept": 3643,
+        "synset": "oewn-13324337-n",
+        "decision": "reuse or refine",
+        "alignment": "reviewed sense",
+        "scope": "Reuse monetary price; do not import cost/sacrifice/value synonyms."
+      },
+      {
+        "concept": 3267,
+        "synset": "oewn-05907175-n",
+        "decision": "reuse or refine",
+        "alignment": "reviewed sense",
+        "scope": "Broaden the medium-specific text genus to information object, retaining the existing plan ID."
+      },
+      {
+        "concept": 1814,
+        "synset": null,
+        "decision": "reuse or refine",
+        "alignment": "reviewed sense",
+        "scope": "Reuse planning as the genus for budgeting."
+      },
+      {
+        "concept": 3624,
+        "synset": null,
+        "decision": "reuse or refine",
+        "alignment": "reviewed sense",
+        "scope": "Reuse general fund/reserve; specialize only the new monetary fund."
+      },
+      {
+        "concept": 1957,
+        "synset": null,
+        "decision": "defer broader review",
+        "alignment": "reviewed sense",
+        "scope": "Money in the legal-property universe remains the resource anchor; do not equate it with an amount or physical cash."
+      },
+      {
+        "concept": 2413,
+        "synset": null,
+        "decision": "defer broader review",
+        "alignment": "reviewed sense",
+        "scope": "The artifact/wallet money record suggests cash, but its sense distinction from 1957 requires a separate reviewed cohort."
+      },
+      {
+        "concept": 1983,
+        "synset": null,
+        "decision": "defer broader review",
+        "alignment": "reviewed sense",
+        "scope": "Loan as a legal contract is not automatically the loan amount, borrowing action or financial debt."
+      },
+      {
+        "concept": 2902,
+        "synset": null,
+        "decision": "defer broader review",
+        "alignment": "reviewed sense",
+        "scope": "Duty remains distinct from financial debt."
+      },
+      {
+        "concept": 2973,
+        "synset": null,
+        "decision": "defer broader review",
+        "alignment": "reviewed sense",
+        "scope": "Mental interest remains distinct from a monetary interest charge."
+      },
+      {
+        "concept": 3825,
+        "synset": null,
+        "decision": "defer broader review",
+        "alignment": "reviewed sense",
+        "scope": "To interest remains a separate action."
+      },
+      {
+        "concept": 4416,
+        "synset": null,
+        "decision": "defer broader review",
+        "alignment": "reviewed sense",
+        "scope": "The verb cost remains distinct from the monetary cost quantity."
+      },
+      {
+        "concept": 2764,
+        "synset": null,
+        "decision": "defer broader review",
+        "alignment": "reviewed sense",
+        "scope": "The wealth-state record is not a monetary fund or income amount."
+      },
+      {
+        "concept": 3569,
+        "synset": null,
+        "decision": "defer broader review",
+        "alignment": "reviewed sense",
+        "scope": "Keep general spending broader than the new monetary spending process."
+      },
+      {
+        "concept": 3503,
+        "synset": null,
+        "decision": "defer broader review",
+        "alignment": "reviewed sense",
+        "scope": "General preservation and its malformed terms require a wider review."
+      },
+      {
+        "concept": 11737,
+        "synset": null,
+        "decision": "defer broader review",
+        "alignment": "reviewed sense",
+        "scope": "General saving/preserving is not automatically saving money."
+      },
+      {
+        "concept": 24635,
+        "synset": null,
+        "decision": "defer broader review",
+        "alignment": "reviewed sense",
+        "scope": "The numerical percentage ratio is distinct from a financial interest-rate quantity."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-13282279-n",
+        "decision": "exclude accounting homonym",
+        "alignment": "reviewed sense",
+        "scope": "Deferred/unearned revenue is not the selected personal-income meaning."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-13279261-n",
+        "decision": "defer",
+        "alignment": "reviewed sense",
+        "scope": "Business profit/net income is distinct from employee net pay; accounting recognition needs separate review."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-13296518-n",
+        "decision": "exclude narrower gloss",
+        "alignment": "reviewed sense",
+        "scope": "Tax deductibility is not a defining property of every household monetary expenditure."
+      }
+    ],
+    "limits": "This is everyday financial vocabulary, not tax/accounting rules or financial advice. Jurisdictional deductions, interest formulas, legal tender requirements, debt contracts, currency systems, bank accounts, and investment recommendations are not encoded. Money records 1957/2413, wider wealth/economic-good hierarchies, general saving and expenditure processes, and loan/debt distinctions remain pending. Budget entries are plans, not factual future transactions. No application test suites.",
+    "staged_leaf_merges": "8285 and 9911 are independent leaves. Their archived genus edges are removed first; 5671 then has only its own archived genus. No facts or negations are discarded. All source concept/term rows and the union of all three original edges are preserved in this manifest.",
+    "new_term_collisions": [
+      {
+        "key": "income_amount",
+        "term": "income",
+        "lang": "en",
+        "existing": [
+          [
+            3365,
+            "приход"
+          ]
+        ]
+      }
+    ],
+    "collision_decisions": {
+      "income_amount": "Remove the erroneous income term from arrival 3365; retain that arrival concept and all its other terms and relations."
+    },
+    "refreshed_comparison": {
+      "baseline": "Q15",
+      "existing_concepts": 12718,
+      "existing_terms": 35827,
+      "synsets_with_exact_en_candidate": 15461,
+      "synsets_without_exact_en_candidate": 92058,
+      "existing_concepts_with_dictionary_candidate": 4052,
+      "caveat": "Exact normalized English spellings are candidates, not semantic identities or a missing-concept count."
+    }
+  },
+  "concepts": [
+    {
+      "key": "monetary_amount",
+      "name": "денежная сумма",
+      "parent": 2635,
+      "universum_id": 1,
+      "terms": [
+        [
+          "денежная сумма",
+          "ru"
+        ],
+        [
+          "amount of money",
+          "en"
+        ],
+        [
+          "monetary amount",
+          "en"
+        ],
+        [
+          "sum of money",
+          "en"
+        ],
+        [
+          "сумма денег",
+          "ru"
+        ]
+      ],
+      "reason": "A quantity expressed in monetary units, distinct from the money resource, cash objects and monetary funds. Do not copy the dictionary asset genus for a numerical amount. OEWN 2025: oewn-13352213-n."
+    },
+    {
+      "key": "income_amount",
+      "name": "доход (денежная сумма)",
+      "parent": "monetary_amount",
+      "universum_id": 1,
+      "terms": [
+        [
+          "доход (денежная сумма)",
+          "ru"
+        ],
+        [
+          "income (monetary amount)",
+          "en"
+        ],
+        [
+          "income",
+          "en"
+        ],
+        [
+          "доход",
+          "ru"
+        ]
+      ],
+      "reason": "A monetary amount accruing or received as income over a period. Separate this from arrival, gross receipts that merely exchange assets, and any jurisdiction-specific taxable-income rule. OEWN 2025: oewn-13276044-n."
+    },
+    {
+      "key": "personal_income",
+      "name": "личный доход",
+      "parent": "income_amount",
+      "universum_id": 1,
+      "terms": [
+        [
+          "личный доход",
+          "ru"
+        ],
+        [
+          "personal income",
+          "en"
+        ]
+      ],
+      "reason": "Income accruing to an individual, with no tax-law threshold or filing rule inferred. OEWN 2025: oewn-13280258-n."
+    },
+    {
+      "key": "earned_income",
+      "name": "трудовой доход",
+      "parent": "income_amount",
+      "universum_id": 1,
+      "terms": [
+        [
+          "трудовой доход",
+          "ru"
+        ],
+        [
+          "earned income",
+          "en"
+        ]
+      ],
+      "reason": "Income arising from paid work, including employment and self-employment in the selected everyday sense. Tax definitions and eligibility categories are not imported. Source: https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/glossary/"
+    },
+    {
+      "key": "unearned_income",
+      "name": "нетрудовой доход",
+      "parent": "personal_income",
+      "universum_id": 1,
+      "terms": [
+        [
+          "нетрудовой доход",
+          "ru"
+        ],
+        [
+          "unearned income (personal)",
+          "en"
+        ],
+        [
+          "unearned income",
+          "en"
+        ]
+      ],
+      "reason": "Personal income from sources other than current paid work. The accounting deferred-revenue meaning of unearned income/revenue is excluded. OEWN 2025: oewn-13282496-n."
+    },
+    {
+      "key": "employment_pay",
+      "name": "заработная плата",
+      "parent": "earned_income",
+      "universum_id": 1,
+      "terms": [
+        [
+          "заработная плата",
+          "ru"
+        ],
+        [
+          "employment pay",
+          "en"
+        ],
+        [
+          "wage",
+          "en"
+        ],
+        [
+          "wages",
+          "en"
+        ],
+        [
+          "зарплата",
+          "ru"
+        ]
+      ],
+      "reason": "Monetary remuneration for employment. Restrict the dictionary remuneration cluster to employee pay; exclude compensation for damages and business net profit. OEWN 2025: oewn-13300285-n."
+    },
+    {
+      "key": "salary",
+      "name": "фиксированная заработная плата",
+      "parent": "employment_pay",
+      "universum_id": 1,
+      "terms": [
+        [
+          "фиксированная заработная плата",
+          "ru"
+        ],
+        [
+          "salary",
+          "en"
+        ]
+      ],
+      "reason": "Employee pay specified as a fixed amount for a work period. Overtime, bonuses and deduction rules are not inferred for all employment. Source: https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/glossary/"
+    },
+    {
+      "key": "hourly_pay",
+      "name": "почасовая заработная плата",
+      "parent": "employment_pay",
+      "universum_id": 1,
+      "terms": [
+        [
+          "почасовая заработная плата",
+          "ru"
+        ],
+        [
+          "hourly pay",
+          "en"
+        ],
+        [
+          "hourly wages",
+          "en"
+        ]
+      ],
+      "reason": "Employee remuneration calculated from a rate per hour and the paid working time; no statutory minimum rate is asserted. Source: https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/glossary/"
+    },
+    {
+      "key": "gross_pay",
+      "name": "заработная плата до удержаний",
+      "parent": "employment_pay",
+      "universum_id": 1,
+      "terms": [
+        [
+          "заработная плата до удержаний",
+          "ru"
+        ],
+        [
+          "gross pay",
+          "en"
+        ],
+        [
+          "gross earnings (employment)",
+          "en"
+        ]
+      ],
+      "reason": "Employee pay before applicable deductions. Do not treat this restricted payroll quantity as every possible gross-income sense. Source: https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/glossary/"
+    },
+    {
+      "key": "net_pay",
+      "name": "заработная плата после удержаний",
+      "parent": "employment_pay",
+      "universum_id": 1,
+      "terms": [
+        [
+          "заработная плата после удержаний",
+          "ru"
+        ],
+        [
+          "net pay",
+          "en"
+        ],
+        [
+          "take-home pay",
+          "en"
+        ]
+      ],
+      "reason": "Employee pay remaining after applicable deductions. It is not the business-profit meaning of net income. Source: https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/glossary/"
+    },
+    {
+      "key": "expenditure_amount",
+      "name": "денежный расход (сумма)",
+      "parent": "monetary_amount",
+      "universum_id": 1,
+      "terms": [
+        [
+          "денежный расход (сумма)",
+          "ru"
+        ],
+        [
+          "expenditure (monetary amount)",
+          "en"
+        ],
+        [
+          "monetary expenditure",
+          "en"
+        ],
+        [
+          "денежные расходы",
+          "ru"
+        ]
+      ],
+      "reason": "An amount of money spent, distinct from the spending action and from a general consumption of time or material. Do not import the tax-deductible-only expense sense. OEWN 2025: oewn-13296311-n."
+    },
+    {
+      "key": "fixed_expense",
+      "name": "фиксированный расход (личный бюджет)",
+      "parent": "expenditure_amount",
+      "universum_id": 1,
+      "terms": [
+        [
+          "фиксированный расход (личный бюджет)",
+          "ru"
+        ],
+        [
+          "fixed expense (personal budget)",
+          "en"
+        ],
+        [
+          "fixed expense",
+          "en"
+        ]
+      ],
+      "reason": "A recurring budget expense expected to stay at a similar amount during the relevant periods. This is not a universal monthly schedule or an accounting fixed-cost definition. Source: https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/glossary/"
+    },
+    {
+      "key": "variable_expense",
+      "name": "переменный расход (личный бюджет)",
+      "parent": "expenditure_amount",
+      "universum_id": 1,
+      "terms": [
+        [
+          "переменный расход (личный бюджет)",
+          "ru"
+        ],
+        [
+          "variable expense (personal budget)",
+          "en"
+        ],
+        [
+          "variable expense",
+          "en"
+        ]
+      ],
+      "reason": "A budget expense whose amount varies across the selected periods. Do not confuse this with a business cost varying with production volume. Source: https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/glossary/"
+    },
+    {
+      "key": "monetary_cost",
+      "name": "денежные затраты",
+      "parent": "monetary_amount",
+      "universum_id": 1,
+      "terms": [
+        [
+          "денежные затраты",
+          "ru"
+        ],
+        [
+          "monetary cost",
+          "en"
+        ],
+        [
+          "cost (monetary amount)",
+          "en"
+        ]
+      ],
+      "reason": "Cost expressed as a monetary amount. This is narrower than the dictionary cost that also includes time or effort; it is not identical to selling price or to the verb cost. OEWN 2025: oewn-13296870-n."
+    },
+    {
+      "key": "interest_amount",
+      "name": "проценты (денежная плата)",
+      "parent": "monetary_amount",
+      "universum_id": 1,
+      "terms": [
+        [
+          "проценты (денежная плата)",
+          "ru"
+        ],
+        [
+          "interest (monetary charge)",
+          "en"
+        ],
+        [
+          "financial interest",
+          "en"
+        ],
+        [
+          "interest charge",
+          "en"
+        ]
+      ],
+      "reason": "The monetary charge or return for use of money, including borrowing and deposit contexts. It is not curiosity, a percentage ratio, or necessarily a fixed charge. OEWN 2025: oewn-13339606-n. Source: https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/glossary/"
+    },
+    {
+      "key": "interest_rate",
+      "name": "процентная ставка",
+      "parent": 2635,
+      "universum_id": 1,
+      "terms": [
+        [
+          "процентная ставка",
+          "ru"
+        ],
+        [
+          "interest rate",
+          "en"
+        ],
+        [
+          "rate of interest",
+          "en"
+        ]
+      ],
+      "reason": "A rate specifying interest relative to a monetary base for a stated period and convention. Do not equate the rate with the charged amount, the abstract numerical percentage, APR or APY. OEWN 2025: oewn-13340054-n. Source: https://www.consumerfinance.gov/consumer-tools/educator-tools/youth-financial-education/glossary/"
+    },
+    {
+      "key": "budget_plan",
+      "name": "бюджет (финансовый план)",
+      "parent": 3267,
+      "universum_id": 1,
+      "terms": [
+        [
+          "бюджет (финансовый план)",
+          "ru"
+        ],
+        [
+          "budget (financial plan)",
+          "en"
+        ],
+        [
+          "budget",
+          "en"
+        ],
+        [
+          "spending plan",
+          "en"
+        ],
+        [
+          "бюджет",
+          "ru"
+        ]
+      ],
+      "reason": "A plan allocating expected monetary resources among spending and saving over a period. Distinct from an allocated fund; forecasts are not assertions that transactions have happened. OEWN 2025: oewn-13442635-n. Source: https://files.consumerfinance.gov/f/documents/cfpb_building_block_activities_learning-about-budgets_guide.pdf"
+    },
+    {
+      "key": "personal_budget",
+      "name": "личный бюджет",
+      "parent": "budget_plan",
+      "universum_id": 1,
+      "terms": [
+        [
+          "личный бюджет",
+          "ru"
+        ],
+        [
+          "personal budget",
+          "en"
+        ]
+      ],
+      "reason": "A budget plan for one person. Source: https://files.consumerfinance.gov/f/documents/cfpb_building_block_activities_learning-about-budgets_guide.pdf"
+    },
+    {
+      "key": "household_budget",
+      "name": "бюджет домохозяйства",
+      "parent": "budget_plan",
+      "universum_id": 1,
+      "terms": [
+        [
+          "бюджет домохозяйства",
+          "ru"
+        ],
+        [
+          "household budget",
+          "en"
+        ]
+      ],
+      "reason": "A budget plan for a household, which need not coincide with an individual or legally defined family. Source: https://files.consumerfinance.gov/f/documents/cfpb_building_block_activities_learning-about-budgets_guide.pdf"
+    },
+    {
+      "key": "monetary_fund",
+      "name": "денежный фонд",
+      "parent": 3624,
+      "universum_id": 1,
+      "terms": [
+        [
+          "денежный фонд",
+          "ru"
+        ],
+        [
+          "monetary fund",
+          "en"
+        ]
+      ],
+      "reason": "Money set aside for a purpose, narrower than the existing general fund/reserve. The fund has an amount; it is not the amount quantity itself. OEWN 2025: oewn-13379722-n."
+    },
+    {
+      "key": "savings",
+      "name": "денежные сбережения",
+      "parent": "monetary_fund",
+      "universum_id": 1,
+      "terms": [
+        [
+          "денежные сбережения",
+          "ru"
+        ],
+        [
+          "savings",
+          "en"
+        ],
+        [
+          "сбережения",
+          "ru"
+        ]
+      ],
+      "reason": "Money retained for later use. Separate the accumulated resource from the act of saving and from a bank-account product. OEWN 2025: oewn-13380745-n. Source: https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
+    },
+    {
+      "key": "emergency_fund",
+      "name": "резерв на непредвиденные расходы",
+      "parent": "savings",
+      "universum_id": 1,
+      "terms": [
+        [
+          "резерв на непредвиденные расходы",
+          "ru"
+        ],
+        [
+          "emergency fund",
+          "en"
+        ]
+      ],
+      "reason": "A reserve for unexpected necessary expenses. No recommended reserve size, investment, or guaranteed protection is asserted. Source: https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
+    },
+    {
+      "key": "budget_fund",
+      "name": "бюджет (выделенные средства)",
+      "parent": "monetary_fund",
+      "universum_id": 1,
+      "terms": [
+        [
+          "бюджет (выделенные средства)",
+          "ru"
+        ],
+        [
+          "budget (allocated fund)",
+          "en"
+        ],
+        [
+          "allocated budget",
+          "en"
+        ]
+      ],
+      "reason": "Money allocated to a purpose, distinct from the budget plan and from a numerical monetary amount. OEWN 2025: oewn-13443005-n."
+    },
+    {
+      "key": "money_management",
+      "name": "управление деньгами",
+      "parent": 63,
+      "universum_id": 1,
+      "terms": [
+        [
+          "управление деньгами",
+          "ru"
+        ],
+        [
+          "money management",
+          "en"
+        ]
+      ],
+      "reason": "Organizing the use of monetary resources, including planning spending and saving. This is an everyday activity, not an investment service or IT memory management. Source: https://files.consumerfinance.gov/f/documents/cfpb_building_block_activities_learning-about-budgets_guide.pdf"
+    },
+    {
+      "key": "budgeting",
+      "name": "составление бюджета",
+      "parent": 1814,
+      "universum_id": 1,
+      "terms": [
+        [
+          "составление бюджета",
+          "ru"
+        ],
+        [
+          "budgeting",
+          "en"
+        ],
+        [
+          "budget planning",
+          "en"
+        ]
+      ],
+      "reason": "Planning the allocation of monetary resources. The selected process uses planning rather than the dictionary calculation-only parent. OEWN 2025: oewn-00725991-v. Source: https://files.consumerfinance.gov/f/documents/cfpb_building_block_activities_learning-about-budgets_guide.pdf"
+    },
+    {
+      "key": "saving_money",
+      "name": "сбережение денег (действие)",
+      "parent": 63,
+      "universum_id": 1,
+      "terms": [
+        [
+          "сбережение денег (действие)",
+          "ru"
+        ],
+        [
+          "saving money",
+          "en"
+        ],
+        [
+          "saving (money)",
+          "en"
+        ]
+      ],
+      "reason": "Setting money aside for later use. Distinct from rescue, general preservation, cost cutting and the accumulated savings resource. Source: https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
+    },
+    {
+      "key": "money_spending",
+      "name": "трата денег",
+      "parent": 3569,
+      "universum_id": 1,
+      "terms": [
+        [
+          "трата денег",
+          "ru"
+        ],
+        [
+          "spending money",
+          "en"
+        ],
+        [
+          "monetary spending",
+          "en"
+        ]
+      ],
+      "reason": "The monetary spending process, narrower than the existing general spending action. The monetary amount spent is a separate quantity. OEWN 2025: oewn-01124922-n."
+    }
+  ],
+  "renames": [
+    {
+      "id": 7752,
+      "before": "оплатение",
+      "name": "оплата (действие)",
+      "terms": [],
+      "reason": "Replace a generated nonword with the normal action noun; retain only valid lexical forms. OEWN 2025: oewn-01122769-n. Source: https://gramota.ru/meta/oplata"
+    },
+    {
+      "id": 3268,
+      "before": "плата",
+      "name": "плата (денежная сумма)",
+      "terms": [],
+      "reason": "Qualify the existing payment amount; its verb terms belong to the separate payment action. OEWN 2025: oewn-13299398-n."
+    }
+  ],
+  "terms": [
+    {
+      "id": 1762,
+      "name": "дорогой",
+      "terms": [
+        [
+          "costly",
+          "en"
+        ],
+        [
+          "high-priced",
+          "en"
+        ],
+        [
+          "expensive (price evaluation)",
+          "en"
+        ]
+      ],
+      "reason": "Keep high-price evaluation separate from affection, sacrifice and numerical price. OEWN 2025: oewn-00936423-a."
+    },
+    {
+      "id": 1763,
+      "name": "дешёвое",
+      "terms": [
+        [
+          "inexpensive",
+          "en"
+        ],
+        [
+          "low-priced",
+          "en"
+        ],
+        [
+          "cheap (price evaluation)",
+          "en"
+        ]
+      ],
+      "reason": "Select low price, not poor quality, stinginess or tastelessness. OEWN 2025: oewn-00937468-a."
+    },
+    {
+      "id": 7752,
+      "name": "оплата (действие)",
+      "terms": [
+        [
+          "payment (action)",
+          "en"
+        ],
+        [
+          "paying",
+          "en"
+        ],
+        [
+          "to pay",
+          "en"
+        ],
+        [
+          "оплата",
+          "ru"
+        ],
+        [
+          "оплатить",
+          "ru"
+        ],
+        [
+          "оплачивать",
+          "ru"
+        ],
+        [
+          "платить",
+          "ru"
+        ]
+      ],
+      "reason": "The action of paying money, separate from a payment amount. OEWN 2025: oewn-01122769-n."
+    },
+    {
+      "id": 3268,
+      "name": "плата (денежная сумма)",
+      "terms": [
+        [
+          "payment amount",
+          "en"
+        ],
+        [
+          "payment (amount)",
+          "en"
+        ],
+        [
+          "сумма платежа",
+          "ru"
+        ]
+      ],
+      "reason": "Retain the quantity meaning of payment, not the action or the money resource. OEWN 2025: oewn-13299398-n."
+    },
+    {
+      "id": 3365,
+      "name": "приход",
+      "terms": [
+        [
+          "arrival",
+          "en"
+        ]
+      ],
+      "reason": "Preserve the arrival process while correcting its income homonym."
+    },
+    {
+      "id": 3643,
+      "name": "цена",
+      "terms": [
+        [
+          "price (monetary amount)",
+          "en"
+        ]
+      ],
+      "reason": "Reuse price as the monetary quantity required for the selected purchase sense. OEWN 2025: oewn-13324337-n."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 1763,
+      "term": "дешевое",
+      "lang": "en",
+      "reason": "A Russian form was mistagged as English; preserve existing Russian cheap forms and the genuine English terms."
+    },
+    {
+      "id": 7752,
+      "term": "оплатение",
+      "lang": "ru",
+      "reason": "Remove an invented Russian nominalization or a Russian verb mistagged as English; the correct Russian and English action terms are retained."
+    },
+    {
+      "id": 7752,
+      "term": "оплатиение",
+      "lang": "ru",
+      "reason": "Remove an invented Russian nominalization or a Russian verb mistagged as English; the correct Russian and English action terms are retained."
+    },
+    {
+      "id": 7752,
+      "term": "ОПЛАТИТЬ",
+      "lang": "en",
+      "reason": "Remove an invented Russian nominalization or a Russian verb mistagged as English; the correct Russian and English action terms are retained."
+    },
+    {
+      "id": 3268,
+      "term": "to pay",
+      "lang": "en",
+      "reason": "Move the unambiguously verbal form to payment action 7752; keep pay/payment noun lookup on the amount record."
+    },
+    {
+      "id": 3268,
+      "term": "платить",
+      "lang": "ru",
+      "reason": "Move the unambiguously verbal form to payment action 7752; keep pay/payment noun lookup on the amount record."
+    },
+    {
+      "id": 3365,
+      "term": "income",
+      "lang": "en",
+      "reason": "The arrival process and its opposite departure establish a movement meaning; income belongs to the separate monetary quantity."
+    }
+  ],
+  "leaf_merges": [
+    {
+      "source_id": 8285,
+      "target_id": 1762,
+      "target_name": "дорогой",
+      "retained_terms": [
+        [
+          "дорогостоящее",
+          "ru"
+        ]
+      ],
+      "discarded_terms": [
+        [
+          "дорогостоящее",
+          "en"
+        ]
+      ],
+      "reason": "Costly in the high-price sense duplicates the existing expensive evaluation, not a separate price quantity. OEWN 2025: oewn-00936868-s.",
+      "archive": {
+        "concept": {
+          "dharma": 8285,
+          "nama": "дорогостоящее",
+          "defin": "дорогостоящее — дорогое",
+          "vol_zero": null,
+          "vol_ed": null,
+          "vol_countable": null,
+          "vol_sobir": null,
+          "vol_sootn": null,
+          "cont_konkr": null,
+          "cont_abs": null,
+          "cont_opred": null,
+          "cont_empir": null,
+          "universum_id": 1,
+          "processed": 1
+        },
+        "terms": [
+          {
+            "concept_id": 8285,
+            "term": "дорогостоящее",
+            "lang": "en"
+          },
+          {
+            "concept_id": 8285,
+            "term": "дорогостоящее",
+            "lang": "ru"
+          }
+        ],
+        "edges": [
+          {
+            "id": 28516,
+            "dh1": 8285,
+            "kod": "14",
+            "dh2": 5671,
+            "universum_id": 1,
+            "strength": 100,
+            "status": "ok",
+            "source": "fill",
+            "rationale": "reparent",
+            "created_at": "2026-09-01 21:23:26"
+          }
+        ]
+      }
+    },
+    {
+      "source_id": 9911,
+      "target_id": 1763,
+      "target_name": "дешёвое",
+      "retained_terms": [
+        [
+          "недорогое",
+          "ru"
+        ]
+      ],
+      "discarded_terms": [
+        [
+          "недорогое",
+          "en"
+        ]
+      ],
+      "reason": "Inexpensive duplicates the existing cheap price evaluation; its parent expensive is wrong. OEWN 2025: oewn-00937468-a.",
+      "archive": {
+        "concept": {
+          "dharma": 9911,
+          "nama": "недорогое",
+          "defin": "недорогое — дорогое",
+          "vol_zero": null,
+          "vol_ed": null,
+          "vol_countable": null,
+          "vol_sobir": null,
+          "vol_sootn": null,
+          "cont_konkr": null,
+          "cont_abs": null,
+          "cont_opred": null,
+          "cont_empir": null,
+          "universum_id": 1,
+          "processed": 1
+        },
+        "terms": [
+          {
+            "concept_id": 9911,
+            "term": "недорогое",
+            "lang": "en"
+          },
+          {
+            "concept_id": 9911,
+            "term": "недорогое",
+            "lang": "ru"
+          }
+        ],
+        "edges": [
+          {
+            "id": 28546,
+            "dh1": 9911,
+            "kod": "14",
+            "dh2": 5671,
+            "universum_id": 1,
+            "strength": 100,
+            "status": "ok",
+            "source": "fill",
+            "rationale": "reparent",
+            "created_at": "2026-09-01 21:23:26"
+          }
+        ]
+      }
+    },
+    {
+      "source_id": 5671,
+      "target_id": 1762,
+      "target_name": "дорогой",
+      "retained_terms": [
+        [
+          "дорогое",
+          "ru"
+        ]
+      ],
+      "discarded_terms": [
+        [
+          "дорогое",
+          "en"
+        ]
+      ],
+      "reason": "The neuter adjective duplicate becomes a leaf after its two reviewed children are consolidated; reuse the existing expensive evaluation. OEWN 2025: oewn-00936423-a.",
+      "archive": {
+        "concept": {
+          "dharma": 5671,
+          "nama": "дорогое",
+          "defin": "дорогое — цена. Species: дорогостоящее, недорогое",
+          "vol_zero": null,
+          "vol_ed": null,
+          "vol_countable": null,
+          "vol_sobir": null,
+          "vol_sootn": null,
+          "cont_konkr": null,
+          "cont_abs": null,
+          "cont_opred": null,
+          "cont_empir": null,
+          "universum_id": 1,
+          "processed": 1
+        },
+        "terms": [
+          {
+            "concept_id": 5671,
+            "term": "дорогое",
+            "lang": "en"
+          },
+          {
+            "concept_id": 5671,
+            "term": "дорогое",
+            "lang": "ru"
+          }
+        ],
+        "edges": [
+          {
+            "id": 9755,
+            "dh1": 5671,
+            "kod": "14",
+            "dh2": 3643,
+            "universum_id": 1,
+            "strength": 100,
+            "status": "ok",
+            "source": "fill",
+            "rationale": "rank",
+            "created_at": "2026-09-01 21:04:47"
+          }
+        ]
+      }
+    }
+  ],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 11836,
+      "before": [
+        7752,
+        "14",
+        55,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          7752,
+          "14",
+          63,
+          null,
+          1
+        ]
+      ],
+      "reason": "Payment is a social/economic action, not a species of physical motion. OEWN 2025: oewn-01122769-n."
+    },
+    {
+      "id": 5538,
+      "before": [
+        3268,
+        "14",
+        1957,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          3268,
+          "14",
+          "monetary_amount",
+          null,
+          1
+        ]
+      ],
+      "reason": "The selected payment amount is a monetary quantity, not a species of the money resource. OEWN 2025: oewn-13299398-n."
+    },
+    {
+      "id": 5913,
+      "before": [
+        3643,
+        "14",
+        2635,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          3643,
+          "14",
+          "monetary_amount",
+          null,
+          1
+        ]
+      ],
+      "reason": "Price is a monetary quantity; its old quantity ancestor remains. Price evaluations are consolidated into their existing property concepts. OEWN 2025: oewn-13324337-n."
+    },
+    {
+      "id": 5537,
+      "before": [
+        3267,
+        "14",
+        2654,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          3267,
+          "14",
+          265,
+          null,
+          1
+        ]
+      ],
+      "reason": "A plan is informational content and need not be expressed as text. This broader medium-neutral genus supports mental, diagrammatic and written budget plans. OEWN 2025: oewn-05907175-n. Source: https://files.consumerfinance.gov/f/documents/cfpb_building_block_activities_learning-about-budgets_guide.pdf"
+    }
+  ],
+  "edges": [
+    {
+      "subject": 1957,
+      "kod": "20",
+      "object": "monetary_amount",
+      "universum_id": 1,
+      "reason": "A money resource has a monetary amount; amount is not a species of money. Source: https://www.bankofengland.co.uk/explainers/what-is-money"
+    },
+    {
+      "subject": "monetary_fund",
+      "kod": "20",
+      "object": "monetary_amount",
+      "universum_id": 1,
+      "reason": "A monetary fund has an amount. Source: https://en-word.net/downloads"
+    },
+    {
+      "subject": 7752,
+      "kod": "27",
+      "object": 1957,
+      "universum_id": 1,
+      "reason": "Money is transferred or used in the selected payment action. Source: https://en-word.net/downloads"
+    },
+    {
+      "subject": 7752,
+      "kod": "20",
+      "object": 3268,
+      "universum_id": 1,
+      "reason": "The payment event has a payment amount. Source: https://en-word.net/downloads"
+    },
+    {
+      "subject": "money_spending",
+      "kod": "27",
+      "object": 1957,
+      "universum_id": 1,
+      "reason": "Money is the resource spent by the action. Source: https://en-word.net/downloads"
+    },
+    {
+      "subject": "money_spending",
+      "kod": "20",
+      "object": "expenditure_amount",
+      "universum_id": 1,
+      "reason": "Spending has an amount spent; the amount is not the action itself. Source: https://en-word.net/downloads"
+    },
+    {
+      "subject": "saving_money",
+      "kod": "27",
+      "object": 1957,
+      "universum_id": 1,
+      "reason": "Money is the resource retained for later use. Source: https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
+    },
+    {
+      "subject": "money_management",
+      "kod": "27",
+      "object": 1957,
+      "universum_id": 1,
+      "reason": "The activity organizes monetary resources. Source: https://files.consumerfinance.gov/f/documents/cfpb_building_block_activities_learning-about-budgets_guide.pdf"
+    },
+    {
+      "subject": "budgeting",
+      "kod": "27",
+      "object": "budget_plan",
+      "universum_id": 1,
+      "reason": "The plan is the object prepared by this planning process. Source: https://files.consumerfinance.gov/f/documents/cfpb_building_block_activities_learning-about-budgets_guide.pdf"
+    },
+    {
+      "subject": "budget_plan",
+      "kod": "21",
+      "object": "money_management",
+      "universum_id": 1,
+      "reason": "A budget plan serves management of monetary resources. Source: https://files.consumerfinance.gov/f/documents/cfpb_building_block_activities_learning-about-budgets_guide.pdf"
+    }
+  ],
+  "checks": [
+    {
+      "subject": "monetary_amount",
+      "kod": "14",
+      "object": 2635,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "income_amount",
+      "kod": "14",
+      "object": "monetary_amount",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "personal_income",
+      "kod": "14",
+      "object": "income_amount",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "earned_income",
+      "kod": "14",
+      "object": "income_amount",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "unearned_income",
+      "kod": "14",
+      "object": "personal_income",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "employment_pay",
+      "kod": "14",
+      "object": "earned_income",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "salary",
+      "kod": "14",
+      "object": "employment_pay",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hourly_pay",
+      "kod": "14",
+      "object": "employment_pay",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "gross_pay",
+      "kod": "14",
+      "object": "employment_pay",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "net_pay",
+      "kod": "14",
+      "object": "employment_pay",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "expenditure_amount",
+      "kod": "14",
+      "object": "monetary_amount",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fixed_expense",
+      "kod": "14",
+      "object": "expenditure_amount",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "variable_expense",
+      "kod": "14",
+      "object": "expenditure_amount",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "monetary_cost",
+      "kod": "14",
+      "object": "monetary_amount",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "interest_amount",
+      "kod": "14",
+      "object": "monetary_amount",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "interest_rate",
+      "kod": "14",
+      "object": 2635,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "budget_plan",
+      "kod": "14",
+      "object": 3267,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "personal_budget",
+      "kod": "14",
+      "object": "budget_plan",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "household_budget",
+      "kod": "14",
+      "object": "budget_plan",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "monetary_fund",
+      "kod": "14",
+      "object": 3624,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "savings",
+      "kod": "14",
+      "object": "monetary_fund",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "emergency_fund",
+      "kod": "14",
+      "object": "savings",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "budget_fund",
+      "kod": "14",
+      "object": "monetary_fund",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "money_management",
+      "kod": "14",
+      "object": 63,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "budgeting",
+      "kod": "14",
+      "object": 1814,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "saving_money",
+      "kod": "14",
+      "object": 63,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "money_spending",
+      "kod": "14",
+      "object": 3569,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 7752,
+      "kod": "14",
+      "object": 55,
+      "present": false
+    },
+    {
+      "subject": 7752,
+      "kod": "14",
+      "object": 63,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3268,
+      "kod": "14",
+      "object": 1957,
+      "present": false
+    },
+    {
+      "subject": 3268,
+      "kod": "14",
+      "object": "monetary_amount",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3643,
+      "kod": "14",
+      "object": 2635,
+      "present": false
+    },
+    {
+      "subject": 3643,
+      "kod": "14",
+      "object": "monetary_amount",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3267,
+      "kod": "14",
+      "object": 2654,
+      "present": false
+    },
+    {
+      "subject": 3267,
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1957,
+      "kod": "20",
+      "object": "monetary_amount",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "monetary_fund",
+      "kod": "20",
+      "object": "monetary_amount",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 7752,
+      "kod": "27",
+      "object": 1957,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 7752,
+      "kod": "20",
+      "object": 3268,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "money_spending",
+      "kod": "27",
+      "object": 1957,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "money_spending",
+      "kod": "20",
+      "object": "expenditure_amount",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "saving_money",
+      "kod": "27",
+      "object": 1957,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "money_management",
+      "kod": "27",
+      "object": 1957,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "budgeting",
+      "kod": "27",
+      "object": "budget_plan",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "budget_plan",
+      "kod": "21",
+      "object": "money_management",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1762,
+      "kod": "63",
+      "object": 1763,
+      "present": true,
+      "strength": null
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "monetary_amount",
+      "ancestor": 2635,
+      "present": true
+    },
+    {
+      "subject": "income_amount",
+      "ancestor": "monetary_amount",
+      "present": true
+    },
+    {
+      "subject": "personal_income",
+      "ancestor": "income_amount",
+      "present": true
+    },
+    {
+      "subject": "earned_income",
+      "ancestor": "income_amount",
+      "present": true
+    },
+    {
+      "subject": "unearned_income",
+      "ancestor": "personal_income",
+      "present": true
+    },
+    {
+      "subject": "employment_pay",
+      "ancestor": "earned_income",
+      "present": true
+    },
+    {
+      "subject": "salary",
+      "ancestor": "employment_pay",
+      "present": true
+    },
+    {
+      "subject": "hourly_pay",
+      "ancestor": "employment_pay",
+      "present": true
+    },
+    {
+      "subject": "gross_pay",
+      "ancestor": "employment_pay",
+      "present": true
+    },
+    {
+      "subject": "net_pay",
+      "ancestor": "employment_pay",
+      "present": true
+    },
+    {
+      "subject": "expenditure_amount",
+      "ancestor": "monetary_amount",
+      "present": true
+    },
+    {
+      "subject": "fixed_expense",
+      "ancestor": "expenditure_amount",
+      "present": true
+    },
+    {
+      "subject": "variable_expense",
+      "ancestor": "expenditure_amount",
+      "present": true
+    },
+    {
+      "subject": "monetary_cost",
+      "ancestor": "monetary_amount",
+      "present": true
+    },
+    {
+      "subject": "interest_amount",
+      "ancestor": "monetary_amount",
+      "present": true
+    },
+    {
+      "subject": "interest_rate",
+      "ancestor": 2635,
+      "present": true
+    },
+    {
+      "subject": "budget_plan",
+      "ancestor": 3267,
+      "present": true
+    },
+    {
+      "subject": "personal_budget",
+      "ancestor": "budget_plan",
+      "present": true
+    },
+    {
+      "subject": "household_budget",
+      "ancestor": "budget_plan",
+      "present": true
+    },
+    {
+      "subject": "monetary_fund",
+      "ancestor": 3624,
+      "present": true
+    },
+    {
+      "subject": "savings",
+      "ancestor": "monetary_fund",
+      "present": true
+    },
+    {
+      "subject": "emergency_fund",
+      "ancestor": "savings",
+      "present": true
+    },
+    {
+      "subject": "budget_fund",
+      "ancestor": "monetary_fund",
+      "present": true
+    },
+    {
+      "subject": "money_management",
+      "ancestor": 63,
+      "present": true
+    },
+    {
+      "subject": "budgeting",
+      "ancestor": 1814,
+      "present": true
+    },
+    {
+      "subject": "saving_money",
+      "ancestor": 63,
+      "present": true
+    },
+    {
+      "subject": "money_spending",
+      "ancestor": 3569,
+      "present": true
+    },
+    {
+      "subject": "income_amount",
+      "ancestor": 3365,
+      "present": false
+    },
+    {
+      "subject": "monetary_amount",
+      "ancestor": 1957,
+      "present": false
+    },
+    {
+      "subject": 3268,
+      "ancestor": 1957,
+      "present": false
+    },
+    {
+      "subject": 3268,
+      "ancestor": 2535,
+      "present": false
+    },
+    {
+      "subject": 7752,
+      "ancestor": 55,
+      "present": false
+    },
+    {
+      "subject": "budget_plan",
+      "ancestor": "monetary_fund",
+      "present": false
+    },
+    {
+      "subject": "budget_fund",
+      "ancestor": 3267,
+      "present": false
+    },
+    {
+      "subject": "savings",
+      "ancestor": "monetary_amount",
+      "present": false
+    },
+    {
+      "subject": "saving_money",
+      "ancestor": "monetary_fund",
+      "present": false
+    },
+    {
+      "subject": "interest_amount",
+      "ancestor": 2973,
+      "present": false
+    },
+    {
+      "subject": "interest_rate",
+      "ancestor": "monetary_amount",
+      "present": false
+    },
+    {
+      "subject": "interest_rate",
+      "ancestor": 24635,
+      "present": false
+    },
+    {
+      "subject": "money_spending",
+      "ancestor": "monetary_amount",
+      "present": false
+    },
+    {
+      "subject": "monetary_cost",
+      "ancestor": 4416,
+      "present": false
+    },
+    {
+      "subject": 3643,
+      "ancestor": 1957,
+      "present": false
+    },
+    {
+      "subject": 3267,
+      "ancestor": 2654,
+      "present": false
+    },
+    {
+      "subject": 1763,
+      "ancestor": 1762,
+      "present": false
+    },
+    {
+      "subject": 1762,
+      "ancestor": 3643,
+      "present": false
+    },
+    {
+      "subject": 1763,
+      "ancestor": 3643,
+      "present": false
+    },
+    {
+      "subject": 3643,
+      "ancestor": 2635,
+      "present": true
+    },
+    {
+      "subject": 3268,
+      "ancestor": 2635,
+      "present": true
+    },
+    {
+      "subject": 7752,
+      "ancestor": 19,
+      "present": true
+    },
+    {
+      "subject": 3267,
+      "ancestor": 17,
+      "present": true
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": 1762,
+      "term": "дорогостоящее",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1763,
+      "term": "недорогое",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1762,
+      "term": "дорогое",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1762,
+      "term": "costly",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1762,
+      "term": "high-priced",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1762,
+      "term": "expensive (price evaluation)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1763,
+      "term": "inexpensive",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1763,
+      "term": "low-priced",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1763,
+      "term": "cheap (price evaluation)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1763,
+      "term": "дешевое",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "monetary_amount",
+      "term": "денежная сумма",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "monetary_amount",
+      "term": "amount of money",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "monetary_amount",
+      "term": "monetary amount",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "monetary_amount",
+      "term": "sum of money",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "monetary_amount",
+      "term": "сумма денег",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "income_amount",
+      "term": "доход (денежная сумма)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "income_amount",
+      "term": "income (monetary amount)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "income_amount",
+      "term": "income",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "income_amount",
+      "term": "доход",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "personal_income",
+      "term": "личный доход",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "personal_income",
+      "term": "personal income",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "earned_income",
+      "term": "трудовой доход",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "earned_income",
+      "term": "earned income",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "unearned_income",
+      "term": "нетрудовой доход",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "unearned_income",
+      "term": "unearned income (personal)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "unearned_income",
+      "term": "unearned income",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "employment_pay",
+      "term": "заработная плата",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "employment_pay",
+      "term": "employment pay",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "employment_pay",
+      "term": "wage",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "employment_pay",
+      "term": "wages",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "employment_pay",
+      "term": "зарплата",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "salary",
+      "term": "фиксированная заработная плата",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "salary",
+      "term": "salary",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hourly_pay",
+      "term": "почасовая заработная плата",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "hourly_pay",
+      "term": "hourly pay",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hourly_pay",
+      "term": "hourly wages",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "gross_pay",
+      "term": "заработная плата до удержаний",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "gross_pay",
+      "term": "gross pay",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "gross_pay",
+      "term": "gross earnings (employment)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "net_pay",
+      "term": "заработная плата после удержаний",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "net_pay",
+      "term": "net pay",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "net_pay",
+      "term": "take-home pay",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "expenditure_amount",
+      "term": "денежный расход (сумма)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "expenditure_amount",
+      "term": "expenditure (monetary amount)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "expenditure_amount",
+      "term": "monetary expenditure",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "expenditure_amount",
+      "term": "денежные расходы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fixed_expense",
+      "term": "фиксированный расход (личный бюджет)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fixed_expense",
+      "term": "fixed expense (personal budget)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fixed_expense",
+      "term": "fixed expense",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "variable_expense",
+      "term": "переменный расход (личный бюджет)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "variable_expense",
+      "term": "variable expense (personal budget)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "variable_expense",
+      "term": "variable expense",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "monetary_cost",
+      "term": "денежные затраты",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "monetary_cost",
+      "term": "monetary cost",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "monetary_cost",
+      "term": "cost (monetary amount)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "interest_amount",
+      "term": "проценты (денежная плата)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "interest_amount",
+      "term": "interest (monetary charge)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "interest_amount",
+      "term": "financial interest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "interest_amount",
+      "term": "interest charge",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "interest_rate",
+      "term": "процентная ставка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "interest_rate",
+      "term": "interest rate",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "interest_rate",
+      "term": "rate of interest",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "budget_plan",
+      "term": "бюджет (финансовый план)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "budget_plan",
+      "term": "budget (financial plan)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "budget_plan",
+      "term": "budget",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "budget_plan",
+      "term": "spending plan",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "budget_plan",
+      "term": "бюджет",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "personal_budget",
+      "term": "личный бюджет",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "personal_budget",
+      "term": "personal budget",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "household_budget",
+      "term": "бюджет домохозяйства",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "household_budget",
+      "term": "household budget",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "monetary_fund",
+      "term": "денежный фонд",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "monetary_fund",
+      "term": "monetary fund",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "savings",
+      "term": "денежные сбережения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "savings",
+      "term": "savings",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "savings",
+      "term": "сбережения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "emergency_fund",
+      "term": "резерв на непредвиденные расходы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "emergency_fund",
+      "term": "emergency fund",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "budget_fund",
+      "term": "бюджет (выделенные средства)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "budget_fund",
+      "term": "budget (allocated fund)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "budget_fund",
+      "term": "allocated budget",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "money_management",
+      "term": "управление деньгами",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "money_management",
+      "term": "money management",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "budgeting",
+      "term": "составление бюджета",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "budgeting",
+      "term": "budgeting",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "budgeting",
+      "term": "budget planning",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "saving_money",
+      "term": "сбережение денег (действие)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "saving_money",
+      "term": "saving money",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "saving_money",
+      "term": "saving (money)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "money_spending",
+      "term": "трата денег",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "money_spending",
+      "term": "spending money",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "money_spending",
+      "term": "monetary spending",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 7752,
+      "term": "оплата (действие)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 7752,
+      "term": "payment (action)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 7752,
+      "term": "paying",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 7752,
+      "term": "to pay",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 7752,
+      "term": "оплата",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 7752,
+      "term": "оплатить",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 7752,
+      "term": "оплачивать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 7752,
+      "term": "платить",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 7752,
+      "term": "оплатение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 7752,
+      "term": "оплатиение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 7752,
+      "term": "ОПЛАТИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 3268,
+      "term": "плата (денежная сумма)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 3268,
+      "term": "payment amount",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3268,
+      "term": "payment (amount)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3268,
+      "term": "сумма платежа",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 3268,
+      "term": "to pay",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 3268,
+      "term": "платить",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 3365,
+      "term": "income",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 3365,
+      "term": "arrival",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3643,
+      "term": "price (monetary amount)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "net_pay",
+      "term": "net income",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "interest_rate",
+      "term": "APR",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "interest_rate",
+      "term": "APY",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "unearned_income",
+      "term": "unearned revenue",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "expenditure_amount",
+      "term": "tax deductible expense",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

@@ -1,0 +1,2926 @@
+{
+  "source": "quality-20261009-q28",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Motion versus stopping/rest, displacement process versus vector quantity, velocity versus speed, angular quantities and measurements, intersecting motion types, mechanical oscillation and malformed braking entries.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "vectors": "https://openstax.org/books/university-physics-volume-1/pages/4-1-displacement-and-velocity-vectors",
+      "circular": "https://openstax.org/books/university-physics-volume-1/pages/4-4-uniform-and-nonuniform-circular-motion",
+      "rotation": "https://openstax.org/books/university-physics-volume-1/pages/10-1-rotational-variables",
+      "acceleration": "https://openstax.org/books/physics/pages/3-1-acceleration",
+      "oscillation": "https://openstax.org/books/university-physics-volume-1/pages/15-1-simple-harmonic-motion",
+      "damping": "https://openstax.org/books/university-physics-volume-1/pages/15-5-damped-oscillations",
+      "slow_ru": "https://gramota.ru/meta/zamedlit",
+      "braking_ru": "https://gramota.ru/meta/tormozhenie",
+      "brake_ru": "https://gramota.ru/meta/tormozit",
+      "braked_ru": "https://gramota.ru/meta/zatormozit"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet; CC BY 4.0 and Princeton notices remain in docs/quality/2026-10-09-q11.md#sources-and-reuse. OpenStax physics chapters and Gramota support selected corrections. Definitions are paraphrased; translations, scope restrictions and graph mappings are editorial adaptations.",
+    "existing_cohort": [
+      55,
+      1798,
+      3292,
+      3254,
+      2926,
+      2819,
+      3895,
+      3462,
+      10646,
+      24585,
+      24586,
+      24587,
+      24588,
+      24591,
+      24592,
+      24661,
+      24665,
+      7922,
+      8449,
+      8690,
+      18831
+    ],
+    "context_policy": "All additions use U1 and unspecified strength. Motion and rest use a fixed reference frame and time scope. A transition, a resulting state and a measured quantity remain distinct. Angular quantities are not linear quantities or revolution counts merely because their English names share velocity or acceleration.",
+    "sense_decisions": [
+      {
+        "concept": "velocity",
+        "synset": "oewn-15307914-n",
+        "decision": "add",
+        "alignment": "split dictionary speed/velocity sense",
+        "scope": "The vector rate of position change. Split this meaning from the dictionary scalar-speed gloss."
+      },
+      {
+        "concept": "displacement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "physics-source quantity sense",
+        "scope": "The directed change between initial and final positions in one frame; not path length or the act of moving."
+      },
+      {
+        "concept": "angular_velocity",
+        "synset": "oewn-11489665-n",
+        "decision": "add",
+        "alignment": "corrected quantity genus",
+        "scope": "Rate and orientation of rotation, expressed with angular units per time. Distinct from linear velocity and rotations counted per time."
+      },
+      {
+        "concept": "angular_acceleration",
+        "synset": "oewn-11489508-n",
+        "decision": "add",
+        "alignment": "corrected quantity genus",
+        "scope": "Rate of angular-velocity change. Keep separate from the existing linear acceleration quantity and from speeding up."
+      },
+      {
+        "concept": "angular_velocity_unit",
+        "synset": null,
+        "decision": "add",
+        "alignment": "quantity-specific unit family",
+        "scope": "A unit for angular velocity, separate from a rotation-frequency unit."
+      },
+      {
+        "concept": "radian_per_second",
+        "synset": null,
+        "decision": "add",
+        "alignment": "standard compound unit",
+        "scope": "The rad/s angular-velocity unit. Do not identify it with one revolution per second."
+      },
+      {
+        "concept": "angular_acceleration_unit",
+        "synset": null,
+        "decision": "add",
+        "alignment": "quantity-specific unit family",
+        "scope": "A unit for angular acceleration."
+      },
+      {
+        "concept": "radian_per_second_squared",
+        "synset": null,
+        "decision": "add",
+        "alignment": "standard compound unit",
+        "scope": "The rad/s2 angular-acceleration unit."
+      },
+      {
+        "concept": "velocity_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of the specified quantity, distinct from measurement of a similarly named scalar or frequency."
+      },
+      {
+        "concept": "displacement_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of the specified quantity, distinct from measurement of a similarly named scalar or frequency."
+      },
+      {
+        "concept": "angular_velocity_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of the specified quantity, distinct from measurement of a similarly named scalar or frequency."
+      },
+      {
+        "concept": "angular_acceleration_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Measurement of the specified quantity, distinct from measurement of a similarly named scalar or frequency."
+      },
+      {
+        "concept": "rectilinear",
+        "synset": null,
+        "decision": "add",
+        "alignment": "path restriction",
+        "scope": "Motion along a straight line; speed need not be constant."
+      },
+      {
+        "concept": "circular",
+        "synset": null,
+        "decision": "add",
+        "alignment": "path restriction",
+        "scope": "Motion along a circular path."
+      },
+      {
+        "concept": "constant_speed",
+        "synset": null,
+        "decision": "add",
+        "alignment": "speed restriction",
+        "scope": "The scalar speed is constant over the selected interval; direction may change."
+      },
+      {
+        "concept": "variable_speed",
+        "synset": null,
+        "decision": "add",
+        "alignment": "speed restriction",
+        "scope": "The scalar speed changes over the selected interval."
+      },
+      {
+        "concept": "uniform_rectilinear",
+        "synset": null,
+        "decision": "add",
+        "alignment": "path/speed intersection",
+        "scope": "Straight-line motion with constant nonzero velocity in the chosen frame."
+      },
+      {
+        "concept": "uniform_circular",
+        "synset": null,
+        "decision": "add",
+        "alignment": "path/speed intersection",
+        "scope": "Circular motion at constant nonzero speed; the velocity direction changes."
+      },
+      {
+        "concept": "nonuniform_circular",
+        "synset": null,
+        "decision": "add",
+        "alignment": "path/speed intersection",
+        "scope": "Circular motion whose speed changes."
+      },
+      {
+        "concept": "periodic_motion",
+        "synset": "oewn-07364279-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Motion that repeats its physical configuration at equal time intervals. Not every oscillation has exact periodicity."
+      },
+      {
+        "concept": "mechanical_oscillation",
+        "synset": "oewn-00346752-n",
+        "decision": "add",
+        "alignment": "mechanical restriction",
+        "scope": "Back-and-forth physical motion around an equilibrium or reference configuration. Restrict the broader oscillation process to mechanical motion."
+      },
+      {
+        "concept": "simple_harmonic",
+        "synset": "oewn-07425611-n",
+        "decision": "add",
+        "alignment": "ideal mechanical model",
+        "scope": "The ideal undamped mechanical oscillation with sinusoidal displacement and a linear restoring response."
+      },
+      {
+        "concept": "linear_harmonic",
+        "synset": null,
+        "decision": "add",
+        "alignment": "oscillation/path intersection",
+        "scope": "The harmonic mechanical model restricted to motion along one straight line."
+      },
+      {
+        "concept": "damped_oscillation",
+        "synset": null,
+        "decision": "add",
+        "alignment": "oscillatory damping restriction",
+        "scope": "An oscillatory motion with decreasing amplitude. Exclude overdamped or critically damped non-oscillatory returns to equilibrium."
+      },
+      {
+        "concept": "displacement_amplitude",
+        "synset": "oewn-07459482-n",
+        "decision": "add",
+        "alignment": "restricted amplitude quantity",
+        "scope": "The maximum absolute linear offset from the reference in an oscillation, or its time-varying envelope. This length sense excludes voltage and angular amplitudes."
+      },
+      {
+        "concept": "motion_slowing",
+        "synset": "oewn-00331500-n",
+        "decision": "add",
+        "alignment": "restricted slowing process",
+        "scope": "The process of decreasing scalar motion speed. It need not reach rest; do not use the dictionary speeding-up genus."
+      },
+      {
+        "concept": "motion_start",
+        "synset": null,
+        "decision": "add",
+        "alignment": "motion-state transition",
+        "scope": "The transition from rest to motion in a specified frame. Distinct from continued motion and from the resulting speed."
+      },
+      {
+        "concept": 55,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The very large movement branch still contains mixed generated verb senses; no blanket migration is made."
+      },
+      {
+        "concept": 24585,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Rotational frequency counts turns per time and remains distinct from angular velocity."
+      },
+      {
+        "concept": 24587,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Existing physical acceleration retains its direct genus and its Q12 measurement conditions."
+      },
+      {
+        "concept": 24588,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Speed measurement is scalar; a speedometer is not automatically a full velocity-vector instrument."
+      },
+      {
+        "concept": 24665,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Existing metre-per-second unit is reused; no unit/quantity identity is asserted."
+      },
+      {
+        "concept": 3895,
+        "synset": "oewn-07359766-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Do not import the oscillation-as-wave genus or require all physical oscillations to be strictly periodic."
+      },
+      {
+        "concept": 8690,
+        "synset": "oewn-01867579-v",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The dictionary brake verb gloss unnecessarily requires a full stop; the reviewed physical sense also includes slowing."
+      },
+      {
+        "concept": 3254,
+        "synset": "oewn-07461004-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Rigid-body translation and generic relocation need different scopes; defer the former instead of importing a constant-speed restriction."
+      }
+    ],
+    "limits": "No traffic advice, stopping distances, friction coefficients, force calculations or numerical device performance. No new blanket exclusions. Movement at constant scalar speed need not have a constant velocity vector. Braking entries select physical motion; figurative hindrance and physiological inhibition require separate senses. Translation, trajectory, inertia, momentum, mixed movement descendants and general amplitude dimensions remain queued. No application test suites.",
+    "exclusion_review": {
+      "context": "U1 positive genus witnesses",
+      "before_conflicting_edges": 8,
+      "resolved_edges": [
+        3613
+      ],
+      "decision": "Replace the cessation-as-motion genus and remove the motion/cessation contrary. Preserve the existing motion/rest contrary and all unrelated exclusion witnesses.",
+      "remaining_candidates_expected": 7
+    },
+    "new_term_collisions": [],
+    "collision_decision": "No exact normalized cross-language collision is accepted. Existing motion, rest, relocation, rotation, oscillation, speed, acceleration and braking records are reused. Russian stem matches exposed generated braking records before a duplicate could be added.",
+    "refreshed_comparison": {
+      "baseline": "Q27",
+      "existing_concepts": 13087,
+      "existing_terms": 36879,
+      "synsets_with_exact_en_candidate": 15618,
+      "synsets_without_exact_en_candidate": 91901,
+      "existing_concepts_with_dictionary_candidate": 4192,
+      "caveat": "Normalized spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "velocity",
+      "name": "скорость (векторная величина)",
+      "parent": 2709,
+      "universum_id": 1,
+      "terms": [
+        [
+          "скорость (векторная величина)",
+          "ru"
+        ],
+        [
+          "velocity (vector quantity)",
+          "en"
+        ],
+        [
+          "velocity",
+          "en"
+        ],
+        [
+          "вектор скорости",
+          "ru"
+        ]
+      ],
+      "reason": "The vector rate of position change. Split this meaning from the dictionary scalar-speed gloss. OEWN 2025: oewn-15307914-n. Source: https://openstax.org/books/university-physics-volume-1/pages/4-1-displacement-and-velocity-vectors"
+    },
+    {
+      "key": "displacement",
+      "name": "перемещение (векторная величина)",
+      "parent": 2709,
+      "universum_id": 1,
+      "terms": [
+        [
+          "перемещение (векторная величина)",
+          "ru"
+        ],
+        [
+          "displacement vector",
+          "en"
+        ],
+        [
+          "displacement (vector quantity)",
+          "en"
+        ]
+      ],
+      "reason": "The directed change between initial and final positions in one frame; not path length or the act of moving. Source: https://openstax.org/books/university-physics-volume-1/pages/4-1-displacement-and-velocity-vectors"
+    },
+    {
+      "key": "angular_velocity",
+      "name": "угловая скорость",
+      "parent": 2709,
+      "universum_id": 1,
+      "terms": [
+        [
+          "угловая скорость",
+          "ru"
+        ],
+        [
+          "angular velocity",
+          "en"
+        ]
+      ],
+      "reason": "Rate and orientation of rotation, expressed with angular units per time. Distinct from linear velocity and rotations counted per time. OEWN 2025: oewn-11489665-n. Source: https://openstax.org/books/university-physics-volume-1/pages/10-1-rotational-variables"
+    },
+    {
+      "key": "angular_acceleration",
+      "name": "угловое ускорение",
+      "parent": 2709,
+      "universum_id": 1,
+      "terms": [
+        [
+          "угловое ускорение",
+          "ru"
+        ],
+        [
+          "angular acceleration",
+          "en"
+        ]
+      ],
+      "reason": "Rate of angular-velocity change. Keep separate from the existing linear acceleration quantity and from speeding up. OEWN 2025: oewn-11489508-n. Source: https://openstax.org/books/university-physics-volume-1/pages/10-1-rotational-variables"
+    },
+    {
+      "key": "angular_velocity_unit",
+      "name": "единица угловой скорости",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица угловой скорости",
+          "ru"
+        ],
+        [
+          "angular velocity unit",
+          "en"
+        ]
+      ],
+      "reason": "A unit for angular velocity, separate from a rotation-frequency unit. Source: https://openstax.org/books/university-physics-volume-1/pages/10-1-rotational-variables"
+    },
+    {
+      "key": "radian_per_second",
+      "name": "радиан в секунду",
+      "parent": "angular_velocity_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "радиан в секунду",
+          "ru"
+        ],
+        [
+          "radian per second",
+          "en"
+        ],
+        [
+          "rad/s",
+          "en"
+        ]
+      ],
+      "reason": "The rad/s angular-velocity unit. Do not identify it with one revolution per second. Source: https://openstax.org/books/university-physics-volume-1/pages/10-1-rotational-variables"
+    },
+    {
+      "key": "angular_acceleration_unit",
+      "name": "единица углового ускорения",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица углового ускорения",
+          "ru"
+        ],
+        [
+          "angular acceleration unit",
+          "en"
+        ]
+      ],
+      "reason": "A unit for angular acceleration. Source: https://openstax.org/books/university-physics-volume-1/pages/10-1-rotational-variables"
+    },
+    {
+      "key": "radian_per_second_squared",
+      "name": "радиан в секунду в квадрате",
+      "parent": "angular_acceleration_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "радиан в секунду в квадрате",
+          "ru"
+        ],
+        [
+          "radian per second squared",
+          "en"
+        ],
+        [
+          "rad/s2",
+          "en"
+        ]
+      ],
+      "reason": "The rad/s2 angular-acceleration unit. Source: https://openstax.org/books/university-physics-volume-1/pages/10-1-rotational-variables"
+    },
+    {
+      "key": "velocity_measurement",
+      "name": "измерение вектора скорости",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение вектора скорости",
+          "ru"
+        ],
+        [
+          "velocity vector measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of the specified quantity, distinct from measurement of a similarly named scalar or frequency. Source: https://openstax.org/books/university-physics-volume-1/pages/4-1-displacement-and-velocity-vectors"
+    },
+    {
+      "key": "displacement_measurement",
+      "name": "измерение вектора перемещения",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение вектора перемещения",
+          "ru"
+        ],
+        [
+          "displacement vector measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of the specified quantity, distinct from measurement of a similarly named scalar or frequency. Source: https://openstax.org/books/university-physics-volume-1/pages/4-1-displacement-and-velocity-vectors"
+    },
+    {
+      "key": "angular_velocity_measurement",
+      "name": "измерение угловой скорости",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение угловой скорости",
+          "ru"
+        ],
+        [
+          "angular velocity measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of the specified quantity, distinct from measurement of a similarly named scalar or frequency. Source: https://openstax.org/books/university-physics-volume-1/pages/10-1-rotational-variables"
+    },
+    {
+      "key": "angular_acceleration_measurement",
+      "name": "измерение углового ускорения",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение углового ускорения",
+          "ru"
+        ],
+        [
+          "angular acceleration measurement",
+          "en"
+        ]
+      ],
+      "reason": "Measurement of the specified quantity, distinct from measurement of a similarly named scalar or frequency. Source: https://openstax.org/books/university-physics-volume-1/pages/10-1-rotational-variables"
+    },
+    {
+      "key": "rectilinear",
+      "name": "прямолинейное движение",
+      "parent": 55,
+      "universum_id": 1,
+      "terms": [
+        [
+          "прямолинейное движение",
+          "ru"
+        ],
+        [
+          "rectilinear motion",
+          "en"
+        ],
+        [
+          "straight-line motion",
+          "en"
+        ]
+      ],
+      "reason": "Motion along a straight line; speed need not be constant. Source: https://openstax.org/books/physics/pages/3-1-acceleration"
+    },
+    {
+      "key": "circular",
+      "name": "движение по окружности",
+      "parent": 55,
+      "universum_id": 1,
+      "terms": [
+        [
+          "движение по окружности",
+          "ru"
+        ],
+        [
+          "circular motion",
+          "en"
+        ]
+      ],
+      "reason": "Motion along a circular path. Source: https://openstax.org/books/university-physics-volume-1/pages/4-4-uniform-and-nonuniform-circular-motion"
+    },
+    {
+      "key": "constant_speed",
+      "name": "движение с постоянным модулем скорости",
+      "parent": 55,
+      "universum_id": 1,
+      "terms": [
+        [
+          "движение с постоянным модулем скорости",
+          "ru"
+        ],
+        [
+          "motion at constant speed",
+          "en"
+        ],
+        [
+          "constant-speed motion",
+          "en"
+        ]
+      ],
+      "reason": "The scalar speed is constant over the selected interval; direction may change. Source: https://openstax.org/books/university-physics-volume-1/pages/4-4-uniform-and-nonuniform-circular-motion"
+    },
+    {
+      "key": "variable_speed",
+      "name": "движение с переменным модулем скорости",
+      "parent": 55,
+      "universum_id": 1,
+      "terms": [
+        [
+          "движение с переменным модулем скорости",
+          "ru"
+        ],
+        [
+          "motion at variable speed",
+          "en"
+        ],
+        [
+          "variable-speed motion",
+          "en"
+        ]
+      ],
+      "reason": "The scalar speed changes over the selected interval. Source: https://openstax.org/books/university-physics-volume-1/pages/4-4-uniform-and-nonuniform-circular-motion"
+    },
+    {
+      "key": "uniform_rectilinear",
+      "name": "равномерное прямолинейное движение",
+      "parent": "rectilinear",
+      "universum_id": 1,
+      "terms": [
+        [
+          "равномерное прямолинейное движение",
+          "ru"
+        ],
+        [
+          "uniform rectilinear motion",
+          "en"
+        ]
+      ],
+      "reason": "Straight-line motion with constant nonzero velocity in the chosen frame. Source: https://openstax.org/books/physics/pages/3-1-acceleration"
+    },
+    {
+      "key": "uniform_circular",
+      "name": "равномерное движение по окружности",
+      "parent": "circular",
+      "universum_id": 1,
+      "terms": [
+        [
+          "равномерное движение по окружности",
+          "ru"
+        ],
+        [
+          "uniform circular motion",
+          "en"
+        ]
+      ],
+      "reason": "Circular motion at constant nonzero speed; the velocity direction changes. Source: https://openstax.org/books/university-physics-volume-1/pages/4-4-uniform-and-nonuniform-circular-motion"
+    },
+    {
+      "key": "nonuniform_circular",
+      "name": "неравномерное движение по окружности",
+      "parent": "circular",
+      "universum_id": 1,
+      "terms": [
+        [
+          "неравномерное движение по окружности",
+          "ru"
+        ],
+        [
+          "nonuniform circular motion",
+          "en"
+        ],
+        [
+          "non-uniform circular motion",
+          "en"
+        ]
+      ],
+      "reason": "Circular motion whose speed changes. Source: https://openstax.org/books/university-physics-volume-1/pages/4-4-uniform-and-nonuniform-circular-motion"
+    },
+    {
+      "key": "periodic_motion",
+      "name": "периодическое движение",
+      "parent": 55,
+      "universum_id": 1,
+      "terms": [
+        [
+          "периодическое движение",
+          "ru"
+        ],
+        [
+          "periodic motion",
+          "en"
+        ]
+      ],
+      "reason": "Motion that repeats its physical configuration at equal time intervals. Not every oscillation has exact periodicity. OEWN 2025: oewn-07364279-n."
+    },
+    {
+      "key": "mechanical_oscillation",
+      "name": "механическое колебание",
+      "parent": 3895,
+      "universum_id": 1,
+      "terms": [
+        [
+          "механическое колебание",
+          "ru"
+        ],
+        [
+          "mechanical oscillation",
+          "en"
+        ]
+      ],
+      "reason": "Back-and-forth physical motion around an equilibrium or reference configuration. Restrict the broader oscillation process to mechanical motion. OEWN 2025: oewn-00346752-n. Source: https://openstax.org/books/university-physics-volume-1/pages/15-1-simple-harmonic-motion"
+    },
+    {
+      "key": "simple_harmonic",
+      "name": "гармоническое механическое колебание",
+      "parent": "mechanical_oscillation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "гармоническое механическое колебание",
+          "ru"
+        ],
+        [
+          "simple harmonic motion",
+          "en"
+        ],
+        [
+          "simple harmonic oscillation",
+          "en"
+        ]
+      ],
+      "reason": "The ideal undamped mechanical oscillation with sinusoidal displacement and a linear restoring response. OEWN 2025: oewn-07425611-n. Source: https://openstax.org/books/university-physics-volume-1/pages/15-1-simple-harmonic-motion"
+    },
+    {
+      "key": "linear_harmonic",
+      "name": "одномерное гармоническое колебание",
+      "parent": "simple_harmonic",
+      "universum_id": 1,
+      "terms": [
+        [
+          "одномерное гармоническое колебание",
+          "ru"
+        ],
+        [
+          "one-dimensional simple harmonic motion",
+          "en"
+        ]
+      ],
+      "reason": "The harmonic mechanical model restricted to motion along one straight line. Source: https://openstax.org/books/university-physics-volume-1/pages/15-1-simple-harmonic-motion"
+    },
+    {
+      "key": "damped_oscillation",
+      "name": "затухающее механическое колебание",
+      "parent": "mechanical_oscillation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "затухающее механическое колебание",
+          "ru"
+        ],
+        [
+          "damped mechanical oscillation",
+          "en"
+        ],
+        [
+          "damped oscillation",
+          "en"
+        ]
+      ],
+      "reason": "An oscillatory motion with decreasing amplitude. Exclude overdamped or critically damped non-oscillatory returns to equilibrium. Source: https://openstax.org/books/university-physics-volume-1/pages/15-5-damped-oscillations"
+    },
+    {
+      "key": "displacement_amplitude",
+      "name": "амплитуда линейного смещения",
+      "parent": 2895,
+      "universum_id": 1,
+      "terms": [
+        [
+          "амплитуда линейного смещения",
+          "ru"
+        ],
+        [
+          "linear displacement amplitude",
+          "en"
+        ]
+      ],
+      "reason": "The maximum absolute linear offset from the reference in an oscillation, or its time-varying envelope. This length sense excludes voltage and angular amplitudes. OEWN 2025: oewn-07459482-n. Source: https://openstax.org/books/university-physics-volume-1/pages/15-1-simple-harmonic-motion"
+    },
+    {
+      "key": "motion_slowing",
+      "name": "замедление движения",
+      "parent": 2926,
+      "universum_id": 1,
+      "terms": [
+        [
+          "замедление движения",
+          "ru"
+        ],
+        [
+          "slowing of motion",
+          "en"
+        ],
+        [
+          "deceleration (slowing motion)",
+          "en"
+        ]
+      ],
+      "reason": "The process of decreasing scalar motion speed. It need not reach rest; do not use the dictionary speeding-up genus. OEWN 2025: oewn-00331500-n. Source: https://openstax.org/books/physics/pages/3-1-acceleration"
+    },
+    {
+      "key": "motion_start",
+      "name": "начало движения",
+      "parent": 2606,
+      "universum_id": 1,
+      "terms": [
+        [
+          "начало движения",
+          "ru"
+        ],
+        [
+          "start of motion",
+          "en"
+        ]
+      ],
+      "reason": "The transition from rest to motion in a specified frame. Distinct from continued motion and from the resulting speed. Source: https://openstax.org/books/physics/pages/3-1-acceleration"
+    }
+  ],
+  "renames": [
+    {
+      "id": 1798,
+      "before": "остановка",
+      "name": "остановка движения",
+      "terms": [],
+      "reason": "Select the transition that ends motion, rather than a bus-stop location or the resulting stationary state. OEWN 2025: oewn-01864781-v."
+    },
+    {
+      "id": 3292,
+      "before": "покой",
+      "name": "покой (механическое состояние)",
+      "terms": [],
+      "reason": "Qualify the stationary mechanical-state sense used by the existing motion/rest pair; this is not leisure, peace of mind or absolute rest."
+    },
+    {
+      "id": 3254,
+      "before": "перемещение",
+      "name": "перемещение (процесс)",
+      "terms": [],
+      "reason": "Keep the existing spatial-movement process distinct from its vector displacement quantity. OEWN 2025: oewn-07325733-n."
+    },
+    {
+      "id": 2926,
+      "before": "замедление",
+      "name": "замедление (процесс)",
+      "terms": [],
+      "reason": "Select generic slowing as a change, not a vector acceleration quantity or necessarily a physiological process. OEWN 2025: oewn-05068514-n. Source: https://gramota.ru/meta/zamedlit"
+    },
+    {
+      "id": 8690,
+      "before": "тормозение",
+      "name": "торможение движения",
+      "terms": [],
+      "reason": "Select physical braking that reduces motion speed. Figurative hindrance, holding at rest and neural inhibition are separate senses. Source: https://gramota.ru/meta/tormozhenie"
+    },
+    {
+      "id": 7922,
+      "before": "затормозение",
+      "name": "затормозить (движение)",
+      "terms": [],
+      "reason": "Retain the completed-action wording for applying braking. Do not infer that every application reaches a full stop. Source: https://gramota.ru/meta/zatormozit"
+    },
+    {
+      "id": 8449,
+      "before": "притормозение",
+      "name": "притормаживание движения",
+      "terms": [],
+      "reason": "Select limited braking of motion. Do not confuse reduced speed with complete stopping. Source: https://gramota.ru/meta/tormozit"
+    },
+    {
+      "id": 18831,
+      "before": "тормознутие",
+      "name": "тормознуть (движение)",
+      "terms": [],
+      "reason": "Retain the established colloquial verb for briefly applying a brake; do not fabricate a noun from its stem. Source: https://gramota.ru/meta/tormozit"
+    }
+  ],
+  "terms": [
+    {
+      "id": 1798,
+      "name": "остановка движения",
+      "terms": [
+        [
+          "stopping of motion",
+          "en"
+        ],
+        [
+          "coming to a stop",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the motion-cessation sense without importing a place or device. OEWN 2025: oewn-01864781-v."
+    },
+    {
+      "id": 3292,
+      "name": "покой (механическое состояние)",
+      "terms": [
+        [
+          "rest (mechanical state)",
+          "en"
+        ]
+      ],
+      "reason": "Rest is relative to the specified frame; retain its existing state genus."
+    },
+    {
+      "id": 3254,
+      "name": "перемещение (процесс)",
+      "terms": [
+        [
+          "change of location",
+          "en"
+        ],
+        [
+          "displacement (movement process)",
+          "en"
+        ]
+      ],
+      "reason": "Reuse the movement record; do not import the dictionary no-rotation restriction into generic spatial relocation. OEWN 2025: oewn-07325733-n."
+    },
+    {
+      "id": 2926,
+      "name": "замедление (процесс)",
+      "terms": [
+        [
+          "slowdown (process)",
+          "en"
+        ],
+        [
+          "замедлить",
+          "ru"
+        ]
+      ],
+      "reason": "Use real English and Russian terms for the process sense. OEWN 2025: oewn-05068514-n."
+    },
+    {
+      "id": 3462,
+      "name": "скорость",
+      "terms": [
+        [
+          "scalar speed",
+          "en"
+        ]
+      ],
+      "reason": "Distinguish the existing scalar magnitude from the added vector velocity; preserve all earlier speed measurement assertions. OEWN 2025: oewn-15307914-n."
+    },
+    {
+      "id": 3895,
+      "name": "колебание",
+      "terms": [
+        [
+          "oscillation (physical process)",
+          "en"
+        ]
+      ],
+      "reason": "Reuse physical oscillation, which can include non-mechanical variation. Do not require all oscillations to be exactly periodic. OEWN 2025: oewn-13549168-n."
+    },
+    {
+      "id": 2819,
+      "name": "вращение",
+      "terms": [
+        [
+          "rotary motion",
+          "en"
+        ]
+      ],
+      "reason": "Reuse the existing rotational motion, distinct from a geometric coordinate transformation. OEWN 2025: oewn-00342854-n."
+    },
+    {
+      "id": 8690,
+      "name": "торможение движения",
+      "terms": [
+        [
+          "braking (slowing motion)",
+          "en"
+        ],
+        [
+          "тормозить",
+          "ru"
+        ]
+      ],
+      "reason": "Replace generated wording with established terms under the selected physical sense."
+    },
+    {
+      "id": 7922,
+      "name": "затормозить (движение)",
+      "terms": [
+        [
+          "apply braking to motion",
+          "en"
+        ],
+        [
+          "затормозить",
+          "ru"
+        ]
+      ],
+      "reason": "Replace generated wording with established terms under the selected physical sense."
+    },
+    {
+      "id": 8449,
+      "name": "притормаживание движения",
+      "terms": [
+        [
+          "slight braking",
+          "en"
+        ],
+        [
+          "притормаживать",
+          "ru"
+        ]
+      ],
+      "reason": "Replace generated wording with established terms under the selected physical sense."
+    },
+    {
+      "id": 18831,
+      "name": "тормознуть (движение)",
+      "terms": [
+        [
+          "brake briefly",
+          "en"
+        ],
+        [
+          "тормознуть",
+          "ru"
+        ]
+      ],
+      "reason": "Replace generated wording with established terms under the selected physical sense."
+    },
+    {
+      "id": 8690,
+      "name": "торможение движения",
+      "terms": [
+        [
+          "braking",
+          "en"
+        ],
+        [
+          "торможение",
+          "ru"
+        ]
+      ],
+      "reason": "Established braking terms, qualified by the canonical motion scope. OEWN 2025: oewn-01867579-v."
+    },
+    {
+      "id": 8449,
+      "name": "притормаживание движения",
+      "terms": [
+        [
+          "притормозить",
+          "ru"
+        ]
+      ],
+      "reason": "Retain the established perfective verb as a Russian term for limited braking."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 2926,
+      "term": "замедлиение",
+      "lang": "ru",
+      "reason": "Malformed generated noun; замедление remains. Source: https://gramota.ru/meta/zamedlit"
+    },
+    {
+      "id": 2926,
+      "term": "ЗАМЕДЛИТЬ",
+      "lang": "en",
+      "reason": "Russian infinitive mislabeled as English; its correctly tagged form is supplied."
+    },
+    {
+      "id": 8690,
+      "term": "тормозение",
+      "lang": "ru",
+      "reason": "Remove the malformed generated noun or mistagged Russian verb; reviewed replacements preserve the lexical intent."
+    },
+    {
+      "id": 8690,
+      "term": "тормозиение",
+      "lang": "ru",
+      "reason": "Remove the malformed generated noun or mistagged Russian verb; reviewed replacements preserve the lexical intent."
+    },
+    {
+      "id": 8690,
+      "term": "ТОРМОЗИТЬ",
+      "lang": "en",
+      "reason": "Remove the malformed generated noun or mistagged Russian verb; reviewed replacements preserve the lexical intent."
+    },
+    {
+      "id": 7922,
+      "term": "затормозение",
+      "lang": "ru",
+      "reason": "Remove the malformed generated noun or mistagged Russian verb; reviewed replacements preserve the lexical intent."
+    },
+    {
+      "id": 7922,
+      "term": "затормозиение",
+      "lang": "ru",
+      "reason": "Remove the malformed generated noun or mistagged Russian verb; reviewed replacements preserve the lexical intent."
+    },
+    {
+      "id": 7922,
+      "term": "ЗАТОРМОЗИТЬ",
+      "lang": "en",
+      "reason": "Remove the malformed generated noun or mistagged Russian verb; reviewed replacements preserve the lexical intent."
+    },
+    {
+      "id": 8449,
+      "term": "притормозение",
+      "lang": "ru",
+      "reason": "Remove the malformed generated noun or mistagged Russian verb; reviewed replacements preserve the lexical intent."
+    },
+    {
+      "id": 8449,
+      "term": "притормозиение",
+      "lang": "ru",
+      "reason": "Remove the malformed generated noun or mistagged Russian verb; reviewed replacements preserve the lexical intent."
+    },
+    {
+      "id": 8449,
+      "term": "ПРИТОРМОЗИТЬ",
+      "lang": "en",
+      "reason": "Remove the malformed generated noun or mistagged Russian verb; reviewed replacements preserve the lexical intent."
+    },
+    {
+      "id": 18831,
+      "term": "тормознутие",
+      "lang": "ru",
+      "reason": "Remove the malformed generated noun or mistagged Russian verb; reviewed replacements preserve the lexical intent."
+    },
+    {
+      "id": 18831,
+      "term": "ТОРМОЗНУТЬ",
+      "lang": "en",
+      "reason": "Remove the malformed generated noun or mistagged Russian verb; reviewed replacements preserve the lexical intent."
+    },
+    {
+      "id": 18831,
+      "term": "тормознуутие",
+      "lang": "ru",
+      "reason": "Remove the malformed generated noun or mistagged Russian verb; reviewed replacements preserve the lexical intent."
+    }
+  ],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 2697,
+      "before": [
+        1798,
+        "14",
+        55,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1798,
+          "14",
+          2606,
+          null,
+          1
+        ]
+      ],
+      "reason": "Stopping denotes a transition. Its existing motion genus and contrary-to-motion assertion conflate a process ending with the resulting state. OEWN 2025: oewn-01864781-v."
+    },
+    {
+      "id": 3613,
+      "before": [
+        55,
+        "63",
+        1798,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The cessation transition is not the contrary state of ongoing motion. Preserve the existing motion/rest contrary, with a fixed frame and time scope."
+    },
+    {
+      "id": 5196,
+      "before": [
+        2926,
+        "14",
+        2631,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2926,
+          "14",
+          2606,
+          null,
+          1
+        ]
+      ],
+      "reason": "A decrease in the pace of a process is a change. Physical-motion slowing is a narrower reviewed subtype. OEWN 2025: oewn-05068514-n."
+    },
+    {
+      "id": 13593,
+      "before": [
+        2926,
+        "14",
+        202,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [],
+      "reason": "Slowing is not necessarily physiological. Preserve physiological inhibition for a separately scoped concept."
+    },
+    {
+      "id": 12774,
+      "before": [
+        8690,
+        "14",
+        64,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          8690,
+          "14",
+          "motion_slowing",
+          null,
+          1
+        ]
+      ],
+      "reason": "Braking motion is not communication. Select physical braking that reduces motion speed. Figurative hindrance, holding at rest and neural inhibition are separate senses. Source: https://gramota.ru/meta/tormozhenie"
+    },
+    {
+      "id": 12006,
+      "before": [
+        7922,
+        "14",
+        64,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          7922,
+          "14",
+          8690,
+          null,
+          1
+        ]
+      ],
+      "reason": "Braking motion is not communication. Retain the completed-action wording for applying braking. Do not infer that every application reaches a full stop. Source: https://gramota.ru/meta/zatormozit"
+    },
+    {
+      "id": 12533,
+      "before": [
+        8449,
+        "14",
+        64,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          8449,
+          "14",
+          8690,
+          null,
+          1
+        ]
+      ],
+      "reason": "Braking motion is not communication. Select limited braking of motion. Do not confuse reduced speed with complete stopping. Source: https://gramota.ru/meta/tormozit"
+    },
+    {
+      "id": 22915,
+      "before": [
+        18831,
+        "14",
+        64,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          18831,
+          "14",
+          8690,
+          null,
+          1
+        ]
+      ],
+      "reason": "Braking motion is not communication. Retain the established colloquial verb for briefly applying a brake; do not fabricate a noun from its stem. Source: https://gramota.ru/meta/tormozit"
+    }
+  ],
+  "edges": [
+    {
+      "subject": "velocity_measurement",
+      "kod": "27",
+      "object": "velocity",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://openstax.org/books/university-physics-volume-1/pages/4-1-displacement-and-velocity-vectors"
+    },
+    {
+      "subject": "displacement_measurement",
+      "kod": "27",
+      "object": "displacement",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://openstax.org/books/university-physics-volume-1/pages/4-1-displacement-and-velocity-vectors"
+    },
+    {
+      "subject": "angular_velocity_measurement",
+      "kod": "27",
+      "object": "angular_velocity",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://openstax.org/books/university-physics-volume-1/pages/10-1-rotational-variables"
+    },
+    {
+      "subject": "angular_acceleration_measurement",
+      "kod": "27",
+      "object": "angular_acceleration",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://openstax.org/books/university-physics-volume-1/pages/10-1-rotational-variables"
+    },
+    {
+      "subject": "uniform_rectilinear",
+      "kod": "14",
+      "object": "constant_speed",
+      "universum_id": 1,
+      "reason": "Keep both the reviewed path and scalar-speed classifications."
+    },
+    {
+      "subject": "uniform_circular",
+      "kod": "14",
+      "object": "constant_speed",
+      "universum_id": 1,
+      "reason": "Keep both the reviewed path and scalar-speed classifications."
+    },
+    {
+      "subject": "nonuniform_circular",
+      "kod": "14",
+      "object": "variable_speed",
+      "universum_id": 1,
+      "reason": "Keep both the reviewed path and scalar-speed classifications."
+    },
+    {
+      "subject": "mechanical_oscillation",
+      "kod": "14",
+      "object": 55,
+      "universum_id": 1,
+      "reason": "Mechanical oscillation belongs both to physical oscillation and to motion."
+    },
+    {
+      "subject": "simple_harmonic",
+      "kod": "14",
+      "object": "periodic_motion",
+      "universum_id": 1,
+      "reason": "The ideal undamped harmonic model repeats periodically. OEWN 2025: oewn-07425611-n. Source: https://openstax.org/books/university-physics-volume-1/pages/15-1-simple-harmonic-motion"
+    },
+    {
+      "subject": "linear_harmonic",
+      "kod": "14",
+      "object": "rectilinear",
+      "universum_id": 1,
+      "reason": "This restricted harmonic motion also has a straight-line path."
+    },
+    {
+      "subject": "displacement_amplitude",
+      "kod": "14",
+      "object": 2709,
+      "universum_id": 1,
+      "reason": "This measured length is also a physical quantity."
+    },
+    {
+      "subject": "motion_slowing",
+      "kod": "14",
+      "object": 55,
+      "universum_id": 1,
+      "reason": "The restricted decelerating motion is also physical motion; generic process slowdown remains broader."
+    },
+    {
+      "subject": "motion_slowing",
+      "kod": "27",
+      "object": 3462,
+      "universum_id": 1,
+      "reason": "The slowing process changes scalar speed, not direction alone."
+    },
+    {
+      "subject": 1798,
+      "kod": "70",
+      "object": 3292,
+      "universum_id": 1,
+      "reason": "Ending motion results in rest at the end of the transition in the same frame; indefinite rest is not asserted."
+    },
+    {
+      "subject": "motion_start",
+      "kod": "70",
+      "object": 55,
+      "universum_id": 1,
+      "reason": "The selected transition initiates motion in the same frame."
+    },
+    {
+      "subject": 3254,
+      "kod": "20",
+      "object": "displacement",
+      "universum_id": 1,
+      "reason": "A relocation has a vector displacement; it is not a subtype of that quantity."
+    },
+    {
+      "subject": 3254,
+      "kod": "20",
+      "object": "velocity",
+      "universum_id": 1,
+      "reason": "Relocation has a velocity vector within the chosen description."
+    },
+    {
+      "subject": 2819,
+      "kod": "20",
+      "object": "angular_velocity",
+      "universum_id": 1,
+      "reason": "Rotation has angular velocity, distinct from its existing revolution-frequency property."
+    },
+    {
+      "subject": 2819,
+      "kod": "20",
+      "object": "angular_acceleration",
+      "universum_id": 1,
+      "reason": "Rotation has angular acceleration, which can be zero."
+    },
+    {
+      "subject": "periodic_motion",
+      "kod": "20",
+      "object": 24584,
+      "universum_id": 1,
+      "reason": "Periodic motion has a repetition frequency."
+    },
+    {
+      "subject": "linear_harmonic",
+      "kod": "20",
+      "object": "displacement_amplitude",
+      "universum_id": 1,
+      "reason": "The selected linear displacement amplitude describes this straight-line harmonic model."
+    }
+  ],
+  "checks": [
+    {
+      "subject": "velocity",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "displacement",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "angular_velocity",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "angular_acceleration",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "angular_velocity_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "radian_per_second",
+      "kod": "14",
+      "object": "angular_velocity_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "angular_acceleration_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "radian_per_second_squared",
+      "kod": "14",
+      "object": "angular_acceleration_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "velocity_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "velocity_measurement",
+      "kod": "27",
+      "object": "velocity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "displacement_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "displacement_measurement",
+      "kod": "27",
+      "object": "displacement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "angular_velocity_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "angular_velocity_measurement",
+      "kod": "27",
+      "object": "angular_velocity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "angular_acceleration_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "angular_acceleration_measurement",
+      "kod": "27",
+      "object": "angular_acceleration",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rectilinear",
+      "kod": "14",
+      "object": 55,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "circular",
+      "kod": "14",
+      "object": 55,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "constant_speed",
+      "kod": "14",
+      "object": 55,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "variable_speed",
+      "kod": "14",
+      "object": 55,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "uniform_rectilinear",
+      "kod": "14",
+      "object": "rectilinear",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "uniform_circular",
+      "kod": "14",
+      "object": "circular",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "nonuniform_circular",
+      "kod": "14",
+      "object": "circular",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "uniform_rectilinear",
+      "kod": "14",
+      "object": "constant_speed",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "uniform_circular",
+      "kod": "14",
+      "object": "constant_speed",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "nonuniform_circular",
+      "kod": "14",
+      "object": "variable_speed",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "periodic_motion",
+      "kod": "14",
+      "object": 55,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mechanical_oscillation",
+      "kod": "14",
+      "object": 3895,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mechanical_oscillation",
+      "kod": "14",
+      "object": 55,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "simple_harmonic",
+      "kod": "14",
+      "object": "mechanical_oscillation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "simple_harmonic",
+      "kod": "14",
+      "object": "periodic_motion",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "linear_harmonic",
+      "kod": "14",
+      "object": "simple_harmonic",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "linear_harmonic",
+      "kod": "14",
+      "object": "rectilinear",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "damped_oscillation",
+      "kod": "14",
+      "object": "mechanical_oscillation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "displacement_amplitude",
+      "kod": "14",
+      "object": 2895,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "displacement_amplitude",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "motion_slowing",
+      "kod": "14",
+      "object": 2926,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "motion_slowing",
+      "kod": "14",
+      "object": 55,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "motion_start",
+      "kod": "14",
+      "object": 2606,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1798,
+      "kod": "14",
+      "object": 55,
+      "present": false
+    },
+    {
+      "subject": 1798,
+      "kod": "14",
+      "object": 2606,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 55,
+      "kod": "63",
+      "object": 1798,
+      "present": false
+    },
+    {
+      "subject": 2926,
+      "kod": "14",
+      "object": 2631,
+      "present": false
+    },
+    {
+      "subject": 2926,
+      "kod": "14",
+      "object": 2606,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2926,
+      "kod": "14",
+      "object": 202,
+      "present": false
+    },
+    {
+      "subject": 8690,
+      "kod": "14",
+      "object": 64,
+      "present": false
+    },
+    {
+      "subject": 8690,
+      "kod": "14",
+      "object": "motion_slowing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 7922,
+      "kod": "14",
+      "object": 64,
+      "present": false
+    },
+    {
+      "subject": 7922,
+      "kod": "14",
+      "object": 8690,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 8449,
+      "kod": "14",
+      "object": 64,
+      "present": false
+    },
+    {
+      "subject": 8449,
+      "kod": "14",
+      "object": 8690,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 18831,
+      "kod": "14",
+      "object": 64,
+      "present": false
+    },
+    {
+      "subject": 18831,
+      "kod": "14",
+      "object": 8690,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "motion_slowing",
+      "kod": "27",
+      "object": 3462,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1798,
+      "kod": "70",
+      "object": 3292,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "motion_start",
+      "kod": "70",
+      "object": 55,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3254,
+      "kod": "20",
+      "object": "displacement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3254,
+      "kod": "20",
+      "object": "velocity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2819,
+      "kod": "20",
+      "object": "angular_velocity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2819,
+      "kod": "20",
+      "object": "angular_acceleration",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "periodic_motion",
+      "kod": "20",
+      "object": 24584,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "linear_harmonic",
+      "kod": "20",
+      "object": "displacement_amplitude",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 55,
+      "kod": "63",
+      "object": 3292,
+      "present": true
+    },
+    {
+      "subject": 3292,
+      "kod": "14",
+      "object": 2633,
+      "present": true
+    },
+    {
+      "subject": 2819,
+      "kod": "14",
+      "object": 55,
+      "present": true
+    },
+    {
+      "subject": 3254,
+      "kod": "14",
+      "object": 55,
+      "present": true
+    },
+    {
+      "subject": 3895,
+      "kod": "14",
+      "object": 54,
+      "present": true
+    },
+    {
+      "subject": 24665,
+      "kod": "14",
+      "object": 24661,
+      "present": true
+    },
+    {
+      "subject": 24587,
+      "kod": "14",
+      "object": 2709,
+      "present": true
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "velocity",
+      "ancestor": 2709,
+      "present": true
+    },
+    {
+      "subject": "displacement",
+      "ancestor": 2709,
+      "present": true
+    },
+    {
+      "subject": "angular_velocity",
+      "ancestor": 2709,
+      "present": true
+    },
+    {
+      "subject": "angular_acceleration",
+      "ancestor": 2709,
+      "present": true
+    },
+    {
+      "subject": "angular_velocity_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "radian_per_second",
+      "ancestor": "angular_velocity_unit",
+      "present": true
+    },
+    {
+      "subject": "angular_acceleration_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "radian_per_second_squared",
+      "ancestor": "angular_acceleration_unit",
+      "present": true
+    },
+    {
+      "subject": "velocity_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "displacement_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "angular_velocity_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "angular_acceleration_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "rectilinear",
+      "ancestor": 55,
+      "present": true
+    },
+    {
+      "subject": "circular",
+      "ancestor": 55,
+      "present": true
+    },
+    {
+      "subject": "constant_speed",
+      "ancestor": 55,
+      "present": true
+    },
+    {
+      "subject": "variable_speed",
+      "ancestor": 55,
+      "present": true
+    },
+    {
+      "subject": "uniform_rectilinear",
+      "ancestor": "rectilinear",
+      "present": true
+    },
+    {
+      "subject": "uniform_circular",
+      "ancestor": "circular",
+      "present": true
+    },
+    {
+      "subject": "nonuniform_circular",
+      "ancestor": "circular",
+      "present": true
+    },
+    {
+      "subject": "periodic_motion",
+      "ancestor": 55,
+      "present": true
+    },
+    {
+      "subject": "mechanical_oscillation",
+      "ancestor": 3895,
+      "present": true
+    },
+    {
+      "subject": "simple_harmonic",
+      "ancestor": "mechanical_oscillation",
+      "present": true
+    },
+    {
+      "subject": "linear_harmonic",
+      "ancestor": "simple_harmonic",
+      "present": true
+    },
+    {
+      "subject": "damped_oscillation",
+      "ancestor": "mechanical_oscillation",
+      "present": true
+    },
+    {
+      "subject": "displacement_amplitude",
+      "ancestor": 2895,
+      "present": true
+    },
+    {
+      "subject": "motion_slowing",
+      "ancestor": 2926,
+      "present": true
+    },
+    {
+      "subject": "motion_start",
+      "ancestor": 2606,
+      "present": true
+    },
+    {
+      "subject": 1798,
+      "ancestor": 2606,
+      "present": true
+    },
+    {
+      "subject": 3292,
+      "ancestor": 2633,
+      "present": true
+    },
+    {
+      "subject": 2926,
+      "ancestor": 2606,
+      "present": true
+    },
+    {
+      "subject": 8690,
+      "ancestor": "motion_slowing",
+      "present": true
+    },
+    {
+      "subject": 8449,
+      "ancestor": 8690,
+      "present": true
+    },
+    {
+      "subject": "uniform_circular",
+      "ancestor": "constant_speed",
+      "present": true
+    },
+    {
+      "subject": "uniform_rectilinear",
+      "ancestor": "constant_speed",
+      "present": true
+    },
+    {
+      "subject": "nonuniform_circular",
+      "ancestor": "variable_speed",
+      "present": true
+    },
+    {
+      "subject": "mechanical_oscillation",
+      "ancestor": 55,
+      "present": true
+    },
+    {
+      "subject": "simple_harmonic",
+      "ancestor": "periodic_motion",
+      "present": true
+    },
+    {
+      "subject": "motion_slowing",
+      "ancestor": 55,
+      "present": true
+    },
+    {
+      "subject": "radian_per_second",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": 1798,
+      "ancestor": 55,
+      "present": false
+    },
+    {
+      "subject": 1798,
+      "ancestor": 2633,
+      "present": false
+    },
+    {
+      "subject": 2926,
+      "ancestor": 202,
+      "present": false
+    },
+    {
+      "subject": 8690,
+      "ancestor": 64,
+      "present": false
+    },
+    {
+      "subject": 7922,
+      "ancestor": 64,
+      "present": false
+    },
+    {
+      "subject": 8449,
+      "ancestor": 64,
+      "present": false
+    },
+    {
+      "subject": 18831,
+      "ancestor": 64,
+      "present": false
+    },
+    {
+      "subject": "velocity",
+      "ancestor": 3462,
+      "present": false
+    },
+    {
+      "subject": "displacement",
+      "ancestor": 3254,
+      "present": false
+    },
+    {
+      "subject": "displacement",
+      "ancestor": 2895,
+      "present": false
+    },
+    {
+      "subject": "angular_velocity",
+      "ancestor": 24585,
+      "present": false
+    },
+    {
+      "subject": "angular_velocity",
+      "ancestor": "velocity",
+      "present": false
+    },
+    {
+      "subject": "angular_acceleration",
+      "ancestor": 24587,
+      "present": false
+    },
+    {
+      "subject": "uniform_circular",
+      "ancestor": "rectilinear",
+      "present": false
+    },
+    {
+      "subject": "uniform_circular",
+      "ancestor": "variable_speed",
+      "present": false
+    },
+    {
+      "subject": "nonuniform_circular",
+      "ancestor": "constant_speed",
+      "present": false
+    },
+    {
+      "subject": "damped_oscillation",
+      "ancestor": "periodic_motion",
+      "present": false
+    },
+    {
+      "subject": "mechanical_oscillation",
+      "ancestor": "periodic_motion",
+      "present": false
+    },
+    {
+      "subject": "motion_slowing",
+      "ancestor": 1798,
+      "present": false
+    },
+    {
+      "subject": "displacement_amplitude",
+      "ancestor": "displacement",
+      "present": false
+    },
+    {
+      "subject": "radian_per_second",
+      "ancestor": 24524,
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": "velocity",
+      "term": "скорость (векторная величина)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "velocity",
+      "term": "velocity (vector quantity)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "velocity",
+      "term": "velocity",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "velocity",
+      "term": "вектор скорости",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "displacement",
+      "term": "перемещение (векторная величина)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "displacement",
+      "term": "displacement vector",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "displacement",
+      "term": "displacement (vector quantity)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "angular_velocity",
+      "term": "угловая скорость",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "angular_velocity",
+      "term": "angular velocity",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "angular_acceleration",
+      "term": "угловое ускорение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "angular_acceleration",
+      "term": "angular acceleration",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "angular_velocity_unit",
+      "term": "единица угловой скорости",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "angular_velocity_unit",
+      "term": "angular velocity unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "radian_per_second",
+      "term": "радиан в секунду",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "radian_per_second",
+      "term": "radian per second",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "radian_per_second",
+      "term": "rad/s",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "angular_acceleration_unit",
+      "term": "единица углового ускорения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "angular_acceleration_unit",
+      "term": "angular acceleration unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "radian_per_second_squared",
+      "term": "радиан в секунду в квадрате",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "radian_per_second_squared",
+      "term": "radian per second squared",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "radian_per_second_squared",
+      "term": "rad/s2",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "velocity_measurement",
+      "term": "измерение вектора скорости",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "velocity_measurement",
+      "term": "velocity vector measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "displacement_measurement",
+      "term": "измерение вектора перемещения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "displacement_measurement",
+      "term": "displacement vector measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "angular_velocity_measurement",
+      "term": "измерение угловой скорости",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "angular_velocity_measurement",
+      "term": "angular velocity measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "angular_acceleration_measurement",
+      "term": "измерение углового ускорения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "angular_acceleration_measurement",
+      "term": "angular acceleration measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rectilinear",
+      "term": "прямолинейное движение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rectilinear",
+      "term": "rectilinear motion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rectilinear",
+      "term": "straight-line motion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "circular",
+      "term": "движение по окружности",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "circular",
+      "term": "circular motion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "constant_speed",
+      "term": "движение с постоянным модулем скорости",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "constant_speed",
+      "term": "motion at constant speed",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "constant_speed",
+      "term": "constant-speed motion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "variable_speed",
+      "term": "движение с переменным модулем скорости",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "variable_speed",
+      "term": "motion at variable speed",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "variable_speed",
+      "term": "variable-speed motion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "uniform_rectilinear",
+      "term": "равномерное прямолинейное движение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "uniform_rectilinear",
+      "term": "uniform rectilinear motion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "uniform_circular",
+      "term": "равномерное движение по окружности",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "uniform_circular",
+      "term": "uniform circular motion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "nonuniform_circular",
+      "term": "неравномерное движение по окружности",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "nonuniform_circular",
+      "term": "nonuniform circular motion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "nonuniform_circular",
+      "term": "non-uniform circular motion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "periodic_motion",
+      "term": "периодическое движение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "periodic_motion",
+      "term": "periodic motion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "mechanical_oscillation",
+      "term": "механическое колебание",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "mechanical_oscillation",
+      "term": "mechanical oscillation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "simple_harmonic",
+      "term": "гармоническое механическое колебание",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "simple_harmonic",
+      "term": "simple harmonic motion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "simple_harmonic",
+      "term": "simple harmonic oscillation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "linear_harmonic",
+      "term": "одномерное гармоническое колебание",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "linear_harmonic",
+      "term": "one-dimensional simple harmonic motion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "damped_oscillation",
+      "term": "затухающее механическое колебание",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "damped_oscillation",
+      "term": "damped mechanical oscillation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "damped_oscillation",
+      "term": "damped oscillation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "displacement_amplitude",
+      "term": "амплитуда линейного смещения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "displacement_amplitude",
+      "term": "linear displacement amplitude",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "motion_slowing",
+      "term": "замедление движения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "motion_slowing",
+      "term": "slowing of motion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "motion_slowing",
+      "term": "deceleration (slowing motion)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "motion_start",
+      "term": "начало движения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "motion_start",
+      "term": "start of motion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1798,
+      "term": "остановка движения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1798,
+      "term": "stopping of motion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1798,
+      "term": "coming to a stop",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3292,
+      "term": "покой (механическое состояние)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 3292,
+      "term": "rest (mechanical state)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3254,
+      "term": "перемещение (процесс)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 3254,
+      "term": "change of location",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3254,
+      "term": "displacement (movement process)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2926,
+      "term": "замедление (процесс)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 2926,
+      "term": "slowdown (process)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2926,
+      "term": "замедлить",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 2926,
+      "term": "замедлиение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 2926,
+      "term": "ЗАМЕДЛИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 3462,
+      "term": "scalar speed",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3895,
+      "term": "oscillation (physical process)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2819,
+      "term": "rotary motion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 8690,
+      "term": "торможение движения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 8690,
+      "term": "braking (slowing motion)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 8690,
+      "term": "тормозить",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 8690,
+      "term": "тормозение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 8690,
+      "term": "тормозиение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 8690,
+      "term": "ТОРМОЗИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 7922,
+      "term": "затормозить (движение)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 7922,
+      "term": "apply braking to motion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 7922,
+      "term": "затормозить",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 7922,
+      "term": "затормозение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 7922,
+      "term": "затормозиение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 7922,
+      "term": "ЗАТОРМОЗИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 8449,
+      "term": "притормаживание движения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 8449,
+      "term": "slight braking",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 8449,
+      "term": "притормаживать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 8449,
+      "term": "притормозение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 8449,
+      "term": "притормозиение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 8449,
+      "term": "ПРИТОРМОЗИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 18831,
+      "term": "тормознуть (движение)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 18831,
+      "term": "brake briefly",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 18831,
+      "term": "тормознуть",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 18831,
+      "term": "тормознутие",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 18831,
+      "term": "ТОРМОЗНУТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 18831,
+      "term": "тормознуутие",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 8690,
+      "term": "braking",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 8690,
+      "term": "торможение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 8449,
+      "term": "притормозить",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "velocity",
+      "term": "speed",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "angular_velocity",
+      "term": "rotational frequency",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "displacement",
+      "term": "distance",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "constant_speed",
+      "term": "uniform motion",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "displacement_amplitude",
+      "term": "voltage amplitude",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

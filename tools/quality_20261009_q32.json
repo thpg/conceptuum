@@ -1,0 +1,2440 @@
+{
+  "source": "quality-20261009-q32",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Known versus famous and familiar; authorship anonymity; information access, correctness and verification distinctions.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "fame": "https://dictionary.cambridge.org/us/dictionary/essential-british-english/fame",
+      "fame_types": "https://dictionary.cambridge.org/thesaurus/articles/fame",
+      "unknown": "https://dictionary.cambridge.org/dictionary/english/unknown",
+      "familiar": "https://dictionary.cambridge.org/dictionary/english/familiar",
+      "anonymous": "https://dictionary.cambridge.org/dictionary/english/anonymity",
+      "pseudonymous": "https://dictionary.cambridge.org/dictionary/english/pseudonymous",
+      "misinformation": "https://dictionary.cambridge.org/us/dictionary/english/misinformation?topic=lies-lying-and-hypocrisy",
+      "disinformation": "https://dictionary.cambridge.org/us/dictionary/english/disinformation?topic=lies-lying-and-hypocrisy"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet; CC BY 4.0 and Princeton notices remain in docs/quality/2026-10-09-q11.md#sources-and-reuse. Cambridge supports selected everyday senses. Source prose is not copied; qualified labels, intersections and graph mappings are adaptations.",
+    "existing_cohort": [
+      5085,
+      5098,
+      4628,
+      5722,
+      4587,
+      4878,
+      1853,
+      1966,
+      2056,
+      22015,
+      343,
+      2906,
+      4518,
+      5932
+    ],
+    "context_policy": "New concepts and assertions use U1 and unspecified strength. Literary work retains its U4 parent and receives the same ordinary authorship genus in U1. Existing home contexts are unchanged. Relative properties refer to a fixed knower, audience, respect and time; lexical antonyms do not quantify over every observer.",
+    "sense_decisions": [
+      {
+        "concept": "known",
+        "synset": "oewn-01378100-a",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Known to a specified subject in the relevant respect, rather than necessarily famous."
+      },
+      {
+        "concept": "public_obscurity",
+        "synset": "oewn-01126357-s",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Low public recognition; not unintelligibility, darkness or total lack of information."
+      },
+      {
+        "concept": "notoriety",
+        "synset": "oewn-14462615-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Public fame for a disapproved act or characteristic; no individual is assigned this property."
+      },
+      {
+        "concept": "anonymous",
+        "synset": "oewn-00121384-a",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A name or source is not given or publicly identified; public fame is a separate axis."
+      },
+      {
+        "concept": "pseudonymous",
+        "synset": "oewn-00122186-s",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Presented under an assumed name; the real identity may nevertheless be known."
+      },
+      {
+        "concept": "identified",
+        "synset": "oewn-01379134-s",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Identity established in the selected context, distinct from public fame."
+      },
+      {
+        "concept": "unidentified",
+        "synset": "oewn-01381014-s",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Identity not established in the selected context; this does not imply total ignorance of the object."
+      },
+      {
+        "concept": "anonymous_work",
+        "synset": null,
+        "decision": "add",
+        "alignment": "authorship restriction",
+        "scope": "A work whose author is not identified in the relevant attribution context."
+      },
+      {
+        "concept": "pseudonymous_work",
+        "synset": null,
+        "decision": "add",
+        "alignment": "authorship restriction",
+        "scope": "A work attributed to an assumed author name."
+      },
+      {
+        "concept": "famous_work",
+        "synset": null,
+        "decision": "add",
+        "alignment": "recognition restriction",
+        "scope": "A work with broad recognition among the relevant public."
+      },
+      {
+        "concept": "famous_anonymous_work",
+        "synset": null,
+        "decision": "add",
+        "alignment": "recognition/authorship intersection",
+        "scope": "The intersection of broad recognition and undisclosed author identity."
+      },
+      {
+        "concept": "anonymous_literature",
+        "synset": null,
+        "decision": "add",
+        "alignment": "form/authorship intersection",
+        "scope": "The literary subset of anonymously attributed works."
+      },
+      {
+        "concept": "pseudonymous_literature",
+        "synset": null,
+        "decision": "add",
+        "alignment": "form/authorship intersection",
+        "scope": "The literary subset of works attributed to an assumed name."
+      },
+      {
+        "concept": "public_information",
+        "synset": null,
+        "decision": "add",
+        "alignment": "access restriction",
+        "scope": "Information available to the public, whether or not widely known or correct."
+      },
+      {
+        "concept": "nonpublic_information",
+        "synset": null,
+        "decision": "add",
+        "alignment": "access restriction",
+        "scope": "Information not openly available in the stated access context; no legal classification is implied."
+      },
+      {
+        "concept": "misinformation",
+        "synset": "oewn-06647485-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Incorrect information, regardless of whether its transmission is deliberate or accidental."
+      },
+      {
+        "concept": "disinformation",
+        "synset": "oewn-06647838-n",
+        "decision": "add",
+        "alignment": "corrected intention restriction",
+        "scope": "Incorrect information deliberately spread to mislead. Do not limit recipients to military or business rivals."
+      },
+      {
+        "concept": "unintentional_misinformation",
+        "synset": null,
+        "decision": "add",
+        "alignment": "intention restriction",
+        "scope": "Incorrect information transmitted without an intention to mislead in the selected act."
+      },
+      {
+        "concept": "public_misinformation",
+        "synset": null,
+        "decision": "add",
+        "alignment": "content/access intersection",
+        "scope": "The intersection of incorrect content and public availability."
+      },
+      {
+        "concept": "confidential_information",
+        "synset": null,
+        "decision": "add",
+        "alignment": "sharing-restriction sense",
+        "scope": "Information intended for restricted sharing; the intended restriction is distinct from actual availability."
+      },
+      {
+        "concept": "verified",
+        "synset": "oewn-01900391-s",
+        "decision": "add",
+        "alignment": "scoped verification status",
+        "scope": "The selected verification status: confirmed by checking against evidence or stated criteria. No infallibility claim."
+      },
+      {
+        "concept": "unverified",
+        "synset": "oewn-01900737-s",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Not substantiated by the relevant check. This alone does not establish falsity."
+      },
+      {
+        "concept": "verified_information",
+        "synset": null,
+        "decision": "add",
+        "alignment": "verification-status restriction",
+        "scope": "Information with the explicitly scoped confirmation status."
+      },
+      {
+        "concept": "unverified_information",
+        "synset": null,
+        "decision": "add",
+        "alignment": "verification-status restriction",
+        "scope": "Information lacking the relevant confirmation, without a falsehood inference."
+      },
+      {
+        "concept": "public_verified_information",
+        "synset": null,
+        "decision": "add",
+        "alignment": "access/verification intersection",
+        "scope": "The intersection of public availability and scoped confirmation."
+      },
+      {
+        "concept": "public_knowledge",
+        "synset": "oewn-05619850-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Knowledge available to the relevant public; exclude the separate broad-education sense of general knowledge."
+      },
+      {
+        "concept": "common_knowledge",
+        "synset": "oewn-05620024-n",
+        "decision": "add",
+        "alignment": "corrected ordinary-community scope",
+        "scope": "Knowledge generally shared in the relevant community, not literally every human and not recursive game-theory common knowledge."
+      },
+      {
+        "concept": "information_checking",
+        "synset": null,
+        "decision": "add",
+        "alignment": "checking process, not proof result",
+        "scope": "Examining information for correctness or support. A check can fail or remain inconclusive."
+      },
+      {
+        "concept": 1853,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Preserve knowledge as information and its unreviewed descendants; not every old child has been semantically validated."
+      },
+      {
+        "concept": 343,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Preserve the separate IT confidentiality concept and its home context; this cohort does not alter its security hierarchy."
+      },
+      {
+        "concept": 2906,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Credibility, reliability and truth require a separate review before synonym alignment."
+      },
+      {
+        "concept": 5932,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The broad secret record remains unchanged; do not assume all secrets are unknown to everyone."
+      },
+      {
+        "concept": 5722,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The preserved Russian alias слава remains polysemous; the qualified canonical label selects honored public renown."
+      },
+      {
+        "concept": 4628,
+        "synset": "oewn-01378757-s",
+        "decision": "merge into 5085",
+        "alignment": "reviewed sense",
+        "scope": "Archive the isolated famous record and preserve all three terms. No unreviewed edges or children are redirected."
+      }
+    ],
+    "limits": "Public availability is not universal awareness, factual correctness or permission to disclose. Verification status is not infallibility. Pseudonymity does not require the real identity to be unknown. Confidentiality is an intended sharing restriction, not a guarantee that a leak cannot occur. No legal entitlement, security guarantee, political claim or statement about an identifiable person is added. General reputation, credibility, secrecy, knowledge descendants and U3 confidentiality remain queued. No application test suites.",
+    "exclusion_review": {
+      "before_u1_conflicting_edges": 6,
+      "resolved_edges": [
+        7935
+      ],
+      "remaining_u1_expected": 5,
+      "decision": "Correct the mixed fame/knowledge-status assertion. Preserve all upper exclusions and explicit negations; introduce no new conflicting pair or witness."
+    },
+    "new_term_collisions": [],
+    "collision_decision": "No normalized cross-language collision is accepted for a new concept. Reuse fame, unknown, familiar, unfamiliar, confidentiality adjective and authorship families. Archive and merge only the isolated famous synonym; preserve all of its terms.",
+    "refreshed_comparison": {
+      "baseline": "Q31",
+      "existing_concepts": 13201,
+      "existing_terms": 37192,
+      "synsets_with_exact_en_candidate": 15643,
+      "synsets_without_exact_en_candidate": 91876,
+      "existing_concepts_with_dictionary_candidate": 4217,
+      "caveat": "Spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "known",
+      "name": "известное (наличие сведений)",
+      "parent": 24474,
+      "universum_id": 1,
+      "terms": [
+        [
+          "известное (наличие сведений)",
+          "ru"
+        ],
+        [
+          "known",
+          "en"
+        ]
+      ],
+      "reason": "Known to a specified subject in the relevant respect, rather than necessarily famous. OEWN 2025: oewn-01378100-a. Source: https://dictionary.cambridge.org/dictionary/english/unknown"
+    },
+    {
+      "key": "public_obscurity",
+      "name": "малоизвестное широкой публике",
+      "parent": 24474,
+      "universum_id": 1,
+      "terms": [
+        [
+          "малоизвестное широкой публике",
+          "ru"
+        ],
+        [
+          "obscure (not widely known)",
+          "en"
+        ]
+      ],
+      "reason": "Low public recognition; not unintelligibility, darkness or total lack of information. OEWN 2025: oewn-01126357-s. Source: https://dictionary.cambridge.org/thesaurus/articles/fame"
+    },
+    {
+      "key": "notoriety",
+      "name": "дурная слава",
+      "parent": 5085,
+      "universum_id": 1,
+      "terms": [
+        [
+          "дурная слава",
+          "ru"
+        ],
+        [
+          "notoriety",
+          "en"
+        ],
+        [
+          "ill fame",
+          "en"
+        ]
+      ],
+      "reason": "Public fame for a disapproved act or characteristic; no individual is assigned this property. OEWN 2025: oewn-14462615-n. Source: https://dictionary.cambridge.org/thesaurus/articles/fame"
+    },
+    {
+      "key": "anonymous",
+      "name": "анонимное (неуказанное авторство или имя)",
+      "parent": 24474,
+      "universum_id": 1,
+      "terms": [
+        [
+          "анонимное (неуказанное авторство или имя)",
+          "ru"
+        ],
+        [
+          "anonymous (name or source undisclosed)",
+          "en"
+        ],
+        [
+          "anonymity (undisclosed identity)",
+          "en"
+        ]
+      ],
+      "reason": "A name or source is not given or publicly identified; public fame is a separate axis. OEWN 2025: oewn-00121384-a. Source: https://dictionary.cambridge.org/dictionary/english/anonymity"
+    },
+    {
+      "key": "pseudonymous",
+      "name": "обозначенное псевдонимом",
+      "parent": 24474,
+      "universum_id": 1,
+      "terms": [
+        [
+          "обозначенное псевдонимом",
+          "ru"
+        ],
+        [
+          "pseudonymous",
+          "en"
+        ]
+      ],
+      "reason": "Presented under an assumed name; the real identity may nevertheless be known. OEWN 2025: oewn-00122186-s. Source: https://dictionary.cambridge.org/dictionary/english/pseudonymous"
+    },
+    {
+      "key": "identified",
+      "name": "идентифицированное (личность или тождество установлены)",
+      "parent": 24474,
+      "universum_id": 1,
+      "terms": [
+        [
+          "идентифицированное (личность или тождество установлены)",
+          "ru"
+        ],
+        [
+          "identified",
+          "en"
+        ]
+      ],
+      "reason": "Identity established in the selected context, distinct from public fame. OEWN 2025: oewn-01379134-s."
+    },
+    {
+      "key": "unidentified",
+      "name": "неидентифицированное",
+      "parent": 24474,
+      "universum_id": 1,
+      "terms": [
+        [
+          "неидентифицированное",
+          "ru"
+        ],
+        [
+          "unidentified",
+          "en"
+        ]
+      ],
+      "reason": "Identity not established in the selected context; this does not imply total ignorance of the object. OEWN 2025: oewn-01381014-s."
+    },
+    {
+      "key": "anonymous_work",
+      "name": "анонимное произведение",
+      "parent": 1966,
+      "universum_id": 1,
+      "terms": [
+        [
+          "анонимное произведение",
+          "ru"
+        ],
+        [
+          "anonymous work of authorship",
+          "en"
+        ]
+      ],
+      "reason": "A work whose author is not identified in the relevant attribution context. Source: https://dictionary.cambridge.org/dictionary/english/anonymity"
+    },
+    {
+      "key": "pseudonymous_work",
+      "name": "произведение под псевдонимом",
+      "parent": 1966,
+      "universum_id": 1,
+      "terms": [
+        [
+          "произведение под псевдонимом",
+          "ru"
+        ],
+        [
+          "pseudonymous work",
+          "en"
+        ]
+      ],
+      "reason": "A work attributed to an assumed author name. Source: https://dictionary.cambridge.org/dictionary/english/pseudonymous"
+    },
+    {
+      "key": "famous_work",
+      "name": "широко известное произведение",
+      "parent": 1966,
+      "universum_id": 1,
+      "terms": [
+        [
+          "широко известное произведение",
+          "ru"
+        ],
+        [
+          "widely known work",
+          "en"
+        ]
+      ],
+      "reason": "A work with broad recognition among the relevant public. Source: https://dictionary.cambridge.org/us/dictionary/essential-british-english/fame"
+    },
+    {
+      "key": "famous_anonymous_work",
+      "name": "широко известное анонимное произведение",
+      "parent": "anonymous_work",
+      "universum_id": 1,
+      "terms": [
+        [
+          "широко известное анонимное произведение",
+          "ru"
+        ],
+        [
+          "widely known anonymous work",
+          "en"
+        ]
+      ],
+      "reason": "The intersection of broad recognition and undisclosed author identity."
+    },
+    {
+      "key": "anonymous_literature",
+      "name": "анонимное литературное произведение",
+      "parent": "anonymous_work",
+      "universum_id": 1,
+      "terms": [
+        [
+          "анонимное литературное произведение",
+          "ru"
+        ],
+        [
+          "anonymous literary work",
+          "en"
+        ]
+      ],
+      "reason": "The literary subset of anonymously attributed works."
+    },
+    {
+      "key": "pseudonymous_literature",
+      "name": "литературное произведение под псевдонимом",
+      "parent": "pseudonymous_work",
+      "universum_id": 1,
+      "terms": [
+        [
+          "литературное произведение под псевдонимом",
+          "ru"
+        ],
+        [
+          "pseudonymous literary work",
+          "en"
+        ]
+      ],
+      "reason": "The literary subset of works attributed to an assumed name."
+    },
+    {
+      "key": "public_information",
+      "name": "общедоступная информация",
+      "parent": 2653,
+      "universum_id": 1,
+      "terms": [
+        [
+          "общедоступная информация",
+          "ru"
+        ],
+        [
+          "publicly available information",
+          "en"
+        ],
+        [
+          "public information",
+          "en"
+        ]
+      ],
+      "reason": "Information available to the public, whether or not widely known or correct."
+    },
+    {
+      "key": "nonpublic_information",
+      "name": "информация без открытого доступа",
+      "parent": 2653,
+      "universum_id": 1,
+      "terms": [
+        [
+          "информация без открытого доступа",
+          "ru"
+        ],
+        [
+          "nonpublic information",
+          "en"
+        ]
+      ],
+      "reason": "Information not openly available in the stated access context; no legal classification is implied."
+    },
+    {
+      "key": "misinformation",
+      "name": "ложная информация",
+      "parent": 2653,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ложная информация",
+          "ru"
+        ],
+        [
+          "misinformation",
+          "en"
+        ]
+      ],
+      "reason": "Incorrect information, regardless of whether its transmission is deliberate or accidental. OEWN 2025: oewn-06647485-n. Source: https://dictionary.cambridge.org/us/dictionary/english/misinformation?topic=lies-lying-and-hypocrisy"
+    },
+    {
+      "key": "disinformation",
+      "name": "дезинформация",
+      "parent": "misinformation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "дезинформация",
+          "ru"
+        ],
+        [
+          "disinformation",
+          "en"
+        ]
+      ],
+      "reason": "Incorrect information deliberately spread to mislead. Do not limit recipients to military or business rivals. OEWN 2025: oewn-06647838-n. Source: https://dictionary.cambridge.org/us/dictionary/english/disinformation?topic=lies-lying-and-hypocrisy"
+    },
+    {
+      "key": "unintentional_misinformation",
+      "name": "непреднамеренно переданная ложная информация",
+      "parent": "misinformation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "непреднамеренно переданная ложная информация",
+          "ru"
+        ],
+        [
+          "unintentionally conveyed misinformation",
+          "en"
+        ]
+      ],
+      "reason": "Incorrect information transmitted without an intention to mislead in the selected act. Source: https://dictionary.cambridge.org/us/dictionary/english/misinformation?topic=lies-lying-and-hypocrisy"
+    },
+    {
+      "key": "public_misinformation",
+      "name": "общедоступная ложная информация",
+      "parent": "misinformation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "общедоступная ложная информация",
+          "ru"
+        ],
+        [
+          "publicly available misinformation",
+          "en"
+        ]
+      ],
+      "reason": "The intersection of incorrect content and public availability."
+    },
+    {
+      "key": "confidential_information",
+      "name": "конфиденциальная информация",
+      "parent": 2653,
+      "universum_id": 1,
+      "terms": [
+        [
+          "конфиденциальная информация",
+          "ru"
+        ],
+        [
+          "confidential information",
+          "en"
+        ]
+      ],
+      "reason": "Information intended for restricted sharing; the intended restriction is distinct from actual availability."
+    },
+    {
+      "key": "verified",
+      "name": "подтверждённое проверкой",
+      "parent": 24474,
+      "universum_id": 1,
+      "terms": [
+        [
+          "подтверждённое проверкой",
+          "ru"
+        ],
+        [
+          "verified (confirmed by checking)",
+          "en"
+        ]
+      ],
+      "reason": "The selected verification status: confirmed by checking against evidence or stated criteria. No infallibility claim. OEWN 2025: oewn-01900391-s."
+    },
+    {
+      "key": "unverified",
+      "name": "неподтверждённое проверкой",
+      "parent": 24474,
+      "universum_id": 1,
+      "terms": [
+        [
+          "неподтверждённое проверкой",
+          "ru"
+        ],
+        [
+          "unverified",
+          "en"
+        ]
+      ],
+      "reason": "Not substantiated by the relevant check. This alone does not establish falsity. OEWN 2025: oewn-01900737-s."
+    },
+    {
+      "key": "verified_information",
+      "name": "информация, подтверждённая проверкой",
+      "parent": 2653,
+      "universum_id": 1,
+      "terms": [
+        [
+          "информация, подтверждённая проверкой",
+          "ru"
+        ],
+        [
+          "verified information",
+          "en"
+        ]
+      ],
+      "reason": "Information with the explicitly scoped confirmation status."
+    },
+    {
+      "key": "unverified_information",
+      "name": "информация без подтверждения проверкой",
+      "parent": 2653,
+      "universum_id": 1,
+      "terms": [
+        [
+          "информация без подтверждения проверкой",
+          "ru"
+        ],
+        [
+          "unverified information",
+          "en"
+        ]
+      ],
+      "reason": "Information lacking the relevant confirmation, without a falsehood inference."
+    },
+    {
+      "key": "public_verified_information",
+      "name": "общедоступная информация, подтверждённая проверкой",
+      "parent": "public_information",
+      "universum_id": 1,
+      "terms": [
+        [
+          "общедоступная информация, подтверждённая проверкой",
+          "ru"
+        ],
+        [
+          "publicly available verified information",
+          "en"
+        ]
+      ],
+      "reason": "The intersection of public availability and scoped confirmation."
+    },
+    {
+      "key": "public_knowledge",
+      "name": "общедоступные знания",
+      "parent": 1853,
+      "universum_id": 1,
+      "terms": [
+        [
+          "общедоступные знания",
+          "ru"
+        ],
+        [
+          "public knowledge",
+          "en"
+        ]
+      ],
+      "reason": "Knowledge available to the relevant public; exclude the separate broad-education sense of general knowledge. OEWN 2025: oewn-05619850-n."
+    },
+    {
+      "key": "common_knowledge",
+      "name": "общеизвестные сведения",
+      "parent": "public_knowledge",
+      "universum_id": 1,
+      "terms": [
+        [
+          "общеизвестные сведения",
+          "ru"
+        ],
+        [
+          "common knowledge (ordinary sense)",
+          "en"
+        ]
+      ],
+      "reason": "Knowledge generally shared in the relevant community, not literally every human and not recursive game-theory common knowledge. OEWN 2025: oewn-05620024-n."
+    },
+    {
+      "key": "information_checking",
+      "name": "проверка информации",
+      "parent": 2843,
+      "universum_id": 1,
+      "terms": [
+        [
+          "проверка информации",
+          "ru"
+        ],
+        [
+          "information checking",
+          "en"
+        ],
+        [
+          "information verification (process)",
+          "en"
+        ]
+      ],
+      "reason": "Examining information for correctness or support. A check can fail or remain inconclusive."
+    }
+  ],
+  "renames": [
+    {
+      "id": 5085,
+      "before": "известность",
+      "name": "общественная известность",
+      "terms": [],
+      "reason": "Select public recognition, independent of whether the reputation is favorable. Source: https://dictionary.cambridge.org/us/dictionary/essential-british-english/fame"
+    },
+    {
+      "id": 5722,
+      "before": "слава",
+      "name": "слава (почётная известность)",
+      "terms": [],
+      "reason": "Restrict the glory sense to admired public renown. Source: https://dictionary.cambridge.org/thesaurus/articles/fame"
+    }
+  ],
+  "terms": [
+    {
+      "id": 5085,
+      "name": "общественная известность",
+      "terms": [
+        [
+          "public fame",
+          "en"
+        ]
+      ],
+      "reason": "Retain fame and the merged famous adjective as the same public-recognition property."
+    },
+    {
+      "id": 5098,
+      "name": "неизвестное",
+      "terms": [
+        [
+          "unknown (not known to someone)",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the knowledge-status sense; exclude algebraic variables, strangers and public obscurity. OEWN 2025: oewn-01379820-a."
+    },
+    {
+      "id": 4587,
+      "name": "знакомое",
+      "terms": [
+        [
+          "familiar (previously encountered)",
+          "en"
+        ]
+      ],
+      "reason": "Retain the familiar/unfamiliar object-property senses; do not turn either into a person or a body of knowledge."
+    },
+    {
+      "id": 4878,
+      "name": "незнакомое",
+      "terms": [
+        [
+          "unfamiliar (not previously encountered)",
+          "en"
+        ]
+      ],
+      "reason": "Retain the familiar/unfamiliar object-property senses; do not turn either into a person or a body of knowledge."
+    },
+    {
+      "id": 5722,
+      "name": "слава (почётная известность)",
+      "terms": [
+        [
+          "glory (public renown)",
+          "en"
+        ]
+      ],
+      "reason": "Distinguish the honored-renown subtype from the broader fame property. OEWN 2025: oewn-14460600-n."
+    },
+    {
+      "id": 22015,
+      "name": "конфиденциальное",
+      "terms": [
+        [
+          "confidential",
+          "en"
+        ],
+        [
+          "confidential (restricted sharing)",
+          "en"
+        ],
+        [
+          "конфиденциальный",
+          "ru"
+        ]
+      ],
+      "reason": "Supply true English terms while preserving the established Russian adjective."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 5722,
+      "term": "fame",
+      "lang": "en",
+      "reason": "Replace the unqualified broad English alias on the now explicitly narrower public-glory sense."
+    },
+    {
+      "id": 22015,
+      "term": "конфиденциальное",
+      "lang": "en",
+      "reason": "Russian adjective mislabeled as English; its Russian term remains."
+    }
+  ],
+  "leaf_merges": [
+    {
+      "source_id": 4628,
+      "target_id": 5085,
+      "target_name": "известность",
+      "retained_terms": [
+        [
+          "famous",
+          "en"
+        ],
+        [
+          "знаменитое",
+          "ru"
+        ],
+        [
+          "знаменитый",
+          "ru"
+        ]
+      ],
+      "discarded_terms": [],
+      "reason": "The isolated famous adjective and public-fame property select the same meaning. Preserve every term and archive the source concept and its sole edge. Source: https://dictionary.cambridge.org/us/dictionary/essential-british-english/fame",
+      "archive": {
+        "concept": {
+          "dharma": 4628,
+          "nama": "знаменитое",
+          "defin": "знаменитое — оценочное свойство",
+          "vol_zero": 0,
+          "vol_ed": 0,
+          "vol_countable": null,
+          "vol_sobir": 0,
+          "vol_sootn": 0,
+          "cont_konkr": null,
+          "cont_abs": null,
+          "cont_opred": null,
+          "cont_empir": 1,
+          "universum_id": 1,
+          "processed": 1
+        },
+        "terms": [
+          {
+            "concept_id": 4628,
+            "term": "famous",
+            "lang": "en"
+          },
+          {
+            "concept_id": 4628,
+            "term": "знаменитое",
+            "lang": "ru"
+          },
+          {
+            "concept_id": 4628,
+            "term": "знаменитый",
+            "lang": "ru"
+          }
+        ],
+        "edges": [
+          {
+            "id": 7093,
+            "dh1": 4628,
+            "kod": "14",
+            "dh2": 51,
+            "universum_id": 1,
+            "strength": null,
+            "status": "ok",
+            "source": "llm",
+            "rationale": null,
+            "created_at": "2026-08-29 14:38:43"
+          }
+        ]
+      }
+    }
+  ],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 7871,
+      "before": [
+        5085,
+        "14",
+        51,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          5085,
+          "14",
+          24474,
+          null,
+          1
+        ]
+      ],
+      "reason": "Fame is relative to a public or audience; it is not itself a favorable moral evaluation. Source: https://dictionary.cambridge.org/us/dictionary/essential-british-english/fame"
+    },
+    {
+      "id": 7885,
+      "before": [
+        5098,
+        "14",
+        5085,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          5098,
+          "14",
+          24474,
+          null,
+          1
+        ]
+      ],
+      "reason": "Unknown in an epistemic sense is a relative property, not a subtype of public fame. OEWN 2025: oewn-01379820-a."
+    },
+    {
+      "id": 7935,
+      "before": [
+        5085,
+        "63",
+        5098,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          5098,
+          "63",
+          "known",
+          null,
+          1
+        ]
+      ],
+      "reason": "Replace the mixed fame/unknown contrary with known/unknown in the same respect, knower and time. Public recognition is a separate axis."
+    },
+    {
+      "id": 7052,
+      "before": [
+        4587,
+        "14",
+        1853,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          4587,
+          "14",
+          24474,
+          null,
+          1
+        ]
+      ],
+      "reason": "Familiarity is a property relative to experience, not an item of knowledge. Source: https://dictionary.cambridge.org/dictionary/english/familiar"
+    },
+    {
+      "id": 7343,
+      "before": [
+        4878,
+        "14",
+        1853,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          4878,
+          "14",
+          24474,
+          null,
+          1
+        ]
+      ],
+      "reason": "Familiarity is a property relative to experience, not an item of knowledge. Source: https://dictionary.cambridge.org/dictionary/english/familiar"
+    },
+    {
+      "id": 9806,
+      "before": [
+        5722,
+        "14",
+        51,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          5722,
+          "14",
+          5085,
+          null,
+          1
+        ]
+      ],
+      "reason": "Admired public renown is a narrower public-fame property. Source: https://dictionary.cambridge.org/thesaurus/articles/fame"
+    },
+    {
+      "id": 26099,
+      "before": [
+        22015,
+        "14",
+        47,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          22015,
+          "14",
+          24474,
+          null,
+          1
+        ]
+      ],
+      "reason": "Confidential is a relative sharing restriction, not an intrinsic mental trait."
+    }
+  ],
+  "edges": [
+    {
+      "subject": "famous_anonymous_work",
+      "kod": "14",
+      "object": "famous_work",
+      "universum_id": 1,
+      "reason": "Public recognition of a work can coexist with unidentified authorship."
+    },
+    {
+      "subject": "anonymous_literature",
+      "kod": "14",
+      "object": 2056,
+      "universum_id": 1,
+      "reason": "This authorship-restricted work is also literary."
+    },
+    {
+      "subject": "pseudonymous_literature",
+      "kod": "14",
+      "object": 2056,
+      "universum_id": 1,
+      "reason": "This authorship-restricted work is also literary."
+    },
+    {
+      "subject": "public_misinformation",
+      "kod": "14",
+      "object": "public_information",
+      "universum_id": 1,
+      "reason": "Public access does not establish correctness."
+    },
+    {
+      "subject": "public_verified_information",
+      "kod": "14",
+      "object": "verified_information",
+      "universum_id": 1,
+      "reason": "Both access and verification restrictions apply."
+    },
+    {
+      "subject": "public_knowledge",
+      "kod": "14",
+      "object": "public_information",
+      "universum_id": 1,
+      "reason": "Public knowledge is also information with public availability."
+    },
+    {
+      "subject": "information_checking",
+      "kod": "27",
+      "object": 2653,
+      "universum_id": 1,
+      "reason": "Information is the target of this checking process; no successful result is required."
+    },
+    {
+      "subject": 2056,
+      "kod": "14",
+      "object": 1966,
+      "universum_id": 1,
+      "reason": "Record ordinary literary-work ancestry in U1 while preserving the existing U4 legal-context assertion."
+    },
+    {
+      "subject": "anonymous_work",
+      "kod": "20",
+      "object": "anonymous",
+      "universum_id": 1,
+      "reason": "The selected restriction is an attribute of this explicitly qualified information object."
+    },
+    {
+      "subject": "pseudonymous_work",
+      "kod": "20",
+      "object": "pseudonymous",
+      "universum_id": 1,
+      "reason": "The selected restriction is an attribute of this explicitly qualified information object."
+    },
+    {
+      "subject": "famous_work",
+      "kod": "20",
+      "object": 5085,
+      "universum_id": 1,
+      "reason": "The selected restriction is an attribute of this explicitly qualified information object."
+    },
+    {
+      "subject": "confidential_information",
+      "kod": "20",
+      "object": 22015,
+      "universum_id": 1,
+      "reason": "The selected restriction is an attribute of this explicitly qualified information object."
+    },
+    {
+      "subject": "verified_information",
+      "kod": "20",
+      "object": "verified",
+      "universum_id": 1,
+      "reason": "The selected restriction is an attribute of this explicitly qualified information object."
+    },
+    {
+      "subject": "unverified_information",
+      "kod": "20",
+      "object": "unverified",
+      "universum_id": 1,
+      "reason": "The selected restriction is an attribute of this explicitly qualified information object."
+    },
+    {
+      "subject": 4587,
+      "kod": "63",
+      "object": 4878,
+      "universum_id": 1,
+      "reason": "Familiar and unfamiliar are contrasting properties for the same experiencer, object aspect and time."
+    },
+    {
+      "subject": "identified",
+      "kod": "63",
+      "object": "unidentified",
+      "universum_id": 1,
+      "reason": "Identity established and not established contrast within the same identification context."
+    }
+  ],
+  "checks": [
+    {
+      "subject": "known",
+      "kod": "14",
+      "object": 24474,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "public_obscurity",
+      "kod": "14",
+      "object": 24474,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "notoriety",
+      "kod": "14",
+      "object": 5085,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "anonymous",
+      "kod": "14",
+      "object": 24474,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pseudonymous",
+      "kod": "14",
+      "object": 24474,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "identified",
+      "kod": "14",
+      "object": 24474,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "unidentified",
+      "kod": "14",
+      "object": 24474,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "anonymous_work",
+      "kod": "14",
+      "object": 1966,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pseudonymous_work",
+      "kod": "14",
+      "object": 1966,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "famous_work",
+      "kod": "14",
+      "object": 1966,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "famous_anonymous_work",
+      "kod": "14",
+      "object": "anonymous_work",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "famous_anonymous_work",
+      "kod": "14",
+      "object": "famous_work",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "anonymous_literature",
+      "kod": "14",
+      "object": "anonymous_work",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "anonymous_literature",
+      "kod": "14",
+      "object": 2056,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pseudonymous_literature",
+      "kod": "14",
+      "object": "pseudonymous_work",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pseudonymous_literature",
+      "kod": "14",
+      "object": 2056,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "public_information",
+      "kod": "14",
+      "object": 2653,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "nonpublic_information",
+      "kod": "14",
+      "object": 2653,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "misinformation",
+      "kod": "14",
+      "object": 2653,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "disinformation",
+      "kod": "14",
+      "object": "misinformation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "unintentional_misinformation",
+      "kod": "14",
+      "object": "misinformation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "public_misinformation",
+      "kod": "14",
+      "object": "misinformation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "public_misinformation",
+      "kod": "14",
+      "object": "public_information",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "confidential_information",
+      "kod": "14",
+      "object": 2653,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "verified",
+      "kod": "14",
+      "object": 24474,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "unverified",
+      "kod": "14",
+      "object": 24474,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "verified_information",
+      "kod": "14",
+      "object": 2653,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "unverified_information",
+      "kod": "14",
+      "object": 2653,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "public_verified_information",
+      "kod": "14",
+      "object": "public_information",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "public_verified_information",
+      "kod": "14",
+      "object": "verified_information",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "public_knowledge",
+      "kod": "14",
+      "object": 1853,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "public_knowledge",
+      "kod": "14",
+      "object": "public_information",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "common_knowledge",
+      "kod": "14",
+      "object": "public_knowledge",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "information_checking",
+      "kod": "14",
+      "object": 2843,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "information_checking",
+      "kod": "27",
+      "object": 2653,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5085,
+      "kod": "14",
+      "object": 51,
+      "present": false
+    },
+    {
+      "subject": 5085,
+      "kod": "14",
+      "object": 24474,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5098,
+      "kod": "14",
+      "object": 5085,
+      "present": false
+    },
+    {
+      "subject": 5098,
+      "kod": "14",
+      "object": 24474,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5085,
+      "kod": "63",
+      "object": 5098,
+      "present": false
+    },
+    {
+      "subject": 5098,
+      "kod": "63",
+      "object": "known",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 4587,
+      "kod": "14",
+      "object": 1853,
+      "present": false
+    },
+    {
+      "subject": 4587,
+      "kod": "14",
+      "object": 24474,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 4878,
+      "kod": "14",
+      "object": 1853,
+      "present": false
+    },
+    {
+      "subject": 4878,
+      "kod": "14",
+      "object": 24474,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5722,
+      "kod": "14",
+      "object": 51,
+      "present": false
+    },
+    {
+      "subject": 5722,
+      "kod": "14",
+      "object": 5085,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 22015,
+      "kod": "14",
+      "object": 47,
+      "present": false
+    },
+    {
+      "subject": 22015,
+      "kod": "14",
+      "object": 24474,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2056,
+      "kod": "14",
+      "object": 1966,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "anonymous_work",
+      "kod": "20",
+      "object": "anonymous",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pseudonymous_work",
+      "kod": "20",
+      "object": "pseudonymous",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "famous_work",
+      "kod": "20",
+      "object": 5085,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "confidential_information",
+      "kod": "20",
+      "object": 22015,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "verified_information",
+      "kod": "20",
+      "object": "verified",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "unverified_information",
+      "kod": "20",
+      "object": "unverified",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 4587,
+      "kod": "63",
+      "object": 4878,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "identified",
+      "kod": "63",
+      "object": "unidentified",
+      "present": true,
+      "strength": null
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "known",
+      "ancestor": 24474,
+      "present": true
+    },
+    {
+      "subject": "public_obscurity",
+      "ancestor": 24474,
+      "present": true
+    },
+    {
+      "subject": "notoriety",
+      "ancestor": 5085,
+      "present": true
+    },
+    {
+      "subject": "anonymous",
+      "ancestor": 24474,
+      "present": true
+    },
+    {
+      "subject": "pseudonymous",
+      "ancestor": 24474,
+      "present": true
+    },
+    {
+      "subject": "identified",
+      "ancestor": 24474,
+      "present": true
+    },
+    {
+      "subject": "unidentified",
+      "ancestor": 24474,
+      "present": true
+    },
+    {
+      "subject": "anonymous_work",
+      "ancestor": 1966,
+      "present": true
+    },
+    {
+      "subject": "pseudonymous_work",
+      "ancestor": 1966,
+      "present": true
+    },
+    {
+      "subject": "famous_work",
+      "ancestor": 1966,
+      "present": true
+    },
+    {
+      "subject": "famous_anonymous_work",
+      "ancestor": "anonymous_work",
+      "present": true
+    },
+    {
+      "subject": "anonymous_literature",
+      "ancestor": "anonymous_work",
+      "present": true
+    },
+    {
+      "subject": "pseudonymous_literature",
+      "ancestor": "pseudonymous_work",
+      "present": true
+    },
+    {
+      "subject": "public_information",
+      "ancestor": 2653,
+      "present": true
+    },
+    {
+      "subject": "nonpublic_information",
+      "ancestor": 2653,
+      "present": true
+    },
+    {
+      "subject": "misinformation",
+      "ancestor": 2653,
+      "present": true
+    },
+    {
+      "subject": "disinformation",
+      "ancestor": "misinformation",
+      "present": true
+    },
+    {
+      "subject": "unintentional_misinformation",
+      "ancestor": "misinformation",
+      "present": true
+    },
+    {
+      "subject": "public_misinformation",
+      "ancestor": "misinformation",
+      "present": true
+    },
+    {
+      "subject": "confidential_information",
+      "ancestor": 2653,
+      "present": true
+    },
+    {
+      "subject": "verified",
+      "ancestor": 24474,
+      "present": true
+    },
+    {
+      "subject": "unverified",
+      "ancestor": 24474,
+      "present": true
+    },
+    {
+      "subject": "verified_information",
+      "ancestor": 2653,
+      "present": true
+    },
+    {
+      "subject": "unverified_information",
+      "ancestor": 2653,
+      "present": true
+    },
+    {
+      "subject": "public_verified_information",
+      "ancestor": "public_information",
+      "present": true
+    },
+    {
+      "subject": "public_knowledge",
+      "ancestor": 1853,
+      "present": true
+    },
+    {
+      "subject": "common_knowledge",
+      "ancestor": "public_knowledge",
+      "present": true
+    },
+    {
+      "subject": "information_checking",
+      "ancestor": 2843,
+      "present": true
+    },
+    {
+      "subject": 5085,
+      "ancestor": 24474,
+      "present": true
+    },
+    {
+      "subject": 5098,
+      "ancestor": 24474,
+      "present": true
+    },
+    {
+      "subject": 4587,
+      "ancestor": 24474,
+      "present": true
+    },
+    {
+      "subject": 4878,
+      "ancestor": 24474,
+      "present": true
+    },
+    {
+      "subject": 5722,
+      "ancestor": 5085,
+      "present": true
+    },
+    {
+      "subject": 22015,
+      "ancestor": 24474,
+      "present": true
+    },
+    {
+      "subject": "famous_anonymous_work",
+      "ancestor": "famous_work",
+      "present": true
+    },
+    {
+      "subject": "anonymous_literature",
+      "ancestor": 2056,
+      "present": true
+    },
+    {
+      "subject": "pseudonymous_literature",
+      "ancestor": 2056,
+      "present": true
+    },
+    {
+      "subject": "public_misinformation",
+      "ancestor": "public_information",
+      "present": true
+    },
+    {
+      "subject": "public_verified_information",
+      "ancestor": "verified_information",
+      "present": true
+    },
+    {
+      "subject": "public_knowledge",
+      "ancestor": "public_information",
+      "present": true
+    },
+    {
+      "subject": 5098,
+      "ancestor": 5085,
+      "present": false
+    },
+    {
+      "subject": 4587,
+      "ancestor": 1853,
+      "present": false
+    },
+    {
+      "subject": 4878,
+      "ancestor": 1853,
+      "present": false
+    },
+    {
+      "subject": 5085,
+      "ancestor": 51,
+      "present": false
+    },
+    {
+      "subject": 22015,
+      "ancestor": 47,
+      "present": false
+    },
+    {
+      "subject": "known",
+      "ancestor": 5085,
+      "present": false
+    },
+    {
+      "subject": "anonymous",
+      "ancestor": 5098,
+      "present": false
+    },
+    {
+      "subject": "pseudonymous",
+      "ancestor": "anonymous",
+      "present": false
+    },
+    {
+      "subject": "anonymous",
+      "ancestor": "pseudonymous",
+      "present": false
+    },
+    {
+      "subject": "unidentified",
+      "ancestor": 5098,
+      "present": false
+    },
+    {
+      "subject": "public_information",
+      "ancestor": 1853,
+      "present": false
+    },
+    {
+      "subject": "misinformation",
+      "ancestor": 1853,
+      "present": false
+    },
+    {
+      "subject": "unverified_information",
+      "ancestor": "misinformation",
+      "present": false
+    },
+    {
+      "subject": "confidential_information",
+      "ancestor": "nonpublic_information",
+      "present": false
+    },
+    {
+      "subject": "public_obscurity",
+      "ancestor": 5085,
+      "present": false
+    },
+    {
+      "subject": "identified",
+      "ancestor": 5085,
+      "present": false
+    },
+    {
+      "subject": "verified_information",
+      "ancestor": "public_information",
+      "present": false
+    },
+    {
+      "subject": "common_knowledge",
+      "ancestor": 24637,
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": "known",
+      "term": "известное (наличие сведений)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "known",
+      "term": "known",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "public_obscurity",
+      "term": "малоизвестное широкой публике",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "public_obscurity",
+      "term": "obscure (not widely known)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "notoriety",
+      "term": "дурная слава",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "notoriety",
+      "term": "notoriety",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "notoriety",
+      "term": "ill fame",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "anonymous",
+      "term": "анонимное (неуказанное авторство или имя)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "anonymous",
+      "term": "anonymous (name or source undisclosed)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "anonymous",
+      "term": "anonymity (undisclosed identity)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pseudonymous",
+      "term": "обозначенное псевдонимом",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pseudonymous",
+      "term": "pseudonymous",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "identified",
+      "term": "идентифицированное (личность или тождество установлены)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "identified",
+      "term": "identified",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "unidentified",
+      "term": "неидентифицированное",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "unidentified",
+      "term": "unidentified",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "anonymous_work",
+      "term": "анонимное произведение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "anonymous_work",
+      "term": "anonymous work of authorship",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pseudonymous_work",
+      "term": "произведение под псевдонимом",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pseudonymous_work",
+      "term": "pseudonymous work",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "famous_work",
+      "term": "широко известное произведение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "famous_work",
+      "term": "widely known work",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "famous_anonymous_work",
+      "term": "широко известное анонимное произведение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "famous_anonymous_work",
+      "term": "widely known anonymous work",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "anonymous_literature",
+      "term": "анонимное литературное произведение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "anonymous_literature",
+      "term": "anonymous literary work",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pseudonymous_literature",
+      "term": "литературное произведение под псевдонимом",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pseudonymous_literature",
+      "term": "pseudonymous literary work",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "public_information",
+      "term": "общедоступная информация",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "public_information",
+      "term": "publicly available information",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "public_information",
+      "term": "public information",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "nonpublic_information",
+      "term": "информация без открытого доступа",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "nonpublic_information",
+      "term": "nonpublic information",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "misinformation",
+      "term": "ложная информация",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "misinformation",
+      "term": "misinformation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "disinformation",
+      "term": "дезинформация",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "disinformation",
+      "term": "disinformation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "unintentional_misinformation",
+      "term": "непреднамеренно переданная ложная информация",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "unintentional_misinformation",
+      "term": "unintentionally conveyed misinformation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "public_misinformation",
+      "term": "общедоступная ложная информация",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "public_misinformation",
+      "term": "publicly available misinformation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "confidential_information",
+      "term": "конфиденциальная информация",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "confidential_information",
+      "term": "confidential information",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "verified",
+      "term": "подтверждённое проверкой",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "verified",
+      "term": "verified (confirmed by checking)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "unverified",
+      "term": "неподтверждённое проверкой",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "unverified",
+      "term": "unverified",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "verified_information",
+      "term": "информация, подтверждённая проверкой",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "verified_information",
+      "term": "verified information",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "unverified_information",
+      "term": "информация без подтверждения проверкой",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "unverified_information",
+      "term": "unverified information",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "public_verified_information",
+      "term": "общедоступная информация, подтверждённая проверкой",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "public_verified_information",
+      "term": "publicly available verified information",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "public_knowledge",
+      "term": "общедоступные знания",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "public_knowledge",
+      "term": "public knowledge",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "common_knowledge",
+      "term": "общеизвестные сведения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "common_knowledge",
+      "term": "common knowledge (ordinary sense)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "information_checking",
+      "term": "проверка информации",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "information_checking",
+      "term": "information checking",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "information_checking",
+      "term": "information verification (process)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5085,
+      "term": "famous",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5085,
+      "term": "знаменитое",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 5085,
+      "term": "знаменитый",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 5085,
+      "term": "общественная известность",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 5085,
+      "term": "public fame",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5098,
+      "term": "unknown (not known to someone)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 4587,
+      "term": "familiar (previously encountered)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 4878,
+      "term": "unfamiliar (not previously encountered)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5722,
+      "term": "слава (почётная известность)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 5722,
+      "term": "glory (public renown)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5722,
+      "term": "fame",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 22015,
+      "term": "confidential",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 22015,
+      "term": "confidential (restricted sharing)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 22015,
+      "term": "конфиденциальный",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 22015,
+      "term": "конфиденциальное",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "public_obscurity",
+      "term": "obscure",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "anonymous",
+      "term": "anonymous",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "identified",
+      "term": "known",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "unidentified",
+      "term": "unknown",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "common_knowledge",
+      "term": "common knowledge",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "information_checking",
+      "term": "verification",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "public_knowledge",
+      "term": "general knowledge",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

@@ -1,0 +1,3994 @@
+{
+  "source": "quality-20261009-q18",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Fasteners, screw threads, washers, installation actions, wrenches, clamps, and a newly exposed upper-graph exclusion conflict.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "nasa": "https://ntrs.nasa.gov/api/citations/19900009424/downloads/19900009424.pdf",
+      "catalog": "https://www.bossard.com/global-en/eshop/products/fastening-technology/standard-fastening-elements/c/01.100/",
+      "hexnut": "https://nederland.bossard.com/en-us/product/standard-fastening-elements/nuts/hex-nuts/5577c080",
+      "springwasher": "https://www.bossard.com/global-en/eshop/split-spring-lock-washers/split-spring-lock-washers-with-flat-end/p/585/",
+      "plastic": "https://www.baecker.eu/en/products/placo-tec/additional-information-plastic-screws",
+      "nails": "https://www.beck-fastening.com/en/industries/carpentry",
+      "clamps": "https://besseytools.com/en-us/bessey-tools-north-america/products/clamping-tools/c-clamps",
+      "springclamps": "https://besseytools.com/getmedia/24482ba7-ab34-4441-b2a4-677c02ed4c04/BESSEY_Spring-clamps_EN.pdf",
+      "vises": "https://www.irwintools.com/products/hand-tools/clamps-vises/vises",
+      "rivettool": "https://www.stanleyengineeredfastening.com/-/media/Web/SEF/Resources/Docs/Heli-Coil/Tangless-Cross-RefHC600-rev2.pdf",
+      "unscrew_ru": "https://gramota.ru/meta/otvintit",
+      "riveting_ru": "https://gramota.ru/poisk?mode=slovari&page=14&query=%D0%BA%D0%BB%D0%B5%D1%8F%D1%82%D1%8C+%D0%B8%D0%BB%D0%B8+%D0%BA%D0%BB%D0%B5%D0%B8%D1%82%D1%8C",
+      "kitchen": "https://www.oxo.com/blog/cooking-and-baking/how-to-measure-ingredients"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet; CC BY 4.0 and Princeton notices remain in docs/quality/2026-10-09-q11.md#sources-and-reuse. NASA RP-1228 (Richard T. Barrett, 1990; US Government public-use work) supports qualitative fastener distinctions only. Current manufacturer material and tool evidence corrects narrow dictionary assumptions. No design standards, torque values, installation procedures or product advice are imported.",
+    "existing_cohort": [
+      19,
+      30,
+      88,
+      96,
+      127,
+      140,
+      242,
+      491,
+      576,
+      1203,
+      1280,
+      1497,
+      1498,
+      1499,
+      1500,
+      1504,
+      1782,
+      1784,
+      2090,
+      2400,
+      2401,
+      2402,
+      2403,
+      2631,
+      3210,
+      3473,
+      3488,
+      3607,
+      3831,
+      5057,
+      5238,
+      5239,
+      5244,
+      9790,
+      18296,
+      19608,
+      19755,
+      19848,
+      24769,
+      24771
+    ],
+    "context_policy": "All new assertions use U1 with unspecified strength. Existing home contexts and grammar remain unchanged; the IT build record is not moved into physical assembly.",
+    "sense_decisions": [
+      {
+        "concept": "threaded_fastener",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed hardware family",
+        "scope": "A fastener whose function uses a screw thread, including screws, bolts and threaded nuts. No one head shape or material is required."
+      },
+      {
+        "concept": "screw_thread",
+        "synset": "oewn-04161999-n",
+        "decision": "add",
+        "alignment": "physical-feature adaptation",
+        "scope": "A physical helical surface feature on or inside a part. Extend the external-rib-only dictionary gloss to include internal threads; not textile thread or an execution thread."
+      },
+      {
+        "concept": "external_thread",
+        "synset": null,
+        "decision": "add",
+        "alignment": "surface-location subtype",
+        "scope": "A screw thread on the outer surface of a part. No pitch, profile, handedness or tolerance class is imposed."
+      },
+      {
+        "concept": "internal_thread",
+        "synset": null,
+        "decision": "add",
+        "alignment": "surface-location subtype",
+        "scope": "A screw thread on an internal surface, such as in a nut. No specific thread standard is imposed."
+      },
+      {
+        "concept": "fastener_washer",
+        "synset": null,
+        "decision": "add",
+        "alignment": "engineering sense absent from the selected dictionary washer cluster",
+        "scope": "A washer used in a fastening assembly. Model it as a component, not a washing appliance, worker or necessarily a leak-sealing gasket."
+      },
+      {
+        "concept": "flat_washer",
+        "synset": null,
+        "decision": "add",
+        "alignment": "shape-defined subtype",
+        "scope": "A flat washer used under fastening hardware; no sealing or anti-loosening guarantee is asserted."
+      },
+      {
+        "concept": "spring_washer",
+        "synset": null,
+        "decision": "add",
+        "alignment": "mechanical subtype",
+        "scope": "A washer designed to exhibit spring action under axial compression. Its actual fastening performance depends on the assembly."
+      },
+      {
+        "concept": "split_lock_washer",
+        "synset": null,
+        "decision": "add",
+        "alignment": "shape-defined subtype",
+        "scope": "A split helical spring washer. Its name is not evidence that every assembly is protected from loosening."
+      },
+      {
+        "concept": "hex_nut",
+        "synset": null,
+        "decision": "add",
+        "alignment": "shape-defined subtype",
+        "scope": "A nut with a hexagonal external wrenching form; no material or grade is imposed."
+      },
+      {
+        "concept": "wing_nut",
+        "synset": "oewn-04600512-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A nut with projections for finger turning. Exclude the tree sense and the misleading wing-screw synonym for this nut."
+      },
+      {
+        "concept": "jam_nut",
+        "synset": "oewn-03689664-n",
+        "decision": "add",
+        "alignment": "restricted dictionary locknut sense",
+        "scope": "A nut used against another nut or mating part to resist relative movement. This is the jam-nut meaning, not every self-locking nut."
+      },
+      {
+        "concept": "castellated_nut",
+        "synset": null,
+        "decision": "add",
+        "alignment": "engineering subtype",
+        "scope": "A nut with crown slots that accommodate a retaining pin in a suitable assembly. The unattached nut need not include that pin as a component."
+      },
+      {
+        "concept": "set_screw",
+        "synset": "oewn-04184390-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A screw used to secure a part against relative movement, for example on a shaft. Headlessness is common but not universal; exclude the separate spring-tension-adjustment sense."
+      },
+      {
+        "concept": "phillips_screw",
+        "synset": "oewn-03929686-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A screw using the Phillips drive form. Do not equate every cross-shaped recess, including Pozidriv, with Phillips."
+      },
+      {
+        "concept": "hex_socket_screw",
+        "synset": "oewn-02700435-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A screw with an internal hexagonal driving recess, distinct from an external hexagon head."
+      },
+      {
+        "concept": "steel_screw",
+        "synset": null,
+        "decision": "add",
+        "alignment": "material-defined subtype",
+        "scope": "A screw whose body is steel; this material-defined subtype receives the former broad steel assertion."
+      },
+      {
+        "concept": "steel_nail",
+        "synset": null,
+        "decision": "add",
+        "alignment": "material-defined subtype",
+        "scope": "A nail with a steel body; do not generalize this material to every nail."
+      },
+      {
+        "concept": "wooden_nail",
+        "synset": null,
+        "decision": "add",
+        "alignment": "material-defined subtype",
+        "scope": "A driven nail made from wood. The manufacturer evidence establishes that nails need not be metal; no proprietary performance or installation rule is generalized."
+      },
+      {
+        "concept": "rivet",
+        "synset": "oewn-04102436-n",
+        "decision": "add",
+        "alignment": "method-neutral engineering adaptation",
+        "scope": "A fastener set by deforming part of it to secure an assembly. Broaden the solid-pin-and-hammer gloss to cover the reviewed blind-rivet family."
+      },
+      {
+        "concept": "solid_rivet",
+        "synset": null,
+        "decision": "add",
+        "alignment": "construction subtype",
+        "scope": "A rivet with a solid shank before setting; no single material or forming tool is mandatory."
+      },
+      {
+        "concept": "blind_rivet",
+        "synset": null,
+        "decision": "add",
+        "alignment": "access-defined subtype",
+        "scope": "A rivet designed for installation with access from one side. Not all blind rivets use a pull mandrel; drive-pin and threaded-stem forms exist."
+      },
+      {
+        "concept": "pull_mandrel_rivet",
+        "synset": null,
+        "decision": "add",
+        "alignment": "mechanism-defined subtype",
+        "scope": "A blind rivet set by pulling a mandrel. Distinct from the full blind-rivet family, which has other installation mechanisms."
+      },
+      {
+        "concept": "dowel_pin",
+        "synset": "oewn-03233947-n",
+        "decision": "add",
+        "alignment": "locating-fastener restriction",
+        "scope": "A pin fitted into aligned holes to locate or retain parts. Restrict the broad dowel cluster; exclude a loose rod, a display pin and PIN authentication."
+      },
+      {
+        "concept": "cotter_pin",
+        "synset": "oewn-03119665-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A split retaining pin whose legs can be spread after insertion. The unsplit tapered cotter is a different hardware type."
+      },
+      {
+        "concept": "holding_device",
+        "synset": "oewn-03531007-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A device intended to hold a physical object. It is distinct from possession, emotional attachment and an intellectual grasp."
+      },
+      {
+        "concept": "c_clamp",
+        "synset": "oewn-02991521-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A clamp with a C-shaped frame. No universal frame material or force rating is asserted."
+      },
+      {
+        "concept": "spring_clamp",
+        "synset": null,
+        "decision": "add",
+        "alignment": "mechanism-defined subtype",
+        "scope": "A clamp whose gripping force is supplied by a spring; not every clamp uses a threaded spindle."
+      },
+      {
+        "concept": "bench_vise",
+        "synset": "oewn-04545847-n",
+        "decision": "add",
+        "alignment": "mounting-location subtype",
+        "scope": "A vise intended for mounting at a workbench; distinguish the narrower dictionary bench-vise cluster from the existing general vise record."
+      },
+      {
+        "concept": "phillips_driver",
+        "synset": "oewn-03929814-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A screwdriver for the Phillips drive. Do not claim compatibility with every cross-head system."
+      },
+      {
+        "concept": "adjustable_wrench",
+        "synset": "oewn-02683608-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A wrench with an adjustable jaw opening."
+      },
+      {
+        "concept": "box_wrench",
+        "synset": "oewn-02889675-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A wrench whose ring-like working end fits around a fastener head or nut."
+      },
+      {
+        "concept": "socket_wrench",
+        "synset": "oewn-04262456-n",
+        "decision": "add",
+        "alignment": "broaden detachable-socket-only gloss",
+        "scope": "A wrench that drives through a socket-shaped working end. Sockets may be integral or interchangeable; a ratchet is not mandatory."
+      },
+      {
+        "concept": "hex_key",
+        "synset": "oewn-02700534-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A key that engages an internal hexagonal recess. Do not import every brand name from the synset as a generic alias."
+      },
+      {
+        "concept": "fastener_driving",
+        "synset": "oewn-01355509-v",
+        "decision": "add",
+        "alignment": "hardware-specific action",
+        "scope": "Installing or securing threaded fastening hardware by rotation; narrower than the action that can also screw on a lid."
+      },
+      {
+        "concept": "fastener_unscrewing",
+        "synset": "oewn-01355231-v",
+        "decision": "add",
+        "alignment": "hardware-specific action",
+        "scope": "Loosening or removing threaded fastening hardware by rotation; do not require a complete removal or a universal clockwise direction."
+      },
+      {
+        "concept": "pull_riveting",
+        "synset": null,
+        "decision": "add",
+        "alignment": "mechanism-specific action",
+        "scope": "Riveting by setting pull-mandrel blind rivets; not every blind riveting process uses this mechanism."
+      },
+      {
+        "concept": "hand_riveter",
+        "synset": null,
+        "decision": "add",
+        "alignment": "manufacturer-supported tool",
+        "scope": "A manually operated tool for setting pull-mandrel blind rivets. Distinguish this from rivet-nut tools, powered riveting machines and the riveter occupation."
+      },
+      {
+        "concept": "nailing",
+        "synset": "oewn-01360534-v",
+        "decision": "add",
+        "alignment": "physical fastening action",
+        "scope": "Fastening with nails. Do not require a hand hammer; suitable nailers also perform the process."
+      },
+      {
+        "concept": 30,
+        "synset": "oewn-04459089-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Broaden the English label to physical tool and reject the unsupported material percentage and false dishware exclusion."
+      },
+      {
+        "concept": 1499,
+        "synset": "oewn-04160812-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reuse screw fastener; do not copy tapered-shank and slotted-head restrictions to all screws."
+      },
+      {
+        "concept": 1498,
+        "synset": "oewn-03810284-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reuse nail fastener, allowing documented nonmetal nail bodies."
+      },
+      {
+        "concept": 2402,
+        "synset": "oewn-03841711-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reuse nut (fastener) already distinct from edible nut 3210."
+      },
+      {
+        "concept": 18296,
+        "synset": "oewn-01355231-v",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Correct the malformed unscrewing action rather than create a duplicate general action."
+      },
+      {
+        "concept": 19608,
+        "synset": "oewn-01369969-v",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Explicitly select riveting, retain original lookup, and specialize the physical-action genus through fastening."
+      },
+      {
+        "concept": 5238,
+        "synset": "oewn-04545847-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Keep vise broad; add a bench-vise subtype rather than assert all vises are workbench-mounted."
+      },
+      {
+        "concept": 3488,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Defer the chemical-compound/physical-joining conflation; do not attach fasteners to this mixed record."
+      },
+      {
+        "concept": 19755,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Twisting off can include detachment without a screw thread; do not automatically merge it with unscrewing."
+      },
+      {
+        "concept": 19848,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The generated Russian perfective metalworking record needs a full duplicate/sense review."
+      },
+      {
+        "concept": 1500,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Review pincers versus broader pliers and cutting-only pliers before adding hand-tool subtypes."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-04562157-n",
+        "decision": "exclude homonym or narrow gloss",
+        "alignment": "reviewed sense",
+        "scope": "The dictionary washer entry selects a sealing gasket; do not import that genus for all fastening washers."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-07933512-n",
+        "decision": "exclude homonym or narrow gloss",
+        "alignment": "reviewed sense",
+        "scope": "A screwdriver cocktail is not a tool."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-04184606-n",
+        "decision": "exclude homonym or narrow gloss",
+        "alignment": "reviewed sense",
+        "scope": "A spring-tension adjusting setscrew is not automatically the selected shaft-securing setscrew sense."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-12343018-n",
+        "decision": "exclude homonym or narrow gloss",
+        "alignment": "reviewed sense",
+        "scope": "A wing-nut tree is not fastening hardware."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-04161213-n",
+        "decision": "exclude homonym or narrow gloss",
+        "alignment": "reviewed sense",
+        "scope": "A screw propeller is not the selected fastening screw."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-03946989-n",
+        "decision": "exclude homonym or narrow gloss",
+        "alignment": "reviewed sense",
+        "scope": "A jewelry pin is not automatically a locating dowel pin."
+      }
+    ],
+    "limits": "Qualitative vocabulary only. Thread geometry tolerances, pitch/lead, torque, load ratings, material grades, safety and national standards are outside scope. The cloth/PIN/thread and figurative screw/nut senses are not merged. Pliers/pincers, physical gripping duplicates, attaching/fastening generated leaves, compound/joining record 3488, and remaining U1 exclusion conflicts need separate review. No application test suites.",
+    "exclusion_review": {
+      "context": "U1 positive genus witnesses",
+      "before_conflicting_edges": 22,
+      "reviewed_edges": [
+        8095,
+        8023
+      ],
+      "witnesses": {
+        "8095": [
+          1537,
+          24769,
+          24771
+        ],
+        "8023": [
+          3473,
+          24782,
+          "fastener_driving"
+        ]
+      },
+      "decision": "Reject the tool/dishware and action/process exclusions; retain meaningful multiple genera. Other 20 pre-existing candidates remain for individual review.",
+      "regression": "After application, no conflict edge or witness may be newly introduced by Q18; save a private witness comparison."
+    },
+    "new_term_collisions": [],
+    "refreshed_comparison": {
+      "baseline": "Q17",
+      "existing_concepts": 12777,
+      "existing_terms": 36030,
+      "synsets_with_exact_en_candidate": 15492,
+      "synsets_without_exact_en_candidate": 92027,
+      "existing_concepts_with_dictionary_candidate": 4076,
+      "caveat": "Exact normalized English spellings are candidates, not semantic identities or a missing-concept count."
+    }
+  },
+  "concepts": [
+    {
+      "key": "threaded_fastener",
+      "name": "резьбовой крепёж",
+      "parent": 2400,
+      "universum_id": 1,
+      "terms": [
+        [
+          "резьбовой крепёж",
+          "ru"
+        ],
+        [
+          "threaded fastener",
+          "en"
+        ]
+      ],
+      "reason": "A fastener whose function uses a screw thread, including screws, bolts and threaded nuts. No one head shape or material is required. Source: https://www.bossard.com/global-en/eshop/products/fastening-technology/standard-fastening-elements/c/01.100/"
+    },
+    {
+      "key": "screw_thread",
+      "name": "винтовая резьба",
+      "parent": 242,
+      "universum_id": 1,
+      "terms": [
+        [
+          "винтовая резьба",
+          "ru"
+        ],
+        [
+          "screw thread",
+          "en"
+        ],
+        [
+          "thread (mechanical)",
+          "en"
+        ]
+      ],
+      "reason": "A physical helical surface feature on or inside a part. Extend the external-rib-only dictionary gloss to include internal threads; not textile thread or an execution thread. OEWN 2025: oewn-04161999-n. Source: https://ntrs.nasa.gov/api/citations/19900009424/downloads/19900009424.pdf"
+    },
+    {
+      "key": "external_thread",
+      "name": "наружная резьба",
+      "parent": "screw_thread",
+      "universum_id": 1,
+      "terms": [
+        [
+          "наружная резьба",
+          "ru"
+        ],
+        [
+          "external thread",
+          "en"
+        ]
+      ],
+      "reason": "A screw thread on the outer surface of a part. No pitch, profile, handedness or tolerance class is imposed. Source: https://ntrs.nasa.gov/api/citations/19900009424/downloads/19900009424.pdf"
+    },
+    {
+      "key": "internal_thread",
+      "name": "внутренняя резьба",
+      "parent": "screw_thread",
+      "universum_id": 1,
+      "terms": [
+        [
+          "внутренняя резьба",
+          "ru"
+        ],
+        [
+          "internal thread",
+          "en"
+        ]
+      ],
+      "reason": "A screw thread on an internal surface, such as in a nut. No specific thread standard is imposed. Source: https://ntrs.nasa.gov/api/citations/19900009424/downloads/19900009424.pdf"
+    },
+    {
+      "key": "fastener_washer",
+      "name": "шайба для крепёжного соединения",
+      "parent": 242,
+      "universum_id": 1,
+      "terms": [
+        [
+          "шайба для крепёжного соединения",
+          "ru"
+        ],
+        [
+          "washer (fastening hardware)",
+          "en"
+        ],
+        [
+          "fastener washer",
+          "en"
+        ],
+        [
+          "крепёжная шайба",
+          "ru"
+        ]
+      ],
+      "reason": "A washer used in a fastening assembly. Model it as a component, not a washing appliance, worker or necessarily a leak-sealing gasket. Source: https://ntrs.nasa.gov/api/citations/19900009424/downloads/19900009424.pdf"
+    },
+    {
+      "key": "flat_washer",
+      "name": "плоская шайба",
+      "parent": "fastener_washer",
+      "universum_id": 1,
+      "terms": [
+        [
+          "плоская шайба",
+          "ru"
+        ],
+        [
+          "flat washer",
+          "en"
+        ],
+        [
+          "plain washer",
+          "en"
+        ]
+      ],
+      "reason": "A flat washer used under fastening hardware; no sealing or anti-loosening guarantee is asserted. Source: https://ntrs.nasa.gov/api/citations/19900009424/downloads/19900009424.pdf"
+    },
+    {
+      "key": "spring_washer",
+      "name": "пружинная шайба",
+      "parent": "fastener_washer",
+      "universum_id": 1,
+      "terms": [
+        [
+          "пружинная шайба",
+          "ru"
+        ],
+        [
+          "spring washer",
+          "en"
+        ]
+      ],
+      "reason": "A washer designed to exhibit spring action under axial compression. Its actual fastening performance depends on the assembly. Source: https://www.bossard.com/global-en/eshop/split-spring-lock-washers/split-spring-lock-washers-with-flat-end/p/585/"
+    },
+    {
+      "key": "split_lock_washer",
+      "name": "разрезная пружинная шайба",
+      "parent": "spring_washer",
+      "universum_id": 1,
+      "terms": [
+        [
+          "разрезная пружинная шайба",
+          "ru"
+        ],
+        [
+          "split lock washer",
+          "en"
+        ],
+        [
+          "split spring washer",
+          "en"
+        ]
+      ],
+      "reason": "A split helical spring washer. Its name is not evidence that every assembly is protected from loosening. Source: https://www.bossard.com/global-en/eshop/split-spring-lock-washers/split-spring-lock-washers-with-flat-end/p/585/"
+    },
+    {
+      "key": "hex_nut",
+      "name": "шестигранная гайка",
+      "parent": 2402,
+      "universum_id": 1,
+      "terms": [
+        [
+          "шестигранная гайка",
+          "ru"
+        ],
+        [
+          "hex nut",
+          "en"
+        ],
+        [
+          "hexagon nut",
+          "en"
+        ]
+      ],
+      "reason": "A nut with a hexagonal external wrenching form; no material or grade is imposed. Source: https://nederland.bossard.com/en-us/product/standard-fastening-elements/nuts/hex-nuts/5577c080"
+    },
+    {
+      "key": "wing_nut",
+      "name": "гайка-барашек",
+      "parent": 2402,
+      "universum_id": 1,
+      "terms": [
+        [
+          "гайка-барашек",
+          "ru"
+        ],
+        [
+          "wing nut",
+          "en"
+        ],
+        [
+          "butterfly nut",
+          "en"
+        ]
+      ],
+      "reason": "A nut with projections for finger turning. Exclude the tree sense and the misleading wing-screw synonym for this nut. OEWN 2025: oewn-04600512-n."
+    },
+    {
+      "key": "jam_nut",
+      "name": "контргайка",
+      "parent": 2402,
+      "universum_id": 1,
+      "terms": [
+        [
+          "контргайка",
+          "ru"
+        ],
+        [
+          "jam nut",
+          "en"
+        ],
+        [
+          "locknut (jam nut)",
+          "en"
+        ]
+      ],
+      "reason": "A nut used against another nut or mating part to resist relative movement. This is the jam-nut meaning, not every self-locking nut. OEWN 2025: oewn-03689664-n. Source: https://ntrs.nasa.gov/api/citations/19900009424/downloads/19900009424.pdf"
+    },
+    {
+      "key": "castellated_nut",
+      "name": "корончатая гайка",
+      "parent": 2402,
+      "universum_id": 1,
+      "terms": [
+        [
+          "корончатая гайка",
+          "ru"
+        ],
+        [
+          "castellated nut",
+          "en"
+        ],
+        [
+          "castle nut",
+          "en"
+        ]
+      ],
+      "reason": "A nut with crown slots that accommodate a retaining pin in a suitable assembly. The unattached nut need not include that pin as a component. Source: https://ntrs.nasa.gov/api/citations/19900009424/downloads/19900009424.pdf"
+    },
+    {
+      "key": "set_screw",
+      "name": "установочный винт",
+      "parent": 1499,
+      "universum_id": 1,
+      "terms": [
+        [
+          "установочный винт",
+          "ru"
+        ],
+        [
+          "set screw",
+          "en"
+        ],
+        [
+          "setscrew (securing a part)",
+          "en"
+        ]
+      ],
+      "reason": "A screw used to secure a part against relative movement, for example on a shaft. Headlessness is common but not universal; exclude the separate spring-tension-adjustment sense. OEWN 2025: oewn-04184390-n."
+    },
+    {
+      "key": "phillips_screw",
+      "name": "винт со шлицем Phillips",
+      "parent": 1499,
+      "universum_id": 1,
+      "terms": [
+        [
+          "винт со шлицем Phillips",
+          "ru"
+        ],
+        [
+          "Phillips screw",
+          "en"
+        ]
+      ],
+      "reason": "A screw using the Phillips drive form. Do not equate every cross-shaped recess, including Pozidriv, with Phillips. OEWN 2025: oewn-03929686-n."
+    },
+    {
+      "key": "hex_socket_screw",
+      "name": "винт с внутренним шестигранником",
+      "parent": 1499,
+      "universum_id": 1,
+      "terms": [
+        [
+          "винт с внутренним шестигранником",
+          "ru"
+        ],
+        [
+          "hex socket screw",
+          "en"
+        ],
+        [
+          "Allen screw",
+          "en"
+        ]
+      ],
+      "reason": "A screw with an internal hexagonal driving recess, distinct from an external hexagon head. OEWN 2025: oewn-02700435-n."
+    },
+    {
+      "key": "steel_screw",
+      "name": "стальной винт",
+      "parent": 1499,
+      "universum_id": 1,
+      "terms": [
+        [
+          "стальной винт",
+          "ru"
+        ],
+        [
+          "steel screw",
+          "en"
+        ]
+      ],
+      "reason": "A screw whose body is steel; this material-defined subtype receives the former broad steel assertion. Source: https://www.baecker.eu/en/products/placo-tec/additional-information-plastic-screws"
+    },
+    {
+      "key": "steel_nail",
+      "name": "стальной гвоздь",
+      "parent": 1498,
+      "universum_id": 1,
+      "terms": [
+        [
+          "стальной гвоздь",
+          "ru"
+        ],
+        [
+          "steel nail",
+          "en"
+        ]
+      ],
+      "reason": "A nail with a steel body; do not generalize this material to every nail. Source: https://www.beck-fastening.com/en/industries/carpentry"
+    },
+    {
+      "key": "wooden_nail",
+      "name": "деревянный гвоздь",
+      "parent": 1498,
+      "universum_id": 1,
+      "terms": [
+        [
+          "деревянный гвоздь",
+          "ru"
+        ],
+        [
+          "wooden nail",
+          "en"
+        ]
+      ],
+      "reason": "A driven nail made from wood. The manufacturer evidence establishes that nails need not be metal; no proprietary performance or installation rule is generalized. Source: https://www.beck-fastening.com/en/industries/carpentry"
+    },
+    {
+      "key": "rivet",
+      "name": "заклёпка",
+      "parent": 2400,
+      "universum_id": 1,
+      "terms": [
+        [
+          "заклёпка",
+          "ru"
+        ],
+        [
+          "rivet (fastener)",
+          "en"
+        ],
+        [
+          "rivet",
+          "en"
+        ]
+      ],
+      "reason": "A fastener set by deforming part of it to secure an assembly. Broaden the solid-pin-and-hammer gloss to cover the reviewed blind-rivet family. OEWN 2025: oewn-04102436-n. Source: https://ntrs.nasa.gov/api/citations/19900009424/downloads/19900009424.pdf"
+    },
+    {
+      "key": "solid_rivet",
+      "name": "сплошная заклёпка",
+      "parent": "rivet",
+      "universum_id": 1,
+      "terms": [
+        [
+          "сплошная заклёпка",
+          "ru"
+        ],
+        [
+          "solid rivet",
+          "en"
+        ],
+        [
+          "solid-shank rivet",
+          "en"
+        ]
+      ],
+      "reason": "A rivet with a solid shank before setting; no single material or forming tool is mandatory. Source: https://ntrs.nasa.gov/api/citations/19900009424/downloads/19900009424.pdf"
+    },
+    {
+      "key": "blind_rivet",
+      "name": "заклёпка для односторонней установки",
+      "parent": "rivet",
+      "universum_id": 1,
+      "terms": [
+        [
+          "заклёпка для односторонней установки",
+          "ru"
+        ],
+        [
+          "blind rivet",
+          "en"
+        ]
+      ],
+      "reason": "A rivet designed for installation with access from one side. Not all blind rivets use a pull mandrel; drive-pin and threaded-stem forms exist. Source: https://ntrs.nasa.gov/api/citations/19900009424/downloads/19900009424.pdf"
+    },
+    {
+      "key": "pull_mandrel_rivet",
+      "name": "вытяжная заклёпка",
+      "parent": "blind_rivet",
+      "universum_id": 1,
+      "terms": [
+        [
+          "вытяжная заклёпка",
+          "ru"
+        ],
+        [
+          "pull-mandrel blind rivet",
+          "en"
+        ],
+        [
+          "pull-type blind rivet",
+          "en"
+        ]
+      ],
+      "reason": "A blind rivet set by pulling a mandrel. Distinct from the full blind-rivet family, which has other installation mechanisms. Source: https://ntrs.nasa.gov/api/citations/19900009424/downloads/19900009424.pdf"
+    },
+    {
+      "key": "dowel_pin",
+      "name": "установочный штифт",
+      "parent": 2400,
+      "universum_id": 1,
+      "terms": [
+        [
+          "установочный штифт",
+          "ru"
+        ],
+        [
+          "locating dowel pin",
+          "en"
+        ]
+      ],
+      "reason": "A pin fitted into aligned holes to locate or retain parts. Restrict the broad dowel cluster; exclude a loose rod, a display pin and PIN authentication. OEWN 2025: oewn-03233947-n."
+    },
+    {
+      "key": "cotter_pin",
+      "name": "шплинт",
+      "parent": 2400,
+      "universum_id": 1,
+      "terms": [
+        [
+          "шплинт",
+          "ru"
+        ],
+        [
+          "split cotter pin",
+          "en"
+        ],
+        [
+          "cotter pin",
+          "en"
+        ],
+        [
+          "split pin (retainer)",
+          "en"
+        ]
+      ],
+      "reason": "A split retaining pin whose legs can be spread after insertion. The unsplit tapered cotter is a different hardware type. OEWN 2025: oewn-03119665-n."
+    },
+    {
+      "key": "holding_device",
+      "name": "удерживающее устройство",
+      "parent": 3607,
+      "universum_id": 1,
+      "terms": [
+        [
+          "удерживающее устройство",
+          "ru"
+        ],
+        [
+          "holding device",
+          "en"
+        ]
+      ],
+      "reason": "A device intended to hold a physical object. It is distinct from possession, emotional attachment and an intellectual grasp. OEWN 2025: oewn-03531007-n."
+    },
+    {
+      "key": "c_clamp",
+      "name": "C-образная струбцина",
+      "parent": 5239,
+      "universum_id": 1,
+      "terms": [
+        [
+          "C-образная струбцина",
+          "ru"
+        ],
+        [
+          "C-clamp",
+          "en"
+        ]
+      ],
+      "reason": "A clamp with a C-shaped frame. No universal frame material or force rating is asserted. OEWN 2025: oewn-02991521-n. Source: https://besseytools.com/en-us/bessey-tools-north-america/products/clamping-tools/c-clamps"
+    },
+    {
+      "key": "spring_clamp",
+      "name": "пружинная струбцина",
+      "parent": 5239,
+      "universum_id": 1,
+      "terms": [
+        [
+          "пружинная струбцина",
+          "ru"
+        ],
+        [
+          "spring clamp",
+          "en"
+        ]
+      ],
+      "reason": "A clamp whose gripping force is supplied by a spring; not every clamp uses a threaded spindle. Source: https://besseytools.com/getmedia/24482ba7-ab34-4441-b2a4-677c02ed4c04/BESSEY_Spring-clamps_EN.pdf"
+    },
+    {
+      "key": "bench_vise",
+      "name": "верстачные тиски",
+      "parent": 5238,
+      "universum_id": 1,
+      "terms": [
+        [
+          "верстачные тиски",
+          "ru"
+        ],
+        [
+          "bench vise",
+          "en"
+        ],
+        [
+          "bench vice",
+          "en"
+        ]
+      ],
+      "reason": "A vise intended for mounting at a workbench; distinguish the narrower dictionary bench-vise cluster from the existing general vise record. OEWN 2025: oewn-04545847-n. Source: https://www.irwintools.com/products/hand-tools/clamps-vises/vises"
+    },
+    {
+      "key": "phillips_driver",
+      "name": "отвёртка Phillips",
+      "parent": 1497,
+      "universum_id": 1,
+      "terms": [
+        [
+          "отвёртка Phillips",
+          "ru"
+        ],
+        [
+          "Phillips screwdriver",
+          "en"
+        ]
+      ],
+      "reason": "A screwdriver for the Phillips drive. Do not claim compatibility with every cross-head system. OEWN 2025: oewn-03929814-n."
+    },
+    {
+      "key": "adjustable_wrench",
+      "name": "разводной ключ",
+      "parent": 1504,
+      "universum_id": 1,
+      "terms": [
+        [
+          "разводной ключ",
+          "ru"
+        ],
+        [
+          "adjustable wrench",
+          "en"
+        ],
+        [
+          "adjustable spanner",
+          "en"
+        ]
+      ],
+      "reason": "A wrench with an adjustable jaw opening. OEWN 2025: oewn-02683608-n."
+    },
+    {
+      "key": "box_wrench",
+      "name": "накидной ключ",
+      "parent": 1504,
+      "universum_id": 1,
+      "terms": [
+        [
+          "накидной ключ",
+          "ru"
+        ],
+        [
+          "box-end wrench",
+          "en"
+        ],
+        [
+          "ring spanner",
+          "en"
+        ],
+        [
+          "box wrench",
+          "en"
+        ]
+      ],
+      "reason": "A wrench whose ring-like working end fits around a fastener head or nut. OEWN 2025: oewn-02889675-n."
+    },
+    {
+      "key": "socket_wrench",
+      "name": "торцевой ключ",
+      "parent": 1504,
+      "universum_id": 1,
+      "terms": [
+        [
+          "торцевой ключ",
+          "ru"
+        ],
+        [
+          "socket wrench",
+          "en"
+        ]
+      ],
+      "reason": "A wrench that drives through a socket-shaped working end. Sockets may be integral or interchangeable; a ratchet is not mandatory. OEWN 2025: oewn-04262456-n."
+    },
+    {
+      "key": "hex_key",
+      "name": "шестигранный ключ",
+      "parent": 1504,
+      "universum_id": 1,
+      "terms": [
+        [
+          "шестигранный ключ",
+          "ru"
+        ],
+        [
+          "hex key",
+          "en"
+        ],
+        [
+          "Allen key",
+          "en"
+        ],
+        [
+          "Allen wrench",
+          "en"
+        ]
+      ],
+      "reason": "A key that engages an internal hexagonal recess. Do not import every brand name from the synset as a generic alias. OEWN 2025: oewn-02700534-n."
+    },
+    {
+      "key": "fastener_driving",
+      "name": "завинчивание резьбового крепежа",
+      "parent": 1784,
+      "universum_id": 1,
+      "terms": [
+        [
+          "завинчивание резьбового крепежа",
+          "ru"
+        ],
+        [
+          "driving threaded fasteners",
+          "en"
+        ]
+      ],
+      "reason": "Installing or securing threaded fastening hardware by rotation; narrower than the action that can also screw on a lid. OEWN 2025: oewn-01355509-v."
+    },
+    {
+      "key": "fastener_unscrewing",
+      "name": "отвинчивание резьбового крепежа",
+      "parent": 18296,
+      "universum_id": 1,
+      "terms": [
+        [
+          "отвинчивание резьбового крепежа",
+          "ru"
+        ],
+        [
+          "unscrewing threaded fasteners",
+          "en"
+        ]
+      ],
+      "reason": "Loosening or removing threaded fastening hardware by rotation; do not require a complete removal or a universal clockwise direction. OEWN 2025: oewn-01355231-v."
+    },
+    {
+      "key": "pull_riveting",
+      "name": "установка вытяжных заклёпок",
+      "parent": 19608,
+      "universum_id": 1,
+      "terms": [
+        [
+          "установка вытяжных заклёпок",
+          "ru"
+        ],
+        [
+          "pull-mandrel riveting",
+          "en"
+        ]
+      ],
+      "reason": "Riveting by setting pull-mandrel blind rivets; not every blind riveting process uses this mechanism. Source: https://ntrs.nasa.gov/api/citations/19900009424/downloads/19900009424.pdf"
+    },
+    {
+      "key": "hand_riveter",
+      "name": "ручной заклёпочник для вытяжных заклёпок",
+      "parent": 30,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ручной заклёпочник для вытяжных заклёпок",
+          "ru"
+        ],
+        [
+          "hand tool for pull-mandrel rivets",
+          "en"
+        ],
+        [
+          "hand blind riveter",
+          "en"
+        ]
+      ],
+      "reason": "A manually operated tool for setting pull-mandrel blind rivets. Distinguish this from rivet-nut tools, powered riveting machines and the riveter occupation. Source: https://www.stanleyengineeredfastening.com/-/media/Web/SEF/Resources/Docs/Heli-Coil/Tangless-Cross-RefHC600-rev2.pdf"
+    },
+    {
+      "key": "nailing",
+      "name": "крепление гвоздями",
+      "parent": 3831,
+      "universum_id": 1,
+      "terms": [
+        [
+          "крепление гвоздями",
+          "ru"
+        ],
+        [
+          "nailing (fastening)",
+          "en"
+        ]
+      ],
+      "reason": "Fastening with nails. Do not require a hand hammer; suitable nailers also perform the process. OEWN 2025: oewn-01360534-v. Source: https://www.beck-fastening.com/en/industries/carpentry"
+    }
+  ],
+  "renames": [
+    {
+      "id": 3831,
+      "before": "закреплять",
+      "name": "закрепление (физическое действие)",
+      "terms": [],
+      "reason": "Use a normal action noun for the existing physical fastening sense; retain valid Russian verb forms. OEWN 2025: oewn-01343121-v."
+    },
+    {
+      "id": 18296,
+      "before": "отвинтение",
+      "name": "отвинчивание",
+      "terms": [],
+      "reason": "Replace generated nominalizations with the dictionary action noun. Unscrewing includes threaded closures as well as fasteners. OEWN 2025: oewn-01355231-v. Source: https://gramota.ru/meta/otvintit"
+    },
+    {
+      "id": 19608,
+      "before": "клепание",
+      "name": "клёпка (соединение деталей)",
+      "terms": [],
+      "reason": "Select and label the physical riveting sense explicitly. Other metal-hammering and figurative senses of the original Russian verb are not imported. OEWN 2025: oewn-01369969-v. Source: https://gramota.ru/poisk?mode=slovari&page=14&query=%D0%BA%D0%BB%D0%B5%D1%8F%D1%82%D1%8C+%D0%B8%D0%BB%D0%B8+%D0%BA%D0%BB%D0%B5%D0%B8%D1%82%D1%8C"
+    }
+  ],
+  "terms": [
+    {
+      "id": 30,
+      "name": "инструмент",
+      "terms": [
+        [
+          "tool (physical)",
+          "en"
+        ],
+        [
+          "tool",
+          "en"
+        ]
+      ],
+      "reason": "The existing family includes powered tools, not just manual hand tools. Keep it separate from software tool 1203. OEWN 2025: oewn-04459089-n."
+    },
+    {
+      "id": 2400,
+      "name": "крепёж",
+      "terms": [
+        [
+          "mechanical fastener",
+          "en"
+        ],
+        [
+          "fastener (hardware)",
+          "en"
+        ],
+        [
+          "крепёжное изделие",
+          "ru"
+        ]
+      ],
+      "reason": "Reuse mechanical hardware rather than a person who fastens. OEWN 2025: oewn-03328648-n."
+    },
+    {
+      "id": 1498,
+      "name": "гвоздь",
+      "terms": [
+        [
+          "nail (fastener)",
+          "en"
+        ]
+      ],
+      "reason": "Select the driven fastening object, not a fingernail or obsolete length unit. Do not require all nail bodies to be steel. OEWN 2025: oewn-03810284-n."
+    },
+    {
+      "id": 1499,
+      "name": "винт",
+      "terms": [
+        [
+          "screw (fastener)",
+          "en"
+        ]
+      ],
+      "reason": "Select the fastener sense, not a propeller, general simple machine or figurative verb. The Russian screw and wood-screw records remain distinct. OEWN 2025: oewn-04160812-n."
+    },
+    {
+      "id": 2401,
+      "name": "шуруп",
+      "terms": [
+        [
+          "wood screw",
+          "en"
+        ],
+        [
+          "screw (wood fastener)",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the existing Russian wood-screw sense; do not assume every screw is a tapered wood screw."
+    },
+    {
+      "id": 2402,
+      "name": "гайка",
+      "terms": [
+        [
+          "threaded nut",
+          "en"
+        ]
+      ],
+      "reason": "Keep the existing nut-fastener sense separate from edible nut 3210. Do not copy a metal-only or through-hole-only definition. OEWN 2025: oewn-03841711-n."
+    },
+    {
+      "id": 2403,
+      "name": "болт",
+      "terms": [
+        [
+          "bolt (fastener)",
+          "en"
+        ]
+      ],
+      "reason": "Select fastening bolt rather than a door latch, lightning, cloth roll or firearm component. OEWN 2025: oewn-02869005-n."
+    },
+    {
+      "id": 1504,
+      "name": "гаечный ключ",
+      "terms": [
+        [
+          "spanner",
+          "en"
+        ],
+        [
+          "wrench (tool)",
+          "en"
+        ]
+      ],
+      "reason": "Reuse the tool for turning nuts and bolt/screw heads; exclude sprain and emotional-pain senses. OEWN 2025: oewn-04613932-n."
+    },
+    {
+      "id": 5238,
+      "name": "тиски",
+      "terms": [
+        [
+          "vice (holding tool)",
+          "en"
+        ]
+      ],
+      "reason": "British vice and American vise name the holding tool. The broader Russian family is not restricted to bench-mounted versions. OEWN 2025: oewn-04545847-n."
+    },
+    {
+      "id": 5239,
+      "name": "струбцина",
+      "terms": [
+        [
+          "workholding clamp",
+          "en"
+        ]
+      ],
+      "reason": "Reuse the workshop clamp; exclude the coercive verb sense. OEWN 2025: oewn-03040851-n."
+    },
+    {
+      "id": 5244,
+      "name": "шуруповёрт",
+      "terms": [
+        [
+          "power screwdriver",
+          "en"
+        ],
+        [
+          "powered screwdriver",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the powered tool. Do not merge it with the manual screwdriver or the cocktail homonym."
+    },
+    {
+      "id": 3831,
+      "name": "закрепление (физическое действие)",
+      "terms": [
+        [
+          "fastening (physical action)",
+          "en"
+        ],
+        [
+          "securing (physical)",
+          "en"
+        ],
+        [
+          "закрепление",
+          "ru"
+        ]
+      ],
+      "reason": "Physical securing, not a software fix, figurative resolution or a fastener object. OEWN 2025: oewn-01343121-v."
+    },
+    {
+      "id": 18296,
+      "name": "отвинчивание",
+      "terms": [
+        [
+          "unscrewing",
+          "en"
+        ],
+        [
+          "to unscrew",
+          "en"
+        ],
+        [
+          "отвинтить",
+          "ru"
+        ],
+        [
+          "отвинчивать",
+          "ru"
+        ]
+      ],
+      "reason": "Retain the general threaded-rotation action. OEWN 2025: oewn-01355231-v."
+    },
+    {
+      "id": 19608,
+      "name": "клёпка (соединение деталей)",
+      "terms": [
+        [
+          "riveting",
+          "en"
+        ],
+        [
+          "riveting (fastening)",
+          "en"
+        ],
+        [
+          "клёпка",
+          "ru"
+        ],
+        [
+          "клепать",
+          "ru"
+        ]
+      ],
+      "reason": "The selected process joins with rivets; it is not the barrel-stave noun or metaphorical captivating action. OEWN 2025: oewn-01369969-v."
+    },
+    {
+      "id": 1784,
+      "name": "завинчивание",
+      "terms": [
+        [
+          "screwing (threaded rotation)",
+          "en"
+        ],
+        [
+          "screw driving",
+          "en"
+        ],
+        [
+          "завинчивать",
+          "ru"
+        ]
+      ],
+      "reason": "Reuse the physical action with qualified English lookup; do not import figurative or sexual homonyms. OEWN 2025: oewn-01355509-v."
+    },
+    {
+      "id": 9790,
+      "name": "зажимание",
+      "terms": [
+        [
+          "clamping (physical)",
+          "en"
+        ],
+        [
+          "зажимать",
+          "ru"
+        ]
+      ],
+      "reason": "Reuse the physical action with qualified English lookup; do not import figurative or sexual homonyms. OEWN 2025: oewn-01346292-v."
+    },
+    {
+      "id": 1782,
+      "name": "забивание",
+      "terms": [
+        [
+          "hammering (physical)",
+          "en"
+        ],
+        [
+          "забивать",
+          "ru"
+        ]
+      ],
+      "reason": "Reuse the physical action with qualified English lookup; do not import figurative or sexual homonyms."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 30,
+      "term": "tool (hand tool)",
+      "lang": "en",
+      "reason": "The hand-tool-only qualification is too narrow for the existing powered-tool descendants; retain the general physical-tool sense."
+    },
+    {
+      "id": 18296,
+      "term": "отвинтение",
+      "lang": "ru",
+      "reason": "Remove a generated form or Russian verb mistagged as English; the normal action noun and Russian verbs are retained."
+    },
+    {
+      "id": 18296,
+      "term": "отвинтиение",
+      "lang": "ru",
+      "reason": "Remove a generated form or Russian verb mistagged as English; the normal action noun and Russian verbs are retained."
+    },
+    {
+      "id": 18296,
+      "term": "ОТВИНТИТЬ",
+      "lang": "en",
+      "reason": "Remove a generated form or Russian verb mistagged as English; the normal action noun and Russian verbs are retained."
+    },
+    {
+      "id": 19608,
+      "term": "клепаание",
+      "lang": "ru",
+      "reason": "Remove the doubled-suffix artifact or Russian verb tagged as English; the original valid lookup form is retained."
+    },
+    {
+      "id": 19608,
+      "term": "КЛЕПАТЬ",
+      "lang": "en",
+      "reason": "Remove the doubled-suffix artifact or Russian verb tagged as English; the original valid lookup form is retained."
+    },
+    {
+      "id": 1784,
+      "term": "завинчиваание",
+      "lang": "ru",
+      "reason": "Remove the obvious doubled-suffix artifact and preserve the normal action noun."
+    },
+    {
+      "id": 9790,
+      "term": "зажимаание",
+      "lang": "ru",
+      "reason": "Remove the obvious doubled-suffix artifact and preserve the normal action noun."
+    },
+    {
+      "id": 1782,
+      "term": "забиваание",
+      "lang": "ru",
+      "reason": "Remove the obvious doubled-suffix artifact and preserve the normal action noun."
+    },
+    {
+      "id": 1784,
+      "term": "ЗАВИНЧИВАТЬ",
+      "lang": "en",
+      "reason": "Remove the Russian verb tagged as English; genuine English and correctly tagged Russian forms are recorded."
+    },
+    {
+      "id": 9790,
+      "term": "ЗАЖИМАТЬ",
+      "lang": "en",
+      "reason": "Remove the Russian verb tagged as English; genuine English and correctly tagged Russian forms are recorded."
+    },
+    {
+      "id": 1782,
+      "term": "ЗАБИВАТЬ",
+      "lang": "en",
+      "reason": "Remove the Russian verb tagged as English; genuine English and correctly tagged Russian forms are recorded."
+    }
+  ],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 23692,
+      "before": [
+        19608,
+        "14",
+        5017,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          19608,
+          "14",
+          3831,
+          null,
+          1
+        ]
+      ],
+      "reason": "The explicitly selected riveting process is a form of physical fastening. OEWN 2025: oewn-01369969-v."
+    },
+    {
+      "id": 2258,
+      "before": [
+        1499,
+        "14",
+        30,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1499,
+          "14",
+          "threaded_fastener",
+          null,
+          1
+        ]
+      ],
+      "reason": "The fastening screw is hardware, not the tool used to drive it. OEWN 2025: oewn-04160812-n."
+    },
+    {
+      "id": 2257,
+      "before": [
+        1498,
+        "14",
+        30,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1498,
+          "14",
+          2400,
+          null,
+          1
+        ]
+      ],
+      "reason": "A fastening nail is a fastener, not a hammer-like tool. OEWN 2025: oewn-03810284-n."
+    },
+    {
+      "id": 4368,
+      "before": [
+        2401,
+        "14",
+        2400,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2401,
+          "14",
+          "threaded_fastener",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing wood screw, nut or bolt through the common threaded-fastener genus. Source: https://www.bossard.com/global-en/eshop/products/fastening-technology/standard-fastening-elements/c/01.100/"
+    },
+    {
+      "id": 4369,
+      "before": [
+        2402,
+        "14",
+        2400,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2402,
+          "14",
+          "threaded_fastener",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing wood screw, nut or bolt through the common threaded-fastener genus. Source: https://www.bossard.com/global-en/eshop/products/fastening-technology/standard-fastening-elements/c/01.100/"
+    },
+    {
+      "id": 4370,
+      "before": [
+        2403,
+        "14",
+        2400,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2403,
+          "14",
+          "threaded_fastener",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the existing wood screw, nut or bolt through the common threaded-fastener genus. Source: https://www.bossard.com/global-en/eshop/products/fastening-technology/standard-fastening-elements/c/01.100/"
+    },
+    {
+      "id": 2395,
+      "before": [
+        1499,
+        "23",
+        1280,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          "steel_screw",
+          "23",
+          1280,
+          null,
+          1
+        ]
+      ],
+      "reason": "Move steel material to the steel-screw subtype. Manufacturer plastic screws disprove a steel-only generic screw. Source: https://www.baecker.eu/en/products/placo-tec/additional-information-plastic-screws"
+    },
+    {
+      "id": 2394,
+      "before": [
+        1498,
+        "23",
+        1280,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          "steel_nail",
+          "23",
+          1280,
+          null,
+          1
+        ]
+      ],
+      "reason": "Move steel material to the steel-nail subtype. Wooden nails disprove a steel-only generic nail. Source: https://www.beck-fastening.com/en/industries/carpentry"
+    },
+    {
+      "id": 8290,
+      "before": [
+        1498,
+        "23",
+        96,
+        1
+      ],
+      "reviewed_strength": 95,
+      "replacements": [],
+      "reason": "The generic nail-to-iron 95 percent has no reviewed statistical basis and does not cover the material-defined nail variants. Source: https://www.beck-fastening.com/en/industries/carpentry"
+    },
+    {
+      "id": 8678,
+      "before": [
+        140,
+        "61",
+        1498,
+        1
+      ],
+      "reviewed_strength": 95,
+      "replacements": [],
+      "reason": "A hammer and its nail are tool and fastener, not co-hyponyms in the tool family."
+    },
+    {
+      "id": 8679,
+      "before": [
+        1497,
+        "61",
+        1499,
+        1
+      ],
+      "reviewed_strength": 95,
+      "replacements": [],
+      "reason": "A screwdriver and the screw it drives are tool and fastener, not co-hyponyms in the tool family."
+    },
+    {
+      "id": 9671,
+      "before": [
+        1497,
+        "70",
+        491,
+        1
+      ],
+      "reviewed_strength": 90,
+      "replacements": [],
+      "reason": "IT build 491 denotes software development. A screwdriver does not causally produce this homonymous software process; preserve the IT record and its own hierarchy."
+    },
+    {
+      "id": 8095,
+      "before": [
+        30,
+        "61",
+        127,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The global exclusion of tools from dishware is contradicted by colander 1537, cooking spoon 24769 and measuring spoon 24771, each a positive descendant of both. Preserve these valid intersections; do not invent a set-overlap percentage. Source: https://www.oxo.com/blog/cooking-and-baking/how-to-measure-ingredients"
+    },
+    {
+      "id": 8023,
+      "before": [
+        19,
+        "61",
+        2631,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "Action and process are not disjoint in the selected ordinary meanings: material mixing 3473 already belongs to both, and driving a fastener is a deliberate action unfolding as a physical process. Reject the universal exclusion without forcing either entire branch under the other."
+    },
+    {
+      "id": 108,
+      "before": [
+        30,
+        "23",
+        23,
+        1
+      ],
+      "reviewed_strength": 60,
+      "replacements": [],
+      "reason": "The broad physical-tool-to-metal 60 percent lacks reviewed population evidence. Do not propagate an unsupported prevalence claim through wood, polymer and mixed-material tool families. Source: https://www.baecker.eu/en/products/placo-tec/additional-information-plastic-screws"
+    }
+  ],
+  "edges": [
+    {
+      "subject": "wooden_nail",
+      "kod": "23",
+      "object": 88,
+      "universum_id": 1,
+      "reason": "The selected nail is made from wood; no universal wood species or density is imposed. Source: https://www.beck-fastening.com/en/industries/carpentry"
+    },
+    {
+      "subject": "threaded_fastener",
+      "kod": "20",
+      "object": "screw_thread",
+      "universum_id": 1,
+      "reason": "A screw thread is a feature of threaded fastening hardware. Source: https://ntrs.nasa.gov/api/citations/19900009424/downloads/19900009424.pdf"
+    },
+    {
+      "subject": 1499,
+      "kod": "20",
+      "object": "external_thread",
+      "universum_id": 1,
+      "reason": "The selected screw or bolt fastener has an external thread. Source: https://ntrs.nasa.gov/api/citations/19900009424/downloads/19900009424.pdf"
+    },
+    {
+      "subject": 2401,
+      "kod": "20",
+      "object": "external_thread",
+      "universum_id": 1,
+      "reason": "The selected screw or bolt fastener has an external thread. Source: https://ntrs.nasa.gov/api/citations/19900009424/downloads/19900009424.pdf"
+    },
+    {
+      "subject": 2403,
+      "kod": "20",
+      "object": "external_thread",
+      "universum_id": 1,
+      "reason": "The selected screw or bolt fastener has an external thread. Source: https://ntrs.nasa.gov/api/citations/19900009424/downloads/19900009424.pdf"
+    },
+    {
+      "subject": 2402,
+      "kod": "20",
+      "object": "internal_thread",
+      "universum_id": 1,
+      "reason": "A threaded nut has an internal screw thread; a cap nut need not have a through-hole. Source: https://ntrs.nasa.gov/api/citations/19900009424/downloads/19900009424.pdf"
+    },
+    {
+      "subject": "phillips_driver",
+      "kod": "25",
+      "object": "phillips_screw",
+      "universum_id": 1,
+      "reason": "The tool is intended to operate on this compatible fastener form."
+    },
+    {
+      "subject": "hex_key",
+      "kod": "25",
+      "object": "hex_socket_screw",
+      "universum_id": 1,
+      "reason": "The tool is intended to operate on this compatible fastener form."
+    },
+    {
+      "subject": "hand_riveter",
+      "kod": "25",
+      "object": "pull_mandrel_rivet",
+      "universum_id": 1,
+      "reason": "The tool is intended to operate on this compatible fastener form."
+    },
+    {
+      "subject": "holding_device",
+      "kod": "21",
+      "object": 5057,
+      "universum_id": 1,
+      "reason": "The selected hardware or tool serves this physical holding or fastening process."
+    },
+    {
+      "subject": 5238,
+      "kod": "21",
+      "object": 9790,
+      "universum_id": 1,
+      "reason": "The selected hardware or tool serves this physical holding or fastening process."
+    },
+    {
+      "subject": 5239,
+      "kod": "21",
+      "object": 9790,
+      "universum_id": 1,
+      "reason": "The selected hardware or tool serves this physical holding or fastening process."
+    },
+    {
+      "subject": 2400,
+      "kod": "21",
+      "object": 3831,
+      "universum_id": 1,
+      "reason": "The selected hardware or tool serves this physical holding or fastening process."
+    },
+    {
+      "subject": "fastener_washer",
+      "kod": "21",
+      "object": 3831,
+      "universum_id": 1,
+      "reason": "The selected hardware or tool serves this physical holding or fastening process."
+    },
+    {
+      "subject": 1498,
+      "kod": "21",
+      "object": "nailing",
+      "universum_id": 1,
+      "reason": "The selected hardware or tool serves this physical holding or fastening process."
+    },
+    {
+      "subject": "rivet",
+      "kod": "21",
+      "object": 19608,
+      "universum_id": 1,
+      "reason": "The selected hardware or tool serves this physical holding or fastening process."
+    },
+    {
+      "subject": "hand_riveter",
+      "kod": "21",
+      "object": "pull_riveting",
+      "universum_id": 1,
+      "reason": "The selected hardware or tool serves this physical holding or fastening process."
+    },
+    {
+      "subject": 1497,
+      "kod": "21",
+      "object": "fastener_driving",
+      "universum_id": 1,
+      "reason": "The tool serves driving compatible threaded fasteners; no compatibility with all fasteners is asserted."
+    },
+    {
+      "subject": 1497,
+      "kod": "21",
+      "object": "fastener_unscrewing",
+      "universum_id": 1,
+      "reason": "The tool serves loosening or removing compatible threaded fasteners."
+    },
+    {
+      "subject": 1504,
+      "kod": "21",
+      "object": "fastener_driving",
+      "universum_id": 1,
+      "reason": "The tool serves driving compatible threaded fasteners; no compatibility with all fasteners is asserted."
+    },
+    {
+      "subject": 1504,
+      "kod": "21",
+      "object": "fastener_unscrewing",
+      "universum_id": 1,
+      "reason": "The tool serves loosening or removing compatible threaded fasteners."
+    },
+    {
+      "subject": 5244,
+      "kod": "21",
+      "object": "fastener_driving",
+      "universum_id": 1,
+      "reason": "The tool serves driving compatible threaded fasteners; no compatibility with all fasteners is asserted."
+    },
+    {
+      "subject": 5244,
+      "kod": "21",
+      "object": "fastener_unscrewing",
+      "universum_id": 1,
+      "reason": "The tool serves loosening or removing compatible threaded fasteners."
+    },
+    {
+      "subject": "fastener_driving",
+      "kod": "27",
+      "object": "threaded_fastener",
+      "universum_id": 1,
+      "reason": "The scoped process acts on the selected fastening hardware."
+    },
+    {
+      "subject": "fastener_unscrewing",
+      "kod": "27",
+      "object": "threaded_fastener",
+      "universum_id": 1,
+      "reason": "The scoped process acts on the selected fastening hardware."
+    },
+    {
+      "subject": 19608,
+      "kod": "27",
+      "object": "rivet",
+      "universum_id": 1,
+      "reason": "The scoped process acts on the selected fastening hardware."
+    },
+    {
+      "subject": "pull_riveting",
+      "kod": "27",
+      "object": "pull_mandrel_rivet",
+      "universum_id": 1,
+      "reason": "The scoped process acts on the selected fastening hardware."
+    },
+    {
+      "subject": "nailing",
+      "kod": "27",
+      "object": 1498,
+      "universum_id": 1,
+      "reason": "The scoped process acts on the selected fastening hardware."
+    },
+    {
+      "subject": "fastener_driving",
+      "kod": "14",
+      "object": 3831,
+      "universum_id": 1,
+      "reason": "Driving threaded fastening hardware is also a physical fastening activity."
+    },
+    {
+      "subject": 5238,
+      "kod": "14",
+      "object": "holding_device",
+      "universum_id": 1,
+      "reason": "The existing tool is also a device for holding objects. Retain its tool genus."
+    },
+    {
+      "subject": 5239,
+      "kod": "14",
+      "object": "holding_device",
+      "universum_id": 1,
+      "reason": "The existing tool is also a device for holding objects. Retain its tool genus."
+    }
+  ],
+  "checks": [
+    {
+      "subject": "threaded_fastener",
+      "kod": "14",
+      "object": 2400,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "screw_thread",
+      "kod": "14",
+      "object": 242,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "external_thread",
+      "kod": "14",
+      "object": "screw_thread",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "internal_thread",
+      "kod": "14",
+      "object": "screw_thread",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fastener_washer",
+      "kod": "14",
+      "object": 242,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "flat_washer",
+      "kod": "14",
+      "object": "fastener_washer",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "spring_washer",
+      "kod": "14",
+      "object": "fastener_washer",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "split_lock_washer",
+      "kod": "14",
+      "object": "spring_washer",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hex_nut",
+      "kod": "14",
+      "object": 2402,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "wing_nut",
+      "kod": "14",
+      "object": 2402,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "jam_nut",
+      "kod": "14",
+      "object": 2402,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "castellated_nut",
+      "kod": "14",
+      "object": 2402,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "set_screw",
+      "kod": "14",
+      "object": 1499,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "phillips_screw",
+      "kod": "14",
+      "object": 1499,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hex_socket_screw",
+      "kod": "14",
+      "object": 1499,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "steel_screw",
+      "kod": "14",
+      "object": 1499,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "steel_nail",
+      "kod": "14",
+      "object": 1498,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "wooden_nail",
+      "kod": "14",
+      "object": 1498,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rivet",
+      "kod": "14",
+      "object": 2400,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "solid_rivet",
+      "kod": "14",
+      "object": "rivet",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "blind_rivet",
+      "kod": "14",
+      "object": "rivet",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pull_mandrel_rivet",
+      "kod": "14",
+      "object": "blind_rivet",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "dowel_pin",
+      "kod": "14",
+      "object": 2400,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cotter_pin",
+      "kod": "14",
+      "object": 2400,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "holding_device",
+      "kod": "14",
+      "object": 3607,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "c_clamp",
+      "kod": "14",
+      "object": 5239,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "spring_clamp",
+      "kod": "14",
+      "object": 5239,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "bench_vise",
+      "kod": "14",
+      "object": 5238,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "phillips_driver",
+      "kod": "14",
+      "object": 1497,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "adjustable_wrench",
+      "kod": "14",
+      "object": 1504,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "box_wrench",
+      "kod": "14",
+      "object": 1504,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "socket_wrench",
+      "kod": "14",
+      "object": 1504,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hex_key",
+      "kod": "14",
+      "object": 1504,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fastener_driving",
+      "kod": "14",
+      "object": 1784,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fastener_unscrewing",
+      "kod": "14",
+      "object": 18296,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pull_riveting",
+      "kod": "14",
+      "object": 19608,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hand_riveter",
+      "kod": "14",
+      "object": 30,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "nailing",
+      "kod": "14",
+      "object": 3831,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 19608,
+      "kod": "14",
+      "object": 5017,
+      "present": false
+    },
+    {
+      "subject": 19608,
+      "kod": "14",
+      "object": 3831,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1499,
+      "kod": "14",
+      "object": 30,
+      "present": false
+    },
+    {
+      "subject": 1499,
+      "kod": "14",
+      "object": "threaded_fastener",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1498,
+      "kod": "14",
+      "object": 30,
+      "present": false
+    },
+    {
+      "subject": 1498,
+      "kod": "14",
+      "object": 2400,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2401,
+      "kod": "14",
+      "object": 2400,
+      "present": false
+    },
+    {
+      "subject": 2401,
+      "kod": "14",
+      "object": "threaded_fastener",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2402,
+      "kod": "14",
+      "object": 2400,
+      "present": false
+    },
+    {
+      "subject": 2402,
+      "kod": "14",
+      "object": "threaded_fastener",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2403,
+      "kod": "14",
+      "object": 2400,
+      "present": false
+    },
+    {
+      "subject": 2403,
+      "kod": "14",
+      "object": "threaded_fastener",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1499,
+      "kod": "23",
+      "object": 1280,
+      "present": false
+    },
+    {
+      "subject": "steel_screw",
+      "kod": "23",
+      "object": 1280,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1498,
+      "kod": "23",
+      "object": 1280,
+      "present": false
+    },
+    {
+      "subject": "steel_nail",
+      "kod": "23",
+      "object": 1280,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1498,
+      "kod": "23",
+      "object": 96,
+      "present": false
+    },
+    {
+      "subject": 140,
+      "kod": "61",
+      "object": 1498,
+      "present": false
+    },
+    {
+      "subject": 1497,
+      "kod": "61",
+      "object": 1499,
+      "present": false
+    },
+    {
+      "subject": 1497,
+      "kod": "70",
+      "object": 491,
+      "present": false
+    },
+    {
+      "subject": 30,
+      "kod": "61",
+      "object": 127,
+      "present": false
+    },
+    {
+      "subject": 19,
+      "kod": "61",
+      "object": 2631,
+      "present": false
+    },
+    {
+      "subject": 30,
+      "kod": "23",
+      "object": 23,
+      "present": false
+    },
+    {
+      "subject": "wooden_nail",
+      "kod": "23",
+      "object": 88,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "threaded_fastener",
+      "kod": "20",
+      "object": "screw_thread",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1499,
+      "kod": "20",
+      "object": "external_thread",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2401,
+      "kod": "20",
+      "object": "external_thread",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2403,
+      "kod": "20",
+      "object": "external_thread",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2402,
+      "kod": "20",
+      "object": "internal_thread",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "phillips_driver",
+      "kod": "25",
+      "object": "phillips_screw",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hex_key",
+      "kod": "25",
+      "object": "hex_socket_screw",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hand_riveter",
+      "kod": "25",
+      "object": "pull_mandrel_rivet",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "holding_device",
+      "kod": "21",
+      "object": 5057,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5238,
+      "kod": "21",
+      "object": 9790,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5239,
+      "kod": "21",
+      "object": 9790,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2400,
+      "kod": "21",
+      "object": 3831,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fastener_washer",
+      "kod": "21",
+      "object": 3831,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1498,
+      "kod": "21",
+      "object": "nailing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rivet",
+      "kod": "21",
+      "object": 19608,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "hand_riveter",
+      "kod": "21",
+      "object": "pull_riveting",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1497,
+      "kod": "21",
+      "object": "fastener_driving",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1497,
+      "kod": "21",
+      "object": "fastener_unscrewing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1504,
+      "kod": "21",
+      "object": "fastener_driving",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1504,
+      "kod": "21",
+      "object": "fastener_unscrewing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5244,
+      "kod": "21",
+      "object": "fastener_driving",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5244,
+      "kod": "21",
+      "object": "fastener_unscrewing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fastener_driving",
+      "kod": "27",
+      "object": "threaded_fastener",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fastener_unscrewing",
+      "kod": "27",
+      "object": "threaded_fastener",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 19608,
+      "kod": "27",
+      "object": "rivet",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pull_riveting",
+      "kod": "27",
+      "object": "pull_mandrel_rivet",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "nailing",
+      "kod": "27",
+      "object": 1498,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fastener_driving",
+      "kod": "14",
+      "object": 3831,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5238,
+      "kod": "14",
+      "object": "holding_device",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5239,
+      "kod": "14",
+      "object": "holding_device",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 30,
+      "kod": "61",
+      "object": 127,
+      "present": false
+    },
+    {
+      "subject": 1497,
+      "kod": "70",
+      "object": 491,
+      "present": false
+    },
+    {
+      "subject": 1498,
+      "kod": "23",
+      "object": 1280,
+      "present": false
+    },
+    {
+      "subject": 1499,
+      "kod": "23",
+      "object": 1280,
+      "present": false
+    },
+    {
+      "subject": "castellated_nut",
+      "kod": "20",
+      "object": "cotter_pin",
+      "present": false
+    },
+    {
+      "subject": "spring_clamp",
+      "kod": "20",
+      "object": "screw_thread",
+      "present": false
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "threaded_fastener",
+      "ancestor": 2400,
+      "present": true
+    },
+    {
+      "subject": "screw_thread",
+      "ancestor": 242,
+      "present": true
+    },
+    {
+      "subject": "external_thread",
+      "ancestor": "screw_thread",
+      "present": true
+    },
+    {
+      "subject": "internal_thread",
+      "ancestor": "screw_thread",
+      "present": true
+    },
+    {
+      "subject": "fastener_washer",
+      "ancestor": 242,
+      "present": true
+    },
+    {
+      "subject": "flat_washer",
+      "ancestor": "fastener_washer",
+      "present": true
+    },
+    {
+      "subject": "spring_washer",
+      "ancestor": "fastener_washer",
+      "present": true
+    },
+    {
+      "subject": "split_lock_washer",
+      "ancestor": "spring_washer",
+      "present": true
+    },
+    {
+      "subject": "hex_nut",
+      "ancestor": 2402,
+      "present": true
+    },
+    {
+      "subject": "wing_nut",
+      "ancestor": 2402,
+      "present": true
+    },
+    {
+      "subject": "jam_nut",
+      "ancestor": 2402,
+      "present": true
+    },
+    {
+      "subject": "castellated_nut",
+      "ancestor": 2402,
+      "present": true
+    },
+    {
+      "subject": "set_screw",
+      "ancestor": 1499,
+      "present": true
+    },
+    {
+      "subject": "phillips_screw",
+      "ancestor": 1499,
+      "present": true
+    },
+    {
+      "subject": "hex_socket_screw",
+      "ancestor": 1499,
+      "present": true
+    },
+    {
+      "subject": "steel_screw",
+      "ancestor": 1499,
+      "present": true
+    },
+    {
+      "subject": "steel_nail",
+      "ancestor": 1498,
+      "present": true
+    },
+    {
+      "subject": "wooden_nail",
+      "ancestor": 1498,
+      "present": true
+    },
+    {
+      "subject": "rivet",
+      "ancestor": 2400,
+      "present": true
+    },
+    {
+      "subject": "solid_rivet",
+      "ancestor": "rivet",
+      "present": true
+    },
+    {
+      "subject": "blind_rivet",
+      "ancestor": "rivet",
+      "present": true
+    },
+    {
+      "subject": "pull_mandrel_rivet",
+      "ancestor": "blind_rivet",
+      "present": true
+    },
+    {
+      "subject": "dowel_pin",
+      "ancestor": 2400,
+      "present": true
+    },
+    {
+      "subject": "cotter_pin",
+      "ancestor": 2400,
+      "present": true
+    },
+    {
+      "subject": "holding_device",
+      "ancestor": 3607,
+      "present": true
+    },
+    {
+      "subject": "c_clamp",
+      "ancestor": 5239,
+      "present": true
+    },
+    {
+      "subject": "spring_clamp",
+      "ancestor": 5239,
+      "present": true
+    },
+    {
+      "subject": "bench_vise",
+      "ancestor": 5238,
+      "present": true
+    },
+    {
+      "subject": "phillips_driver",
+      "ancestor": 1497,
+      "present": true
+    },
+    {
+      "subject": "adjustable_wrench",
+      "ancestor": 1504,
+      "present": true
+    },
+    {
+      "subject": "box_wrench",
+      "ancestor": 1504,
+      "present": true
+    },
+    {
+      "subject": "socket_wrench",
+      "ancestor": 1504,
+      "present": true
+    },
+    {
+      "subject": "hex_key",
+      "ancestor": 1504,
+      "present": true
+    },
+    {
+      "subject": "fastener_driving",
+      "ancestor": 1784,
+      "present": true
+    },
+    {
+      "subject": "fastener_unscrewing",
+      "ancestor": 18296,
+      "present": true
+    },
+    {
+      "subject": "pull_riveting",
+      "ancestor": 19608,
+      "present": true
+    },
+    {
+      "subject": "hand_riveter",
+      "ancestor": 30,
+      "present": true
+    },
+    {
+      "subject": "nailing",
+      "ancestor": 3831,
+      "present": true
+    },
+    {
+      "subject": 1499,
+      "ancestor": 2400,
+      "present": true
+    },
+    {
+      "subject": 1498,
+      "ancestor": 242,
+      "present": true
+    },
+    {
+      "subject": 2401,
+      "ancestor": 2400,
+      "present": true
+    },
+    {
+      "subject": 2402,
+      "ancestor": 2400,
+      "present": true
+    },
+    {
+      "subject": 2403,
+      "ancestor": 2400,
+      "present": true
+    },
+    {
+      "subject": 5238,
+      "ancestor": 30,
+      "present": true
+    },
+    {
+      "subject": 5239,
+      "ancestor": 30,
+      "present": true
+    },
+    {
+      "subject": 18296,
+      "ancestor": 5017,
+      "present": true
+    },
+    {
+      "subject": 19608,
+      "ancestor": 5017,
+      "present": true
+    },
+    {
+      "subject": 24771,
+      "ancestor": 30,
+      "present": true
+    },
+    {
+      "subject": 24771,
+      "ancestor": 127,
+      "present": true
+    },
+    {
+      "subject": 1537,
+      "ancestor": 30,
+      "present": true
+    },
+    {
+      "subject": 1537,
+      "ancestor": 127,
+      "present": true
+    },
+    {
+      "subject": "fastener_driving",
+      "ancestor": 19,
+      "present": true
+    },
+    {
+      "subject": "fastener_driving",
+      "ancestor": 2631,
+      "present": true
+    },
+    {
+      "subject": 1499,
+      "ancestor": 30,
+      "present": false
+    },
+    {
+      "subject": 1498,
+      "ancestor": 30,
+      "present": false
+    },
+    {
+      "subject": "screw_thread",
+      "ancestor": 2090,
+      "present": false
+    },
+    {
+      "subject": "screw_thread",
+      "ancestor": 576,
+      "present": false
+    },
+    {
+      "subject": "wing_nut",
+      "ancestor": 3210,
+      "present": false
+    },
+    {
+      "subject": "fastener_washer",
+      "ancestor": 5439,
+      "present": false
+    },
+    {
+      "subject": "blind_rivet",
+      "ancestor": "solid_rivet",
+      "present": false
+    },
+    {
+      "subject": "blind_rivet",
+      "ancestor": "pull_mandrel_rivet",
+      "present": false
+    },
+    {
+      "subject": "hand_riveter",
+      "ancestor": "rivet",
+      "present": false
+    },
+    {
+      "subject": "holding_device",
+      "ancestor": 3831,
+      "present": false
+    },
+    {
+      "subject": "fastener_driving",
+      "ancestor": "threaded_fastener",
+      "present": false
+    },
+    {
+      "subject": "fastener_unscrewing",
+      "ancestor": "threaded_fastener",
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": 30,
+      "term": "tool (physical)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 30,
+      "term": "tool",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 30,
+      "term": "tool (hand tool)",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 2400,
+      "term": "mechanical fastener",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2400,
+      "term": "fastener (hardware)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2400,
+      "term": "крепёжное изделие",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1498,
+      "term": "nail (fastener)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1499,
+      "term": "screw (fastener)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2401,
+      "term": "wood screw",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2401,
+      "term": "screw (wood fastener)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2402,
+      "term": "threaded nut",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2403,
+      "term": "bolt (fastener)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1504,
+      "term": "spanner",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1504,
+      "term": "wrench (tool)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5238,
+      "term": "vice (holding tool)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5239,
+      "term": "workholding clamp",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5244,
+      "term": "power screwdriver",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5244,
+      "term": "powered screwdriver",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "threaded_fastener",
+      "term": "резьбовой крепёж",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "threaded_fastener",
+      "term": "threaded fastener",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "screw_thread",
+      "term": "винтовая резьба",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "screw_thread",
+      "term": "screw thread",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "screw_thread",
+      "term": "thread (mechanical)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "external_thread",
+      "term": "наружная резьба",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "external_thread",
+      "term": "external thread",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "internal_thread",
+      "term": "внутренняя резьба",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "internal_thread",
+      "term": "internal thread",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fastener_washer",
+      "term": "шайба для крепёжного соединения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fastener_washer",
+      "term": "washer (fastening hardware)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fastener_washer",
+      "term": "fastener washer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fastener_washer",
+      "term": "крепёжная шайба",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "flat_washer",
+      "term": "плоская шайба",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "flat_washer",
+      "term": "flat washer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "flat_washer",
+      "term": "plain washer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "spring_washer",
+      "term": "пружинная шайба",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "spring_washer",
+      "term": "spring washer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "split_lock_washer",
+      "term": "разрезная пружинная шайба",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "split_lock_washer",
+      "term": "split lock washer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "split_lock_washer",
+      "term": "split spring washer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hex_nut",
+      "term": "шестигранная гайка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "hex_nut",
+      "term": "hex nut",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hex_nut",
+      "term": "hexagon nut",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "wing_nut",
+      "term": "гайка-барашек",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "wing_nut",
+      "term": "wing nut",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "wing_nut",
+      "term": "butterfly nut",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "jam_nut",
+      "term": "контргайка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "jam_nut",
+      "term": "jam nut",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "jam_nut",
+      "term": "locknut (jam nut)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "castellated_nut",
+      "term": "корончатая гайка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "castellated_nut",
+      "term": "castellated nut",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "castellated_nut",
+      "term": "castle nut",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "set_screw",
+      "term": "установочный винт",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "set_screw",
+      "term": "set screw",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "set_screw",
+      "term": "setscrew (securing a part)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "phillips_screw",
+      "term": "винт со шлицем Phillips",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "phillips_screw",
+      "term": "Phillips screw",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hex_socket_screw",
+      "term": "винт с внутренним шестигранником",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "hex_socket_screw",
+      "term": "hex socket screw",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hex_socket_screw",
+      "term": "Allen screw",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "steel_screw",
+      "term": "стальной винт",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "steel_screw",
+      "term": "steel screw",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "steel_nail",
+      "term": "стальной гвоздь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "steel_nail",
+      "term": "steel nail",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "wooden_nail",
+      "term": "деревянный гвоздь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "wooden_nail",
+      "term": "wooden nail",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rivet",
+      "term": "заклёпка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rivet",
+      "term": "rivet (fastener)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rivet",
+      "term": "rivet",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "solid_rivet",
+      "term": "сплошная заклёпка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "solid_rivet",
+      "term": "solid rivet",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "solid_rivet",
+      "term": "solid-shank rivet",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "blind_rivet",
+      "term": "заклёпка для односторонней установки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "blind_rivet",
+      "term": "blind rivet",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pull_mandrel_rivet",
+      "term": "вытяжная заклёпка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pull_mandrel_rivet",
+      "term": "pull-mandrel blind rivet",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pull_mandrel_rivet",
+      "term": "pull-type blind rivet",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "dowel_pin",
+      "term": "установочный штифт",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "dowel_pin",
+      "term": "locating dowel pin",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cotter_pin",
+      "term": "шплинт",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "cotter_pin",
+      "term": "split cotter pin",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cotter_pin",
+      "term": "cotter pin",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cotter_pin",
+      "term": "split pin (retainer)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "holding_device",
+      "term": "удерживающее устройство",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "holding_device",
+      "term": "holding device",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "c_clamp",
+      "term": "C-образная струбцина",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "c_clamp",
+      "term": "C-clamp",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "spring_clamp",
+      "term": "пружинная струбцина",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "spring_clamp",
+      "term": "spring clamp",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "bench_vise",
+      "term": "верстачные тиски",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "bench_vise",
+      "term": "bench vise",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "bench_vise",
+      "term": "bench vice",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "phillips_driver",
+      "term": "отвёртка Phillips",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "phillips_driver",
+      "term": "Phillips screwdriver",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "adjustable_wrench",
+      "term": "разводной ключ",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "adjustable_wrench",
+      "term": "adjustable wrench",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "adjustable_wrench",
+      "term": "adjustable spanner",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "box_wrench",
+      "term": "накидной ключ",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "box_wrench",
+      "term": "box-end wrench",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "box_wrench",
+      "term": "ring spanner",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "box_wrench",
+      "term": "box wrench",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "socket_wrench",
+      "term": "торцевой ключ",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "socket_wrench",
+      "term": "socket wrench",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hex_key",
+      "term": "шестигранный ключ",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "hex_key",
+      "term": "hex key",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hex_key",
+      "term": "Allen key",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hex_key",
+      "term": "Allen wrench",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fastener_driving",
+      "term": "завинчивание резьбового крепежа",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fastener_driving",
+      "term": "driving threaded fasteners",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fastener_unscrewing",
+      "term": "отвинчивание резьбового крепежа",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fastener_unscrewing",
+      "term": "unscrewing threaded fasteners",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pull_riveting",
+      "term": "установка вытяжных заклёпок",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pull_riveting",
+      "term": "pull-mandrel riveting",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hand_riveter",
+      "term": "ручной заклёпочник для вытяжных заклёпок",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "hand_riveter",
+      "term": "hand tool for pull-mandrel rivets",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "hand_riveter",
+      "term": "hand blind riveter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "nailing",
+      "term": "крепление гвоздями",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "nailing",
+      "term": "nailing (fastening)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3831,
+      "term": "закрепление (физическое действие)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 3831,
+      "term": "fastening (physical action)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3831,
+      "term": "securing (physical)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3831,
+      "term": "закрепление",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 18296,
+      "term": "отвинчивание",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 18296,
+      "term": "unscrewing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 18296,
+      "term": "to unscrew",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 18296,
+      "term": "отвинтить",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 18296,
+      "term": "отвинчивать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 18296,
+      "term": "отвинтение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 18296,
+      "term": "отвинтиение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 18296,
+      "term": "ОТВИНТИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 19608,
+      "term": "клёпка (соединение деталей)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 19608,
+      "term": "riveting",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 19608,
+      "term": "riveting (fastening)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 19608,
+      "term": "клёпка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 19608,
+      "term": "клепать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 19608,
+      "term": "клепаание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 19608,
+      "term": "КЛЕПАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 1784,
+      "term": "screwing (threaded rotation)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1784,
+      "term": "screw driving",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1784,
+      "term": "завинчивать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1784,
+      "term": "завинчиваание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 9790,
+      "term": "clamping (physical)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 9790,
+      "term": "зажимать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 9790,
+      "term": "зажимаание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 1782,
+      "term": "hammering (physical)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1782,
+      "term": "забивать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1782,
+      "term": "забиваание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 1784,
+      "term": "ЗАВИНЧИВАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 9790,
+      "term": "ЗАЖИМАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 1782,
+      "term": "ЗАБИВАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "wing_nut",
+      "term": "wing screw",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "hand_riveter",
+      "term": "riveting machine",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "fastener_washer",
+      "term": "washing machine",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "screw_thread",
+      "term": "thread",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

@@ -1,0 +1,2557 @@
+{
+  "source": "quality-20261009-q30",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Bakeware, specialised kitchen tools and food-preparation actions; opener intersections, instrument/patient direction and malformed inherited action terms.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "pans": "https://www.kingarthurbaking.com/blog/2023/06/05/your-complete-guide-to-baking-pans",
+      "garlic": "https://www.oxo.com/shop/kitchenware/oxo-good-grips-garlic-press.html",
+      "opener": "https://www.oxo.com/blog/coffee-and-beverages/which-wine-opener-is-right-for-you",
+      "knives": "https://www.oxo.com/blog/cooking-and-baking/how-to-choose-a-kitchen-knife",
+      "pizza": "https://www.oxo.com/4-in-pizza-wheel.html",
+      "brush": "https://www.oxouk.com/products/silicone-pastry-brush/",
+      "piping": "https://www.kingarthurbaking.com/blog/2023/01/26/how-to-fill-piping-bag",
+      "piping_ru": "https://old.rudn-sochi.ru/sveden/files/Progr_PM.01_Organizaciya_processa_prigotovleniya_i_prigotovlenie_polufabrikatov_dlya_sloghnoy_kulinarnoy_produkcii_26.04.2021.pdf",
+      "spelling": "https://gramota.ru/storage/public/normdicts/orfograficheskij_slovar.pdf"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet; CC BY 4.0 and Princeton notices remain in docs/quality/2026-10-09-q11.md#sources-and-reuse. King Arthur Baking, OXO and a culinary-training curriculum support selected tool and action distinctions. Source definitions are not copied; scope restrictions and graph mappings are editorial adaptations.",
+    "existing_cohort": [
+      24412,
+      24761,
+      24762,
+      5255,
+      2391,
+      2392,
+      1786,
+      10959,
+      229,
+      1804,
+      1805,
+      142,
+      2394,
+      5258,
+      24777,
+      24778,
+      24785,
+      1507,
+      2340,
+      1531
+    ],
+    "context_policy": "All new concepts and assertions use U1 and unspecified strength. Shape, removable-wall construction and purpose are separate axes. A combined opener has two supported genera. Preserve earlier kitchen families and their direct genus checks.",
+    "sense_decisions": [
+      {
+        "concept": "baking_mould",
+        "synset": "oewn-92459603-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A baking vessel that gives food its form; exclude non-food moulds."
+      },
+      {
+        "concept": "loaf_pan",
+        "synset": null,
+        "decision": "add",
+        "alignment": "shape and use restriction",
+        "scope": "An oblong baking mould for loaf-shaped food, including bread and cakes."
+      },
+      {
+        "concept": "muffin_pan",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A baking mould with individual muffin wells, without a fixed well count."
+      },
+      {
+        "concept": "springform_pan",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A baking mould with a removable locking sidewall."
+      },
+      {
+        "concept": "round_mould",
+        "synset": null,
+        "decision": "add",
+        "alignment": "shape restriction",
+        "scope": "A baking mould restricted by round shape."
+      },
+      {
+        "concept": "round_springform",
+        "synset": null,
+        "decision": "add",
+        "alignment": "shape/construction intersection",
+        "scope": "The intersection of round shape and removable locking sidewall."
+      },
+      {
+        "concept": "roasting_pan",
+        "synset": "oewn-04104854-n",
+        "decision": "add",
+        "alignment": "selected vessel sense",
+        "scope": "The oven-roasting vessel, excluding the cook and food senses of roaster."
+      },
+      {
+        "concept": "cookie_sheet",
+        "synset": "oewn-03106447-n",
+        "decision": "add",
+        "alignment": "purpose restriction of reused tray",
+        "scope": "A baking tray intended for cookies. Retain the existing broader tray rather than importing the whole synonym cluster."
+      },
+      {
+        "concept": "garlic_press",
+        "synset": "oewn-03423825-n",
+        "decision": "add",
+        "alignment": "corrected dictionary scope",
+        "scope": "A utensil for crushing garlic; correct the dictionary restriction to extracting juice."
+      },
+      {
+        "concept": "apple_corer",
+        "synset": "oewn-03113410-n",
+        "decision": "add",
+        "alignment": "fruit-specific tool",
+        "scope": "A kitchen tool for removing an apple core. Do not equate coring with peeling."
+      },
+      {
+        "concept": "manual_can_opener",
+        "synset": "oewn-02955021-n",
+        "decision": "add",
+        "alignment": "manual food-tool restriction",
+        "scope": "The hand-operated food-can opening device. The existing glass jar is not its generic patient."
+      },
+      {
+        "concept": "crown_cap_opener",
+        "synset": null,
+        "decision": "add",
+        "alignment": "closure-specific opener",
+        "scope": "A bottle-opening tool for crown caps. The general bottle-opening family also includes corkscrews."
+      },
+      {
+        "concept": "combined_opener",
+        "synset": null,
+        "decision": "add",
+        "alignment": "supported tool intersection",
+        "scope": "A combined tool with both cork-extraction and crown-cap-opening functions."
+      },
+      {
+        "concept": "kitchen_knife",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A knife intended for food preparation."
+      },
+      {
+        "concept": "paring_knife",
+        "synset": "oewn-03895790-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A small kitchen knife used for peeling and trimming food. Keep it distinct from the separate vegetable-peeler device."
+      },
+      {
+        "concept": "bread_knife",
+        "synset": "oewn-02897203-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A kitchen knife intended to slice bread; a blade material is not specified."
+      },
+      {
+        "concept": "chef_knife",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A general-purpose kitchen knife for food cutting."
+      },
+      {
+        "concept": "cookie_cutter",
+        "synset": "oewn-03106168-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A tool for cutting cookie shapes from dough; exclude the figurative standardized-person meaning."
+      },
+      {
+        "concept": "pizza_wheel",
+        "synset": null,
+        "decision": "add",
+        "alignment": "construction-specific cutter",
+        "scope": "A rolling-blade utensil for cutting pizza, narrower than all pizza-cutting tools."
+      },
+      {
+        "concept": "pastry_brush",
+        "synset": null,
+        "decision": "add",
+        "alignment": "food-specific brush",
+        "scope": "A food-preparation brush for applying a surface coating."
+      },
+      {
+        "concept": "pastry_bag",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A bag used to pipe a culinary mixture."
+      },
+      {
+        "concept": "bench_scraper",
+        "synset": null,
+        "decision": "add",
+        "alignment": "selected kitchen scraper",
+        "scope": "The pastry-work scraper used on a work surface, excluding bowl scrapers, building tools and paint spatulas."
+      },
+      {
+        "concept": "apple_coring",
+        "synset": "oewn-03113410-n",
+        "decision": "add",
+        "alignment": "action from tool purpose",
+        "scope": "The food-preparation action that removes an apple core; distinguish the action from its tool."
+      },
+      {
+        "concept": "food_coating",
+        "synset": null,
+        "decision": "add",
+        "alignment": "food restriction of reused action",
+        "scope": "Applying a coating to food; a restricted food-preparation sense of the broader smearing action."
+      },
+      {
+        "concept": "food_piping",
+        "synset": null,
+        "decision": "add",
+        "alignment": "selected culinary action",
+        "scope": "Extruding a culinary mixture through a pastry-bag opening for shaping or decoration. Exclude fluid transport through plumbing."
+      },
+      {
+        "concept": "cookie_cutting",
+        "synset": "oewn-03106168-n",
+        "decision": "add",
+        "alignment": "purpose-specific food cutting",
+        "scope": "The cutting of cookie shapes from dough before baking, distinct from cutting a baked cookie."
+      },
+      {
+        "concept": 5255,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the broader baking tray; do not import a second general tray from the cookie-sheet synset."
+      },
+      {
+        "concept": 1507,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The existing brush has drawing/painting context. A broader brush family requires separate review before reparenting the pastry brush."
+      },
+      {
+        "concept": 2340,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The existing spatula is not automatically identical to a bench scraper or food-turning utensil."
+      },
+      {
+        "concept": 1531,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The existing jar has glass-material context and is not reused as a generic metal food can."
+      },
+      {
+        "concept": 2394,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Preserve the reviewed vegetable-peeler device and its purpose; the paring knife receives no peeler genus."
+      },
+      {
+        "concept": 142,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Inherited steel and iron assertions and knife/tool exclusions remain queued for material and functional-tool review."
+      },
+      {
+        "concept": 229,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The inherited scissors dependency and other old quantified targets remain queued; only the reversed knife-patient assertion is rejected."
+      },
+      {
+        "concept": 1804,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The remaining peeling/slicing coordinate assertion is retained pending a distinct review of action overlap."
+      },
+      {
+        "concept": "garlic_press",
+        "synset": null,
+        "decision": "retain attested Russian alias",
+        "alignment": "reviewed sense",
+        "scope": "The spelling чеснокодавилка is attested in the normative orthographic dictionary: https://gramota.ru/storage/public/normdicts/orfograficheskij_slovar.pdf"
+      }
+    ],
+    "limits": "No brands, prices, preferred materials, dimensions, well counts, recipes or operating instructions are imported. Existing painting-brush, generic spatula and glass-jar senses are not reused as broader kitchen-brush, pastry-scraper or food-can concepts. Knife materials, generic cutting dependencies, inherited food-patient specificity and the peeling/slicing coordinate relation require separate review. No application test suites.",
+    "exclusion_review": {
+      "context": "U1 positive genus witnesses",
+      "before_conflicting_edges": 6,
+      "unsupported_exclusion_removed": [
+        4425
+      ],
+      "decision": "Reject the opener/corkscrew exclusion before adding the supported subtype and intersection. Add no exclusions and preserve all explicit negations.",
+      "remaining_candidates_expected": 6
+    },
+    "new_term_collisions": [],
+    "collision_decision": "No exact normalized cross-language collision is accepted. Existing bakeware, baking tray, knife, bottle opener, corkscrew and food actions are reused. New pan and tool restrictions do not import entire polysemous dictionary clusters.",
+    "refreshed_comparison": {
+      "baseline": "Q29",
+      "existing_concepts": 13145,
+      "existing_terms": 37048,
+      "synsets_with_exact_en_candidate": 15636,
+      "synsets_without_exact_en_candidate": 91883,
+      "existing_concepts_with_dictionary_candidate": 4209,
+      "caveat": "Normalized spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "baking_mould",
+      "name": "форма для выпечки",
+      "parent": 24762,
+      "universum_id": 1,
+      "terms": [
+        [
+          "форма для выпечки",
+          "ru"
+        ],
+        [
+          "baking mould",
+          "en"
+        ],
+        [
+          "baking mold",
+          "en"
+        ],
+        [
+          "baking form",
+          "en"
+        ]
+      ],
+      "reason": "A baking vessel that gives food its form; exclude non-food moulds. OEWN 2025: oewn-92459603-n."
+    },
+    {
+      "key": "loaf_pan",
+      "name": "прямоугольная форма для выпечки хлеба и кексов",
+      "parent": "baking_mould",
+      "universum_id": 1,
+      "terms": [
+        [
+          "прямоугольная форма для выпечки хлеба и кексов",
+          "ru"
+        ],
+        [
+          "loaf pan",
+          "en"
+        ],
+        [
+          "loaf tin",
+          "en"
+        ]
+      ],
+      "reason": "An oblong baking mould for loaf-shaped food, including bread and cakes. Source: https://www.kingarthurbaking.com/blog/2023/06/05/your-complete-guide-to-baking-pans"
+    },
+    {
+      "key": "muffin_pan",
+      "name": "форма для выпечки маффинов",
+      "parent": "baking_mould",
+      "universum_id": 1,
+      "terms": [
+        [
+          "форма для выпечки маффинов",
+          "ru"
+        ],
+        [
+          "muffin pan",
+          "en"
+        ],
+        [
+          "muffin tin",
+          "en"
+        ]
+      ],
+      "reason": "A baking mould with individual muffin wells, without a fixed well count. Source: https://www.kingarthurbaking.com/blog/2023/06/05/your-complete-guide-to-baking-pans"
+    },
+    {
+      "key": "springform_pan",
+      "name": "разъёмная форма для выпечки",
+      "parent": "baking_mould",
+      "universum_id": 1,
+      "terms": [
+        [
+          "разъёмная форма для выпечки",
+          "ru"
+        ],
+        [
+          "springform pan",
+          "en"
+        ]
+      ],
+      "reason": "A baking mould with a removable locking sidewall. Source: https://www.kingarthurbaking.com/blog/2023/06/05/your-complete-guide-to-baking-pans"
+    },
+    {
+      "key": "round_mould",
+      "name": "круглая форма для выпечки",
+      "parent": "baking_mould",
+      "universum_id": 1,
+      "terms": [
+        [
+          "круглая форма для выпечки",
+          "ru"
+        ],
+        [
+          "round baking mould",
+          "en"
+        ],
+        [
+          "round baking mold",
+          "en"
+        ]
+      ],
+      "reason": "A baking mould restricted by round shape. Source: https://www.kingarthurbaking.com/blog/2023/06/05/your-complete-guide-to-baking-pans"
+    },
+    {
+      "key": "round_springform",
+      "name": "круглая разъёмная форма для выпечки",
+      "parent": "round_mould",
+      "universum_id": 1,
+      "terms": [
+        [
+          "круглая разъёмная форма для выпечки",
+          "ru"
+        ],
+        [
+          "round springform pan",
+          "en"
+        ]
+      ],
+      "reason": "The intersection of round shape and removable locking sidewall. Source: https://www.kingarthurbaking.com/blog/2023/06/05/your-complete-guide-to-baking-pans"
+    },
+    {
+      "key": "roasting_pan",
+      "name": "жаровня для духовки",
+      "parent": 24762,
+      "universum_id": 1,
+      "terms": [
+        [
+          "жаровня для духовки",
+          "ru"
+        ],
+        [
+          "roasting pan",
+          "en"
+        ],
+        [
+          "roaster (roasting pan)",
+          "en"
+        ]
+      ],
+      "reason": "The oven-roasting vessel, excluding the cook and food senses of roaster. OEWN 2025: oewn-04104854-n."
+    },
+    {
+      "key": "cookie_sheet",
+      "name": "противень для печенья",
+      "parent": 5255,
+      "universum_id": 1,
+      "terms": [
+        [
+          "противень для печенья",
+          "ru"
+        ],
+        [
+          "cookie sheet",
+          "en"
+        ]
+      ],
+      "reason": "A baking tray intended for cookies. Retain the existing broader tray rather than importing the whole synonym cluster. OEWN 2025: oewn-03106447-n."
+    },
+    {
+      "key": "garlic_press",
+      "name": "пресс для чеснока",
+      "parent": 24412,
+      "universum_id": 1,
+      "terms": [
+        [
+          "пресс для чеснока",
+          "ru"
+        ],
+        [
+          "garlic press",
+          "en"
+        ],
+        [
+          "чеснокодавилка",
+          "ru"
+        ]
+      ],
+      "reason": "A utensil for crushing garlic; correct the dictionary restriction to extracting juice. OEWN 2025: oewn-03423825-n. Source: https://www.oxo.com/shop/kitchenware/oxo-good-grips-garlic-press.html"
+    },
+    {
+      "key": "apple_corer",
+      "name": "приспособление для удаления сердцевины яблок",
+      "parent": 24412,
+      "universum_id": 1,
+      "terms": [
+        [
+          "приспособление для удаления сердцевины яблок",
+          "ru"
+        ],
+        [
+          "apple corer",
+          "en"
+        ]
+      ],
+      "reason": "A kitchen tool for removing an apple core. Do not equate coring with peeling. OEWN 2025: oewn-03113410-n."
+    },
+    {
+      "key": "manual_can_opener",
+      "name": "ручной консервный нож",
+      "parent": 24412,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ручной консервный нож",
+          "ru"
+        ],
+        [
+          "manual can opener",
+          "en"
+        ],
+        [
+          "manual tin opener",
+          "en"
+        ]
+      ],
+      "reason": "The hand-operated food-can opening device. The existing glass jar is not its generic patient. OEWN 2025: oewn-02955021-n."
+    },
+    {
+      "key": "crown_cap_opener",
+      "name": "открывалка для кроненпробок",
+      "parent": 2391,
+      "universum_id": 1,
+      "terms": [
+        [
+          "открывалка для кроненпробок",
+          "ru"
+        ],
+        [
+          "crown cap opener",
+          "en"
+        ]
+      ],
+      "reason": "A bottle-opening tool for crown caps. The general bottle-opening family also includes corkscrews. Source: https://www.oxo.com/blog/coffee-and-beverages/which-wine-opener-is-right-for-you"
+    },
+    {
+      "key": "combined_opener",
+      "name": "штопор с открывалкой для кроненпробок",
+      "parent": 2392,
+      "universum_id": 1,
+      "terms": [
+        [
+          "штопор с открывалкой для кроненпробок",
+          "ru"
+        ],
+        [
+          "corkscrew with crown cap opener",
+          "en"
+        ]
+      ],
+      "reason": "A combined tool with both cork-extraction and crown-cap-opening functions. Source: https://www.oxo.com/blog/coffee-and-beverages/which-wine-opener-is-right-for-you"
+    },
+    {
+      "key": "kitchen_knife",
+      "name": "кухонный нож",
+      "parent": 142,
+      "universum_id": 1,
+      "terms": [
+        [
+          "кухонный нож",
+          "ru"
+        ],
+        [
+          "kitchen knife",
+          "en"
+        ]
+      ],
+      "reason": "A knife intended for food preparation. Source: https://www.oxo.com/blog/cooking-and-baking/how-to-choose-a-kitchen-knife"
+    },
+    {
+      "key": "paring_knife",
+      "name": "нож для чистки овощей и фруктов",
+      "parent": "kitchen_knife",
+      "universum_id": 1,
+      "terms": [
+        [
+          "нож для чистки овощей и фруктов",
+          "ru"
+        ],
+        [
+          "paring knife",
+          "en"
+        ]
+      ],
+      "reason": "A small kitchen knife used for peeling and trimming food. Keep it distinct from the separate vegetable-peeler device. OEWN 2025: oewn-03895790-n."
+    },
+    {
+      "key": "bread_knife",
+      "name": "хлебный нож",
+      "parent": "kitchen_knife",
+      "universum_id": 1,
+      "terms": [
+        [
+          "хлебный нож",
+          "ru"
+        ],
+        [
+          "bread knife",
+          "en"
+        ],
+        [
+          "нож для хлеба",
+          "ru"
+        ]
+      ],
+      "reason": "A kitchen knife intended to slice bread; a blade material is not specified. OEWN 2025: oewn-02897203-n."
+    },
+    {
+      "key": "chef_knife",
+      "name": "поварской нож",
+      "parent": "kitchen_knife",
+      "universum_id": 1,
+      "terms": [
+        [
+          "поварской нож",
+          "ru"
+        ],
+        [
+          "chef's knife",
+          "en"
+        ],
+        [
+          "chef knife",
+          "en"
+        ]
+      ],
+      "reason": "A general-purpose kitchen knife for food cutting. Source: https://www.oxo.com/blog/cooking-and-baking/how-to-choose-a-kitchen-knife"
+    },
+    {
+      "key": "cookie_cutter",
+      "name": "вырубка для печенья",
+      "parent": 24412,
+      "universum_id": 1,
+      "terms": [
+        [
+          "вырубка для печенья",
+          "ru"
+        ],
+        [
+          "cookie cutter",
+          "en"
+        ],
+        [
+          "формочка для вырезания печенья",
+          "ru"
+        ]
+      ],
+      "reason": "A tool for cutting cookie shapes from dough; exclude the figurative standardized-person meaning. OEWN 2025: oewn-03106168-n."
+    },
+    {
+      "key": "pizza_wheel",
+      "name": "роликовый нож для пиццы",
+      "parent": 24412,
+      "universum_id": 1,
+      "terms": [
+        [
+          "роликовый нож для пиццы",
+          "ru"
+        ],
+        [
+          "pizza wheel",
+          "en"
+        ],
+        [
+          "pizza cutter wheel",
+          "en"
+        ]
+      ],
+      "reason": "A rolling-blade utensil for cutting pizza, narrower than all pizza-cutting tools. Source: https://www.oxo.com/4-in-pizza-wheel.html"
+    },
+    {
+      "key": "pastry_brush",
+      "name": "кондитерская кисть",
+      "parent": 24412,
+      "universum_id": 1,
+      "terms": [
+        [
+          "кондитерская кисть",
+          "ru"
+        ],
+        [
+          "pastry brush",
+          "en"
+        ],
+        [
+          "кулинарная кисть",
+          "ru"
+        ]
+      ],
+      "reason": "A food-preparation brush for applying a surface coating. Source: https://www.oxouk.com/products/silicone-pastry-brush/"
+    },
+    {
+      "key": "pastry_bag",
+      "name": "кондитерский мешок",
+      "parent": 24412,
+      "universum_id": 1,
+      "terms": [
+        [
+          "кондитерский мешок",
+          "ru"
+        ],
+        [
+          "pastry bag",
+          "en"
+        ],
+        [
+          "piping bag",
+          "en"
+        ]
+      ],
+      "reason": "A bag used to pipe a culinary mixture. Source: https://www.kingarthurbaking.com/blog/2023/01/26/how-to-fill-piping-bag"
+    },
+    {
+      "key": "bench_scraper",
+      "name": "скребок для теста (для работы на столе)",
+      "parent": 24412,
+      "universum_id": 1,
+      "terms": [
+        [
+          "скребок для теста (для работы на столе)",
+          "ru"
+        ],
+        [
+          "bench scraper",
+          "en"
+        ],
+        [
+          "bench knife (pastry tool)",
+          "en"
+        ]
+      ],
+      "reason": "The pastry-work scraper used on a work surface, excluding bowl scrapers, building tools and paint spatulas. Source: https://www.kingarthurbaking.com/blog/2023/01/26/how-to-fill-piping-bag"
+    },
+    {
+      "key": "apple_coring",
+      "name": "удаление сердцевины яблока",
+      "parent": 256,
+      "universum_id": 1,
+      "terms": [
+        [
+          "удаление сердцевины яблока",
+          "ru"
+        ],
+        [
+          "apple coring",
+          "en"
+        ]
+      ],
+      "reason": "The food-preparation action that removes an apple core; distinguish the action from its tool. OEWN 2025: oewn-03113410-n."
+    },
+    {
+      "key": "food_coating",
+      "name": "смазывание поверхности пищи",
+      "parent": 10959,
+      "universum_id": 1,
+      "terms": [
+        [
+          "смазывание поверхности пищи",
+          "ru"
+        ],
+        [
+          "coating a food surface",
+          "en"
+        ]
+      ],
+      "reason": "Applying a coating to food; a restricted food-preparation sense of the broader smearing action. Source: https://www.oxouk.com/products/silicone-pastry-brush/"
+    },
+    {
+      "key": "food_piping",
+      "name": "отсаживание кондитерской массы",
+      "parent": 256,
+      "universum_id": 1,
+      "terms": [
+        [
+          "отсаживание кондитерской массы",
+          "ru"
+        ],
+        [
+          "piping a pastry mixture",
+          "en"
+        ],
+        [
+          "piping (pastry preparation)",
+          "en"
+        ]
+      ],
+      "reason": "Extruding a culinary mixture through a pastry-bag opening for shaping or decoration. Exclude fluid transport through plumbing. Source: https://www.kingarthurbaking.com/blog/2023/01/26/how-to-fill-piping-bag"
+    },
+    {
+      "key": "cookie_cutting",
+      "name": "вырезание печенья из теста",
+      "parent": 256,
+      "universum_id": 1,
+      "terms": [
+        [
+          "вырезание печенья из теста",
+          "ru"
+        ],
+        [
+          "cutting cookie shapes from dough",
+          "en"
+        ]
+      ],
+      "reason": "The cutting of cookie shapes from dough before baking, distinct from cutting a baked cookie. OEWN 2025: oewn-03106168-n."
+    }
+  ],
+  "renames": [
+    {
+      "id": 2391,
+      "before": "открывалка",
+      "name": "инструмент для открывания бутылок",
+      "terms": [],
+      "reason": "Qualify the existing bottle-opening tool. Its scope includes removing caps or corks. OEWN 2025: oewn-02881204-n."
+    }
+  ],
+  "terms": [
+    {
+      "id": 2391,
+      "name": "инструмент для открывания бутылок",
+      "terms": [
+        [
+          "bottle-opening tool",
+          "en"
+        ]
+      ],
+      "reason": "Retain bottle opener as the broad family, and create a qualified crown-cap subtype. OEWN 2025: oewn-02881204-n."
+    },
+    {
+      "id": 1786,
+      "name": "открывание",
+      "terms": [
+        [
+          "открывать",
+          "ru"
+        ],
+        [
+          "opening (physical process)",
+          "en"
+        ]
+      ],
+      "reason": "Preserve the physical opening action and correct generated spelling and language tags."
+    },
+    {
+      "id": 10959,
+      "name": "смазывание",
+      "terms": [
+        [
+          "смазывать",
+          "ru"
+        ],
+        [
+          "smearing (coating a surface)",
+          "en"
+        ]
+      ],
+      "reason": "Add a qualified English term for applying a coating, without restricting the broader action to food."
+    },
+    {
+      "id": 229,
+      "name": "резание",
+      "terms": [
+        [
+          "резать",
+          "ru"
+        ],
+        [
+          "cutting (physical action)",
+          "en"
+        ]
+      ],
+      "reason": "Keep physical cutting and its established Russian verb, without duplicating the existing action."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 1786,
+      "term": "открываание",
+      "lang": "ru",
+      "reason": "Malformed generated form with a repeated vowel; preserve the standard Russian noun and verb."
+    },
+    {
+      "id": 1786,
+      "term": "ОТКРЫВАТЬ",
+      "lang": "en",
+      "reason": "Russian infinitive incorrectly tagged as English; preserve the correctly tagged Russian verb."
+    },
+    {
+      "id": 10959,
+      "term": "смазываание",
+      "lang": "ru",
+      "reason": "Malformed generated form with a repeated vowel; preserve the standard Russian noun and verb."
+    },
+    {
+      "id": 10959,
+      "term": "СМАЗЫВАТЬ",
+      "lang": "en",
+      "reason": "Russian infinitive incorrectly tagged as English; preserve the correctly tagged Russian verb."
+    },
+    {
+      "id": 229,
+      "term": "резаание",
+      "lang": "ru",
+      "reason": "Malformed generated form with a repeated vowel; preserve the standard Russian noun and verb."
+    },
+    {
+      "id": 229,
+      "term": "РЕЗАТЬ",
+      "lang": "en",
+      "reason": "Russian infinitive incorrectly tagged as English; preserve the correctly tagged Russian verb."
+    }
+  ],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 4359,
+      "before": [
+        2392,
+        "14",
+        30,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2392,
+          "14",
+          2391,
+          null,
+          1
+        ]
+      ],
+      "reason": "A corkscrew is a kind of bottle-opening tool. Retain the broader tool ancestor. OEWN 2025: oewn-03113801-n."
+    },
+    {
+      "id": 4425,
+      "before": [
+        2391,
+        "61",
+        2392,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The broad bottle opener and corkscrew cannot be mutually exclusive. Combined corkscrew and cap-opening tools also demonstrate overlap among the narrower functions. Source: https://www.oxo.com/blog/coffee-and-beverages/which-wine-opener-is-right-for-you"
+    },
+    {
+      "id": 3777,
+      "before": [
+        1804,
+        "72",
+        1805,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "Peeling is not a universal prerequisite to slicing food; bread can be sliced without a peeling step. Leave process sequencing to a specified preparation context. OEWN 2025: oewn-02897203-n."
+    },
+    {
+      "id": 2764,
+      "before": [
+        229,
+        "27",
+        142,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "The generic cutting action does not have a knife as its patient merely because a knife can perform cutting. Existing knife purpose and capability assertions already encode the tool role."
+    }
+  ],
+  "edges": [
+    {
+      "subject": "round_springform",
+      "kod": "14",
+      "object": "springform_pan",
+      "universum_id": 1,
+      "reason": "This round subtype also has springform construction."
+    },
+    {
+      "subject": "combined_opener",
+      "kod": "14",
+      "object": "crown_cap_opener",
+      "universum_id": 1,
+      "reason": "A combined corkscrew and crown-cap opener belongs to both tool families. Source: https://www.oxo.com/blog/coffee-and-beverages/which-wine-opener-is-right-for-you"
+    },
+    {
+      "subject": "kitchen_knife",
+      "kod": "14",
+      "object": 24412,
+      "universum_id": 1,
+      "reason": "A kitchen knife is also a kitchen utensil."
+    },
+    {
+      "subject": "apple_coring",
+      "kod": "27",
+      "object": 1400,
+      "universum_id": 1,
+      "reason": "An apple is the food target of apple coring."
+    },
+    {
+      "subject": "food_coating",
+      "kod": "14",
+      "object": 256,
+      "universum_id": 1,
+      "reason": "Coating a food surface for culinary use is food preparation."
+    },
+    {
+      "subject": "food_coating",
+      "kod": "27",
+      "object": 101,
+      "universum_id": 1,
+      "reason": "The target of this restricted coating action is food."
+    },
+    {
+      "subject": "food_piping",
+      "kod": "27",
+      "object": 101,
+      "universum_id": 1,
+      "reason": "The material shaped in this selected culinary action is food, not necessarily dough. Source: https://old.rudn-sochi.ru/sveden/files/Progr_PM.01_Organizaciya_processa_prigotovleniya_i_prigotovlenie_polufabrikatov_dlya_sloghnoy_kulinarnoy_produkcii_26.04.2021.pdf"
+    },
+    {
+      "subject": "cookie_cutting",
+      "kod": "14",
+      "object": 229,
+      "universum_id": 1,
+      "reason": "Cutting cookie shapes is also a physical cutting action."
+    },
+    {
+      "subject": "cookie_cutting",
+      "kod": "27",
+      "object": 1290,
+      "universum_id": 1,
+      "reason": "Unbaked dough is the target of this shape-cutting action."
+    },
+    {
+      "subject": 1805,
+      "kod": "14",
+      "object": 229,
+      "universum_id": 1,
+      "reason": "The existing culinary slicing action is also physical cutting; retain its direct food-preparation genus."
+    },
+    {
+      "subject": "baking_mould",
+      "kod": "21",
+      "object": 1801,
+      "universum_id": 1,
+      "reason": "The selected utensil or vessel is intended for this food-preparation or opening activity."
+    },
+    {
+      "subject": "roasting_pan",
+      "kod": "21",
+      "object": 1801,
+      "universum_id": 1,
+      "reason": "The selected utensil or vessel is intended for this food-preparation or opening activity."
+    },
+    {
+      "subject": "cookie_sheet",
+      "kod": "21",
+      "object": 1801,
+      "universum_id": 1,
+      "reason": "The selected utensil or vessel is intended for this food-preparation or opening activity."
+    },
+    {
+      "subject": "garlic_press",
+      "kod": "21",
+      "object": 24785,
+      "universum_id": 1,
+      "reason": "The selected utensil or vessel is intended for this food-preparation or opening activity."
+    },
+    {
+      "subject": "apple_corer",
+      "kod": "21",
+      "object": "apple_coring",
+      "universum_id": 1,
+      "reason": "The selected utensil or vessel is intended for this food-preparation or opening activity."
+    },
+    {
+      "subject": "manual_can_opener",
+      "kod": "21",
+      "object": 1786,
+      "universum_id": 1,
+      "reason": "The selected utensil or vessel is intended for this food-preparation or opening activity."
+    },
+    {
+      "subject": "crown_cap_opener",
+      "kod": "21",
+      "object": 1786,
+      "universum_id": 1,
+      "reason": "The selected utensil or vessel is intended for this food-preparation or opening activity."
+    },
+    {
+      "subject": "kitchen_knife",
+      "kod": "21",
+      "object": 256,
+      "universum_id": 1,
+      "reason": "The selected utensil or vessel is intended for this food-preparation or opening activity."
+    },
+    {
+      "subject": "paring_knife",
+      "kod": "21",
+      "object": 1804,
+      "universum_id": 1,
+      "reason": "The selected utensil or vessel is intended for this food-preparation or opening activity."
+    },
+    {
+      "subject": "bread_knife",
+      "kod": "21",
+      "object": 1805,
+      "universum_id": 1,
+      "reason": "The selected utensil or vessel is intended for this food-preparation or opening activity."
+    },
+    {
+      "subject": "chef_knife",
+      "kod": "21",
+      "object": 1805,
+      "universum_id": 1,
+      "reason": "The selected utensil or vessel is intended for this food-preparation or opening activity."
+    },
+    {
+      "subject": "cookie_cutter",
+      "kod": "21",
+      "object": "cookie_cutting",
+      "universum_id": 1,
+      "reason": "The selected utensil or vessel is intended for this food-preparation or opening activity."
+    },
+    {
+      "subject": "pizza_wheel",
+      "kod": "21",
+      "object": 1805,
+      "universum_id": 1,
+      "reason": "The selected utensil or vessel is intended for this food-preparation or opening activity."
+    },
+    {
+      "subject": "pastry_brush",
+      "kod": "21",
+      "object": "food_coating",
+      "universum_id": 1,
+      "reason": "The selected utensil or vessel is intended for this food-preparation or opening activity."
+    },
+    {
+      "subject": "pastry_bag",
+      "kod": "21",
+      "object": "food_piping",
+      "universum_id": 1,
+      "reason": "The selected utensil or vessel is intended for this food-preparation or opening activity."
+    },
+    {
+      "subject": "bench_scraper",
+      "kod": "21",
+      "object": 256,
+      "universum_id": 1,
+      "reason": "The selected utensil or vessel is intended for this food-preparation or opening activity."
+    },
+    {
+      "subject": "garlic_press",
+      "kod": "25",
+      "object": 1393,
+      "universum_id": 1,
+      "reason": "The selected food or dough is a target material for this tool; no sole-use restriction is implied."
+    },
+    {
+      "subject": "apple_corer",
+      "kod": "25",
+      "object": 1400,
+      "universum_id": 1,
+      "reason": "The selected food or dough is a target material for this tool; no sole-use restriction is implied."
+    },
+    {
+      "subject": "bread_knife",
+      "kod": "25",
+      "object": 102,
+      "universum_id": 1,
+      "reason": "The selected food or dough is a target material for this tool; no sole-use restriction is implied."
+    },
+    {
+      "subject": "cookie_cutter",
+      "kod": "25",
+      "object": 1290,
+      "universum_id": 1,
+      "reason": "The selected food or dough is a target material for this tool; no sole-use restriction is implied."
+    },
+    {
+      "subject": "pizza_wheel",
+      "kod": "25",
+      "object": 5597,
+      "universum_id": 1,
+      "reason": "The selected food or dough is a target material for this tool; no sole-use restriction is implied."
+    },
+    {
+      "subject": "pastry_brush",
+      "kod": "25",
+      "object": 101,
+      "universum_id": 1,
+      "reason": "The selected food or dough is a target material for this tool; no sole-use restriction is implied."
+    },
+    {
+      "subject": "pastry_bag",
+      "kod": "25",
+      "object": 101,
+      "universum_id": 1,
+      "reason": "The selected food or dough is a target material for this tool; no sole-use restriction is implied."
+    },
+    {
+      "subject": "bench_scraper",
+      "kod": "25",
+      "object": 1290,
+      "universum_id": 1,
+      "reason": "The selected food or dough is a target material for this tool; no sole-use restriction is implied."
+    }
+  ],
+  "checks": [
+    {
+      "subject": "baking_mould",
+      "kod": "14",
+      "object": 24762,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "loaf_pan",
+      "kod": "14",
+      "object": "baking_mould",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "muffin_pan",
+      "kod": "14",
+      "object": "baking_mould",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "springform_pan",
+      "kod": "14",
+      "object": "baking_mould",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "round_mould",
+      "kod": "14",
+      "object": "baking_mould",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "round_springform",
+      "kod": "14",
+      "object": "round_mould",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "round_springform",
+      "kod": "14",
+      "object": "springform_pan",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "roasting_pan",
+      "kod": "14",
+      "object": 24762,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cookie_sheet",
+      "kod": "14",
+      "object": 5255,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "garlic_press",
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "apple_corer",
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "manual_can_opener",
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "crown_cap_opener",
+      "kod": "14",
+      "object": 2391,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "combined_opener",
+      "kod": "14",
+      "object": 2392,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "combined_opener",
+      "kod": "14",
+      "object": "crown_cap_opener",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kitchen_knife",
+      "kod": "14",
+      "object": 142,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kitchen_knife",
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "paring_knife",
+      "kod": "14",
+      "object": "kitchen_knife",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "bread_knife",
+      "kod": "14",
+      "object": "kitchen_knife",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "chef_knife",
+      "kod": "14",
+      "object": "kitchen_knife",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cookie_cutter",
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pizza_wheel",
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pastry_brush",
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pastry_bag",
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "bench_scraper",
+      "kod": "14",
+      "object": 24412,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "apple_coring",
+      "kod": "14",
+      "object": 256,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "apple_coring",
+      "kod": "27",
+      "object": 1400,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_coating",
+      "kod": "14",
+      "object": 10959,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_coating",
+      "kod": "14",
+      "object": 256,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_coating",
+      "kod": "27",
+      "object": 101,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_piping",
+      "kod": "14",
+      "object": 256,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "food_piping",
+      "kod": "27",
+      "object": 101,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cookie_cutting",
+      "kod": "14",
+      "object": 256,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cookie_cutting",
+      "kod": "14",
+      "object": 229,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cookie_cutting",
+      "kod": "27",
+      "object": 1290,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2392,
+      "kod": "14",
+      "object": 30,
+      "present": false
+    },
+    {
+      "subject": 2392,
+      "kod": "14",
+      "object": 2391,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2391,
+      "kod": "61",
+      "object": 2392,
+      "present": false
+    },
+    {
+      "subject": 1804,
+      "kod": "72",
+      "object": 1805,
+      "present": false
+    },
+    {
+      "subject": 229,
+      "kod": "27",
+      "object": 142,
+      "present": false
+    },
+    {
+      "subject": 1805,
+      "kod": "14",
+      "object": 229,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "baking_mould",
+      "kod": "21",
+      "object": 1801,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "roasting_pan",
+      "kod": "21",
+      "object": 1801,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cookie_sheet",
+      "kod": "21",
+      "object": 1801,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "garlic_press",
+      "kod": "21",
+      "object": 24785,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "apple_corer",
+      "kod": "21",
+      "object": "apple_coring",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "manual_can_opener",
+      "kod": "21",
+      "object": 1786,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "crown_cap_opener",
+      "kod": "21",
+      "object": 1786,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "kitchen_knife",
+      "kod": "21",
+      "object": 256,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "paring_knife",
+      "kod": "21",
+      "object": 1804,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "bread_knife",
+      "kod": "21",
+      "object": 1805,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "chef_knife",
+      "kod": "21",
+      "object": 1805,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cookie_cutter",
+      "kod": "21",
+      "object": "cookie_cutting",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pizza_wheel",
+      "kod": "21",
+      "object": 1805,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pastry_brush",
+      "kod": "21",
+      "object": "food_coating",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pastry_bag",
+      "kod": "21",
+      "object": "food_piping",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "bench_scraper",
+      "kod": "21",
+      "object": 256,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "garlic_press",
+      "kod": "25",
+      "object": 1393,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "apple_corer",
+      "kod": "25",
+      "object": 1400,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "bread_knife",
+      "kod": "25",
+      "object": 102,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "cookie_cutter",
+      "kod": "25",
+      "object": 1290,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pizza_wheel",
+      "kod": "25",
+      "object": 5597,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pastry_brush",
+      "kod": "25",
+      "object": 101,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pastry_bag",
+      "kod": "25",
+      "object": 101,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "bench_scraper",
+      "kod": "25",
+      "object": 1290,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 142,
+      "kod": "21",
+      "object": 229,
+      "present": true
+    },
+    {
+      "subject": 142,
+      "kod": "22",
+      "object": 229,
+      "present": true
+    },
+    {
+      "subject": 2391,
+      "kod": "14",
+      "object": 30,
+      "present": true
+    },
+    {
+      "subject": 2391,
+      "kod": "25",
+      "object": 1530,
+      "present": true
+    },
+    {
+      "subject": 2391,
+      "kod": "21",
+      "object": 1786,
+      "present": true
+    },
+    {
+      "subject": 2392,
+      "kod": "25",
+      "object": 2405,
+      "present": true
+    },
+    {
+      "subject": 2392,
+      "kod": "21",
+      "object": 1786,
+      "present": true
+    },
+    {
+      "subject": 1805,
+      "kod": "14",
+      "object": 256,
+      "present": true
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "baking_mould",
+      "ancestor": 24762,
+      "present": true
+    },
+    {
+      "subject": "loaf_pan",
+      "ancestor": "baking_mould",
+      "present": true
+    },
+    {
+      "subject": "muffin_pan",
+      "ancestor": "baking_mould",
+      "present": true
+    },
+    {
+      "subject": "springform_pan",
+      "ancestor": "baking_mould",
+      "present": true
+    },
+    {
+      "subject": "round_mould",
+      "ancestor": "baking_mould",
+      "present": true
+    },
+    {
+      "subject": "round_springform",
+      "ancestor": "round_mould",
+      "present": true
+    },
+    {
+      "subject": "roasting_pan",
+      "ancestor": 24762,
+      "present": true
+    },
+    {
+      "subject": "cookie_sheet",
+      "ancestor": 5255,
+      "present": true
+    },
+    {
+      "subject": "garlic_press",
+      "ancestor": 24412,
+      "present": true
+    },
+    {
+      "subject": "apple_corer",
+      "ancestor": 24412,
+      "present": true
+    },
+    {
+      "subject": "manual_can_opener",
+      "ancestor": 24412,
+      "present": true
+    },
+    {
+      "subject": "crown_cap_opener",
+      "ancestor": 2391,
+      "present": true
+    },
+    {
+      "subject": "combined_opener",
+      "ancestor": 2392,
+      "present": true
+    },
+    {
+      "subject": "kitchen_knife",
+      "ancestor": 142,
+      "present": true
+    },
+    {
+      "subject": "paring_knife",
+      "ancestor": "kitchen_knife",
+      "present": true
+    },
+    {
+      "subject": "bread_knife",
+      "ancestor": "kitchen_knife",
+      "present": true
+    },
+    {
+      "subject": "chef_knife",
+      "ancestor": "kitchen_knife",
+      "present": true
+    },
+    {
+      "subject": "cookie_cutter",
+      "ancestor": 24412,
+      "present": true
+    },
+    {
+      "subject": "pizza_wheel",
+      "ancestor": 24412,
+      "present": true
+    },
+    {
+      "subject": "pastry_brush",
+      "ancestor": 24412,
+      "present": true
+    },
+    {
+      "subject": "pastry_bag",
+      "ancestor": 24412,
+      "present": true
+    },
+    {
+      "subject": "bench_scraper",
+      "ancestor": 24412,
+      "present": true
+    },
+    {
+      "subject": "apple_coring",
+      "ancestor": 256,
+      "present": true
+    },
+    {
+      "subject": "food_coating",
+      "ancestor": 10959,
+      "present": true
+    },
+    {
+      "subject": "food_piping",
+      "ancestor": 256,
+      "present": true
+    },
+    {
+      "subject": "cookie_cutting",
+      "ancestor": 256,
+      "present": true
+    },
+    {
+      "subject": 2392,
+      "ancestor": 2391,
+      "present": true
+    },
+    {
+      "subject": 2392,
+      "ancestor": 30,
+      "present": true
+    },
+    {
+      "subject": "round_springform",
+      "ancestor": "springform_pan",
+      "present": true
+    },
+    {
+      "subject": "combined_opener",
+      "ancestor": "crown_cap_opener",
+      "present": true
+    },
+    {
+      "subject": "combined_opener",
+      "ancestor": 2391,
+      "present": true
+    },
+    {
+      "subject": "kitchen_knife",
+      "ancestor": 24412,
+      "present": true
+    },
+    {
+      "subject": "paring_knife",
+      "ancestor": 142,
+      "present": true
+    },
+    {
+      "subject": "food_coating",
+      "ancestor": 256,
+      "present": true
+    },
+    {
+      "subject": "cookie_cutting",
+      "ancestor": 229,
+      "present": true
+    },
+    {
+      "subject": 1805,
+      "ancestor": 229,
+      "present": true
+    },
+    {
+      "subject": "loaf_pan",
+      "ancestor": 24761,
+      "present": true
+    },
+    {
+      "subject": "cookie_sheet",
+      "ancestor": 24762,
+      "present": true
+    },
+    {
+      "subject": "springform_pan",
+      "ancestor": "round_mould",
+      "present": false
+    },
+    {
+      "subject": "round_mould",
+      "ancestor": "springform_pan",
+      "present": false
+    },
+    {
+      "subject": "crown_cap_opener",
+      "ancestor": 2392,
+      "present": false
+    },
+    {
+      "subject": 2392,
+      "ancestor": "crown_cap_opener",
+      "present": false
+    },
+    {
+      "subject": "paring_knife",
+      "ancestor": 2394,
+      "present": false
+    },
+    {
+      "subject": "pastry_brush",
+      "ancestor": 1507,
+      "present": false
+    },
+    {
+      "subject": "bench_scraper",
+      "ancestor": 2340,
+      "present": false
+    },
+    {
+      "subject": "manual_can_opener",
+      "ancestor": 2391,
+      "present": false
+    },
+    {
+      "subject": "apple_coring",
+      "ancestor": 1804,
+      "present": false
+    },
+    {
+      "subject": "food_piping",
+      "ancestor": 229,
+      "present": false
+    },
+    {
+      "subject": "cookie_cutter",
+      "ancestor": "baking_mould",
+      "present": false
+    },
+    {
+      "subject": "roasting_pan",
+      "ancestor": 1441,
+      "present": false
+    },
+    {
+      "subject": "roasting_pan",
+      "ancestor": 101,
+      "present": false
+    },
+    {
+      "subject": 5255,
+      "ancestor": "cookie_sheet",
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": "baking_mould",
+      "term": "форма для выпечки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "baking_mould",
+      "term": "baking mould",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "baking_mould",
+      "term": "baking mold",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "baking_mould",
+      "term": "baking form",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "loaf_pan",
+      "term": "прямоугольная форма для выпечки хлеба и кексов",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "loaf_pan",
+      "term": "loaf pan",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "loaf_pan",
+      "term": "loaf tin",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "muffin_pan",
+      "term": "форма для выпечки маффинов",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "muffin_pan",
+      "term": "muffin pan",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "muffin_pan",
+      "term": "muffin tin",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "springform_pan",
+      "term": "разъёмная форма для выпечки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "springform_pan",
+      "term": "springform pan",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "round_mould",
+      "term": "круглая форма для выпечки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "round_mould",
+      "term": "round baking mould",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "round_mould",
+      "term": "round baking mold",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "round_springform",
+      "term": "круглая разъёмная форма для выпечки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "round_springform",
+      "term": "round springform pan",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "roasting_pan",
+      "term": "жаровня для духовки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "roasting_pan",
+      "term": "roasting pan",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "roasting_pan",
+      "term": "roaster (roasting pan)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cookie_sheet",
+      "term": "противень для печенья",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "cookie_sheet",
+      "term": "cookie sheet",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "garlic_press",
+      "term": "пресс для чеснока",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "garlic_press",
+      "term": "garlic press",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "garlic_press",
+      "term": "чеснокодавилка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "apple_corer",
+      "term": "приспособление для удаления сердцевины яблок",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "apple_corer",
+      "term": "apple corer",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "manual_can_opener",
+      "term": "ручной консервный нож",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "manual_can_opener",
+      "term": "manual can opener",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "manual_can_opener",
+      "term": "manual tin opener",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "crown_cap_opener",
+      "term": "открывалка для кроненпробок",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "crown_cap_opener",
+      "term": "crown cap opener",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "combined_opener",
+      "term": "штопор с открывалкой для кроненпробок",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "combined_opener",
+      "term": "corkscrew with crown cap opener",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "kitchen_knife",
+      "term": "кухонный нож",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "kitchen_knife",
+      "term": "kitchen knife",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "paring_knife",
+      "term": "нож для чистки овощей и фруктов",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "paring_knife",
+      "term": "paring knife",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "bread_knife",
+      "term": "хлебный нож",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "bread_knife",
+      "term": "bread knife",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "bread_knife",
+      "term": "нож для хлеба",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "chef_knife",
+      "term": "поварской нож",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "chef_knife",
+      "term": "chef's knife",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "chef_knife",
+      "term": "chef knife",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cookie_cutter",
+      "term": "вырубка для печенья",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "cookie_cutter",
+      "term": "cookie cutter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cookie_cutter",
+      "term": "формочка для вырезания печенья",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pizza_wheel",
+      "term": "роликовый нож для пиццы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pizza_wheel",
+      "term": "pizza wheel",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pizza_wheel",
+      "term": "pizza cutter wheel",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pastry_brush",
+      "term": "кондитерская кисть",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pastry_brush",
+      "term": "pastry brush",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pastry_brush",
+      "term": "кулинарная кисть",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pastry_bag",
+      "term": "кондитерский мешок",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pastry_bag",
+      "term": "pastry bag",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pastry_bag",
+      "term": "piping bag",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "bench_scraper",
+      "term": "скребок для теста (для работы на столе)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "bench_scraper",
+      "term": "bench scraper",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "bench_scraper",
+      "term": "bench knife (pastry tool)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "apple_coring",
+      "term": "удаление сердцевины яблока",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "apple_coring",
+      "term": "apple coring",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "food_coating",
+      "term": "смазывание поверхности пищи",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "food_coating",
+      "term": "coating a food surface",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "food_piping",
+      "term": "отсаживание кондитерской массы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "food_piping",
+      "term": "piping a pastry mixture",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "food_piping",
+      "term": "piping (pastry preparation)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "cookie_cutting",
+      "term": "вырезание печенья из теста",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "cookie_cutting",
+      "term": "cutting cookie shapes from dough",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2391,
+      "term": "инструмент для открывания бутылок",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 2391,
+      "term": "bottle-opening tool",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1786,
+      "term": "открывать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1786,
+      "term": "opening (physical process)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 10959,
+      "term": "смазывать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 10959,
+      "term": "smearing (coating a surface)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 229,
+      "term": "резать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 229,
+      "term": "cutting (physical action)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1786,
+      "term": "открываание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 1786,
+      "term": "ОТКРЫВАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 10959,
+      "term": "смазываание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 10959,
+      "term": "СМАЗЫВАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 229,
+      "term": "резаание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 229,
+      "term": "РЕЗАТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "roasting_pan",
+      "term": "roaster",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "manual_can_opener",
+      "term": "can opener",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "pizza_wheel",
+      "term": "pizza cutter",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "pastry_brush",
+      "term": "brush",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "bench_scraper",
+      "term": "spatula",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "apple_corer",
+      "term": "corer",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "baking_mould",
+      "term": "cake pan",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "food_piping",
+      "term": "piping",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

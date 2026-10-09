@@ -1,0 +1,2471 @@
+{
+  "source": "quality-20261009-q10",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local database and working tree only; do not push or deploy.",
+    "scope": "Core IT foundations: types versus values, character/string senses and notation, addresses, and processing activities.",
+    "sources": {
+      "types": "https://docs.oracle.com/javase/specs/jls/se25/html/jls-4.html",
+      "lexical": "https://docs.oracle.com/javase/specs/jls/se25/html/jls-3.html",
+      "string": "https://xlinux.nist.gov/dads/HTML/string.html",
+      "python_types": "https://docs.python.org/3/library/stdtypes.html",
+      "characters": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-3/",
+      "escapes": "https://docs.python.org/3/reference/lexical_analysis.html",
+      "regex": "https://docs.python.org/3/library/re.html",
+      "endian": "https://docs.python.org/3/library/struct.html",
+      "dword": "https://learn.microsoft.com/en-us/windows/win32/winprog/windows-data-types",
+      "qword": "https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-dtyp/ac050bbf-a821-4fab-bccf-d95d892f428f",
+      "uint8": "https://developer.apple.com/documentation/swift/uint8",
+      "numbers": "https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials",
+      "address": "https://www.ibm.com/docs/en/zos/3.1.0?topic=testauth-address-expression",
+      "indirect": "https://www.ibm.com/docs/en/zos/2.5.0?topic=testauth-indirect-address",
+      "return_address": "https://learn.microsoft.com/en-us/cpp/intrinsics/returnaddress",
+      "base_address": "https://learn.microsoft.com/en-us/windows/win32/winprog/windows-data-types",
+      "processing": "https://nightlies.apache.org/flink/flink-docs-stable/docs/learn-flink/overview/",
+      "execution_mode": "https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/datastream/execution_mode/"
+    },
+    "existing_cohort": [
+      363,
+      364,
+      441,
+      462,
+      463,
+      464,
+      465,
+      466,
+      523,
+      524,
+      528,
+      580,
+      592,
+      684,
+      708,
+      726,
+      823,
+      848,
+      932,
+      959,
+      1029,
+      1030,
+      1044,
+      1057,
+      1084,
+      1124,
+      1125,
+      1133,
+      1168,
+      24484
+    ],
+    "context_policy": "Keep existing home contexts. IT assertions use U3; mathematical real/rational/integer values also retain an explicit U1 path. U2 remains empty.",
+    "new_concept_budget_review": "Raise the pilot estimate from 25 to 33: two type/value splits and six missing shared concepts are necessary for the selected distinctions. This is a revised estimate, not a target to exhaust.",
+    "unfinished": [
+      467,
+      474,
+      617,
+      742,
+      815,
+      816,
+      903,
+      930,
+      955,
+      979,
+      1010,
+      1093,
+      1181,
+      1199,
+      1210,
+      4824
+    ],
+    "limits": "No general type-to-value membership rule is introduced. Exact bit-width/range properties, void conventions, code points/code units/graphemes, ambiguous Map/heap, and the other mixed data-structure children need separate review. String length counts positions in the selected character sequence, not bytes or display width. No application tests, commits, pushes, or deployments are part of this batch."
+  },
+  "concepts": [
+    {
+      "key": "unsigned_integer_type",
+      "name": "беззнаковый целочисленный тип данных",
+      "parent": 462,
+      "universum_id": 3,
+      "terms": [
+        [
+          "беззнаковый целочисленный тип данных",
+          "ru"
+        ],
+        [
+          "unsigned integer data type",
+          "en"
+        ],
+        [
+          "unsigned integer type",
+          "en"
+        ],
+        [
+          "беззнаковый целочисленный тип",
+          "ru"
+        ]
+      ],
+      "reason": "An integer type representing nonnegative values without a signed interpretation. Width and range depend on the specific type. Source: https://learn.microsoft.com/en-us/windows/win32/winprog/windows-data-types"
+    },
+    {
+      "key": "character_type",
+      "name": "символьный тип данных",
+      "parent": 363,
+      "universum_id": 3,
+      "terms": [
+        [
+          "символьный тип данных",
+          "ru"
+        ],
+        [
+          "character data type",
+          "en"
+        ],
+        [
+          "character type",
+          "en"
+        ],
+        [
+          "char",
+          "en"
+        ]
+      ],
+      "reason": "A type for character representations. The unit and encoding are language-specific; one char need not represent one Unicode abstract character. Source: https://docs.oracle.com/javase/specs/jls/se25/html/jls-4.html"
+    },
+    {
+      "key": "string_type",
+      "name": "строковый тип данных",
+      "parent": 363,
+      "universum_id": 3,
+      "terms": [
+        [
+          "строковый тип данных",
+          "ru"
+        ],
+        [
+          "string data type",
+          "en"
+        ],
+        [
+          "string type",
+          "en"
+        ],
+        [
+          "string",
+          "en"
+        ]
+      ],
+      "reason": "A type whose values are strings. Distinct from a particular sequence and from its substring. Source: https://docs.python.org/3/library/stdtypes.html"
+    },
+    {
+      "key": "string_length",
+      "name": "длина строки в символах",
+      "parent": 2635,
+      "universum_id": 3,
+      "terms": [
+        [
+          "длина строки в символах",
+          "ru"
+        ],
+        [
+          "string length in characters",
+          "en"
+        ],
+        [
+          "string length",
+          "en"
+        ],
+        [
+          "длина строки",
+          "ru"
+        ]
+      ],
+      "reason": "The number of positions in the selected character sequence, including zero; not byte length, physical length, or number of distinct symbols. Source: https://xlinux.nist.gov/dads/HTML/string.html"
+    },
+    {
+      "key": "computer_address",
+      "name": "адрес (вычислительная техника)",
+      "parent": 559,
+      "universum_id": 3,
+      "terms": [
+        [
+          "адрес (вычислительная техника)",
+          "ru"
+        ],
+        [
+          "computer address",
+          "en"
+        ],
+        [
+          "storage address",
+          "en"
+        ],
+        [
+          "адрес в адресном пространстве",
+          "ru"
+        ]
+      ],
+      "reason": "A value designating a location in a computer address space, with numeric or symbolic forms. The addressed storage is distinct from its address. Source: https://www.ibm.com/docs/en/zos/3.1.0?topic=testauth-address-expression"
+    },
+    {
+      "key": "data_processing",
+      "name": "обработка данных",
+      "parent": 318,
+      "universum_id": 3,
+      "terms": [
+        [
+          "обработка данных",
+          "ru"
+        ],
+        [
+          "data processing",
+          "en"
+        ]
+      ],
+      "reason": "Computational processing of input data. Algorithms, processing models, and executions are different concepts. Source: https://nightlies.apache.org/flink/flink-docs-stable/docs/learn-flink/overview/"
+    },
+    {
+      "key": "regex_matching",
+      "name": "сопоставление строки с регулярным выражением",
+      "parent": "data_processing",
+      "universum_id": 3,
+      "terms": [
+        [
+          "сопоставление строки с регулярным выражением",
+          "ru"
+        ],
+        [
+          "regular expression matching",
+          "en"
+        ],
+        [
+          "regex matching",
+          "en"
+        ]
+      ],
+      "reason": "The activity of checking a string against a regular-expression pattern, including whole-string and substring matching modes. Source: https://docs.python.org/3/library/re.html"
+    },
+    {
+      "key": "rational_number",
+      "name": "рациональное число",
+      "parent": 1044,
+      "universum_id": 1,
+      "terms": [
+        [
+          "рациональное число",
+          "ru"
+        ],
+        [
+          "rational number",
+          "en"
+        ]
+      ],
+      "reason": "A real number expressible as a ratio of two integers with a nonzero denominator. Integers are included. Source: https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials"
+    }
+  ],
+  "renames": [
+    {
+      "id": 363,
+      "before": "data type",
+      "name": "тип данных",
+      "terms": [],
+      "reason": "Use the existing Russian type label; retain the classification sense. Source: https://docs.oracle.com/javase/specs/jls/se25/html/jls-4.html"
+    },
+    {
+      "id": 364,
+      "before": "data structure",
+      "name": "структура данных",
+      "terms": [],
+      "reason": "Use the existing Russian structural label. Source: https://xlinux.nist.gov/dads/HTML/string.html"
+    },
+    {
+      "id": 463,
+      "before": "floating-point",
+      "name": "тип данных с плавающей точкой",
+      "terms": [],
+      "reason": "Select the type sense rather than a mathematical real number or a representation technique. Source: https://docs.oracle.com/javase/specs/jls/se25/html/jls-4.html"
+    },
+    {
+      "id": 464,
+      "before": "boolean",
+      "name": "логический тип данных",
+      "terms": [],
+      "reason": "Use an explicit type label; do not turn truth values into types. Source: https://docs.oracle.com/javase/specs/jls/se25/html/jls-4.html"
+    },
+    {
+      "id": 465,
+      "before": "character",
+      "name": "символ (информатика)",
+      "terms": [],
+      "reason": "The existing punctuation/control-character children select the character sense; move char as a type term to its separate record. Source: https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-3/"
+    },
+    {
+      "id": 466,
+      "before": "string",
+      "name": "строка символов",
+      "terms": [],
+      "reason": "The substring child selects a sequence value; the type receives its own record. Source: https://xlinux.nist.gov/dads/HTML/string.html"
+    },
+    {
+      "id": 441,
+      "before": "keyword",
+      "name": "ключевое слово",
+      "terms": [],
+      "reason": "Use the existing programming keyword meaning. Source: https://docs.oracle.com/javase/specs/jls/se25/html/jls-3.html"
+    },
+    {
+      "id": 523,
+      "before": "Regex",
+      "name": "регулярное выражение",
+      "terms": [],
+      "reason": "A pattern with syntax and interpretation, distinct from a plain string value. Source: https://docs.python.org/3/library/re.html"
+    },
+    {
+      "id": 524,
+      "before": "Curly bracket",
+      "name": "фигурная скобка",
+      "terms": [],
+      "reason": "Name the brace class; an opening brace is only one member. Source: https://docs.oracle.com/javase/specs/jls/se25/html/jls-3.html"
+    },
+    {
+      "id": 528,
+      "before": "Absolute address",
+      "name": "абсолютный адрес",
+      "terms": [],
+      "reason": "An address value is not a kind of memory. Source: https://www.ibm.com/docs/en/zos/3.1.0?topic=testauth-address-expression"
+    },
+    {
+      "id": 580,
+      "before": "Base address",
+      "name": "базовый адрес",
+      "terms": [],
+      "reason": "An address used as a base is not the storage itself. Source: https://learn.microsoft.com/en-us/windows/win32/winprog/windows-data-types"
+    },
+    {
+      "id": 592,
+      "before": "punctuation mark",
+      "name": "знак препинания",
+      "terms": [],
+      "reason": "Use the established Russian label of the punctuation class. Source: https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-3/"
+    },
+    {
+      "id": 684,
+      "before": "Delimiter",
+      "name": "разделитель (программирование)",
+      "terms": [],
+      "reason": "A delimiter can contain multiple characters; select the language-construct sense. Source: https://docs.python.org/3/library/stdtypes.html"
+    },
+    {
+      "id": 726,
+      "before": "Endian",
+      "name": "порядок байтов",
+      "terms": [],
+      "reason": "Select an ordering convention, not a data type. Source: https://docs.python.org/3/library/struct.html"
+    },
+    {
+      "id": 823,
+      "before": "Indirect address",
+      "name": "косвенный адрес",
+      "terms": [],
+      "reason": "Select the address used with indirection, not a data structure. Source: https://www.ibm.com/docs/en/zos/2.5.0?topic=testauth-indirect-address"
+    },
+    {
+      "id": 848,
+      "before": "Java reserved words",
+      "name": "зарезервированное слово Java",
+      "terms": [],
+      "reason": "A reserved keyword is a lexical token, not a data type or a set of words. Source: https://docs.oracle.com/javase/specs/jls/se25/html/jls-3.html"
+    },
+    {
+      "id": 932,
+      "before": "/n",
+      "name": "перевод строки (LF)",
+      "terms": [],
+      "reason": "Replace the malformed forward-slash spelling with the line-feed character meaning. Source: https://docs.python.org/3/reference/lexical_analysis.html"
+    },
+    {
+      "id": 959,
+      "before": "Null character",
+      "name": "нулевой символ",
+      "terms": [],
+      "reason": "Use the established control-character label. Source: https://docs.python.org/3/reference/lexical_analysis.html"
+    },
+    {
+      "id": 1030,
+      "before": "/r",
+      "name": "возврат каретки (CR)",
+      "terms": [],
+      "reason": "Separate carriage return from line feed; use the correct escape spelling. Source: https://docs.python.org/3/reference/lexical_analysis.html"
+    },
+    {
+      "id": 1044,
+      "before": "Real number",
+      "name": "действительное число",
+      "terms": [],
+      "reason": "Reuse the mathematical value meaning rather than interpreting all reals as a machine data type. Source: https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials"
+    },
+    {
+      "id": 1057,
+      "before": "Return address",
+      "name": "адрес возврата",
+      "terms": [],
+      "reason": "The return address designates the continuation instruction. Source: https://learn.microsoft.com/en-us/cpp/intrinsics/returnaddress"
+    },
+    {
+      "id": 1084,
+      "before": "Sequence",
+      "name": "последовательность данных",
+      "terms": [],
+      "reason": "Scope the existing IT sequence to ordered data values, including lazy sequences; no storage layout is implied. Source: https://docs.python.org/3/library/stdtypes.html"
+    },
+    {
+      "id": 1125,
+      "before": "Stream processing",
+      "name": "потоковая обработка данных",
+      "terms": [],
+      "reason": "Select the processing activity; a model of stream processing is a different meaning. Source: https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/datastream/execution_mode/"
+    },
+    {
+      "id": 1133,
+      "before": "Substring",
+      "name": "подстрока",
+      "terms": [],
+      "reason": "Retain the contiguous portion of a string, distinct from a substring function. Source: https://docs.python.org/3/library/stdtypes.html"
+    }
+  ],
+  "terms": [
+    {
+      "id": 463,
+      "name": "тип данных с плавающей точкой",
+      "terms": [
+        [
+          "floating-point data type",
+          "en"
+        ],
+        [
+          "тип с плавающей точкой",
+          "ru"
+        ]
+      ],
+      "reason": "Clarify the selected type sense. Source: https://docs.oracle.com/javase/specs/jls/se25/html/jls-4.html"
+    },
+    {
+      "id": 464,
+      "name": "логический тип данных",
+      "terms": [
+        [
+          "Boolean data type",
+          "en"
+        ],
+        [
+          "булев тип данных",
+          "ru"
+        ]
+      ],
+      "reason": "Clarify the type without importing language-specific storage sizes. Source: https://docs.oracle.com/javase/specs/jls/se25/html/jls-4.html"
+    },
+    {
+      "id": 465,
+      "name": "символ (информатика)",
+      "terms": [
+        [
+          "text character",
+          "en"
+        ],
+        [
+          "character (text unit)",
+          "en"
+        ]
+      ],
+      "reason": "Clarify character content; code units, glyphs, and graphemes are not assumed identical. Source: https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-3/"
+    },
+    {
+      "id": 466,
+      "name": "строка символов",
+      "terms": [
+        [
+          "character string",
+          "en"
+        ],
+        [
+          "string value",
+          "en"
+        ]
+      ],
+      "reason": "Clarify the sequence-value sense. Source: https://xlinux.nist.gov/dads/HTML/string.html"
+    },
+    {
+      "id": 524,
+      "name": "фигурная скобка",
+      "terms": [
+        [
+          "brace",
+          "en"
+        ],
+        [
+          "curly brace",
+          "en"
+        ]
+      ],
+      "reason": "Both opening and closing braces belong to this class. Source: https://docs.oracle.com/javase/specs/jls/se25/html/jls-3.html"
+    },
+    {
+      "id": 684,
+      "name": "разделитель (программирование)",
+      "terms": [
+        [
+          "programming delimiter",
+          "en"
+        ]
+      ],
+      "reason": "Disambiguate the selected delimiter sense. Source: https://docs.python.org/3/library/stdtypes.html"
+    },
+    {
+      "id": 708,
+      "name": "DWORD",
+      "terms": [
+        [
+          "DWORD type",
+          "en"
+        ],
+        [
+          "32-bit unsigned integer type (DWORD)",
+          "en"
+        ],
+        [
+          "тип DWORD",
+          "ru"
+        ],
+        [
+          "32-разрядный беззнаковый целочисленный тип DWORD",
+          "ru"
+        ]
+      ],
+      "reason": "Scope DWORD to the documented integer type. Source: https://learn.microsoft.com/en-us/windows/win32/winprog/windows-data-types"
+    },
+    {
+      "id": 1029,
+      "name": "QWORD",
+      "terms": [
+        [
+          "QWORD type",
+          "en"
+        ],
+        [
+          "64-bit unsigned integer type (QWORD)",
+          "en"
+        ],
+        [
+          "тип QWORD",
+          "ru"
+        ],
+        [
+          "64-разрядный беззнаковый целочисленный тип QWORD",
+          "ru"
+        ]
+      ],
+      "reason": "Scope QWORD to the documented integer type. Source: https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-dtyp/ac050bbf-a821-4fab-bccf-d95d892f428f"
+    },
+    {
+      "id": 1168,
+      "name": "UInt8",
+      "terms": [
+        [
+          "8-bit unsigned integer type",
+          "en"
+        ],
+        [
+          "8-разрядный беззнаковый целочисленный тип",
+          "ru"
+        ]
+      ],
+      "reason": "Retain UInt8 as an unsigned eight-bit type; Swift documents an instance of this meaning. Source: https://developer.apple.com/documentation/swift/uint8"
+    },
+    {
+      "id": 726,
+      "name": "порядок байтов",
+      "terms": [
+        [
+          "endianness",
+          "en"
+        ],
+        [
+          "byte order",
+          "en"
+        ]
+      ],
+      "reason": "Use the standard noun and its established Russian equivalent. Source: https://docs.python.org/3/library/struct.html"
+    },
+    {
+      "id": 848,
+      "name": "зарезервированное слово Java",
+      "terms": [
+        [
+          "Java reserved keyword",
+          "en"
+        ],
+        [
+          "зарезервированное ключевое слово Java",
+          "ru"
+        ]
+      ],
+      "reason": "Scope to the reserved-keyword category in JLS 3.9. Source: https://docs.oracle.com/javase/specs/jls/se25/html/jls-3.html"
+    },
+    {
+      "id": 932,
+      "name": "перевод строки (LF)",
+      "terms": [
+        [
+          "line feed",
+          "en"
+        ],
+        [
+          "LF",
+          "en"
+        ],
+        [
+          "\\n",
+          "en"
+        ]
+      ],
+      "reason": "Use the documented LF spelling; the escape is a notation for the character. Source: https://docs.python.org/3/reference/lexical_analysis.html"
+    },
+    {
+      "id": 1030,
+      "name": "возврат каретки (CR)",
+      "terms": [
+        [
+          "CR",
+          "en"
+        ],
+        [
+          "\\r",
+          "en"
+        ]
+      ],
+      "reason": "Use the documented CR spelling, distinct from LF. Source: https://docs.python.org/3/reference/lexical_analysis.html"
+    },
+    {
+      "id": 959,
+      "name": "нулевой символ",
+      "terms": [
+        [
+          "NUL character",
+          "en"
+        ],
+        [
+          "нулевой символ",
+          "ru"
+        ]
+      ],
+      "reason": "Retain the control character rather than a null pointer or empty string. Source: https://docs.python.org/3/reference/lexical_analysis.html"
+    },
+    {
+      "id": 1044,
+      "name": "действительное число",
+      "terms": [
+        [
+          "вещественное число",
+          "ru"
+        ]
+      ],
+      "reason": "A standard Russian synonym for the mathematical real number. Source: https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials"
+    },
+    {
+      "id": 1084,
+      "name": "последовательность данных",
+      "terms": [
+        [
+          "data sequence",
+          "en"
+        ],
+        [
+          "ordered data sequence",
+          "en"
+        ]
+      ],
+      "reason": "Make the computing sequence meaning explicit. Source: https://docs.python.org/3/library/stdtypes.html"
+    },
+    {
+      "id": 1125,
+      "name": "потоковая обработка данных",
+      "terms": [
+        [
+          "stream data processing",
+          "en"
+        ]
+      ],
+      "reason": "Processing is scoped independently of a particular engine or scheduling mode. Source: https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/datastream/execution_mode/"
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 363,
+      "term": "data type",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 364,
+      "term": "data structure",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 463,
+      "term": "floating-point",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 464,
+      "term": "boolean",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 465,
+      "term": "character",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 466,
+      "term": "string",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 441,
+      "term": "keyword",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 523,
+      "term": "Regex",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 524,
+      "term": "Curly bracket",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 528,
+      "term": "Absolute address",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 580,
+      "term": "Base address",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 592,
+      "term": "punctuation mark",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 684,
+      "term": "Delimiter",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 726,
+      "term": "Endian",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 823,
+      "term": "Indirect address",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 848,
+      "term": "Java reserved words",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 932,
+      "term": "/n",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 959,
+      "term": "Null character",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 1030,
+      "term": "/r",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 1044,
+      "term": "Real number",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 1057,
+      "term": "Return address",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 1084,
+      "term": "Sequence",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 1125,
+      "term": "Stream processing",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 1133,
+      "term": "Substring",
+      "lang": "ru",
+      "reason": "The previous English label retained by the rename helper is not a Russian term."
+    },
+    {
+      "id": 465,
+      "term": "char",
+      "lang": "en",
+      "reason": "The type abbreviation moves to the explicit character-type concept."
+    },
+    {
+      "id": 463,
+      "term": "плавающая точка",
+      "lang": "ru",
+      "reason": "A representation-technique phrase is not an unrestricted synonym for its data type."
+    },
+    {
+      "id": 464,
+      "term": "логический",
+      "lang": "ru",
+      "reason": "The unqualified adjective is broader than the selected Boolean data type."
+    },
+    {
+      "id": 524,
+      "term": "open brace",
+      "lang": "en",
+      "reason": "Opening brace is narrower than the class of both brace directions."
+    },
+    {
+      "id": 708,
+      "term": "\"double word",
+      "lang": "en",
+      "reason": "Malformed leading quote and an unqualified storage-width term obscure the selected type sense."
+    },
+    {
+      "id": 1029,
+      "term": "\"quad word",
+      "lang": "en",
+      "reason": "Malformed leading quote and an unqualified storage-width term obscure the selected type sense."
+    },
+    {
+      "id": 932,
+      "term": "/n",
+      "lang": "en",
+      "reason": "Forward slash n is not the line-feed escape."
+    },
+    {
+      "id": 1030,
+      "term": "/r",
+      "lang": "en",
+      "reason": "Forward slash r is not the carriage-return escape."
+    },
+    {
+      "id": 1133,
+      "term": "substr",
+      "lang": "en",
+      "reason": "A function name is not an unrestricted synonym for its substring result."
+    }
+  ],
+  "leaf_merges": [],
+  "initial_edges": [
+    {
+      "subject": 1044,
+      "kod": "14",
+      "object": 2699,
+      "universum_id": 1,
+      "reason": "The mathematical real-number value is also available in U1. Source: https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials"
+    },
+    {
+      "subject": "rational_number",
+      "kod": "14",
+      "object": 1044,
+      "universum_id": 3,
+      "reason": "The same rational-value genus is available in computing discourse. Source: https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials"
+    },
+    {
+      "subject": 2656,
+      "kod": "14",
+      "object": 17,
+      "universum_id": 3,
+      "reason": "Expose the existing sign genus for the IT character sense. Source: https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-3/"
+    },
+    {
+      "subject": 3315,
+      "kod": "14",
+      "object": 20,
+      "universum_id": 3,
+      "reason": "Expose ordering as a relation in the IT discourse. Source: https://docs.python.org/3/library/struct.html"
+    },
+    {
+      "subject": 2635,
+      "kod": "14",
+      "object": 18,
+      "universum_id": 3,
+      "reason": "Expose the quantity scale for string length in IT discourse. Source: https://xlinux.nist.gov/dads/HTML/string.html"
+    }
+  ],
+  "repairs": [
+    {
+      "id": 1636,
+      "before": [
+        1044,
+        "14",
+        363,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "Mathematical real numbers are numbers; floating-point types remain under data type. Source: https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials",
+      "replacements": [
+        [
+          1044,
+          "14",
+          2699,
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 31474,
+      "before": [
+        24484,
+        "14",
+        2699,
+        1
+      ],
+      "reviewed_strength": null,
+      "reason": "An integer is a rational number; preserve its U1 path through the newly explicit nearest genus. Source: https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials",
+      "replacements": [
+        [
+          24484,
+          "14",
+          "rational_number",
+          null,
+          1
+        ]
+      ]
+    },
+    {
+      "id": 31479,
+      "before": [
+        24484,
+        "14",
+        2699,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "Preserve the same integer classification in U3. Source: https://openstax.org/books/college-algebra-2e/pages/1-1-real-numbers-algebra-essentials",
+      "replacements": [
+        [
+          24484,
+          "14",
+          "rational_number",
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1275,
+      "before": [
+        708,
+        "14",
+        363,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "Use the unsigned-integer-type genus instead of the generic type root. Source: https://learn.microsoft.com/en-us/windows/win32/winprog/windows-data-types",
+      "replacements": [
+        [
+          708,
+          "14",
+          "unsigned_integer_type",
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1621,
+      "before": [
+        1029,
+        "14",
+        363,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "Use the unsigned-integer-type genus instead of the generic type root. Source: https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-dtyp/ac050bbf-a821-4fab-bccf-d95d892f428f",
+      "replacements": [
+        [
+          1029,
+          "14",
+          "unsigned_integer_type",
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1763,
+      "before": [
+        1168,
+        "14",
+        363,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "Use the unsigned-integer-type genus instead of the generic type root. Source: https://developer.apple.com/documentation/swift/uint8",
+      "replacements": [
+        [
+          1168,
+          "14",
+          "unsigned_integer_type",
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1294,
+      "before": [
+        726,
+        "14",
+        363,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "Byte order describes ordering of bytes in a representation, not a type of data. Source: https://docs.python.org/3/library/struct.html",
+      "replacements": [
+        [
+          726,
+          "14",
+          3315,
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 851,
+      "before": [
+        441,
+        "14",
+        362,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "A programming keyword is a lexical token. Source: https://docs.oracle.com/javase/specs/jls/se25/html/jls-3.html",
+      "replacements": [
+        [
+          441,
+          "14",
+          443,
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1429,
+      "before": [
+        848,
+        "14",
+        363,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "A Java reserved word belongs with keywords, not data types. Source: https://docs.oracle.com/javase/specs/jls/se25/html/jls-3.html",
+      "replacements": [
+        [
+          848,
+          "14",
+          441,
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 875,
+      "before": [
+        465,
+        "14",
+        363,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "The existing character children are signs/text units rather than data types. Source: https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-3/",
+      "replacements": [
+        [
+          465,
+          "14",
+          2656,
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1678,
+      "before": [
+        1084,
+        "14",
+        265,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "An ordered data sequence is a value, not a type or a physical layout. Source: https://docs.python.org/3/library/stdtypes.html",
+      "replacements": [
+        [
+          1084,
+          "14",
+          559,
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 876,
+      "before": [
+        466,
+        "14",
+        363,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "A string value is a sequence; the string type has its own record. Source: https://xlinux.nist.gov/dads/HTML/string.html",
+      "replacements": [
+        [
+          466,
+          "14",
+          1084,
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1077,
+      "before": [
+        523,
+        "14",
+        466,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "A regular-expression pattern is a construct of its pattern language; its string notation does not make it a plain string value. Source: https://docs.python.org/3/library/re.html",
+      "replacements": [
+        [
+          523,
+          "14",
+          362,
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1078,
+      "before": [
+        524,
+        "14",
+        465,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "Braces are punctuation characters; use the nearer existing punctuation genus. Source: https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-3/",
+      "replacements": [
+        [
+          524,
+          "14",
+          592,
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1251,
+      "before": [
+        684,
+        "14",
+        465,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "A delimiter can be a multi-character separator and is not necessarily one character. Source: https://docs.python.org/3/library/stdtypes.html",
+      "replacements": [
+        [
+          684,
+          "14",
+          362,
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1622,
+      "before": [
+        1030,
+        "14",
+        265,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "Carriage return is a control character; replace the overly broad information-object genus. Source: https://docs.python.org/3/reference/lexical_analysis.html",
+      "replacements": [
+        [
+          1030,
+          "14",
+          465,
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1850,
+      "before": [
+        528,
+        "14",
+        992,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "An address designates a location; it is neither the storage itself nor a data structure. Source: https://www.ibm.com/docs/en/zos/3.1.0?topic=testauth-address-expression",
+      "replacements": [
+        [
+          528,
+          "14",
+          "computer_address",
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1853,
+      "before": [
+        580,
+        "14",
+        992,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "An address designates a location; it is neither the storage itself nor a data structure. Source: https://learn.microsoft.com/en-us/windows/win32/winprog/windows-data-types",
+      "replacements": [
+        [
+          580,
+          "14",
+          "computer_address",
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1400,
+      "before": [
+        823,
+        "14",
+        364,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "An address designates a location; it is neither the storage itself nor a data structure. Source: https://www.ibm.com/docs/en/zos/2.5.0?topic=testauth-indirect-address",
+      "replacements": [
+        [
+          823,
+          "14",
+          "computer_address",
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1650,
+      "before": [
+        1057,
+        "14",
+        364,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "An address designates a location; it is neither the storage itself nor a data structure. Source: https://learn.microsoft.com/en-us/cpp/intrinsics/returnaddress",
+      "replacements": [
+        [
+          1057,
+          "14",
+          "computer_address",
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1720,
+      "before": [
+        1125,
+        "14",
+        1124,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "Stream processing is an activity on data; a model of this activity is separate. Source: https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/datastream/execution_mode/",
+      "replacements": [
+        [
+          1125,
+          "14",
+          "data_processing",
+          null,
+          3
+        ]
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "subject": 466,
+      "kod": "20",
+      "object": "string_length",
+      "universum_id": 3,
+      "reason": "Character strings have a length, including zero for the empty string. Source: https://xlinux.nist.gov/dads/HTML/string.html"
+    },
+    {
+      "subject": 523,
+      "kod": "21",
+      "object": "regex_matching",
+      "universum_id": 3,
+      "reason": "A regular-expression pattern is used to match strings. Source: https://docs.python.org/3/library/re.html"
+    },
+    {
+      "subject": "regex_matching",
+      "kod": "27",
+      "object": 466,
+      "universum_id": 3,
+      "reason": "The matching activity acts on the candidate string. Source: https://docs.python.org/3/library/re.html"
+    },
+    {
+      "subject": "data_processing",
+      "kod": "27",
+      "object": 266,
+      "universum_id": 3,
+      "reason": "Data is the object processed, not a causal product of every processing step. Source: https://nightlies.apache.org/flink/flink-docs-stable/docs/learn-flink/overview/"
+    }
+  ],
+  "checks": [
+    {
+      "subject": 1044,
+      "kod": "14",
+      "object": 2699,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rational_number",
+      "kod": "14",
+      "object": 1044,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2656,
+      "kod": "14",
+      "object": 17,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3315,
+      "kod": "14",
+      "object": 20,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2635,
+      "kod": "14",
+      "object": 18,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1044,
+      "kod": "14",
+      "object": 363,
+      "present": false
+    },
+    {
+      "subject": 1044,
+      "kod": "14",
+      "object": 2699,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 24484,
+      "kod": "14",
+      "object": 2699,
+      "present": false
+    },
+    {
+      "subject": 24484,
+      "kod": "14",
+      "object": "rational_number",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 24484,
+      "kod": "14",
+      "object": 2699,
+      "present": false
+    },
+    {
+      "subject": 24484,
+      "kod": "14",
+      "object": "rational_number",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 708,
+      "kod": "14",
+      "object": 363,
+      "present": false
+    },
+    {
+      "subject": 708,
+      "kod": "14",
+      "object": "unsigned_integer_type",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1029,
+      "kod": "14",
+      "object": 363,
+      "present": false
+    },
+    {
+      "subject": 1029,
+      "kod": "14",
+      "object": "unsigned_integer_type",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1168,
+      "kod": "14",
+      "object": 363,
+      "present": false
+    },
+    {
+      "subject": 1168,
+      "kod": "14",
+      "object": "unsigned_integer_type",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 726,
+      "kod": "14",
+      "object": 363,
+      "present": false
+    },
+    {
+      "subject": 726,
+      "kod": "14",
+      "object": 3315,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 441,
+      "kod": "14",
+      "object": 362,
+      "present": false
+    },
+    {
+      "subject": 441,
+      "kod": "14",
+      "object": 443,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 848,
+      "kod": "14",
+      "object": 363,
+      "present": false
+    },
+    {
+      "subject": 848,
+      "kod": "14",
+      "object": 441,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 465,
+      "kod": "14",
+      "object": 363,
+      "present": false
+    },
+    {
+      "subject": 465,
+      "kod": "14",
+      "object": 2656,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1084,
+      "kod": "14",
+      "object": 265,
+      "present": false
+    },
+    {
+      "subject": 1084,
+      "kod": "14",
+      "object": 559,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 466,
+      "kod": "14",
+      "object": 363,
+      "present": false
+    },
+    {
+      "subject": 466,
+      "kod": "14",
+      "object": 1084,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 523,
+      "kod": "14",
+      "object": 466,
+      "present": false
+    },
+    {
+      "subject": 523,
+      "kod": "14",
+      "object": 362,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 524,
+      "kod": "14",
+      "object": 465,
+      "present": false
+    },
+    {
+      "subject": 524,
+      "kod": "14",
+      "object": 592,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 684,
+      "kod": "14",
+      "object": 465,
+      "present": false
+    },
+    {
+      "subject": 684,
+      "kod": "14",
+      "object": 362,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1030,
+      "kod": "14",
+      "object": 265,
+      "present": false
+    },
+    {
+      "subject": 1030,
+      "kod": "14",
+      "object": 465,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 528,
+      "kod": "14",
+      "object": 992,
+      "present": false
+    },
+    {
+      "subject": 528,
+      "kod": "14",
+      "object": "computer_address",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 580,
+      "kod": "14",
+      "object": 992,
+      "present": false
+    },
+    {
+      "subject": 580,
+      "kod": "14",
+      "object": "computer_address",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 823,
+      "kod": "14",
+      "object": 364,
+      "present": false
+    },
+    {
+      "subject": 823,
+      "kod": "14",
+      "object": "computer_address",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1057,
+      "kod": "14",
+      "object": 364,
+      "present": false
+    },
+    {
+      "subject": 1057,
+      "kod": "14",
+      "object": "computer_address",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1125,
+      "kod": "14",
+      "object": 1124,
+      "present": false
+    },
+    {
+      "subject": 1125,
+      "kod": "14",
+      "object": "data_processing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 466,
+      "kod": "20",
+      "object": "string_length",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 523,
+      "kod": "21",
+      "object": "regex_matching",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "regex_matching",
+      "kod": "27",
+      "object": 466,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "data_processing",
+      "kod": "27",
+      "object": 266,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1133,
+      "kod": "14",
+      "object": 466,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 959,
+      "kod": "14",
+      "object": 465,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 932,
+      "kod": "14",
+      "object": 465,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 24481,
+      "kod": "14",
+      "object": 1124,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 468,
+      "kod": "20",
+      "object": 24485,
+      "present": true,
+      "strength": null
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": 1044,
+      "ancestor": 2699,
+      "present": true
+    },
+    {
+      "subject": 1044,
+      "ancestor": 363,
+      "present": false
+    },
+    {
+      "subject": 24484,
+      "ancestor": "rational_number",
+      "present": true
+    },
+    {
+      "subject": 24484,
+      "ancestor": 1044,
+      "present": true
+    },
+    {
+      "subject": 462,
+      "ancestor": 2699,
+      "present": false
+    },
+    {
+      "subject": 463,
+      "ancestor": 1044,
+      "present": false
+    },
+    {
+      "subject": 708,
+      "ancestor": 462,
+      "present": true
+    },
+    {
+      "subject": 1029,
+      "ancestor": 462,
+      "present": true
+    },
+    {
+      "subject": 1168,
+      "ancestor": 462,
+      "present": true
+    },
+    {
+      "subject": 726,
+      "ancestor": 363,
+      "present": false
+    },
+    {
+      "subject": 726,
+      "ancestor": 3315,
+      "present": true
+    },
+    {
+      "subject": 848,
+      "ancestor": 363,
+      "present": false
+    },
+    {
+      "subject": 848,
+      "ancestor": 441,
+      "present": true
+    },
+    {
+      "subject": 441,
+      "ancestor": 443,
+      "present": true
+    },
+    {
+      "subject": 465,
+      "ancestor": 363,
+      "present": false
+    },
+    {
+      "subject": 466,
+      "ancestor": 363,
+      "present": false
+    },
+    {
+      "subject": 1133,
+      "ancestor": 363,
+      "present": false
+    },
+    {
+      "subject": 1133,
+      "ancestor": 466,
+      "present": true
+    },
+    {
+      "subject": 523,
+      "ancestor": 466,
+      "present": false
+    },
+    {
+      "subject": 524,
+      "ancestor": 592,
+      "present": true
+    },
+    {
+      "subject": 592,
+      "ancestor": 363,
+      "present": false
+    },
+    {
+      "subject": 932,
+      "ancestor": 465,
+      "present": true
+    },
+    {
+      "subject": 1030,
+      "ancestor": 465,
+      "present": true
+    },
+    {
+      "subject": 959,
+      "ancestor": 465,
+      "present": true
+    },
+    {
+      "subject": 684,
+      "ancestor": 465,
+      "present": false
+    },
+    {
+      "subject": 528,
+      "ancestor": 992,
+      "present": false
+    },
+    {
+      "subject": 580,
+      "ancestor": 992,
+      "present": false
+    },
+    {
+      "subject": 823,
+      "ancestor": 364,
+      "present": false
+    },
+    {
+      "subject": 1057,
+      "ancestor": 364,
+      "present": false
+    },
+    {
+      "subject": 1125,
+      "ancestor": 1124,
+      "present": false
+    },
+    {
+      "subject": 1125,
+      "ancestor": 318,
+      "present": true
+    },
+    {
+      "subject": "character_type",
+      "ancestor": 363,
+      "present": true
+    },
+    {
+      "subject": "string_type",
+      "ancestor": 363,
+      "present": true
+    },
+    {
+      "subject": "string_length",
+      "ancestor": 2635,
+      "present": true
+    },
+    {
+      "subject": "string_length",
+      "ancestor": 2895,
+      "present": false
+    },
+    {
+      "subject": "regex_matching",
+      "ancestor": 318,
+      "present": true
+    },
+    {
+      "subject": 524,
+      "ancestor": 363,
+      "present": false
+    },
+    {
+      "subject": 592,
+      "ancestor": 363,
+      "present": false
+    },
+    {
+      "subject": 910,
+      "ancestor": 363,
+      "present": false
+    },
+    {
+      "subject": 932,
+      "ancestor": 363,
+      "present": false
+    },
+    {
+      "subject": 959,
+      "ancestor": 363,
+      "present": false
+    },
+    {
+      "subject": 1056,
+      "ancestor": 363,
+      "present": false
+    },
+    {
+      "subject": 1199,
+      "ancestor": 363,
+      "present": false
+    },
+    {
+      "subject": 1030,
+      "ancestor": 363,
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": 363,
+      "term": "data type",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 364,
+      "term": "data structure",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 463,
+      "term": "floating-point",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 464,
+      "term": "boolean",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 465,
+      "term": "character",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 466,
+      "term": "string",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 441,
+      "term": "keyword",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 523,
+      "term": "Regex",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 524,
+      "term": "Curly bracket",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 528,
+      "term": "Absolute address",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 580,
+      "term": "Base address",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 592,
+      "term": "punctuation mark",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 684,
+      "term": "Delimiter",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 726,
+      "term": "Endian",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 823,
+      "term": "Indirect address",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 848,
+      "term": "Java reserved words",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 932,
+      "term": "/n",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 959,
+      "term": "Null character",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 1030,
+      "term": "/r",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 1044,
+      "term": "Real number",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 1057,
+      "term": "Return address",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 1084,
+      "term": "Sequence",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 1125,
+      "term": "Stream processing",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 1133,
+      "term": "Substring",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 463,
+      "term": "floating-point data type",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 463,
+      "term": "тип с плавающей точкой",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 464,
+      "term": "Boolean data type",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 464,
+      "term": "булев тип данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 465,
+      "term": "text character",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 465,
+      "term": "character (text unit)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 466,
+      "term": "character string",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 466,
+      "term": "string value",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 524,
+      "term": "brace",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 524,
+      "term": "curly brace",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 684,
+      "term": "programming delimiter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 708,
+      "term": "DWORD type",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 708,
+      "term": "32-bit unsigned integer type (DWORD)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 708,
+      "term": "тип DWORD",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 708,
+      "term": "32-разрядный беззнаковый целочисленный тип DWORD",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1029,
+      "term": "QWORD type",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1029,
+      "term": "64-bit unsigned integer type (QWORD)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1029,
+      "term": "тип QWORD",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1029,
+      "term": "64-разрядный беззнаковый целочисленный тип QWORD",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1168,
+      "term": "8-bit unsigned integer type",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1168,
+      "term": "8-разрядный беззнаковый целочисленный тип",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 726,
+      "term": "endianness",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 726,
+      "term": "byte order",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 848,
+      "term": "Java reserved keyword",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 848,
+      "term": "зарезервированное ключевое слово Java",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 932,
+      "term": "line feed",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 932,
+      "term": "LF",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 932,
+      "term": "\\n",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1030,
+      "term": "CR",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1030,
+      "term": "\\r",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 959,
+      "term": "NUL character",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 959,
+      "term": "нулевой символ",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1044,
+      "term": "вещественное число",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1084,
+      "term": "data sequence",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1084,
+      "term": "ordered data sequence",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1125,
+      "term": "stream data processing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 465,
+      "term": "char",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 463,
+      "term": "плавающая точка",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 464,
+      "term": "логический",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 524,
+      "term": "open brace",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 708,
+      "term": "\"double word",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 1029,
+      "term": "\"quad word",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 932,
+      "term": "/n",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 1030,
+      "term": "/r",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 1133,
+      "term": "substr",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "character_type",
+      "term": "символьный тип данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "character_type",
+      "term": "character data type",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "character_type",
+      "term": "character type",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "character_type",
+      "term": "char",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "string_type",
+      "term": "строковый тип данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "string_type",
+      "term": "string data type",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "string_type",
+      "term": "string type",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "string_type",
+      "term": "string",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "unsigned_integer_type",
+      "term": "беззнаковый целочисленный тип данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "unsigned_integer_type",
+      "term": "unsigned integer data type",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "unsigned_integer_type",
+      "term": "unsigned integer type",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "unsigned_integer_type",
+      "term": "беззнаковый целочисленный тип",
+      "lang": "ru",
+      "present": true
+    }
+  ]
+}

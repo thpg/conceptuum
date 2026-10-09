@@ -1,0 +1,2614 @@
+{
+  "source": "quality-20261009-q20",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Substance composition, solutions, dispersions and phase-state distinctions; separate chemical compound from physical joining and repair stray physical/mental genera.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "matter": "https://openstax.org/books/chemistry-2e/pages/1-2-phases-and-classification-of-matter",
+      "solution": "https://old.goldbook.iupac.org/html/S/S05746.html",
+      "solute": "https://goldbook.iupac.org/terms/view/S05744",
+      "colloid": "https://goldbook.iupac.org/terms/view/C01174",
+      "suspension": "https://goldbook.iupac.org/terms/view/S06198",
+      "emulsion": "https://goldbook.iupac.org/terms/view/E02065",
+      "aerosol": "https://goldbook.iupac.org/terms/view/A00176/1000",
+      "foam": "https://goldbook.iupac.org/terms/view/F02467",
+      "saturated": "https://goldbook.iupac.org/terms/view/S05471",
+      "supersaturated": "https://goldbook.iupac.org/terms/view/12730",
+      "smoke": "https://old.iupac.org/reports/2001/colloid_2001/manual_of_s_and_t/node33.html",
+      "joining_ru": "https://gramota.ru/poisk?mode=slovari&query=%D0%A1%D0%BE%D0%B5%D0%B4%D0%B8%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet; CC BY 4.0 and Princeton notices remain in docs/quality/2026-10-09-q11.md#sources-and-reuse. OpenStax Chemistry 2e and IUPAC terminology are cited as independent checks of scientific distinctions. Source definitions are not copied verbatim; Russian labels, selected restrictions and graph mappings are editorial adaptations.",
+    "existing_cohort": [
+      18,
+      21,
+      22,
+      24,
+      54,
+      55,
+      58,
+      84,
+      92,
+      176,
+      202,
+      218,
+      1262,
+      1279,
+      1783,
+      1901,
+      2714,
+      3046,
+      3362,
+      3421,
+      3471,
+      3488,
+      4332,
+      4619,
+      4627,
+      4831,
+      4983,
+      5018,
+      5952,
+      19608
+    ],
+    "context_policy": "All new concepts and assertions use U1 with unspecified strength. Existing home contexts and relation grammar stay unchanged. A state of matter is distinct from a material in that state.",
+    "sense_decisions": [
+      {
+        "concept": "pure_substance",
+        "synset": "oewn-14831008-n",
+        "decision": "add",
+        "alignment": "composition restriction",
+        "scope": "Select a chemically defined substance rather than a mixture. Purity here is the compositional classification, not a guarantee about every commercial specimen or a claim about cleanliness."
+      },
+      {
+        "concept": "homogeneous_mixture",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composition-defined family",
+        "scope": "A chemically mixed material with uniform composition in the phase under consideration. Keep the composition classification distinct from physical state."
+      },
+      {
+        "concept": "heterogeneous_mixture",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composition-defined family",
+        "scope": "A chemical mixture whose constituents are not uniformly distributed. A pure substance in two physical states is not automatically a chemical mixture."
+      },
+      {
+        "concept": "physical_joining",
+        "synset": "oewn-00146038-n",
+        "decision": "add",
+        "alignment": "split physical-action sense",
+        "scope": "The physical action of connecting objects. It does not imply synthesis of a chemical compound or every organizational/communication sense of join."
+      },
+      {
+        "concept": "liquid_solution",
+        "synset": "oewn-14613403-n",
+        "decision": "add",
+        "alignment": "physical-state restriction",
+        "scope": "A solution in the liquid state. Liquid is a second genus of this restricted subtype, not of all solutions."
+      },
+      {
+        "concept": "solid_solution",
+        "synset": "oewn-15076272-n",
+        "decision": "add",
+        "alignment": "remove metal-only restriction",
+        "scope": "A solution in the solid state. Do not restrict the family to metal alloys or equate every alloy with a single solid solution."
+      },
+      {
+        "concept": "aqueous_solution",
+        "synset": "oewn-14614092-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A liquid solution with water serving as solvent. This does not make the entire solution a kind of chemically pure water."
+      },
+      {
+        "concept": "solvent",
+        "synset": "oewn-15071880-n",
+        "decision": "add",
+        "alignment": "role and state adaptation",
+        "scope": "The substance assigned the solvent role in a particular solution. Broaden the dictionary liquid-only gloss to allow the reviewed solid solution meaning."
+      },
+      {
+        "concept": "solute",
+        "synset": "oewn-15072416-n",
+        "decision": "add",
+        "alignment": "remove state-change requirement",
+        "scope": "A component regarded as dissolved in a solution. The role depends on that solution; no compulsory change of physical state or chemical reaction is asserted."
+      },
+      {
+        "concept": "saturated_solution",
+        "synset": "oewn-00761468-a",
+        "decision": "add",
+        "alignment": "substance class from scoped property",
+        "scope": "A solution at the saturation condition for the specified solute, temperature and pressure. Concentrated is not imported as an equivalent synonym."
+      },
+      {
+        "concept": "unsaturated_solution",
+        "synset": "oewn-00761835-a",
+        "decision": "add",
+        "alignment": "substance class from scoped property",
+        "scope": "A solution below the saturation condition for the specified solute and conditions. This is distinct from unsaturated chemical bonds or color saturation."
+      },
+      {
+        "concept": "supersaturated_solution",
+        "synset": "oewn-00761695-s",
+        "decision": "add",
+        "alignment": "substance class from scoped property",
+        "scope": "A solution above the equilibrium composition for the specified solute and conditions. No guaranteed crystallization time or trigger is asserted."
+      },
+      {
+        "concept": "saturated_aqueous",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "Intersection of aqueous solution and saturation with respect to a specified solute and conditions."
+      },
+      {
+        "concept": "unsaturated_aqueous",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed two-genus intersection",
+        "scope": "Intersection of aqueous solution and the unsaturated condition for a specified solute."
+      },
+      {
+        "concept": "dispersion_system",
+        "synset": null,
+        "decision": "add",
+        "alignment": "material-system generalization",
+        "scope": "Material with a dispersed portion distributed through a continuous medium. Phase-state differences need not imply multiple chemical substances, so do not force every dispersion beneath chemical mixture."
+      },
+      {
+        "concept": "colloidal_dispersion",
+        "synset": "oewn-14612399-n",
+        "decision": "add",
+        "alignment": "dispersion restriction",
+        "scope": "Select dispersed particles of colloidal scale in a continuous medium. Do not import every broad colloid or macromolecular-solution sense into this restricted family."
+      },
+      {
+        "concept": "suspension_liquid",
+        "synset": "oewn-14615271-n",
+        "decision": "add",
+        "alignment": "liquid-carrier restriction",
+        "scope": "A suspension with solid particles in a liquid carrier. Exclude vehicle suspension, hanging and interruption of an activity."
+      },
+      {
+        "concept": "emulsion",
+        "synset": "oewn-14698745-n",
+        "decision": "add",
+        "alignment": "exclude photographic homonym",
+        "scope": "A liquid dispersed in another liquid medium. Photographic emulsion is a different technical sense; a hard colloidal-size limit is not imposed."
+      },
+      {
+        "concept": "aerosol",
+        "synset": "oewn-11442711-n",
+        "decision": "add",
+        "alignment": "material-system rather than cloud-event genus",
+        "scope": "Particles or droplets carried in a gas. The system is not the gas alone, an aerosol can or necessarily limited to colloidal particle sizes."
+      },
+      {
+        "concept": "liquid_foam",
+        "synset": "oewn-09305630-n",
+        "decision": "add",
+        "alignment": "continuous-phase restriction",
+        "scope": "Gas bubbles dispersed in liquid. Restrict this family to the liquid-continuous case; solid foam and a foaming action are separate meanings."
+      },
+      {
+        "concept": "solid_state",
+        "synset": "oewn-14504356-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The solid phase state, distinct from a material sample, hardness, solidity of construction and the existing narrower frozen wording."
+      },
+      {
+        "concept": 2714,
+        "synset": "oewn-14647071-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The atom-kind versus elemental-substance senses require their own review. Do not force this record beneath the new pure-substance category merely because of a dictionary spelling match."
+      },
+      {
+        "concept": 92,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Everyday water records can include mixed samples and multiple states. Do not make every existing water descendant a chemically pure compound."
+      },
+      {
+        "concept": 4831,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Frozen wording is narrower and may include a transition/result sense; do not silently rename it to all solids."
+      },
+      {
+        "concept": 1262,
+        "synset": "oewn-11442711-n",
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Correct smoke from gas to aerosol, while leaving inherited production percentages and other assertions for separate evidence review."
+      },
+      {
+        "concept": 3046,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "A crystal is not automatically a chemical compound or a chemically pure specimen; preserve its existing material genus."
+      },
+      {
+        "concept": 3362,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Existing suspension is interruption of an activity, not a dispersed material."
+      },
+      {
+        "concept": 3473,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "General mixing need not produce a chemical mixture of distinct substances; do not add a universal product assertion."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-02685776-n",
+        "decision": "exclude or defer",
+        "alignment": "reviewed sense",
+        "scope": "An aerosol dispenser is not its dispersed contents."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-03289393-n",
+        "decision": "exclude or defer",
+        "alignment": "reviewed sense",
+        "scope": "Photographic emulsion is not the selected liquid/liquid dispersion."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-14610949-n",
+        "decision": "exclude or defer",
+        "alignment": "reviewed sense",
+        "scope": "Alloy, metal and solid solution require a dedicated review; not every alloy is a single homogeneous solution."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-00760781-a",
+        "decision": "exclude or defer",
+        "alignment": "reviewed sense",
+        "scope": "Saturated chemical bonding is not solution saturation."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-00394569-a",
+        "decision": "exclude or defer",
+        "alignment": "reviewed sense",
+        "scope": "Color saturation is not solution saturation."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-02033690-a",
+        "decision": "exclude or defer",
+        "alignment": "reviewed sense",
+        "scope": "Financially solvent is not a solution component."
+      }
+    ],
+    "limits": "No experimental procedure, numerical composition, temperature, pressure, particle-size boundary or universal solubility is imported. Saturation labels refer to a specified solute and conditions; no unconditional exclusion between saturation classes is asserted. Dispersions are not forced under chemical mixture, because differences of phase state do not necessarily imply different chemical substances. Existing water, elements, alloys, frozen-state wording, material percentages and other upper-graph candidates remain for separate review. No application test suites.",
+    "exclusion_review": {
+      "context": "U1 positive genus witnesses",
+      "before_conflicting_edges": 19,
+      "resolved_edges": [
+        7998,
+        8030
+      ],
+      "decision": "Retain object/phenomenon and physical/mental-process exclusions. Remove their mixed-sense or wrong-genus witnesses. The property/phenomenon pair also loses the dark-grey lighting witness; other witnesses remain pending.",
+      "remaining_candidates_expected": 17
+    },
+    "new_term_collisions": [
+      {
+        "key": "physical_joining",
+        "term": "join",
+        "lang": "en",
+        "existing": [
+          [
+            3488,
+            "соединение"
+          ]
+        ]
+      },
+      {
+        "key": "physical_joining",
+        "term": "to join",
+        "lang": "en",
+        "existing": [
+          [
+            3488,
+            "соединение"
+          ]
+        ]
+      },
+      {
+        "key": "physical_joining",
+        "term": "соединение",
+        "lang": "ru",
+        "existing": [
+          [
+            3488,
+            "соединение"
+          ]
+        ]
+      },
+      {
+        "key": "physical_joining",
+        "term": "соединить",
+        "lang": "ru",
+        "existing": [
+          [
+            3488,
+            "соединение"
+          ]
+        ]
+      },
+      {
+        "key": "physical_joining",
+        "term": "соединять",
+        "lang": "ru",
+        "existing": [
+          [
+            3488,
+            "соединение"
+          ]
+        ]
+      },
+      {
+        "key": "physical_joining",
+        "term": "соединяться",
+        "lang": "ru",
+        "existing": [
+          [
+            3488,
+            "соединение"
+          ]
+        ]
+      }
+    ],
+    "collision_decision": "Move four valid action lookup forms off chemical compound 3488 to physical joining and correctly tag the Russian verb soedinit as Russian. Keep the ambiguous Russian noun on both explicitly qualified senses. No other collision is accepted.",
+    "refreshed_comparison": {
+      "baseline": "Q19",
+      "existing_concepts": 12843,
+      "existing_terms": 36232,
+      "synsets_with_exact_en_candidate": 15525,
+      "synsets_without_exact_en_candidate": 91994,
+      "existing_concepts_with_dictionary_candidate": 4109,
+      "caveat": "Normalized English spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "pure_substance",
+      "name": "чистое химическое вещество",
+      "parent": 21,
+      "universum_id": 1,
+      "terms": [
+        [
+          "чистое химическое вещество",
+          "ru"
+        ],
+        [
+          "pure chemical substance",
+          "en"
+        ],
+        [
+          "pure substance",
+          "en"
+        ]
+      ],
+      "reason": "Select a chemically defined substance rather than a mixture. Purity here is the compositional classification, not a guarantee about every commercial specimen or a claim about cleanliness. OEWN 2025: oewn-14831008-n. Source: https://openstax.org/books/chemistry-2e/pages/1-2-phases-and-classification-of-matter"
+    },
+    {
+      "key": "homogeneous_mixture",
+      "name": "однородная смесь",
+      "parent": 3471,
+      "universum_id": 1,
+      "terms": [
+        [
+          "однородная смесь",
+          "ru"
+        ],
+        [
+          "homogeneous mixture",
+          "en"
+        ],
+        [
+          "гомогенная смесь",
+          "ru"
+        ]
+      ],
+      "reason": "A chemically mixed material with uniform composition in the phase under consideration. Keep the composition classification distinct from physical state. Source: https://openstax.org/books/chemistry-2e/pages/1-2-phases-and-classification-of-matter"
+    },
+    {
+      "key": "heterogeneous_mixture",
+      "name": "неоднородная смесь",
+      "parent": 3471,
+      "universum_id": 1,
+      "terms": [
+        [
+          "неоднородная смесь",
+          "ru"
+        ],
+        [
+          "heterogeneous mixture",
+          "en"
+        ],
+        [
+          "гетерогенная смесь",
+          "ru"
+        ]
+      ],
+      "reason": "A chemical mixture whose constituents are not uniformly distributed. A pure substance in two physical states is not automatically a chemical mixture. Source: https://openstax.org/books/chemistry-2e/pages/1-2-phases-and-classification-of-matter"
+    },
+    {
+      "key": "physical_joining",
+      "name": "соединение (физическое действие)",
+      "parent": 5017,
+      "universum_id": 1,
+      "terms": [
+        [
+          "соединение (физическое действие)",
+          "ru"
+        ],
+        [
+          "physical joining",
+          "en"
+        ],
+        [
+          "joining (physical action)",
+          "en"
+        ],
+        [
+          "join",
+          "en"
+        ],
+        [
+          "to join",
+          "en"
+        ],
+        [
+          "соединение",
+          "ru"
+        ],
+        [
+          "соединить",
+          "ru"
+        ],
+        [
+          "соединять",
+          "ru"
+        ],
+        [
+          "соединяться",
+          "ru"
+        ]
+      ],
+      "reason": "The physical action of connecting objects. It does not imply synthesis of a chemical compound or every organizational/communication sense of join. OEWN 2025: oewn-00146038-n. Source: https://gramota.ru/poisk?mode=slovari&query=%D0%A1%D0%BE%D0%B5%D0%B4%D0%B8%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5"
+    },
+    {
+      "key": "liquid_solution",
+      "name": "жидкий раствор",
+      "parent": 3421,
+      "universum_id": 1,
+      "terms": [
+        [
+          "жидкий раствор",
+          "ru"
+        ],
+        [
+          "liquid solution",
+          "en"
+        ]
+      ],
+      "reason": "A solution in the liquid state. Liquid is a second genus of this restricted subtype, not of all solutions. OEWN 2025: oewn-14613403-n. Source: https://old.goldbook.iupac.org/html/S/S05746.html"
+    },
+    {
+      "key": "solid_solution",
+      "name": "твёрдый раствор",
+      "parent": 3421,
+      "universum_id": 1,
+      "terms": [
+        [
+          "твёрдый раствор",
+          "ru"
+        ],
+        [
+          "solid solution",
+          "en"
+        ]
+      ],
+      "reason": "A solution in the solid state. Do not restrict the family to metal alloys or equate every alloy with a single solid solution. OEWN 2025: oewn-15076272-n. Source: https://old.goldbook.iupac.org/html/S/S05746.html"
+    },
+    {
+      "key": "aqueous_solution",
+      "name": "водный раствор",
+      "parent": "liquid_solution",
+      "universum_id": 1,
+      "terms": [
+        [
+          "водный раствор",
+          "ru"
+        ],
+        [
+          "aqueous solution",
+          "en"
+        ]
+      ],
+      "reason": "A liquid solution with water serving as solvent. This does not make the entire solution a kind of chemically pure water. OEWN 2025: oewn-14614092-n. Source: https://old.goldbook.iupac.org/html/S/S05746.html"
+    },
+    {
+      "key": "solvent",
+      "name": "растворитель (компонент раствора)",
+      "parent": 21,
+      "universum_id": 1,
+      "terms": [
+        [
+          "растворитель (компонент раствора)",
+          "ru"
+        ],
+        [
+          "solvent (solution component)",
+          "en"
+        ],
+        [
+          "solvent",
+          "en"
+        ],
+        [
+          "растворитель",
+          "ru"
+        ]
+      ],
+      "reason": "The substance assigned the solvent role in a particular solution. Broaden the dictionary liquid-only gloss to allow the reviewed solid solution meaning. OEWN 2025: oewn-15071880-n. Source: https://old.goldbook.iupac.org/html/S/S05746.html"
+    },
+    {
+      "key": "solute",
+      "name": "растворённое вещество",
+      "parent": 21,
+      "universum_id": 1,
+      "terms": [
+        [
+          "растворённое вещество",
+          "ru"
+        ],
+        [
+          "solute",
+          "en"
+        ]
+      ],
+      "reason": "A component regarded as dissolved in a solution. The role depends on that solution; no compulsory change of physical state or chemical reaction is asserted. OEWN 2025: oewn-15072416-n. Source: https://goldbook.iupac.org/terms/view/S05744"
+    },
+    {
+      "key": "saturated_solution",
+      "name": "насыщенный раствор",
+      "parent": 3421,
+      "universum_id": 1,
+      "terms": [
+        [
+          "насыщенный раствор",
+          "ru"
+        ],
+        [
+          "saturated solution",
+          "en"
+        ]
+      ],
+      "reason": "A solution at the saturation condition for the specified solute, temperature and pressure. Concentrated is not imported as an equivalent synonym. OEWN 2025: oewn-00761468-a. Source: https://goldbook.iupac.org/terms/view/S05471"
+    },
+    {
+      "key": "unsaturated_solution",
+      "name": "ненасыщенный раствор",
+      "parent": 3421,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ненасыщенный раствор",
+          "ru"
+        ],
+        [
+          "unsaturated solution",
+          "en"
+        ]
+      ],
+      "reason": "A solution below the saturation condition for the specified solute and conditions. This is distinct from unsaturated chemical bonds or color saturation. OEWN 2025: oewn-00761835-a. Source: https://goldbook.iupac.org/terms/view/S05471"
+    },
+    {
+      "key": "supersaturated_solution",
+      "name": "пересыщенный раствор",
+      "parent": 3421,
+      "universum_id": 1,
+      "terms": [
+        [
+          "пересыщенный раствор",
+          "ru"
+        ],
+        [
+          "supersaturated solution",
+          "en"
+        ]
+      ],
+      "reason": "A solution above the equilibrium composition for the specified solute and conditions. No guaranteed crystallization time or trigger is asserted. OEWN 2025: oewn-00761695-s. Source: https://goldbook.iupac.org/terms/view/12730"
+    },
+    {
+      "key": "saturated_aqueous",
+      "name": "насыщенный водный раствор",
+      "parent": "saturated_solution",
+      "universum_id": 1,
+      "terms": [
+        [
+          "насыщенный водный раствор",
+          "ru"
+        ],
+        [
+          "saturated aqueous solution",
+          "en"
+        ]
+      ],
+      "reason": "Intersection of aqueous solution and saturation with respect to a specified solute and conditions. Source: https://goldbook.iupac.org/terms/view/S05471"
+    },
+    {
+      "key": "unsaturated_aqueous",
+      "name": "ненасыщенный водный раствор",
+      "parent": "unsaturated_solution",
+      "universum_id": 1,
+      "terms": [
+        [
+          "ненасыщенный водный раствор",
+          "ru"
+        ],
+        [
+          "unsaturated aqueous solution",
+          "en"
+        ]
+      ],
+      "reason": "Intersection of aqueous solution and the unsaturated condition for a specified solute. Source: https://goldbook.iupac.org/terms/view/S05471"
+    },
+    {
+      "key": "dispersion_system",
+      "name": "дисперсная система",
+      "parent": 21,
+      "universum_id": 1,
+      "terms": [
+        [
+          "дисперсная система",
+          "ru"
+        ],
+        [
+          "dispersion (material system)",
+          "en"
+        ],
+        [
+          "dispersed material system",
+          "en"
+        ]
+      ],
+      "reason": "Material with a dispersed portion distributed through a continuous medium. Phase-state differences need not imply multiple chemical substances, so do not force every dispersion beneath chemical mixture. Source: https://goldbook.iupac.org/terms/view/C01174"
+    },
+    {
+      "key": "colloidal_dispersion",
+      "name": "коллоидная дисперсная система",
+      "parent": "dispersion_system",
+      "universum_id": 1,
+      "terms": [
+        [
+          "коллоидная дисперсная система",
+          "ru"
+        ],
+        [
+          "colloidal dispersion",
+          "en"
+        ]
+      ],
+      "reason": "Select dispersed particles of colloidal scale in a continuous medium. Do not import every broad colloid or macromolecular-solution sense into this restricted family. OEWN 2025: oewn-14612399-n. Source: https://goldbook.iupac.org/terms/view/C01174"
+    },
+    {
+      "key": "suspension_liquid",
+      "name": "суспензия (твёрдые частицы в жидкости)",
+      "parent": "dispersion_system",
+      "universum_id": 1,
+      "terms": [
+        [
+          "суспензия (твёрдые частицы в жидкости)",
+          "ru"
+        ],
+        [
+          "suspension (solids in liquid)",
+          "en"
+        ],
+        [
+          "суспензия",
+          "ru"
+        ]
+      ],
+      "reason": "A suspension with solid particles in a liquid carrier. Exclude vehicle suspension, hanging and interruption of an activity. OEWN 2025: oewn-14615271-n. Source: https://goldbook.iupac.org/terms/view/S06198"
+    },
+    {
+      "key": "emulsion",
+      "name": "эмульсия (жидкая дисперсная система)",
+      "parent": "dispersion_system",
+      "universum_id": 1,
+      "terms": [
+        [
+          "эмульсия (жидкая дисперсная система)",
+          "ru"
+        ],
+        [
+          "emulsion (liquid dispersion)",
+          "en"
+        ],
+        [
+          "эмульсия",
+          "ru"
+        ]
+      ],
+      "reason": "A liquid dispersed in another liquid medium. Photographic emulsion is a different technical sense; a hard colloidal-size limit is not imposed. OEWN 2025: oewn-14698745-n. Source: https://goldbook.iupac.org/terms/view/E02065"
+    },
+    {
+      "key": "aerosol",
+      "name": "аэрозоль (дисперсная система)",
+      "parent": "dispersion_system",
+      "universum_id": 1,
+      "terms": [
+        [
+          "аэрозоль (дисперсная система)",
+          "ru"
+        ],
+        [
+          "aerosol (particle dispersion)",
+          "en"
+        ],
+        [
+          "аэрозоль",
+          "ru"
+        ]
+      ],
+      "reason": "Particles or droplets carried in a gas. The system is not the gas alone, an aerosol can or necessarily limited to colloidal particle sizes. OEWN 2025: oewn-11442711-n. Source: https://goldbook.iupac.org/terms/view/A00176/1000"
+    },
+    {
+      "key": "liquid_foam",
+      "name": "пена в жидкости",
+      "parent": "dispersion_system",
+      "universum_id": 1,
+      "terms": [
+        [
+          "пена в жидкости",
+          "ru"
+        ],
+        [
+          "liquid foam",
+          "en"
+        ]
+      ],
+      "reason": "Gas bubbles dispersed in liquid. Restrict this family to the liquid-continuous case; solid foam and a foaming action are separate meanings. OEWN 2025: oewn-09305630-n. Source: https://goldbook.iupac.org/terms/view/F02467"
+    },
+    {
+      "key": "solid_state",
+      "name": "твёрдое состояние вещества",
+      "parent": 5018,
+      "universum_id": 1,
+      "terms": [
+        [
+          "твёрдое состояние вещества",
+          "ru"
+        ],
+        [
+          "solid state of matter",
+          "en"
+        ],
+        [
+          "solid state",
+          "en"
+        ]
+      ],
+      "reason": "The solid phase state, distinct from a material sample, hardness, solidity of construction and the existing narrower frozen wording. OEWN 2025: oewn-14504356-n. Source: https://openstax.org/books/chemistry-2e/pages/1-2-phases-and-classification-of-matter"
+    }
+  ],
+  "renames": [
+    {
+      "id": 3488,
+      "before": "соединение",
+      "name": "химическое соединение",
+      "terms": [],
+      "reason": "Keep the chemical-compound sense on the existing substance record. A joining action and the substance it does not necessarily produce are separate concepts. OEWN 2025: oewn-14842408-n. Source: https://gramota.ru/poisk?mode=slovari&query=%D0%A1%D0%BE%D0%B5%D0%B4%D0%B8%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5"
+    },
+    {
+      "id": 4627,
+      "before": "жидкое",
+      "name": "жидкое состояние вещества",
+      "terms": [],
+      "reason": "Label the liquid phase state explicitly, distinct from liquid matter 22. Preserve valid Russian forms; remove the false material genus. OEWN 2025: oewn-14504004-n."
+    },
+    {
+      "id": 4619,
+      "before": "газообразное",
+      "name": "газообразное состояние вещества",
+      "terms": [],
+      "reason": "Qualify the existing phase-state meaning without creating a duplicate gas substance. OEWN 2025: oewn-14504664-n."
+    },
+    {
+      "id": 4332,
+      "before": "растворение",
+      "name": "растворение (образование раствора)",
+      "terms": [],
+      "reason": "Select the physical process of forming a solution. It is not dissolving a meeting, relationship or organization. OEWN 2025: oewn-13489297-n."
+    }
+  ],
+  "terms": [
+    {
+      "id": 3488,
+      "name": "химическое соединение",
+      "terms": [
+        [
+          "chemical compound",
+          "en"
+        ],
+        [
+          "compound (chemical substance)",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the material sense; do not import linguistic, financial, military or joining-action homonyms. OEWN 2025: oewn-14842408-n."
+    },
+    {
+      "id": 3471,
+      "name": "смесь",
+      "terms": [
+        [
+          "mixture (material)",
+          "en"
+        ]
+      ],
+      "reason": "The existing substance record denotes a material mixture, not the mixing action or an assortment of unrelated objects. OEWN 2025: oewn-14610438-n."
+    },
+    {
+      "id": 3421,
+      "name": "раствор",
+      "terms": [
+        [
+          "solution (chemistry)",
+          "en"
+        ]
+      ],
+      "reason": "Retain the general chemical solution sense; exclude a mathematical root, answer, problem-solving method or construction mortar. OEWN 2025: oewn-14613403-n."
+    },
+    {
+      "id": 4627,
+      "name": "жидкое состояние вещества",
+      "terms": [
+        [
+          "liquid state",
+          "en"
+        ],
+        [
+          "liquid state of matter",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the state meaning while retaining the valid English liquid homonym. OEWN 2025: oewn-14504004-n."
+    },
+    {
+      "id": 4619,
+      "name": "газообразное состояние вещества",
+      "terms": [
+        [
+          "gaseous state",
+          "en"
+        ],
+        [
+          "gas state of matter",
+          "en"
+        ]
+      ],
+      "reason": "The state of matter is distinct from gas as a material. OEWN 2025: oewn-14504664-n."
+    },
+    {
+      "id": 4332,
+      "name": "растворение (образование раствора)",
+      "terms": [
+        [
+          "dissolution (solution formation)",
+          "en"
+        ],
+        [
+          "dissolving (chemistry)",
+          "en"
+        ],
+        [
+          "растворить",
+          "ru"
+        ],
+        [
+          "растворять",
+          "ru"
+        ]
+      ],
+      "reason": "Do not import the dictionary liquefaction genus: formation of a solution is not necessarily melting. OEWN 2025: oewn-13489297-n."
+    },
+    {
+      "id": 1783,
+      "name": "сверление",
+      "terms": [
+        [
+          "drilling (holes)",
+          "en"
+        ],
+        [
+          "сверлить",
+          "ru"
+        ]
+      ],
+      "reason": "Qualify physical drilling rather than instructional practice. OEWN 2025: oewn-00944615-n."
+    },
+    {
+      "id": 5952,
+      "name": "сожаление",
+      "terms": [
+        [
+          "regret (emotion)",
+          "en"
+        ],
+        [
+          "regret",
+          "en"
+        ],
+        [
+          "сожалеть",
+          "ru"
+        ]
+      ],
+      "reason": "Use normal emotional vocabulary rather than the different verb sense of politely declining. OEWN 2025: oewn-07551058-n."
+    },
+    {
+      "id": 4983,
+      "name": "тёмно-серое",
+      "terms": [
+        [
+          "dark gray",
+          "en"
+        ],
+        [
+          "dark grey (color)",
+          "en"
+        ]
+      ],
+      "reason": "Add the American spelling and a qualified color lookup."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 3488,
+      "term": "join",
+      "lang": "en",
+      "reason": "Move valid physical-action lookup forms to the separate joining record; discard only the generated suffix artifact and the Russian verb incorrectly tagged as English."
+    },
+    {
+      "id": 3488,
+      "term": "to join",
+      "lang": "en",
+      "reason": "Move valid physical-action lookup forms to the separate joining record; discard only the generated suffix artifact and the Russian verb incorrectly tagged as English."
+    },
+    {
+      "id": 3488,
+      "term": "соединять",
+      "lang": "ru",
+      "reason": "Move valid physical-action lookup forms to the separate joining record; discard only the generated suffix artifact and the Russian verb incorrectly tagged as English."
+    },
+    {
+      "id": 3488,
+      "term": "соединяться",
+      "lang": "ru",
+      "reason": "Move valid physical-action lookup forms to the separate joining record; discard only the generated suffix artifact and the Russian verb incorrectly tagged as English."
+    },
+    {
+      "id": 3488,
+      "term": "соединиение",
+      "lang": "ru",
+      "reason": "Move valid physical-action lookup forms to the separate joining record; discard only the generated suffix artifact and the Russian verb incorrectly tagged as English."
+    },
+    {
+      "id": 3488,
+      "term": "СОЕДИНИТЬ",
+      "lang": "en",
+      "reason": "Move valid physical-action lookup forms to the separate joining record; discard only the generated suffix artifact and the Russian verb incorrectly tagged as English."
+    },
+    {
+      "id": 4627,
+      "term": "жидкее",
+      "lang": "en",
+      "reason": "The Russian comparative is not an English term. Its correctly tagged Russian form is retained pending a separate degree/property review."
+    },
+    {
+      "id": 4332,
+      "term": "раствориение",
+      "lang": "ru",
+      "reason": "Remove a generated suffix artifact or Russian verb tagged as English; correct Russian verb forms are kept."
+    },
+    {
+      "id": 4332,
+      "term": "РАСТВОРИТЬ",
+      "lang": "en",
+      "reason": "Remove a generated suffix artifact or Russian verb tagged as English; correct Russian verb forms are kept."
+    },
+    {
+      "id": 1783,
+      "term": "сверлиение",
+      "lang": "ru",
+      "reason": "Remove the doubled suffix or wrong language tag; retain the normal noun and Russian verb."
+    },
+    {
+      "id": 1783,
+      "term": "СВЕРЛИТЬ",
+      "lang": "en",
+      "reason": "Remove the doubled suffix or wrong language tag; retain the normal noun and Russian verb."
+    },
+    {
+      "id": 5952,
+      "term": "сожалеение",
+      "lang": "ru",
+      "reason": "Remove the doubled suffix or wrong language tag; retain the normal noun and Russian verb."
+    },
+    {
+      "id": 5952,
+      "term": "СОЖАЛЕТЬ",
+      "lang": "en",
+      "reason": "Remove the doubled suffix or wrong language tag; retain the normal noun and Russian verb."
+    },
+    {
+      "id": 4983,
+      "term": "темно-серое",
+      "lang": "en",
+      "reason": "Remove the Russian color form tagged as English; its valid Russian terms remain."
+    }
+  ],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 5758,
+      "before": [
+        3488,
+        "14",
+        21,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          3488,
+          "14",
+          "pure_substance",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the chemical-compound family through the compositional substance category. Do not equate a physical blend with a chemical compound. OEWN 2025: oewn-14842408-n. Source: https://openstax.org/books/chemistry-2e/pages/1-2-phases-and-classification-of-matter"
+    },
+    {
+      "id": 10980,
+      "before": [
+        3488,
+        "14",
+        202,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [],
+      "reason": "A chemical compound is not a physiological process. The physical joining sense receives its own action record. OEWN 2025: oewn-14842408-n."
+    },
+    {
+      "id": 5691,
+      "before": [
+        3421,
+        "14",
+        22,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          3421,
+          "14",
+          "homogeneous_mixture",
+          null,
+          1
+        ]
+      ],
+      "reason": "A solution need not be liquid. Use homogeneous mixture as the genus and distinguish liquid and solid solution subtypes. OEWN 2025: oewn-14613403-n. Source: https://old.goldbook.iupac.org/html/S/S05746.html"
+    },
+    {
+      "id": 1937,
+      "before": [
+        1262,
+        "14",
+        24,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1262,
+          "14",
+          "aerosol",
+          null,
+          1
+        ]
+      ],
+      "reason": "Smoke includes dispersed particles carried in gas; it is not simply a gaseous substance. Preserve existing production facts for separate review. OEWN 2025: oewn-11442711-n. Source: https://old.iupac.org/reports/2001/colloid_2001/manual_of_s_and_t/node33.html"
+    },
+    {
+      "id": 10503,
+      "before": [
+        4627,
+        "14",
+        22,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [],
+      "reason": "A liquid state is a state of matter, not a sample or class of liquid substances. Retain its state-of-matter genus and the material-to-state attribute links. OEWN 2025: oewn-14504004-n."
+    },
+    {
+      "id": 12408,
+      "before": [
+        4332,
+        "14",
+        64,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [],
+      "reason": "The selected material dissolution is not communication; remove the stray genus while preserving its physical-process parent. OEWN 2025: oewn-13489297-n."
+    },
+    {
+      "id": 17784,
+      "before": [
+        1783,
+        "14",
+        58,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [],
+      "reason": "Drilling holes is the physical process selected by the existing drill-tool purpose; it is not repetitive learning or a mental process. OEWN 2025: oewn-00944615-n."
+    },
+    {
+      "id": 17303,
+      "before": [
+        5952,
+        "14",
+        55,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [],
+      "reason": "Regret denotes an emotion in this record, not bodily motion. Keep the existing emotion genus. OEWN 2025: oewn-07551058-n."
+    },
+    {
+      "id": 28493,
+      "before": [
+        4983,
+        "14",
+        1901,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [],
+      "reason": "Dark grey is a color property, not the physical process of lighting. Keep its existing color genus."
+    }
+  ],
+  "edges": [
+    {
+      "subject": "liquid_solution",
+      "kod": "14",
+      "object": 22,
+      "universum_id": 1,
+      "reason": "The restricted liquid solution is both a solution and liquid matter. Source: https://old.goldbook.iupac.org/html/S/S05746.html"
+    },
+    {
+      "subject": "solid_solution",
+      "kod": "14",
+      "object": 84,
+      "universum_id": 1,
+      "reason": "The restricted solid solution is both a solution and solid matter. Source: https://old.goldbook.iupac.org/html/S/S05746.html"
+    },
+    {
+      "subject": "saturated_aqueous",
+      "kod": "14",
+      "object": "aqueous_solution",
+      "universum_id": 1,
+      "reason": "Keep both reviewed dimensions of this intersection rather than choosing only solvent or saturation as the genus."
+    },
+    {
+      "subject": "unsaturated_aqueous",
+      "kod": "14",
+      "object": "aqueous_solution",
+      "universum_id": 1,
+      "reason": "Keep both reviewed dimensions of this intersection rather than choosing only solvent or saturation as the genus."
+    },
+    {
+      "subject": 19608,
+      "kod": "14",
+      "object": "physical_joining",
+      "universum_id": 1,
+      "reason": "The explicitly selected riveting process joins physical parts. Preserve its fastening genus and all Q18 conditions."
+    },
+    {
+      "subject": "physical_joining",
+      "kod": "27",
+      "object": 24469,
+      "universum_id": 1,
+      "reason": "This scoped joining action acts on physical objects, not chemical formulas or organizational memberships."
+    },
+    {
+      "subject": 3421,
+      "kod": "20",
+      "object": "solvent",
+      "universum_id": 1,
+      "reason": "The selected material has this component role, medium or physical state; component presence is not a genus claim."
+    },
+    {
+      "subject": 3421,
+      "kod": "20",
+      "object": "solute",
+      "universum_id": 1,
+      "reason": "The selected material has this component role, medium or physical state; component presence is not a genus claim."
+    },
+    {
+      "subject": "aerosol",
+      "kod": "20",
+      "object": 24,
+      "universum_id": 1,
+      "reason": "The selected material has this component role, medium or physical state; component presence is not a genus claim."
+    },
+    {
+      "subject": "suspension_liquid",
+      "kod": "20",
+      "object": 84,
+      "universum_id": 1,
+      "reason": "The selected material has this component role, medium or physical state; component presence is not a genus claim."
+    },
+    {
+      "subject": "suspension_liquid",
+      "kod": "20",
+      "object": 22,
+      "universum_id": 1,
+      "reason": "The selected material has this component role, medium or physical state; component presence is not a genus claim."
+    },
+    {
+      "subject": "emulsion",
+      "kod": "20",
+      "object": 22,
+      "universum_id": 1,
+      "reason": "The selected material has this component role, medium or physical state; component presence is not a genus claim."
+    },
+    {
+      "subject": "liquid_foam",
+      "kod": "20",
+      "object": 24,
+      "universum_id": 1,
+      "reason": "The selected material has this component role, medium or physical state; component presence is not a genus claim."
+    },
+    {
+      "subject": "liquid_foam",
+      "kod": "20",
+      "object": 22,
+      "universum_id": 1,
+      "reason": "The selected material has this component role, medium or physical state; component presence is not a genus claim."
+    },
+    {
+      "subject": 84,
+      "kod": "20",
+      "object": "solid_state",
+      "universum_id": 1,
+      "reason": "The selected material has this component role, medium or physical state; component presence is not a genus claim."
+    },
+    {
+      "subject": 4332,
+      "kod": "70",
+      "object": 3421,
+      "universum_id": 1,
+      "reason": "The selected solution-formation process produces a solution; other dissolution homonyms are excluded. OEWN 2025: oewn-13489297-n."
+    },
+    {
+      "subject": 4332,
+      "kod": "27",
+      "object": "solute",
+      "universum_id": 1,
+      "reason": "The selected dissolution acts on the material entering solution; no solute-specific procedure is encoded."
+    },
+    {
+      "subject": 3471,
+      "kod": "61",
+      "object": "pure_substance",
+      "universum_id": 1,
+      "reason": "A chemical mixture and a chemically pure substance are distinct composition classes; no physical-state exclusion is implied. Source: https://openstax.org/books/chemistry-2e/pages/1-2-phases-and-classification-of-matter"
+    }
+  ],
+  "checks": [
+    {
+      "subject": "pure_substance",
+      "kod": "14",
+      "object": 21,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "homogeneous_mixture",
+      "kod": "14",
+      "object": 3471,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "heterogeneous_mixture",
+      "kod": "14",
+      "object": 3471,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3488,
+      "kod": "14",
+      "object": 21,
+      "present": false
+    },
+    {
+      "subject": 3488,
+      "kod": "14",
+      "object": "pure_substance",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3488,
+      "kod": "14",
+      "object": 202,
+      "present": false
+    },
+    {
+      "subject": "physical_joining",
+      "kod": "14",
+      "object": 5017,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3421,
+      "kod": "14",
+      "object": 22,
+      "present": false
+    },
+    {
+      "subject": 3421,
+      "kod": "14",
+      "object": "homogeneous_mixture",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "liquid_solution",
+      "kod": "14",
+      "object": 3421,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "solid_solution",
+      "kod": "14",
+      "object": 3421,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "aqueous_solution",
+      "kod": "14",
+      "object": "liquid_solution",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "solvent",
+      "kod": "14",
+      "object": 21,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "solute",
+      "kod": "14",
+      "object": 21,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "saturated_solution",
+      "kod": "14",
+      "object": 3421,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "unsaturated_solution",
+      "kod": "14",
+      "object": 3421,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "supersaturated_solution",
+      "kod": "14",
+      "object": 3421,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "saturated_aqueous",
+      "kod": "14",
+      "object": "saturated_solution",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "unsaturated_aqueous",
+      "kod": "14",
+      "object": "unsaturated_solution",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "dispersion_system",
+      "kod": "14",
+      "object": 21,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "colloidal_dispersion",
+      "kod": "14",
+      "object": "dispersion_system",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "suspension_liquid",
+      "kod": "14",
+      "object": "dispersion_system",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "emulsion",
+      "kod": "14",
+      "object": "dispersion_system",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "aerosol",
+      "kod": "14",
+      "object": "dispersion_system",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "liquid_foam",
+      "kod": "14",
+      "object": "dispersion_system",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1262,
+      "kod": "14",
+      "object": 24,
+      "present": false
+    },
+    {
+      "subject": 1262,
+      "kod": "14",
+      "object": "aerosol",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 4627,
+      "kod": "14",
+      "object": 22,
+      "present": false
+    },
+    {
+      "subject": "solid_state",
+      "kod": "14",
+      "object": 5018,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 4332,
+      "kod": "14",
+      "object": 64,
+      "present": false
+    },
+    {
+      "subject": 1783,
+      "kod": "14",
+      "object": 58,
+      "present": false
+    },
+    {
+      "subject": 5952,
+      "kod": "14",
+      "object": 55,
+      "present": false
+    },
+    {
+      "subject": 4983,
+      "kod": "14",
+      "object": 1901,
+      "present": false
+    },
+    {
+      "subject": "liquid_solution",
+      "kod": "14",
+      "object": 22,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "solid_solution",
+      "kod": "14",
+      "object": 84,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "saturated_aqueous",
+      "kod": "14",
+      "object": "aqueous_solution",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "unsaturated_aqueous",
+      "kod": "14",
+      "object": "aqueous_solution",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 19608,
+      "kod": "14",
+      "object": "physical_joining",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "physical_joining",
+      "kod": "27",
+      "object": 24469,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3421,
+      "kod": "20",
+      "object": "solvent",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3421,
+      "kod": "20",
+      "object": "solute",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "aerosol",
+      "kod": "20",
+      "object": 24,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "suspension_liquid",
+      "kod": "20",
+      "object": 84,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "suspension_liquid",
+      "kod": "20",
+      "object": 22,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "emulsion",
+      "kod": "20",
+      "object": 22,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "liquid_foam",
+      "kod": "20",
+      "object": 24,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "liquid_foam",
+      "kod": "20",
+      "object": 22,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 84,
+      "kod": "20",
+      "object": "solid_state",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 4332,
+      "kod": "70",
+      "object": 3421,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 4332,
+      "kod": "27",
+      "object": "solute",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3471,
+      "kod": "61",
+      "object": "pure_substance",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "saturated_solution",
+      "kod": "61",
+      "object": "unsaturated_solution",
+      "present": false
+    },
+    {
+      "subject": "supersaturated_solution",
+      "kod": "70",
+      "object": 3046,
+      "present": false
+    },
+    {
+      "subject": "physical_joining",
+      "kod": "70",
+      "object": 3488,
+      "present": false
+    },
+    {
+      "subject": 3421,
+      "kod": "14",
+      "object": 22,
+      "present": false
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "pure_substance",
+      "ancestor": 21,
+      "present": true
+    },
+    {
+      "subject": "homogeneous_mixture",
+      "ancestor": 3471,
+      "present": true
+    },
+    {
+      "subject": "heterogeneous_mixture",
+      "ancestor": 3471,
+      "present": true
+    },
+    {
+      "subject": "physical_joining",
+      "ancestor": 5017,
+      "present": true
+    },
+    {
+      "subject": "liquid_solution",
+      "ancestor": 3421,
+      "present": true
+    },
+    {
+      "subject": "solid_solution",
+      "ancestor": 3421,
+      "present": true
+    },
+    {
+      "subject": "aqueous_solution",
+      "ancestor": "liquid_solution",
+      "present": true
+    },
+    {
+      "subject": "solvent",
+      "ancestor": 21,
+      "present": true
+    },
+    {
+      "subject": "solute",
+      "ancestor": 21,
+      "present": true
+    },
+    {
+      "subject": "saturated_solution",
+      "ancestor": 3421,
+      "present": true
+    },
+    {
+      "subject": "unsaturated_solution",
+      "ancestor": 3421,
+      "present": true
+    },
+    {
+      "subject": "supersaturated_solution",
+      "ancestor": 3421,
+      "present": true
+    },
+    {
+      "subject": "saturated_aqueous",
+      "ancestor": "saturated_solution",
+      "present": true
+    },
+    {
+      "subject": "unsaturated_aqueous",
+      "ancestor": "unsaturated_solution",
+      "present": true
+    },
+    {
+      "subject": "dispersion_system",
+      "ancestor": 21,
+      "present": true
+    },
+    {
+      "subject": "colloidal_dispersion",
+      "ancestor": "dispersion_system",
+      "present": true
+    },
+    {
+      "subject": "suspension_liquid",
+      "ancestor": "dispersion_system",
+      "present": true
+    },
+    {
+      "subject": "emulsion",
+      "ancestor": "dispersion_system",
+      "present": true
+    },
+    {
+      "subject": "aerosol",
+      "ancestor": "dispersion_system",
+      "present": true
+    },
+    {
+      "subject": "liquid_foam",
+      "ancestor": "dispersion_system",
+      "present": true
+    },
+    {
+      "subject": "solid_state",
+      "ancestor": 5018,
+      "present": true
+    },
+    {
+      "subject": 3488,
+      "ancestor": 21,
+      "present": true
+    },
+    {
+      "subject": 3421,
+      "ancestor": 3471,
+      "present": true
+    },
+    {
+      "subject": "liquid_solution",
+      "ancestor": 22,
+      "present": true
+    },
+    {
+      "subject": "solid_solution",
+      "ancestor": 84,
+      "present": true
+    },
+    {
+      "subject": "saturated_aqueous",
+      "ancestor": "aqueous_solution",
+      "present": true
+    },
+    {
+      "subject": "unsaturated_aqueous",
+      "ancestor": "aqueous_solution",
+      "present": true
+    },
+    {
+      "subject": 4627,
+      "ancestor": 5018,
+      "present": true
+    },
+    {
+      "subject": 4619,
+      "ancestor": 5018,
+      "present": true
+    },
+    {
+      "subject": 1783,
+      "ancestor": 54,
+      "present": true
+    },
+    {
+      "subject": 5952,
+      "ancestor": 218,
+      "present": true
+    },
+    {
+      "subject": 4983,
+      "ancestor": 2,
+      "present": true
+    },
+    {
+      "subject": 4332,
+      "ancestor": 54,
+      "present": true
+    },
+    {
+      "subject": 19608,
+      "ancestor": 3831,
+      "present": true
+    },
+    {
+      "subject": 3488,
+      "ancestor": 2535,
+      "present": false
+    },
+    {
+      "subject": "physical_joining",
+      "ancestor": 21,
+      "present": false
+    },
+    {
+      "subject": 4627,
+      "ancestor": 17,
+      "present": false
+    },
+    {
+      "subject": 4619,
+      "ancestor": 17,
+      "present": false
+    },
+    {
+      "subject": "solid_state",
+      "ancestor": 17,
+      "present": false
+    },
+    {
+      "subject": "solid_state",
+      "ancestor": 176,
+      "present": false
+    },
+    {
+      "subject": 3421,
+      "ancestor": 22,
+      "present": false
+    },
+    {
+      "subject": "solid_solution",
+      "ancestor": 22,
+      "present": false
+    },
+    {
+      "subject": "liquid_solution",
+      "ancestor": 84,
+      "present": false
+    },
+    {
+      "subject": 1262,
+      "ancestor": 24,
+      "present": false
+    },
+    {
+      "subject": 1783,
+      "ancestor": 58,
+      "present": false
+    },
+    {
+      "subject": 5952,
+      "ancestor": 55,
+      "present": false
+    },
+    {
+      "subject": 4983,
+      "ancestor": 1901,
+      "present": false
+    },
+    {
+      "subject": 4332,
+      "ancestor": 64,
+      "present": false
+    },
+    {
+      "subject": "aerosol",
+      "ancestor": 24,
+      "present": false
+    },
+    {
+      "subject": "aerosol",
+      "ancestor": "colloidal_dispersion",
+      "present": false
+    },
+    {
+      "subject": "dispersion_system",
+      "ancestor": 3471,
+      "present": false
+    },
+    {
+      "subject": "suspension_liquid",
+      "ancestor": 3362,
+      "present": false
+    },
+    {
+      "subject": "aqueous_solution",
+      "ancestor": 92,
+      "present": false
+    },
+    {
+      "subject": "solute",
+      "ancestor": 22,
+      "present": false
+    },
+    {
+      "subject": "solvent",
+      "ancestor": 22,
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": "pure_substance",
+      "term": "чистое химическое вещество",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pure_substance",
+      "term": "pure chemical substance",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pure_substance",
+      "term": "pure substance",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "homogeneous_mixture",
+      "term": "однородная смесь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "homogeneous_mixture",
+      "term": "homogeneous mixture",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "homogeneous_mixture",
+      "term": "гомогенная смесь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "heterogeneous_mixture",
+      "term": "неоднородная смесь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "heterogeneous_mixture",
+      "term": "heterogeneous mixture",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "heterogeneous_mixture",
+      "term": "гетерогенная смесь",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 3488,
+      "term": "химическое соединение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 3488,
+      "term": "chemical compound",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3488,
+      "term": "compound (chemical substance)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3488,
+      "term": "join",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 3488,
+      "term": "to join",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 3488,
+      "term": "соединять",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 3488,
+      "term": "соединяться",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 3488,
+      "term": "соединиение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 3488,
+      "term": "СОЕДИНИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "physical_joining",
+      "term": "соединение (физическое действие)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "physical_joining",
+      "term": "physical joining",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "physical_joining",
+      "term": "joining (physical action)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "physical_joining",
+      "term": "join",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "physical_joining",
+      "term": "to join",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "physical_joining",
+      "term": "соединение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "physical_joining",
+      "term": "соединить",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "physical_joining",
+      "term": "соединять",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "physical_joining",
+      "term": "соединяться",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 3471,
+      "term": "mixture (material)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3421,
+      "term": "solution (chemistry)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "liquid_solution",
+      "term": "жидкий раствор",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "liquid_solution",
+      "term": "liquid solution",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "solid_solution",
+      "term": "твёрдый раствор",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "solid_solution",
+      "term": "solid solution",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "aqueous_solution",
+      "term": "водный раствор",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "aqueous_solution",
+      "term": "aqueous solution",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "solvent",
+      "term": "растворитель (компонент раствора)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "solvent",
+      "term": "solvent (solution component)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "solvent",
+      "term": "solvent",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "solvent",
+      "term": "растворитель",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "solute",
+      "term": "растворённое вещество",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "solute",
+      "term": "solute",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "saturated_solution",
+      "term": "насыщенный раствор",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "saturated_solution",
+      "term": "saturated solution",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "unsaturated_solution",
+      "term": "ненасыщенный раствор",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "unsaturated_solution",
+      "term": "unsaturated solution",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "supersaturated_solution",
+      "term": "пересыщенный раствор",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "supersaturated_solution",
+      "term": "supersaturated solution",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "saturated_aqueous",
+      "term": "насыщенный водный раствор",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "saturated_aqueous",
+      "term": "saturated aqueous solution",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "unsaturated_aqueous",
+      "term": "ненасыщенный водный раствор",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "unsaturated_aqueous",
+      "term": "unsaturated aqueous solution",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "dispersion_system",
+      "term": "дисперсная система",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "dispersion_system",
+      "term": "dispersion (material system)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "dispersion_system",
+      "term": "dispersed material system",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "colloidal_dispersion",
+      "term": "коллоидная дисперсная система",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "colloidal_dispersion",
+      "term": "colloidal dispersion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "suspension_liquid",
+      "term": "суспензия (твёрдые частицы в жидкости)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "suspension_liquid",
+      "term": "suspension (solids in liquid)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "suspension_liquid",
+      "term": "суспензия",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "emulsion",
+      "term": "эмульсия (жидкая дисперсная система)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "emulsion",
+      "term": "emulsion (liquid dispersion)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "emulsion",
+      "term": "эмульсия",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "aerosol",
+      "term": "аэрозоль (дисперсная система)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "aerosol",
+      "term": "aerosol (particle dispersion)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "aerosol",
+      "term": "аэрозоль",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "liquid_foam",
+      "term": "пена в жидкости",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "liquid_foam",
+      "term": "liquid foam",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 4627,
+      "term": "жидкое состояние вещества",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 4627,
+      "term": "liquid state",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 4627,
+      "term": "liquid state of matter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 4627,
+      "term": "жидкее",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 4619,
+      "term": "газообразное состояние вещества",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 4619,
+      "term": "gaseous state",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 4619,
+      "term": "gas state of matter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "solid_state",
+      "term": "твёрдое состояние вещества",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "solid_state",
+      "term": "solid state of matter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "solid_state",
+      "term": "solid state",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 4332,
+      "term": "растворение (образование раствора)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 4332,
+      "term": "dissolution (solution formation)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 4332,
+      "term": "dissolving (chemistry)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 4332,
+      "term": "растворить",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 4332,
+      "term": "растворять",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 4332,
+      "term": "раствориение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 4332,
+      "term": "РАСТВОРИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 1783,
+      "term": "drilling (holes)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1783,
+      "term": "сверлить",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1783,
+      "term": "сверлиение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 1783,
+      "term": "СВЕРЛИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 5952,
+      "term": "regret (emotion)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5952,
+      "term": "regret",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5952,
+      "term": "сожалеть",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 5952,
+      "term": "сожалеение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 5952,
+      "term": "СОЖАЛЕТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 4983,
+      "term": "dark gray",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 4983,
+      "term": "dark grey (color)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 4983,
+      "term": "темно-серое",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "saturated_solution",
+      "term": "concentrated",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "aerosol",
+      "term": "aerosol can",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "emulsion",
+      "term": "photographic emulsion",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 3488,
+      "term": "join",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

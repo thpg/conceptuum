@@ -1,0 +1,3096 @@
+{
+  "source": "quality-20261009-q29",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Fishing purpose/method/location intersections, equipment and participant roles; animal-capable hunting, generic nets, fishing adjectives and a reviewed fishing duplicate.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "gear": "https://www.fao.org/4/y4411e/y4411e0i.htm",
+      "classification": "https://www.fao.org/responsible-fishing/background/classification-of-fishing-gears/en/",
+      "purposes": "https://www.fisheries.noaa.gov/insight/understanding-fisheries-management-united-states",
+      "fisher": "https://dictionary.cambridge.org/us/dictionary/english/fisherman",
+      "fishing": "https://dictionary.cambridge.org/us/dictionary/english/fishing",
+      "ice": "https://www.fws.gov/refuge/lake-ilo/visit-us/activities/ice-fishing",
+      "barbless": "https://www.fisheries.noaa.gov/pacific-islands/resources-fishing/barbless-circle-hooks",
+      "fish_ru": "https://gramota.ru/meta/rybachit",
+      "angling_ru": "https://gramota.ru/meta/uzhenie",
+      "property_ru": "https://gramota.ru/meta/rybolovnyy",
+      "fleet_ru": "https://gramota.ru/meta/rybolovetskiy",
+      "rare_noun": "https://slovar.cc/rus/tolk/102694.html"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet; CC BY 4.0 and Princeton notices remain in docs/quality/2026-10-09-q11.md#sources-and-reuse. FAO, NOAA, FWS, Cambridge and Russian dictionaries support selected senses. Source definitions are not copied; scope and graph mappings are editorial adaptations.",
+    "existing_cohort": [
+      1905,
+      1910,
+      1911,
+      1606,
+      5303,
+      5559,
+      13131,
+      16916,
+      13567,
+      23925,
+      5304,
+      6417,
+      1897
+    ],
+    "context_policy": "All new concepts and assertions use U1 and unspecified strength. Method, economic or recreational purpose, location, equipment and participant role are distinct axes. Human fishing is not a kind of the existing animal-capable hunting action, and neither category receives a blanket exclusion against the other.",
+    "sense_decisions": [
+      {
+        "concept": "recreational_fishing",
+        "synset": "oewn-00454959-n",
+        "decision": "add",
+        "alignment": "purpose restriction",
+        "scope": "Fishing for recreation, without requiring competition or a successful catch."
+      },
+      {
+        "concept": "commercial_fishing",
+        "synset": "oewn-00455145-n",
+        "decision": "add",
+        "alignment": "corrected activity genus",
+        "scope": "Fishing as commercial work. Select the activity, not the business organization itself."
+      },
+      {
+        "concept": "household_food_fishing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "restricted subsistence purpose",
+        "scope": "Fishing to provide food for the household. This restricted purpose does not import every national subsistence-fishery category."
+      },
+      {
+        "concept": "fly_fishing",
+        "synset": "oewn-00455419-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Angling using an artificial fly. Not every fly-fishing activity is recreational."
+      },
+      {
+        "concept": "trolling",
+        "synset": "oewn-00455517-n",
+        "decision": "add",
+        "alignment": "disambiguated method",
+        "scope": "Angling with a line drawn through the water. Exclude online provocation and the mythical creature."
+      },
+      {
+        "concept": "handlining",
+        "synset": "oewn-03492305-n",
+        "decision": "add",
+        "alignment": "activity from equipment scope",
+        "scope": "Hook-and-line fishing with the line handled directly. The method is distinct from its handline equipment."
+      },
+      {
+        "concept": "net_fishing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "equipment-defined method",
+        "scope": "Fishing using a net; not the manufacture of net fabric."
+      },
+      {
+        "concept": "ice_fishing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "setting restriction",
+        "scope": "Fishing through an opening in ice. This setting does not by itself specify hooks, recreational purpose or safe ice conditions."
+      },
+      {
+        "concept": "shore_fishing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "location restriction",
+        "scope": "Fishing from the shore; neither a particular gear nor recreational purpose is required."
+      },
+      {
+        "concept": "boat_fishing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "location restriction",
+        "scope": "Fishing from a boat, regardless of the selected gear or purpose."
+      },
+      {
+        "concept": "recreational_angling",
+        "synset": null,
+        "decision": "add",
+        "alignment": "purpose/method intersection",
+        "scope": "The intersection of recreational fishing and hook-and-line fishing."
+      },
+      {
+        "concept": "recreational_shore",
+        "synset": null,
+        "decision": "add",
+        "alignment": "purpose/location intersection",
+        "scope": "The intersection of recreational purpose and fishing from shore."
+      },
+      {
+        "concept": "fishing_gear",
+        "synset": "oewn-03356280-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Purpose-made fishing equipment, considered by equipment kind rather than as one mandatory assembled kit. Exclude bare rig and tackle homonyms."
+      },
+      {
+        "concept": "fishing_line",
+        "synset": "oewn-03356614-n",
+        "decision": "add",
+        "alignment": "corrected component scope",
+        "scope": "Line made for fishing. Do not require a float, sinker, leader or braided-cord construction on every line."
+      },
+      {
+        "concept": "handline",
+        "synset": "oewn-03492305-n",
+        "decision": "add",
+        "alignment": "selected equipment sense",
+        "scope": "A fishing line managed by hand; exclude the climbing handline sense."
+      },
+      {
+        "concept": "fishhook",
+        "synset": "oewn-03355997-n",
+        "decision": "add",
+        "alignment": "corrected gear definition",
+        "scope": "A hook intended to catch fish. Correct the dictionary requirement that every fishhook have a barb."
+      },
+      {
+        "concept": "barbless_hook",
+        "synset": null,
+        "decision": "add",
+        "alignment": "construction restriction",
+        "scope": "A fishing hook without a projecting barb. No injury, survival or catch-rate guarantee is asserted."
+      },
+      {
+        "concept": "reel",
+        "synset": "oewn-04074584-n",
+        "decision": "add",
+        "alignment": "selected equipment sense",
+        "scope": "A reel for managing fishing line. Exclude film reels, thread spools and dances."
+      },
+      {
+        "concept": "float",
+        "synset": "oewn-02863403-n",
+        "decision": "add",
+        "alignment": "selected fishing-line float",
+        "scope": "A line-mounted float used in angling. Cork is not a required material."
+      },
+      {
+        "concept": "sinker",
+        "synset": "oewn-04230853-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A weight for keeping fishing gear lower in the water. No material is required; exclude baseball and food senses."
+      },
+      {
+        "concept": "lure",
+        "synset": "oewn-03355448-n",
+        "decision": "add",
+        "alignment": "corrected artifact restriction",
+        "scope": "An artificial lure for attracting fish during angling. Do not require every lure to use the dictionary's combined material, brightness and feather description."
+      },
+      {
+        "concept": "artificial_fly",
+        "synset": "oewn-03378083-n",
+        "decision": "add",
+        "alignment": "selected lure sense",
+        "scope": "The artificial-fly lure used in angling, distinct from the living insect, garment opening and tent cover."
+      },
+      {
+        "concept": "fishing_net",
+        "synset": "oewn-03357474-n",
+        "decision": "add",
+        "alignment": "broader fishing-net family",
+        "scope": "A net intended for fishing. Enclosure during hauling is not the mechanism of every subtype."
+      },
+      {
+        "concept": "landing_net",
+        "synset": "oewn-03644391-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The handled net used to bring a fish out of the water."
+      },
+      {
+        "concept": "gillnet",
+        "synset": "oewn-03442205-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A fishing net designed to retain fish in its mesh. Do not make hauling enclosure a universal requirement."
+      },
+      {
+        "concept": "trawl_net",
+        "synset": "oewn-04482984-n",
+        "decision": "add",
+        "alignment": "corrected depth restriction",
+        "scope": "A fishing net designed for towing through water. Great depth is not required. Exclude the longline homonym."
+      },
+      {
+        "concept": "fly_rod",
+        "synset": "oewn-03379218-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A fishing rod intended for fly fishing. No material, fixed length or mandatory reel is asserted."
+      },
+      {
+        "concept": "rod_with_reel",
+        "synset": null,
+        "decision": "add",
+        "alignment": "component restriction",
+        "scope": "The restricted rod-equipped-with-reel case, distinct from all fishing rods."
+      },
+      {
+        "concept": "commercial_fisher",
+        "synset": "oewn-10113427-n",
+        "decision": "add",
+        "alignment": "occupational role restriction",
+        "scope": "A person whose work includes commercial fishing. Do not impose this employment restriction on every fisher."
+      },
+      {
+        "concept": "recreational_fisher",
+        "synset": null,
+        "decision": "add",
+        "alignment": "recreational role restriction",
+        "scope": "A person fishing for recreation, not necessarily employed in fishing."
+      },
+      {
+        "concept": "angler",
+        "synset": "oewn-09813387-n",
+        "decision": "add",
+        "alignment": "corrected participant role",
+        "scope": "A person using hook-and-line fishing. Exclude the anglerfish and scheming-person senses; paid work is not required."
+      },
+      {
+        "concept": "recreational_angler",
+        "synset": null,
+        "decision": "add",
+        "alignment": "participant-role intersection",
+        "scope": "The same participant role combines recreational purpose with hook-and-line fishing."
+      },
+      {
+        "concept": 16916,
+        "synset": null,
+        "decision": "merge into 1910",
+        "alignment": "reviewed sense",
+        "scope": "The rare noun denotes the existing fishing activity. Rarity alone does not make a word invalid. The full removed source row, terms and genus edge are archived."
+      },
+      {
+        "concept": 5304,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Hunter remains under worker pending review of recreational and occupational person roles."
+      },
+      {
+        "concept": 6417,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "General catching has several physical and figurative meanings; do not make all of them animal capture."
+      },
+      {
+        "concept": 1897,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "The generic Russian cord is not used as a universal fishing-line genus; monofilament and braided constructions need separate review."
+      },
+      {
+        "concept": 1905,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Retain animal capabilities, the explicit non-predatory negation and other inherited rows. The old hunting/defence exclusion remains queued."
+      },
+      {
+        "concept": 1910,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Inherited targets naming individual fish species remain unchanged; this batch adds no species-specific rule or percentage."
+      }
+    ],
+    "limits": "No fishing regulations, permits, species eligibility, environmental-performance guarantees, ice-safety thresholds or operating instructions. Gear material, hook barbs, reels and catch success are not universal requirements. Animal predation, hunter occupation, general catching, bait-food meanings and inherited fish-species targets remain queued. The old hunting/defence exclusion needs separate contextual review. No application test suites.",
+    "merge_discard_review": {
+      "16916": {
+        "malformed_ru": [
+          "рыбачиение"
+        ],
+        "mistagged_en": [
+          "РЫБАЧИТЬ"
+        ],
+        "retained_attested_ru": [
+          "рыбачение"
+        ],
+        "valid_verb_added": "рыбачить"
+      }
+    },
+    "exclusion_review": {
+      "context": "U1 positive genus witnesses",
+      "before_conflicting_edges": 7,
+      "resolved_edges": [
+        3759
+      ],
+      "decision": "Correct hunting and fishing genera and remove their unsupported mutual exclusion; add no blanket exclusions and preserve every explicit negation.",
+      "remaining_candidates_expected": 6
+    },
+    "new_term_collisions": [],
+    "collision_decision": "No exact normalized cross-language collision is accepted. Existing rod, net, hook, fisher, fishing and angling meanings are reused. The unconnected fishing duplicate is archived and merged; the attested rare noun is preserved.",
+    "refreshed_comparison": {
+      "baseline": "Q28",
+      "existing_concepts": 13114,
+      "existing_terms": 36960,
+      "synsets_with_exact_en_candidate": 15622,
+      "synsets_without_exact_en_candidate": 91897,
+      "existing_concepts_with_dictionary_candidate": 4197,
+      "caveat": "Normalized spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "recreational_fishing",
+      "name": "любительская рыбная ловля",
+      "parent": 1910,
+      "universum_id": 1,
+      "terms": [
+        [
+          "любительская рыбная ловля",
+          "ru"
+        ],
+        [
+          "recreational fishing",
+          "en"
+        ]
+      ],
+      "reason": "Fishing for recreation, without requiring competition or a successful catch. OEWN 2025: oewn-00454959-n. Source: https://www.fisheries.noaa.gov/insight/understanding-fisheries-management-united-states"
+    },
+    {
+      "key": "commercial_fishing",
+      "name": "коммерческая рыбная ловля",
+      "parent": 1910,
+      "universum_id": 1,
+      "terms": [
+        [
+          "коммерческая рыбная ловля",
+          "ru"
+        ],
+        [
+          "commercial fishing",
+          "en"
+        ]
+      ],
+      "reason": "Fishing as commercial work. Select the activity, not the business organization itself. OEWN 2025: oewn-00455145-n. Source: https://www.fisheries.noaa.gov/insight/understanding-fisheries-management-united-states"
+    },
+    {
+      "key": "household_food_fishing",
+      "name": "ловля рыбы для собственного питания",
+      "parent": 1910,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ловля рыбы для собственного питания",
+          "ru"
+        ],
+        [
+          "fishing for household food",
+          "en"
+        ],
+        [
+          "subsistence fishing (household food)",
+          "en"
+        ]
+      ],
+      "reason": "Fishing to provide food for the household. This restricted purpose does not import every national subsistence-fishery category. Source: https://www.fisheries.noaa.gov/insight/understanding-fisheries-management-united-states"
+    },
+    {
+      "key": "fly_fishing",
+      "name": "нахлыстовая ловля",
+      "parent": 13131,
+      "universum_id": 1,
+      "terms": [
+        [
+          "нахлыстовая ловля",
+          "ru"
+        ],
+        [
+          "fly fishing",
+          "en"
+        ],
+        [
+          "fly-fishing",
+          "en"
+        ],
+        [
+          "нахлыст",
+          "ru"
+        ]
+      ],
+      "reason": "Angling using an artificial fly. Not every fly-fishing activity is recreational. OEWN 2025: oewn-00455419-n."
+    },
+    {
+      "key": "trolling",
+      "name": "троллинг (рыбная ловля)",
+      "parent": 13131,
+      "universum_id": 1,
+      "terms": [
+        [
+          "троллинг (рыбная ловля)",
+          "ru"
+        ],
+        [
+          "trolling (fishing)",
+          "en"
+        ]
+      ],
+      "reason": "Angling with a line drawn through the water. Exclude online provocation and the mythical creature. OEWN 2025: oewn-00455517-n."
+    },
+    {
+      "key": "handlining",
+      "name": "ловля рыбы ручной леской",
+      "parent": 13131,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ловля рыбы ручной леской",
+          "ru"
+        ],
+        [
+          "handline fishing",
+          "en"
+        ],
+        [
+          "handlining",
+          "en"
+        ]
+      ],
+      "reason": "Hook-and-line fishing with the line handled directly. The method is distinct from its handline equipment. OEWN 2025: oewn-03492305-n. Source: https://www.fao.org/4/y4411e/y4411e0i.htm"
+    },
+    {
+      "key": "net_fishing",
+      "name": "ловля рыбы сетью",
+      "parent": 1910,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ловля рыбы сетью",
+          "ru"
+        ],
+        [
+          "net fishing",
+          "en"
+        ]
+      ],
+      "reason": "Fishing using a net; not the manufacture of net fabric. Source: https://www.fao.org/4/y4411e/y4411e0i.htm"
+    },
+    {
+      "key": "ice_fishing",
+      "name": "подлёдная рыбная ловля",
+      "parent": 1910,
+      "universum_id": 1,
+      "terms": [
+        [
+          "подлёдная рыбная ловля",
+          "ru"
+        ],
+        [
+          "ice fishing",
+          "en"
+        ]
+      ],
+      "reason": "Fishing through an opening in ice. This setting does not by itself specify hooks, recreational purpose or safe ice conditions. Source: https://www.fws.gov/refuge/lake-ilo/visit-us/activities/ice-fishing"
+    },
+    {
+      "key": "shore_fishing",
+      "name": "ловля рыбы с берега",
+      "parent": 1910,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ловля рыбы с берега",
+          "ru"
+        ],
+        [
+          "shore fishing",
+          "en"
+        ]
+      ],
+      "reason": "Fishing from the shore; neither a particular gear nor recreational purpose is required. Source: https://gramota.ru/meta/rybachit"
+    },
+    {
+      "key": "boat_fishing",
+      "name": "ловля рыбы с лодки",
+      "parent": 1910,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ловля рыбы с лодки",
+          "ru"
+        ],
+        [
+          "fishing from a boat",
+          "en"
+        ],
+        [
+          "boat fishing",
+          "en"
+        ]
+      ],
+      "reason": "Fishing from a boat, regardless of the selected gear or purpose. Source: https://gramota.ru/meta/rybachit"
+    },
+    {
+      "key": "recreational_angling",
+      "name": "любительское ужение рыбы",
+      "parent": "recreational_fishing",
+      "universum_id": 1,
+      "terms": [
+        [
+          "любительское ужение рыбы",
+          "ru"
+        ],
+        [
+          "recreational angling",
+          "en"
+        ]
+      ],
+      "reason": "The intersection of recreational fishing and hook-and-line fishing."
+    },
+    {
+      "key": "recreational_shore",
+      "name": "любительская ловля рыбы с берега",
+      "parent": "recreational_fishing",
+      "universum_id": 1,
+      "terms": [
+        [
+          "любительская ловля рыбы с берега",
+          "ru"
+        ],
+        [
+          "recreational shore fishing",
+          "en"
+        ]
+      ],
+      "reason": "The intersection of recreational purpose and fishing from shore."
+    },
+    {
+      "key": "fishing_gear",
+      "name": "рыболовное снаряжение",
+      "parent": 30,
+      "universum_id": 1,
+      "terms": [
+        [
+          "рыболовное снаряжение",
+          "ru"
+        ],
+        [
+          "fishing gear",
+          "en"
+        ],
+        [
+          "fishing tackle",
+          "en"
+        ]
+      ],
+      "reason": "Purpose-made fishing equipment, considered by equipment kind rather than as one mandatory assembled kit. Exclude bare rig and tackle homonyms. OEWN 2025: oewn-03356280-n."
+    },
+    {
+      "key": "fishing_line",
+      "name": "рыболовная леска",
+      "parent": "fishing_gear",
+      "universum_id": 1,
+      "terms": [
+        [
+          "рыболовная леска",
+          "ru"
+        ],
+        [
+          "fishing line",
+          "en"
+        ],
+        [
+          "леска",
+          "ru"
+        ]
+      ],
+      "reason": "Line made for fishing. Do not require a float, sinker, leader or braided-cord construction on every line. OEWN 2025: oewn-03356614-n."
+    },
+    {
+      "key": "handline",
+      "name": "ручная рыболовная леска",
+      "parent": "fishing_line",
+      "universum_id": 1,
+      "terms": [
+        [
+          "ручная рыболовная леска",
+          "ru"
+        ],
+        [
+          "handline (fishing)",
+          "en"
+        ],
+        [
+          "hand line (fishing)",
+          "en"
+        ]
+      ],
+      "reason": "A fishing line managed by hand; exclude the climbing handline sense. OEWN 2025: oewn-03492305-n."
+    },
+    {
+      "key": "fishhook",
+      "name": "рыболовный крючок",
+      "parent": 5559,
+      "universum_id": 1,
+      "terms": [
+        [
+          "рыболовный крючок",
+          "ru"
+        ],
+        [
+          "fishhook",
+          "en"
+        ],
+        [
+          "fishing hook",
+          "en"
+        ]
+      ],
+      "reason": "A hook intended to catch fish. Correct the dictionary requirement that every fishhook have a barb. OEWN 2025: oewn-03355997-n. Source: https://www.fisheries.noaa.gov/pacific-islands/resources-fishing/barbless-circle-hooks"
+    },
+    {
+      "key": "barbless_hook",
+      "name": "рыболовный крючок без бородки",
+      "parent": "fishhook",
+      "universum_id": 1,
+      "terms": [
+        [
+          "рыболовный крючок без бородки",
+          "ru"
+        ],
+        [
+          "barbless fishhook",
+          "en"
+        ],
+        [
+          "barbless fishing hook",
+          "en"
+        ]
+      ],
+      "reason": "A fishing hook without a projecting barb. No injury, survival or catch-rate guarantee is asserted. Source: https://www.fisheries.noaa.gov/pacific-islands/resources-fishing/barbless-circle-hooks"
+    },
+    {
+      "key": "reel",
+      "name": "рыболовная катушка",
+      "parent": "fishing_gear",
+      "universum_id": 1,
+      "terms": [
+        [
+          "рыболовная катушка",
+          "ru"
+        ],
+        [
+          "fishing reel",
+          "en"
+        ]
+      ],
+      "reason": "A reel for managing fishing line. Exclude film reels, thread spools and dances. OEWN 2025: oewn-04074584-n."
+    },
+    {
+      "key": "float",
+      "name": "поплавок для удочки",
+      "parent": "fishing_gear",
+      "universum_id": 1,
+      "terms": [
+        [
+          "поплавок для удочки",
+          "ru"
+        ],
+        [
+          "fishing float",
+          "en"
+        ],
+        [
+          "bobber (fishing)",
+          "en"
+        ]
+      ],
+      "reason": "A line-mounted float used in angling. Cork is not a required material. OEWN 2025: oewn-02863403-n."
+    },
+    {
+      "key": "sinker",
+      "name": "рыболовное грузило",
+      "parent": "fishing_gear",
+      "universum_id": 1,
+      "terms": [
+        [
+          "рыболовное грузило",
+          "ru"
+        ],
+        [
+          "fishing sinker",
+          "en"
+        ],
+        [
+          "sinker (fishing)",
+          "en"
+        ]
+      ],
+      "reason": "A weight for keeping fishing gear lower in the water. No material is required; exclude baseball and food senses. OEWN 2025: oewn-04230853-n."
+    },
+    {
+      "key": "lure",
+      "name": "искусственная рыболовная приманка",
+      "parent": "fishing_gear",
+      "universum_id": 1,
+      "terms": [
+        [
+          "искусственная рыболовная приманка",
+          "ru"
+        ],
+        [
+          "artificial fishing lure",
+          "en"
+        ],
+        [
+          "fish lure",
+          "en"
+        ]
+      ],
+      "reason": "An artificial lure for attracting fish during angling. Do not require every lure to use the dictionary's combined material, brightness and feather description. OEWN 2025: oewn-03355448-n. Source: https://www.fao.org/4/y4411e/y4411e0i.htm"
+    },
+    {
+      "key": "artificial_fly",
+      "name": "искусственная рыболовная мушка",
+      "parent": "lure",
+      "universum_id": 1,
+      "terms": [
+        [
+          "искусственная рыболовная мушка",
+          "ru"
+        ],
+        [
+          "artificial fly (fishing)",
+          "en"
+        ],
+        [
+          "fishing fly",
+          "en"
+        ]
+      ],
+      "reason": "The artificial-fly lure used in angling, distinct from the living insect, garment opening and tent cover. OEWN 2025: oewn-03378083-n."
+    },
+    {
+      "key": "fishing_net",
+      "name": "рыболовная сеть",
+      "parent": 1606,
+      "universum_id": 1,
+      "terms": [
+        [
+          "рыболовная сеть",
+          "ru"
+        ],
+        [
+          "fishing net",
+          "en"
+        ],
+        [
+          "fishnet (fishing gear)",
+          "en"
+        ]
+      ],
+      "reason": "A net intended for fishing. Enclosure during hauling is not the mechanism of every subtype. OEWN 2025: oewn-03357474-n. Source: https://www.fao.org/4/y4411e/y4411e0i.htm"
+    },
+    {
+      "key": "landing_net",
+      "name": "рыболовный подсачек",
+      "parent": "fishing_net",
+      "universum_id": 1,
+      "terms": [
+        [
+          "рыболовный подсачек",
+          "ru"
+        ],
+        [
+          "landing net",
+          "en"
+        ],
+        [
+          "подсачек",
+          "ru"
+        ]
+      ],
+      "reason": "The handled net used to bring a fish out of the water. OEWN 2025: oewn-03644391-n."
+    },
+    {
+      "key": "gillnet",
+      "name": "жаберная рыболовная сеть",
+      "parent": "fishing_net",
+      "universum_id": 1,
+      "terms": [
+        [
+          "жаберная рыболовная сеть",
+          "ru"
+        ],
+        [
+          "gill net",
+          "en"
+        ],
+        [
+          "gillnet",
+          "en"
+        ]
+      ],
+      "reason": "A fishing net designed to retain fish in its mesh. Do not make hauling enclosure a universal requirement. OEWN 2025: oewn-03442205-n. Source: https://www.fao.org/4/y4411e/y4411e0i.htm"
+    },
+    {
+      "key": "trawl_net",
+      "name": "трал (рыболовная сеть)",
+      "parent": "fishing_net",
+      "universum_id": 1,
+      "terms": [
+        [
+          "трал (рыболовная сеть)",
+          "ru"
+        ],
+        [
+          "trawl net",
+          "en"
+        ]
+      ],
+      "reason": "A fishing net designed for towing through water. Great depth is not required. Exclude the longline homonym. OEWN 2025: oewn-04482984-n. Source: https://www.fao.org/4/y4411e/y4411e0i.htm"
+    },
+    {
+      "key": "fly_rod",
+      "name": "нахлыстовое удилище",
+      "parent": 1911,
+      "universum_id": 1,
+      "terms": [
+        [
+          "нахлыстовое удилище",
+          "ru"
+        ],
+        [
+          "fly rod",
+          "en"
+        ]
+      ],
+      "reason": "A fishing rod intended for fly fishing. No material, fixed length or mandatory reel is asserted. OEWN 2025: oewn-03379218-n."
+    },
+    {
+      "key": "rod_with_reel",
+      "name": "удочка с катушкой",
+      "parent": 1911,
+      "universum_id": 1,
+      "terms": [
+        [
+          "удочка с катушкой",
+          "ru"
+        ],
+        [
+          "fishing rod with a reel",
+          "en"
+        ]
+      ],
+      "reason": "The restricted rod-equipped-with-reel case, distinct from all fishing rods. Source: https://dictionary.cambridge.org/us/dictionary/english/fishing"
+    },
+    {
+      "key": "commercial_fisher",
+      "name": "рыбак-промысловик",
+      "parent": 5303,
+      "universum_id": 1,
+      "terms": [
+        [
+          "рыбак-промысловик",
+          "ru"
+        ],
+        [
+          "commercial fisher",
+          "en"
+        ]
+      ],
+      "reason": "A person whose work includes commercial fishing. Do not impose this employment restriction on every fisher. OEWN 2025: oewn-10113427-n."
+    },
+    {
+      "key": "recreational_fisher",
+      "name": "рыболов-любитель",
+      "parent": 5303,
+      "universum_id": 1,
+      "terms": [
+        [
+          "рыболов-любитель",
+          "ru"
+        ],
+        [
+          "recreational fisher",
+          "en"
+        ]
+      ],
+      "reason": "A person fishing for recreation, not necessarily employed in fishing. Source: https://dictionary.cambridge.org/us/dictionary/english/fisherman"
+    },
+    {
+      "key": "angler",
+      "name": "рыболов на крючковую снасть",
+      "parent": 5303,
+      "universum_id": 1,
+      "terms": [
+        [
+          "рыболов на крючковую снасть",
+          "ru"
+        ],
+        [
+          "angler",
+          "en"
+        ]
+      ],
+      "reason": "A person using hook-and-line fishing. Exclude the anglerfish and scheming-person senses; paid work is not required. OEWN 2025: oewn-09813387-n."
+    },
+    {
+      "key": "recreational_angler",
+      "name": "рыболов-любитель на крючковую снасть",
+      "parent": "recreational_fisher",
+      "universum_id": 1,
+      "terms": [
+        [
+          "рыболов-любитель на крючковую снасть",
+          "ru"
+        ],
+        [
+          "recreational angler",
+          "en"
+        ]
+      ],
+      "reason": "The same participant role combines recreational purpose with hook-and-line fishing."
+    }
+  ],
+  "renames": [
+    {
+      "id": 13131,
+      "before": "удение",
+      "name": "ужение рыбы",
+      "terms": [],
+      "reason": "Use the established Russian action noun for the selected hook-and-line fishing sense. OEWN 2025: oewn-00455261-n. Source: https://gramota.ru/meta/uzhenie"
+    },
+    {
+      "id": 1606,
+      "before": "сеть",
+      "name": "сеть (сетчатое изделие)",
+      "terms": [],
+      "reason": "Qualify the generic net artifact. Fishing is a specialization; communication and computer networks are different meanings."
+    }
+  ],
+  "terms": [
+    {
+      "id": 1910,
+      "name": "ловля рыбы",
+      "terms": [
+        [
+          "рыбачить",
+          "ru"
+        ],
+        [
+          "рыбалка",
+          "ru"
+        ],
+        [
+          "to fish",
+          "en"
+        ]
+      ],
+      "reason": "Reuse the generic human fishing activity; it need not be recreational or commercial. OEWN 2025: oewn-01143220-v."
+    },
+    {
+      "id": 13131,
+      "name": "ужение рыбы",
+      "terms": [
+        [
+          "angling",
+          "en"
+        ],
+        [
+          "hook-and-line fishing",
+          "en"
+        ],
+        [
+          "ужение",
+          "ru"
+        ],
+        [
+          "удить",
+          "ru"
+        ]
+      ],
+      "reason": "Do not import a universal recreational-purpose restriction or a mandatory rod. OEWN 2025: oewn-00455261-n."
+    },
+    {
+      "id": 1606,
+      "name": "сеть (сетчатое изделие)",
+      "terms": [
+        [
+          "net (mesh artifact)",
+          "en"
+        ]
+      ],
+      "reason": "Retain the generic mesh article and legacy net lookup without imposing a fishing purpose on all nets."
+    },
+    {
+      "id": 5303,
+      "name": "рыбак",
+      "terms": [
+        [
+          "fisher (person)",
+          "en"
+        ]
+      ],
+      "reason": "Select the person who fishes, not the fisher mammal. Do not import a male-only or employment-only genus. OEWN 2025: oewn-10113427-n."
+    },
+    {
+      "id": 13567,
+      "name": "рыболовное",
+      "terms": [
+        [
+          "fishing-related",
+          "en"
+        ],
+        [
+          "рыболовный",
+          "ru"
+        ]
+      ],
+      "reason": "Preserve the relative-adjective meaning rather than turning the word into an equipment object."
+    },
+    {
+      "id": 23925,
+      "name": "рыболовецкое",
+      "terms": [
+        [
+          "fishery-related",
+          "en"
+        ],
+        [
+          "рыболовецкий",
+          "ru"
+        ]
+      ],
+      "reason": "Keep the adjective as a property; do not equate it with a fisherman or vessel."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 13131,
+      "term": "удение",
+      "lang": "ru",
+      "reason": "Replace nonstandard generated angling wording or the mistagged verb. The historical word удение in other senses is not declared nonexistent. Modern ужение and correctly tagged удить remain."
+    },
+    {
+      "id": 13131,
+      "term": "удиение",
+      "lang": "ru",
+      "reason": "Replace nonstandard generated angling wording or the mistagged verb. The historical word удение in other senses is not declared nonexistent. Modern ужение and correctly tagged удить remain."
+    },
+    {
+      "id": 13131,
+      "term": "УДИТЬ",
+      "lang": "en",
+      "reason": "Replace nonstandard generated angling wording or the mistagged verb. The historical word удение in other senses is not declared nonexistent. Modern ужение and correctly tagged удить remain."
+    },
+    {
+      "id": 13567,
+      "term": "рыболовное",
+      "lang": "en",
+      "reason": "Russian adjective mislabeled as English; the Russian term remains."
+    },
+    {
+      "id": 23925,
+      "term": "рыболовецкее",
+      "lang": "en",
+      "reason": "Malformed generated form; preserve the standard adjective. Source: https://gramota.ru/meta/rybolovetskiy"
+    },
+    {
+      "id": 23925,
+      "term": "рыболовецкее",
+      "lang": "ru",
+      "reason": "Malformed generated form; preserve the standard adjective. Source: https://gramota.ru/meta/rybolovetskiy"
+    }
+  ],
+  "leaf_merges": [
+    {
+      "source_id": 16916,
+      "target_id": 1910,
+      "target_name": "ловля рыбы",
+      "retained_terms": [
+        [
+          "рыбачение",
+          "ru"
+        ]
+      ],
+      "discarded_terms": [
+        [
+          "рыбачиение",
+          "ru"
+        ],
+        [
+          "РЫБАЧИТЬ",
+          "en"
+        ]
+      ],
+      "reason": "Merge the unconnected fishing duplicate. Preserve the attested rare noun рыбачение; discard only the malformed extra-vowel form and mistagged verb. The correct Russian verb is added to the survivor. Source: https://slovar.cc/rus/tolk/102694.html",
+      "archive": {
+        "concept": {
+          "dharma": 16916,
+          "nama": "рыбачение",
+          "defin": "рыбачение — физическое действие",
+          "vol_zero": null,
+          "vol_ed": null,
+          "vol_countable": null,
+          "vol_sobir": null,
+          "vol_sootn": null,
+          "cont_konkr": null,
+          "cont_abs": null,
+          "cont_opred": null,
+          "cont_empir": null,
+          "universum_id": 1,
+          "processed": 1
+        },
+        "terms": [
+          {
+            "concept_id": 16916,
+            "term": "рыбачение",
+            "lang": "ru"
+          },
+          {
+            "concept_id": 16916,
+            "term": "рыбачиение",
+            "lang": "ru"
+          },
+          {
+            "concept_id": 16916,
+            "term": "РЫБАЧИТЬ",
+            "lang": "en"
+          }
+        ],
+        "edges": [
+          {
+            "id": 21000,
+            "dh1": 16916,
+            "kod": "14",
+            "dh2": 5017,
+            "universum_id": 1,
+            "strength": 100,
+            "status": "ok",
+            "source": "fill",
+            "rationale": "rank_all",
+            "created_at": "2026-09-01 21:07:48"
+          }
+        ]
+      }
+    }
+  ],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 2883,
+      "before": [
+        1905,
+        "14",
+        63,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1905,
+          "14",
+          5017,
+          null,
+          1
+        ]
+      ],
+      "reason": "The existing hunting action has many animal capability assertions. It is not necessarily a human social action; use physical action and leave narrower human-purpose senses for later review."
+    },
+    {
+      "id": 2888,
+      "before": [
+        1910,
+        "14",
+        1905,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1910,
+          "14",
+          5017,
+          null,
+          1
+        ]
+      ],
+      "reason": "Human fishing is a physical action. Do not make it a subtype of the existing broad animal-capable hunting action. OEWN 2025: oewn-01143220-v."
+    },
+    {
+      "id": 3759,
+      "before": [
+        1905,
+        "61",
+        1910,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "Hunting and fishing categories have variable scopes and can overlap in fish-directed pursuit. Remove the unsupported blanket exclusion instead of forcing a universal biological or legal boundary."
+    },
+    {
+      "id": 17215,
+      "before": [
+        13131,
+        "14",
+        5017,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          13131,
+          "14",
+          1910,
+          null,
+          1
+        ]
+      ],
+      "reason": "This existing method is a narrower fishing activity; reuse it instead of creating a duplicate angling concept. OEWN 2025: oewn-00455261-n."
+    },
+    {
+      "id": 2889,
+      "before": [
+        1911,
+        "14",
+        30,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1911,
+          "14",
+          "fishing_gear",
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the rod through the fishing-gear family, preserving its tool ancestry. OEWN 2025: oewn-03356825-n."
+    },
+    {
+      "id": 2926,
+      "before": [
+        1911,
+        "21",
+        1910,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1911,
+          "21",
+          13131,
+          null,
+          1
+        ]
+      ],
+      "reason": "Refine the rod purpose to the hook-and-line method, which remains a kind of fishing. OEWN 2025: oewn-03356825-n."
+    },
+    {
+      "id": 2927,
+      "before": [
+        1606,
+        "21",
+        1910,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "Not every net is fishing gear. Assign the fishing purpose to the newly distinguished fishing-net subtype. OEWN 2025: oewn-03357474-n."
+    },
+    {
+      "id": 30129,
+      "before": [
+        5303,
+        "14",
+        3396,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          5303,
+          "14",
+          28,
+          null,
+          1
+        ]
+      ],
+      "reason": "A fisher may fish as recreation or work. Keep the general person role and add the worker genus only to the commercial subtype. Source: https://dictionary.cambridge.org/us/dictionary/english/fisherman"
+    },
+    {
+      "id": 17651,
+      "before": [
+        13567,
+        "14",
+        34,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          13567,
+          "14",
+          18,
+          null,
+          1
+        ]
+      ],
+      "reason": "The fishing-related adjective is a property, not a natural object. Source: https://gramota.ru/meta/rybolovnyy"
+    },
+    {
+      "id": 28009,
+      "before": [
+        23925,
+        "14",
+        34,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          23925,
+          "14",
+          18,
+          null,
+          1
+        ]
+      ],
+      "reason": "The fishery-related adjective is a property, not a natural object. Its use for fishers, fleets and gear does not select one object genus. Source: https://gramota.ru/meta/rybolovetskiy"
+    }
+  ],
+  "edges": [
+    {
+      "subject": "commercial_fishing",
+      "kod": "14",
+      "object": 65,
+      "universum_id": 1,
+      "reason": "Commercial fishing is also work; fishing in general need not be a job."
+    },
+    {
+      "subject": "recreational_angling",
+      "kod": "14",
+      "object": 13131,
+      "universum_id": 1,
+      "reason": "This restricted recreational activity also uses the angling method."
+    },
+    {
+      "subject": "recreational_shore",
+      "kod": "14",
+      "object": "shore_fishing",
+      "universum_id": 1,
+      "reason": "This recreational subtype also has the shore-location restriction."
+    },
+    {
+      "subject": "fishhook",
+      "kod": "14",
+      "object": "fishing_gear",
+      "universum_id": 1,
+      "reason": "A fishhook is both a hook component and fishing gear; it is not a clothing hook."
+    },
+    {
+      "subject": "fishing_net",
+      "kod": "14",
+      "object": "fishing_gear",
+      "universum_id": 1,
+      "reason": "A fishing net is both a net artifact and fishing gear."
+    },
+    {
+      "subject": "commercial_fisher",
+      "kod": "14",
+      "object": 3396,
+      "universum_id": 1,
+      "reason": "The occupational fishing role is also a worker role."
+    },
+    {
+      "subject": "recreational_angler",
+      "kod": "14",
+      "object": "angler",
+      "universum_id": 1,
+      "reason": "Keep both the recreational and method-specific participant classifications."
+    },
+    {
+      "subject": "fishing_gear",
+      "kod": "21",
+      "object": 1910,
+      "universum_id": 1,
+      "reason": "The selected gear is intended for this fishing activity or method; no catch success or regulatory eligibility is asserted."
+    },
+    {
+      "subject": "fishing_line",
+      "kod": "21",
+      "object": 13131,
+      "universum_id": 1,
+      "reason": "The selected gear is intended for this fishing activity or method; no catch success or regulatory eligibility is asserted."
+    },
+    {
+      "subject": "handline",
+      "kod": "21",
+      "object": "handlining",
+      "universum_id": 1,
+      "reason": "The selected gear is intended for this fishing activity or method; no catch success or regulatory eligibility is asserted."
+    },
+    {
+      "subject": "fishhook",
+      "kod": "21",
+      "object": 13131,
+      "universum_id": 1,
+      "reason": "The selected gear is intended for this fishing activity or method; no catch success or regulatory eligibility is asserted."
+    },
+    {
+      "subject": "reel",
+      "kod": "21",
+      "object": 13131,
+      "universum_id": 1,
+      "reason": "The selected gear is intended for this fishing activity or method; no catch success or regulatory eligibility is asserted."
+    },
+    {
+      "subject": "float",
+      "kod": "21",
+      "object": 13131,
+      "universum_id": 1,
+      "reason": "The selected gear is intended for this fishing activity or method; no catch success or regulatory eligibility is asserted."
+    },
+    {
+      "subject": "sinker",
+      "kod": "21",
+      "object": 1910,
+      "universum_id": 1,
+      "reason": "The selected gear is intended for this fishing activity or method; no catch success or regulatory eligibility is asserted."
+    },
+    {
+      "subject": "lure",
+      "kod": "21",
+      "object": 13131,
+      "universum_id": 1,
+      "reason": "The selected gear is intended for this fishing activity or method; no catch success or regulatory eligibility is asserted."
+    },
+    {
+      "subject": "artificial_fly",
+      "kod": "21",
+      "object": "fly_fishing",
+      "universum_id": 1,
+      "reason": "The selected gear is intended for this fishing activity or method; no catch success or regulatory eligibility is asserted."
+    },
+    {
+      "subject": "fishing_net",
+      "kod": "21",
+      "object": 1910,
+      "universum_id": 1,
+      "reason": "The selected gear is intended for this fishing activity or method; no catch success or regulatory eligibility is asserted."
+    },
+    {
+      "subject": "landing_net",
+      "kod": "21",
+      "object": 1910,
+      "universum_id": 1,
+      "reason": "The selected gear is intended for this fishing activity or method; no catch success or regulatory eligibility is asserted."
+    },
+    {
+      "subject": "gillnet",
+      "kod": "21",
+      "object": "net_fishing",
+      "universum_id": 1,
+      "reason": "The selected gear is intended for this fishing activity or method; no catch success or regulatory eligibility is asserted."
+    },
+    {
+      "subject": "trawl_net",
+      "kod": "21",
+      "object": "net_fishing",
+      "universum_id": 1,
+      "reason": "The selected gear is intended for this fishing activity or method; no catch success or regulatory eligibility is asserted."
+    },
+    {
+      "subject": "fly_rod",
+      "kod": "21",
+      "object": "fly_fishing",
+      "universum_id": 1,
+      "reason": "The selected gear is intended for this fishing activity or method; no catch success or regulatory eligibility is asserted."
+    },
+    {
+      "subject": "rod_with_reel",
+      "kod": "20",
+      "object": "reel",
+      "universum_id": 1,
+      "reason": "A reel is a component of this explicitly restricted rod configuration, not of every rod."
+    },
+    {
+      "subject": 5303,
+      "kod": "22",
+      "object": 1910,
+      "universum_id": 1,
+      "reason": "The participant role supports capability for the corresponding fishing activity, without a proficiency or licensing claim."
+    },
+    {
+      "subject": "commercial_fisher",
+      "kod": "22",
+      "object": "commercial_fishing",
+      "universum_id": 1,
+      "reason": "The participant role supports capability for the corresponding fishing activity, without a proficiency or licensing claim."
+    },
+    {
+      "subject": "recreational_fisher",
+      "kod": "22",
+      "object": "recreational_fishing",
+      "universum_id": 1,
+      "reason": "The participant role supports capability for the corresponding fishing activity, without a proficiency or licensing claim."
+    },
+    {
+      "subject": "angler",
+      "kod": "22",
+      "object": 13131,
+      "universum_id": 1,
+      "reason": "The participant role supports capability for the corresponding fishing activity, without a proficiency or licensing claim."
+    },
+    {
+      "subject": "recreational_angler",
+      "kod": "22",
+      "object": "recreational_angling",
+      "universum_id": 1,
+      "reason": "The participant role supports capability for the corresponding fishing activity, without a proficiency or licensing claim."
+    }
+  ],
+  "checks": [
+    {
+      "subject": "recreational_fishing",
+      "kod": "14",
+      "object": 1910,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "commercial_fishing",
+      "kod": "14",
+      "object": 1910,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "commercial_fishing",
+      "kod": "14",
+      "object": 65,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "household_food_fishing",
+      "kod": "14",
+      "object": 1910,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fly_fishing",
+      "kod": "14",
+      "object": 13131,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "trolling",
+      "kod": "14",
+      "object": 13131,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "handlining",
+      "kod": "14",
+      "object": 13131,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "net_fishing",
+      "kod": "14",
+      "object": 1910,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "ice_fishing",
+      "kod": "14",
+      "object": 1910,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "shore_fishing",
+      "kod": "14",
+      "object": 1910,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "boat_fishing",
+      "kod": "14",
+      "object": 1910,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "recreational_angling",
+      "kod": "14",
+      "object": "recreational_fishing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "recreational_angling",
+      "kod": "14",
+      "object": 13131,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "recreational_shore",
+      "kod": "14",
+      "object": "recreational_fishing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "recreational_shore",
+      "kod": "14",
+      "object": "shore_fishing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fishing_gear",
+      "kod": "14",
+      "object": 30,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fishing_line",
+      "kod": "14",
+      "object": "fishing_gear",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "handline",
+      "kod": "14",
+      "object": "fishing_line",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fishhook",
+      "kod": "14",
+      "object": 5559,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fishhook",
+      "kod": "14",
+      "object": "fishing_gear",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "barbless_hook",
+      "kod": "14",
+      "object": "fishhook",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "reel",
+      "kod": "14",
+      "object": "fishing_gear",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "float",
+      "kod": "14",
+      "object": "fishing_gear",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sinker",
+      "kod": "14",
+      "object": "fishing_gear",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "lure",
+      "kod": "14",
+      "object": "fishing_gear",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "artificial_fly",
+      "kod": "14",
+      "object": "lure",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fishing_net",
+      "kod": "14",
+      "object": 1606,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fishing_net",
+      "kod": "14",
+      "object": "fishing_gear",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "landing_net",
+      "kod": "14",
+      "object": "fishing_net",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "gillnet",
+      "kod": "14",
+      "object": "fishing_net",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "trawl_net",
+      "kod": "14",
+      "object": "fishing_net",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fly_rod",
+      "kod": "14",
+      "object": 1911,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rod_with_reel",
+      "kod": "14",
+      "object": 1911,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "commercial_fisher",
+      "kod": "14",
+      "object": 5303,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "commercial_fisher",
+      "kod": "14",
+      "object": 3396,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "recreational_fisher",
+      "kod": "14",
+      "object": 5303,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "angler",
+      "kod": "14",
+      "object": 5303,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "recreational_angler",
+      "kod": "14",
+      "object": "recreational_fisher",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "recreational_angler",
+      "kod": "14",
+      "object": "angler",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1905,
+      "kod": "14",
+      "object": 63,
+      "present": false
+    },
+    {
+      "subject": 1905,
+      "kod": "14",
+      "object": 5017,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1910,
+      "kod": "14",
+      "object": 1905,
+      "present": false
+    },
+    {
+      "subject": 1910,
+      "kod": "14",
+      "object": 5017,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1905,
+      "kod": "61",
+      "object": 1910,
+      "present": false
+    },
+    {
+      "subject": 13131,
+      "kod": "14",
+      "object": 5017,
+      "present": false
+    },
+    {
+      "subject": 13131,
+      "kod": "14",
+      "object": 1910,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1911,
+      "kod": "14",
+      "object": 30,
+      "present": false
+    },
+    {
+      "subject": 1911,
+      "kod": "14",
+      "object": "fishing_gear",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1911,
+      "kod": "21",
+      "object": 1910,
+      "present": false
+    },
+    {
+      "subject": 1911,
+      "kod": "21",
+      "object": 13131,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1606,
+      "kod": "21",
+      "object": 1910,
+      "present": false
+    },
+    {
+      "subject": 5303,
+      "kod": "14",
+      "object": 3396,
+      "present": false
+    },
+    {
+      "subject": 5303,
+      "kod": "14",
+      "object": 28,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 13567,
+      "kod": "14",
+      "object": 34,
+      "present": false
+    },
+    {
+      "subject": 13567,
+      "kod": "14",
+      "object": 18,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 23925,
+      "kod": "14",
+      "object": 34,
+      "present": false
+    },
+    {
+      "subject": 23925,
+      "kod": "14",
+      "object": 18,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fishing_gear",
+      "kod": "21",
+      "object": 1910,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fishing_line",
+      "kod": "21",
+      "object": 13131,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "handline",
+      "kod": "21",
+      "object": "handlining",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fishhook",
+      "kod": "21",
+      "object": 13131,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "reel",
+      "kod": "21",
+      "object": 13131,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "float",
+      "kod": "21",
+      "object": 13131,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "sinker",
+      "kod": "21",
+      "object": 1910,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "lure",
+      "kod": "21",
+      "object": 13131,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "artificial_fly",
+      "kod": "21",
+      "object": "fly_fishing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fishing_net",
+      "kod": "21",
+      "object": 1910,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "landing_net",
+      "kod": "21",
+      "object": 1910,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "gillnet",
+      "kod": "21",
+      "object": "net_fishing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "trawl_net",
+      "kod": "21",
+      "object": "net_fishing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fly_rod",
+      "kod": "21",
+      "object": "fly_fishing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rod_with_reel",
+      "kod": "20",
+      "object": "reel",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5303,
+      "kod": "22",
+      "object": 1910,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "commercial_fisher",
+      "kod": "22",
+      "object": "commercial_fishing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "recreational_fisher",
+      "kod": "22",
+      "object": "recreational_fishing",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "angler",
+      "kod": "22",
+      "object": 13131,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "recreational_angler",
+      "kod": "22",
+      "object": "recreational_angling",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5559,
+      "kod": "14",
+      "object": 242,
+      "present": true
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "recreational_fishing",
+      "ancestor": 1910,
+      "present": true
+    },
+    {
+      "subject": "commercial_fishing",
+      "ancestor": 1910,
+      "present": true
+    },
+    {
+      "subject": "household_food_fishing",
+      "ancestor": 1910,
+      "present": true
+    },
+    {
+      "subject": "fly_fishing",
+      "ancestor": 13131,
+      "present": true
+    },
+    {
+      "subject": "trolling",
+      "ancestor": 13131,
+      "present": true
+    },
+    {
+      "subject": "handlining",
+      "ancestor": 13131,
+      "present": true
+    },
+    {
+      "subject": "net_fishing",
+      "ancestor": 1910,
+      "present": true
+    },
+    {
+      "subject": "ice_fishing",
+      "ancestor": 1910,
+      "present": true
+    },
+    {
+      "subject": "shore_fishing",
+      "ancestor": 1910,
+      "present": true
+    },
+    {
+      "subject": "boat_fishing",
+      "ancestor": 1910,
+      "present": true
+    },
+    {
+      "subject": "recreational_angling",
+      "ancestor": "recreational_fishing",
+      "present": true
+    },
+    {
+      "subject": "recreational_shore",
+      "ancestor": "recreational_fishing",
+      "present": true
+    },
+    {
+      "subject": "fishing_gear",
+      "ancestor": 30,
+      "present": true
+    },
+    {
+      "subject": "fishing_line",
+      "ancestor": "fishing_gear",
+      "present": true
+    },
+    {
+      "subject": "handline",
+      "ancestor": "fishing_line",
+      "present": true
+    },
+    {
+      "subject": "fishhook",
+      "ancestor": 5559,
+      "present": true
+    },
+    {
+      "subject": "barbless_hook",
+      "ancestor": "fishhook",
+      "present": true
+    },
+    {
+      "subject": "reel",
+      "ancestor": "fishing_gear",
+      "present": true
+    },
+    {
+      "subject": "float",
+      "ancestor": "fishing_gear",
+      "present": true
+    },
+    {
+      "subject": "sinker",
+      "ancestor": "fishing_gear",
+      "present": true
+    },
+    {
+      "subject": "lure",
+      "ancestor": "fishing_gear",
+      "present": true
+    },
+    {
+      "subject": "artificial_fly",
+      "ancestor": "lure",
+      "present": true
+    },
+    {
+      "subject": "fishing_net",
+      "ancestor": 1606,
+      "present": true
+    },
+    {
+      "subject": "landing_net",
+      "ancestor": "fishing_net",
+      "present": true
+    },
+    {
+      "subject": "gillnet",
+      "ancestor": "fishing_net",
+      "present": true
+    },
+    {
+      "subject": "trawl_net",
+      "ancestor": "fishing_net",
+      "present": true
+    },
+    {
+      "subject": "fly_rod",
+      "ancestor": 1911,
+      "present": true
+    },
+    {
+      "subject": "rod_with_reel",
+      "ancestor": 1911,
+      "present": true
+    },
+    {
+      "subject": "commercial_fisher",
+      "ancestor": 5303,
+      "present": true
+    },
+    {
+      "subject": "recreational_fisher",
+      "ancestor": 5303,
+      "present": true
+    },
+    {
+      "subject": "angler",
+      "ancestor": 5303,
+      "present": true
+    },
+    {
+      "subject": "recreational_angler",
+      "ancestor": "recreational_fisher",
+      "present": true
+    },
+    {
+      "subject": 1905,
+      "ancestor": 5017,
+      "present": true
+    },
+    {
+      "subject": 1910,
+      "ancestor": 5017,
+      "present": true
+    },
+    {
+      "subject": 13131,
+      "ancestor": 1910,
+      "present": true
+    },
+    {
+      "subject": 1911,
+      "ancestor": 30,
+      "present": true
+    },
+    {
+      "subject": 5303,
+      "ancestor": 28,
+      "present": true
+    },
+    {
+      "subject": "commercial_fisher",
+      "ancestor": 3396,
+      "present": true
+    },
+    {
+      "subject": "recreational_angling",
+      "ancestor": 13131,
+      "present": true
+    },
+    {
+      "subject": "recreational_shore",
+      "ancestor": "shore_fishing",
+      "present": true
+    },
+    {
+      "subject": "recreational_angler",
+      "ancestor": "angler",
+      "present": true
+    },
+    {
+      "subject": "fishhook",
+      "ancestor": "fishing_gear",
+      "present": true
+    },
+    {
+      "subject": "fishing_net",
+      "ancestor": "fishing_gear",
+      "present": true
+    },
+    {
+      "subject": "barbless_hook",
+      "ancestor": 5559,
+      "present": true
+    },
+    {
+      "subject": 1905,
+      "ancestor": 63,
+      "present": false
+    },
+    {
+      "subject": 1910,
+      "ancestor": 1905,
+      "present": false
+    },
+    {
+      "subject": 5303,
+      "ancestor": 3396,
+      "present": false
+    },
+    {
+      "subject": "recreational_fisher",
+      "ancestor": 3396,
+      "present": false
+    },
+    {
+      "subject": "angler",
+      "ancestor": 3396,
+      "present": false
+    },
+    {
+      "subject": 13567,
+      "ancestor": 34,
+      "present": false
+    },
+    {
+      "subject": 23925,
+      "ancestor": 34,
+      "present": false
+    },
+    {
+      "subject": 13131,
+      "ancestor": "recreational_fishing",
+      "present": false
+    },
+    {
+      "subject": "ice_fishing",
+      "ancestor": 13131,
+      "present": false
+    },
+    {
+      "subject": "commercial_fishing",
+      "ancestor": "recreational_fishing",
+      "present": false
+    },
+    {
+      "subject": "recreational_fishing",
+      "ancestor": "commercial_fishing",
+      "present": false
+    },
+    {
+      "subject": 1606,
+      "ancestor": "fishing_gear",
+      "present": false
+    },
+    {
+      "subject": "fishing_line",
+      "ancestor": 1897,
+      "present": false
+    },
+    {
+      "subject": "fishing_net",
+      "ancestor": 1910,
+      "present": false
+    },
+    {
+      "subject": "fishhook",
+      "ancestor": 24990,
+      "present": false
+    },
+    {
+      "subject": "artificial_fly",
+      "ancestor": 107,
+      "present": false
+    },
+    {
+      "subject": "angler",
+      "ancestor": 106,
+      "present": false
+    },
+    {
+      "subject": "fly_rod",
+      "ancestor": "rod_with_reel",
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": "recreational_fishing",
+      "term": "любительская рыбная ловля",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "recreational_fishing",
+      "term": "recreational fishing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "commercial_fishing",
+      "term": "коммерческая рыбная ловля",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "commercial_fishing",
+      "term": "commercial fishing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "household_food_fishing",
+      "term": "ловля рыбы для собственного питания",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "household_food_fishing",
+      "term": "fishing for household food",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "household_food_fishing",
+      "term": "subsistence fishing (household food)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fly_fishing",
+      "term": "нахлыстовая ловля",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fly_fishing",
+      "term": "fly fishing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fly_fishing",
+      "term": "fly-fishing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fly_fishing",
+      "term": "нахлыст",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "trolling",
+      "term": "троллинг (рыбная ловля)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "trolling",
+      "term": "trolling (fishing)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "handlining",
+      "term": "ловля рыбы ручной леской",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "handlining",
+      "term": "handline fishing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "handlining",
+      "term": "handlining",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "net_fishing",
+      "term": "ловля рыбы сетью",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "net_fishing",
+      "term": "net fishing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "ice_fishing",
+      "term": "подлёдная рыбная ловля",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "ice_fishing",
+      "term": "ice fishing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "shore_fishing",
+      "term": "ловля рыбы с берега",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "shore_fishing",
+      "term": "shore fishing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "boat_fishing",
+      "term": "ловля рыбы с лодки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "boat_fishing",
+      "term": "fishing from a boat",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "boat_fishing",
+      "term": "boat fishing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "recreational_angling",
+      "term": "любительское ужение рыбы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "recreational_angling",
+      "term": "recreational angling",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "recreational_shore",
+      "term": "любительская ловля рыбы с берега",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "recreational_shore",
+      "term": "recreational shore fishing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fishing_gear",
+      "term": "рыболовное снаряжение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fishing_gear",
+      "term": "fishing gear",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fishing_gear",
+      "term": "fishing tackle",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fishing_line",
+      "term": "рыболовная леска",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fishing_line",
+      "term": "fishing line",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fishing_line",
+      "term": "леска",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "handline",
+      "term": "ручная рыболовная леска",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "handline",
+      "term": "handline (fishing)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "handline",
+      "term": "hand line (fishing)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fishhook",
+      "term": "рыболовный крючок",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fishhook",
+      "term": "fishhook",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fishhook",
+      "term": "fishing hook",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "barbless_hook",
+      "term": "рыболовный крючок без бородки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "barbless_hook",
+      "term": "barbless fishhook",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "barbless_hook",
+      "term": "barbless fishing hook",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "reel",
+      "term": "рыболовная катушка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "reel",
+      "term": "fishing reel",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "float",
+      "term": "поплавок для удочки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "float",
+      "term": "fishing float",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "float",
+      "term": "bobber (fishing)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "sinker",
+      "term": "рыболовное грузило",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "sinker",
+      "term": "fishing sinker",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "sinker",
+      "term": "sinker (fishing)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "lure",
+      "term": "искусственная рыболовная приманка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "lure",
+      "term": "artificial fishing lure",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "lure",
+      "term": "fish lure",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "artificial_fly",
+      "term": "искусственная рыболовная мушка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "artificial_fly",
+      "term": "artificial fly (fishing)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "artificial_fly",
+      "term": "fishing fly",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fishing_net",
+      "term": "рыболовная сеть",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fishing_net",
+      "term": "fishing net",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fishing_net",
+      "term": "fishnet (fishing gear)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "landing_net",
+      "term": "рыболовный подсачек",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "landing_net",
+      "term": "landing net",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "landing_net",
+      "term": "подсачек",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "gillnet",
+      "term": "жаберная рыболовная сеть",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "gillnet",
+      "term": "gill net",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "gillnet",
+      "term": "gillnet",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "trawl_net",
+      "term": "трал (рыболовная сеть)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "trawl_net",
+      "term": "trawl net",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fly_rod",
+      "term": "нахлыстовое удилище",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fly_rod",
+      "term": "fly rod",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rod_with_reel",
+      "term": "удочка с катушкой",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rod_with_reel",
+      "term": "fishing rod with a reel",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "commercial_fisher",
+      "term": "рыбак-промысловик",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "commercial_fisher",
+      "term": "commercial fisher",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "recreational_fisher",
+      "term": "рыболов-любитель",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "recreational_fisher",
+      "term": "recreational fisher",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "angler",
+      "term": "рыболов на крючковую снасть",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "angler",
+      "term": "angler",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "recreational_angler",
+      "term": "рыболов-любитель на крючковую снасть",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "recreational_angler",
+      "term": "recreational angler",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1910,
+      "term": "рыбачение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1910,
+      "term": "рыбачить",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1910,
+      "term": "рыбалка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1910,
+      "term": "to fish",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 13131,
+      "term": "ужение рыбы",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 13131,
+      "term": "angling",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 13131,
+      "term": "hook-and-line fishing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 13131,
+      "term": "ужение",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 13131,
+      "term": "удить",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 13131,
+      "term": "удение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 13131,
+      "term": "удиение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 13131,
+      "term": "УДИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 1606,
+      "term": "сеть (сетчатое изделие)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1606,
+      "term": "net (mesh artifact)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 5303,
+      "term": "fisher (person)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 13567,
+      "term": "fishing-related",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 13567,
+      "term": "рыболовный",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 13567,
+      "term": "рыболовное",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 23925,
+      "term": "fishery-related",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 23925,
+      "term": "рыболовецкий",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 23925,
+      "term": "рыболовецкее",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 23925,
+      "term": "рыболовецкее",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": "angler",
+      "term": "anglerfish",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "fishhook",
+      "term": "hook",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "artificial_fly",
+      "term": "fly",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "reel",
+      "term": "reel",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "handline",
+      "term": "handline (climbing)",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "trolling",
+      "term": "troll",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "household_food_fishing",
+      "term": "subsistence fishing",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

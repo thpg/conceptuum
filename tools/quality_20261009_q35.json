@@ -1,0 +1,2657 @@
+{
+  "source": "quality-20261009-q35",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Database data versus DBMS software; SQLite and deductive software; table structures and definitions; integrity constraints; transaction execution, records, commit and rollback; selected rename-generated language tags.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "sqlite": "https://www.sqlite.org/about.html",
+      "sqlite_uses": "https://www.sqlite.org/whentouse.html",
+      "schema": "https://www.sqlite.org/schematab.html",
+      "tables": "https://www.postgresql.org/docs/18/ddl-basics.html",
+      "constraints": "https://www.postgresql.org/docs/18/ddl-constraints.html",
+      "transactions": "https://www.postgresql.org/docs/18/tutorial-transactions.html",
+      "indexes": "https://www.postgresql.org/docs/18/indexes-intro.html",
+      "database_architecture": "https://www.postgresql.org/docs/18/tutorial-arch.html",
+      "deductive": "https://research.cs.wisc.edu/coral/"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet; CC BY 4.0 and Princeton notices remain in docs/quality/2026-10-09-q11.md#sources-and-reuse. SQLite, PostgreSQL and the CORAL project support technical extensions. Source prose and code are not copied. Qualified labels, intersections and graph mappings are editorial adaptations.",
+    "existing_cohort": [
+      267,
+      270,
+      271,
+      272,
+      627,
+      472,
+      682,
+      683,
+      764,
+      1116,
+      1156,
+      1075,
+      358,
+      359,
+      295,
+      25274,
+      303,
+      304,
+      309,
+      310,
+      311,
+      491
+    ],
+    "context_policy": "All new concepts and assertions use U3 with unspecified strength. Preserve home contexts and previously valid genera. The old СУБД term and parent of the deductive system determine the selected software readings. SQL constraint kinds and arity restrictions are separate axes.",
+    "sense_decisions": [
+      {
+        "concept": 683,
+        "synset": null,
+        "decision": "qualify existing software sense",
+        "alignment": "reviewed sense",
+        "scope": "The record already inherits the Russian СУБД concept. CORAL provides a primary-source example of implemented deductive database software. The data collection of facts and rules is not equated with that software."
+      },
+      {
+        "concept": "relational_dbms",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "DBMS software for relational data; not the relational database itself."
+      },
+      {
+        "concept": "embedded_dbms",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "DBMS software running within its host application process, without requiring a separate database-server process."
+      },
+      {
+        "concept": "embedded_relational_dbms",
+        "synset": null,
+        "decision": "add",
+        "alignment": "deployment/model intersection",
+        "scope": "The intersection of in-process embedding and relational data management."
+      },
+      {
+        "concept": "client_server_relational_dbms",
+        "synset": null,
+        "decision": "add",
+        "alignment": "deployment/model intersection",
+        "scope": "A relational DBMS with a distinct database-server program serving client requests."
+      },
+      {
+        "concept": "database_management",
+        "synset": null,
+        "decision": "add",
+        "alignment": "operation associated with the DBMS meaning",
+        "scope": "An operation that creates, maintains or accesses a database through database-management software."
+      },
+      {
+        "concept": "database_row",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A record occurring in a database table; duplicates and unspecified row order are possible."
+      },
+      {
+        "concept": "database_column",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A named column in a database table, not an architectural pillar or a newspaper article."
+      },
+      {
+        "concept": "database_schema",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A description of database structures, distinct from the stored rows and from a SQL namespace named schema."
+      },
+      {
+        "concept": "table_definition",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A description of a table structure, distinct from the table data and the whole database schema."
+      },
+      {
+        "concept": "database_schema_matching",
+        "synset": null,
+        "decision": "add",
+        "alignment": "target-restricted existing operation",
+        "scope": "The database-schema specialization of the existing broader schema-matching process."
+      },
+      {
+        "concept": "database_index",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An auxiliary data structure supporting access to database rows; not an array position or a guaranteed speedup."
+      },
+      {
+        "concept": "integrity_constraint",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A specified rule restricting admissible database values or relationships; distinguish the rule from the data."
+      },
+      {
+        "concept": "check_constraint",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A SQL constraint expressed by a checking predicate; do not identify UNKNOWN with FALSE."
+      },
+      {
+        "concept": "not_null_constraint",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The SQL constraint excluding NULL for the constrained column."
+      },
+      {
+        "concept": "unique_constraint",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The declared SQL uniqueness constraint; NULL treatment is not assumed identical across implementations."
+      },
+      {
+        "concept": "primary_key_constraint",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The SQL constraint designating primary-key columns; do not impose a universal storage or index implementation."
+      },
+      {
+        "concept": "single_column_constraint",
+        "synset": null,
+        "decision": "add",
+        "alignment": "arity restriction",
+        "scope": "A constraint scoped to one constrained column of the local table, irrespective of column/table syntax."
+      },
+      {
+        "concept": "multi_column_constraint",
+        "synset": null,
+        "decision": "add",
+        "alignment": "arity restriction",
+        "scope": "A constraint involving multiple constrained columns of the local table; not every table-level declaration has this arity."
+      },
+      {
+        "concept": "single_foreign_key",
+        "synset": null,
+        "decision": "add",
+        "alignment": "constraint-kind/arity intersection",
+        "scope": "A foreign-key constraint with one local constrained column."
+      },
+      {
+        "concept": "composite_foreign_key",
+        "synset": null,
+        "decision": "add",
+        "alignment": "constraint-kind/arity intersection",
+        "scope": "A foreign-key constraint over multiple local columns."
+      },
+      {
+        "concept": "self_foreign_key",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The referenced table is the same table; no requirement to reference another table is inherited."
+      },
+      {
+        "concept": "composite_primary_key",
+        "synset": null,
+        "decision": "add",
+        "alignment": "constraint-kind/arity intersection",
+        "scope": "A primary-key constraint spanning multiple columns."
+      },
+      {
+        "concept": "transaction_record",
+        "synset": null,
+        "decision": "add",
+        "alignment": "record of an operation",
+        "scope": "A structured record describing a database transaction; not the transaction execution itself."
+      },
+      {
+        "concept": "transaction_commit",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The operation of committing a database transaction; not a source-control commit object."
+      },
+      {
+        "concept": "transaction_rollback",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Discarding uncommitted transactional changes, either for a whole transaction or back to a savepoint."
+      },
+      {
+        "concept": "savepoint",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A designated point within a transaction supporting partial rollback; not a backup file or a committed database snapshot."
+      },
+      {
+        "concept": "rollback_to_savepoint",
+        "synset": null,
+        "decision": "add",
+        "alignment": "rollback boundary restriction",
+        "scope": "Rollback restricted to changes after an existing savepoint; earlier changes remain within the transaction."
+      },
+      {
+        "concept": 271,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "NoSQL remains a broad data-model label; no unsupported claim that all NoSQL systems reject SQL is added."
+      },
+      {
+        "concept": 627,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing tabular data structure; its code-page child is outside this batch."
+      },
+      {
+        "concept": 472,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the existing structured record sense rather than importing sporting or music-record homonyms."
+      },
+      {
+        "concept": 1075,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Preserve the broader schema-matching process and add a database-specific target restriction."
+      },
+      {
+        "concept": 358,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Only the database-as-component assertion is rejected; broader SQL language and query semantics remain queued."
+      },
+      {
+        "concept": 683,
+        "synset": null,
+        "decision": "reuse or defer as scoped",
+        "alignment": "reviewed sense",
+        "scope": "Keep its existing СУБД genus while making the software sense explicit; do not treat stored facts/rules as executable software."
+      },
+      {
+        "concept": 1156,
+        "synset": "oewn-01108713-n",
+        "decision": "reject commercial homonym",
+        "alignment": "reviewed sense",
+        "scope": "The dictionary transaction synset concerns group/commercial activity, not the technical database execution."
+      },
+      {
+        "concept": "database_index",
+        "synset": null,
+        "decision": "separate technical sense",
+        "alignment": "reviewed sense",
+        "scope": "An index structure is not the already existing integer array index 24485."
+      }
+    ],
+    "limits": "No database deployment, application test suite, schema migration or user-data transaction is executed. No universal index speedup, unique row order, mandatory primary key, foreign-key NOT NULL rule, primary-key-only reference rule or implementation-independent NULL policy is asserted. SQLite can be used inside a server application without becoming a separate server process. General data schemas, SQL schema namespaces, view/materialized-view distinctions, relational algebra, SQL lifecycle and foreign-key column sets remain queued.",
+    "transient_term_removals": [
+      [
+        682,
+        "database system",
+        "ru"
+      ],
+      [
+        683,
+        "Deductive database",
+        "ru"
+      ],
+      [
+        272,
+        "database table",
+        "ru"
+      ],
+      [
+        764,
+        "Foreign key",
+        "ru"
+      ],
+      [
+        1156,
+        "Transaction",
+        "ru"
+      ]
+    ],
+    "exclusion_review": {
+      "contexts": [
+        "U1",
+        "U3"
+      ],
+      "before_u1_conflicting_edges": 0,
+      "before_u3_conflicting_edges": 0,
+      "decision": "Preserve the clear shared-descendant scans and all upper exclusions and explicit negations."
+    },
+    "new_term_collisions": [],
+    "collision_decision": "No new-term normalized collision accepted. Reuse existing СУБД, SQLite, table, record, foreign-key and transaction records with explicit senses.",
+    "refreshed_comparison": {
+      "baseline": "Q34",
+      "existing_concepts": 13280,
+      "existing_terms": 37408,
+      "synsets_with_exact_en_candidate": 15662,
+      "synsets_without_exact_en_candidate": 91857,
+      "existing_concepts_with_dictionary_candidate": 4233,
+      "caveat": "Spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "relational_dbms",
+      "name": "реляционная система управления базами данных",
+      "parent": 682,
+      "universum_id": 3,
+      "terms": [
+        [
+          "реляционная система управления базами данных",
+          "ru"
+        ],
+        [
+          "relational database management system",
+          "en"
+        ],
+        [
+          "RDBMS",
+          "en"
+        ]
+      ],
+      "reason": "DBMS software for relational data; not the relational database itself. Source: https://www.postgresql.org/docs/18/tutorial-arch.html"
+    },
+    {
+      "key": "embedded_dbms",
+      "name": "встраиваемая система управления базами данных",
+      "parent": 682,
+      "universum_id": 3,
+      "terms": [
+        [
+          "встраиваемая система управления базами данных",
+          "ru"
+        ],
+        [
+          "embedded database management system",
+          "en"
+        ]
+      ],
+      "reason": "DBMS software running within its host application process, without requiring a separate database-server process. Source: https://www.sqlite.org/about.html"
+    },
+    {
+      "key": "embedded_relational_dbms",
+      "name": "встраиваемая реляционная СУБД",
+      "parent": "embedded_dbms",
+      "universum_id": 3,
+      "terms": [
+        [
+          "встраиваемая реляционная СУБД",
+          "ru"
+        ],
+        [
+          "embedded relational DBMS",
+          "en"
+        ]
+      ],
+      "reason": "The intersection of in-process embedding and relational data management. Source: https://www.sqlite.org/about.html"
+    },
+    {
+      "key": "client_server_relational_dbms",
+      "name": "клиент-серверная реляционная СУБД",
+      "parent": "relational_dbms",
+      "universum_id": 3,
+      "terms": [
+        [
+          "клиент-серверная реляционная СУБД",
+          "ru"
+        ],
+        [
+          "client-server relational DBMS",
+          "en"
+        ]
+      ],
+      "reason": "A relational DBMS with a distinct database-server program serving client requests. Source: https://www.postgresql.org/docs/18/tutorial-arch.html"
+    },
+    {
+      "key": "database_management",
+      "name": "операция управления базой данных",
+      "parent": 325,
+      "universum_id": 3,
+      "terms": [
+        [
+          "операция управления базой данных",
+          "ru"
+        ],
+        [
+          "database management operation",
+          "en"
+        ]
+      ],
+      "reason": "An operation that creates, maintains or accesses a database through database-management software. Source: https://en-word.net/downloads"
+    },
+    {
+      "key": "database_row",
+      "name": "строка таблицы базы данных",
+      "parent": 472,
+      "universum_id": 3,
+      "terms": [
+        [
+          "строка таблицы базы данных",
+          "ru"
+        ],
+        [
+          "database row",
+          "en"
+        ],
+        [
+          "database table row",
+          "en"
+        ]
+      ],
+      "reason": "A record occurring in a database table; duplicates and unspecified row order are possible. Source: https://www.postgresql.org/docs/18/ddl-basics.html"
+    },
+    {
+      "key": "database_column",
+      "name": "столбец таблицы базы данных",
+      "parent": 265,
+      "universum_id": 3,
+      "terms": [
+        [
+          "столбец таблицы базы данных",
+          "ru"
+        ],
+        [
+          "database column",
+          "en"
+        ],
+        [
+          "database table column",
+          "en"
+        ]
+      ],
+      "reason": "A named column in a database table, not an architectural pillar or a newspaper article. Source: https://www.postgresql.org/docs/18/ddl-basics.html"
+    },
+    {
+      "key": "database_schema",
+      "name": "описание схемы базы данных",
+      "parent": 265,
+      "universum_id": 3,
+      "terms": [
+        [
+          "описание схемы базы данных",
+          "ru"
+        ],
+        [
+          "database schema definition",
+          "en"
+        ]
+      ],
+      "reason": "A description of database structures, distinct from the stored rows and from a SQL namespace named schema. Source: https://www.sqlite.org/schematab.html"
+    },
+    {
+      "key": "table_definition",
+      "name": "описание структуры таблицы базы данных",
+      "parent": 265,
+      "universum_id": 3,
+      "terms": [
+        [
+          "описание структуры таблицы базы данных",
+          "ru"
+        ],
+        [
+          "database table definition",
+          "en"
+        ]
+      ],
+      "reason": "A description of a table structure, distinct from the table data and the whole database schema. Source: https://www.postgresql.org/docs/18/ddl-basics.html"
+    },
+    {
+      "key": "database_schema_matching",
+      "name": "сопоставление схем баз данных",
+      "parent": 1075,
+      "universum_id": 3,
+      "terms": [
+        [
+          "сопоставление схем баз данных",
+          "ru"
+        ],
+        [
+          "database schema matching",
+          "en"
+        ]
+      ],
+      "reason": "The database-schema specialization of the existing broader schema-matching process."
+    },
+    {
+      "key": "database_index",
+      "name": "индекс базы данных",
+      "parent": 364,
+      "universum_id": 3,
+      "terms": [
+        [
+          "индекс базы данных",
+          "ru"
+        ],
+        [
+          "database index",
+          "en"
+        ]
+      ],
+      "reason": "An auxiliary data structure supporting access to database rows; not an array position or a guaranteed speedup. Source: https://www.postgresql.org/docs/18/indexes-intro.html"
+    },
+    {
+      "key": "integrity_constraint",
+      "name": "ограничение целостности базы данных",
+      "parent": 265,
+      "universum_id": 3,
+      "terms": [
+        [
+          "ограничение целостности базы данных",
+          "ru"
+        ],
+        [
+          "database integrity constraint",
+          "en"
+        ]
+      ],
+      "reason": "A specified rule restricting admissible database values or relationships; distinguish the rule from the data. Source: https://www.postgresql.org/docs/18/ddl-constraints.html"
+    },
+    {
+      "key": "check_constraint",
+      "name": "ограничение CHECK базы данных",
+      "parent": "integrity_constraint",
+      "universum_id": 3,
+      "terms": [
+        [
+          "ограничение CHECK базы данных",
+          "ru"
+        ],
+        [
+          "SQL CHECK constraint",
+          "en"
+        ]
+      ],
+      "reason": "A SQL constraint expressed by a checking predicate; do not identify UNKNOWN with FALSE. Source: https://www.postgresql.org/docs/18/ddl-constraints.html"
+    },
+    {
+      "key": "not_null_constraint",
+      "name": "ограничение NOT NULL базы данных",
+      "parent": "integrity_constraint",
+      "universum_id": 3,
+      "terms": [
+        [
+          "ограничение NOT NULL базы данных",
+          "ru"
+        ],
+        [
+          "SQL NOT NULL constraint",
+          "en"
+        ]
+      ],
+      "reason": "The SQL constraint excluding NULL for the constrained column. Source: https://www.postgresql.org/docs/18/ddl-constraints.html"
+    },
+    {
+      "key": "unique_constraint",
+      "name": "ограничение UNIQUE базы данных",
+      "parent": "integrity_constraint",
+      "universum_id": 3,
+      "terms": [
+        [
+          "ограничение UNIQUE базы данных",
+          "ru"
+        ],
+        [
+          "SQL UNIQUE constraint",
+          "en"
+        ]
+      ],
+      "reason": "The declared SQL uniqueness constraint; NULL treatment is not assumed identical across implementations. Source: https://www.postgresql.org/docs/18/ddl-constraints.html"
+    },
+    {
+      "key": "primary_key_constraint",
+      "name": "ограничение PRIMARY KEY базы данных",
+      "parent": "integrity_constraint",
+      "universum_id": 3,
+      "terms": [
+        [
+          "ограничение PRIMARY KEY базы данных",
+          "ru"
+        ],
+        [
+          "SQL PRIMARY KEY constraint",
+          "en"
+        ]
+      ],
+      "reason": "The SQL constraint designating primary-key columns; do not impose a universal storage or index implementation. Source: https://www.postgresql.org/docs/18/ddl-constraints.html"
+    },
+    {
+      "key": "single_column_constraint",
+      "name": "ограничение БД на один столбец",
+      "parent": "integrity_constraint",
+      "universum_id": 3,
+      "terms": [
+        [
+          "ограничение БД на один столбец",
+          "ru"
+        ],
+        [
+          "single-column database constraint",
+          "en"
+        ]
+      ],
+      "reason": "A constraint scoped to one constrained column of the local table, irrespective of column/table syntax. Source: https://www.postgresql.org/docs/18/ddl-constraints.html"
+    },
+    {
+      "key": "multi_column_constraint",
+      "name": "ограничение БД на несколько столбцов",
+      "parent": "integrity_constraint",
+      "universum_id": 3,
+      "terms": [
+        [
+          "ограничение БД на несколько столбцов",
+          "ru"
+        ],
+        [
+          "multi-column database constraint",
+          "en"
+        ]
+      ],
+      "reason": "A constraint involving multiple constrained columns of the local table; not every table-level declaration has this arity. Source: https://www.postgresql.org/docs/18/ddl-constraints.html"
+    },
+    {
+      "key": "single_foreign_key",
+      "name": "ограничение внешнего ключа на один столбец",
+      "parent": 764,
+      "universum_id": 3,
+      "terms": [
+        [
+          "ограничение внешнего ключа на один столбец",
+          "ru"
+        ],
+        [
+          "single-column foreign key constraint",
+          "en"
+        ]
+      ],
+      "reason": "A foreign-key constraint with one local constrained column. Source: https://www.postgresql.org/docs/18/ddl-constraints.html"
+    },
+    {
+      "key": "composite_foreign_key",
+      "name": "ограничение составного внешнего ключа",
+      "parent": 764,
+      "universum_id": 3,
+      "terms": [
+        [
+          "ограничение составного внешнего ключа",
+          "ru"
+        ],
+        [
+          "composite foreign key constraint",
+          "en"
+        ]
+      ],
+      "reason": "A foreign-key constraint over multiple local columns. Source: https://www.postgresql.org/docs/18/ddl-constraints.html"
+    },
+    {
+      "key": "self_foreign_key",
+      "name": "ограничение внешнего ключа со ссылкой на ту же таблицу",
+      "parent": 764,
+      "universum_id": 3,
+      "terms": [
+        [
+          "ограничение внешнего ключа со ссылкой на ту же таблицу",
+          "ru"
+        ],
+        [
+          "self-referential foreign key constraint",
+          "en"
+        ]
+      ],
+      "reason": "The referenced table is the same table; no requirement to reference another table is inherited. Source: https://www.postgresql.org/docs/18/ddl-constraints.html"
+    },
+    {
+      "key": "composite_primary_key",
+      "name": "ограничение составного первичного ключа",
+      "parent": "primary_key_constraint",
+      "universum_id": 3,
+      "terms": [
+        [
+          "ограничение составного первичного ключа",
+          "ru"
+        ],
+        [
+          "composite primary key constraint",
+          "en"
+        ]
+      ],
+      "reason": "A primary-key constraint spanning multiple columns. Source: https://www.postgresql.org/docs/18/ddl-constraints.html"
+    },
+    {
+      "key": "transaction_record",
+      "name": "запись о транзакции базы данных",
+      "parent": 472,
+      "universum_id": 3,
+      "terms": [
+        [
+          "запись о транзакции базы данных",
+          "ru"
+        ],
+        [
+          "database transaction record",
+          "en"
+        ]
+      ],
+      "reason": "A structured record describing a database transaction; not the transaction execution itself. Source: https://www.postgresql.org/docs/18/tutorial-transactions.html"
+    },
+    {
+      "key": "transaction_commit",
+      "name": "фиксация транзакции базы данных",
+      "parent": 325,
+      "universum_id": 3,
+      "terms": [
+        [
+          "фиксация транзакции базы данных",
+          "ru"
+        ],
+        [
+          "database transaction commit",
+          "en"
+        ]
+      ],
+      "reason": "The operation of committing a database transaction; not a source-control commit object. Source: https://www.postgresql.org/docs/18/tutorial-transactions.html"
+    },
+    {
+      "key": "transaction_rollback",
+      "name": "откат изменений транзакции базы данных",
+      "parent": 325,
+      "universum_id": 3,
+      "terms": [
+        [
+          "откат изменений транзакции базы данных",
+          "ru"
+        ],
+        [
+          "database transaction rollback",
+          "en"
+        ]
+      ],
+      "reason": "Discarding uncommitted transactional changes, either for a whole transaction or back to a savepoint. Source: https://www.postgresql.org/docs/18/tutorial-transactions.html"
+    },
+    {
+      "key": "savepoint",
+      "name": "точка сохранения транзакции базы данных",
+      "parent": 265,
+      "universum_id": 3,
+      "terms": [
+        [
+          "точка сохранения транзакции базы данных",
+          "ru"
+        ],
+        [
+          "database transaction savepoint",
+          "en"
+        ]
+      ],
+      "reason": "A designated point within a transaction supporting partial rollback; not a backup file or a committed database snapshot. Source: https://www.postgresql.org/docs/18/tutorial-transactions.html"
+    },
+    {
+      "key": "rollback_to_savepoint",
+      "name": "откат транзакции до точки сохранения",
+      "parent": "transaction_rollback",
+      "universum_id": 3,
+      "terms": [
+        [
+          "откат транзакции до точки сохранения",
+          "ru"
+        ],
+        [
+          "rollback to a database savepoint",
+          "en"
+        ]
+      ],
+      "reason": "Rollback restricted to changes after an existing savepoint; earlier changes remain within the transaction. Source: https://www.postgresql.org/docs/18/tutorial-transactions.html"
+    }
+  ],
+  "renames": [
+    {
+      "id": 682,
+      "before": "database system",
+      "name": "система управления базами данных",
+      "terms": [],
+      "reason": "The existing Russian СУБД selects DBMS software, not the data it manages. OEWN 2025: oewn-06601066-n."
+    },
+    {
+      "id": 683,
+      "before": "Deductive database",
+      "name": "дедуктивная СУБД",
+      "terms": [],
+      "reason": "Select the software-system sense already indicated by its СУБД parent; distinguish it from stored facts and rules. Source: https://research.cs.wisc.edu/coral/"
+    },
+    {
+      "id": 272,
+      "before": "database table",
+      "name": "таблица базы данных",
+      "terms": [],
+      "reason": "Select the table data structure, distinct from a whole relational database. Source: https://www.postgresql.org/docs/18/ddl-basics.html"
+    },
+    {
+      "id": 764,
+      "before": "Foreign key",
+      "name": "ограничение внешнего ключа",
+      "terms": [],
+      "reason": "Select the referential-integrity constraint rather than a whole database or the separate column-set meaning. Source: https://www.postgresql.org/docs/18/ddl-constraints.html"
+    },
+    {
+      "id": 1156,
+      "before": "Transaction",
+      "name": "транзакция базы данных (выполнение)",
+      "terms": [],
+      "reason": "Select the execution of a database transaction as a unit of work, distinct from its description or stored record. Source: https://www.postgresql.org/docs/18/tutorial-transactions.html"
+    }
+  ],
+  "terms": [
+    {
+      "id": 682,
+      "name": "система управления базами данных",
+      "terms": [
+        [
+          "database management system",
+          "en"
+        ],
+        [
+          "DBMS",
+          "en"
+        ]
+      ],
+      "reason": "Supply the precise English form for the existing СУБД meaning. OEWN 2025: oewn-06601066-n."
+    },
+    {
+      "id": 683,
+      "name": "дедуктивная СУБД",
+      "terms": [
+        [
+          "deductive database management system",
+          "en"
+        ],
+        [
+          "deductive database system (software)",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the deduction-capable database-management software sense."
+    },
+    {
+      "id": 1116,
+      "name": "SQLite",
+      "terms": [
+        [
+          "SQLite database engine",
+          "en"
+        ]
+      ],
+      "reason": "Keep the named software product and distinguish it from a database file or its contents."
+    },
+    {
+      "id": 267,
+      "name": "database",
+      "terms": [
+        [
+          "database (data collection)",
+          "en"
+        ]
+      ],
+      "reason": "Qualify organized data separately from database-management software. OEWN 2025: oewn-06650349-n."
+    },
+    {
+      "id": 764,
+      "name": "ограничение внешнего ключа",
+      "terms": [
+        [
+          "foreign key constraint",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the selected foreign-key rule sense; existing foreign-key lookup forms remain."
+    },
+    {
+      "id": 1156,
+      "name": "транзакция базы данных (выполнение)",
+      "terms": [
+        [
+          "database transaction (execution)",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the technical operation, excluding commercial dealings and transaction records."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 303,
+      "term": "server",
+      "lang": "ru",
+      "reason": "The Q34 rename helper copied an English common-noun label into a Russian term. Preserve its correctly tagged English row and the genuine Russian labels."
+    },
+    {
+      "id": 311,
+      "term": "client",
+      "lang": "ru",
+      "reason": "The Q34 rename helper copied an English common-noun label into a Russian term. Preserve its correctly tagged English row and the genuine Russian labels."
+    },
+    {
+      "id": 309,
+      "term": "web server",
+      "lang": "ru",
+      "reason": "The Q34 rename helper copied an English common-noun label into a Russian term. Preserve its correctly tagged English row and the genuine Russian labels."
+    },
+    {
+      "id": 310,
+      "term": "database server",
+      "lang": "ru",
+      "reason": "The Q34 rename helper copied an English common-noun label into a Russian term. Preserve its correctly tagged English row and the genuine Russian labels."
+    },
+    {
+      "id": 304,
+      "term": "workstation",
+      "lang": "ru",
+      "reason": "The Q34 rename helper copied an English common-noun label into a Russian term. Preserve its correctly tagged English row and the genuine Russian labels."
+    },
+    {
+      "id": 491,
+      "term": "build",
+      "lang": "ru",
+      "reason": "The Q34 rename helper copied an English common-noun label into a Russian term. Preserve its correctly tagged English row and the genuine Russian labels."
+    },
+    {
+      "id": 682,
+      "term": "database system",
+      "lang": "ru",
+      "reason": "Remove the English common-noun alias temporarily generated with a Russian tag by the rename helper. Preserve the original English term."
+    },
+    {
+      "id": 683,
+      "term": "Deductive database",
+      "lang": "ru",
+      "reason": "Remove the English common-noun alias temporarily generated with a Russian tag by the rename helper. Preserve the original English term."
+    },
+    {
+      "id": 272,
+      "term": "database table",
+      "lang": "ru",
+      "reason": "Remove the English common-noun alias temporarily generated with a Russian tag by the rename helper. Preserve the original English term."
+    },
+    {
+      "id": 764,
+      "term": "Foreign key",
+      "lang": "ru",
+      "reason": "Remove the English common-noun alias temporarily generated with a Russian tag by the rename helper. Preserve the original English term."
+    },
+    {
+      "id": 1156,
+      "term": "Transaction",
+      "lang": "ru",
+      "reason": "Remove the English common-noun alias temporarily generated with a Russian tag by the rename helper. Preserve the original English term."
+    }
+  ],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 1834,
+      "before": [
+        682,
+        "14",
+        267,
+        3
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          682,
+          "14",
+          277,
+          null,
+          3
+        ]
+      ],
+      "reason": "A DBMS is software; an organized database is the managed data. OEWN 2025: oewn-06601066-n."
+    },
+    {
+      "id": 1710,
+      "before": [
+        1116,
+        "14",
+        267,
+        3
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1116,
+          "14",
+          "embedded_relational_dbms",
+          null,
+          3
+        ]
+      ],
+      "reason": "SQLite is an embedded relational database engine, not a database data collection. Source: https://www.sqlite.org/about.html"
+    },
+    {
+      "id": 8828,
+      "before": [
+        267,
+        "22",
+        254,
+        3
+      ],
+      "reviewed_strength": 90,
+      "replacements": [],
+      "reason": "The database data collection was assigned an active storage capability. Retain its data/content relation and represent the managing software separately."
+    },
+    {
+      "id": 634,
+      "before": [
+        272,
+        "14",
+        270,
+        3
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          272,
+          "14",
+          627,
+          null,
+          3
+        ]
+      ],
+      "reason": "Use the existing tabular data-structure genus rather than the containing database. Source: https://www.postgresql.org/docs/18/ddl-basics.html"
+    },
+    {
+      "id": 1871,
+      "before": [
+        764,
+        "14",
+        267,
+        3
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          764,
+          "14",
+          "integrity_constraint",
+          null,
+          3
+        ]
+      ],
+      "reason": "A foreign-key constraint is a database integrity rule, not a kind of database. Source: https://www.postgresql.org/docs/18/ddl-constraints.html"
+    },
+    {
+      "id": 8868,
+      "before": [
+        358,
+        "20",
+        270,
+        3
+      ],
+      "reviewed_strength": 95,
+      "replacements": [],
+      "reason": "A SQL language is not composed of a relational database. Preserve the separate existing language-use relation; do not confuse a language and the data managed with it."
+    },
+    {
+      "id": 1751,
+      "before": [
+        1156,
+        "14",
+        265,
+        3
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1156,
+          "14",
+          325,
+          null,
+          3
+        ]
+      ],
+      "reason": "A database transaction in the execution sense is a computing operation, not the information object recording it. Source: https://www.postgresql.org/docs/18/tutorial-transactions.html"
+    }
+  ],
+  "edges": [
+    {
+      "subject": "embedded_relational_dbms",
+      "kod": "14",
+      "object": "relational_dbms",
+      "universum_id": 3,
+      "reason": "Both the embedding mode and the relational data model apply."
+    },
+    {
+      "subject": "client_server_relational_dbms",
+      "kod": "14",
+      "object": 25274,
+      "universum_id": 3,
+      "reason": "This explicitly client-server DBMS also supplies database-server software."
+    },
+    {
+      "subject": "client_server_relational_dbms",
+      "kod": "20",
+      "object": 25298,
+      "universum_id": 3,
+      "reason": "The selected deployment family follows the client-server architectural style."
+    },
+    {
+      "subject": 1116,
+      "kod": "14",
+      "object": 295,
+      "universum_id": 3,
+      "reason": "SQLite is also an in-process software library. Source: https://www.sqlite.org/about.html"
+    },
+    {
+      "subject": "database_management",
+      "kod": "27",
+      "object": 267,
+      "universum_id": 3,
+      "reason": "Database data are the target of the management operation."
+    },
+    {
+      "subject": 682,
+      "kod": "21",
+      "object": "database_management",
+      "universum_id": 3,
+      "reason": "Managing database data is the purpose of DBMS software."
+    },
+    {
+      "subject": 270,
+      "kod": "20",
+      "object": 272,
+      "universum_id": 3,
+      "reason": "Database tables are structural components of a relational database; no row-count or nonempty-table claim."
+    },
+    {
+      "subject": 272,
+      "kod": "20",
+      "object": "database_column",
+      "universum_id": 3,
+      "reason": "Columns form the table structure; no particular count is asserted."
+    },
+    {
+      "subject": "database_schema",
+      "kod": "20",
+      "object": "table_definition",
+      "universum_id": 3,
+      "reason": "Table definitions can form part of a database schema description."
+    },
+    {
+      "subject": "database_schema_matching",
+      "kod": "27",
+      "object": "database_schema",
+      "universum_id": 3,
+      "reason": "The schema descriptions are the targets of comparison."
+    },
+    {
+      "subject": "database_index",
+      "kod": "21",
+      "object": 359,
+      "universum_id": 3,
+      "reason": "Query access is a purpose of the index; no claim that every query uses it or becomes faster."
+    },
+    {
+      "subject": "single_foreign_key",
+      "kod": "14",
+      "object": "single_column_constraint",
+      "universum_id": 3,
+      "reason": "This foreign-key rule also has the one-column restriction."
+    },
+    {
+      "subject": "composite_foreign_key",
+      "kod": "14",
+      "object": "multi_column_constraint",
+      "universum_id": 3,
+      "reason": "This foreign-key rule also has the multiple-column restriction."
+    },
+    {
+      "subject": "composite_primary_key",
+      "kod": "14",
+      "object": "multi_column_constraint",
+      "universum_id": 3,
+      "reason": "This primary-key rule also has the multiple-column restriction."
+    },
+    {
+      "subject": "transaction_commit",
+      "kod": "27",
+      "object": 1156,
+      "universum_id": 3,
+      "reason": "The database transaction is the target of the commit operation."
+    },
+    {
+      "subject": "transaction_rollback",
+      "kod": "27",
+      "object": 1156,
+      "universum_id": 3,
+      "reason": "The database transaction is the target of rollback."
+    },
+    {
+      "subject": "rollback_to_savepoint",
+      "kod": "27",
+      "object": "savepoint",
+      "universum_id": 3,
+      "reason": "The savepoint specifies the rollback boundary."
+    }
+  ],
+  "checks": [
+    {
+      "subject": 682,
+      "kod": "14",
+      "object": 267,
+      "present": false
+    },
+    {
+      "subject": 682,
+      "kod": "14",
+      "object": 277,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "relational_dbms",
+      "kod": "14",
+      "object": 682,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "embedded_dbms",
+      "kod": "14",
+      "object": 682,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "embedded_relational_dbms",
+      "kod": "14",
+      "object": "embedded_dbms",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "embedded_relational_dbms",
+      "kod": "14",
+      "object": "relational_dbms",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "client_server_relational_dbms",
+      "kod": "14",
+      "object": "relational_dbms",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "client_server_relational_dbms",
+      "kod": "14",
+      "object": 25274,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "client_server_relational_dbms",
+      "kod": "20",
+      "object": 25298,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1116,
+      "kod": "14",
+      "object": 267,
+      "present": false
+    },
+    {
+      "subject": 1116,
+      "kod": "14",
+      "object": "embedded_relational_dbms",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1116,
+      "kod": "14",
+      "object": 295,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "database_management",
+      "kod": "14",
+      "object": 325,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "database_management",
+      "kod": "27",
+      "object": 267,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 682,
+      "kod": "21",
+      "object": "database_management",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 267,
+      "kod": "22",
+      "object": 254,
+      "present": false
+    },
+    {
+      "subject": 272,
+      "kod": "14",
+      "object": 270,
+      "present": false
+    },
+    {
+      "subject": 272,
+      "kod": "14",
+      "object": 627,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 270,
+      "kod": "20",
+      "object": 272,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "database_row",
+      "kod": "14",
+      "object": 472,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "database_column",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 272,
+      "kod": "20",
+      "object": "database_column",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "database_schema",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "table_definition",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "database_schema",
+      "kod": "20",
+      "object": "table_definition",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "database_schema_matching",
+      "kod": "14",
+      "object": 1075,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "database_schema_matching",
+      "kod": "27",
+      "object": "database_schema",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "database_index",
+      "kod": "14",
+      "object": 364,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "database_index",
+      "kod": "21",
+      "object": 359,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "integrity_constraint",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "check_constraint",
+      "kod": "14",
+      "object": "integrity_constraint",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "not_null_constraint",
+      "kod": "14",
+      "object": "integrity_constraint",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "unique_constraint",
+      "kod": "14",
+      "object": "integrity_constraint",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "primary_key_constraint",
+      "kod": "14",
+      "object": "integrity_constraint",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "single_column_constraint",
+      "kod": "14",
+      "object": "integrity_constraint",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "multi_column_constraint",
+      "kod": "14",
+      "object": "integrity_constraint",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 764,
+      "kod": "14",
+      "object": 267,
+      "present": false
+    },
+    {
+      "subject": 764,
+      "kod": "14",
+      "object": "integrity_constraint",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "single_foreign_key",
+      "kod": "14",
+      "object": 764,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "single_foreign_key",
+      "kod": "14",
+      "object": "single_column_constraint",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "composite_foreign_key",
+      "kod": "14",
+      "object": 764,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "composite_foreign_key",
+      "kod": "14",
+      "object": "multi_column_constraint",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "self_foreign_key",
+      "kod": "14",
+      "object": 764,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "composite_primary_key",
+      "kod": "14",
+      "object": "primary_key_constraint",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "composite_primary_key",
+      "kod": "14",
+      "object": "multi_column_constraint",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 358,
+      "kod": "20",
+      "object": 270,
+      "present": false
+    },
+    {
+      "subject": 1156,
+      "kod": "14",
+      "object": 265,
+      "present": false
+    },
+    {
+      "subject": 1156,
+      "kod": "14",
+      "object": 325,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "transaction_record",
+      "kod": "14",
+      "object": 472,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "transaction_commit",
+      "kod": "14",
+      "object": 325,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "transaction_commit",
+      "kod": "27",
+      "object": 1156,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "transaction_rollback",
+      "kod": "14",
+      "object": 325,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "transaction_rollback",
+      "kod": "27",
+      "object": 1156,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "savepoint",
+      "kod": "14",
+      "object": 265,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rollback_to_savepoint",
+      "kod": "14",
+      "object": "transaction_rollback",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "rollback_to_savepoint",
+      "kod": "27",
+      "object": "savepoint",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 267,
+      "kod": "14",
+      "object": 266,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 270,
+      "kod": "14",
+      "object": 267,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 271,
+      "kod": "14",
+      "object": 267,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 683,
+      "kod": "14",
+      "object": 682,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 627,
+      "kod": "14",
+      "object": 364,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 472,
+      "kod": "14",
+      "object": 364,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1075,
+      "kod": "14",
+      "object": 318,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 358,
+      "kod": "25",
+      "object": 270,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 270,
+      "kod": "20",
+      "object": 627,
+      "present": true,
+      "strength": null
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "relational_dbms",
+      "ancestor": 682,
+      "present": true
+    },
+    {
+      "subject": "embedded_dbms",
+      "ancestor": 682,
+      "present": true
+    },
+    {
+      "subject": "embedded_relational_dbms",
+      "ancestor": "embedded_dbms",
+      "present": true
+    },
+    {
+      "subject": "client_server_relational_dbms",
+      "ancestor": "relational_dbms",
+      "present": true
+    },
+    {
+      "subject": "database_management",
+      "ancestor": 325,
+      "present": true
+    },
+    {
+      "subject": "database_row",
+      "ancestor": 472,
+      "present": true
+    },
+    {
+      "subject": "database_column",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": "database_schema",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": "table_definition",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": "database_schema_matching",
+      "ancestor": 1075,
+      "present": true
+    },
+    {
+      "subject": "database_index",
+      "ancestor": 364,
+      "present": true
+    },
+    {
+      "subject": "integrity_constraint",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": "check_constraint",
+      "ancestor": "integrity_constraint",
+      "present": true
+    },
+    {
+      "subject": "not_null_constraint",
+      "ancestor": "integrity_constraint",
+      "present": true
+    },
+    {
+      "subject": "unique_constraint",
+      "ancestor": "integrity_constraint",
+      "present": true
+    },
+    {
+      "subject": "primary_key_constraint",
+      "ancestor": "integrity_constraint",
+      "present": true
+    },
+    {
+      "subject": "single_column_constraint",
+      "ancestor": "integrity_constraint",
+      "present": true
+    },
+    {
+      "subject": "multi_column_constraint",
+      "ancestor": "integrity_constraint",
+      "present": true
+    },
+    {
+      "subject": "single_foreign_key",
+      "ancestor": 764,
+      "present": true
+    },
+    {
+      "subject": "composite_foreign_key",
+      "ancestor": 764,
+      "present": true
+    },
+    {
+      "subject": "self_foreign_key",
+      "ancestor": 764,
+      "present": true
+    },
+    {
+      "subject": "composite_primary_key",
+      "ancestor": "primary_key_constraint",
+      "present": true
+    },
+    {
+      "subject": "transaction_record",
+      "ancestor": 472,
+      "present": true
+    },
+    {
+      "subject": "transaction_commit",
+      "ancestor": 325,
+      "present": true
+    },
+    {
+      "subject": "transaction_rollback",
+      "ancestor": 325,
+      "present": true
+    },
+    {
+      "subject": "savepoint",
+      "ancestor": 265,
+      "present": true
+    },
+    {
+      "subject": "rollback_to_savepoint",
+      "ancestor": "transaction_rollback",
+      "present": true
+    },
+    {
+      "subject": 682,
+      "ancestor": 277,
+      "present": true
+    },
+    {
+      "subject": 683,
+      "ancestor": 682,
+      "present": true
+    },
+    {
+      "subject": 1116,
+      "ancestor": "relational_dbms",
+      "present": true
+    },
+    {
+      "subject": 1116,
+      "ancestor": "embedded_dbms",
+      "present": true
+    },
+    {
+      "subject": 1116,
+      "ancestor": 295,
+      "present": true
+    },
+    {
+      "subject": 272,
+      "ancestor": 627,
+      "present": true
+    },
+    {
+      "subject": 764,
+      "ancestor": "integrity_constraint",
+      "present": true
+    },
+    {
+      "subject": 1156,
+      "ancestor": 325,
+      "present": true
+    },
+    {
+      "subject": "client_server_relational_dbms",
+      "ancestor": 25274,
+      "present": true
+    },
+    {
+      "subject": "single_foreign_key",
+      "ancestor": "single_column_constraint",
+      "present": true
+    },
+    {
+      "subject": "composite_foreign_key",
+      "ancestor": "multi_column_constraint",
+      "present": true
+    },
+    {
+      "subject": "composite_primary_key",
+      "ancestor": "multi_column_constraint",
+      "present": true
+    },
+    {
+      "subject": 682,
+      "ancestor": 267,
+      "present": false
+    },
+    {
+      "subject": 683,
+      "ancestor": 267,
+      "present": false
+    },
+    {
+      "subject": 1116,
+      "ancestor": 267,
+      "present": false
+    },
+    {
+      "subject": 1116,
+      "ancestor": 25274,
+      "present": false
+    },
+    {
+      "subject": 272,
+      "ancestor": 270,
+      "present": false
+    },
+    {
+      "subject": 272,
+      "ancestor": 267,
+      "present": false
+    },
+    {
+      "subject": 764,
+      "ancestor": 267,
+      "present": false
+    },
+    {
+      "subject": 1156,
+      "ancestor": 265,
+      "present": false
+    },
+    {
+      "subject": "relational_dbms",
+      "ancestor": 270,
+      "present": false
+    },
+    {
+      "subject": "embedded_dbms",
+      "ancestor": "client_server_relational_dbms",
+      "present": false
+    },
+    {
+      "subject": "client_server_relational_dbms",
+      "ancestor": "embedded_dbms",
+      "present": false
+    },
+    {
+      "subject": "database_row",
+      "ancestor": 272,
+      "present": false
+    },
+    {
+      "subject": "database_column",
+      "ancestor": 272,
+      "present": false
+    },
+    {
+      "subject": "database_schema",
+      "ancestor": 267,
+      "present": false
+    },
+    {
+      "subject": "table_definition",
+      "ancestor": 272,
+      "present": false
+    },
+    {
+      "subject": "database_index",
+      "ancestor": 24485,
+      "present": false
+    },
+    {
+      "subject": "database_index",
+      "ancestor": "integrity_constraint",
+      "present": false
+    },
+    {
+      "subject": "transaction_record",
+      "ancestor": 1156,
+      "present": false
+    },
+    {
+      "subject": "transaction_commit",
+      "ancestor": 1156,
+      "present": false
+    },
+    {
+      "subject": "transaction_rollback",
+      "ancestor": 1156,
+      "present": false
+    },
+    {
+      "subject": "savepoint",
+      "ancestor": 1156,
+      "present": false
+    },
+    {
+      "subject": "primary_key_constraint",
+      "ancestor": "unique_constraint",
+      "present": false
+    },
+    {
+      "subject": "single_foreign_key",
+      "ancestor": "multi_column_constraint",
+      "present": false
+    },
+    {
+      "subject": "composite_foreign_key",
+      "ancestor": "single_column_constraint",
+      "present": false
+    },
+    {
+      "subject": "self_foreign_key",
+      "ancestor": "single_foreign_key",
+      "present": false
+    },
+    {
+      "subject": "composite_primary_key",
+      "ancestor": "composite_foreign_key",
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": 682,
+      "term": "система управления базами данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 682,
+      "term": "database management system",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 682,
+      "term": "DBMS",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 683,
+      "term": "дедуктивная СУБД",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 683,
+      "term": "deductive database management system",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 683,
+      "term": "deductive database system (software)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "relational_dbms",
+      "term": "реляционная система управления базами данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "relational_dbms",
+      "term": "relational database management system",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "relational_dbms",
+      "term": "RDBMS",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "embedded_dbms",
+      "term": "встраиваемая система управления базами данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "embedded_dbms",
+      "term": "embedded database management system",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "embedded_relational_dbms",
+      "term": "встраиваемая реляционная СУБД",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "embedded_relational_dbms",
+      "term": "embedded relational DBMS",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "client_server_relational_dbms",
+      "term": "клиент-серверная реляционная СУБД",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "client_server_relational_dbms",
+      "term": "client-server relational DBMS",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1116,
+      "term": "SQLite database engine",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "database_management",
+      "term": "операция управления базой данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "database_management",
+      "term": "database management operation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 267,
+      "term": "database (data collection)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 272,
+      "term": "таблица базы данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "database_row",
+      "term": "строка таблицы базы данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "database_row",
+      "term": "database row",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "database_row",
+      "term": "database table row",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "database_column",
+      "term": "столбец таблицы базы данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "database_column",
+      "term": "database column",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "database_column",
+      "term": "database table column",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "database_schema",
+      "term": "описание схемы базы данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "database_schema",
+      "term": "database schema definition",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "table_definition",
+      "term": "описание структуры таблицы базы данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "table_definition",
+      "term": "database table definition",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "database_schema_matching",
+      "term": "сопоставление схем баз данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "database_schema_matching",
+      "term": "database schema matching",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "database_index",
+      "term": "индекс базы данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "database_index",
+      "term": "database index",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "integrity_constraint",
+      "term": "ограничение целостности базы данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "integrity_constraint",
+      "term": "database integrity constraint",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "check_constraint",
+      "term": "ограничение CHECK базы данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "check_constraint",
+      "term": "SQL CHECK constraint",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "not_null_constraint",
+      "term": "ограничение NOT NULL базы данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "not_null_constraint",
+      "term": "SQL NOT NULL constraint",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "unique_constraint",
+      "term": "ограничение UNIQUE базы данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "unique_constraint",
+      "term": "SQL UNIQUE constraint",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "primary_key_constraint",
+      "term": "ограничение PRIMARY KEY базы данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "primary_key_constraint",
+      "term": "SQL PRIMARY KEY constraint",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "single_column_constraint",
+      "term": "ограничение БД на один столбец",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "single_column_constraint",
+      "term": "single-column database constraint",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "multi_column_constraint",
+      "term": "ограничение БД на несколько столбцов",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "multi_column_constraint",
+      "term": "multi-column database constraint",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 764,
+      "term": "ограничение внешнего ключа",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 764,
+      "term": "foreign key constraint",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "single_foreign_key",
+      "term": "ограничение внешнего ключа на один столбец",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "single_foreign_key",
+      "term": "single-column foreign key constraint",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "composite_foreign_key",
+      "term": "ограничение составного внешнего ключа",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "composite_foreign_key",
+      "term": "composite foreign key constraint",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "self_foreign_key",
+      "term": "ограничение внешнего ключа со ссылкой на ту же таблицу",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "self_foreign_key",
+      "term": "self-referential foreign key constraint",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "composite_primary_key",
+      "term": "ограничение составного первичного ключа",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "composite_primary_key",
+      "term": "composite primary key constraint",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1156,
+      "term": "транзакция базы данных (выполнение)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 1156,
+      "term": "database transaction (execution)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "transaction_record",
+      "term": "запись о транзакции базы данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "transaction_record",
+      "term": "database transaction record",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "transaction_commit",
+      "term": "фиксация транзакции базы данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "transaction_commit",
+      "term": "database transaction commit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "transaction_rollback",
+      "term": "откат изменений транзакции базы данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "transaction_rollback",
+      "term": "database transaction rollback",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "savepoint",
+      "term": "точка сохранения транзакции базы данных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "savepoint",
+      "term": "database transaction savepoint",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "rollback_to_savepoint",
+      "term": "откат транзакции до точки сохранения",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "rollback_to_savepoint",
+      "term": "rollback to a database savepoint",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 303,
+      "term": "server",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 303,
+      "term": "server",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 311,
+      "term": "client",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 311,
+      "term": "client",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 309,
+      "term": "web server",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 309,
+      "term": "web server",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 310,
+      "term": "database server",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 310,
+      "term": "database server",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 304,
+      "term": "workstation",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 304,
+      "term": "workstation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 491,
+      "term": "build",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 491,
+      "term": "build",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 682,
+      "term": "database system",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 682,
+      "term": "database system",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 683,
+      "term": "Deductive database",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 683,
+      "term": "Deductive database",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 272,
+      "term": "database table",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 272,
+      "term": "database table",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 764,
+      "term": "Foreign key",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 764,
+      "term": "Foreign key",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 1156,
+      "term": "Transaction",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 1156,
+      "term": "Transaction",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "database_row",
+      "term": "row",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "database_column",
+      "term": "column",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "database_index",
+      "term": "index",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "database_schema",
+      "term": "schema",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "transaction_commit",
+      "term": "commit",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "transaction_rollback",
+      "term": "rollback",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "savepoint",
+      "term": "savepoint",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "transaction_record",
+      "term": "transaction",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

@@ -1,0 +1,3553 @@
+{
+  "source": "quality-20261009-q36",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Animal feeding roles versus mammalian taxonomy; hunting activities and human roles; catching versus successful capture; traps and bait; inherited fish-species targets; pursuit and protection.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "food_web": "https://home.nps.gov/teachers/classrooms/to-eat-or-be-eaten.htm",
+      "carnivora": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?command=show&id=33554&lvl=3&mode=tree",
+      "carnivora_catalog": "https://idfg.idaho.gov/species/taxa/tree/order/Carnivora",
+      "ru_catching": "https://gramota.ru/meta/lovit",
+      "ru_luring": "https://ruslang.ru/sites/default/files/doc/normativnyje_slovari/orfoepicheskij_slovar.pdf"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet; CC BY 4.0 and Princeton notices remain in docs/quality/2026-10-09-q11.md#sources-and-reuse. NCBI, Idaho Fish and Game and the National Park Service support biological distinctions. Russian labels and graph mappings are editorial adaptations; source prose is not copied.",
+    "existing_cohort": [
+      1313,
+      4900,
+      1314,
+      1315,
+      1316,
+      1317,
+      1318,
+      2283,
+      2284,
+      2285,
+      3066,
+      1905,
+      5304,
+      1910,
+      25152,
+      8856,
+      255,
+      6417,
+      4159,
+      14073,
+      18539,
+      2399,
+      5303,
+      113,
+      1347,
+      115,
+      116
+    ],
+    "context_policy": "All additions use U1 and unspecified strength. Preserve old home contexts, explicit negations, reviewed fishing genera and valid mammal ancestry. Ecological roles and taxonomic membership are separate axes.",
+    "sense_decisions": [
+      {
+        "concept": "carnivoran",
+        "synset": null,
+        "decision": "add",
+        "alignment": "taxonomic membership",
+        "scope": "An animal belonging to the mammalian order Carnivora, regardless of whether its usual food is meat or plants."
+      },
+      {
+        "concept": "prey_animal",
+        "synset": "oewn-02155533-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An animal in the prey role of predation, not a human victim or a captured quantity."
+      },
+      {
+        "concept": "predation",
+        "synset": "oewn-00713150-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The biological interaction in which an animal kills and eats another animal; exclude plundering and metaphorical exploitation."
+      },
+      {
+        "concept": "predator_and_prey",
+        "synset": null,
+        "decision": "add",
+        "alignment": "role intersection",
+        "scope": "Intersection of predatory and prey roles in a food web, without requiring the same counterparty or time."
+      },
+      {
+        "concept": "predatory_bird",
+        "synset": null,
+        "decision": "add",
+        "alignment": "taxon/feeding-role intersection",
+        "scope": "A bird that preys on other animals; a functional group, not a single avian order."
+      },
+      {
+        "concept": "predatory_fish",
+        "synset": null,
+        "decision": "add",
+        "alignment": "taxon/feeding-role intersection",
+        "scope": "A fish that preys on other animals; not every fish and not a mammal."
+      },
+      {
+        "concept": "carnivorous_animal",
+        "synset": "oewn-01327072-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An animal whose diet is chiefly animal flesh; neither membership in Carnivora nor personally killing every food animal is required."
+      },
+      {
+        "concept": "omnivorous_animal",
+        "synset": "oewn-02078264-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An animal able to obtain nutrition from both plant and animal matter; this is a feeding category."
+      },
+      {
+        "concept": "herbivory",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Consumption of plant material by an animal; distinguish obtaining food from supplying food to another animal."
+      },
+      {
+        "concept": "carrion",
+        "synset": "oewn-01761536-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Dead and decaying animal remains; not a living animal or a manufactured artifact."
+      },
+      {
+        "concept": "carrion_feeding",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Consumption of dead animal remains; distinguish it from killing live prey and from collecting discarded objects."
+      },
+      {
+        "concept": "carrion_scavenger",
+        "synset": "oewn-01318913-n",
+        "decision": "add",
+        "alignment": "restricted dictionary sense",
+        "scope": "The carrion-feeding restriction of the broader dictionary scavenger meaning; exclude chemical scavengers and people collecting discarded objects."
+      },
+      {
+        "concept": "predatory_scavenger",
+        "synset": null,
+        "decision": "add",
+        "alignment": "feeding-role intersection",
+        "scope": "Intersection of predation and carrion feeding; neither feeding strategy excludes the other."
+      },
+      {
+        "concept": "human_hunting",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The human-performed restriction of the existing hunting activity, without guaranteed success or a commercial motive."
+      },
+      {
+        "concept": "recreational_hunting",
+        "synset": "oewn-00453279-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Hunting undertaken for recreation; no licensing rule or legal classification is asserted."
+      },
+      {
+        "concept": "commercial_hunting",
+        "synset": "oewn-00623824-n",
+        "decision": "add",
+        "alignment": "livelihood restriction of dictionary hunting",
+        "scope": "Hunting for livelihood through obtaining animal products; distinguish this purpose from recreation."
+      },
+      {
+        "concept": "subsistence_hunting",
+        "synset": null,
+        "decision": "add",
+        "alignment": "purpose restriction",
+        "scope": "Hunting for the hunter or household to obtain food; not necessarily commercial."
+      },
+      {
+        "concept": "occupational_hunter",
+        "synset": null,
+        "decision": "add",
+        "alignment": "person-role/occupation intersection",
+        "scope": "A hunter whose hunting is work or livelihood."
+      },
+      {
+        "concept": "recreational_hunter",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A person participating in recreational hunting; not disjoint from being an occupational hunter in another setting."
+      },
+      {
+        "concept": "animal_catching",
+        "synset": null,
+        "decision": "add",
+        "alignment": "target restriction",
+        "scope": "The animal-targeted restriction of physical catching, without guaranteed capture."
+      },
+      {
+        "concept": "animal_capture",
+        "synset": "oewn-01482779-v",
+        "decision": "add",
+        "alignment": "target restriction",
+        "scope": "The successful taking of an animal, not merely a fishing or hunting attempt."
+      },
+      {
+        "concept": "animal_trapping",
+        "synset": "oewn-01483400-v",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Catching activity using traps; excludes horse trappings and figurative entrapment."
+      },
+      {
+        "concept": "trap_hunting",
+        "synset": null,
+        "decision": "add",
+        "alignment": "method/activity intersection",
+        "scope": "Human hunting by animal-trapping methods; not all animal trapping is hunting."
+      },
+      {
+        "concept": "trapper",
+        "synset": "oewn-10745885-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A human hunter using traps; no automatic worker genus or compulsory fur target."
+      },
+      {
+        "concept": "carp_fishing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed inherited target restriction",
+        "scope": "Fishing specifically targeting the named fish group; the restriction is independent of gear, location and livelihood."
+      },
+      {
+        "concept": "pike_fishing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed inherited target restriction",
+        "scope": "Fishing specifically targeting the named fish group; the restriction is independent of gear, location and livelihood."
+      },
+      {
+        "concept": "perch_fishing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed inherited target restriction",
+        "scope": "Fishing specifically targeting the named fish group; the restriction is independent of gear, location and livelihood."
+      },
+      {
+        "concept": "salmon_fishing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed inherited target restriction",
+        "scope": "Fishing specifically targeting the named fish group; the restriction is independent of gear, location and livelihood."
+      },
+      {
+        "concept": "catfish_fishing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed inherited target restriction",
+        "scope": "Fishing specifically targeting the named fish group; the restriction is independent of gear, location and livelihood."
+      },
+      {
+        "concept": "crucian_fishing",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed inherited target restriction",
+        "scope": "Fishing specifically targeting the named fish group; the restriction is independent of gear, location and livelihood."
+      },
+      {
+        "concept": "animal_trap",
+        "synset": "oewn-04481701-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A manufactured device intended to catch an animal; excludes plumbing, golf and figurative traps."
+      },
+      {
+        "concept": "live_capture_trap",
+        "synset": null,
+        "decision": "add",
+        "alignment": "intended capture-mode restriction",
+        "scope": "An animal trap intended to retain the animal alive, without asserting every deployment is harmless."
+      },
+      {
+        "concept": "animal_luring",
+        "synset": null,
+        "decision": "add",
+        "alignment": "target restriction",
+        "scope": "Luring with an animal as its target; no guaranteed capture or harm."
+      },
+      {
+        "concept": "animal_bait",
+        "synset": "oewn-02779210-n",
+        "decision": "add",
+        "alignment": "corrected material-role genus",
+        "scope": "Material used to attract an animal; may be natural or manufactured, so the dictionary device genus is not imposed."
+      },
+      {
+        "concept": "fishing_bait",
+        "synset": null,
+        "decision": "add",
+        "alignment": "target/use restriction",
+        "scope": "Animal bait used to attract fish; includes natural bait and manufactured lures."
+      },
+      {
+        "concept": "live_bait",
+        "synset": null,
+        "decision": "add",
+        "alignment": "material/role intersection",
+        "scope": "A living animal used as bait; not a manufactured device."
+      },
+      {
+        "concept": "live_fishing_bait",
+        "synset": null,
+        "decision": "add",
+        "alignment": "use/material intersection",
+        "scope": "Fishing bait supplied by a living animal."
+      },
+      {
+        "concept": 1313,
+        "synset": "oewn-02155392-n",
+        "decision": "reuse with reviewed scope",
+        "alignment": "reviewed sense",
+        "scope": "Use the ecological predator meaning, not the taxonomic order."
+      },
+      {
+        "concept": 14073,
+        "synset": "oewn-01327251-n",
+        "decision": "reuse with reviewed scope",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the Russian herbivore record instead of making an English duplicate."
+      },
+      {
+        "concept": 5304,
+        "synset": "oewn-10212645-n",
+        "decision": "reuse with reviewed scope",
+        "alignment": "reviewed sense",
+        "scope": "The person role is broader than a worker; the dictionary occupational genus is narrowed into a separate intersection."
+      },
+      {
+        "concept": 4159,
+        "synset": "oewn-01217985-v",
+        "decision": "reuse with reviewed scope",
+        "alignment": "reviewed sense",
+        "scope": "Keep successful capture distinct from attempting to catch."
+      },
+      {
+        "concept": 6417,
+        "synset": "oewn-01441809-v",
+        "decision": "reuse with reviewed scope",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the physical catching activity without infection, perception or baseball senses."
+      },
+      {
+        "concept": 18539,
+        "synset": "oewn-02583962-v",
+        "decision": "reuse with reviewed scope",
+        "alignment": "reviewed sense",
+        "scope": "Reuse attraction as an action; create a separate animal-targeted restriction."
+      },
+      {
+        "concept": 4900,
+        "synset": null,
+        "decision": "reuse with reviewed scope",
+        "alignment": "reviewed sense",
+        "scope": "Preserve the existing explicit negative hunting assertion without extending it to every non-predatory activity."
+      },
+      {
+        "concept": 4465,
+        "synset": null,
+        "decision": "reuse with reviewed scope",
+        "alignment": "reviewed sense",
+        "scope": "Defer the mixed physical/mental catch meaning instead of merging by a shared English spelling."
+      },
+      {
+        "concept": "animal_trapping",
+        "synset": null,
+        "decision": "reject noun homonym",
+        "alignment": "reviewed sense",
+        "scope": "The dictionary noun trapping denotes horse covering; use the animal-trapping verb sense instead."
+      }
+    ],
+    "transient_term_removals": [],
+    "limits": "No general hunt implies successful capture, killing or eating. No food-web class is equated with a taxonomic order, and predator/prey roles are not disjoint. Existing probabilistic animal capabilities and the non-predator negation are retained without recalibration. Fox/fox synonyms, bear/panda taxonomy, protection subtypes, physical versus mental catch senses and additional malformed aliases remain queued. Dictionary trapping (horse covering) and poaching (cooking) are not imported into hunting.",
+    "mammal_ancestry_preserved": [
+      1314,
+      1315,
+      1316,
+      1317,
+      1318,
+      2283,
+      2284,
+      2285,
+      3066
+    ],
+    "exclusion_review": {
+      "contexts": [
+        "U1",
+        "U3"
+      ],
+      "before_u1_conflicting_edges": 0,
+      "before_u3_conflicting_edges": 0,
+      "decision": "Preserve clear scans, upper exclusions and explicit negations. Reject only the specifically reviewed hunting/protection coordinate assertion."
+    },
+    "new_term_collisions": [],
+    "collision_decision": "Reuse existing Russian hunter, herbivore, catching, luring and pursuit concepts. No new normalized-term collisions accepted.",
+    "refreshed_comparison": {
+      "baseline": "Q35",
+      "existing_concepts": 13307,
+      "existing_terms": 37472,
+      "synsets_with_exact_en_candidate": 15664,
+      "synsets_without_exact_en_candidate": 91855,
+      "existing_concepts_with_dictionary_candidate": 4235,
+      "caveat": "Spelling candidates are not verified identities or missing-concept counts."
+    }
+  },
+  "concepts": [
+    {
+      "key": "carnivoran",
+      "name": "животное отряда хищных",
+      "parent": 104,
+      "universum_id": 1,
+      "terms": [
+        [
+          "животное отряда хищных",
+          "ru"
+        ],
+        [
+          "carnivoran",
+          "en"
+        ],
+        [
+          "member of Carnivora",
+          "en"
+        ]
+      ],
+      "reason": "An animal belonging to the mammalian order Carnivora, regardless of whether its usual food is meat or plants. Source: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?command=show&id=33554&lvl=3&mode=tree"
+    },
+    {
+      "key": "prey_animal",
+      "name": "животное — добыча хищника",
+      "parent": 27,
+      "universum_id": 1,
+      "terms": [
+        [
+          "животное — добыча хищника",
+          "ru"
+        ],
+        [
+          "prey animal",
+          "en"
+        ],
+        [
+          "animal prey",
+          "en"
+        ]
+      ],
+      "reason": "An animal in the prey role of predation, not a human victim or a captured quantity. OEWN 2025: oewn-02155533-n."
+    },
+    {
+      "key": "predation",
+      "name": "хищничество (питание животными)",
+      "parent": 2631,
+      "universum_id": 1,
+      "terms": [
+        [
+          "хищничество (питание животными)",
+          "ru"
+        ],
+        [
+          "predation (animal feeding)",
+          "en"
+        ],
+        [
+          "predation",
+          "en"
+        ]
+      ],
+      "reason": "The biological interaction in which an animal kills and eats another animal; exclude plundering and metaphorical exploitation. OEWN 2025: oewn-00713150-n."
+    },
+    {
+      "key": "predator_and_prey",
+      "name": "хищник, служащий добычей другого хищника",
+      "parent": 1313,
+      "universum_id": 1,
+      "terms": [
+        [
+          "хищник, служащий добычей другого хищника",
+          "ru"
+        ],
+        [
+          "predator that is also prey",
+          "en"
+        ]
+      ],
+      "reason": "Intersection of predatory and prey roles in a food web, without requiring the same counterparty or time. Source: https://home.nps.gov/teachers/classrooms/to-eat-or-be-eaten.htm"
+    },
+    {
+      "key": "predatory_bird",
+      "name": "птица-хищник",
+      "parent": 105,
+      "universum_id": 1,
+      "terms": [
+        [
+          "птица-хищник",
+          "ru"
+        ],
+        [
+          "predatory bird",
+          "en"
+        ]
+      ],
+      "reason": "A bird that preys on other animals; a functional group, not a single avian order."
+    },
+    {
+      "key": "predatory_fish",
+      "name": "хищная рыба",
+      "parent": 106,
+      "universum_id": 1,
+      "terms": [
+        [
+          "хищная рыба",
+          "ru"
+        ],
+        [
+          "predatory fish",
+          "en"
+        ]
+      ],
+      "reason": "A fish that preys on other animals; not every fish and not a mammal."
+    },
+    {
+      "key": "carnivorous_animal",
+      "name": "плотоядное животное",
+      "parent": 27,
+      "universum_id": 1,
+      "terms": [
+        [
+          "плотоядное животное",
+          "ru"
+        ],
+        [
+          "carnivorous animal",
+          "en"
+        ],
+        [
+          "carnivore (diet)",
+          "en"
+        ]
+      ],
+      "reason": "An animal whose diet is chiefly animal flesh; neither membership in Carnivora nor personally killing every food animal is required. OEWN 2025: oewn-01327072-n. Source: https://home.nps.gov/teachers/classrooms/to-eat-or-be-eaten.htm"
+    },
+    {
+      "key": "omnivorous_animal",
+      "name": "всеядное животное",
+      "parent": 27,
+      "universum_id": 1,
+      "terms": [
+        [
+          "всеядное животное",
+          "ru"
+        ],
+        [
+          "omnivorous animal",
+          "en"
+        ],
+        [
+          "omnivore (animal)",
+          "en"
+        ]
+      ],
+      "reason": "An animal able to obtain nutrition from both plant and animal matter; this is a feeding category. OEWN 2025: oewn-02078264-n. Source: https://home.nps.gov/teachers/classrooms/to-eat-or-be-eaten.htm"
+    },
+    {
+      "key": "herbivory",
+      "name": "питание растительной пищей",
+      "parent": 1845,
+      "universum_id": 1,
+      "terms": [
+        [
+          "питание растительной пищей",
+          "ru"
+        ],
+        [
+          "herbivory",
+          "en"
+        ],
+        [
+          "plant feeding (animal consumption)",
+          "en"
+        ]
+      ],
+      "reason": "Consumption of plant material by an animal; distinguish obtaining food from supplying food to another animal. Source: https://home.nps.gov/teachers/classrooms/to-eat-or-be-eaten.htm"
+    },
+    {
+      "key": "carrion",
+      "name": "падаль",
+      "parent": 34,
+      "universum_id": 1,
+      "terms": [
+        [
+          "падаль",
+          "ru"
+        ],
+        [
+          "carrion",
+          "en"
+        ]
+      ],
+      "reason": "Dead and decaying animal remains; not a living animal or a manufactured artifact. OEWN 2025: oewn-01761536-n."
+    },
+    {
+      "key": "carrion_feeding",
+      "name": "питание падалью",
+      "parent": 1845,
+      "universum_id": 1,
+      "terms": [
+        [
+          "питание падалью",
+          "ru"
+        ],
+        [
+          "carrion feeding",
+          "en"
+        ]
+      ],
+      "reason": "Consumption of dead animal remains; distinguish it from killing live prey and from collecting discarded objects."
+    },
+    {
+      "key": "carrion_scavenger",
+      "name": "падальщик (животное)",
+      "parent": 27,
+      "universum_id": 1,
+      "terms": [
+        [
+          "падальщик (животное)",
+          "ru"
+        ],
+        [
+          "carrion-feeding animal",
+          "en"
+        ],
+        [
+          "scavenger (carrion-feeding animal)",
+          "en"
+        ]
+      ],
+      "reason": "The carrion-feeding restriction of the broader dictionary scavenger meaning; exclude chemical scavengers and people collecting discarded objects. OEWN 2025: oewn-01318913-n."
+    },
+    {
+      "key": "predatory_scavenger",
+      "name": "хищник, питающийся также падалью",
+      "parent": 1313,
+      "universum_id": 1,
+      "terms": [
+        [
+          "хищник, питающийся также падалью",
+          "ru"
+        ],
+        [
+          "predatory carrion scavenger",
+          "en"
+        ]
+      ],
+      "reason": "Intersection of predation and carrion feeding; neither feeding strategy excludes the other."
+    },
+    {
+      "key": "human_hunting",
+      "name": "охота человека на животных",
+      "parent": 1905,
+      "universum_id": 1,
+      "terms": [
+        [
+          "охота человека на животных",
+          "ru"
+        ],
+        [
+          "human hunting of animals",
+          "en"
+        ]
+      ],
+      "reason": "The human-performed restriction of the existing hunting activity, without guaranteed success or a commercial motive."
+    },
+    {
+      "key": "recreational_hunting",
+      "name": "любительская охота",
+      "parent": "human_hunting",
+      "universum_id": 1,
+      "terms": [
+        [
+          "любительская охота",
+          "ru"
+        ],
+        [
+          "recreational hunting",
+          "en"
+        ]
+      ],
+      "reason": "Hunting undertaken for recreation; no licensing rule or legal classification is asserted. OEWN 2025: oewn-00453279-n."
+    },
+    {
+      "key": "commercial_hunting",
+      "name": "промысловая охота",
+      "parent": "human_hunting",
+      "universum_id": 1,
+      "terms": [
+        [
+          "промысловая охота",
+          "ru"
+        ],
+        [
+          "commercial hunting",
+          "en"
+        ]
+      ],
+      "reason": "Hunting for livelihood through obtaining animal products; distinguish this purpose from recreation. OEWN 2025: oewn-00623824-n."
+    },
+    {
+      "key": "subsistence_hunting",
+      "name": "охота для собственного питания",
+      "parent": "human_hunting",
+      "universum_id": 1,
+      "terms": [
+        [
+          "охота для собственного питания",
+          "ru"
+        ],
+        [
+          "hunting for household food",
+          "en"
+        ]
+      ],
+      "reason": "Hunting for the hunter or household to obtain food; not necessarily commercial."
+    },
+    {
+      "key": "occupational_hunter",
+      "name": "охотник-промысловик",
+      "parent": 5304,
+      "universum_id": 1,
+      "terms": [
+        [
+          "охотник-промысловик",
+          "ru"
+        ],
+        [
+          "occupational hunter",
+          "en"
+        ],
+        [
+          "professional hunter (occupation)",
+          "en"
+        ]
+      ],
+      "reason": "A hunter whose hunting is work or livelihood."
+    },
+    {
+      "key": "recreational_hunter",
+      "name": "охотник-любитель",
+      "parent": 5304,
+      "universum_id": 1,
+      "terms": [
+        [
+          "охотник-любитель",
+          "ru"
+        ],
+        [
+          "recreational hunter",
+          "en"
+        ]
+      ],
+      "reason": "A person participating in recreational hunting; not disjoint from being an occupational hunter in another setting."
+    },
+    {
+      "key": "animal_catching",
+      "name": "ловля животных",
+      "parent": 6417,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ловля животных",
+          "ru"
+        ],
+        [
+          "animal catching activity",
+          "en"
+        ]
+      ],
+      "reason": "The animal-targeted restriction of physical catching, without guaranteed capture."
+    },
+    {
+      "key": "animal_capture",
+      "name": "поимка животного",
+      "parent": 4159,
+      "universum_id": 1,
+      "terms": [
+        [
+          "поимка животного",
+          "ru"
+        ],
+        [
+          "successful animal capture",
+          "en"
+        ]
+      ],
+      "reason": "The successful taking of an animal, not merely a fishing or hunting attempt. OEWN 2025: oewn-01482779-v."
+    },
+    {
+      "key": "animal_trapping",
+      "name": "ловля животных ловушками",
+      "parent": "animal_catching",
+      "universum_id": 1,
+      "terms": [
+        [
+          "ловля животных ловушками",
+          "ru"
+        ],
+        [
+          "animal trapping",
+          "en"
+        ]
+      ],
+      "reason": "Catching activity using traps; excludes horse trappings and figurative entrapment. OEWN 2025: oewn-01483400-v."
+    },
+    {
+      "key": "trap_hunting",
+      "name": "охота с ловушками",
+      "parent": "human_hunting",
+      "universum_id": 1,
+      "terms": [
+        [
+          "охота с ловушками",
+          "ru"
+        ],
+        [
+          "trap hunting",
+          "en"
+        ]
+      ],
+      "reason": "Human hunting by animal-trapping methods; not all animal trapping is hunting."
+    },
+    {
+      "key": "trapper",
+      "name": "охотник с ловушками",
+      "parent": 5304,
+      "universum_id": 1,
+      "terms": [
+        [
+          "охотник с ловушками",
+          "ru"
+        ],
+        [
+          "trapper",
+          "en"
+        ]
+      ],
+      "reason": "A human hunter using traps; no automatic worker genus or compulsory fur target. OEWN 2025: oewn-10745885-n."
+    },
+    {
+      "key": "carp_fishing",
+      "name": "ловля карпа",
+      "parent": 1910,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ловля карпа",
+          "ru"
+        ],
+        [
+          "carp fishing",
+          "en"
+        ]
+      ],
+      "reason": "Fishing specifically targeting the named fish group; the restriction is independent of gear, location and livelihood."
+    },
+    {
+      "key": "pike_fishing",
+      "name": "ловля щуки",
+      "parent": 1910,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ловля щуки",
+          "ru"
+        ],
+        [
+          "pike fishing",
+          "en"
+        ]
+      ],
+      "reason": "Fishing specifically targeting the named fish group; the restriction is independent of gear, location and livelihood."
+    },
+    {
+      "key": "perch_fishing",
+      "name": "ловля окуня",
+      "parent": 1910,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ловля окуня",
+          "ru"
+        ],
+        [
+          "perch fishing",
+          "en"
+        ]
+      ],
+      "reason": "Fishing specifically targeting the named fish group; the restriction is independent of gear, location and livelihood."
+    },
+    {
+      "key": "salmon_fishing",
+      "name": "ловля лосося",
+      "parent": 1910,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ловля лосося",
+          "ru"
+        ],
+        [
+          "salmon fishing",
+          "en"
+        ]
+      ],
+      "reason": "Fishing specifically targeting the named fish group; the restriction is independent of gear, location and livelihood."
+    },
+    {
+      "key": "catfish_fishing",
+      "name": "ловля сома",
+      "parent": 1910,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ловля сома",
+          "ru"
+        ],
+        [
+          "catfish fishing",
+          "en"
+        ]
+      ],
+      "reason": "Fishing specifically targeting the named fish group; the restriction is independent of gear, location and livelihood."
+    },
+    {
+      "key": "crucian_fishing",
+      "name": "ловля карася",
+      "parent": 1910,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ловля карася",
+          "ru"
+        ],
+        [
+          "crucian carp fishing",
+          "en"
+        ]
+      ],
+      "reason": "Fishing specifically targeting the named fish group; the restriction is independent of gear, location and livelihood."
+    },
+    {
+      "key": "animal_trap",
+      "name": "ловушка для животных",
+      "parent": 3607,
+      "universum_id": 1,
+      "terms": [
+        [
+          "ловушка для животных",
+          "ru"
+        ],
+        [
+          "animal trap",
+          "en"
+        ]
+      ],
+      "reason": "A manufactured device intended to catch an animal; excludes plumbing, golf and figurative traps. OEWN 2025: oewn-04481701-n."
+    },
+    {
+      "key": "live_capture_trap",
+      "name": "живоловушка",
+      "parent": "animal_trap",
+      "universum_id": 1,
+      "terms": [
+        [
+          "живоловушка",
+          "ru"
+        ],
+        [
+          "live-capture animal trap",
+          "en"
+        ]
+      ],
+      "reason": "An animal trap intended to retain the animal alive, without asserting every deployment is harmless."
+    },
+    {
+      "key": "animal_luring",
+      "name": "приманивание животного",
+      "parent": 18539,
+      "universum_id": 1,
+      "terms": [
+        [
+          "приманивание животного",
+          "ru"
+        ],
+        [
+          "animal luring",
+          "en"
+        ]
+      ],
+      "reason": "Luring with an animal as its target; no guaranteed capture or harm."
+    },
+    {
+      "key": "animal_bait",
+      "name": "приманка для животных",
+      "parent": 24469,
+      "universum_id": 1,
+      "terms": [
+        [
+          "приманка для животных",
+          "ru"
+        ],
+        [
+          "bait for animals",
+          "en"
+        ],
+        [
+          "animal bait",
+          "en"
+        ]
+      ],
+      "reason": "Material used to attract an animal; may be natural or manufactured, so the dictionary device genus is not imposed. OEWN 2025: oewn-02779210-n."
+    },
+    {
+      "key": "fishing_bait",
+      "name": "рыболовная приманка",
+      "parent": "animal_bait",
+      "universum_id": 1,
+      "terms": [
+        [
+          "рыболовная приманка",
+          "ru"
+        ],
+        [
+          "fishing bait",
+          "en"
+        ]
+      ],
+      "reason": "Animal bait used to attract fish; includes natural bait and manufactured lures."
+    },
+    {
+      "key": "live_bait",
+      "name": "живая приманка для животных",
+      "parent": "animal_bait",
+      "universum_id": 1,
+      "terms": [
+        [
+          "живая приманка для животных",
+          "ru"
+        ],
+        [
+          "live animal bait",
+          "en"
+        ]
+      ],
+      "reason": "A living animal used as bait; not a manufactured device."
+    },
+    {
+      "key": "live_fishing_bait",
+      "name": "живая рыболовная приманка",
+      "parent": "fishing_bait",
+      "universum_id": 1,
+      "terms": [
+        [
+          "живая рыболовная приманка",
+          "ru"
+        ],
+        [
+          "live fishing bait",
+          "en"
+        ]
+      ],
+      "reason": "Fishing bait supplied by a living animal."
+    }
+  ],
+  "renames": [
+    {
+      "id": 6417,
+      "before": "ловение",
+      "name": "ловля (физическое действие)",
+      "terms": [],
+      "reason": "Use the attested ловля label for attempting to catch physically, without asserting success. Source: https://gramota.ru/meta/lovit"
+    },
+    {
+      "id": 4159,
+      "before": "поймать",
+      "name": "поймать (физический захват)",
+      "terms": [],
+      "reason": "Select the successful physical-capture sense; attempting to catch does not entail this result. OEWN 2025: oewn-01217985-v."
+    },
+    {
+      "id": 18539,
+      "before": "приманение",
+      "name": "приманивание",
+      "terms": [],
+      "reason": "Replace the generated label with a transparent action noun derived from the attested приманить/приманивать verb. Source: https://ruslang.ru/sites/default/files/doc/normativnyje_slovari/orfoepicheskij_slovar.pdf"
+    },
+    {
+      "id": 8856,
+      "before": "преследование",
+      "name": "преследование (погоня)",
+      "terms": [],
+      "reason": "Select physical pursuit to overtake, excluding legal prosecution, harassment and an abstract objective. OEWN 2025: oewn-00320765-n."
+    }
+  ],
+  "terms": [
+    {
+      "id": 1313,
+      "name": "хищник",
+      "terms": [
+        [
+          "predatory animal",
+          "en"
+        ]
+      ],
+      "reason": "Make the ecological animal reading explicit. OEWN 2025: oewn-02155392-n."
+    },
+    {
+      "id": 14073,
+      "name": "травоядное",
+      "terms": [
+        [
+          "herbivore",
+          "en"
+        ],
+        [
+          "herbivorous animal",
+          "en"
+        ]
+      ],
+      "reason": "Add genuine English terms to the existing Russian concept. OEWN 2025: oewn-01327251-n."
+    },
+    {
+      "id": 6417,
+      "name": "ловля (физическое действие)",
+      "terms": [
+        [
+          "catching (physical activity)",
+          "en"
+        ],
+        [
+          "ловля",
+          "ru"
+        ],
+        [
+          "ловить",
+          "ru"
+        ]
+      ],
+      "reason": "The physical catching activity excludes infection, noticing and the baseball position. OEWN 2025: oewn-01441809-v."
+    },
+    {
+      "id": 4159,
+      "name": "поймать (физический захват)",
+      "terms": [
+        [
+          "successful physical capture",
+          "en"
+        ]
+      ],
+      "reason": "Qualify the physical success sense while preserving the old catch lookup terms."
+    },
+    {
+      "id": 18539,
+      "name": "приманивание",
+      "terms": [
+        [
+          "luring (attracting)",
+          "en"
+        ],
+        [
+          "приманивать",
+          "ru"
+        ],
+        [
+          "приманить",
+          "ru"
+        ]
+      ],
+      "reason": "Preserve the attraction action; do not equate it with a physical bait object."
+    },
+    {
+      "id": 8856,
+      "name": "преследование (погоня)",
+      "terms": [
+        [
+          "pursuit (chase)",
+          "en"
+        ],
+        [
+          "chasing",
+          "en"
+        ],
+        [
+          "преследовать (догонять)",
+          "ru"
+        ]
+      ],
+      "reason": "Supply the selected physical pursuit meaning. OEWN 2025: oewn-00320765-n."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 14073,
+      "term": "травоядное",
+      "lang": "en",
+      "reason": "The Russian term is already preserved with a Russian language tag."
+    },
+    {
+      "id": 6417,
+      "term": "ловиение",
+      "lang": "ru",
+      "reason": "Remove the malformed generated suffix; retain the old canonical lookup form and the attested ловля/ловить forms."
+    },
+    {
+      "id": 6417,
+      "term": "ЛОВИТЬ",
+      "lang": "en",
+      "reason": "Replace the Russian string tagged as English with a qualified English meaning; retain ловить in Russian."
+    },
+    {
+      "id": 18539,
+      "term": "приманиение",
+      "lang": "ru",
+      "reason": "Remove the malformed generated suffix; retain the old canonical lookup form and attested verbs."
+    },
+    {
+      "id": 18539,
+      "term": "ПРИМАНИТЬ",
+      "lang": "en",
+      "reason": "The Russian infinitive belongs under Russian, with a separate English meaning."
+    },
+    {
+      "id": 8856,
+      "term": "преследоваание",
+      "lang": "ru",
+      "reason": "Remove the duplicated-vowel generated form; the correct Russian noun remains."
+    },
+    {
+      "id": 8856,
+      "term": "ПРЕСЛЕДОВАТЬ",
+      "lang": "en",
+      "reason": "A Russian verb is not an English term; the qualified Russian form and correct English meanings are supplied."
+    }
+  ],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 2033,
+      "before": [
+        1313,
+        "14",
+        104,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1313,
+          "14",
+          27,
+          null,
+          1
+        ]
+      ],
+      "reason": "The existing predator term and hunting attributes select the ecological animal role, which includes non-mammals. OEWN 2025: oewn-02155392-n."
+    },
+    {
+      "id": 2036,
+      "before": [
+        1316,
+        "14",
+        1313,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          1316,
+          "14",
+          "carnivoran",
+          null,
+          1
+        ]
+      ],
+      "reason": "Bears belong to Carnivora; do not classify the entire bear family by a uniform predator diet. Its old probabilistic hunting capability remains history-backed and unchanged. Source: https://idfg.idaho.gov/species/taxa/tree/order/Carnivora"
+    },
+    {
+      "id": 18157,
+      "before": [
+        14073,
+        "14",
+        34,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          14073,
+          "14",
+          27,
+          null,
+          1
+        ]
+      ],
+      "reason": "Reuse the existing Russian herbivore record as an animal feeding category, with a nearer genus. OEWN 2025: oewn-01327251-n."
+    },
+    {
+      "id": 30130,
+      "before": [
+        5304,
+        "14",
+        3396,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          5304,
+          "14",
+          28,
+          null,
+          1
+        ]
+      ],
+      "reason": "A hunter need not hunt for employment. Reuse the person role; create the occupational restriction separately. OEWN 2025: oewn-10212645-n."
+    },
+    {
+      "id": 6624,
+      "before": [
+        4159,
+        "14",
+        19,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          4159,
+          "14",
+          5017,
+          null,
+          1
+        ]
+      ],
+      "reason": "The selected physical-capture action has the nearer physical-action genus. OEWN 2025: oewn-01217985-v."
+    },
+    {
+      "id": 3558,
+      "before": [
+        1910,
+        "27",
+        1356,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          "carp_fishing",
+          "27",
+          1356,
+          null,
+          1
+        ]
+      ],
+      "reason": "Move the named-fish target from generic fishing onto its explicit target restriction; other fishing no longer inherits this patient."
+    },
+    {
+      "id": 3559,
+      "before": [
+        1910,
+        "27",
+        115,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          "pike_fishing",
+          "27",
+          115,
+          null,
+          1
+        ]
+      ],
+      "reason": "Move the named-fish target from generic fishing onto its explicit target restriction; other fishing no longer inherits this patient."
+    },
+    {
+      "id": 3560,
+      "before": [
+        1910,
+        "27",
+        1357,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          "perch_fishing",
+          "27",
+          1357,
+          null,
+          1
+        ]
+      ],
+      "reason": "Move the named-fish target from generic fishing onto its explicit target restriction; other fishing no longer inherits this patient."
+    },
+    {
+      "id": 3561,
+      "before": [
+        1910,
+        "27",
+        1355,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          "salmon_fishing",
+          "27",
+          1355,
+          null,
+          1
+        ]
+      ],
+      "reason": "Move the named-fish target from generic fishing onto its explicit target restriction; other fishing no longer inherits this patient."
+    },
+    {
+      "id": 3562,
+      "before": [
+        1910,
+        "27",
+        1360,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          "catfish_fishing",
+          "27",
+          1360,
+          null,
+          1
+        ]
+      ],
+      "reason": "Move the named-fish target from generic fishing onto its explicit target restriction; other fishing no longer inherits this patient."
+    },
+    {
+      "id": 4125,
+      "before": [
+        1910,
+        "27",
+        2259,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          "crucian_fishing",
+          "27",
+          2259,
+          null,
+          1
+        ]
+      ],
+      "reason": "Move the named-fish target from generic fishing onto its explicit target restriction; other fishing no longer inherits this patient."
+    },
+    {
+      "id": 12940,
+      "before": [
+        8856,
+        "14",
+        202,
+        1
+      ],
+      "reviewed_strength": 100,
+      "replacements": [
+        [
+          8856,
+          "14",
+          55,
+          null,
+          1
+        ]
+      ],
+      "reason": "Physical pursuit is motion rather than an internal physiological process. OEWN 2025: oewn-00320765-n."
+    },
+    {
+      "id": 555,
+      "before": [
+        255,
+        "14",
+        63,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          255,
+          "14",
+          19,
+          null,
+          1
+        ]
+      ],
+      "reason": "The existing protection record serves clothing, roofs, umbrellas and animals as well as social actors. Its general action sense is broader than social action."
+    },
+    {
+      "id": 8150,
+      "before": [
+        1905,
+        "61",
+        255,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [],
+      "reason": "Hunting and protection are not necessarily disjoint coordinate species; the asserted universal non-overlap lacks support."
+    }
+  ],
+  "edges": [
+    {
+      "subject": 1314,
+      "kod": "14",
+      "object": "carnivoran",
+      "universum_id": 1,
+      "reason": "Preserve the valid mammalian ancestry independently of the ecological predator role. Source: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?command=show&id=33554&lvl=3&mode=tree"
+    },
+    {
+      "subject": 1315,
+      "kod": "14",
+      "object": "carnivoran",
+      "universum_id": 1,
+      "reason": "Preserve the valid mammalian ancestry independently of the ecological predator role. Source: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?command=show&id=33554&lvl=3&mode=tree"
+    },
+    {
+      "subject": 1317,
+      "kod": "14",
+      "object": "carnivoran",
+      "universum_id": 1,
+      "reason": "Preserve the valid mammalian ancestry independently of the ecological predator role. Source: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?command=show&id=33554&lvl=3&mode=tree"
+    },
+    {
+      "subject": 1318,
+      "kod": "14",
+      "object": "carnivoran",
+      "universum_id": 1,
+      "reason": "Preserve the valid mammalian ancestry independently of the ecological predator role. Source: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?command=show&id=33554&lvl=3&mode=tree"
+    },
+    {
+      "subject": 2283,
+      "kod": "14",
+      "object": "carnivoran",
+      "universum_id": 1,
+      "reason": "Preserve the valid mammalian ancestry independently of the ecological predator role. Source: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?command=show&id=33554&lvl=3&mode=tree"
+    },
+    {
+      "subject": 2284,
+      "kod": "14",
+      "object": "carnivoran",
+      "universum_id": 1,
+      "reason": "Preserve the valid mammalian ancestry independently of the ecological predator role. Source: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?command=show&id=33554&lvl=3&mode=tree"
+    },
+    {
+      "subject": 2285,
+      "kod": "14",
+      "object": "carnivoran",
+      "universum_id": 1,
+      "reason": "Preserve the valid mammalian ancestry independently of the ecological predator role. Source: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?command=show&id=33554&lvl=3&mode=tree"
+    },
+    {
+      "subject": 3066,
+      "kod": "14",
+      "object": "carnivoran",
+      "universum_id": 1,
+      "reason": "Preserve the valid mammalian ancestry independently of the ecological predator role. Source: https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?command=show&id=33554&lvl=3&mode=tree"
+    },
+    {
+      "subject": 1313,
+      "kod": "22",
+      "object": "predation",
+      "universum_id": 1,
+      "reason": "Predatory animals can perform the selected feeding interaction."
+    },
+    {
+      "subject": "predation",
+      "kod": "27",
+      "object": "prey_animal",
+      "universum_id": 1,
+      "reason": "The prey role is the target of this feeding interaction."
+    },
+    {
+      "subject": 1313,
+      "kod": "62",
+      "object": "prey_animal",
+      "universum_id": 1,
+      "reason": "Predator and prey are converse roles of a predation relation; the same animal can occupy different roles in different relations."
+    },
+    {
+      "subject": "predator_and_prey",
+      "kod": "14",
+      "object": "prey_animal",
+      "universum_id": 1,
+      "reason": "Predation and being prey can apply to the same animal in different food-web links."
+    },
+    {
+      "subject": "predatory_bird",
+      "kod": "14",
+      "object": 1313,
+      "universum_id": 1,
+      "reason": "The predatory feeding role also applies."
+    },
+    {
+      "subject": "predatory_fish",
+      "kod": "14",
+      "object": 1313,
+      "universum_id": 1,
+      "reason": "The predatory feeding role also applies."
+    },
+    {
+      "subject": 14073,
+      "kod": "22",
+      "object": "herbivory",
+      "universum_id": 1,
+      "reason": "The herbivorous animal can consume plant food."
+    },
+    {
+      "subject": "carrion_feeding",
+      "kod": "27",
+      "object": "carrion",
+      "universum_id": 1,
+      "reason": "Dead animal remains are the consumed target."
+    },
+    {
+      "subject": "carrion_scavenger",
+      "kod": "22",
+      "object": "carrion_feeding",
+      "universum_id": 1,
+      "reason": "This feeding role supplies the carrion-consumption capability."
+    },
+    {
+      "subject": "predatory_scavenger",
+      "kod": "14",
+      "object": "carrion_scavenger",
+      "universum_id": 1,
+      "reason": "The animal also occupies the carrion-feeding role."
+    },
+    {
+      "subject": 5304,
+      "kod": "22",
+      "object": "human_hunting",
+      "universum_id": 1,
+      "reason": "The human hunter role is linked to its activity."
+    },
+    {
+      "subject": "occupational_hunter",
+      "kod": "14",
+      "object": 3396,
+      "universum_id": 1,
+      "reason": "Only the occupational restriction inherits the worker genus."
+    },
+    {
+      "subject": "occupational_hunter",
+      "kod": "22",
+      "object": "commercial_hunting",
+      "universum_id": 1,
+      "reason": "The occupational role supports livelihood hunting."
+    },
+    {
+      "subject": "recreational_hunter",
+      "kod": "22",
+      "object": "recreational_hunting",
+      "universum_id": 1,
+      "reason": "Link the participant role to recreational hunting."
+    },
+    {
+      "subject": "animal_catching",
+      "kod": "27",
+      "object": 27,
+      "universum_id": 1,
+      "reason": "The animal is the target, not necessarily the performer."
+    },
+    {
+      "subject": "animal_capture",
+      "kod": "27",
+      "object": 27,
+      "universum_id": 1,
+      "reason": "The captured animal is the target."
+    },
+    {
+      "subject": 1910,
+      "kod": "14",
+      "object": "animal_catching",
+      "universum_id": 1,
+      "reason": "Fishing is animal-targeted catching activity; preserve its existing reviewed physical-action genus and keep it separate from generic hunting."
+    },
+    {
+      "subject": "trap_hunting",
+      "kod": "14",
+      "object": "animal_trapping",
+      "universum_id": 1,
+      "reason": "Both the hunting purpose and the trapping method apply."
+    },
+    {
+      "subject": "trapper",
+      "kod": "22",
+      "object": "trap_hunting",
+      "universum_id": 1,
+      "reason": "The hunter can perform the trap-based hunting activity."
+    },
+    {
+      "subject": "animal_trap",
+      "kod": "21",
+      "object": "animal_trapping",
+      "universum_id": 1,
+      "reason": "Animal trapping is the intended use; no guaranteed success."
+    },
+    {
+      "subject": 2399,
+      "kod": "14",
+      "object": "animal_trap",
+      "universum_id": 1,
+      "reason": "A mousetrap is also an animal trap; retain its existing tool genus and mouse target."
+    },
+    {
+      "subject": "animal_luring",
+      "kod": "27",
+      "object": 27,
+      "universum_id": 1,
+      "reason": "The animal is the luring target."
+    },
+    {
+      "subject": "animal_bait",
+      "kod": "21",
+      "object": "animal_luring",
+      "universum_id": 1,
+      "reason": "Attracting the animal is the bait purpose."
+    },
+    {
+      "subject": 25152,
+      "kod": "14",
+      "object": "fishing_bait",
+      "universum_id": 1,
+      "reason": "The existing artificial lure is one fishing-bait type; retain the reviewed fishing-equipment genus."
+    },
+    {
+      "subject": "live_bait",
+      "kod": "14",
+      "object": 27,
+      "universum_id": 1,
+      "reason": "The bait itself is a living animal; distinguish it from the animal being lured."
+    },
+    {
+      "subject": "live_fishing_bait",
+      "kod": "14",
+      "object": "live_bait",
+      "universum_id": 1,
+      "reason": "Both the fishing use and living-animal restriction apply."
+    }
+  ],
+  "checks": [
+    {
+      "subject": 1313,
+      "kod": "14",
+      "object": 104,
+      "present": false
+    },
+    {
+      "subject": 1313,
+      "kod": "14",
+      "object": 27,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "carnivoran",
+      "kod": "14",
+      "object": 104,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1314,
+      "kod": "14",
+      "object": "carnivoran",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1315,
+      "kod": "14",
+      "object": "carnivoran",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1317,
+      "kod": "14",
+      "object": "carnivoran",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1318,
+      "kod": "14",
+      "object": "carnivoran",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2283,
+      "kod": "14",
+      "object": "carnivoran",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2284,
+      "kod": "14",
+      "object": "carnivoran",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2285,
+      "kod": "14",
+      "object": "carnivoran",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3066,
+      "kod": "14",
+      "object": "carnivoran",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1316,
+      "kod": "14",
+      "object": 1313,
+      "present": false
+    },
+    {
+      "subject": 1316,
+      "kod": "14",
+      "object": "carnivoran",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "prey_animal",
+      "kod": "14",
+      "object": 27,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "predation",
+      "kod": "14",
+      "object": 2631,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1313,
+      "kod": "22",
+      "object": "predation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "predation",
+      "kod": "27",
+      "object": "prey_animal",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1313,
+      "kod": "62",
+      "object": "prey_animal",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "predator_and_prey",
+      "kod": "14",
+      "object": 1313,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "predator_and_prey",
+      "kod": "14",
+      "object": "prey_animal",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "predatory_bird",
+      "kod": "14",
+      "object": 105,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "predatory_bird",
+      "kod": "14",
+      "object": 1313,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "predatory_fish",
+      "kod": "14",
+      "object": 106,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "predatory_fish",
+      "kod": "14",
+      "object": 1313,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 14073,
+      "kod": "14",
+      "object": 34,
+      "present": false
+    },
+    {
+      "subject": 14073,
+      "kod": "14",
+      "object": 27,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "carnivorous_animal",
+      "kod": "14",
+      "object": 27,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "omnivorous_animal",
+      "kod": "14",
+      "object": 27,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "herbivory",
+      "kod": "14",
+      "object": 1845,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 14073,
+      "kod": "22",
+      "object": "herbivory",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "carrion",
+      "kod": "14",
+      "object": 34,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "carrion_feeding",
+      "kod": "14",
+      "object": 1845,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "carrion_feeding",
+      "kod": "27",
+      "object": "carrion",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "carrion_scavenger",
+      "kod": "14",
+      "object": 27,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "carrion_scavenger",
+      "kod": "22",
+      "object": "carrion_feeding",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "predatory_scavenger",
+      "kod": "14",
+      "object": 1313,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "predatory_scavenger",
+      "kod": "14",
+      "object": "carrion_scavenger",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5304,
+      "kod": "14",
+      "object": 3396,
+      "present": false
+    },
+    {
+      "subject": 5304,
+      "kod": "14",
+      "object": 28,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "human_hunting",
+      "kod": "14",
+      "object": 1905,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 5304,
+      "kod": "22",
+      "object": "human_hunting",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "recreational_hunting",
+      "kod": "14",
+      "object": "human_hunting",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "commercial_hunting",
+      "kod": "14",
+      "object": "human_hunting",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "subsistence_hunting",
+      "kod": "14",
+      "object": "human_hunting",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "occupational_hunter",
+      "kod": "14",
+      "object": 5304,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "occupational_hunter",
+      "kod": "14",
+      "object": 3396,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "occupational_hunter",
+      "kod": "22",
+      "object": "commercial_hunting",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "recreational_hunter",
+      "kod": "14",
+      "object": 5304,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "recreational_hunter",
+      "kod": "22",
+      "object": "recreational_hunting",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 4159,
+      "kod": "14",
+      "object": 19,
+      "present": false
+    },
+    {
+      "subject": 4159,
+      "kod": "14",
+      "object": 5017,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "animal_catching",
+      "kod": "14",
+      "object": 6417,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "animal_catching",
+      "kod": "27",
+      "object": 27,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "animal_capture",
+      "kod": "14",
+      "object": 4159,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "animal_capture",
+      "kod": "27",
+      "object": 27,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1910,
+      "kod": "14",
+      "object": "animal_catching",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "animal_trapping",
+      "kod": "14",
+      "object": "animal_catching",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "trap_hunting",
+      "kod": "14",
+      "object": "human_hunting",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "trap_hunting",
+      "kod": "14",
+      "object": "animal_trapping",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "trapper",
+      "kod": "14",
+      "object": 5304,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "trapper",
+      "kod": "22",
+      "object": "trap_hunting",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "carp_fishing",
+      "kod": "14",
+      "object": 1910,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1910,
+      "kod": "27",
+      "object": 1356,
+      "present": false
+    },
+    {
+      "subject": "carp_fishing",
+      "kod": "27",
+      "object": 1356,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "pike_fishing",
+      "kod": "14",
+      "object": 1910,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1910,
+      "kod": "27",
+      "object": 115,
+      "present": false
+    },
+    {
+      "subject": "pike_fishing",
+      "kod": "27",
+      "object": 115,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "perch_fishing",
+      "kod": "14",
+      "object": 1910,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1910,
+      "kod": "27",
+      "object": 1357,
+      "present": false
+    },
+    {
+      "subject": "perch_fishing",
+      "kod": "27",
+      "object": 1357,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "salmon_fishing",
+      "kod": "14",
+      "object": 1910,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1910,
+      "kod": "27",
+      "object": 1355,
+      "present": false
+    },
+    {
+      "subject": "salmon_fishing",
+      "kod": "27",
+      "object": 1355,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "catfish_fishing",
+      "kod": "14",
+      "object": 1910,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1910,
+      "kod": "27",
+      "object": 1360,
+      "present": false
+    },
+    {
+      "subject": "catfish_fishing",
+      "kod": "27",
+      "object": 1360,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "crucian_fishing",
+      "kod": "14",
+      "object": 1910,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1910,
+      "kod": "27",
+      "object": 2259,
+      "present": false
+    },
+    {
+      "subject": "crucian_fishing",
+      "kod": "27",
+      "object": 2259,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "animal_trap",
+      "kod": "14",
+      "object": 3607,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "animal_trap",
+      "kod": "21",
+      "object": "animal_trapping",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2399,
+      "kod": "14",
+      "object": "animal_trap",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "live_capture_trap",
+      "kod": "14",
+      "object": "animal_trap",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "animal_luring",
+      "kod": "14",
+      "object": 18539,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "animal_luring",
+      "kod": "27",
+      "object": 27,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "animal_bait",
+      "kod": "14",
+      "object": 24469,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "animal_bait",
+      "kod": "21",
+      "object": "animal_luring",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "fishing_bait",
+      "kod": "14",
+      "object": "animal_bait",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25152,
+      "kod": "14",
+      "object": "fishing_bait",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "live_bait",
+      "kod": "14",
+      "object": "animal_bait",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "live_bait",
+      "kod": "14",
+      "object": 27,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "live_fishing_bait",
+      "kod": "14",
+      "object": "fishing_bait",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "live_fishing_bait",
+      "kod": "14",
+      "object": "live_bait",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 8856,
+      "kod": "14",
+      "object": 202,
+      "present": false
+    },
+    {
+      "subject": 8856,
+      "kod": "14",
+      "object": 55,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 255,
+      "kod": "14",
+      "object": 63,
+      "present": false
+    },
+    {
+      "subject": 255,
+      "kod": "14",
+      "object": 19,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1905,
+      "kod": "61",
+      "object": 255,
+      "present": false
+    },
+    {
+      "subject": 1905,
+      "kod": "14",
+      "object": 5017,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 1910,
+      "kod": "14",
+      "object": 5017,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2399,
+      "kod": "14",
+      "object": 30,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 25152,
+      "kod": "14",
+      "object": 25144,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2399,
+      "kod": "25",
+      "object": 1323,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 13131,
+      "kod": "14",
+      "object": 1910,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 4900,
+      "kod": "20",
+      "object": 1905,
+      "present": true,
+      "strength": 0
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": "carnivoran",
+      "ancestor": 104,
+      "present": true
+    },
+    {
+      "subject": "prey_animal",
+      "ancestor": 27,
+      "present": true
+    },
+    {
+      "subject": "predation",
+      "ancestor": 2631,
+      "present": true
+    },
+    {
+      "subject": "predator_and_prey",
+      "ancestor": 1313,
+      "present": true
+    },
+    {
+      "subject": "predatory_bird",
+      "ancestor": 105,
+      "present": true
+    },
+    {
+      "subject": "predatory_fish",
+      "ancestor": 106,
+      "present": true
+    },
+    {
+      "subject": "carnivorous_animal",
+      "ancestor": 27,
+      "present": true
+    },
+    {
+      "subject": "omnivorous_animal",
+      "ancestor": 27,
+      "present": true
+    },
+    {
+      "subject": "herbivory",
+      "ancestor": 1845,
+      "present": true
+    },
+    {
+      "subject": "carrion",
+      "ancestor": 34,
+      "present": true
+    },
+    {
+      "subject": "carrion_feeding",
+      "ancestor": 1845,
+      "present": true
+    },
+    {
+      "subject": "carrion_scavenger",
+      "ancestor": 27,
+      "present": true
+    },
+    {
+      "subject": "predatory_scavenger",
+      "ancestor": 1313,
+      "present": true
+    },
+    {
+      "subject": "human_hunting",
+      "ancestor": 1905,
+      "present": true
+    },
+    {
+      "subject": "recreational_hunting",
+      "ancestor": "human_hunting",
+      "present": true
+    },
+    {
+      "subject": "commercial_hunting",
+      "ancestor": "human_hunting",
+      "present": true
+    },
+    {
+      "subject": "subsistence_hunting",
+      "ancestor": "human_hunting",
+      "present": true
+    },
+    {
+      "subject": "occupational_hunter",
+      "ancestor": 5304,
+      "present": true
+    },
+    {
+      "subject": "recreational_hunter",
+      "ancestor": 5304,
+      "present": true
+    },
+    {
+      "subject": "animal_catching",
+      "ancestor": 6417,
+      "present": true
+    },
+    {
+      "subject": "animal_capture",
+      "ancestor": 4159,
+      "present": true
+    },
+    {
+      "subject": "animal_trapping",
+      "ancestor": "animal_catching",
+      "present": true
+    },
+    {
+      "subject": "trap_hunting",
+      "ancestor": "human_hunting",
+      "present": true
+    },
+    {
+      "subject": "trapper",
+      "ancestor": 5304,
+      "present": true
+    },
+    {
+      "subject": "carp_fishing",
+      "ancestor": 1910,
+      "present": true
+    },
+    {
+      "subject": "pike_fishing",
+      "ancestor": 1910,
+      "present": true
+    },
+    {
+      "subject": "perch_fishing",
+      "ancestor": 1910,
+      "present": true
+    },
+    {
+      "subject": "salmon_fishing",
+      "ancestor": 1910,
+      "present": true
+    },
+    {
+      "subject": "catfish_fishing",
+      "ancestor": 1910,
+      "present": true
+    },
+    {
+      "subject": "crucian_fishing",
+      "ancestor": 1910,
+      "present": true
+    },
+    {
+      "subject": "animal_trap",
+      "ancestor": 3607,
+      "present": true
+    },
+    {
+      "subject": "live_capture_trap",
+      "ancestor": "animal_trap",
+      "present": true
+    },
+    {
+      "subject": "animal_luring",
+      "ancestor": 18539,
+      "present": true
+    },
+    {
+      "subject": "animal_bait",
+      "ancestor": 24469,
+      "present": true
+    },
+    {
+      "subject": "fishing_bait",
+      "ancestor": "animal_bait",
+      "present": true
+    },
+    {
+      "subject": "live_bait",
+      "ancestor": "animal_bait",
+      "present": true
+    },
+    {
+      "subject": "live_fishing_bait",
+      "ancestor": "fishing_bait",
+      "present": true
+    },
+    {
+      "subject": 1313,
+      "ancestor": 27,
+      "present": true
+    },
+    {
+      "subject": 14073,
+      "ancestor": 27,
+      "present": true
+    },
+    {
+      "subject": 5304,
+      "ancestor": 28,
+      "present": true
+    },
+    {
+      "subject": 8856,
+      "ancestor": 55,
+      "present": true
+    },
+    {
+      "subject": 1910,
+      "ancestor": 6417,
+      "present": true
+    },
+    {
+      "subject": "predator_and_prey",
+      "ancestor": "prey_animal",
+      "present": true
+    },
+    {
+      "subject": "predatory_bird",
+      "ancestor": 1313,
+      "present": true
+    },
+    {
+      "subject": "predatory_fish",
+      "ancestor": 1313,
+      "present": true
+    },
+    {
+      "subject": "predatory_scavenger",
+      "ancestor": "carrion_scavenger",
+      "present": true
+    },
+    {
+      "subject": "occupational_hunter",
+      "ancestor": 3396,
+      "present": true
+    },
+    {
+      "subject": "trap_hunting",
+      "ancestor": "animal_catching",
+      "present": true
+    },
+    {
+      "subject": 2399,
+      "ancestor": "animal_trap",
+      "present": true
+    },
+    {
+      "subject": 25152,
+      "ancestor": "fishing_bait",
+      "present": true
+    },
+    {
+      "subject": "live_fishing_bait",
+      "ancestor": 27,
+      "present": true
+    },
+    {
+      "subject": 255,
+      "ancestor": 19,
+      "present": true
+    },
+    {
+      "subject": 1314,
+      "ancestor": 104,
+      "present": true
+    },
+    {
+      "subject": 1315,
+      "ancestor": 104,
+      "present": true
+    },
+    {
+      "subject": 1316,
+      "ancestor": 104,
+      "present": true
+    },
+    {
+      "subject": 1317,
+      "ancestor": 104,
+      "present": true
+    },
+    {
+      "subject": 1318,
+      "ancestor": 104,
+      "present": true
+    },
+    {
+      "subject": 2283,
+      "ancestor": 104,
+      "present": true
+    },
+    {
+      "subject": 2284,
+      "ancestor": 104,
+      "present": true
+    },
+    {
+      "subject": 2285,
+      "ancestor": 104,
+      "present": true
+    },
+    {
+      "subject": 3066,
+      "ancestor": 104,
+      "present": true
+    },
+    {
+      "subject": 1313,
+      "ancestor": 104,
+      "present": false
+    },
+    {
+      "subject": 1313,
+      "ancestor": "carnivoran",
+      "present": false
+    },
+    {
+      "subject": "carnivoran",
+      "ancestor": 1313,
+      "present": false
+    },
+    {
+      "subject": "predatory_bird",
+      "ancestor": 104,
+      "present": false
+    },
+    {
+      "subject": "predatory_fish",
+      "ancestor": 104,
+      "present": false
+    },
+    {
+      "subject": 14073,
+      "ancestor": 1313,
+      "present": false
+    },
+    {
+      "subject": 5304,
+      "ancestor": 3396,
+      "present": false
+    },
+    {
+      "subject": "recreational_hunter",
+      "ancestor": 3396,
+      "present": false
+    },
+    {
+      "subject": "recreational_hunting",
+      "ancestor": 4159,
+      "present": false
+    },
+    {
+      "subject": "animal_catching",
+      "ancestor": 4159,
+      "present": false
+    },
+    {
+      "subject": 1910,
+      "ancestor": 4159,
+      "present": false
+    },
+    {
+      "subject": "animal_trapping",
+      "ancestor": "human_hunting",
+      "present": false
+    },
+    {
+      "subject": "animal_bait",
+      "ancestor": 29,
+      "present": false
+    },
+    {
+      "subject": "live_bait",
+      "ancestor": 29,
+      "present": false
+    },
+    {
+      "subject": "fishing_bait",
+      "ancestor": 25152,
+      "present": false
+    },
+    {
+      "subject": 8856,
+      "ancestor": 202,
+      "present": false
+    },
+    {
+      "subject": 255,
+      "ancestor": 63,
+      "present": false
+    },
+    {
+      "subject": "carrion_scavenger",
+      "ancestor": 1313,
+      "present": false
+    },
+    {
+      "subject": "carnivorous_animal",
+      "ancestor": "carnivoran",
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": 1313,
+      "term": "predatory animal",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "carnivoran",
+      "term": "животное отряда хищных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "carnivoran",
+      "term": "carnivoran",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "carnivoran",
+      "term": "member of Carnivora",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "prey_animal",
+      "term": "животное — добыча хищника",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "prey_animal",
+      "term": "prey animal",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "prey_animal",
+      "term": "animal prey",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "predation",
+      "term": "хищничество (питание животными)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "predation",
+      "term": "predation (animal feeding)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "predation",
+      "term": "predation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "predator_and_prey",
+      "term": "хищник, служащий добычей другого хищника",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "predator_and_prey",
+      "term": "predator that is also prey",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "predatory_bird",
+      "term": "птица-хищник",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "predatory_bird",
+      "term": "predatory bird",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "predatory_fish",
+      "term": "хищная рыба",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "predatory_fish",
+      "term": "predatory fish",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 14073,
+      "term": "herbivore",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 14073,
+      "term": "herbivorous animal",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 14073,
+      "term": "травоядное",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "carnivorous_animal",
+      "term": "плотоядное животное",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "carnivorous_animal",
+      "term": "carnivorous animal",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "carnivorous_animal",
+      "term": "carnivore (diet)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "omnivorous_animal",
+      "term": "всеядное животное",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "omnivorous_animal",
+      "term": "omnivorous animal",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "omnivorous_animal",
+      "term": "omnivore (animal)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "herbivory",
+      "term": "питание растительной пищей",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "herbivory",
+      "term": "herbivory",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "herbivory",
+      "term": "plant feeding (animal consumption)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "carrion",
+      "term": "падаль",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "carrion",
+      "term": "carrion",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "carrion_feeding",
+      "term": "питание падалью",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "carrion_feeding",
+      "term": "carrion feeding",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "carrion_scavenger",
+      "term": "падальщик (животное)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "carrion_scavenger",
+      "term": "carrion-feeding animal",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "carrion_scavenger",
+      "term": "scavenger (carrion-feeding animal)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "predatory_scavenger",
+      "term": "хищник, питающийся также падалью",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "predatory_scavenger",
+      "term": "predatory carrion scavenger",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "human_hunting",
+      "term": "охота человека на животных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "human_hunting",
+      "term": "human hunting of animals",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "recreational_hunting",
+      "term": "любительская охота",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "recreational_hunting",
+      "term": "recreational hunting",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "commercial_hunting",
+      "term": "промысловая охота",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "commercial_hunting",
+      "term": "commercial hunting",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "subsistence_hunting",
+      "term": "охота для собственного питания",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "subsistence_hunting",
+      "term": "hunting for household food",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "occupational_hunter",
+      "term": "охотник-промысловик",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "occupational_hunter",
+      "term": "occupational hunter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "occupational_hunter",
+      "term": "professional hunter (occupation)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "recreational_hunter",
+      "term": "охотник-любитель",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "recreational_hunter",
+      "term": "recreational hunter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 6417,
+      "term": "ловля (физическое действие)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 6417,
+      "term": "catching (physical activity)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 6417,
+      "term": "ловля",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 6417,
+      "term": "ловить",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 6417,
+      "term": "ловиение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 6417,
+      "term": "ЛОВИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 4159,
+      "term": "поймать (физический захват)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 4159,
+      "term": "successful physical capture",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "animal_catching",
+      "term": "ловля животных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "animal_catching",
+      "term": "animal catching activity",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "animal_capture",
+      "term": "поимка животного",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "animal_capture",
+      "term": "successful animal capture",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "animal_trapping",
+      "term": "ловля животных ловушками",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "animal_trapping",
+      "term": "animal trapping",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "trap_hunting",
+      "term": "охота с ловушками",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "trap_hunting",
+      "term": "trap hunting",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "trapper",
+      "term": "охотник с ловушками",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "trapper",
+      "term": "trapper",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "carp_fishing",
+      "term": "ловля карпа",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "carp_fishing",
+      "term": "carp fishing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "pike_fishing",
+      "term": "ловля щуки",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "pike_fishing",
+      "term": "pike fishing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "perch_fishing",
+      "term": "ловля окуня",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "perch_fishing",
+      "term": "perch fishing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "salmon_fishing",
+      "term": "ловля лосося",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "salmon_fishing",
+      "term": "salmon fishing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "catfish_fishing",
+      "term": "ловля сома",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "catfish_fishing",
+      "term": "catfish fishing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "crucian_fishing",
+      "term": "ловля карася",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "crucian_fishing",
+      "term": "crucian carp fishing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "animal_trap",
+      "term": "ловушка для животных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "animal_trap",
+      "term": "animal trap",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "live_capture_trap",
+      "term": "живоловушка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "live_capture_trap",
+      "term": "live-capture animal trap",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 18539,
+      "term": "приманивание",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 18539,
+      "term": "luring (attracting)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 18539,
+      "term": "приманивать",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 18539,
+      "term": "приманить",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 18539,
+      "term": "приманиение",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 18539,
+      "term": "ПРИМАНИТЬ",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "animal_luring",
+      "term": "приманивание животного",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "animal_luring",
+      "term": "animal luring",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "animal_bait",
+      "term": "приманка для животных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "animal_bait",
+      "term": "bait for animals",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "animal_bait",
+      "term": "animal bait",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "fishing_bait",
+      "term": "рыболовная приманка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "fishing_bait",
+      "term": "fishing bait",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "live_bait",
+      "term": "живая приманка для животных",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "live_bait",
+      "term": "live animal bait",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "live_fishing_bait",
+      "term": "живая рыболовная приманка",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "live_fishing_bait",
+      "term": "live fishing bait",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 8856,
+      "term": "преследование (погоня)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 8856,
+      "term": "pursuit (chase)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 8856,
+      "term": "chasing",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 8856,
+      "term": "преследовать (догонять)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 8856,
+      "term": "преследоваание",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 8856,
+      "term": "ПРЕСЛЕДОВАТЬ",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}

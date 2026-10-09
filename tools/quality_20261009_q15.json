@@ -1,0 +1,2863 @@
+{
+  "source": "quality-20261009-q15",
+  "review": {
+    "date": "2026-10-09",
+    "publication": "Local only. No commit, push or deployment.",
+    "scope": "Plane geometry, circle/disk translations, finite segments versus lines, geometric lengths, and plane-angle quantities, units and instruments.",
+    "dictionary": {
+      "dictionary": "Open English WordNet 2025 (base edition)",
+      "download": "https://en-word.net/static/english-wordnet-2025.xml.gz",
+      "release": "https://github.com/globalwordnet/english-wordnet/releases/tag/2025-edition",
+      "sha256": "9ca6d1dcb75f822fdd66617f7d9da48142ace38dd544d6ad5e2feca1674ad3fe",
+      "bytes": 11363503,
+      "metadata": {
+        "id": "oewn",
+        "label": "Open English Wordnet",
+        "language": "en",
+        "email": "english-wordnet@googlegroups.com",
+        "license": "https://creativecommons.org/licenses/by/4.0",
+        "version": "2025",
+        "url": "https://github.com/globalwordnet/english-wordnet"
+      },
+      "lexical_entries": 135969,
+      "normalized_lemmas": 127311,
+      "senses": 185129,
+      "synsets": 107519,
+      "synsets_by_pos": {
+        "a": 7502,
+        "n": 71864,
+        "r": 3615,
+        "v": 13821,
+        "s": 10717
+      }
+    },
+    "sources": {
+      "oewn": "https://en-word.net/downloads",
+      "circle": "https://reference.wolfram.com/language/ref/Circle.html",
+      "disk": "https://reference.wolfram.com/language/ref/Disk.html",
+      "segment": "https://reference.wolfram.com/language/ref/Line.html",
+      "line": "https://reference.wolfram.com/language/ref/InfiniteLine.html",
+      "ray": "https://mathworld.wolfram.com/Ray.html",
+      "plane_curve": "https://mathworld.wolfram.com/PlaneCurve.html",
+      "chord": "https://mathworld.wolfram.com/Chord.html",
+      "radius": "https://mathworld.wolfram.com/Radius.html",
+      "arc_length": "https://reference.wolfram.com/language/ref/ArcLength.html",
+      "angles": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-1-angles",
+      "si": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf",
+      "angle_finder": "https://www.stabila.com/en/products/details/tech-700-da-digital-angle-finder.html",
+      "ru_angle_finder": "https://www.stabila.com/ru/produkty/detali/elektronnyj-uglomer-tech-700-da.html",
+      "bevel": "https://www.mitutoyo.com.sg/sg-en/product/detail/bevel-protractor"
+    },
+    "attribution": "Reviewed adaptations of Open English WordNet 2025 by the Open English WordNet Team, derived from Princeton WordNet. Retain CC BY 4.0 and underlying Princeton notices in docs/quality/2026-10-09-q11.md#sources-and-reuse. BIPM quantities and units, OpenStax explanations, Wolfram geometry definitions, and manufacturer instrument descriptions are cited as supporting evidence; labels, restrictions and graph mappings are original reviewed adaptations.",
+    "existing_cohort": [
+      43,
+      1033,
+      2651,
+      2698,
+      2700,
+      2701,
+      2702,
+      2703,
+      2704,
+      2705,
+      2706,
+      2862,
+      2887,
+      2888,
+      2895,
+      3073,
+      3273,
+      3524,
+      3664,
+      3867,
+      5209,
+      24461,
+      24556,
+      24564,
+      24602,
+      24651
+    ],
+    "context_policy": "All new concepts and assertions use U1 and unspecified strength. Preserve existing home contexts, all grammar rows, and empty U2.",
+    "sense_decisions": [
+      {
+        "concept": "plane_figure",
+        "synset": "oewn-13885789-n",
+        "decision": "add",
+        "alignment": "clarified planar scope",
+        "scope": "A geometric figure lying within a plane, including curves and filled figures. Being planar does not require intrinsic dimension two; do not import that restrictive gloss as a dimension assertion."
+      },
+      {
+        "concept": "plane_curve",
+        "synset": null,
+        "decision": "add",
+        "alignment": "subject-source extension",
+        "scope": "A curve lying in one plane. The mathematical curve sense includes straight lines and segments, unlike the dictionary changing-direction-only curve gloss."
+      },
+      {
+        "concept": "closed_plane_curve",
+        "synset": "oewn-13890887-n",
+        "decision": "add",
+        "alignment": "restricted and clarified closed-loop sense",
+        "scope": "A planar curve forming a closed loop. Merely having no endpoints does not make an infinite straight line a closed loop; closed-set topology is a different condition."
+      },
+      {
+        "concept": "straight_line",
+        "synset": "oewn-13892630-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A complete straight geometric line extending indefinitely in both directions. A finite segment or ray is a subset, not a species, of such a complete line."
+      },
+      {
+        "concept": "line_segment",
+        "synset": null,
+        "decision": "add",
+        "alignment": "subject-source extension",
+        "scope": "The finite straight geometric segment joining two endpoints, including the points between them. It is an object, not its length and not an infinite line."
+      },
+      {
+        "concept": "chord",
+        "synset": "oewn-13897566-n",
+        "decision": "add",
+        "alignment": "corrected finite-segment genus",
+        "scope": "A finite segment joining two points on a curve. Circle chords are a common case; musical chords and graph-theoretic cycle chords are excluded. A spherical diameter also joins points of a great circle."
+      },
+      {
+        "concept": "radius_segment",
+        "synset": "oewn-13894177-n",
+        "decision": "add",
+        "alignment": "corrected finite-segment genus",
+        "scope": "A segment from the centre of a circle to its boundary, or from a sphere centre to its surface. Distinct from the length, arm bone, spoke and service-region meanings."
+      },
+      {
+        "concept": "circular_arc",
+        "synset": "oewn-13897023-n",
+        "decision": "add",
+        "alignment": "restricted proper-arc sense",
+        "scope": "A continuous proper portion of a circle, with endpoints. Being part of a circle does not make it a circle subtype; exclude a full circle from this selected proper-arc sense."
+      },
+      {
+        "concept": "radius_length",
+        "synset": "oewn-05109363-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The length of a circle or sphere radius segment. The segment and its length are separate concepts; do not import the bare variable letter r as a lexical synonym."
+      },
+      {
+        "concept": "arc_length",
+        "synset": null,
+        "decision": "add",
+        "alignment": "subject-source extension",
+        "scope": "Length measured along a rectifiable curve or its specified portion, including a circular arc. This is broader than circular-arc length and is not the straight chord distance."
+      },
+      {
+        "concept": "perimeter_length",
+        "synset": "oewn-05108523-n",
+        "decision": "add",
+        "alignment": "restricted quantity sense",
+        "scope": "The length around a plane figure boundary where that length is defined. Distinct from the boundary itself, a security perimeter, or an area."
+      },
+      {
+        "concept": "circumference_length",
+        "synset": "oewn-05108937-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The length of a full circle, also the perimeter of its disk. Distinct from the boundary curve denoted by the existing circumference term."
+      },
+      {
+        "concept": "plane_angle_figure",
+        "synset": "oewn-13911909-n",
+        "decision": "add",
+        "alignment": "restricted object sense",
+        "scope": "The geometric configuration of two rays sharing an endpoint in a plane, distinct from the plane-angle quantity. The broader angle record keeps its possible nonplanar meanings."
+      },
+      {
+        "concept": "plane_angle_quantity",
+        "synset": null,
+        "decision": "add",
+        "alignment": "metrology quantity extension",
+        "scope": "The measurable plane-angle quantity, distinct from its geometric configuration and from solid angle. SI treats it as dimensionless while retaining the meaningful radian unit."
+      },
+      {
+        "concept": "plane_angle_unit",
+        "synset": "oewn-13621340-n",
+        "decision": "add",
+        "alignment": "restricted unit family",
+        "scope": "A unit for plane angle. This selected family excludes solid-angle units even though the broad dictionary angular-unit family includes them."
+      },
+      {
+        "concept": "radian",
+        "synset": "oewn-13633285-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "The coherent SI plane-angle unit. Its symbol rad is distinct from the RAD software-development acronym and the absorbed-dose unit rad."
+      },
+      {
+        "concept": "arcminute",
+        "synset": "oewn-13632810-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A sixtieth of a degree of plane angle. Do not import the unqualified time-unit word minute as an equivalent term."
+      },
+      {
+        "concept": "arcsecond",
+        "synset": "oewn-13632638-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A sixtieth of an arcminute. This is a plane-angle unit, distinct from a second of time."
+      },
+      {
+        "concept": "angle_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Determine the plane-angle quantity, distinct from drawing its geometric representation."
+      },
+      {
+        "concept": "radius_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Determine radial length, not the radius segment as an object."
+      },
+      {
+        "concept": "arc_length_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Determine length along the selected curve portion rather than the chord distance."
+      },
+      {
+        "concept": "perimeter_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Determine the length around the selected boundary."
+      },
+      {
+        "concept": "circumference_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Determine the full circle boundary length."
+      },
+      {
+        "concept": "width_measurement",
+        "synset": null,
+        "decision": "add",
+        "alignment": "composed measurement purpose",
+        "scope": "Determine the side-to-side length quantity, not area."
+      },
+      {
+        "concept": "angle_instrument",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "A measuring instrument intended to determine angles. Do not align the generic class with OEWN goniometer, whose selected dictionary meaning is radio direction finding."
+      },
+      {
+        "concept": "protractor",
+        "synset": "oewn-04022302-n",
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Select the graduated drafting instrument for measuring plane angles. Other drawing functions are not represented as measurement targets."
+      },
+      {
+        "concept": "digital_angle_finder",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "An electronic angle-measuring instrument. Model-specific spirit-level features, accuracy and operating ranges are not universal properties."
+      },
+      {
+        "concept": "bevel_protractor",
+        "synset": null,
+        "decision": "add",
+        "alignment": "reviewed sense",
+        "scope": "Select the vernier angle gauge with a movable blade, supported by the manufacturer. Do not restrict all angle instruments or drafting protractors to this design."
+      },
+      {
+        "concept": 2701,
+        "synset": "oewn-13886392-n",
+        "decision": "reuse or refine",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the broad geometric line family; the English word line here does not imply the complete infinite-straight-line subtype."
+      },
+      {
+        "concept": 2702,
+        "synset": "oewn-13885383-n",
+        "decision": "reuse or refine",
+        "alignment": "reviewed sense",
+        "scope": "Reuse geometric figure and introduce a plane-figure family without reclassifying every existing child."
+      },
+      {
+        "concept": 2705,
+        "synset": null,
+        "decision": "reuse or refine",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the Russian filled-disk concept, correct circle translation, and retain the original Russian label."
+      },
+      {
+        "concept": 2706,
+        "synset": "oewn-13896141-n",
+        "decision": "reuse or refine",
+        "alignment": "reviewed sense",
+        "scope": "Reuse circle boundary and preserve circumference as an explicitly qualified homonym."
+      },
+      {
+        "concept": 2888,
+        "synset": "oewn-13894356-n",
+        "decision": "reuse or refine",
+        "alignment": "reviewed sense",
+        "scope": "Refine diameter segment through the new chord genus, preserving its length distinction from Q12."
+      },
+      {
+        "concept": 3073,
+        "synset": "oewn-13936442-n",
+        "decision": "reuse or refine",
+        "alignment": "reviewed sense",
+        "scope": "Reuse geometric ray with a planar genus; do not import the dictionary vector parent."
+      },
+      {
+        "concept": 3664,
+        "synset": "oewn-05143415-n",
+        "decision": "reuse or refine",
+        "alignment": "reviewed sense",
+        "scope": "Refine width as length, preserving the broader size ancestor."
+      },
+      {
+        "concept": 24461,
+        "synset": "oewn-13632450-n",
+        "decision": "reuse or refine",
+        "alignment": "reviewed sense",
+        "scope": "Reuse angular degree, refine its unit family, and keep temperature-degree homonyms separate."
+      },
+      {
+        "concept": 24602,
+        "synset": "oewn-05109077-n",
+        "decision": "reuse or refine",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the Q12 diameter-length concept; no duplicate is added."
+      },
+      {
+        "concept": 24651,
+        "synset": null,
+        "decision": "reuse or refine",
+        "alignment": "reviewed sense",
+        "scope": "Reuse the Q14 area quantity for the disk."
+      },
+      {
+        "concept": 2700,
+        "synset": null,
+        "decision": "defer broader review",
+        "alignment": "reviewed sense",
+        "scope": "Point has a mixed upper/descendant review pending; use its mathematical-point meaning as an angle vertex without changing its hierarchy."
+      },
+      {
+        "concept": 3273,
+        "synset": null,
+        "decision": "defer broader review",
+        "alignment": "reviewed sense",
+        "scope": "Plane remains a mathematical object; the new plane-figure class is not an alias for the plane itself."
+      },
+      {
+        "concept": 2887,
+        "synset": null,
+        "decision": "defer broader review",
+        "alignment": "reviewed sense",
+        "scope": "Diagonal object/length and polygon/polyhedron scopes require a separate review."
+      },
+      {
+        "concept": 2703,
+        "synset": null,
+        "decision": "defer broader review",
+        "alignment": "reviewed sense",
+        "scope": "Triangle boundary-versus-filled-region conventions need review before adding universal area or perimeter links."
+      },
+      {
+        "concept": 1033,
+        "synset": null,
+        "decision": "defer broader review",
+        "alignment": "reviewed sense",
+        "scope": "RAD software development is distinct from the radian symbol rad."
+      },
+      {
+        "concept": 5209,
+        "synset": null,
+        "decision": "defer broader review",
+        "alignment": "reviewed sense",
+        "scope": "The ray fish record is distinct from the geometric half-line."
+      },
+      {
+        "concept": 2862,
+        "synset": null,
+        "decision": "defer broader review",
+        "alignment": "reviewed sense",
+        "scope": "Temperature degree is distinct from angular degree."
+      },
+      {
+        "concept": 3524,
+        "synset": null,
+        "decision": "defer broader review",
+        "alignment": "reviewed sense",
+        "scope": "Degree in a general level/extent sense is distinct from angular degree."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-03452838-n",
+        "decision": "defer",
+        "alignment": "reviewed sense",
+        "scope": "The radio direction-finder meaning of goniometer is not an equivalent synonym of every angle instrument."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-13890262-n",
+        "decision": "adapt without direct alignment",
+        "alignment": "reviewed sense",
+        "scope": "The dictionary curve gloss excludes constant-direction traces, whereas the selected mathematical plane-curve family includes them."
+      },
+      {
+        "concept": null,
+        "synset": "oewn-13912154-n",
+        "decision": "defer",
+        "alignment": "reviewed sense",
+        "scope": "Solid angle and steradian remain separate from the plane-angle quantity and unit family."
+      }
+    ],
+    "limits": "The graph distinguishes geometric objects, quantities and units. It does not evaluate geometry, enforce endpoints or positive-radius constraints, count two rays, or implement angle conversions. The broad angle record is preserved; only its new plane-angle subtype receives a plane-angle quantity. General boundaries, diagonal/perpendicular senses, point/plane upper genera, nonplanar and solid-angle meanings remain pending. No application test suites.",
+    "new_term_collisions": [
+      {
+        "key": "circumference_length",
+        "term": "circumference",
+        "lang": "en",
+        "existing": [
+          [
+            2706,
+            "окружность"
+          ]
+        ]
+      },
+      {
+        "key": "radian",
+        "term": "rad",
+        "lang": "en",
+        "existing": [
+          [
+            1033,
+            "RAD"
+          ]
+        ]
+      }
+    ],
+    "collision_decisions": {
+      "circumference_length": "Existing 2706 is the curve/boundary meaning. Preserve it and use explicit quantity and boundary labels.",
+      "radian": "RAD 1033 is a software-development acronym; the scientific unit has a distinct qualified identity. Lookup normalization does not establish semantic equivalence."
+    },
+    "internal_homonyms": {
+      "radius": [
+        "radius_segment",
+        "radius_length"
+      ],
+      "plane angle": "The new plane-angle figure is distinct from the explicitly qualified quantity."
+    },
+    "refreshed_comparison": {
+      "baseline": "Q14",
+      "existing_concepts": 12690,
+      "existing_terms": 35730,
+      "synsets_with_exact_en_candidate": 15444,
+      "synsets_without_exact_en_candidate": 92075,
+      "existing_concepts_with_dictionary_candidate": 4040,
+      "caveat": "Exact normalized English spellings are candidates, not semantic identities or a missing-concept count."
+    }
+  },
+  "concepts": [
+    {
+      "key": "plane_figure",
+      "name": "плоская геометрическая фигура",
+      "parent": 2702,
+      "universum_id": 1,
+      "terms": [
+        [
+          "плоская геометрическая фигура",
+          "ru"
+        ],
+        [
+          "plane figure",
+          "en"
+        ],
+        [
+          "плоская фигура",
+          "ru"
+        ]
+      ],
+      "reason": "A geometric figure lying within a plane, including curves and filled figures. Being planar does not require intrinsic dimension two; do not import that restrictive gloss as a dimension assertion. OEWN 2025: oewn-13885789-n. Source: https://mathworld.wolfram.com/PlaneCurve.html"
+    },
+    {
+      "key": "plane_curve",
+      "name": "плоская кривая",
+      "parent": 2701,
+      "universum_id": 1,
+      "terms": [
+        [
+          "плоская кривая",
+          "ru"
+        ],
+        [
+          "plane curve",
+          "en"
+        ]
+      ],
+      "reason": "A curve lying in one plane. The mathematical curve sense includes straight lines and segments, unlike the dictionary changing-direction-only curve gloss. Source: https://mathworld.wolfram.com/PlaneCurve.html"
+    },
+    {
+      "key": "closed_plane_curve",
+      "name": "замкнутая плоская кривая",
+      "parent": "plane_curve",
+      "universum_id": 1,
+      "terms": [
+        [
+          "замкнутая плоская кривая",
+          "ru"
+        ],
+        [
+          "closed plane curve",
+          "en"
+        ]
+      ],
+      "reason": "A planar curve forming a closed loop. Merely having no endpoints does not make an infinite straight line a closed loop; closed-set topology is a different condition. OEWN 2025: oewn-13890887-n. Source: https://mathworld.wolfram.com/PlaneCurve.html"
+    },
+    {
+      "key": "straight_line",
+      "name": "прямая линия",
+      "parent": "plane_curve",
+      "universum_id": 1,
+      "terms": [
+        [
+          "прямая линия",
+          "ru"
+        ],
+        [
+          "straight line",
+          "en"
+        ],
+        [
+          "прямая",
+          "ru"
+        ],
+        [
+          "infinite straight line",
+          "en"
+        ]
+      ],
+      "reason": "A complete straight geometric line extending indefinitely in both directions. A finite segment or ray is a subset, not a species, of such a complete line. OEWN 2025: oewn-13892630-n. Source: https://reference.wolfram.com/language/ref/InfiniteLine.html"
+    },
+    {
+      "key": "line_segment",
+      "name": "отрезок прямой",
+      "parent": "plane_curve",
+      "universum_id": 1,
+      "terms": [
+        [
+          "отрезок прямой",
+          "ru"
+        ],
+        [
+          "line segment",
+          "en"
+        ],
+        [
+          "отрезок",
+          "ru"
+        ],
+        [
+          "straight line segment",
+          "en"
+        ]
+      ],
+      "reason": "The finite straight geometric segment joining two endpoints, including the points between them. It is an object, not its length and not an infinite line. Source: https://reference.wolfram.com/language/ref/Line.html"
+    },
+    {
+      "key": "chord",
+      "name": "хорда (геометрия)",
+      "parent": "line_segment",
+      "universum_id": 1,
+      "terms": [
+        [
+          "хорда (геометрия)",
+          "ru"
+        ],
+        [
+          "chord (geometry)",
+          "en"
+        ],
+        [
+          "хорда",
+          "ru"
+        ],
+        [
+          "chord",
+          "en"
+        ]
+      ],
+      "reason": "A finite segment joining two points on a curve. Circle chords are a common case; musical chords and graph-theoretic cycle chords are excluded. A spherical diameter also joins points of a great circle. OEWN 2025: oewn-13897566-n. Source: https://mathworld.wolfram.com/Chord.html"
+    },
+    {
+      "key": "radius_segment",
+      "name": "радиус (отрезок)",
+      "parent": "line_segment",
+      "universum_id": 1,
+      "terms": [
+        [
+          "радиус (отрезок)",
+          "ru"
+        ],
+        [
+          "radius (line segment)",
+          "en"
+        ],
+        [
+          "radius",
+          "en"
+        ],
+        [
+          "радиус",
+          "ru"
+        ]
+      ],
+      "reason": "A segment from the centre of a circle to its boundary, or from a sphere centre to its surface. Distinct from the length, arm bone, spoke and service-region meanings. OEWN 2025: oewn-13894177-n. Source: https://mathworld.wolfram.com/Radius.html"
+    },
+    {
+      "key": "circular_arc",
+      "name": "дуга окружности",
+      "parent": "plane_curve",
+      "universum_id": 1,
+      "terms": [
+        [
+          "дуга окружности",
+          "ru"
+        ],
+        [
+          "circular arc",
+          "en"
+        ],
+        [
+          "arc (circle)",
+          "en"
+        ]
+      ],
+      "reason": "A continuous proper portion of a circle, with endpoints. Being part of a circle does not make it a circle subtype; exclude a full circle from this selected proper-arc sense. OEWN 2025: oewn-13897023-n. Source: https://reference.wolfram.com/language/ref/Circle.html"
+    },
+    {
+      "key": "radius_length",
+      "name": "радиус (длина)",
+      "parent": 2895,
+      "universum_id": 1,
+      "terms": [
+        [
+          "радиус (длина)",
+          "ru"
+        ],
+        [
+          "radius (length)",
+          "en"
+        ],
+        [
+          "radius",
+          "en"
+        ],
+        [
+          "радиус",
+          "ru"
+        ]
+      ],
+      "reason": "The length of a circle or sphere radius segment. The segment and its length are separate concepts; do not import the bare variable letter r as a lexical synonym. OEWN 2025: oewn-05109363-n. Source: https://mathworld.wolfram.com/Radius.html"
+    },
+    {
+      "key": "arc_length",
+      "name": "длина дуги",
+      "parent": 2895,
+      "universum_id": 1,
+      "terms": [
+        [
+          "длина дуги",
+          "ru"
+        ],
+        [
+          "arc length",
+          "en"
+        ]
+      ],
+      "reason": "Length measured along a rectifiable curve or its specified portion, including a circular arc. This is broader than circular-arc length and is not the straight chord distance. Source: https://reference.wolfram.com/language/ref/ArcLength.html"
+    },
+    {
+      "key": "perimeter_length",
+      "name": "периметр (длина)",
+      "parent": 2895,
+      "universum_id": 1,
+      "terms": [
+        [
+          "периметр (длина)",
+          "ru"
+        ],
+        [
+          "perimeter (length)",
+          "en"
+        ],
+        [
+          "perimeter",
+          "en"
+        ],
+        [
+          "периметр",
+          "ru"
+        ]
+      ],
+      "reason": "The length around a plane figure boundary where that length is defined. Distinct from the boundary itself, a security perimeter, or an area. OEWN 2025: oewn-05108523-n. Source: https://reference.wolfram.com/language/ref/Disk.html"
+    },
+    {
+      "key": "circumference_length",
+      "name": "длина окружности",
+      "parent": "perimeter_length",
+      "universum_id": 1,
+      "terms": [
+        [
+          "длина окружности",
+          "ru"
+        ],
+        [
+          "circumference (length)",
+          "en"
+        ],
+        [
+          "circumference",
+          "en"
+        ],
+        [
+          "circle circumference",
+          "en"
+        ]
+      ],
+      "reason": "The length of a full circle, also the perimeter of its disk. Distinct from the boundary curve denoted by the existing circumference term. OEWN 2025: oewn-05108937-n. Source: https://reference.wolfram.com/language/ref/Circle.html"
+    },
+    {
+      "key": "plane_angle_figure",
+      "name": "плоский угол (фигура)",
+      "parent": 2704,
+      "universum_id": 1,
+      "terms": [
+        [
+          "плоский угол (фигура)",
+          "ru"
+        ],
+        [
+          "plane angle (figure)",
+          "en"
+        ],
+        [
+          "plane angle",
+          "en"
+        ],
+        [
+          "плоский угол",
+          "ru"
+        ]
+      ],
+      "reason": "The geometric configuration of two rays sharing an endpoint in a plane, distinct from the plane-angle quantity. The broader angle record keeps its possible nonplanar meanings. OEWN 2025: oewn-13911909-n. Source: https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-1-angles"
+    },
+    {
+      "key": "plane_angle_quantity",
+      "name": "величина плоского угла",
+      "parent": 2709,
+      "universum_id": 1,
+      "terms": [
+        [
+          "величина плоского угла",
+          "ru"
+        ],
+        [
+          "plane angle (quantity)",
+          "en"
+        ],
+        [
+          "plane angle measure",
+          "en"
+        ],
+        [
+          "угловая величина",
+          "ru"
+        ]
+      ],
+      "reason": "The measurable plane-angle quantity, distinct from its geometric configuration and from solid angle. SI treats it as dimensionless while retaining the meaningful radian unit. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "plane_angle_unit",
+      "name": "единица плоского угла",
+      "parent": 2651,
+      "universum_id": 1,
+      "terms": [
+        [
+          "единица плоского угла",
+          "ru"
+        ],
+        [
+          "plane angle unit",
+          "en"
+        ]
+      ],
+      "reason": "A unit for plane angle. This selected family excludes solid-angle units even though the broad dictionary angular-unit family includes them. OEWN 2025: oewn-13621340-n. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "radian",
+      "name": "радиан",
+      "parent": "plane_angle_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "радиан",
+          "ru"
+        ],
+        [
+          "radian",
+          "en"
+        ],
+        [
+          "rad",
+          "en"
+        ],
+        [
+          "рад",
+          "ru"
+        ]
+      ],
+      "reason": "The coherent SI plane-angle unit. Its symbol rad is distinct from the RAD software-development acronym and the absorbed-dose unit rad. OEWN 2025: oewn-13633285-n. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "arcminute",
+      "name": "угловая минута",
+      "parent": "plane_angle_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "угловая минута",
+          "ru"
+        ],
+        [
+          "arcminute",
+          "en"
+        ],
+        [
+          "minute of arc",
+          "en"
+        ],
+        [
+          "минута дуги",
+          "ru"
+        ]
+      ],
+      "reason": "A sixtieth of a degree of plane angle. Do not import the unqualified time-unit word minute as an equivalent term. OEWN 2025: oewn-13632810-n. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "arcsecond",
+      "name": "угловая секунда",
+      "parent": "plane_angle_unit",
+      "universum_id": 1,
+      "terms": [
+        [
+          "угловая секунда",
+          "ru"
+        ],
+        [
+          "arcsecond",
+          "en"
+        ],
+        [
+          "second of arc",
+          "en"
+        ],
+        [
+          "секунда дуги",
+          "ru"
+        ]
+      ],
+      "reason": "A sixtieth of an arcminute. This is a plane-angle unit, distinct from a second of time. OEWN 2025: oewn-13632638-n. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    },
+    {
+      "key": "angle_measurement",
+      "name": "измерение плоского угла",
+      "parent": 3867,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение плоского угла",
+          "ru"
+        ],
+        [
+          "plane angle measurement",
+          "en"
+        ]
+      ],
+      "reason": "Determine the plane-angle quantity, distinct from drawing its geometric representation. Source: https://www.stabila.com/en/products/details/tech-700-da-digital-angle-finder.html"
+    },
+    {
+      "key": "radius_measurement",
+      "name": "измерение радиуса",
+      "parent": 24556,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение радиуса",
+          "ru"
+        ],
+        [
+          "radius measurement",
+          "en"
+        ]
+      ],
+      "reason": "Determine radial length, not the radius segment as an object. Source: https://mathworld.wolfram.com/Radius.html"
+    },
+    {
+      "key": "arc_length_measurement",
+      "name": "измерение длины дуги",
+      "parent": 24556,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение длины дуги",
+          "ru"
+        ],
+        [
+          "arc length measurement",
+          "en"
+        ]
+      ],
+      "reason": "Determine length along the selected curve portion rather than the chord distance. Source: https://reference.wolfram.com/language/ref/ArcLength.html"
+    },
+    {
+      "key": "perimeter_measurement",
+      "name": "измерение периметра",
+      "parent": 24556,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение периметра",
+          "ru"
+        ],
+        [
+          "perimeter measurement",
+          "en"
+        ]
+      ],
+      "reason": "Determine the length around the selected boundary. Source: https://reference.wolfram.com/language/ref/Disk.html"
+    },
+    {
+      "key": "circumference_measurement",
+      "name": "измерение длины окружности",
+      "parent": "perimeter_measurement",
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение длины окружности",
+          "ru"
+        ],
+        [
+          "circumference measurement",
+          "en"
+        ]
+      ],
+      "reason": "Determine the full circle boundary length. Source: https://reference.wolfram.com/language/ref/Circle.html"
+    },
+    {
+      "key": "width_measurement",
+      "name": "измерение ширины",
+      "parent": 24556,
+      "universum_id": 1,
+      "terms": [
+        [
+          "измерение ширины",
+          "ru"
+        ],
+        [
+          "width measurement",
+          "en"
+        ]
+      ],
+      "reason": "Determine the side-to-side length quantity, not area."
+    },
+    {
+      "key": "angle_instrument",
+      "name": "угломер",
+      "parent": 24564,
+      "universum_id": 1,
+      "terms": [
+        [
+          "угломер",
+          "ru"
+        ],
+        [
+          "angle measuring instrument",
+          "en"
+        ]
+      ],
+      "reason": "A measuring instrument intended to determine angles. Do not align the generic class with OEWN goniometer, whose selected dictionary meaning is radio direction finding. Source: https://www.stabila.com/en/products/details/tech-700-da-digital-angle-finder.html"
+    },
+    {
+      "key": "protractor",
+      "name": "транспортир",
+      "parent": "angle_instrument",
+      "universum_id": 1,
+      "terms": [
+        [
+          "транспортир",
+          "ru"
+        ],
+        [
+          "protractor",
+          "en"
+        ]
+      ],
+      "reason": "Select the graduated drafting instrument for measuring plane angles. Other drawing functions are not represented as measurement targets. OEWN 2025: oewn-04022302-n."
+    },
+    {
+      "key": "digital_angle_finder",
+      "name": "электронный угломер",
+      "parent": "angle_instrument",
+      "universum_id": 1,
+      "terms": [
+        [
+          "электронный угломер",
+          "ru"
+        ],
+        [
+          "digital angle finder",
+          "en"
+        ],
+        [
+          "electronic angle finder",
+          "en"
+        ]
+      ],
+      "reason": "An electronic angle-measuring instrument. Model-specific spirit-level features, accuracy and operating ranges are not universal properties. Source: https://www.stabila.com/ru/produkty/detali/elektronnyj-uglomer-tech-700-da.html"
+    },
+    {
+      "key": "bevel_protractor",
+      "name": "нониусный угломер",
+      "parent": "angle_instrument",
+      "universum_id": 1,
+      "terms": [
+        [
+          "нониусный угломер",
+          "ru"
+        ],
+        [
+          "vernier bevel protractor",
+          "en"
+        ]
+      ],
+      "reason": "Select the vernier angle gauge with a movable blade, supported by the manufacturer. Do not restrict all angle instruments or drafting protractors to this design. Source: https://www.mitutoyo.com.sg/sg-en/product/detail/bevel-protractor"
+    }
+  ],
+  "renames": [
+    {
+      "id": 2705,
+      "before": "круг",
+      "name": "круг (геометрическая область)",
+      "terms": [],
+      "reason": "Qualify the filled geometric region before correcting its English translation. Source: https://reference.wolfram.com/language/ref/Disk.html"
+    },
+    {
+      "id": 3073,
+      "before": "луч",
+      "name": "луч (геометрический)",
+      "terms": [],
+      "reason": "Qualify the existing line-derived ray; retain the fish and radiation homonyms separately. OEWN 2025: oewn-13936442-n. Source: https://mathworld.wolfram.com/Ray.html"
+    },
+    {
+      "id": 2704,
+      "before": "угол",
+      "name": "угол (геометрическая фигура)",
+      "terms": [],
+      "reason": "Keep the broad geometric angle object separate from its measurable quantities; do not narrow it globally to plane angles. OEWN 2025: oewn-13910202-n."
+    }
+  ],
+  "terms": [
+    {
+      "id": 2705,
+      "name": "круг (геометрическая область)",
+      "terms": [
+        [
+          "geometric disk",
+          "en"
+        ],
+        [
+          "disk",
+          "en"
+        ],
+        [
+          "disc",
+          "en"
+        ],
+        [
+          "closed disk",
+          "en"
+        ]
+      ],
+      "reason": "Use the closed filled disk, including its circular boundary; exclude physical plates and storage devices."
+    },
+    {
+      "id": 2706,
+      "name": "окружность",
+      "terms": [
+        [
+          "circle",
+          "en"
+        ],
+        [
+          "geometric circle",
+          "en"
+        ],
+        [
+          "circumference (circle boundary)",
+          "en"
+        ]
+      ],
+      "reason": "The existing окружность is the boundary curve. Preserve its legitimate circumference boundary alias while adding the precise circle translation. OEWN 2025: oewn-13896141-n."
+    },
+    {
+      "id": 3073,
+      "name": "луч (геометрический)",
+      "terms": [
+        [
+          "geometric ray",
+          "en"
+        ],
+        [
+          "half-line",
+          "en"
+        ]
+      ],
+      "reason": "The half-infinite geometric ray has one endpoint. Do not copy the dictionary vector genus or the textbook shorthand directed line segment. OEWN 2025: oewn-13936442-n."
+    },
+    {
+      "id": 2704,
+      "name": "угол (геометрическая фигура)",
+      "terms": [
+        [
+          "angle (geometric figure)",
+          "en"
+        ]
+      ],
+      "reason": "Retain the broad angle figure; the plane-angle subtype is reviewed separately."
+    },
+    {
+      "id": 3664,
+      "name": "ширина",
+      "terms": [
+        [
+          "breadth",
+          "en"
+        ],
+        [
+          "width (length)",
+          "en"
+        ]
+      ],
+      "reason": "Spatial width is a length quantity in the side-to-side role. OEWN 2025: oewn-05143415-n."
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 2705,
+      "term": "circle",
+      "lang": "en",
+      "reason": "Within this Russian geometric disk record, bare circle obscures the boundary/filled-region distinction. Replace it with disk terms and attach circle to existing boundary record 2706."
+    }
+  ],
+  "leaf_merges": [],
+  "initial_edges": [],
+  "repairs": [
+    {
+      "id": 4974,
+      "before": [
+        2705,
+        "14",
+        2702,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2705,
+          "14",
+          "plane_figure",
+          null,
+          1
+        ]
+      ],
+      "reason": "A geometric disk is a plane figure; it is not a circle boundary curve. Source: https://reference.wolfram.com/language/ref/Disk.html"
+    },
+    {
+      "id": 4975,
+      "before": [
+        2706,
+        "14",
+        2702,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2706,
+          "14",
+          "closed_plane_curve",
+          null,
+          1
+        ]
+      ],
+      "reason": "A circle is a closed planar curve; geometric figure remains an ancestor. OEWN 2025: oewn-13896141-n. Source: https://reference.wolfram.com/language/ref/Circle.html"
+    },
+    {
+      "id": 5158,
+      "before": [
+        2888,
+        "14",
+        2701,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          2888,
+          "14",
+          "chord",
+          null,
+          1
+        ]
+      ],
+      "reason": "A circle/sphere diameter segment is a chord through the centre; for a sphere use a great-circle section. The broad line ancestor remains. OEWN 2025: oewn-13894356-n. Source: https://mathworld.wolfram.com/Chord.html"
+    },
+    {
+      "id": 5343,
+      "before": [
+        3073,
+        "14",
+        2701,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          3073,
+          "14",
+          "plane_curve",
+          null,
+          1
+        ]
+      ],
+      "reason": "A geometric ray is planar, while remaining within the broad line family. It is not a finite segment or a complete infinite straight line. OEWN 2025: oewn-13936442-n. Source: https://mathworld.wolfram.com/Ray.html"
+    },
+    {
+      "id": 5934,
+      "before": [
+        3664,
+        "14",
+        43,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          3664,
+          "14",
+          2895,
+          null,
+          1
+        ]
+      ],
+      "reason": "Width is a one-dimensional extent quantity and therefore a length; size remains an ancestor. OEWN 2025: oewn-05143415-n."
+    },
+    {
+      "id": 30739,
+      "before": [
+        24461,
+        "14",
+        2651,
+        1
+      ],
+      "reviewed_strength": null,
+      "replacements": [
+        [
+          24461,
+          "14",
+          "plane_angle_unit",
+          null,
+          1
+        ]
+      ],
+      "reason": "An angular degree belongs to the plane-angle unit family, while the measurement-unit ancestor remains. OEWN 2025: oewn-13632450-n. Source: https://www.bipm.org/documents/20126/41483022/SI-Brochure-9-EN.pdf"
+    }
+  ],
+  "edges": [
+    {
+      "subject": "plane_curve",
+      "kod": "14",
+      "object": "plane_figure",
+      "universum_id": 1,
+      "reason": "A planar curve is also a plane geometric figure. The existing broad line record is not globally reclassified. OEWN 2025: oewn-13885789-n. Source: https://mathworld.wolfram.com/PlaneCurve.html"
+    },
+    {
+      "subject": "circumference_length",
+      "kod": "14",
+      "object": "arc_length",
+      "universum_id": 1,
+      "reason": "The full circular-curve length is also an arc-length quantity; an arc-length quantity need not belong to the proper circular-arc object class. Source: https://reference.wolfram.com/language/ref/ArcLength.html"
+    },
+    {
+      "subject": "plane_angle_figure",
+      "kod": "14",
+      "object": "plane_figure",
+      "universum_id": 1,
+      "reason": "This selected two-ray angle is a planar geometric figure. Source: https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-1-angles"
+    },
+    {
+      "subject": "line_segment",
+      "kod": "20",
+      "object": 2895,
+      "universum_id": 1,
+      "reason": "A segment has a length; this is an attribute, not a genus. Source: https://reference.wolfram.com/language/ref/Line.html"
+    },
+    {
+      "subject": "radius_segment",
+      "kod": "20",
+      "object": "radius_length",
+      "universum_id": 1,
+      "reason": "The radius segment has the corresponding radial length. Source: https://mathworld.wolfram.com/Radius.html"
+    },
+    {
+      "subject": 2888,
+      "kod": "20",
+      "object": 24602,
+      "universum_id": 1,
+      "reason": "The diameter segment has the existing diameter-length quantity. Source: https://mathworld.wolfram.com/Chord.html"
+    },
+    {
+      "subject": 2706,
+      "kod": "20",
+      "object": "radius_length",
+      "universum_id": 1,
+      "reason": "A circle has a radius-length parameter; its radial segment does not lie on the boundary curve. Source: https://reference.wolfram.com/language/ref/Circle.html"
+    },
+    {
+      "subject": 2706,
+      "kod": "20",
+      "object": 24602,
+      "universum_id": 1,
+      "reason": "A circle has a diameter-length parameter. Source: https://reference.wolfram.com/language/ref/Circle.html"
+    },
+    {
+      "subject": 2706,
+      "kod": "20",
+      "object": "circumference_length",
+      "universum_id": 1,
+      "reason": "A circle has its full-curve length as an attribute. Source: https://reference.wolfram.com/language/ref/Circle.html"
+    },
+    {
+      "subject": 2706,
+      "kod": "20",
+      "object": "circular_arc",
+      "universum_id": 1,
+      "reason": "A circle has circular arc portions; these are components, not subtypes. Source: https://reference.wolfram.com/language/ref/Circle.html"
+    },
+    {
+      "subject": "circular_arc",
+      "kod": "20",
+      "object": "arc_length",
+      "universum_id": 1,
+      "reason": "A circular arc has a length measured along it. Source: https://reference.wolfram.com/language/ref/ArcLength.html"
+    },
+    {
+      "subject": 2705,
+      "kod": "20",
+      "object": 24651,
+      "universum_id": 1,
+      "reason": "The filled disk has an area quantity. Do not attach its enclosed area to the circle boundary. Source: https://reference.wolfram.com/language/ref/Disk.html"
+    },
+    {
+      "subject": 2705,
+      "kod": "20",
+      "object": 2706,
+      "universum_id": 1,
+      "reason": "The closed disk includes its circle as its boundary component. This is not a genus relation. Source: https://reference.wolfram.com/language/ref/Disk.html"
+    },
+    {
+      "subject": 2705,
+      "kod": "20",
+      "object": "radius_length",
+      "universum_id": 1,
+      "reason": "A disk has a radius-length parameter. Source: https://reference.wolfram.com/language/ref/Disk.html"
+    },
+    {
+      "subject": 2705,
+      "kod": "20",
+      "object": "circumference_length",
+      "universum_id": 1,
+      "reason": "The disk perimeter is the circumference length of its boundary. Source: https://reference.wolfram.com/language/ref/Disk.html"
+    },
+    {
+      "subject": "plane_angle_figure",
+      "kod": "20",
+      "object": 3073,
+      "universum_id": 1,
+      "reason": "The plane-angle figure has geometric rays as sides. Their count and shared endpoint are source-reviewed metadata. Source: https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-1-angles"
+    },
+    {
+      "subject": "plane_angle_figure",
+      "kod": "20",
+      "object": 2700,
+      "universum_id": 1,
+      "reason": "The plane-angle figure has a point as its vertex. Source: https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-1-angles"
+    },
+    {
+      "subject": "plane_angle_figure",
+      "kod": "20",
+      "object": "plane_angle_quantity",
+      "universum_id": 1,
+      "reason": "The plane-angle figure has a measurable angle quantity, not a unit as its genus. Source: https://openstax.org/books/algebra-and-trigonometry-2e/pages/7-1-angles"
+    },
+    {
+      "subject": "angle_measurement",
+      "kod": "27",
+      "object": "plane_angle_quantity",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://www.stabila.com/en/products/details/tech-700-da-digital-angle-finder.html"
+    },
+    {
+      "subject": "radius_measurement",
+      "kod": "27",
+      "object": "radius_length",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://mathworld.wolfram.com/Radius.html"
+    },
+    {
+      "subject": "arc_length_measurement",
+      "kod": "27",
+      "object": "arc_length",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://reference.wolfram.com/language/ref/ArcLength.html"
+    },
+    {
+      "subject": "perimeter_measurement",
+      "kod": "27",
+      "object": "perimeter_length",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://reference.wolfram.com/language/ref/Disk.html"
+    },
+    {
+      "subject": "circumference_measurement",
+      "kod": "27",
+      "object": "circumference_length",
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement. Source: https://reference.wolfram.com/language/ref/Circle.html"
+    },
+    {
+      "subject": "width_measurement",
+      "kod": "27",
+      "object": 3664,
+      "universum_id": 1,
+      "reason": "The selected quantity is the target of this measurement."
+    },
+    {
+      "subject": "angle_instrument",
+      "kod": "21",
+      "object": "angle_measurement",
+      "universum_id": 1,
+      "reason": "The instrument is intended for the selected measurement. Source: https://www.stabila.com/en/products/details/tech-700-da-digital-angle-finder.html"
+    },
+    {
+      "subject": "protractor",
+      "kod": "21",
+      "object": "angle_measurement",
+      "universum_id": 1,
+      "reason": "The instrument is intended for the selected measurement. OEWN 2025: oewn-04022302-n."
+    },
+    {
+      "subject": "digital_angle_finder",
+      "kod": "21",
+      "object": "angle_measurement",
+      "universum_id": 1,
+      "reason": "The instrument is intended for the selected measurement. Source: https://www.stabila.com/ru/produkty/detali/elektronnyj-uglomer-tech-700-da.html"
+    },
+    {
+      "subject": "bevel_protractor",
+      "kod": "21",
+      "object": "angle_measurement",
+      "universum_id": 1,
+      "reason": "The instrument is intended for the selected measurement. Source: https://www.mitutoyo.com.sg/sg-en/product/detail/bevel-protractor"
+    }
+  ],
+  "checks": [
+    {
+      "subject": "plane_figure",
+      "kod": "14",
+      "object": 2702,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "plane_curve",
+      "kod": "14",
+      "object": 2701,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "plane_curve",
+      "kod": "14",
+      "object": "plane_figure",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "closed_plane_curve",
+      "kod": "14",
+      "object": "plane_curve",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "straight_line",
+      "kod": "14",
+      "object": "plane_curve",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "line_segment",
+      "kod": "14",
+      "object": "plane_curve",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "chord",
+      "kod": "14",
+      "object": "line_segment",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "radius_segment",
+      "kod": "14",
+      "object": "line_segment",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "circular_arc",
+      "kod": "14",
+      "object": "plane_curve",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "radius_length",
+      "kod": "14",
+      "object": 2895,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "arc_length",
+      "kod": "14",
+      "object": 2895,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "perimeter_length",
+      "kod": "14",
+      "object": 2895,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "circumference_length",
+      "kod": "14",
+      "object": "perimeter_length",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "circumference_length",
+      "kod": "14",
+      "object": "arc_length",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2705,
+      "kod": "14",
+      "object": 2702,
+      "present": false
+    },
+    {
+      "subject": 2705,
+      "kod": "14",
+      "object": "plane_figure",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2706,
+      "kod": "14",
+      "object": 2702,
+      "present": false
+    },
+    {
+      "subject": 2706,
+      "kod": "14",
+      "object": "closed_plane_curve",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2888,
+      "kod": "14",
+      "object": 2701,
+      "present": false
+    },
+    {
+      "subject": 2888,
+      "kod": "14",
+      "object": "chord",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3073,
+      "kod": "14",
+      "object": 2701,
+      "present": false
+    },
+    {
+      "subject": 3073,
+      "kod": "14",
+      "object": "plane_curve",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 3664,
+      "kod": "14",
+      "object": 43,
+      "present": false
+    },
+    {
+      "subject": 3664,
+      "kod": "14",
+      "object": 2895,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "plane_angle_figure",
+      "kod": "14",
+      "object": 2704,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "plane_angle_figure",
+      "kod": "14",
+      "object": "plane_figure",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "plane_angle_quantity",
+      "kod": "14",
+      "object": 2709,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "plane_angle_unit",
+      "kod": "14",
+      "object": 2651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "radian",
+      "kod": "14",
+      "object": "plane_angle_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "arcminute",
+      "kod": "14",
+      "object": "plane_angle_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "arcsecond",
+      "kod": "14",
+      "object": "plane_angle_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 24461,
+      "kod": "14",
+      "object": 2651,
+      "present": false
+    },
+    {
+      "subject": 24461,
+      "kod": "14",
+      "object": "plane_angle_unit",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "line_segment",
+      "kod": "20",
+      "object": 2895,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "radius_segment",
+      "kod": "20",
+      "object": "radius_length",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2888,
+      "kod": "20",
+      "object": 24602,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2706,
+      "kod": "20",
+      "object": "radius_length",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2706,
+      "kod": "20",
+      "object": 24602,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2706,
+      "kod": "20",
+      "object": "circumference_length",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2706,
+      "kod": "20",
+      "object": "circular_arc",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "circular_arc",
+      "kod": "20",
+      "object": "arc_length",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2705,
+      "kod": "20",
+      "object": 24651,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2705,
+      "kod": "20",
+      "object": 2706,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2705,
+      "kod": "20",
+      "object": "radius_length",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2705,
+      "kod": "20",
+      "object": "circumference_length",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "plane_angle_figure",
+      "kod": "20",
+      "object": 3073,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "plane_angle_figure",
+      "kod": "20",
+      "object": 2700,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "plane_angle_figure",
+      "kod": "20",
+      "object": "plane_angle_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "angle_measurement",
+      "kod": "14",
+      "object": 3867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "angle_measurement",
+      "kod": "27",
+      "object": "plane_angle_quantity",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "radius_measurement",
+      "kod": "14",
+      "object": 24556,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "radius_measurement",
+      "kod": "27",
+      "object": "radius_length",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "arc_length_measurement",
+      "kod": "14",
+      "object": 24556,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "arc_length_measurement",
+      "kod": "27",
+      "object": "arc_length",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "perimeter_measurement",
+      "kod": "14",
+      "object": 24556,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "perimeter_measurement",
+      "kod": "27",
+      "object": "perimeter_length",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "circumference_measurement",
+      "kod": "14",
+      "object": "perimeter_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "circumference_measurement",
+      "kod": "27",
+      "object": "circumference_length",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "width_measurement",
+      "kod": "14",
+      "object": 24556,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "width_measurement",
+      "kod": "27",
+      "object": 3664,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "angle_instrument",
+      "kod": "14",
+      "object": 24564,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "angle_instrument",
+      "kod": "21",
+      "object": "angle_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "protractor",
+      "kod": "14",
+      "object": "angle_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "protractor",
+      "kod": "21",
+      "object": "angle_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "digital_angle_finder",
+      "kod": "14",
+      "object": "angle_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "digital_angle_finder",
+      "kod": "21",
+      "object": "angle_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "bevel_protractor",
+      "kod": "14",
+      "object": "angle_instrument",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "bevel_protractor",
+      "kod": "21",
+      "object": "angle_measurement",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2706,
+      "kod": "20",
+      "object": "radius_segment",
+      "present": false
+    },
+    {
+      "subject": 2706,
+      "kod": "20",
+      "object": 24651,
+      "present": false
+    },
+    {
+      "subject": "angle_instrument",
+      "kod": "21",
+      "object": "plane_angle_unit",
+      "present": false
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": 2705,
+      "ancestor": "plane_curve",
+      "present": false
+    },
+    {
+      "subject": 2706,
+      "ancestor": 2705,
+      "present": false
+    },
+    {
+      "subject": "circular_arc",
+      "ancestor": 2706,
+      "present": false
+    },
+    {
+      "subject": "line_segment",
+      "ancestor": "straight_line",
+      "present": false
+    },
+    {
+      "subject": 3073,
+      "ancestor": "line_segment",
+      "present": false
+    },
+    {
+      "subject": 3073,
+      "ancestor": "straight_line",
+      "present": false
+    },
+    {
+      "subject": "radius_segment",
+      "ancestor": 2895,
+      "present": false
+    },
+    {
+      "subject": 2888,
+      "ancestor": 2895,
+      "present": false
+    },
+    {
+      "subject": "radius_length",
+      "ancestor": "line_segment",
+      "present": false
+    },
+    {
+      "subject": 24602,
+      "ancestor": "line_segment",
+      "present": false
+    },
+    {
+      "subject": "circumference_length",
+      "ancestor": 2706,
+      "present": false
+    },
+    {
+      "subject": "plane_angle_quantity",
+      "ancestor": 2704,
+      "present": false
+    },
+    {
+      "subject": "plane_angle_figure",
+      "ancestor": 2709,
+      "present": false
+    },
+    {
+      "subject": "plane_angle_unit",
+      "ancestor": "plane_angle_quantity",
+      "present": false
+    },
+    {
+      "subject": "radian",
+      "ancestor": 1033,
+      "present": false
+    },
+    {
+      "subject": "arcminute",
+      "ancestor": 24461,
+      "present": false
+    },
+    {
+      "subject": "arcsecond",
+      "ancestor": "arcminute",
+      "present": false
+    },
+    {
+      "subject": "plane_figure",
+      "ancestor": 2702,
+      "present": true
+    },
+    {
+      "subject": "plane_curve",
+      "ancestor": 2701,
+      "present": true
+    },
+    {
+      "subject": "closed_plane_curve",
+      "ancestor": "plane_curve",
+      "present": true
+    },
+    {
+      "subject": "straight_line",
+      "ancestor": "plane_curve",
+      "present": true
+    },
+    {
+      "subject": "line_segment",
+      "ancestor": "plane_curve",
+      "present": true
+    },
+    {
+      "subject": "chord",
+      "ancestor": "line_segment",
+      "present": true
+    },
+    {
+      "subject": "radius_segment",
+      "ancestor": "line_segment",
+      "present": true
+    },
+    {
+      "subject": "circular_arc",
+      "ancestor": "plane_curve",
+      "present": true
+    },
+    {
+      "subject": "radius_length",
+      "ancestor": 2895,
+      "present": true
+    },
+    {
+      "subject": "arc_length",
+      "ancestor": 2895,
+      "present": true
+    },
+    {
+      "subject": "perimeter_length",
+      "ancestor": 2895,
+      "present": true
+    },
+    {
+      "subject": "circumference_length",
+      "ancestor": "perimeter_length",
+      "present": true
+    },
+    {
+      "subject": "plane_angle_figure",
+      "ancestor": 2704,
+      "present": true
+    },
+    {
+      "subject": "plane_angle_quantity",
+      "ancestor": 2709,
+      "present": true
+    },
+    {
+      "subject": "plane_angle_unit",
+      "ancestor": 2651,
+      "present": true
+    },
+    {
+      "subject": "radian",
+      "ancestor": "plane_angle_unit",
+      "present": true
+    },
+    {
+      "subject": "arcminute",
+      "ancestor": "plane_angle_unit",
+      "present": true
+    },
+    {
+      "subject": "arcsecond",
+      "ancestor": "plane_angle_unit",
+      "present": true
+    },
+    {
+      "subject": "angle_measurement",
+      "ancestor": 3867,
+      "present": true
+    },
+    {
+      "subject": "radius_measurement",
+      "ancestor": 24556,
+      "present": true
+    },
+    {
+      "subject": "arc_length_measurement",
+      "ancestor": 24556,
+      "present": true
+    },
+    {
+      "subject": "perimeter_measurement",
+      "ancestor": 24556,
+      "present": true
+    },
+    {
+      "subject": "circumference_measurement",
+      "ancestor": "perimeter_measurement",
+      "present": true
+    },
+    {
+      "subject": "width_measurement",
+      "ancestor": 24556,
+      "present": true
+    },
+    {
+      "subject": "angle_instrument",
+      "ancestor": 24564,
+      "present": true
+    },
+    {
+      "subject": "protractor",
+      "ancestor": "angle_instrument",
+      "present": true
+    },
+    {
+      "subject": "digital_angle_finder",
+      "ancestor": "angle_instrument",
+      "present": true
+    },
+    {
+      "subject": "bevel_protractor",
+      "ancestor": "angle_instrument",
+      "present": true
+    },
+    {
+      "subject": 2705,
+      "ancestor": 2702,
+      "present": true
+    },
+    {
+      "subject": 2706,
+      "ancestor": 2702,
+      "present": true
+    },
+    {
+      "subject": 2888,
+      "ancestor": 2701,
+      "present": true
+    },
+    {
+      "subject": 3073,
+      "ancestor": 2701,
+      "present": true
+    },
+    {
+      "subject": 3664,
+      "ancestor": 43,
+      "present": true
+    },
+    {
+      "subject": 24461,
+      "ancestor": 2651,
+      "present": true
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": "plane_figure",
+      "term": "плоская геометрическая фигура",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "plane_figure",
+      "term": "plane figure",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "plane_figure",
+      "term": "плоская фигура",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "plane_curve",
+      "term": "плоская кривая",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "plane_curve",
+      "term": "plane curve",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "closed_plane_curve",
+      "term": "замкнутая плоская кривая",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "closed_plane_curve",
+      "term": "closed plane curve",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "straight_line",
+      "term": "прямая линия",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "straight_line",
+      "term": "straight line",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "straight_line",
+      "term": "прямая",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "straight_line",
+      "term": "infinite straight line",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "line_segment",
+      "term": "отрезок прямой",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "line_segment",
+      "term": "line segment",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "line_segment",
+      "term": "отрезок",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "line_segment",
+      "term": "straight line segment",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "chord",
+      "term": "хорда (геометрия)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "chord",
+      "term": "chord (geometry)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "chord",
+      "term": "хорда",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "chord",
+      "term": "chord",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "radius_segment",
+      "term": "радиус (отрезок)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "radius_segment",
+      "term": "radius (line segment)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "radius_segment",
+      "term": "radius",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "radius_segment",
+      "term": "радиус",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "circular_arc",
+      "term": "дуга окружности",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "circular_arc",
+      "term": "circular arc",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "circular_arc",
+      "term": "arc (circle)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "radius_length",
+      "term": "радиус (длина)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "radius_length",
+      "term": "radius (length)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "radius_length",
+      "term": "radius",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "radius_length",
+      "term": "радиус",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "arc_length",
+      "term": "длина дуги",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "arc_length",
+      "term": "arc length",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "perimeter_length",
+      "term": "периметр (длина)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "perimeter_length",
+      "term": "perimeter (length)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "perimeter_length",
+      "term": "perimeter",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "perimeter_length",
+      "term": "периметр",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "circumference_length",
+      "term": "длина окружности",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "circumference_length",
+      "term": "circumference (length)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "circumference_length",
+      "term": "circumference",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "circumference_length",
+      "term": "circle circumference",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2705,
+      "term": "круг (геометрическая область)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 2705,
+      "term": "circle",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": 2705,
+      "term": "geometric disk",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2705,
+      "term": "disk",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2705,
+      "term": "disc",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2705,
+      "term": "closed disk",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2706,
+      "term": "circle",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2706,
+      "term": "geometric circle",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2706,
+      "term": "circumference (circle boundary)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3073,
+      "term": "луч (геометрический)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 3073,
+      "term": "geometric ray",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3073,
+      "term": "half-line",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2704,
+      "term": "угол (геометрическая фигура)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 2704,
+      "term": "angle (geometric figure)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3664,
+      "term": "breadth",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 3664,
+      "term": "width (length)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "plane_angle_figure",
+      "term": "плоский угол (фигура)",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "plane_angle_figure",
+      "term": "plane angle (figure)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "plane_angle_figure",
+      "term": "plane angle",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "plane_angle_figure",
+      "term": "плоский угол",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "plane_angle_quantity",
+      "term": "величина плоского угла",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "plane_angle_quantity",
+      "term": "plane angle (quantity)",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "plane_angle_quantity",
+      "term": "plane angle measure",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "plane_angle_quantity",
+      "term": "угловая величина",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "plane_angle_unit",
+      "term": "единица плоского угла",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "plane_angle_unit",
+      "term": "plane angle unit",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "radian",
+      "term": "радиан",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "radian",
+      "term": "radian",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "radian",
+      "term": "rad",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "radian",
+      "term": "рад",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "arcminute",
+      "term": "угловая минута",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "arcminute",
+      "term": "arcminute",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "arcminute",
+      "term": "minute of arc",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "arcminute",
+      "term": "минута дуги",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "arcsecond",
+      "term": "угловая секунда",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "arcsecond",
+      "term": "arcsecond",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "arcsecond",
+      "term": "second of arc",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "arcsecond",
+      "term": "секунда дуги",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "angle_measurement",
+      "term": "измерение плоского угла",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "angle_measurement",
+      "term": "plane angle measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "radius_measurement",
+      "term": "измерение радиуса",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "radius_measurement",
+      "term": "radius measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "arc_length_measurement",
+      "term": "измерение длины дуги",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "arc_length_measurement",
+      "term": "arc length measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "perimeter_measurement",
+      "term": "измерение периметра",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "perimeter_measurement",
+      "term": "perimeter measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "circumference_measurement",
+      "term": "измерение длины окружности",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "circumference_measurement",
+      "term": "circumference measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "width_measurement",
+      "term": "измерение ширины",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "width_measurement",
+      "term": "width measurement",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "angle_instrument",
+      "term": "угломер",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "angle_instrument",
+      "term": "angle measuring instrument",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "protractor",
+      "term": "транспортир",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "protractor",
+      "term": "protractor",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "digital_angle_finder",
+      "term": "электронный угломер",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "digital_angle_finder",
+      "term": "digital angle finder",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "digital_angle_finder",
+      "term": "electronic angle finder",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "bevel_protractor",
+      "term": "нониусный угломер",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": "bevel_protractor",
+      "term": "vernier bevel protractor",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": "arcminute",
+      "term": "minute",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "arcsecond",
+      "term": "second",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "angle_instrument",
+      "term": "goniometer",
+      "lang": "en",
+      "present": false
+    },
+    {
+      "subject": "radius_length",
+      "term": "r",
+      "lang": "en",
+      "present": false
+    }
+  ]
+}
