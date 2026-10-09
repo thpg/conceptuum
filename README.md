@@ -1,10 +1,12 @@
 # conceptuum
 
-A concept graph with typed relations, multilingual terms, and definitions generated from the graph.
+A multilingual concept graph with Euler diagrams and executable concept algebra for knowledge exploration, LLM training-data preparation, and evaluation.
 
-conceptuum represents meanings as nodes and connects them through relations such as genus, purpose, material, opposition, and cause. It combines a MariaDB snapshot, a Python engine for querying and reviewing the graph, and a Go web visualizer. An optional retrieval demo supplies graph context to a local language model.
+conceptuum represents meanings as nodes and connects them through relations such as genus, purpose, material, opposition, and cause. Explore the graph, compute concept expressions, inspect their supporting relations, and export structured examples for language models. It combines a MariaDB snapshot, a Python parser and evaluator, and a Go web interface.
 
 **Development version:** [0.1.0-dev](VERSION) · **Data snapshot:** [Q39, 2026-10-09](docs/quality/2026-10-09-q39.md) · **Published site data:** Q39 · **[Changelog](CHANGELOG.md)** · **[Live demo](https://conceptuum.su)**
+
+**Try it:** [Concept algebra](https://conceptuum.su/algebra?lang=en) · [Euler circles](https://conceptuum.su/?view=euler&lang=en) · [LLM training data and evaluation](#llm-training-data-and-evaluation)
 
 ## Euler diagrams from the concept graph
 
@@ -33,7 +35,7 @@ New in Q9: compare [finite and nonempty sets](https://conceptuum.su/?concept=244
 [commutative and associative operations](https://conceptuum.su/?concept=635&view=euler&sets=635,567&context=1&basis=catalog&op=intersection&a=635&b=567&lang=en). The first shares the singleton-set
 record; the second shares the union and intersection records.
 
-**Topics:** `knowledge-graph` · `ontology` · `euler-diagrams` · `set-visualization`
+**Topics:** `knowledge-graph` · `ontology` · `euler-diagrams` · `concept-algebra` · `llm-training` · `training-data`
 
 ## What you can do
 
@@ -44,6 +46,10 @@ record; the second shares the union and intersection records.
   using stored relations or catalog membership. Unknown semantic relationships
   remain explicitly marked.
 - Retrieve stored facts from Python or the command line without an LLM.
+- Evaluate [concept algebra](docs/concept-algebra.md): combine catalog sets,
+  follow relations, and select inherited properties with explicit negatives.
+- Export expressions, resolved concept IDs, results and evidence as JSON for
+  [LLM training-data preparation and evaluation](#llm-training-data-and-evaluation).
 - Review proposed changes against relation signatures, hierarchy checks, and explicit regression conditions.
 
 The graph is experimental and still being reviewed. Structural validation catches some category errors; it does not establish whether a statement or translation is true.
@@ -74,6 +80,8 @@ An operation and its numerical result are different meanings. The `defin` field 
 |---|---|
 | Project | **0.1.0-dev**, an unreleased development version |
 | Bundled and live data | **2026-10-09 / Q39** |
+| Web interface | **2026-10-09.1**, including the concept algebra workspace |
+| Algebra language / example schema | **1** / `conceptuum.algebra.example.v1` |
 | Python | **3.9+**; checked with **3.9.13** |
 | PyMySQL | **1.2.0**, pinned in [requirements.txt](requirements.txt) |
 | pymorphy3 | **2.0.6**, pinned for Russian morphological matching |
@@ -184,6 +192,13 @@ cd visualizer
 go run .
 ```
 
+For the **Algebra** page, also start its Python worker from the repository root
+in a second terminal with the `JNANA_*` settings from step 3:
+
+```bash
+python -m concept_algebra.web --port 7101 --version-file visualizer/static/version.json
+```
+
 Open **http://127.0.0.1:7100/**. Run from `visualizer/` so the server can find `static/index.html`. `LISTEN` overrides the bind address. The interface chooses English or Russian from the browser locale; the hosted demo and bundled snapshot are updated independently.
 
 ## Use the Python engine
@@ -205,6 +220,64 @@ finally:
 `resolve_all()` returns possible senses. `verify()` reports a stored path or relation; a positive result is not an independent fact check. Use concept IDs after selecting a meaning for edits.
 
 `rebuild()` and `define()` **write to the database**. They are maintenance operations, not prerequisites for reading an imported snapshot. Reviewed changes use the [transactional batch workflow](docs/fill-properties.md).
+
+## Concept algebra
+
+Open the **[concept algebra workspace](https://conceptuum.su/algebra?lang=en)**
+to edit expressions, search and insert concept IDs, choose a relation context,
+restrict the domain, and inspect results and their source edges. Seven database
+examples demonstrate intersections, inherited materials, explicit exceptions,
+multiple genera, subset comparisons, complements and counts.
+
+[![Concept algebra editor and computed intersection](docs/visualizer/concept-algebra.png)](https://conceptuum.su/algebra?lang=en)
+
+The same parser and evaluator are available from Python and the command line.
+For example, intersect glass jars with food-storage jars:
+
+```console
+python -m concept_algebra '#25439 & #25446' --context 1 --lang en
+python -m concept_algebra '#3500 & has(material, #90)' --json --explain 25447
+```
+
+The first expression returns `#25447`, the glass food storage jar. Operators
+include union, intersection, difference, complement, subset and equality;
+functions provide genus navigation, relation projections, counts and inherited
+property queries. Explanations retain source edge IDs. Homonyms require an
+explicit choice, and unknown properties remain distinct from explicit negatives.
+
+Results contain stored concept records, with complements bounded by `U` or
+an explicit `--within` domain. Empty catalog intersections do not prove semantic
+incompatibility. See the [language and API guide](docs/concept-algebra.md) for
+syntax, Python examples, property inheritance and JSON snapshot support.
+Use **Copy query link** to share an expression and **Download JSON** to save a
+structured example. Exports contain all matching IDs; displayed concept labels
+are paginated. Select **Explain** before exporting to include a member's evidence.
+
+## LLM training data and evaluation
+
+Conceptuum is a tool for **preparing structured training examples and checking
+model answers against a versioned concept graph**. It supplies an executable
+reference for tasks such as resolving terms to IDs, translating questions into
+concept expressions, finding shared genera, and explaining inherited properties.
+
+1. Choose an expression in the [web workspace](https://conceptuum.su/algebra?lang=en)
+   or generate queries with the [Python API](docs/concept-algebra.md#python-api-and-json).
+2. Evaluate it in an explicit context and domain. Review the returned concepts;
+   use **Explain** to inspect the supporting relations and inherited exceptions.
+3. Export JSON containing the request, resolved AST, complete result IDs, data
+   revision and SQL snapshot hash, plus evidence for the selected member.
+4. Pair a reviewed question or expression with this output for supervised
+   examples, or compare a model's predicted IDs and expression results with it.
+
+The graph distinguishes **positive, negative, unknown and conflicting** property
+assertions. Preserve those distinctions in dataset labels. Answers describe the
+stored catalog and can inherit its omissions or errors; review examples before
+using them as targets. Keep a fixed data revision and separate related concept
+families across training and evaluation splits to reduce leakage.
+
+This repository provides the graph, evaluator and export tooling. Model training
+and dataset orchestration run in your own pipeline; no model weights or private
+experiment results are included.
 
 ## Optional LLM retrieval demo
 

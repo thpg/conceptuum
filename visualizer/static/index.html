@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f6f8f7">
-  <meta name="description" content="Explore Conceptuum: a connected map of concepts, their hierarchies, attributes, and relationships.">
+  <meta name="description" content="Explore Conceptuum: a concept graph with Euler diagrams and executable concept algebra for knowledge exploration, LLM training data and evaluation.">
   <title>Conceptuum — Concept explorer</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23146656'/%3E%3Cpath d='M12 12L28 20L12 28Z' fill='none' stroke='white' stroke-width='2'/%3E%3Cg fill='white'%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3Ccircle cx='28' cy='20' r='3'/%3E%3Ccircle cx='12' cy='28' r='3'/%3E%3C/g%3E%3C/svg%3E">
-  <link rel="stylesheet" href="/static/explorer.css?v=20261008-4">
-  <script defer src="/static/euler.js?v=20261008-4"></script>
-  <script defer src="/static/euler-catalog.js?v=20261008-4"></script>
-  <script defer src="/static/explorer.js?v=20261008-4"></script>
+  <link rel="stylesheet" href="/static/explorer.css?v=20261009-1">
+  <script defer src="/static/euler.js?v=20261009-1"></script>
+  <script defer src="/static/euler-catalog.js?v=20261009-1"></script>
+  <script defer src="/static/explorer.js?v=20261009-1"></script>
 </head>
 <body>
   <a class="skip-link" href="#graph">Skip to graph</a>
@@ -21,6 +21,7 @@
     </a>
     <span class="header-divider"></span><span class="app-name">Concept explorer</span>
     <div class="header-actions">
+      <a class="text-button" href="/algebra">Algebra <span aria-hidden="true">↗</span></a>
       <label class="language-label" for="language">Concept language</label>
       <select id="language" aria-label="Concept language"><option value="en">English</option><option value="ru">Russian</option></select>
       <a class="github-link" href="https://github.com/thpg/conceptuum" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
@@ -89,7 +90,7 @@
       <div class="inspector-footer">Connections describe the stored knowledge.<br>Coverage and translations are still growing.</div>
     </aside>
   </main>
-  <footer class="app-footer"><span><i class="live-dot"></i> An open map of connected concepts</span><a href="/static/version.json" target="_blank" rel="noopener noreferrer" title="View code and data versions">v0.1.0-dev · Q7</a></footer>
+  <footer class="app-footer"><span><i class="live-dot"></i> An open map of connected concepts</span><a href="/static/version.json" target="_blank" rel="noopener noreferrer" title="View code and data versions">v0.1.0-dev · Q39</a></footer>
   <div id="toast" class="toast" role="status" hidden></div>
   <div id="mobile-backdrop" class="mobile-backdrop" hidden></div>
   <noscript><div class="noscript">Enable JavaScript to explore the concept graph.</div></noscript>

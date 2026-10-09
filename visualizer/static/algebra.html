@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8f7">
+  <meta name="description" content="Run concept algebra against a knowledge graph. Explore intersections, inherited properties and evidence, and export structured examples for LLM training data and evaluation.">
+  <title>Concept algebra — Conceptuum</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23146656'/%3E%3Ctext x='20' y='29' text-anchor='middle' fill='white' font-size='30'%3E∩%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/explorer.css?v=20261009-1">
+  <link rel="stylesheet" href="/static/algebra.css?v=20261009-1">
+  <script defer src="/static/algebra.js?v=20261009-1"></script>
+</head>
+<body class="algebra-page">
+  <a class="skip-link" href="#expression">Skip to expression</a>
+  <header class="app-header">
+    <a class="brand" href="/" aria-label="Conceptuum home"><svg class="brand-mark" viewBox="0 0 36 36" aria-hidden="true"><path d="M10 10L26 18L10 26Z"/><circle cx="10" cy="10" r="3"/><circle cx="26" cy="18" r="3"/><circle cx="10" cy="26" r="3"/></svg><span>conceptuum<span class="brand-dot">.</span></span></a>
+    <nav class="algebra-nav" aria-label="Explore Conceptuum"><a href="/" id="explorer-link">Explorer</a><a href="/?view=euler&amp;lang=en">Euler circles</a><a href="/algebra" aria-current="page">Algebra</a></nav>
+    <div class="header-actions"><label class="sr-only" for="algebra-language">Concept language</label><select id="algebra-language"><option value="en">English</option><option value="ru">Russian</option></select><a class="github-link" href="https://github.com/thpg/conceptuum" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+  </header>
+  <main class="algebra-main">
+    <section class="algebra-intro" aria-labelledby="algebra-title">
+      <div><span class="eyebrow">EXPLORE · COMPUTE · EXPLAIN</span><h1 id="algebra-title">Concept algebra<span>.</span></h1><p>Turn a question about concepts into a result you can inspect.</p></div>
+      <div class="snapshot-badge"><i class="live-dot"></i><span id="algebra-snapshot">Conceptuum knowledge graph</span></div>
+    </section>
+    <div class="algebra-layout">
+      <div class="algebra-primary">
+        <form id="algebra-form" class="algebra-card expression-card">
+          <div class="card-heading"><label for="expression">Expression</label><label class="sr-only" for="algebra-demo">Try a database example</label><select id="algebra-demo"><option value="">Custom expression</option></select></div>
+          <textarea id="expression" rows="3" maxlength="8192" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="expression-help" placeholder='#25439 &amp; #25446'></textarea>
+          <div class="operator-bar" aria-label="Insert an operator">
+            <button type="button" data-insert=" &amp; " title="Intersection (&amp;)" aria-label="Insert intersection">∩</button><button type="button" data-insert=" | " title="Union (|)" aria-label="Insert union">∪</button><button type="button" data-insert=" - " title="Difference (-)" aria-label="Insert difference">∖</button><button type="button" data-insert="~" title="Complement (~)" aria-label="Insert complement">¬</button><button type="button" data-insert=" ^ " title="Symmetric difference (^)" aria-label="Insert symmetric difference">△</button><button type="button" data-insert=" &lt;= " title="Subset (&lt;=)" aria-label="Insert subset comparison">⊆</button><button type="button" data-insert="()" title="Parentheses" aria-label="Insert parentheses">( )</button><button type="button" id="algebra-clear" class="clear-expression">Clear</button>
+          </div>
+          <p id="expression-help" class="expression-help">Use #IDs or quoted terms. A concept includes its stored descendants.</p>
+          <p id="demo-description" class="demo-description"></p>
+          <div class="algebra-options"><label for="algebra-context">Relation context<select id="algebra-context"><option value="1">Everyday</option><option value="2">Scientific</option><option value="3">IT</option><option value="4">Legal</option><option value="5">Logic</option></select></label><label for="algebra-within">Within <span>(optional domain)</span><input id="algebra-within" type="text" maxlength="8192" spellcheck="false" placeholder="All stored concepts, or e.g. #1531"></label></div>
+          <div class="evaluate-row"><button id="algebra-run" class="primary-button" type="submit"><span aria-hidden="true">▶</span> Evaluate</button><span class="shortcut-hint">Ctrl / ⌘ + Enter</span><button type="button" id="algebra-share" class="text-button">Copy query link ↗</button></div>
+        </form>
+        <section id="algebra-error" class="algebra-error" role="alert" hidden><h2>Check the expression</h2><p id="algebra-error-message"></p><div id="algebra-candidates" class="candidate-list"></div></section>
+        <section id="algebra-results" class="algebra-card results-card" aria-labelledby="result-heading" aria-busy="false">
+          <div class="card-heading"><h2 id="result-heading">Result</h2><button id="algebra-download" class="text-button" disabled>Download JSON ↓</button></div>
+          <p id="algebra-status" class="algebra-status" role="status">Preparing the first example…</p>
+          <div id="result-content" hidden><div id="result-summary" class="result-summary"></div><div id="resolved-expression" class="resolved-expression"></div><div id="result-members" class="result-members"></div><div id="algebra-pagination" class="algebra-pagination" hidden><button id="algebra-prev" class="outline-button">← Previous</button><span id="algebra-page-label"></span><button id="algebra-next" class="outline-button">Next →</button></div><details class="structured-result"><summary>Structured result for LLM datasets</summary><p>JSON includes the request, resolved expression, AST, complete member IDs and available evidence. Displayed labels may be paginated.</p><pre id="algebra-json" tabindex="0"></pre></details></div>
+        </section>
+        <section id="algebra-explanation" class="algebra-card explanation-card" aria-labelledby="explanation-title" hidden><div class="card-heading"><h2 id="explanation-title">Why this result?</h2><button class="text-button" id="close-explanation">Close</button></div><div id="explanation-content"></div></section>
+      </div>
+      <aside class="algebra-sidebar" aria-label="Find concepts and language help">
+        <section class="algebra-card lookup-card"><span class="eyebrow">BUILD WITH THE GRAPH</span><h2>Find a concept</h2><p>Select a term in your expression, then insert its exact ID.</p><label class="sr-only" for="algebra-search">Search concepts to insert</label><input id="algebra-search" type="search" placeholder="Search glass, flight, jar…" autocomplete="off"><p id="algebra-search-status" class="lookup-status" role="status"></p><div id="algebra-search-results" class="lookup-results"></div></section>
+        <section class="algebra-card guide-card"><h2>A small language</h2><dl><dt><code>A &amp; B</code></dt><dd>Records shared by two concept sets.</dd><dt><code>has(material, #90)</code></dt><dd>Recorded glass material, including inheritance.</dd><dt><code>lacks(action, #209)</code></dt><dd>An explicit negative assertion about flight.</dd><dt><code>parents(exact(#25447))</code></dt><dd>Direct genera of one record.</dd></dl><a href="https://github.com/thpg/conceptuum/blob/main/docs/concept-algebra.md" target="_blank" rel="noopener noreferrer">Full language &amp; Python API ↗</a></section>
+        <section class="algebra-note"><span class="note-symbol" aria-hidden="true">∴</span><div><h2>Keep the meaning in view.</h2><p>Results are stored concept records. An empty intersection does not prove that real-world classes are incompatible.</p><p>Property queries keep positive, negative, unknown and conflicting knowledge separate.</p></div></section>
+        <section class="algebra-card learning-card"><span class="eyebrow">FOR LLM TRAINING DATA</span><h2>Examples with inspectable answers.</h2><p>Export a query, its concept IDs and supporting relations for dataset preparation and model evaluation.</p><a href="https://github.com/thpg/conceptuum#llm-training-data-and-evaluation" target="_blank" rel="noopener noreferrer">How to use the data ↗</a></section>
+      </aside>
+    </div>
+  </main>
+  <footer class="algebra-footer"><span>Conceptuum · Knowledge you can inspect.</span><a id="algebra-version" href="/static/version.json">Code &amp; data versions</a></footer>
+  <div id="algebra-toast" class="toast" role="status" hidden></div>
+  <noscript><div class="noscript">Enable JavaScript to evaluate concept expressions.</div></noscript>
+</body>
+</html>

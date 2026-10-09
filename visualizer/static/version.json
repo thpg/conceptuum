@@ -1,7 +1,7 @@
 {
   "project": "Conceptuum",
   "code_version": "0.1.0-dev",
-  "interface_revision": "2026-10-08.4",
+  "interface_revision": "2026-10-09.1",
   "data_revision": "Q39",
   "concepts": 13456,
   "accepted_edges": 17350,

@@ -9,11 +9,20 @@ publication is requested. Experiments remain local.
 
 ## Current position
 
+- **Published concept algebra (2026-10-09):** Python package, CLI and
+  [web workspace](https://conceptuum.su/algebra?lang=en), with typed set expressions,
+  context-scoped graph operations, four property states and edge-level explanations.
+  Seven demos, search, pagination and JSON exports support LLM training-data
+  preparation and evaluation. Interface revision `2026-10-09.1`; data remains Q39.
+  Validation: 44 Python checks, Go checks and six desktop/mobile browser checks.
+  See the [language guide](docs/concept-algebra.md). Experiments remain local.
+
 - **Published data — Q39 (2026-10-09):** 13,456 concepts, 17,350 accepted edges,
   and 37,825 terms. All six live tables match the reviewed snapshot with
   timestamps compared in UTC. The SQL export explicitly preserves
   `utf8_general_ci` for compatibility with the site's MariaDB 11.8.6.
-  Interface revision remains `2026-10-08.4`. See the
+  The data publication used interface `2026-10-08.4`; the algebra update above
+  advances the interface without changing the database. See the
   [publication record](docs/quality/2026-10-09-q39.md#publication).
 
 ## Review history

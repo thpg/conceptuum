@@ -7,6 +7,23 @@ release numbers**. The first explicitly versioned working tree is
 
 ## 0.1.0-dev — Unreleased
 
+### Concept algebra on the web — 2026-10-09
+
+- Add a bounded expression parser, a read-only catalog evaluator, a Python
+  API and `python -m concept_algebra` CLI. Support set operations, comparisons,
+  genus navigation, direct relation projections and property selections.
+- Resolve exact terms to all candidate senses before evaluation; keep each
+  relation context separate. Preserve negative exceptions and conflicting
+  multiple inheritance, with source-edge explanations.
+- Publish the `/algebra` workspace with seven Q39 demos, concept search, context
+  and domain controls, member explanations, pagination and shareable queries.
+- Export versioned JSON examples with resolved ASTs, full member IDs, snapshot
+  identity and selected evidence for LLM training-data preparation and evaluation.
+- Add a bounded loopback Python worker and Go API proxy; queries only read the
+  database. Interface revision is `2026-10-09.1`; data remains Q39.
+- Verify 44 Python checks, Go proxy checks and six desktop/mobile browser checks.
+  See the [language guide](docs/concept-algebra.md). Experiment files remain local.
+
 ### Repository and site publication — 2026-10-09, Q10–Q39
 
 - Publish the combined Q10–Q39 filling work: 13,456 concepts, 17,350 accepted

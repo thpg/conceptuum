@@ -16,6 +16,7 @@ import (
 	"sort"
 	"strconv"
 	"strings"
+	"time"
 
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -379,13 +380,24 @@ func main() {
 	http.HandleFunc("/api/concept", handleConcept)
 	http.HandleFunc("/api/tree", handleTree)
 	http.HandleFunc("/api/euler", handleEuler)
+	http.Handle("/api/algebra", algebraHandler())
+	http.HandleFunc("/algebra", func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != http.MethodGet && r.Method != http.MethodHead {
+			w.Header().Set("Allow", "GET, HEAD")
+			http.Error(w, "use GET for concept algebra", http.StatusMethodNotAllowed)
+			return
+		}
+		http.ServeFile(w, r, "static/algebra.html")
+	})
 
 	addr := os.Getenv("LISTEN")
 	if addr == "" {
 		addr = "127.0.0.1:7100"
 	}
 	log.Printf("Conceptuum visualizer: http://%s/", addr)
-	log.Fatal(http.ListenAndServe(addr, nil))
+	server := &http.Server{Addr: addr, ReadHeaderTimeout: 5 * time.Second,
+		ReadTimeout: 20 * time.Second, WriteTimeout: 30 * time.Second, IdleTimeout: 60 * time.Second}
+	log.Fatal(server.ListenAndServe())
 }
 
 func loadDicts() {

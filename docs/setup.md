@@ -73,11 +73,23 @@ the command you are running.
 |---|---|
 | `JNANA_DSN` | Go MySQL driver connection string, including user, password, host, port, and database |
 | `LISTEN` | Bind address; default `127.0.0.1:7100` |
+| `CONCEPTUUM_ALGEBRA_URL` | Loopback worker URL; default `http://127.0.0.1:7101` |
+
+For the **Algebra** page, start the Python worker from the repository root in a
+second terminal, using the `JNANA_*` database settings above:
+
+```sh
+python -m concept_algebra.web --port 7101 --version-file visualizer/static/version.json
+```
+
+The Go server forwards algebra requests to the worker's loopback port 7101.
+See [worker setup](../visualizer/README.md#concept-algebra-worker) for configuration.
 
 Start `go run .` with `visualizer/` as the current directory. HTML, CSS, JavaScript,
 and version metadata are read from `static/` at runtime, including when using a
 built binary. Deploy the entire directory alongside the executable. The server
-exposes `/`, `/static/`, `/api/search`, `/api/concept`, `/api/tree`, and `/api/euler`.
+exposes `/`, `/algebra`, `/static/`, `/api/search`, `/api/concept`, `/api/tree`,
+`/api/euler`, and `POST /api/algebra`.
 See the [visualizer guide](../visualizer/README.md) for controls and browser checks.
 
 ## Common problems

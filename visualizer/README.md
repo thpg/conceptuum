@@ -1,7 +1,7 @@
 # Conceptuum visualizer
 
-Bundled and published site data: **Q39**. The data publication updates the
-database and version metadata; the interface remains at revision `2026-10-08.4`.
+Bundled and published site data: **Q39**. Interface revision: **2026-10-09.1**,
+including the [concept algebra workspace](https://conceptuum.su/algebra?lang=en).
 
 A Go HTTP server with a dependency-free HTML, CSS, and JavaScript explorer.
 See the [project setup guide](../docs/setup.md) for database configuration.
@@ -9,6 +9,34 @@ See the [project setup guide](../docs/setup.md) for database configuration.
 Run `go run .` from this directory. Set `JNANA_DSN` to your database connection
 string; `LISTEN` defaults to `127.0.0.1:7100`. The process reads the `static`
 directory from its working directory.
+
+## Concept algebra worker
+
+The `/algebra` page uses the project's Python parser and evaluator. Start its
+worker in a second terminal **from the repository root**, with Python dependencies
+installed and the same `JNANA_HOST`, `JNANA_PORT`, `JNANA_DATABASE`, `JNANA_USER`
+and `JNANA_PASSWORD` settings as your Python queries:
+
+```sh
+python -m concept_algebra.web --port 7101 --version-file visualizer/static/version.json
+```
+
+The Go server uses `JNANA_DSN` and proxies `POST /api/algebra` to
+`http://127.0.0.1:7101/evaluate`. `CONCEPTUUM_ALGEBRA_URL` overrides that loopback
+address. Start both processes for algebra; the explorer and Euler circles only
+need the Go server. The worker uses Python's standard library and PyMySQL; no
+LLM server is required. `GET http://127.0.0.1:7101/health` checks graph availability.
+
+Use a database account with SELECT permission. On a hosted setup, keep the worker
+bound to loopback and run it under a process supervisor alongside the Go service.
+Pass an absolute `--version-file` path; update the data revision and dump hash
+whenever graph data changes so cached contexts refresh. An optional
+`--snapshot path.json` loads a frozen JSON graph instead of MariaDB.
+
+The workspace includes seven demos, search-to-insert IDs, context and domain
+controls, paginated results, source-edge explanations and shareable query links.
+JSON exports include every result ID and the data revision for LLM training-data
+preparation and evaluation. See the [language/API guide](../docs/concept-algebra.md).
 
 ## Exploring the graph
 
@@ -158,6 +186,7 @@ Run the server against the bundled dataset first. In a separate Python environme
 python -m pip install -r requirements-test.txt
 python -m playwright install chromium
 python test_browser.py
+python test_algebra_browser.py
 ```
 
 Set `CONCEPTUUM_TEST_URL` to test a different address. Set
@@ -166,6 +195,10 @@ Chromium. The twenty-one tests only read the database; overlap fixtures, failure
 stale-response, and escaping cases use intercepted browser responses. Q9 has no
 accepted code-40 records. The catalog demos calculate overlaps from real
 classification paths; the earlier semantic overlap tests use isolated fixtures.
+
+The six algebra scenarios require the Python worker and Q39 data. They check all
+seven demos, source evidence, downloads, ambiguity in both inputs, complete IDs
+across result pages, shared-link reloads, mobile search and stale-response handling.
 
 Also run `go test ./...`, `node test_euler_layout.js`, `node test_euler_catalog.js`,
 and syntax checks for all three JavaScript files in `static/`. Go tests
