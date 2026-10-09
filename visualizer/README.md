@@ -118,7 +118,7 @@ An absent catalog path is **not** a semantic exclusion. These counts concern
 stored concept records, not people, objects, probabilities, or real-world
 cardinalities. Catalog overlaps do not create code-40 edges in the database.
 
-| Demo | What the current Q8 data demonstrates |
+| Demo | What the current Q9 data demonstrates |
 |---|---|
 | [Cross-cutting classifications](https://conceptuum.su/?demo=judgment-grid&lang=en) | Judgment quality and quantity form four occupied cross-classification regions |
 | [Three-way intersection](https://conceptuum.su/?demo=shared-intersection&lang=en) | 35 judgment records lie within both thought content and logical form |
@@ -136,6 +136,15 @@ Samples contain accepted edge paths from each member to each containing set.
 The default `basis=relations` keeps the semantic interpretation. Invalid basis
 values are rejected. No database mutations are performed by either mode.
 
+Q9 also provides two documented selections using the existing controls:
+
+- [Finite and nonempty sets](https://conceptuum.su/?concept=24488&view=euler&sets=24488,24489&context=1&basis=catalog&op=intersection&a=24488&b=24489&lang=en): the singleton-set record is shared.
+- [Commutative and associative operations](https://conceptuum.su/?concept=635&view=euler&sets=635,567&context=1&basis=catalog&op=intersection&a=635&b=567&lang=en): union and intersection are shared.
+
+These compare catalog records. The empty-set record is itself a member of the
+finite-set catalog; its mathematical cardinality zero does not mean that its
+catalog circle contains zero records. No new menu preset or solver is introduced.
+
 Research and verification: [Euler demos report](../docs/quality/2026-10-08-euler-demos.md).
 
 ## Browser checks
@@ -151,7 +160,7 @@ python test_browser.py
 Set `CONCEPTUUM_TEST_URL` to test a different address. Set
 `CONCEPTUUM_BROWSER_CHANNEL=chrome` to use installed Chrome instead of downloading
 Chromium. The twenty-one tests only read the database; overlap fixtures, failure,
-stale-response, and escaping cases use intercepted browser responses. Q8 has no
+stale-response, and escaping cases use intercepted browser responses. Q9 has no
 accepted code-40 records. The catalog demos calculate overlaps from real
 classification paths; the earlier semantic overlap tests use isolated fixtures.
 

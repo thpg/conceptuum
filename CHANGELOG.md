@@ -1,11 +1,24 @@
 # Changelog
 
 The project version is stored in [VERSION](VERSION). Code versions and data
-revisions are tracked separately: **Q1–Q8 are content reviews, not software
+revisions are tracked separately: **Q1–Q9 are content reviews, not software
 release numbers**. The first explicitly versioned working tree is
 **0.1.0-dev**. No release tag or GitHub Release was created by this update.
 
 ## 0.1.0-dev — Unreleased
+
+### Data — 2026-10-09, Q9
+
+- Add 19 meanings covering mathematical sets, cardinality properties, and set
+  operations. Classify union and intersection as both commutative and associative.
+- Separate everyday collection from mathematical set; merge one archived
+  duplicate. Correct subset/JRE, runtime, and concept-extension genera.
+- Rename five records, reject seven relations, and add 50. Preserve all 23
+  explicit negations and the existing relation grammar.
+- Bundle 12,491 concepts, 15,717 accepted edges, and 35,048 terms;
+  publish the data with interface revision `2026-10-08.4`.
+- Add two shared Euler selections to the documentation. See the
+  [Q9 report](docs/quality/2026-10-09-q9.md) for sources, scope, and remaining work.
 
 ### Data — 2026-10-09, Q8
 
@@ -101,6 +114,7 @@ snapshots; they are not separate published software releases.
 
 | Revision | Date | Main changes | Concepts | All edges |
 |---|---|---|---:|---:|
+| [Q9](docs/quality/2026-10-09-q9.md) | 2026-10-09 | Mathematical sets, cardinality, set operations, collection and runtime senses | 12,491 | 16,522 |
 | [Q8](docs/quality/2026-10-09-q8.md) | 2026-10-09 | Foundation pilot: models, structures, values, measurement, terminology | 12,473 | 16,473 |
 | [Q7](docs/quality/2026-10-08-q7.md) | 2026-10-08 | Causality, arithmetic, process roles, dependent merges | 12,468 | 16,452 |
 | [Q6](docs/quality/2026-10-08-q6.md) | 2026-10-08 | Mixed abstract branch, vertebrate genera, biological properties | 12,468 | 16,439 |

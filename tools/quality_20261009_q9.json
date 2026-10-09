@@ -1,0 +1,1443 @@
+{
+  "source": "quality-20261009-q9",
+  "review": {
+    "date": "2026-10-09",
+    "scope": "Foundation pilot, second increment: collections and mathematical sets, cardinality, set operations, and misplaced runtime concepts.",
+    "sources": {
+      "sets": "https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts",
+      "subsets": "https://openstax.org/books/contemporary-mathematics/pages/1-2-subsets",
+      "operations": "https://openstax.org/books/contemporary-mathematics/pages/1-4-set-operations-with-two-sets",
+      "laws": "https://openstax.org/books/contemporary-mathematics/pages/1-5-set-operations-with-three-sets",
+      "binary": "https://ocw.mit.edu/courses/6-972-algebraic-techniques-and-semidefinite-optimization-spring-2006/c3ae2c6021ca407a180a89c01e2cb4a1_lecture_04.pdf",
+      "extension": "https://forallx.openlogicproject.org/html/Ch30.html",
+      "collection": "https://gramota.ru/poisk?mode=slovari&query=совокупность",
+      "jre": "https://www.oracle.com/java/technologies/jre-8-readme.html",
+      "runtime": "https://nodejs.org/learn/getting-started/introduction-to-nodejs"
+    },
+    "context_policy": "Preserve all existing home contexts. Mathematics uses U1 with explicit U3 genera for existing programming terminology and U5 for concept extension. No new U2 records. Subset and universal set are roles relative to a specified containing set/domain.",
+    "existing_cohort": [
+      567,
+      635,
+      859,
+      860,
+      867,
+      918,
+      951,
+      952,
+      2432,
+      2636,
+      3482,
+      24476
+    ],
+    "unfinished": [
+      815,
+      816,
+      979,
+      1084,
+      1124,
+      24474,
+      2636,
+      3186,
+      4103
+    ],
+    "limits": "These classifications do not encode arbitrary element membership or implement set algebra. Empty set is a mathematical object, not an empty catalog extension. The legacy collection children and its quantity-frequency edge remain pending. General idempotence, parser associativity, everyday homonyms, model children, and relational-property specificity require separate review. Algebraic classifications use the usual binary operations on subsets of a fixed domain."
+  },
+  "concepts": [
+    {
+      "key": "mathematical_set",
+      "name": "математическое множество",
+      "parent": 2698,
+      "universum_id": 1,
+      "terms": [
+        [
+          "математическое множество",
+          "ru"
+        ],
+        [
+          "mathematical set",
+          "en"
+        ],
+        [
+          "set",
+          "en"
+        ],
+        [
+          "множество (математика)",
+          "ru"
+        ]
+      ],
+      "reason": "An abstract set with determined membership. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "key": "finite_set",
+      "name": "конечное множество",
+      "parent": "mathematical_set",
+      "universum_id": 1,
+      "terms": [
+        [
+          "конечное множество",
+          "ru"
+        ],
+        [
+          "finite set",
+          "en"
+        ]
+      ],
+      "reason": "Its cardinality is a nonnegative integer, including zero. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "key": "nonempty_set",
+      "name": "непустое множество",
+      "parent": "mathematical_set",
+      "universum_id": 1,
+      "terms": [
+        [
+          "непустое множество",
+          "ru"
+        ],
+        [
+          "nonempty set",
+          "en"
+        ],
+        [
+          "non-empty set",
+          "en"
+        ]
+      ],
+      "reason": "Has at least one element. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "key": "infinite_set",
+      "name": "бесконечное множество",
+      "parent": "nonempty_set",
+      "universum_id": 1,
+      "terms": [
+        [
+          "бесконечное множество",
+          "ru"
+        ],
+        [
+          "infinite set",
+          "en"
+        ]
+      ],
+      "reason": "Not finite; necessarily nonempty. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "key": "empty_set",
+      "name": "пустое множество",
+      "parent": "finite_set",
+      "universum_id": 1,
+      "terms": [
+        [
+          "пустое множество",
+          "ru"
+        ],
+        [
+          "empty set",
+          "en"
+        ],
+        [
+          "null set",
+          "en"
+        ]
+      ],
+      "reason": "The unique set with zero elements. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "key": "singleton_set",
+      "name": "одноэлементное множество",
+      "parent": "finite_set",
+      "universum_id": 1,
+      "terms": [
+        [
+          "одноэлементное множество",
+          "ru"
+        ],
+        [
+          "singleton set",
+          "en"
+        ],
+        [
+          "singleton",
+          "en"
+        ]
+      ],
+      "reason": "Has exactly one element. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "key": "proper_subset",
+      "name": "собственное подмножество",
+      "parent": 859,
+      "universum_id": 1,
+      "terms": [
+        [
+          "собственное подмножество",
+          "ru"
+        ],
+        [
+          "proper subset",
+          "en"
+        ],
+        [
+          "strict subset",
+          "en"
+        ],
+        [
+          "строгое подмножество",
+          "ru"
+        ]
+      ],
+      "reason": "A subset unequal to its specified containing set; A is contained in B and A differs from B. Source: https://openstax.org/books/contemporary-mathematics/pages/1-2-subsets"
+    },
+    {
+      "key": "universal_set",
+      "name": "универсальное множество",
+      "parent": "mathematical_set",
+      "universum_id": 1,
+      "terms": [
+        [
+          "универсальное множество",
+          "ru"
+        ],
+        [
+          "universal set",
+          "en"
+        ],
+        [
+          "универсум (теория множеств)",
+          "ru"
+        ]
+      ],
+      "reason": "The chosen domain U for a problem, never an unrestricted set of all sets. Source: https://openstax.org/books/contemporary-mathematics/pages/1-4-set-operations-with-two-sets"
+    },
+    {
+      "key": "cardinality",
+      "name": "мощность множества",
+      "parent": 2635,
+      "universum_id": 1,
+      "terms": [
+        [
+          "мощность множества",
+          "ru"
+        ],
+        [
+          "set cardinality",
+          "en"
+        ],
+        [
+          "cardinality",
+          "en"
+        ]
+      ],
+      "reason": "The size attribute, for finite and infinite sets. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "key": "finite_cardinality",
+      "name": "конечная мощность множества",
+      "parent": "cardinality",
+      "universum_id": 1,
+      "terms": [
+        [
+          "конечная мощность множества",
+          "ru"
+        ],
+        [
+          "finite set cardinality",
+          "en"
+        ]
+      ],
+      "reason": "Finite size, including zero. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "key": "infinite_cardinality",
+      "name": "бесконечная мощность множества",
+      "parent": "cardinality",
+      "universum_id": 1,
+      "terms": [
+        [
+          "бесконечная мощность множества",
+          "ru"
+        ],
+        [
+          "infinite set cardinality",
+          "en"
+        ]
+      ],
+      "reason": "Size that is not finite. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "key": "zero_cardinality",
+      "name": "нулевая мощность множества",
+      "parent": "finite_cardinality",
+      "universum_id": 1,
+      "terms": [
+        [
+          "нулевая мощность множества",
+          "ru"
+        ],
+        [
+          "zero set cardinality",
+          "en"
+        ]
+      ],
+      "reason": "Size zero. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "key": "unit_cardinality",
+      "name": "единичная мощность множества",
+      "parent": "finite_cardinality",
+      "universum_id": 1,
+      "terms": [
+        [
+          "единичная мощность множества",
+          "ru"
+        ],
+        [
+          "set cardinality one",
+          "en"
+        ]
+      ],
+      "reason": "Size one. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "key": "binary_operation",
+      "name": "бинарная математическая операция",
+      "parent": 918,
+      "universum_id": 1,
+      "terms": [
+        [
+          "бинарная математическая операция",
+          "ru"
+        ],
+        [
+          "binary mathematical operation",
+          "en"
+        ],
+        [
+          "binary operation",
+          "en"
+        ],
+        [
+          "бинарная операция",
+          "ru"
+        ]
+      ],
+      "reason": "A function S x S to S on a specified carrier S. Source: https://ocw.mit.edu/courses/6-972-algebraic-techniques-and-semidefinite-optimization-spring-2006/c3ae2c6021ca407a180a89c01e2cb4a1_lecture_04.pdf"
+    },
+    {
+      "key": "set_operation",
+      "name": "операция над множествами",
+      "parent": 918,
+      "universum_id": 1,
+      "terms": [
+        [
+          "операция над множествами",
+          "ru"
+        ],
+        [
+          "set operation",
+          "en"
+        ]
+      ],
+      "reason": "A mathematical operation whose operands and result are sets. Source: https://openstax.org/books/contemporary-mathematics/pages/1-4-set-operations-with-two-sets"
+    },
+    {
+      "key": "set_union",
+      "name": "объединение множеств (операция)",
+      "parent": "set_operation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "объединение множеств (операция)",
+          "ru"
+        ],
+        [
+          "set union operation",
+          "en"
+        ],
+        [
+          "set union",
+          "en"
+        ],
+        [
+          "объединение множеств",
+          "ru"
+        ]
+      ],
+      "reason": "Binary operation: x belongs to the result iff x belongs to A or B. Source: https://openstax.org/books/contemporary-mathematics/pages/1-4-set-operations-with-two-sets"
+    },
+    {
+      "key": "set_intersection",
+      "name": "пересечение множеств (операция)",
+      "parent": "set_operation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "пересечение множеств (операция)",
+          "ru"
+        ],
+        [
+          "set intersection operation",
+          "en"
+        ],
+        [
+          "set intersection",
+          "en"
+        ],
+        [
+          "пересечение множеств",
+          "ru"
+        ]
+      ],
+      "reason": "Binary operation: x belongs to the result iff x belongs to both A and B. Source: https://openstax.org/books/contemporary-mathematics/pages/1-4-set-operations-with-two-sets"
+    },
+    {
+      "key": "set_difference",
+      "name": "разность множеств (операция)",
+      "parent": "set_operation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "разность множеств (операция)",
+          "ru"
+        ],
+        [
+          "set difference operation",
+          "en"
+        ],
+        [
+          "set difference",
+          "en"
+        ],
+        [
+          "разность множеств",
+          "ru"
+        ]
+      ],
+      "reason": "Binary operation: x belongs to the result iff x belongs to A but not B. Source: https://openstax.org/books/contemporary-mathematics/pages/1-4-set-operations-with-two-sets"
+    },
+    {
+      "key": "set_complement",
+      "name": "дополнение множества (операция)",
+      "parent": "set_operation",
+      "universum_id": 1,
+      "terms": [
+        [
+          "дополнение множества (операция)",
+          "ru"
+        ],
+        [
+          "set complement operation",
+          "en"
+        ],
+        [
+          "set complement",
+          "en"
+        ],
+        [
+          "дополнение множества",
+          "ru"
+        ]
+      ],
+      "reason": "Unary operation for fixed U: sends A to U minus A. Source: https://openstax.org/books/contemporary-mathematics/pages/1-4-set-operations-with-two-sets"
+    }
+  ],
+  "renames": [
+    {
+      "id": 2636,
+      "before": "множество",
+      "name": "совокупность объектов",
+      "reason": "Scope the everyday aggregate sense explicitly; retain the mathematical meaning in a separate concept. Source: https://gramota.ru/poisk?mode=slovari&query=совокупность",
+      "terms": []
+    },
+    {
+      "id": 859,
+      "before": "subset",
+      "name": "подмножество",
+      "reason": "Preserve the existing mathematical sense and use its established Russian label. Source: https://openstax.org/books/contemporary-mathematics/pages/1-2-subsets",
+      "terms": []
+    },
+    {
+      "id": 951,
+      "before": "runtime environment",
+      "name": "среда выполнения",
+      "reason": "Use the existing Russian translation for this software runtime concept. Source: https://nodejs.org/learn/getting-started/introduction-to-nodejs",
+      "terms": []
+    },
+    {
+      "id": 635,
+      "before": "Commutative operation",
+      "name": "коммутативная бинарная операция",
+      "reason": "Scope commutativity to binary operations: a*b = b*a for all operands in the carrier. Source: https://openstax.org/books/contemporary-mathematics/pages/1-5-set-operations-with-three-sets",
+      "terms": []
+    },
+    {
+      "id": 567,
+      "before": "Associative operation",
+      "name": "ассоциативная бинарная операция",
+      "reason": "Scope algebraic associativity: (a*b)*c = a*(b*c); parser associativity remains a separate concept. Source: https://openstax.org/books/contemporary-mathematics/pages/1-5-set-operations-with-three-sets",
+      "terms": []
+    }
+  ],
+  "terms": [
+    {
+      "id": 2636,
+      "name": "совокупность объектов",
+      "terms": [
+        [
+          "collection of objects",
+          "en"
+        ],
+        [
+          "collection",
+          "en"
+        ]
+      ],
+      "reason": "Clarify the collective sense. Source: https://gramota.ru/poisk?mode=slovari&query=совокупность"
+    },
+    {
+      "id": 859,
+      "name": "подмножество",
+      "terms": [
+        [
+          "подмножество",
+          "ru"
+        ]
+      ],
+      "reason": "A subset may equal its specified containing set; the proper subset is a stricter role. Source: https://openstax.org/books/contemporary-mathematics/pages/1-2-subsets"
+    },
+    {
+      "id": 635,
+      "name": "коммутативная бинарная операция",
+      "terms": [
+        [
+          "commutative binary operation",
+          "en"
+        ]
+      ],
+      "reason": "Disambiguate the algebraic operation class. Source: https://openstax.org/books/contemporary-mathematics/pages/1-5-set-operations-with-three-sets"
+    },
+    {
+      "id": 567,
+      "name": "ассоциативная бинарная операция",
+      "terms": [
+        [
+          "associative binary operation",
+          "en"
+        ]
+      ],
+      "reason": "Disambiguate the algebraic operation class. Source: https://openstax.org/books/contemporary-mathematics/pages/1-5-set-operations-with-three-sets"
+    },
+    {
+      "id": 860,
+      "name": "JRE",
+      "terms": [
+        [
+          "среда выполнения Java",
+          "ru"
+        ]
+      ],
+      "reason": "Name the Java runtime distribution. Source: https://www.oracle.com/java/technologies/jre-8-readme.html"
+    },
+    {
+      "id": 867,
+      "name": "JVM",
+      "terms": [
+        [
+          "виртуальная машина Java",
+          "ru"
+        ]
+      ],
+      "reason": "Add the Russian expansion of JVM. Source: https://www.oracle.com/java/technologies/jre-8-readme.html"
+    },
+    {
+      "id": 951,
+      "name": "среда выполнения",
+      "terms": [
+        [
+          "software runtime environment",
+          "en"
+        ]
+      ],
+      "reason": "Use the software-runtime sense, including the existing Node.js child. Source: https://nodejs.org/learn/getting-started/introduction-to-nodejs"
+    }
+  ],
+  "remove_terms": [
+    {
+      "id": 859,
+      "term": "subset",
+      "lang": "ru",
+      "reason": "The rename helper preserves the previous English label as Russian; retain its English entry only."
+    },
+    {
+      "id": 951,
+      "term": "runtime environment",
+      "lang": "ru",
+      "reason": "The rename helper preserves the previous English label as Russian; retain its English entry only."
+    },
+    {
+      "id": 635,
+      "term": "Commutative operation",
+      "lang": "ru",
+      "reason": "The rename helper preserves the previous English label as Russian; retain its English entry only."
+    },
+    {
+      "id": 567,
+      "term": "Associative operation",
+      "lang": "ru",
+      "reason": "The rename helper preserves the previous English label as Russian; retain its English entry only."
+    }
+  ],
+  "leaf_merges": [
+    {
+      "source_id": 3482,
+      "target_id": 2636,
+      "target_name": "множество",
+      "reason": "The isolated aggregate leaf is a lexical duplicate of the scoped collection sense. Preserve both terms and archive all original rows. Source: https://gramota.ru/poisk?mode=slovari&query=совокупность",
+      "retained_terms": [
+        [
+          "совокупность",
+          "ru"
+        ],
+        [
+          "aggregate",
+          "en"
+        ]
+      ],
+      "archive": {
+        "concept": {
+          "dharma": 3482,
+          "nama": "совокупность",
+          "defin": "совокупность — множество",
+          "vol_zero": 0,
+          "vol_ed": 0,
+          "vol_countable": null,
+          "vol_sobir": 0,
+          "vol_sootn": 0,
+          "cont_konkr": null,
+          "cont_abs": null,
+          "cont_opred": null,
+          "cont_empir": 1,
+          "universum_id": 1,
+          "processed": 1
+        },
+        "terms": [
+          {
+            "concept_id": 3482,
+            "term": "aggregate",
+            "lang": "en"
+          },
+          {
+            "concept_id": 3482,
+            "term": "совокупность",
+            "lang": "ru"
+          }
+        ],
+        "edges": [
+          {
+            "id": 5752,
+            "dh1": 3482,
+            "kod": "14",
+            "dh2": 2636,
+            "universum_id": 1,
+            "strength": null,
+            "status": "ok",
+            "source": "llm",
+            "rationale": null,
+            "created_at": "2026-08-29 14:01:03"
+          }
+        ]
+      }
+    }
+  ],
+  "initial_edges": [
+    {
+      "subject": "mathematical_set",
+      "kod": "14",
+      "object": 2698,
+      "universum_id": 3,
+      "reason": "The same set sense is used in computing. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "subject": "mathematical_set",
+      "kod": "14",
+      "object": 2698,
+      "universum_id": 5,
+      "reason": "The same set sense supplies domain-relative concept extensions. Source: https://forallx.openlogicproject.org/html/Ch30.html"
+    },
+    {
+      "subject": 24476,
+      "kod": "14",
+      "object": 2698,
+      "universum_id": 3,
+      "reason": "The mathematical function retains its genus in computing discourse. Source: https://ocw.mit.edu/courses/6-972-algebraic-techniques-and-semidefinite-optimization-spring-2006/c3ae2c6021ca407a180a89c01e2cb4a1_lecture_04.pdf"
+    },
+    {
+      "subject": 918,
+      "kod": "14",
+      "object": 24476,
+      "universum_id": 1,
+      "reason": "Make the existing operation genus explicit in the U1 mathematics branch. Source: https://ocw.mit.edu/courses/6-972-algebraic-techniques-and-semidefinite-optimization-spring-2006/c3ae2c6021ca407a180a89c01e2cb4a1_lecture_04.pdf"
+    },
+    {
+      "subject": "binary_operation",
+      "kod": "14",
+      "object": 918,
+      "universum_id": 3,
+      "reason": "The same binary-operation sense is used in computing. Source: https://ocw.mit.edu/courses/6-972-algebraic-techniques-and-semidefinite-optimization-spring-2006/c3ae2c6021ca407a180a89c01e2cb4a1_lecture_04.pdf"
+    }
+  ],
+  "repairs": [
+    {
+      "id": 1440,
+      "before": [
+        859,
+        "14",
+        265,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "Replace the generic information-object genus with mathematical set. Source: https://openstax.org/books/contemporary-mathematics/pages/1-2-subsets",
+      "replacements": [
+        [
+          859,
+          "14",
+          "mathematical_set",
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1441,
+      "before": [
+        860,
+        "14",
+        859,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "JRE is a runtime distribution, not a kind of mathematical subset. Source: https://www.oracle.com/java/technologies/jre-8-readme.html",
+      "replacements": [
+        [
+          860,
+          "14",
+          951,
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1836,
+      "before": [
+        951,
+        "14",
+        366,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "A runtime can include an engine and libraries; classify the environment as software without requiring it to be a single program. Source: https://nodejs.org/learn/getting-started/introduction-to-nodejs",
+      "replacements": [
+        [
+          951,
+          "14",
+          277,
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 31125,
+      "before": [
+        2432,
+        "14",
+        2636,
+        5
+      ],
+      "reviewed_strength": null,
+      "reason": "An extensional concept denotes a set within a chosen domain, rather than an everyday aggregate. Source: https://forallx.openlogicproject.org/html/Ch30.html",
+      "replacements": [
+        [
+          2432,
+          "14",
+          "mathematical_set",
+          null,
+          5
+        ]
+      ]
+    },
+    {
+      "id": 1198,
+      "before": [
+        635,
+        "14",
+        265,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "Give commutative operation its binary-operation genus. Source: https://openstax.org/books/contemporary-mathematics/pages/1-5-set-operations-with-three-sets",
+      "replacements": [
+        [
+          635,
+          "14",
+          "binary_operation",
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 1124,
+      "before": [
+        567,
+        "14",
+        265,
+        3
+      ],
+      "reviewed_strength": null,
+      "reason": "Give associative operation its binary-operation genus. Source: https://openstax.org/books/contemporary-mathematics/pages/1-5-set-operations-with-three-sets",
+      "replacements": [
+        [
+          567,
+          "14",
+          "binary_operation",
+          null,
+          3
+        ]
+      ]
+    },
+    {
+      "id": 8004,
+      "before": [
+        2636,
+        "61",
+        2641,
+        1
+      ],
+      "reviewed_strength": null,
+      "reason": "A collection can be part of a larger whole. The dictionary sense does not support disjoint co-hyponyms collection and part. Source: https://gramota.ru/poisk?mode=slovari&query=совокупность",
+      "replacements": []
+    }
+  ],
+  "edges": [
+    {
+      "subject": 859,
+      "kod": "14",
+      "object": "mathematical_set",
+      "universum_id": 1,
+      "reason": "Expose the existing subset concept in U1 mathematics. Source: https://openstax.org/books/contemporary-mathematics/pages/1-2-subsets"
+    },
+    {
+      "subject": 635,
+      "kod": "14",
+      "object": "binary_operation",
+      "universum_id": 1,
+      "reason": "Expose the same commutative class in U1 mathematics. Source: https://openstax.org/books/contemporary-mathematics/pages/1-5-set-operations-with-three-sets"
+    },
+    {
+      "subject": 567,
+      "kod": "14",
+      "object": "binary_operation",
+      "universum_id": 1,
+      "reason": "Expose the same associative class in U1 mathematics. Source: https://openstax.org/books/contemporary-mathematics/pages/1-5-set-operations-with-three-sets"
+    },
+    {
+      "subject": "singleton_set",
+      "kod": "14",
+      "object": "nonempty_set",
+      "universum_id": 1,
+      "reason": "One element entails nonempty. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "subject": "mathematical_set",
+      "kod": "20",
+      "object": "cardinality",
+      "universum_id": 1,
+      "reason": "Sets have a cardinality attribute. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "subject": "finite_set",
+      "kod": "15",
+      "object": "finite_cardinality",
+      "universum_id": 1,
+      "reason": "Attach the defining size property. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "subject": "infinite_set",
+      "kod": "15",
+      "object": "infinite_cardinality",
+      "universum_id": 1,
+      "reason": "Attach the defining size property. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "subject": "empty_set",
+      "kod": "15",
+      "object": "zero_cardinality",
+      "universum_id": 1,
+      "reason": "Attach the defining size property. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "subject": "singleton_set",
+      "kod": "15",
+      "object": "unit_cardinality",
+      "universum_id": 1,
+      "reason": "Attach the defining size property. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "subject": "finite_set",
+      "kod": "64",
+      "object": "infinite_set",
+      "universum_id": 1,
+      "reason": "Exhaustive opposition within mathematical sets. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "subject": "empty_set",
+      "kod": "64",
+      "object": "nonempty_set",
+      "universum_id": 1,
+      "reason": "Exhaustive opposition within mathematical sets. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "subject": "finite_cardinality",
+      "kod": "64",
+      "object": "infinite_cardinality",
+      "universum_id": 1,
+      "reason": "Exhaustive opposition within cardinality properties. Source: https://openstax.org/books/contemporary-mathematics/pages/1-1-basic-set-concepts"
+    },
+    {
+      "subject": "set_union",
+      "kod": "14",
+      "object": 635,
+      "universum_id": 1,
+      "reason": "Binary set operation satisfying commutativity. Source: https://openstax.org/books/contemporary-mathematics/pages/1-5-set-operations-with-three-sets"
+    },
+    {
+      "subject": "set_union",
+      "kod": "14",
+      "object": 567,
+      "universum_id": 1,
+      "reason": "Binary set operation satisfying associativity. Source: https://openstax.org/books/contemporary-mathematics/pages/1-5-set-operations-with-three-sets"
+    },
+    {
+      "subject": "set_intersection",
+      "kod": "14",
+      "object": 635,
+      "universum_id": 1,
+      "reason": "Binary set operation satisfying commutativity. Source: https://openstax.org/books/contemporary-mathematics/pages/1-5-set-operations-with-three-sets"
+    },
+    {
+      "subject": "set_intersection",
+      "kod": "14",
+      "object": 567,
+      "universum_id": 1,
+      "reason": "Binary set operation satisfying associativity. Source: https://openstax.org/books/contemporary-mathematics/pages/1-5-set-operations-with-three-sets"
+    },
+    {
+      "subject": "set_difference",
+      "kod": "14",
+      "object": "binary_operation",
+      "universum_id": 1,
+      "reason": "Set difference takes two ordered set operands on the same domain. Source: https://openstax.org/books/contemporary-mathematics/pages/1-4-set-operations-with-two-sets"
+    },
+    {
+      "subject": "set_complement",
+      "kod": "74",
+      "object": "universal_set",
+      "universum_id": 1,
+      "reason": "Complement depends on the selected domain. Source: https://openstax.org/books/contemporary-mathematics/pages/1-4-set-operations-with-two-sets"
+    },
+    {
+      "subject": 860,
+      "kod": "20",
+      "object": 867,
+      "universum_id": 3,
+      "reason": "The JRE distribution includes a JVM; the Oracle Java 8 README documents this composition. Source: https://www.oracle.com/java/technologies/jre-8-readme.html"
+    },
+    {
+      "subject": 951,
+      "kod": "21",
+      "object": 326,
+      "universum_id": 3,
+      "reason": "A software runtime supports program execution. Source: https://nodejs.org/learn/getting-started/introduction-to-nodejs"
+    }
+  ],
+  "checks": [
+    {
+      "subject": "mathematical_set",
+      "kod": "14",
+      "object": 2698,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mathematical_set",
+      "kod": "14",
+      "object": 2698,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 24476,
+      "kod": "14",
+      "object": 2698,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 918,
+      "kod": "14",
+      "object": 24476,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "binary_operation",
+      "kod": "14",
+      "object": 918,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 859,
+      "kod": "14",
+      "object": 265,
+      "present": false
+    },
+    {
+      "subject": 859,
+      "kod": "14",
+      "object": "mathematical_set",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 860,
+      "kod": "14",
+      "object": 859,
+      "present": false
+    },
+    {
+      "subject": 860,
+      "kod": "14",
+      "object": 951,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 951,
+      "kod": "14",
+      "object": 366,
+      "present": false
+    },
+    {
+      "subject": 951,
+      "kod": "14",
+      "object": 277,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2432,
+      "kod": "14",
+      "object": 2636,
+      "present": false
+    },
+    {
+      "subject": 2432,
+      "kod": "14",
+      "object": "mathematical_set",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 635,
+      "kod": "14",
+      "object": 265,
+      "present": false
+    },
+    {
+      "subject": 635,
+      "kod": "14",
+      "object": "binary_operation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 567,
+      "kod": "14",
+      "object": 265,
+      "present": false
+    },
+    {
+      "subject": 567,
+      "kod": "14",
+      "object": "binary_operation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 2636,
+      "kod": "61",
+      "object": 2641,
+      "present": false
+    },
+    {
+      "subject": 859,
+      "kod": "14",
+      "object": "mathematical_set",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 635,
+      "kod": "14",
+      "object": "binary_operation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 567,
+      "kod": "14",
+      "object": "binary_operation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "singleton_set",
+      "kod": "14",
+      "object": "nonempty_set",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "mathematical_set",
+      "kod": "20",
+      "object": "cardinality",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "finite_set",
+      "kod": "15",
+      "object": "finite_cardinality",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "infinite_set",
+      "kod": "15",
+      "object": "infinite_cardinality",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "empty_set",
+      "kod": "15",
+      "object": "zero_cardinality",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "singleton_set",
+      "kod": "15",
+      "object": "unit_cardinality",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "finite_set",
+      "kod": "64",
+      "object": "infinite_set",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "nonempty_set",
+      "kod": "64",
+      "object": "empty_set",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "finite_cardinality",
+      "kod": "64",
+      "object": "infinite_cardinality",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "set_union",
+      "kod": "14",
+      "object": 635,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "set_union",
+      "kod": "14",
+      "object": 567,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "set_intersection",
+      "kod": "14",
+      "object": 635,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "set_intersection",
+      "kod": "14",
+      "object": 567,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "set_difference",
+      "kod": "14",
+      "object": "binary_operation",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": "set_complement",
+      "kod": "74",
+      "object": "universal_set",
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 860,
+      "kod": "20",
+      "object": 867,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 951,
+      "kod": "21",
+      "object": 326,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 952,
+      "kod": "14",
+      "object": 951,
+      "present": true,
+      "strength": null
+    },
+    {
+      "subject": 918,
+      "kod": "14",
+      "object": 24476,
+      "present": true,
+      "strength": null
+    }
+  ],
+  "subtree_checks": [
+    {
+      "subject": 859,
+      "ancestor": "mathematical_set",
+      "present": true
+    },
+    {
+      "subject": 860,
+      "ancestor": 859,
+      "present": false
+    },
+    {
+      "subject": 860,
+      "ancestor": 951,
+      "present": true
+    },
+    {
+      "subject": 951,
+      "ancestor": 277,
+      "present": true
+    },
+    {
+      "subject": 951,
+      "ancestor": 366,
+      "present": false
+    },
+    {
+      "subject": 952,
+      "ancestor": 951,
+      "present": true
+    },
+    {
+      "subject": 2432,
+      "ancestor": "mathematical_set",
+      "present": true
+    },
+    {
+      "subject": 2432,
+      "ancestor": 2636,
+      "present": false
+    },
+    {
+      "subject": "mathematical_set",
+      "ancestor": 2698,
+      "present": true
+    },
+    {
+      "subject": "mathematical_set",
+      "ancestor": 2636,
+      "present": false
+    },
+    {
+      "subject": "empty_set",
+      "ancestor": "finite_set",
+      "present": true
+    },
+    {
+      "subject": "empty_set",
+      "ancestor": "nonempty_set",
+      "present": false
+    },
+    {
+      "subject": "singleton_set",
+      "ancestor": "finite_set",
+      "present": true
+    },
+    {
+      "subject": "singleton_set",
+      "ancestor": "nonempty_set",
+      "present": true
+    },
+    {
+      "subject": "infinite_set",
+      "ancestor": "nonempty_set",
+      "present": true
+    },
+    {
+      "subject": "infinite_set",
+      "ancestor": "finite_set",
+      "present": false
+    },
+    {
+      "subject": "proper_subset",
+      "ancestor": 859,
+      "present": true
+    },
+    {
+      "subject": "set_union",
+      "ancestor": 635,
+      "present": true
+    },
+    {
+      "subject": "set_union",
+      "ancestor": 567,
+      "present": true
+    },
+    {
+      "subject": "set_intersection",
+      "ancestor": 635,
+      "present": true
+    },
+    {
+      "subject": "set_intersection",
+      "ancestor": 567,
+      "present": true
+    },
+    {
+      "subject": "set_difference",
+      "ancestor": 635,
+      "present": false
+    },
+    {
+      "subject": "set_difference",
+      "ancestor": 567,
+      "present": false
+    },
+    {
+      "subject": "set_complement",
+      "ancestor": "binary_operation",
+      "present": false
+    },
+    {
+      "subject": 979,
+      "ancestor": 567,
+      "present": false
+    }
+  ],
+  "term_checks": [
+    {
+      "subject": 859,
+      "term": "subset",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 951,
+      "term": "runtime environment",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 635,
+      "term": "Commutative operation",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 567,
+      "term": "Associative operation",
+      "lang": "ru",
+      "present": false
+    },
+    {
+      "subject": 2636,
+      "term": "collection of objects",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 2636,
+      "term": "collection",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 859,
+      "term": "подмножество",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 635,
+      "term": "commutative binary operation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 567,
+      "term": "associative binary operation",
+      "lang": "en",
+      "present": true
+    },
+    {
+      "subject": 860,
+      "term": "среда выполнения Java",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 867,
+      "term": "виртуальная машина Java",
+      "lang": "ru",
+      "present": true
+    },
+    {
+      "subject": 951,
+      "term": "software runtime environment",
+      "lang": "en",
+      "present": true
+    }
+  ]
+}

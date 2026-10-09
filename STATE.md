@@ -5,16 +5,20 @@ unfinished item in [PLAN.md](PLAN.md), using the current snapshot below.
 
 ## Current position
 
-- **Latest data work — Q8 (2026-10-09):** the first foundation-pilot increment
-  is applied and published to https://conceptuum.su. Corrected model/language,
-  array/list/index, number/type, measurement, and three adjective meanings.
-  Added six concepts, merged one archived duplicate, renamed three records,
-  rejected 11 relations, and added 22. All 23 explicit negations and all
+- **Latest data work — Q9 (2026-10-09):** mathematical sets, cardinality
+  properties, and set operations are applied and published to https://conceptuum.su.
+  Corrected collection/set, subset/JRE, runtime, and concept-extension senses.
+  Added 19 concepts, merged one archived duplicate, renamed five records,
+  rejected seven relations, and added 50. All 23 explicit negations and all
   unrelated existing edges are preserved; the relation grammar is unchanged.
-  The live database matches all six local tables exactly. Interface revision
-  remains `2026-10-08.4`. See the [Q8 report](docs/quality/2026-10-09-q8.md).
-  Next: collection versus mathematical set, subset/JRE, and sourced set
-  operations. The approximately 100-meaning pilot remains unfinished.
+  All six live tables match the local database. Interface revision remains
+  `2026-10-08.4`. See the [Q9 report](docs/quality/2026-10-09-q9.md).
+  Next: mixed data-type, data-structure, and model children; then fraction,
+  percent, ratio, and units. The approximately 100-meaning pilot is in progress.
+- **Earlier foundation work — Q8 (2026-10-09):** corrected model/language,
+  array/list/index, number/type, measurement, and three adjective meanings.
+  Added six concepts and merged one duplicate. See the
+  [Q8 report](docs/quality/2026-10-09-q8.md).
 - **Euler demos and catalog sets (2026-10-08):** published interface revision
   `2026-10-08.4` to https://conceptuum.su. Seven database-backed demos show
   cross-classification, three-way intersection, Boolean operations, scoped
@@ -252,17 +256,18 @@ unfinished item in [PLAN.md](PLAN.md), using the current snapshot below.
   извлекает лишние понятия по отдельным словам.
   Подробные ID и термины: `docs/quality/2026-10-08-q7-after.json`.
 
-## Current database snapshot — 2026-10-09, Q8
+## Current database snapshot — 2026-10-09, Q9
 
 ```
-concepts:     12473 (Everyday: 11196, IT: 900, Legal: 160, Logic: 217)
-edges:        16473 (accepted: 15675, rejected: 798)
-paths:        58000
-terms:        34981 (RU/EN tags present; translation quality remains incomplete)
+concepts:     12491 (Everyday: 11214, IT: 900, Legal: 160, Logic: 217)
+edges:        16522 (accepted: 15717, rejected: 805)
+paths:        58117
+terms:        35048 (RU/EN tags present; translation quality remains incomplete)
 without_latin_en: 7302
 signature-invalid: 0
-processed:    1:11065  2:440  3:968
+processed:    1:11076  2:446  3:969
 self-loops:   0
+taxonomy cycles: 0
 deprecated relation codes: 0
 explicit negations preserved: 23
 ```
@@ -271,6 +276,7 @@ explicit negations preserved: 23
 
 | Дата | Этап | Что сделано | concepts | edges | paths |
 |---|---|---|---|---|---|
+| 2026-10-09 | Q9 | Sets, cardinality, set operations, collection and runtime senses; 19 additions, 1 merge, 7 rejected relations, 50 added relations; live dataset updated | 12491 | 16522 | 58117 |
 | 2026-10-09 | Q8 | Foundation pilot: model/language, array/list/index, number/type, measurement, adjectives; 6 additions, 1 merge, 11 rejected relations, 22 added relations; live dataset updated | 12473 | 16473 | 58000 |
 | 2026-10-08 | Q7 | Пять дублей с зависимыми связями объединены; операции отделены от результатов; поведение и роли процессов; 10 исправлений; уточнён код 27; 114 новых условий и 36 тестов | 12468 | 16452 | 57970 |
 | 2026-10-08 | Q6 | 36 детей абстрактного понятия разобраны; восемь дублей объединены; 48 исправлений связей; позвоночные и свойства организмов; 384 новых условия и проверка наследования растений/грибов | 12468 | 16439 | 57948 |

@@ -1,6 +1,6 @@
 # Reviewing and filling properties
 
-Current workflow for [0.1.0-dev](../VERSION), following the Q7 data review.
+Current workflow for [0.1.0-dev](../VERSION), using the Q9 data review as an example.
 Read [ontology rules](ontology-rules.md) before editing meanings or relations.
 
 ## Start from a defined review area
@@ -43,7 +43,7 @@ counterexamples, and preservation checks for other rules.
 
 ## Prepare a reviewed batch
 
-Use [the Q8 manifest](../tools/quality_20261009_q8.json) as a concrete example
+Use [the Q9 manifest](../tools/quality_20261009_q9.json) as a concrete example
 of the format, not a list of changes to repeat on an unrelated database.
 
 | Field | Purpose |
@@ -69,7 +69,7 @@ Configure a maintenance database account first. A rollback preview executes
 writes inside a transaction and therefore needs write privileges.
 
 ```bash
-python tools/apply_quality_batch.py tools/quality_20261009_q8.json --report preview.json
+python tools/apply_quality_batch.py tools/quality_20261009_q9.json --report preview.json
 ```
 
 Without `--apply`, the runner rolls back. It validates new edges through
@@ -78,10 +78,10 @@ Confirm that the preview matches the intended changes and preserves existing
 negations. A historical batch's old-value preconditions may reject a newer
 snapshot; prepare a new reviewed batch instead of bypassing the checks.
 
-To save a reviewed batch:
+To save a new reviewed batch (replace the historical example path with your batch):
 
 ```bash
-python tools/apply_quality_batch.py tools/quality_20261009_q8.json --apply --report applied.json
+python tools/apply_quality_batch.py tools/quality_20261009_q9.json --apply --report applied.json
 ```
 
 `--apply` requires `mariadb-dump` or `mysqldump`, and creates a full backup in

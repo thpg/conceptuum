@@ -1,6 +1,6 @@
 # Roadmap and coverage review
 
-Current baseline: [code 0.1.0-dev](VERSION), [data Q8](docs/quality/2026-10-09-q8.md).
+Current baseline: [code 0.1.0-dev](VERSION), [data Q9](docs/quality/2026-10-09-q9.md).
 This is the active work plan. Earlier expansion totals and relation-code
 instructions remain available in Git history; they do not describe the
 current graph or a sequence of scripts to rerun.
@@ -150,6 +150,33 @@ then uses practical tasks to extend the repaired common vocabulary.
 
 ## Filling plan
 
+### Progress — 2026-10-09, Q9
+
+The second foundation increment reviews 12 existing records, merges one
+duplicate, and adds 19 meanings. Mathematical sets now have cardinality
+properties and scoped empty/nonempty and finite/infinite oppositions. The
+existing subset meaning and commutative and associative operation classes
+are reused; JRE moves to runtime environment. See the
+[Q9 report](docs/quality/2026-10-09-q9.md).
+
+Within the fixed cohort, records with direct non-taxonomic relations changed
+from 2/12 to 5/11 surviving. All already had Latin-script
+English terms. Of the 19 new meanings, 13 have a direct non-taxonomic relation.
+This measures relation coverage, not semantic completeness.
+
+Together Q8 and Q9 review 28 distinct existing records, merge two duplicates,
+and introduce 25 meanings. The pilot has reached its initial new-meaning
+estimate; prioritize reuse and enrichment of existing concepts in the next
+increment. Review that estimate explicitly if another missing genus is needed.
+The roughly 100-meaning pilot remains in progress.
+
+**Next:** review the remaining mixed data-type, data-structure, and model
+children, followed by fraction/percent/ratio and quantity/unit vocabulary.
+The legacy collection branch, general idempotence, and parser associativity
+remain separate review tasks. The two new Euler examples are documented as
+shared selections; arbitrary membership facts and a symbolic set solver are
+outside Q9's scope.
+
 ### Progress — 2026-10-09, Q8
 
 The first foundation increment is applied. It reviews 16 existing records,
@@ -165,12 +192,9 @@ merged. Records with a direct non-taxonomic relation changed from 4/16 to
 5/15. Of the six new concepts, one has such a relation. These are coverage
 indicators, not a claim that all reviewed meanings are fully filled.
 
-**Next:** finish the collection/mathematical-set sense review (2636 and 859),
-including the misplaced JRE child of subset. Then continue batch 2's number,
-set-operation, and Euler explanations. Mixed children of data type, data
-structure, and model, plus the broad relational-property classifications,
-remain explicit follow-up work. Batch 1 and the 100-meaning pilot are not
-marked complete.
+Q9 continues the collection/set, subset/JRE, and set-operation work from
+this increment. The original coverage tables above remain the Q7 baseline;
+neither batch marks the whole foundation or pilot complete.
 
 ### First pilot: approximately 100 reviewed meanings
 
