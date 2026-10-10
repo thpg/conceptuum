@@ -1,11 +1,33 @@
 # Roadmap and coverage review
 
-Current baseline: [code 0.1.0-dev](VERSION), [data Q39](docs/quality/2026-10-09-q39.md).
-Q10–Q39 are published to GitHub and the site at the user's request.
+Current baseline: [code 0.1.0-dev](VERSION), [data Q40](docs/quality/2026-10-10-q40.md).
+Q10–Q40 and the QA generator are published to GitHub and the site at the user's request.
 Continue further filling locally unless publication is requested.
 This is the active work plan. Earlier expansion totals and relation-code
 instructions remain available in Git history; they do not describe the
 current graph or a sequence of scripts to rerun.
+
+## Immediate quality queue after Q40
+
+1. Review the 25 legacy records that merge different source verbs, such as
+   dying/measuring or singing/drinking. Recover each sense and its genera
+   before splitting records; selecting a single replacement word would lose meaning.
+2. Review the 4,379 deferred generated labels for usage and sense. This queue
+   includes valid productive or rare nouns. Dictionary absence is a search
+   signal, not a deletion rule. Keep attested words, including the Russian
+   word for detention, and remove only demonstrated spelling or derivation errors.
+3. Resolve the semantic assertions excluded by
+   [the QA policy](concept_algebra/qa_policy.json), including ant flight,
+   lentil classification and grammatical case. Q40 does not change relations.
+4. Expand reviewed translations and distinguishing properties in the branches
+   below. The QA generator currently requires an English term containing Latin
+   letters even for Russian output, so the legacy untranslated branch is excluded.
+5. Review larger QA samples and separate related concept families across
+   training and evaluation splits. The current 400-example pilot verifies
+   derivability, not a demonstrated improvement in a trained model.
+
+The generator and Q40 snapshot are published. Source manifests and the
+[adequacy review](docs/quality/2026-10-10-qa-review.md) record the completed checks.
 
 Coverage reviewed on **2026-10-09**, using a read-only snapshot of the local
 database at 00:02 Asia/Yekaterinburg. The inventory matches Q7's 12,468 concepts,

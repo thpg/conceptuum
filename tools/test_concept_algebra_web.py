@@ -216,6 +216,11 @@ class AlgebraWebTests(unittest.TestCase):
             status, result = request('POST', '/evaluate', '{"expression":"penguin <= bird"}', headers)
             self.assertEqual(status, 200)
             self.assertTrue(result['value'])
+            status, batch = request('POST', '/generate', '{"count":12,"lang":"en"}', headers)
+            self.assertEqual(status, 200)
+            self.assertEqual(batch['schema'], 'conceptuum.qa.batch.v1')
+            self.assertEqual(batch['report']['verified'], 12)
+            self.assertEqual(request('POST', '/generate', '{"count":51}', headers)[0], 422)
             self.assertEqual(request('POST', '/evaluate', None, dict(headers, **{'Content-Length': str(MAX_BODY + 1)}))[0], 413)
         finally:
             server.shutdown()

@@ -1,7 +1,8 @@
 # Conceptuum visualizer
 
-Bundled and published site data: **Q39**. Interface revision: **2026-10-09.2**,
-including the [concept algebra workspace](https://conceptuum.su/algebra?lang=en).
+Bundled and published data: **Q40**. Interface revision: **2026-10-10.1**,
+including the [QA generator](https://conceptuum.su/training) and
+[concept algebra workspace](https://conceptuum.su/algebra?lang=en).
 
 A Go HTTP server with a dependency-free HTML, CSS, and JavaScript explorer.
 See the [project setup guide](../docs/setup.md) for database configuration.
@@ -12,7 +13,7 @@ directory from its working directory.
 
 ## Concept algebra worker
 
-The `/algebra` page uses the project's Python parser and evaluator. Start its
+The `/algebra` and `/training` pages use the project's Python worker. Start the
 worker in a second terminal **from the repository root**, with Python dependencies
 installed and the same `JNANA_HOST`, `JNANA_PORT`, `JNANA_DATABASE`, `JNANA_USER`
 and `JNANA_PASSWORD` settings as your Python queries:
@@ -23,7 +24,8 @@ python -m concept_algebra.web --port 7101 --version-file visualizer/static/versi
 
 The Go server uses `JNANA_DSN` and proxies `POST /api/algebra` to
 `http://127.0.0.1:7101/evaluate`. `CONCEPTUUM_ALGEBRA_URL` overrides that loopback
-address. Start both processes for algebra; the explorer and Euler circles only
+address. `POST /api/qa/generate` uses the same worker's fixed `/generate` route.
+Start both processes for algebra and QA generation; the explorer and Euler circles only
 need the Go server. The worker uses Python's standard library and PyMySQL; no
 LLM server is required. `GET http://127.0.0.1:7101/health` checks graph availability.
 
@@ -45,6 +47,20 @@ question–answer examples locally in the browser and exports JSONL with complet
 set IDs, comparison diagnostics, selected evidence and original source versions.
 Questions are never included in API requests. Collections hold up to 50 examples
 or 4 MiB; the interface reports when only session storage is available.
+
+## Question–answer generation
+
+Open `/training` to generate English or Russian questions with answers and
+supporting graph facts. Choose question types, a seed, context and optional
+focus concept. Presets cover a balanced sample, flight exceptions, and
+overlapping container classes. Batches contain up to 50 examples; the CLI
+supports up to 2,000.
+
+Review the cards and uncheck unwanted examples before downloading annotated
+JSONL, chat-format training JSONL, or a quality report. Evidence includes an
+algebra replay link where applicable. Unknown facts remain distinct from
+negative facts, and insufficient suitable data produces an explicit shortfall.
+The [generator guide](../docs/qa-generator.md) documents formats and limitations.
 
 ## Exploring the graph
 
@@ -194,6 +210,7 @@ Run the server against the bundled dataset first. In a separate Python environme
 python -m pip install -r requirements-test.txt
 python -m playwright install chromium
 python test_algebra_browser.py
+python test_training_browser.py
 ```
 
 Set `CONCEPTUUM_TEST_URL` to test a different address. Set
@@ -201,17 +218,22 @@ Set `CONCEPTUUM_TEST_URL` to test a different address. Set
 Chromium. The browser checks only read the database; example collections use an
 isolated browser context and disappear when that test context closes.
 
-The eleven algebra scenarios require the Python worker and Q39 data. They check
+The eleven algebra scenarios require the Python worker and Q40 data. They check
 all nine demos, source evidence, downloads, ambiguity in both inputs, complete
 IDs across result pages, shared-link reloads, mobile search, stale responses,
 comparison counterexamples, arbitrary record inspection and collection export,
 restore and replay. `node test_algebra_collection.js` runs nine database-free
 checks for JSONL, deduplication, storage failures, size limits and multiple tabs.
+Six QA browser scenarios cover selected exports, evidence, algebra replay,
+Russian content, explicit negatives, shortfalls, network failures, safe text
+rendering, and narrow screens.
 
 Run `go test ./...` for the API proxy's transport, validation and error handling,
 and syntax checks for the JavaScript files in `static/`. From the repository root,
 `python -m unittest discover -s tools -p "test_concept_algebra*.py"` checks the
 parser, graph semantics, explanations and HTTP worker without a real database.
+`python -m unittest discover -s tools -p "test_concept_qa.py"` checks the generator,
+independent answer verification, evidence tampering and deterministic output.
 There is no frontend package build step.
 
 ## Deployment files

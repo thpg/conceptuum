@@ -381,6 +381,15 @@ func main() {
 	http.HandleFunc("/api/tree", handleTree)
 	http.HandleFunc("/api/euler", handleEuler)
 	http.Handle("/api/algebra", algebraHandler())
+	http.Handle("/api/qa/generate", conceptProxy("/generate"))
+	http.HandleFunc("/training", func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != http.MethodGet && r.Method != http.MethodHead {
+			w.Header().Set("Allow", "GET, HEAD")
+			http.Error(w, "use GET for QA generation", http.StatusMethodNotAllowed)
+			return
+		}
+		http.ServeFile(w, r, "static/training.html")
+	})
 	http.HandleFunc("/algebra", func(w http.ResponseWriter, r *http.Request) {
 		if r.Method != http.MethodGet && r.Method != http.MethodHead {
 			w.Header().Set("Allow", "GET, HEAD")

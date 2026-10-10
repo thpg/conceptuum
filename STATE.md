@@ -3,11 +3,26 @@
 Update this file at the end of each content session. Continue from the first
 unfinished item in [PLAN.md](PLAN.md), using the current snapshot below.
 
-**Publication policy:** Q10–Q39 are included in the Q39 repository and site
-publication requested on 2026-10-09. Continue further filling locally unless
+**Publication policy:** Q10–Q40 and the QA generator are included in the
+repository and site publication requested on 2026-10-10. Continue further filling locally unless
 publication is requested. Experiments remain local.
 
 ## Current position
+
+- **Published QA generator and Q40 cleanup (2026-10-10):** Added the deterministic
+  Python/CLI generator and `/training` interface. Export annotated examples or
+  chat-format JSONL, review supporting facts, and exclude individual examples.
+  The 200 English and 200 Russian pilot records pass independent recomputation;
+  54 examples received a separate semantic review. See the
+  [generator guide](docs/qa-generator.md) and [adequacy review](docs/quality/2026-10-10-qa-review.md).
+  Q40 corrects 65 names and removes 6,017 malformed Russian aliases; 6,836
+  mis-tagged source verbs are retained as Russian terms. All concept IDs,
+  edges, rules, contexts and paths are unchanged; definitions are regenerated.
+  Rare and unverified names are retained, with 4,379 label candidates and 25
+  merged-sense cases recorded for further review. See the
+  [Q40 report](docs/quality/2026-10-10-q40.md). Published interface `2026-10-10.1`.
+  All six live tables match Q40. The README describes training-data preparation;
+  private corpora, model experiments and deployment credentials remain local.
 
 - **Published concept algebra (2026-10-09):** Python package, CLI and
   [web workspace](https://conceptuum.su/algebra?lang=en), with typed set expressions,
@@ -338,13 +353,13 @@ local-only work precede the combined Q39 repository and site publication.
   извлекает лишние понятия по отдельным словам.
   Подробные ID и термины: `docs/quality/2026-10-08-q7-after.json`.
 
-## Current local database snapshot — 2026-10-09, Q39
+## Current local database snapshot — 2026-10-10, Q40
 
 ```
 concepts:     13456 (Everyday: 12049, IT: 1030, Legal: 160, Logic: 217)
 edges:        18450 (accepted: 17350, rejected: 1100)
 paths:        64683
-terms:        37825 (RU/EN tags present; translation quality remains incomplete)
+terms:        31515 (RU/EN tags present; translation quality remains incomplete)
 without_latin_en: 7251
 signature-invalid: 0
 processed:    1:11624  2:853  3:979
@@ -358,6 +373,7 @@ explicit negations preserved: 23
 
 | Дата | Этап | Что сделано | concepts | edges | paths |
 |---|---|---|---|---|---|
+| 2026-10-10 | Q40 local | Conservative lexical cleanup; 65 labels, 6,017 malformed Russian aliases; concept IDs and relations preserved | 13456 | 18450 | 64683 |
 | 2026-10-09 | Q39 local | Containers, brushes, and scraping tools; 41 additions, 106 new relations; local only | 13456 | 18450 | 64683 |
 | 2026-10-09 | Q38 local | Database names, views, plans, and key columns; 36 additions, 64 new relations; local only | 13415 | 18344 | 64340 |
 | 2026-10-09 | Q37 local | Motion paths, inertia, momentum, and work; 35 additions, 68 new relations; local only | 13379 | 18280 | 64131 |

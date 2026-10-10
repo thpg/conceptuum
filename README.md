@@ -1,12 +1,12 @@
 # conceptuum
 
-A multilingual concept graph with Euler diagrams and executable concept algebra for knowledge exploration, LLM training-data preparation, and evaluation.
+A multilingual concept graph with Euler diagrams, executable concept algebra, and a question–answer generator for LLM training and evaluation.
 
 conceptuum represents meanings as nodes and connects them through relations such as genus, purpose, material, opposition, and cause. Explore the graph, compute concept expressions, inspect their supporting relations, and export structured examples for language models. It combines a MariaDB snapshot, a Python parser and evaluator, and a Go web interface.
 
-**Development version:** [0.1.0-dev](VERSION) · **Data snapshot:** [Q39, 2026-10-09](docs/quality/2026-10-09-q39.md) · **Published site data:** Q39 · **[Changelog](CHANGELOG.md)** · **[Live demo](https://conceptuum.su)**
+**Development version:** [0.1.0-dev](VERSION) · **Bundled and live data:** [Q40, 2026-10-10](docs/quality/2026-10-10-q40.md) · **Interface:** 2026-10-10.1 · **[Changelog](CHANGELOG.md)** · **[Live demo](https://conceptuum.su)**
 
-**Try it:** [Concept algebra](https://conceptuum.su/algebra?lang=en) · [Euler circles](https://conceptuum.su/?view=euler&lang=en) · [LLM training data and evaluation](#llm-training-data-and-evaluation)
+**Try it:** [QA generator](https://conceptuum.su/training) · [Concept algebra](https://conceptuum.su/algebra?lang=en) · [Euler circles](https://conceptuum.su/?view=euler&lang=en) · [LLM training data and evaluation](#llm-training-data-and-evaluation)
 
 ## Euler diagrams from the concept graph
 
@@ -35,7 +35,28 @@ New in Q9: compare [finite and nonempty sets](https://conceptuum.su/?concept=244
 [commutative and associative operations](https://conceptuum.su/?concept=635&view=euler&sets=635,567&context=1&basis=catalog&op=intersection&a=635&b=567&lang=en). The first shares the singleton-set
 record; the second shares the union and intersection records.
 
-**Topics:** `knowledge-graph` · `ontology` · `euler-diagrams` · `concept-algebra` · `llm-training` · `training-data`
+## Generate questions and answers for LLM training
+
+Open the **[QA generator](https://conceptuum.su/training)** to create English or
+Russian questions with computed answers and the graph facts needed to solve
+them. Eight task families cover direct and shared genera, ancestry,
+intersections, differences, counts, inherited properties and valid or
+unsupported inferences.
+
+Choose a seed, context and optional concept family, inspect each answer and its
+evidence, then uncheck examples you do not want to export. Download **Training
+JSONL** with `system`, `user` and `assistant` messages, or **JSONL with evidence**
+for source IDs, algebra queries and graph fingerprints. The website supports
+up to 50 examples per batch; the CLI supports up to 2,000.
+
+Every answer is independently recomputed from its supplied facts. The
+[adequacy review](docs/quality/2026-10-10-qa-review.md) checks 200 English and
+200 Russian examples, including 54 examples inspected for meaning and wording.
+Source errors and limited coverage still require editorial review. See
+[how to prepare training data](#llm-training-data-and-evaluation) and the
+[generator guide](docs/qa-generator.md).
+
+**Topics:** `knowledge-graph` · `ontology` · `euler-diagrams` · `concept-algebra` · `llm-training` · `training-data` · `question-generation`
 
 ## What you can do
 
@@ -50,6 +71,8 @@ record; the second shares the union and intersection records.
   follow relations, and select inherited properties with explicit negatives.
 - Export expressions, resolved concept IDs, results and evidence as JSON for
   [LLM training-data preparation and evaluation](#llm-training-data-and-evaluation).
+- Generate English or Russian questions with computed answers and supporting
+  facts; review individual examples and export training JSONL.
 - Review proposed changes against relation signatures, hierarchy checks, and explicit regression conditions.
 
 The graph is experimental and still being reviewed. Structural validation catches some category errors; it does not establish whether a statement or translation is true.
@@ -79,14 +102,15 @@ An operation and its numerical result are different meanings. The `defin` field 
 | Component | Version / requirement |
 |---|---|
 | Project | **0.1.0-dev**, an unreleased development version |
-| Bundled and live data | **2026-10-09 / Q39** |
-| Web interface | **2026-10-09.2**, including comparison evidence and JSONL example collections |
+| Bundled and live data | **2026-10-10 / Q40** |
+| Web interface | **2026-10-10.1**, with QA generation and reviewed JSONL export |
 | Algebra language / example schema | **1** / `conceptuum.algebra.example.v1` |
+| QA generator / example schema | **1** / `conceptuum.qa.v1` |
 | Python | **3.9+**; checked with **3.9.13** |
 | PyMySQL | **1.2.0**, pinned in [requirements.txt](requirements.txt) |
 | pymorphy3 | **2.0.6**, pinned for Russian morphological matching |
 | Go | **1.26.1+**, required by [visualizer/go.mod](visualizer/go.mod); only needed for the visualizer |
-| MariaDB | Local setup checked on **5.5.42**; live Q39 import and visualizer checked on **11.8.6** |
+| MariaDB | Local setup checked on **5.5.42**; live Q40 import and visualizer checked on **11.8.6** |
 
 The MariaDB version records the existing test environment. Compatibility with other server versions, including MySQL, needs separate verification. Python direct dependencies are pinned; Go dependencies are recorded in `go.mod` and `go.sum`.
 
@@ -192,7 +216,7 @@ cd visualizer
 go run .
 ```
 
-For the **Algebra** page, also start its Python worker from the repository root
+For the **Algebra** and **QA generator** pages, also start the Python worker from the repository root
 in a second terminal with the `JNANA_*` settings from step 3:
 
 ```bash
@@ -264,10 +288,38 @@ comparisons. Shared links retain the inspected ID.
 
 ## LLM training data and evaluation
 
-Conceptuum is a tool for **preparing structured training examples and checking
-model answers against a versioned concept graph**. It supplies an executable
-reference for tasks such as resolving terms to IDs, translating questions into
-concept expressions, finding shared genera, and explaining inherited properties.
+Use the **[online generator](https://conceptuum.su/training)**, or generate a
+reproducible batch from the local database:
+
+```sh
+python -m concept_algebra.qa --count 200 --seed 42 --lang en --output qa-en.jsonl --messages-output qa-en-sft.jsonl --report qa-en-report.json
+```
+
+Use `--lang ru` for Russian. Review the generated cards and exclude individual
+examples before downloading. Training JSONL contains system, user and assistant
+messages; annotated JSONL also retains concept IDs, source edges and graph hashes.
+
+For supervised fine-tuning:
+
+1. Fix the data revision, context, seed and task selection. Keep the annotated
+   export and quality report alongside the training file for reproducibility.
+2. Inspect the wording, supplied facts and answers. Remove unsuitable examples;
+   automatic checks establish derivability, not independent world-fact accuracy.
+3. Split annotated records by `group_id`, keeping language variants together.
+   Check shared concept families and evidence across splits as well. A different
+   random seed alone does not create a separate evaluation set.
+4. Export each split as `{"messages": [...]}` rows. Preserve system instructions
+   and the user message's facts, apply your model's chat template, and train on
+   the assistant response using your trainer's appropriate loss masking.
+5. Evaluate on held-out examples against their computed answers. Track task
+   types and distinguish positive, negative, unknown and conflicting properties.
+
+These examples teach answering from supplied evidence. The project generates
+and verifies data; training runs in your own pipeline. No improvement in a
+trained model is claimed by the generator's consistency checks.
+
+For custom questions, use the **algebra example collection** to pair your own
+wording with executable expressions and inspectable answers:
 
 1. Choose an expression in the [web workspace](https://conceptuum.su/algebra?lang=en)
    or generate queries with the [Python API](docs/concept-algebra.md#python-api-and-json).
@@ -322,19 +374,20 @@ The unit tests need no database or model. The audits read the configured databas
 
 ## Data snapshot and limits
 
-The published **Q39** snapshot contains **13,456 concepts**, **17,350 accepted edges**, **1,100 rejected edges**, **64,683 genus paths**, and **37,825 terms** across everyday, IT, legal, and logic universes. Compared with Q9, the combined Q10–Q39 reviews add a net **965 concepts**, **1,633 accepted edges**, and **2,777 terms**.
+The bundled and published **Q40** snapshot contains **13,456 concepts**, **17,350 accepted edges**, **1,100 rejected edges**, **64,683 genus paths**, and **31,515 terms** across everyday, IT, legal, and logic universes.
 
-Q11–Q39 use Open English WordNet 2025 to guide reviewed additions. Q39 adds 41 concepts and 106 relations for physical containers, material/use intersections, bristled tools, applicators, cleaning tools and scrapers. Ten inherited assertions, five labels and ten malformed or incorrectly tagged terms are corrected.
+Q11–Q39 use Open English WordNet 2025 to guide reviewed additions. Q40 corrects 65 generated labels and removes 6,017 malformed Russian aliases. It removes 6,836 Russian infinitives from the English column while retaining those words as Russian terms. Concept identities, edges, rules, contexts and genus paths are unchanged. Rare and uncertain words remain available for review: dictionary absence alone is not grounds for deletion.
 
-GitHub and the hosted demo include Q39. All six deployed tables match the reviewed snapshot, with timestamps compared in UTC. The SQL dump explicitly retains the source database's `utf8_general_ci` collation so newer MariaDB defaults do not merge distinct term keys during import. The local audit detected no signature violations, hierarchy cycles, or self-loops; all 23 explicit negations survived the reviews. These checks establish structural consistency, not complete or verified knowledge. **7,251 concepts still lack an English-tagged term containing Latin letters**, and even Latin-script terms need translation review.
+GitHub and the hosted demo include Q40. All six deployed tables match the reviewed snapshot, with timestamps compared in UTC. The SQL dump explicitly retains the source database's `utf8_general_ci` collation so newer MariaDB defaults do not merge distinct term keys during import. The local audit detected no signature violations, hierarchy cycles, or self-loops; all 23 explicit negations survived the reviews. These checks establish structural consistency, not complete or verified knowledge. **7,251 concepts still lack an English-tagged term containing Latin letters**, and even Latin-script terms need translation review.
 
-The [coverage review and filling plan](PLAN.md) prioritizes remaining work. Sources and exact changes are recorded in the [Q39 review](docs/quality/2026-10-09-q39.md) and its [batch manifest](tools/quality_20261009_q39.json). The [Q11 review](docs/quality/2026-10-09-q11.md) retains the pinned dictionary comparison and source notices. The [changelog](CHANGELOG.md) separates code versions from data revisions; older entries in the [maintainer state](STATE.md) include Russian text.
+The [coverage review and filling plan](PLAN.md) prioritizes remaining work. Sources and exact lexical changes are recorded in the [Q40 review](docs/quality/2026-10-10-q40.md) and its [manifest](tools/quality_20261010_q40.json). The [Q40 publication record](docs/quality/2026-10-10-q40.md#publication) identifies the deployed snapshot; the [Q11 review](docs/quality/2026-10-09-q11.md) retains dictionary attribution. The [changelog](CHANGELOG.md) separates code versions from data revisions; older entries in the [maintainer state](STATE.md) include Russian text.
 
 ## Documentation
 
 | Document | Purpose |
 |---|---|
 | [Setup](docs/setup.md) | Connection settings, import behavior, and troubleshooting |
+| [QA generator](docs/qa-generator.md) | Question types, training JSONL, CLI, API, verification and split guidance |
 | [Ontology rules](docs/ontology-rules.md) | Concept identity, genera, relation meanings, and review constraints |
 | [Property review](docs/fill-properties.md) | Preparing, previewing, and applying a reviewed batch |
 | [Filling algorithm](FILL_ALGORITHM.md) | Candidate generation, semantic review, and implementation limits |

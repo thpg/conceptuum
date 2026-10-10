@@ -1,0 +1,27 @@
+.training-page .app-header>.github-link{margin-left:auto}
+.qa-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.qa-controls label{display:flex;flex-direction:column;gap:7px;font-size:11px;color:var(--muted)}
+.qa-controls label span{display:inline;font-size:10px}
+.qa-controls input,.qa-controls select{height:38px;width:100%;border:1px solid var(--line);border-radius:6px;padding:7px 9px;background:white;font-size:12px}
+#qa-tasks{display:flex;flex-wrap:wrap;gap:9px 17px;margin:20px 0 0;padding:13px 0 0;border:0;border-top:1px solid var(--line)}
+#qa-tasks legend{font-size:11px;color:var(--muted);padding-right:12px}
+#qa-tasks label{display:flex;align-items:center;gap:6px;font-size:11px}
+.training-page input[type=checkbox]{accent-color:var(--green);width:15px;height:15px;flex:none}
+#qa-error{color:#8b4835;font-size:12px;margin:10px 0;white-space:pre-wrap}
+#qa-selected{font-size:11px;color:var(--green)}
+.qa-downloads{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0}
+#qa-report{margin-top:14px;font-size:11px;color:var(--muted);line-height:1.8}
+.qa-summary{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.qa-tag{display:inline-block;font-size:10px;background:#edf3e9;color:#527354;border-radius:5px;padding:3px 7px}
+.qa-example{border-top:1px solid var(--line);padding:21px 0 2px;overflow-wrap:anywhere}
+.qa-example:last-child{padding-bottom:0}
+.qa-example.excluded{opacity:.55}
+.qa-example-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:11px}
+.qa-example-top label{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--muted)}
+.qa-question{font-size:14px;font-weight:600;line-height:1.75;margin-bottom:11px}
+.qa-answer{font-size:12px;line-height:1.8;padding:12px 15px;background:#f4f7f0;border-left:2px solid #a4bea0;border-radius:0 6px 6px 0;color:#405845;white-space:pre-wrap}
+.qa-example details{font-size:11px;margin:13px 0 17px;color:var(--muted)}
+.qa-example summary{cursor:pointer;color:var(--green);width:fit-content}
+.qa-example pre{white-space:pre-wrap;overflow-wrap:anywhere;font:11px/1.8 Consolas,monospace;background:#f7f8f5;border-radius:6px;padding:13px;margin-top:12px;max-height:430px;overflow:auto}
+.qa-example a{display:inline-block;margin:10px 0;color:var(--green);font-size:11px}
+@media(max-width:760px){.training-page .app-header{flex-wrap:wrap;gap:10px;padding-top:12px;padding-bottom:12px}.training-page .algebra-nav{order:3;flex:0 0 100%;overflow-x:auto}.training-page .algebra-nav a{padding:7px 10px}.training-page .qa-controls{grid-template-columns:repeat(2,minmax(0,1fr))}.training-page .algebra-main{padding-top:27px}.training-page .card-heading{flex-wrap:wrap}.training-page .card-heading select{max-width:100%}.training-page .shortcut-hint{display:none}}

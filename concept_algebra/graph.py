@@ -222,6 +222,11 @@ class ConceptGraph:
         label = min(terms, key=lambda t: (len(t), t.casefold(), t)) if terms else concept.name
         return {"id": cid, "name": label, "canonical_name": concept.name, "context": concept.context}
 
+    def terms(self, cid, lang):
+        """Exact stored terms, without falling back to another language."""
+        self.concept(cid)
+        return tuple(sorted(self._terms.get((cid, lang), ()), key=lambda term: (len(term), term.casefold(), term)))
+
     def resolve(self, reference, lang=None):
         if "id" in reference:
             cid = reference["id"]

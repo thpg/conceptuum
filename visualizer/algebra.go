@@ -23,8 +23,13 @@ func algebraError(w http.ResponseWriter, status int, message string) {
 }
 
 func newAlgebraHandler(endpoint string) http.Handler {
+	return newConceptProxy(endpoint, "/evaluate")
+}
+
+func newConceptProxy(endpoint, path string) http.Handler {
 	base, err := url.Parse(endpoint)
 	valid := err == nil && base.Scheme == "http" && base.User == nil && base.RawQuery == "" && base.Fragment == "" && (base.Path == "" || base.Path == "/")
+	valid = valid && (path == "/evaluate" || path == "/generate")
 	if valid {
 		valid = base.Hostname() == "127.0.0.1" || base.Hostname() == "localhost" || base.Hostname() == "::1"
 	}
@@ -56,7 +61,7 @@ func newAlgebraHandler(endpoint string) http.Handler {
 		ctx, cancel := context.WithTimeout(r.Context(), 20*time.Second)
 		defer cancel()
 		target := *base
-		target.Path = "/evaluate"
+		target.Path = path
 		request, requestErr := http.NewRequestWithContext(ctx, http.MethodPost, target.String(), bytes.NewReader(body))
 		if requestErr != nil {
 			algebraError(w, http.StatusServiceUnavailable, "Concept algebra is not configured")
@@ -83,9 +88,13 @@ func newAlgebraHandler(endpoint string) http.Handler {
 }
 
 func algebraHandler() http.Handler {
+	return conceptProxy("/evaluate")
+}
+
+func conceptProxy(path string) http.Handler {
 	endpoint := os.Getenv("CONCEPTUUM_ALGEBRA_URL")
 	if endpoint == "" {
 		endpoint = "http://127.0.0.1:7101"
 	}
-	return newAlgebraHandler(endpoint)
+	return newConceptProxy(endpoint, path)
 }

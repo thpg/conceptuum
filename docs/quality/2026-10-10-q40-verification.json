@@ -1,0 +1,34 @@
+{
+  "data_revision": "Q40",
+  "changes": {
+    "concepts_renamed": 65,
+    "terms_added": 6543,
+    "terms_removed": 12853
+  },
+  "counts": {
+    "concept": 13456,
+    "concept_term": 31515,
+    "edge": 18450,
+    "relevant": 29,
+    "universum": 5,
+    "concept_path": 64683
+  },
+  "table_sha256": {
+    "concept": "51e271df1bfbe65bbe4980b3ce5f073de07946c738960f07842c0106d0a42d32",
+    "concept_term": "cc38d81a28e4c42022e472de21cc8e558d1a8fd9433f5a80c3d80c4b15af947e",
+    "edge": "c89a17adda342a0c3e7d0ac29c43d315d009584db275afdd6d34f99fb299d710",
+    "relevant": "453e6a6e19f29de2fe863cc2e31f1cab8c776869f1ee8ee739a01010bc495d2d",
+    "universum": "82cfb34988f028e80cea3cea62a2030a430d0a99b1520abb221ee7cde7a3d091",
+    "concept_path": "ce3b53a755f7493230b4a5c80edc2e411a338b6f8bbb2348fd9e215677c411b9"
+  },
+  "structure_unchanged": true,
+  "manifest_sha256": "301ba221e403b01ff5689dc6c397fc5b30fdda16e75b72de60ed941004014c1f",
+  "source_dump_sha256": "74d4e41ecbeba240678ffd8bd7930bc10e554ce8c8ec27b1710f53793739fab3",
+  "checks": {
+    "detention_preserved": true,
+    "incorrect_detention_alias_removed": true,
+    "artificial_computation_forms_removed": true,
+    "valid_technical_term_preserved": true
+  },
+  "fingerprint_time_zone": "+00:00"
+}

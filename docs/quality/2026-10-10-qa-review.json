@@ -1,0 +1,174 @@
+{
+  "en": {
+    "report": {
+      "requested": 200,
+      "generated": 200,
+      "complete": true,
+      "seed": 42,
+      "context": 1,
+      "language": "en",
+      "root": null,
+      "tasks": {
+        "count": 20,
+        "property": 60,
+        "ancestry": 20,
+        "inference": 20,
+        "intersection": 20,
+        "parents": 20,
+        "shared_genus": 20,
+        "difference": 20
+      },
+      "property_states": {
+        "negative": 20,
+        "positive": 20,
+        "unknown": 20
+      },
+      "intersection_answers": {
+        "empty": 8,
+        "nonempty": 12
+      },
+      "ancestry_answers": {
+        "established": 13,
+        "not_established": 7
+      },
+      "verified": 200,
+      "duplicates": 0,
+      "rejected_candidates": {
+        "catalog_domain_size": 150,
+        "evidence_too_large": 1,
+        "missing_or_unsuitable_label": 10,
+        "reviewed_concept_exclusion": 1,
+        "uninformative_count_domain": 1
+      },
+      "attempted_candidates": 363,
+      "source": {
+        "code_version": "0.1.0-dev",
+        "interface_revision": "2026-10-10.1",
+        "data_revision": "Q40",
+        "source_dump_sha256": "74d4e41ecbeba240678ffd8bd7930bc10e554ce8c8ec27b1710f53793739fab3",
+        "graph_sha256": "319a4f34ea7f0074532621d09679eeabe01a52555dd93400b822930dbc6307fb",
+        "qa_policy_sha256": "5911d0f3304535c73a257688841a9805d3253e959a9f493541ca76f90148c52f",
+        "generator_version": "1"
+      },
+      "review_scope": "Source fidelity, independent recomputation from supplied facts, controlled wording and known-issue exclusions. Not an exhaustive world-fact or linguistic review.",
+      "split_guidance": "Keep group_id together across train/evaluation splits. Shared ancestors and evidence can still cross groups; inspect that overlap before claiming held-out concepts."
+    },
+    "annotated_sha256": "890389d8d6ff3df95112eed861a5c4cfd3819af9c9b437d2448c5afa6dcc0c70",
+    "sft_sha256": "d9069da3c218c615ce177bd886622f18559cc2f6be48e57069be196159c1cc23",
+    "semantic_review_ids": [
+      "9da3cc98153b9f82de5f4918",
+      "39421c4044a398c078765d18",
+      "067efc35cb65f8afe9d99696",
+      "fd18bd182a4837893954a2e6",
+      "8eafb3f7042efe654c9dbceb",
+      "95ebffc3f59ae5e5c67a743f",
+      "f4f5884dcf9690165e3d15eb",
+      "8ee0fbf162e02fb61ac00e31",
+      "054b8f3f0091639cc0113f58",
+      "8f843e8613aa632a2a817422",
+      "c36915715379c2106ee0bd20",
+      "8f2dd8e41a6ea0b1169565b8",
+      "99dc6ee93a833408149d7343",
+      "70599929e51174694e263782",
+      "6d153101c849c656338e3f99",
+      "736857c537cefea57a28a88a",
+      "22b9e668c4774d610b679bbf",
+      "cdf7d65efd90de28324f742a",
+      "a5b62204a3dc62d8ebad7919",
+      "7ff0722379fda699fdbcce2d",
+      "977e7ef60394f1dfc2b9f1ec",
+      "d058bd9b22d819ba88469d1c",
+      "cf55f612ecc12f3ee4ce965d",
+      "c8ba10916bc4a997d6787e86",
+      "fbc8f1229775dcc5d92e5c83",
+      "87fdf6de797904cba92cfe1c",
+      "0a7e5fabb225795afb2528bb"
+    ],
+    "review_transfer": "Questions, answers, supplied facts, expected values and chat messages exactly match the inspected Q39 records; hashes/revision identify Q40."
+  },
+  "ru": {
+    "report": {
+      "requested": 200,
+      "generated": 200,
+      "complete": true,
+      "seed": 42,
+      "context": 1,
+      "language": "ru",
+      "root": null,
+      "tasks": {
+        "count": 20,
+        "property": 60,
+        "ancestry": 20,
+        "inference": 20,
+        "intersection": 20,
+        "parents": 20,
+        "shared_genus": 20,
+        "difference": 20
+      },
+      "property_states": {
+        "negative": 20,
+        "positive": 20,
+        "unknown": 20
+      },
+      "intersection_answers": {
+        "empty": 10,
+        "nonempty": 10
+      },
+      "ancestry_answers": {
+        "established": 10,
+        "not_established": 10
+      },
+      "verified": 200,
+      "duplicates": 0,
+      "rejected_candidates": {
+        "catalog_domain_size": 169,
+        "missing_or_unsuitable_label": 10,
+        "uninformative_count_domain": 1
+      },
+      "attempted_candidates": 380,
+      "source": {
+        "code_version": "0.1.0-dev",
+        "interface_revision": "2026-10-10.1",
+        "data_revision": "Q40",
+        "source_dump_sha256": "74d4e41ecbeba240678ffd8bd7930bc10e554ce8c8ec27b1710f53793739fab3",
+        "graph_sha256": "319a4f34ea7f0074532621d09679eeabe01a52555dd93400b822930dbc6307fb",
+        "qa_policy_sha256": "5911d0f3304535c73a257688841a9805d3253e959a9f493541ca76f90148c52f",
+        "generator_version": "1"
+      },
+      "review_scope": "Source fidelity, independent recomputation from supplied facts, controlled wording and known-issue exclusions. Not an exhaustive world-fact or linguistic review.",
+      "split_guidance": "Keep group_id together across train/evaluation splits. Shared ancestors and evidence can still cross groups; inspect that overlap before claiming held-out concepts."
+    },
+    "annotated_sha256": "c82d03c1261cd758eb89d2b656adad50a5e04c2dcd00692a3930bc951ce6495d",
+    "sft_sha256": "e824110d1f80beba88fd4e07e34d230d7e9fb101935e41a15d541c738b4cb20c",
+    "semantic_review_ids": [
+      "9b1ed8cf0a5e75b3154cbbb9",
+      "b835b1d0c0b96b82d67027ec",
+      "30bd0554b9306d6c26b4d221",
+      "9d5fa43fed5543b4fa68f9fc",
+      "afa6b767c6544ffb7d75e27b",
+      "46a076f989fbec622adc4e0b",
+      "514b6644e6f6d1a73ee452bb",
+      "1435769f5b01c68598a37049",
+      "18cd8f114c575aa512f3b1e8",
+      "5868de025d9a7f1fd07865a2",
+      "2b41088ea9005b158c9066f3",
+      "6e1f59604a3d8043d0bcab86",
+      "a1a3beaf476ce19b6f0e4a04",
+      "b897a11382b1b173c801d992",
+      "fd44e2ef4fed56d870af56e7",
+      "9e2bd32741a46e080002ce8f",
+      "e81a0c38b79047ca1e37c444",
+      "2ce89e86fb8ab448fa1bceb9",
+      "be3d1920cb59886b2eb0b202",
+      "f6dd5d108c62cdccdb5e8eb9",
+      "adf1eabe84baa4f2effc3d3c",
+      "1d3f2ba083e31b48890259de",
+      "dbd5ce2939fe1d11f40c4ebb",
+      "3538a83154dda4d15969e2d7",
+      "4a60405cbc0853645f0c0891",
+      "93b03658261e797481453036",
+      "16ce74727ee2881ab6fc0e19"
+    ],
+    "review_transfer": "Questions, answers, supplied facts, expected values and chat messages exactly match the inspected Q39 records; hashes/revision identify Q40."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "version": "3",
+  "require_valid_english_label": true,
+  "preferred_terms": {"en": {"2151": "disease", "2843": "cognition", "6773": "clarification"}},
+  "excluded_concepts": [
+    {"id": 3160, "reason": "English insolvency denotes a financial sense, while the stored genus is groundedness. The sense needs review."},
+    {"id": 4812, "reason": "Russian urban adjective is translated as the noun city and classified under environment. The sense and relation need review."},
+    {"id": 4994, "reason": "The sole English label integral is ambiguous between unrelated mathematical and adjective senses; review before training."}
+  ],
+  "excluded_assertions": [
+    {
+      "subject": 117,
+      "relation": "22",
+      "target": 209,
+      "strength": 0,
+      "reason": "The unqualified ant concept cannot carry a general flight denial: reproductive ants can fly. Reject training examples that depend on this assertion; retain the source database for separate review.",
+      "source": "https://www.nhm.ac.uk/discover/when-why-winged-ants-swarm-nuptial-flight.html"
+    },
+    {"subject": 5494, "relation": "14", "target": 1388, "reason": "Lentil is a legume, not a cereal plant.", "source": "https://www.kew.org/plants/lentil"},
+    {"subject": 3243, "relation": "14", "target": 2697, "reason": "Grammatical case is studied by grammar; treating it as a kind of the discipline causes an invalid inheritance chain to science."},
+    {"subject": 4821, "relation": "14", "target": 1675, "reason": "The adjective pre-revolutionary is classified directly as time. A temporal characteristic needs a qualified relation."},
+    {"subject": 1764, "relation": "14", "target": 1675, "reason": "The adjective new is not itself a kind of time. A temporal characteristic needs a qualified relation."},
+    {"subject": 1363, "relation": "20", "target": 2086, "reason": "The stored English target is specifically scale (fish); applying this sense to turtle conflates fish scales with reptile scales."},
+    {"subject": 1279, "relation": "20", "target": 176, "strength": 0, "reason": "A general hardness denial for mercury lacks physical conditions. Do not teach it as an unqualified material property."}
+  ]
+}

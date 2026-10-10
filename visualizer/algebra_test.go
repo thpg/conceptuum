@@ -33,6 +33,23 @@ func TestAlgebraProxyPreservesJSONAndStatus(t *testing.T) {
 	}
 }
 
+func TestQAProxyUsesFixedGeneratorPath(t *testing.T) {
+	backend := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if r.URL.Path != "/generate" || r.Method != "POST" {
+			t.Errorf("wrong route: %s %s", r.Method, r.URL.Path)
+		}
+		_, _ = w.Write([]byte(`{"schema":"conceptuum.qa.batch.v1","records":[]}`))
+	}))
+	defer backend.Close()
+	r := httptest.NewRequest("POST", "/api/qa/generate", strings.NewReader(`{"count":20}`))
+	r.Header.Set("Content-Type", "application/json")
+	w := httptest.NewRecorder()
+	newConceptProxy(backend.URL, "/generate").ServeHTTP(w, r)
+	if w.Code != 200 || !strings.Contains(w.Body.String(), "conceptuum.qa.batch.v1") {
+		t.Fatalf("unexpected response: %d %s", w.Code, w.Body.String())
+	}
+}
+
 func TestAlgebraProxyRejectsInvalidInput(t *testing.T) {
 	for _, tc := range []struct {
 		method, contentType, body string

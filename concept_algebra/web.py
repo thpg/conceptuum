@@ -9,6 +9,7 @@ import socket
 
 from . import AlgebraError, ConceptAlgebra, ConceptGraph, parse
 from .syntax import FACT_FUNCTIONS
+from .qa import QuestionGenerator, checked_options
 
 
 MAX_BODY = 96 * 1024
@@ -124,6 +125,12 @@ class AlgebraService:
         graph, version = self.graph(1)
         return dict(ok=True, concepts=len(graph.ids), source=version, language_version="1")
 
+    def generate(self, data):
+        request = checked_options(data, maximum=50)
+        graph, version = self.graph(request["context"])
+        return QuestionGenerator(graph, request["lang"], source=version).generate(
+            request["count"], request["seed"], request["root"], request["tasks"])
+
 
 def make_handler(service):
     class Handler(BaseHTTPRequestHandler):
@@ -150,7 +157,7 @@ def make_handler(service):
 
         def do_GET(self):
             if self.path != "/health":
-                self.send_json(405, {"error": {"message": "Use POST /evaluate"}}, allow="POST")
+                self.send_json(405, {"error": {"message": "Use POST /evaluate or /generate"}}, allow="POST")
                 return
             try:
                 self.send_json(200, service.health())
@@ -161,7 +168,7 @@ def make_handler(service):
                 self.send_json(503, {"error": {"message": "Concept algebra is temporarily unavailable"}})
 
         def do_POST(self):
-            if self.path != "/evaluate":
+            if self.path not in ("/evaluate", "/generate"):
                 self.send_json(404, {"error": {"message": "Unknown API path"}})
                 return
             if self.headers.get_content_type() != "application/json":
@@ -182,7 +189,7 @@ def make_handler(service):
                     data = json.loads(payload.decode("utf-8"))
                 except (ValueError, UnicodeError, RecursionError):
                     raise AlgebraError("Request body must be a valid UTF-8 JSON object") from None
-                self.send_json(200, service.evaluate(data))
+                self.send_json(200, service.generate(data) if self.path == "/generate" else service.evaluate(data))
             except AlgebraError as exc:
                 self.send_json(422, error_document(exc))
             except (socket.timeout, TimeoutError):

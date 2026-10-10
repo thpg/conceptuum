@@ -1,11 +1,37 @@
 # Changelog
 
 The project version is stored in [VERSION](VERSION). Code versions and data
-revisions are tracked separately: **Q1–Q39 are content reviews, not software
+revisions are tracked separately: **Q1–Q40 are content reviews, not software
 release numbers**. The first explicitly versioned working tree is
 **0.1.0-dev**. No release tag or GitHub Release was created by this update.
 
 ## 0.1.0-dev — Unreleased
+
+### QA generator and lexical cleanup — 2026-10-10, Q40
+
+- Generate English and Russian question–answer examples with the facts needed
+  to derive each answer. Support eight task families, deterministic seeds,
+  source fingerprints, annotated JSONL and chat-format training JSONL.
+- Recompute answers with a separate solver, check source edges and algebra
+  results, reject known problematic assertions, and report short batches.
+- Publish the `/training` page and `POST /api/qa/generate`, including presets,
+  individual inclusion controls, evidence inspection and downloads. Working
+  interface revision `2026-10-10.1` with data revision Q40.
+- Check 200 English and 200 Russian examples; inspect 27 examples in each
+  language for meaning and wording. See the [adequacy review](docs/quality/2026-10-10-qa-review.md).
+- Correct 65 labels, remove 6,017 malformed Russian aliases, and retain 6,836
+  Russian source infinitives under the correct language tag. Preserve all
+  concept IDs and every structural table. Require actual dictionary entries
+  before the legacy noun converter accepts a generated name.
+- Keep rare or uncertain words pending review, including the valid Russian
+  word for detention. The published snapshot has 31,515 terms; see the
+  [Q40 report](docs/quality/2026-10-10-q40.md).
+- Add README guidance for supervised fine-tuning, evidence-preserving exports,
+  and separating training and evaluation examples. Publish code, documentation
+  and Q40 to GitHub and the server; private experiment results remain local.
+- Pin table collations in the SQL export and normalize repair fingerprints to
+  UTC for reproducible imports across MariaDB versions and server time zones.
+  Verify all six deployed tables and all 17 public browser scenarios.
 
 ### Comparison evidence and LLM example collections — 2026-10-09
 
@@ -419,6 +445,7 @@ snapshots; they are not separate published software releases.
 
 | Revision | Date | Main changes | Concepts | All edges |
 |---|---|---|---:|---:|
+| [Q40](docs/quality/2026-10-10-q40.md) | 2026-10-10 | Conservative lexical cleanup; concept identities and relations preserved | 13,456 | 18,450 |
 | [Q39](docs/quality/2026-10-09-q39.md) | 2026-10-09 | Containers, brushes, and scraping tools | 13,456 | 18,450 |
 | [Q38](docs/quality/2026-10-09-q38.md) | 2026-10-09 | Database names, views, plans, and key columns | 13,415 | 18,344 |
 | [Q37](docs/quality/2026-10-09-q37.md) | 2026-10-09 | Motion paths, inertia, momentum, and work | 13,379 | 18,280 |

@@ -1,8 +1,8 @@
 # Local setup and troubleshooting
 
 This guide supplements the [README](../README.md). Code version:
-[0.1.0-dev](../VERSION). Bundled and live data revision: **2026-10-09 / Q39**.
-Q10–Q39 are included in the repository snapshot and the published site.
+[0.1.0-dev](../VERSION). Bundled and live data revision: **2026-10-10 / Q40**.
+The published interface includes the algebra workspace and QA generator.
 
 ## Prerequisites
 
@@ -13,8 +13,8 @@ The latter supports Russian morphological matching; the engine can also run
 with PyMySQL alone, with reduced matching when morphology is unavailable.
 
 The local setup was checked with Python 3.9.13, Go 1.26.1, and MariaDB 5.5.42.
-The live Q39 import and visualizer were also checked on MariaDB 11.8.6 during
-the [Q39 deployment](quality/2026-10-09-q39.md#publication). Other database
+The live Q40 import and visualizer were also checked on MariaDB 11.8.6 during
+the [Q40 deployment](quality/2026-10-10-q40.md#publication). Other database
 versions and MySQL remain unverified. For upstream requirements, see [PyMySQL](https://pypi.org/project/PyMySQL/),
 [pymorphy3](https://pypi.org/project/pymorphy3/), and
 [Go toolchain selection](https://go.dev/doc/toolchain).
@@ -27,9 +27,14 @@ in the README. The dump contains `CREATE DATABASE`, `USE jnana3`, and
 The importer needs privileges for those statements. Supplying another
 database as a client argument does not override the dump's `USE` statement.
 
-The snapshot's tables use the legacy `utf8` character set and explicitly
-retain `utf8_general_ci`, the source database's collation. This prevents newer
-server defaults from treating distinct stored term keys as duplicates.
+The snapshot uses the legacy `utf8` character set and explicitly retains
+`utf8_general_ci` on the database declaration and all six table declarations.
+Keep these clauses when exporting a new snapshot: a table's explicit character
+set without a collation can select the server's character-set default rather
+than the database's collation. See MariaDB's
+[character-set and collation rules](https://mariadb.com/docs/server/reference/data-types/string-data-types/character-sets/setting-character-sets-and-collations).
+Preserving the source collation prevents newer defaults from treating distinct
+stored term keys as duplicates.
 A client setting of `utf8mb4` does not migrate the tables to a different
 character set.
 

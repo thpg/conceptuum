@@ -85,9 +85,13 @@ def is_inf(n):
 
 def real_noun(w):
     """Словарное существительное (лемма = само слово), не выдумка на -ка."""
+    # A predicted parse can have score=1.0 for a nonexistent generated word.
+    # Require an actual dictionary entry before proposing a canonical label.
+    if not morph.word_is_known(w):
+        return False
     best = 0
     for p in morph.parse(w):
-        if p.tag.POS != "NOUN":
+        if not p.is_known or p.tag.POS != "NOUN":
             continue
         if p.normal_form.replace("ё", "е") != w.replace("ё", "е"):
             continue

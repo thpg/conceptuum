@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8f7">
+  <meta name="description" content="Generate questions, answers and supporting graph facts for LLM training. Inspect reasoning examples and export chat-format JSONL.">
+  <title>QA generator — Conceptuum</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23146656'/%3E%3Ctext x='20' y='29' text-anchor='middle' fill='white' font-size='26'%3E?%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/static/explorer.css?v=20261010-1">
+  <link rel="stylesheet" href="/static/algebra.css?v=20261010-1">
+  <link rel="stylesheet" href="/static/training.css?v=20261010-1">
+  <script defer src="/static/training.js?v=20261010-1"></script>
+</head>
+<body class="algebra-page training-page">
+  <a class="skip-link" href="#qa-form">Skip to generator</a>
+  <header class="app-header">
+    <a class="brand" href="/" aria-label="Conceptuum home"><span>conceptuum<span class="brand-dot">.</span></span></a>
+    <nav class="algebra-nav" aria-label="Explore Conceptuum"><a href="/">Explorer</a><a href="/?view=euler&amp;lang=en">Euler circles</a><a href="/algebra">Algebra</a><a href="/training" aria-current="page">QA generator</a></nav>
+    <a class="github-link" href="https://github.com/thpg/conceptuum" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+  </header>
+  <main class="algebra-main">
+    <section class="algebra-intro" aria-labelledby="qa-title"><div><span class="eyebrow">FACTS → QUESTIONS → REASONING</span><h1 id="qa-title">Questions with evidence<span>.</span></h1><p>Build LLM training examples whose answers you can trace.</p></div><div class="snapshot-badge"><i class="live-dot"></i><span id="qa-snapshot">Conceptuum knowledge graph</span></div></section>
+    <div class="algebra-layout">
+      <div class="algebra-primary">
+        <form id="qa-form" class="algebra-card">
+          <div class="card-heading"><h2>Generate a dataset</h2><label class="sr-only" for="qa-preset">Example focus</label><select id="qa-preset"><option value="balanced">Balanced sample</option><option value="flight">Birds and flight exceptions</option><option value="containers">Overlapping containers</option></select></div>
+          <div class="qa-controls">
+            <label for="qa-count">Examples<input id="qa-count" type="number" min="1" max="50" step="1" value="20" required></label>
+            <label for="qa-language">Question language<select id="qa-language"><option value="en">English</option><option value="ru">Russian</option></select></label>
+            <label for="qa-seed">Random seed<input id="qa-seed" type="number" min="0" max="4294967295" step="1" value="42" required></label>
+            <label for="qa-context">Relation context<select id="qa-context"><option value="1">Everyday</option><option value="2">Scientific</option><option value="3">IT</option><option value="4">Legal</option><option value="5">Logic</option></select></label>
+            <label for="qa-root">Focus concept ID <span>(optional)</span><input id="qa-root" type="number" min="1" step="1" placeholder="e.g. 105 for bird"></label>
+          </div>
+          <fieldset id="qa-tasks"><legend>Question types</legend></fieldset>
+          <div class="evaluate-row"><button id="qa-run" class="primary-button" type="submit">Generate examples</button><span class="shortcut-hint">Same data + options → same examples</span></div>
+        </form>
+        <section class="algebra-card results-card" id="qa-results" aria-labelledby="qa-results-title" aria-busy="false">
+          <div class="card-heading"><h2 id="qa-results-title">Review &amp; export</h2><span id="qa-selected"></span></div>
+          <p id="qa-status" class="algebra-status" role="status">Preparing the first batch…</p>
+          <p id="qa-error" role="alert" hidden></p>
+          <div id="qa-report" hidden></div>
+          <div class="qa-downloads"><button type="button" id="qa-chat" class="outline-button" disabled>Training JSONL ↓</button><button type="button" id="qa-annotated" class="outline-button" disabled>JSONL with evidence ↓</button><button type="button" id="qa-report-download" class="text-button" disabled>Quality report ↓</button></div>
+          <div id="qa-items"></div>
+        </section>
+      </div>
+      <aside class="algebra-sidebar" aria-label="Dataset guidance">
+        <section class="algebra-card learning-card"><span class="eyebrow">TEACH REASONING FROM FACTS</span><h2>The evidence travels with the answer.</h2><p>Every training example contains instructions, a question with graph facts, and an answer. Concept and edge IDs preserve the exact meaning.</p><p>Training JSONL contains a <code>messages</code> array with system, user and assistant roles.</p></section>
+        <section class="algebra-card guide-card"><h2>What gets checked?</h2><dl><dt>Source fidelity</dt><dd>Every supplied edge comes from the selected graph context.</dd><dt>Independent recomputation</dt><dd>A separate solver derives the answer from the input facts. Algebra checks catalog and property answers against the full graph.</dd><dt>Knowledge boundaries</dt><dd>Unknown is different from negative. Missing catalog members do not prove real-world incompatibility.</dd></dl><a href="https://github.com/thpg/conceptuum/blob/main/docs/qa-generator.md">Generator &amp; format guide ↗</a></section>
+        <section class="algebra-note"><span class="note-symbol" aria-hidden="true">∴</span><div><h2>Review before training.</h2><p>Automatic checks establish consistency with supplied facts. They do not certify every assertion about the world. Known problematic source assertions are filtered.</p><p>Uncheck examples you do not want to export. This selection stays on this page; download it before leaving.</p></div></section>
+        <section class="algebra-card guide-card"><h2>Keep evaluation separate.</h2><p>Keep the same <code>group_id</code> in one split. Inspect shared concepts and evidence across splits as well; groups alone do not prevent all leakage.</p><p>Generate larger batches locally with the <a href="https://github.com/thpg/conceptuum/blob/main/docs/qa-generator.md#command-line">Python CLI</a>.</p></section>
+      </aside>
+    </div>
+  </main>
+  <footer class="algebra-footer"><span>Conceptuum · Knowledge you can inspect.</span><a href="/static/version.json">Code &amp; data versions</a></footer>
+  <noscript><div class="noscript">Enable JavaScript to generate and export question–answer examples.</div></noscript>
+</body>
+</html>

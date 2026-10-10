@@ -1,4 +1,4 @@
-"""Read-only Q39 browser checks. Start the Go server and Python worker first."""
+"""Read-only Q40 browser checks. Start the Go server and Python worker first."""
 import json
 import os
 import unittest
@@ -65,7 +65,7 @@ class AlgebraBrowserTests(unittest.TestCase):
         with open(download_info.value.path(), encoding='utf-8') as stream:
             data = json.load(stream)
         self.assertEqual(data['result']['ids'], [25447])
-        self.assertEqual(data['result']['source']['data_revision'], 'Q39')
+        self.assertEqual(data['result']['source']['data_revision'], 'Q40')
         self.assertEqual(data['result']['explanation']['concept']['id'], 25447)
         self.assertEqual(data['schema'], 'conceptuum.algebra.example.v1')
 
@@ -225,7 +225,7 @@ class AlgebraBrowserTests(unittest.TestCase):
         self.assertEqual(saved[0]['result']['ids'], [25447])
         self.assertIs(saved[1]['result']['value'], False)
         self.assertEqual(saved[1]['result']['diagnostics']['regions'][0]['count'], 1)
-        self.assertEqual(saved[0]['result']['source']['data_revision'], 'Q39')
+        self.assertEqual(saved[0]['result']['source']['data_revision'], 'Q40')
         self.assertIsNone(self.page.evaluate('window.bad'))
         self.page.locator('.collection-replay').first.click()
         self.ready()

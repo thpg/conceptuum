@@ -239,7 +239,10 @@ class ConceptAlgebra:
                 value = frozenset({node.args[0].value["id"]}) & universe
             elif name in FACT_FUNCTIONS:
                 code, target = node.args[0].value, node.args[1].value["id"]
-                value = self.graph.property_sets(code, target)[FACT_STATES[name]] & universe
+                if len(universe) < len(self.graph.ids) // 4:
+                    value = frozenset(cid for cid in universe if self.graph.fact(cid, code, target).state == FACT_STATES[name])
+                else:
+                    value = self.graph.property_sets(code, target)[FACT_STATES[name]] & universe
             elif name in {"subjects", "related"}:
                 code = node.args[0].value
                 ids = _set(evaluate(node.args[1]), name)
